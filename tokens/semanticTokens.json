@@ -11,7 +11,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.800}",
               "$description": "passive token for neutral intent"
             },
@@ -22,7 +22,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.700}",
               "$description": "passive token for neutral intent"
             },
@@ -33,7 +33,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.600}",
               "$description": "passive token for neutral intent"
             },
@@ -44,7 +44,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.500}",
               "$description": "passive token for neutral intent"
             }
@@ -57,7 +57,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.000}",
               "$description": "passive token for on-neutral intent"
             },
@@ -68,7 +68,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.100}",
               "$description": "passive token for on-neutral intent"
             },
@@ -79,7 +79,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.200}",
               "$description": "passive token for on-neutral intent"
             }
@@ -91,7 +91,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.grey.000}",
             "$description": "content token for passive intent"
           },
@@ -102,7 +102,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
             "$description": "content token for passive intent"
           },
@@ -113,7 +113,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.grey.000}",
             "$description": "content token for passive intent"
           },
@@ -124,7 +124,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.grey.000}",
             "$description": "content token for passive intent"
           },
@@ -135,7 +135,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.grey.000}",
             "$description": "content token for passive intent"
           },
@@ -146,7 +146,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.grey.000}",
             "$description": "content token for passive intent"
           },
@@ -157,7 +157,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.grey.000}",
             "$description": "content token for passive intent"
           },
@@ -168,7 +168,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
             "$description": "content token for passive intent"
           },
@@ -179,7 +179,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
             "$description": "content token for passive intent"
           },
@@ -190,7 +190,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.success.700}",
             "$description": "Text color for success content"
           },
@@ -201,7 +201,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.negative.700}",
             "$description": "Text color for error/danger content"
           },
@@ -212,7 +212,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.warning.700}",
             "$description": "content token for passive intent"
           }
@@ -225,7 +225,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.700}",
               "$description": "active token for neutral intent"
             },
@@ -235,7 +235,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.800}",
               "$description": "active token for neutral intent"
             },
@@ -245,7 +245,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.600}",
               "$description": "active token for neutral intent"
             },
@@ -255,7 +255,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.500}",
               "$description": "active token for neutral intent"
             }
@@ -267,7 +267,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.700}",
               "$description": "active token for accent intent"
             },
@@ -277,7 +277,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.800}",
               "$description": "active token for accent intent"
             },
@@ -287,7 +287,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.600}",
               "$description": "active token for accent intent"
             },
@@ -297,7 +297,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.500}",
               "$description": "active token for accent intent"
             },
@@ -308,7 +308,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.000}",
                 "$description": "accent token for inverse intent"
               },
@@ -318,7 +318,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.300}",
                 "$description": "accent token for inverse intent"
               },
@@ -328,7 +328,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.300}",
                 "$description": "accent token for inverse intent"
               },
@@ -338,7 +338,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.500}",
                 "$description": "accent token for inverse intent"
               }
@@ -351,7 +351,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
               "$description": "active token for upgrade intent"
             },
@@ -361,7 +361,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.800}",
               "$description": "active token for upgrade intent"
             },
@@ -371,7 +371,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.600}",
               "$description": "active token for upgrade intent"
             }
@@ -383,7 +383,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.700}",
               "$description": "active token for danger intent"
             },
@@ -393,7 +393,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.800}",
               "$description": "active token for danger intent"
             },
@@ -403,7 +403,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.600}",
               "$description": "active token for danger intent"
             }
@@ -420,7 +420,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.200}",
               "$description": "passive token for neutral intent"
             },
@@ -431,7 +431,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.100}",
               "$description": "passive token for neutral intent"
             },
@@ -442,7 +442,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.000}",
               "$description": "passive token for neutral intent"
             },
@@ -453,7 +453,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
               "$description": "passive token for neutral intent"
             }
@@ -466,7 +466,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.700}",
               "$description": "passive token for danger intent"
             },
@@ -477,7 +477,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.100}",
               "$description": "passive token for danger intent"
             }
@@ -490,7 +490,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.success.700}",
               "$description": "passive token for success intent"
             },
@@ -501,7 +501,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.success.100}",
               "$description": "passive token for success intent"
             }
@@ -514,7 +514,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.warning.700}",
               "$description": "passive token for warning intent"
             },
@@ -525,7 +525,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.warning.100}",
               "$description": "passive token for warning intent"
             }
@@ -538,7 +538,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
               "$description": "passive token for info intent"
             },
@@ -549,7 +549,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.100}",
               "$description": "passive token for info intent"
             }
@@ -562,7 +562,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.200}",
               "$description": "passive token for upgrade intent"
             },
@@ -573,7 +573,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.100}",
               "$description": "passive token for upgrade intent"
             },
@@ -584,7 +584,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
               "$description": "passive token for upgrade intent"
             }
@@ -599,7 +599,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.000}",
               "$description": "active token for neutral intent"
             },
@@ -610,7 +610,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.200}",
               "$description": "active token for neutral intent"
             },
@@ -621,7 +621,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.100}",
               "$description": "active token for neutral intent"
             },
@@ -632,7 +632,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.200}",
               "$description": "active token for neutral intent"
             }
@@ -645,7 +645,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.700}",
               "$description": "active token for accent intent"
             },
@@ -656,7 +656,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.200}",
               "$description": "active token for accent intent"
             },
@@ -667,7 +667,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.800}",
               "$description": "active token for accent intent"
             },
@@ -678,7 +678,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.700}",
               "$description": "active token for accent intent"
             },
@@ -689,7 +689,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.600}",
               "$description": "active token for accent intent"
             },
@@ -700,7 +700,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.500}",
               "$description": "active token for accent intent"
             },
@@ -712,7 +712,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.000}",
                 "$description": "accent token for inverse intent"
               },
@@ -723,7 +723,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.600}",
                 "$description": "accent token for inverse intent"
               },
@@ -734,7 +734,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.200}",
                 "$description": "accent token for inverse intent"
               },
@@ -745,7 +745,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.300}",
                 "$description": "accent token for inverse intent"
               },
@@ -756,7 +756,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.400}",
                 "$description": "accent token for inverse intent"
               }
@@ -770,7 +770,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.700}",
               "$description": "active token for danger intent"
             },
@@ -781,7 +781,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.100}",
               "$description": "active token for danger intent"
             },
@@ -792,7 +792,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.800}",
               "$description": "active token for danger intent"
             },
@@ -803,7 +803,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.600}",
               "$description": "active token for danger intent"
             }
@@ -816,7 +816,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.success.700}",
               "$description": "active token for success intent"
             },
@@ -827,7 +827,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.success.800}",
               "$description": "active token for success intent"
             },
@@ -838,7 +838,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.success.600}",
               "$description": "active token for success intent"
             },
@@ -849,7 +849,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.success.400}",
               "$description": "active token for success intent"
             }
@@ -862,7 +862,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.warning.700}",
               "$description": "active token for warning intent"
             },
@@ -873,7 +873,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.warning.800}",
               "$description": "active token for warning intent"
             },
@@ -884,7 +884,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.warning.600}",
               "$description": "active token for warning intent"
             }
@@ -897,7 +897,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
               "$description": "active token for upgrade intent"
             },
@@ -908,7 +908,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.100}",
               "$description": "active token for upgrade intent"
             },
@@ -919,7 +919,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.800}",
               "$description": "active token for upgrade intent"
             },
@@ -930,7 +930,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.600}",
               "$description": "active token for upgrade intent"
             }
@@ -948,7 +948,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.300}",
               "$description": "passive token for neutral intent"
             },
@@ -960,7 +960,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.200}",
               "$description": "passive token for neutral intent"
             },
@@ -972,7 +972,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.300}",
               "$description": "passive token for neutral intent"
             },
@@ -984,7 +984,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.500}",
               "$description": "passive token for neutral intent"
             },
@@ -996,7 +996,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.grey.600}",
               "$description": "passive token for neutral intent"
             }
@@ -1007,7 +1007,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.negative.700}",
             "$description": "border token for passive intent"
           },
@@ -1017,7 +1017,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.success.700}",
             "$description": "border token for passive intent"
           },
@@ -1027,7 +1027,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.warning.700}",
             "$description": "border token for passive intent"
           },
@@ -1037,7 +1037,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
             "$description": "border token for passive intent"
           },
@@ -1047,7 +1047,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
             "$description": "border token for passive intent"
           }
@@ -1063,7 +1063,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.300}",
                 "$description": "neutral token for action intent"
               },
@@ -1075,7 +1075,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.400}",
                 "$description": "neutral token for action intent"
               },
@@ -1087,7 +1087,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.200}",
                 "$description": "neutral token for action intent"
               },
@@ -1099,7 +1099,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.brand.500}",
                 "$description": "neutral token for action intent"
               },
@@ -1111,7 +1111,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.700}",
                 "$description": "neutral token for action intent"
               },
@@ -1123,7 +1123,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.grey.400}",
                 "$description": "neutral token for action intent"
               }
@@ -1138,7 +1138,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.grey.300}",
                   "$description": "control token for field intent"
                 },
@@ -1150,7 +1150,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.grey.400}",
                   "$description": "control token for field intent"
                 },
@@ -1162,7 +1162,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.brand.700}",
                   "$description": "control token for field intent"
                 },
@@ -1174,7 +1174,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.grey.700}",
                   "$description": "control token for field intent"
                 },
@@ -1186,7 +1186,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.grey.400}",
                   "$description": "control token for field intent"
                 }
@@ -1200,7 +1200,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.brand.700}",
                   "$description": "control token for toggle intent"
                 },
@@ -1212,7 +1212,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.brand.800}",
                   "$description": "control token for toggle intent"
                 },
@@ -1224,7 +1224,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.brand.500}",
                   "$description": "control token for toggle intent"
                 },
@@ -1236,7 +1236,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.brand.700}",
                   "$description": "control token for toggle intent"
                 },
@@ -1248,7 +1248,7 @@
                   ],
                   "$type": "color",
                   "$libraryName": "",
-                  "$collectionName": "colors",
+                  "$collectionName": "primitives",
                   "$value": "{primitives.colors.modes.Reservio.brand.400}",
                   "$description": "control token for toggle intent"
                 }
@@ -1264,7 +1264,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.700}",
               "$description": "active token for accent intent"
             },
@@ -1276,7 +1276,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.800}",
               "$description": "active token for accent intent"
             },
@@ -1288,7 +1288,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.600}",
               "$description": "active token for accent intent"
             },
@@ -1300,7 +1300,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.500}",
               "$description": "active token for accent intent"
             },
@@ -1312,7 +1312,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.600}",
               "$description": "active token for accent intent"
             },
@@ -1324,7 +1324,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brand.500}",
               "$description": "active token for accent intent"
             },
@@ -1337,7 +1337,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.300}",
                 "$description": "accent token for inverse intent"
               },
@@ -1349,7 +1349,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.400}",
                 "$description": "accent token for inverse intent"
               },
@@ -1361,7 +1361,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.500}",
                 "$description": "accent token for inverse intent"
               },
@@ -1373,7 +1373,7 @@
                 ],
                 "$type": "color",
                 "$libraryName": "",
-                "$collectionName": "colors",
+                "$collectionName": "primitives",
                 "$value": "{primitives.colors.modes.Reservio.upgrade.600}",
                 "$description": "accent token for inverse intent"
               }
@@ -1386,7 +1386,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.700}",
               "$description": "active token for danger intent"
             },
@@ -1396,7 +1396,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.800}",
               "$description": "active token for danger intent"
             },
@@ -1406,7 +1406,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.negative.600}",
               "$description": "active token for danger intent"
             }
@@ -1418,7 +1418,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.700}",
               "$description": "active token for upgrade intent"
             },
@@ -1428,7 +1428,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.800}",
               "$description": "active token for upgrade intent"
             },
@@ -1438,7 +1438,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.upgrade.600}",
               "$description": "active token for upgrade intent"
             }
@@ -1451,7 +1451,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "border",
+            "$collectionName": "primitives",
             "$value": "{primitives.borderWidth.modes.Reservio.border-1}",
             "$description": "border token for width intent"
           },
@@ -1461,7 +1461,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "border",
+            "$collectionName": "primitives",
             "$value": "{primitives.borderWidth.modes.Reservio.border-2}",
             "$description": "border token for width intent"
           },
@@ -1471,7 +1471,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "border",
+            "$collectionName": "primitives",
             "$value": "{primitives.borderWidth.modes.Reservio.border-3}",
             "$description": "border token for width intent"
           }
@@ -1486,7 +1486,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brown.700}",
               "$description": "notes token for content intent"
             },
@@ -1496,7 +1496,7 @@
               ],
               "$type": "color",
               "$libraryName": "",
-              "$collectionName": "colors",
+              "$collectionName": "primitives",
               "$value": "{primitives.colors.modes.Reservio.brown.600}",
               "$description": "notes token for content intent"
             }
@@ -1507,7 +1507,7 @@
             ],
             "$type": "color",
             "$libraryName": "",
-            "$collectionName": "colors",
+            "$collectionName": "primitives",
             "$value": "{primitives.colors.modes.Reservio.yellow.400}",
             "$description": "custom token for notes intent"
           }
@@ -1519,7 +1519,7 @@
           ],
           "$type": "color",
           "$libraryName": "",
-          "$collectionName": "colors",
+          "$collectionName": "primitives",
           "$value": "{primitives.colors.modes.Reservio.yellow.700}",
           "$description": "Reservio token for custom intent"
         }
@@ -1531,7 +1531,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.1}",
           "$description": "Reservio token for padding intent"
         },
@@ -1541,7 +1541,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.2}",
           "$description": "Reservio token for padding intent"
         },
@@ -1551,7 +1551,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.3}",
           "$description": "Reservio token for padding intent"
         },
@@ -1561,7 +1561,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.4}",
           "$description": "Reservio token for padding intent"
         },
@@ -1571,7 +1571,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.5}",
           "$description": "Reservio token for padding intent"
         },
@@ -1581,7 +1581,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.6}",
           "$description": "Reservio token for padding intent"
         },
@@ -1591,7 +1591,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.8}",
           "$description": "Reservio token for padding intent"
         },
@@ -1601,7 +1601,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.12}",
           "$description": "Reservio token for padding intent"
         },
@@ -1611,7 +1611,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.20}",
           "$description": "Reservio token for padding intent"
         },
@@ -1621,7 +1621,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.30}",
           "$description": "Reservio token for padding intent"
         }
@@ -1635,7 +1635,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.9}",
               "$description": "headline token for font-size intent"
             },
@@ -1645,7 +1645,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.8}",
               "$description": "headline token for font-size intent"
             },
@@ -1655,7 +1655,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.7}",
               "$description": "headline token for font-size intent"
             },
@@ -1665,7 +1665,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.6}",
               "$description": "headline token for font-size intent"
             },
@@ -1675,7 +1675,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.5}",
               "$description": "headline token for font-size intent"
             },
@@ -1685,7 +1685,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.4}",
               "$description": "headline token for font-size intent"
             }
@@ -1697,7 +1697,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "headline token for line-height intent"
             },
@@ -1707,7 +1707,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "headline token for line-height intent"
             },
@@ -1717,7 +1717,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "headline token for line-height intent"
             },
@@ -1727,7 +1727,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "headline token for line-height intent"
             },
@@ -1737,7 +1737,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "headline token for line-height intent"
             },
@@ -1747,7 +1747,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "headline token for line-height intent"
             }
@@ -1761,7 +1761,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.4}",
               "$description": "body token for font-size intent"
             },
@@ -1771,7 +1771,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.3}",
               "$description": "body token for font-size intent"
             },
@@ -1781,7 +1781,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.2}",
               "$description": "body token for font-size intent"
             },
@@ -1791,7 +1791,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontSize.1}",
               "$description": "body token for font-size intent"
             }
@@ -1803,7 +1803,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.lineHeight.base}",
               "$description": "body token for line-height intent"
             },
@@ -1813,7 +1813,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "semantic tokens",
+              "$collectionName": "semanticTokens",
               "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}",
               "$description": "body token for line-height intent"
             },
@@ -1823,7 +1823,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "semantic tokens",
+              "$collectionName": "semanticTokens",
               "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}",
               "$description": "body token for line-height intent"
             },
@@ -1833,7 +1833,7 @@
               ],
               "$type": "dimension",
               "$libraryName": "",
-              "$collectionName": "semantic tokens",
+              "$collectionName": "semanticTokens",
               "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}",
               "$description": "body token for line-height intent"
             }
@@ -1845,8 +1845,8 @@
               ],
               "$type": "number",
               "$libraryName": "",
-              "$collectionName": "type",
-              "$value": "{primitives.typography.modes.Reservio.fontWeight.light}",
+              "$collectionName": "primitives",
+              "$value": "{primitives.typography.modes.Reservio.fontWeight.regular}",
               "$description": "body token for font-weight intent"
             },
             "normal": {
@@ -1855,8 +1855,8 @@
               ],
               "$type": "number",
               "$libraryName": "",
-              "$collectionName": "type",
-              "$value": "{primitives.typography.modes.Reservio.fontWeight.normal}",
+              "$collectionName": "primitives",
+              "$value": "{primitives.typography.modes.Reservio.fontWeight.regular}",
               "$description": "body token for font-weight intent"
             },
             "medium": {
@@ -1865,7 +1865,7 @@
               ],
               "$type": "number",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontWeight.medium}",
               "$description": "body token for font-weight intent"
             },
@@ -1875,8 +1875,8 @@
               ],
               "$type": "number",
               "$libraryName": "",
-              "$collectionName": "type",
-              "$value": "{primitives.typography.modes.Reservio.fontWeight.semibold}",
+              "$collectionName": "primitives",
+              "$value": "{primitives.typography.modes.Reservio.fontWeight.bold}",
               "$description": "body token for font-weight intent"
             },
             "bold": {
@@ -1885,7 +1885,7 @@
               ],
               "$type": "number",
               "$libraryName": "",
-              "$collectionName": "type",
+              "$collectionName": "primitives",
               "$value": "{primitives.typography.modes.Reservio.fontWeight.bold}",
               "$description": "body token for font-weight intent"
             }
@@ -1899,7 +1899,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-0}",
           "$description": "Reservio token for radius intent"
         },
@@ -1909,7 +1909,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-1}",
           "$description": "Reservio token for radius intent"
         },
@@ -1919,7 +1919,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-2}",
           "$description": "Reservio token for radius intent"
         },
@@ -1929,7 +1929,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-3}",
           "$description": "Reservio token for radius intent"
         },
@@ -1939,7 +1939,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-4}",
           "$description": "Reservio token for radius intent"
         },
@@ -1949,7 +1949,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-5}",
           "$description": "Reservio token for radius intent"
         },
@@ -1959,7 +1959,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-6}",
           "$description": "Reservio token for radius intent"
         },
@@ -1969,7 +1969,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "radius",
+          "$collectionName": "primitives",
           "$value": "{primitives.borderRadius.modes.Survio.radius-round}",
           "$description": "Reservio token for radius intent"
         }
@@ -1981,7 +1981,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-1}",
           "$description": "Reservio token for icon intent"
         },
@@ -1991,7 +1991,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-2}",
           "$description": "Reservio token for icon intent"
         },
@@ -2001,7 +2001,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-3}",
           "$description": "Reservio token for icon intent"
         },
@@ -2011,7 +2011,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-4}",
           "$description": "Reservio token for icon intent"
         },
@@ -2021,7 +2021,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-5}",
           "$description": "Reservio token for icon intent"
         },
@@ -2031,7 +2031,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-6}",
           "$description": "Reservio token for icon intent"
         },
@@ -2041,7 +2041,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-7}",
           "$description": "Reservio token for icon intent"
         },
@@ -2051,7 +2051,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "icon-size",
+          "$collectionName": "primitives",
           "$value": "{primitives.iconSize.modes.Survio.icon-size-8}",
           "$description": "Reservio token for icon intent"
         }
@@ -2063,7 +2063,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.1}",
           "$description": "Reservio token for gap intent"
         },
@@ -2073,7 +2073,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.2}",
           "$description": "Reservio token for gap intent"
         },
@@ -2083,7 +2083,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.3}",
           "$description": "Reservio token for gap intent"
         },
@@ -2093,7 +2093,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.4}",
           "$description": "Reservio token for gap intent"
         },
@@ -2103,7 +2103,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.5}",
           "$description": "Reservio token for gap intent"
         },
@@ -2113,7 +2113,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.6}",
           "$description": "Reservio token for gap intent"
         },
@@ -2123,7 +2123,7 @@
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "spacing",
+          "$collectionName": "primitives",
           "$value": "{primitives.spacing.modes.Reservio.8}",
           "$description": "Reservio token for gap intent"
         }
@@ -2136,7 +2136,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "size",
+            "$collectionName": "primitives",
             "$value": "{primitives.sizing.modes.Survio.size-1}",
             "$description": "control token for height intent"
           },
@@ -2146,7 +2146,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "size",
+            "$collectionName": "primitives",
             "$value": "{primitives.sizing.modes.Survio.size-2}",
             "$description": "control token for height intent"
           },
@@ -2156,7 +2156,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "size",
+            "$collectionName": "primitives",
             "$value": "{primitives.sizing.modes.Survio.size-3}",
             "$description": "control token for height intent"
           },
@@ -2166,7 +2166,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "size",
+            "$collectionName": "primitives",
             "$value": "{primitives.sizing.modes.Survio.size-4}",
             "$description": "control token for height intent"
           },
@@ -2176,7 +2176,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "size",
+            "$collectionName": "primitives",
             "$value": "{primitives.sizing.modes.Survio.size-5}",
             "$description": "control token for height intent"
           },
@@ -2186,7 +2186,7 @@
             ],
             "$type": "dimension",
             "$libraryName": "",
-            "$collectionName": "size",
+            "$collectionName": "primitives",
             "$value": "{primitives.sizing.modes.Survio.size-6}",
             "$description": "control token for height intent"
           }
@@ -2199,7 +2199,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-xs}",
           "$description": "Reservio token for shadow intent"
         },
@@ -2209,7 +2209,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-sm}",
           "$description": "Reservio token for shadow intent"
         },
@@ -2219,7 +2219,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-md}",
           "$description": "Reservio token for shadow intent"
         },
@@ -2229,7 +2229,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-lg}",
           "$description": "Reservio token for shadow intent"
         },
@@ -2239,7 +2239,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-xl}",
           "$description": "Reservio token for shadow intent"
         },
@@ -2249,7 +2249,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-2xl}",
           "$description": "Reservio token for shadow intent"
         },
@@ -2259,7 +2259,7 @@
           ],
           "$type": "boxShadow",
           "$libraryName": "",
-          "$collectionName": "shadow",
+          "$collectionName": "primitives",
           "$value": "{primitives.boxShadow.modes.Survio.shadow-inner}",
           "$description": "Reservio token for shadow intent"
         }
@@ -2271,7 +2271,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-0}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2281,7 +2281,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-5}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2291,7 +2291,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-10}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2301,7 +2301,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-20}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2311,7 +2311,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-25}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2321,7 +2321,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-30}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2331,7 +2331,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-40}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2341,7 +2341,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-50}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2351,7 +2351,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-60}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2361,7 +2361,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-70}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2371,7 +2371,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-75}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2381,7 +2381,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-80}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2391,7 +2391,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-90}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2401,7 +2401,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-95}",
           "$description": "Reservio token for opacity intent"
         },
@@ -2411,7 +2411,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "opacity",
+          "$collectionName": "primitives",
           "$value": "{primitives.opacity.modes.Survio.opacity-100}",
           "$description": "Reservio token for opacity intent"
         }
@@ -2423,7 +2423,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-base}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2433,7 +2433,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-dropdown}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2443,7 +2443,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-sticky}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2453,7 +2453,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-fixed}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2463,7 +2463,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-modal-backdrop}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2473,7 +2473,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-modal}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2483,7 +2483,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-popover}",
           "$description": "Reservio token for z-index intent"
         },
@@ -2493,7 +2493,7 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "z-index",
+          "$collectionName": "primitives",
           "$value": "{primitives.zIndex.modes.Survio.z-tooltip}",
           "$description": "Reservio token for z-index intent"
         }
@@ -2506,7 +2506,7 @@
             ],
             "$type": "number",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.duration.instant}",
             "$description": "animation token for duration intent"
           },
@@ -2516,7 +2516,7 @@
             ],
             "$type": "number",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.duration.fast}",
             "$description": "animation token for duration intent"
           },
@@ -2526,7 +2526,7 @@
             ],
             "$type": "number",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.duration.base}",
             "$description": "animation token for duration intent"
           },
@@ -2536,7 +2536,7 @@
             ],
             "$type": "number",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.duration.slow}",
             "$description": "animation token for duration intent"
           },
@@ -2546,7 +2546,7 @@
             ],
             "$type": "number",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.duration.slower}",
             "$description": "animation token for duration intent"
           },
@@ -2556,7 +2556,7 @@
             ],
             "$type": "number",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.duration.slowest}",
             "$description": "animation token for duration intent"
           }
@@ -2568,7 +2568,7 @@
             ],
             "$type": "string",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.easing.linear}",
             "$description": "animation token for easing intent"
           },
@@ -2578,7 +2578,7 @@
             ],
             "$type": "string",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.easing.ease-in}",
             "$description": "animation token for easing intent"
           },
@@ -2588,7 +2588,7 @@
             ],
             "$type": "string",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.easing.ease-out}",
             "$description": "animation token for easing intent"
           },
@@ -2598,7 +2598,7 @@
             ],
             "$type": "string",
             "$libraryName": "",
-            "$collectionName": "animation",
+            "$collectionName": "primitives",
             "$value": "{primitives.animation.modes.Reservio.easing.ease-in-out}",
             "$description": "animation token for easing intent"
           }
