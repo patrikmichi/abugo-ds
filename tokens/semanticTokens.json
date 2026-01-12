@@ -968,7 +968,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{border-width-1}",
@@ -978,7 +978,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{border-width-2}",
@@ -988,7 +988,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{border-width-3}",
@@ -1171,7 +1171,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-9}",
@@ -1181,7 +1181,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-8}",
@@ -1191,7 +1191,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-7}",
@@ -1201,7 +1201,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-6}",
@@ -1211,7 +1211,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-5}",
@@ -1221,7 +1221,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-4}",
@@ -1233,7 +1233,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1243,7 +1243,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1253,7 +1253,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1263,7 +1263,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1273,7 +1273,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1283,7 +1283,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1295,7 +1295,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-4}",
@@ -1305,7 +1305,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-3}",
@@ -1315,7 +1315,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-2}",
@@ -1325,7 +1325,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-1}",
@@ -1337,7 +1337,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1347,7 +1347,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1357,7 +1357,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1367,7 +1367,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
@@ -1432,7 +1432,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-0}",
@@ -1442,7 +1442,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-1}",
@@ -1452,7 +1452,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-2}",
@@ -1462,7 +1462,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-3}",
@@ -1472,7 +1472,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-4}",
@@ -1482,7 +1482,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-5}",
@@ -1492,7 +1492,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-6}",
@@ -1502,7 +1502,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-round}",
@@ -1596,7 +1596,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-1}",
@@ -1606,7 +1606,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-2}",
@@ -1616,7 +1616,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-3}",
@@ -1626,7 +1626,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-4}",
@@ -1636,7 +1636,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-5}",
@@ -1646,7 +1646,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-6}",
@@ -1656,7 +1656,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-8}",
@@ -1669,7 +1669,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-1}",
@@ -1679,7 +1679,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-2}",
@@ -1689,7 +1689,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-3}",
@@ -1699,7 +1699,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-4}",
@@ -1709,7 +1709,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-5}",
@@ -1719,7 +1719,7 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "dimension",
+        "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-6}",
@@ -1732,7 +1732,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-1}",
@@ -1742,7 +1742,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-2}",
@@ -1752,7 +1752,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-3}",
@@ -1762,7 +1762,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-4}",
@@ -1772,7 +1772,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-5}",
@@ -1782,7 +1782,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-6}",
@@ -1792,7 +1792,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-8}",
@@ -1802,7 +1802,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-12}",
@@ -1812,7 +1812,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-20}",
@@ -1822,7 +1822,7 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "dimension",
+      "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-30}",
