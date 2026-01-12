@@ -2,15 +2,13 @@
   "$name": "Component Tokens",
   "background": {
     "unchecked": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{universal.transparent}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{universal.transparent}"
     },
     "checked": {
       "default": {
@@ -74,14 +72,12 @@
     }
   },
   "content": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "color",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{content-passive-on-accent}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{content-passive-on-accent}"
   }
 }

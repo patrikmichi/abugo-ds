@@ -1,60 +1,50 @@
 {
   "$name": "Component Tokens",
   "opacity": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "number",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{opacity.overlay}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{opacity.overlay}"
   },
   "default": {
     "background": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-elevated}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background-passive-neutral-elevated}"
     },
     "overlay": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-default}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background-passive-neutral-default}"
     },
     "border": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.active.neutral.control.field.default}"
     },
     "content": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content-passive-neutral-default}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-neutral-default}"
     }
   }
 }

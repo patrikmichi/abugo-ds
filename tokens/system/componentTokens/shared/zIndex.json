@@ -1,58 +1,48 @@
 {
   "$name": "Component Tokens",
   "toast": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "number",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{z-index.modal}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z-index.modal}"
   },
   "popover": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "number",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{z-index.popover}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z-index.popover}"
   },
   "tooltip": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "number",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{z-index.tooltip}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z-index.tooltip}"
   },
   "modal": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "number",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{z-index.modal}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z-index.modal}"
   },
   "drawer": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "number",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{z-index.modal}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z-index.modal}"
   }
 }

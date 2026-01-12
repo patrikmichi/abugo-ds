@@ -50,26 +50,22 @@
     }
   },
   "checkbox": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "fontSizes",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-size.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontSizes",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-size.md}"
   },
   "radio": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "fontSizes",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-size.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontSizes",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-size.md}"
   },
   "chip": {
     "sm": {
@@ -101,25 +97,21 @@
     }
   },
   "alert": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "fontSizes",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-size.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontSizes",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-size.md}"
   },
   "toast": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "fontSizes",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-size.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontSizes",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-size.md}"
   }
 }

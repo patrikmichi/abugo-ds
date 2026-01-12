@@ -30,15 +30,13 @@
     }
   },
   "width": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{padding.xxxxl}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxxxl}"
   },
   "status": {
     "enabled": {
@@ -200,15 +198,13 @@
   },
   "content": {
     "value": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content-passive-neutral-default}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-neutral-default}"
     },
     "placeholder": {
       "$scopes": [

@@ -3,15 +3,13 @@
   "button": {
     "background": {
       "unselected": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{universal.transparent}"
-        }
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{universal.transparent}"
       },
       "selected": {
         "default": {

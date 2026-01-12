@@ -2,28 +2,24 @@
   "$name": "Component Tokens",
   "horizontal": {
     "border": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{border.passive.neutral.default}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.passive.neutral.default}"
     }
   },
   "vertical": {
     "border": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{border.passive.neutral.default}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.passive.neutral.default}"
     }
   }
 }

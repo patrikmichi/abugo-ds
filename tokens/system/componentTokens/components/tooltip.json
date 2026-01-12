@@ -1,15 +1,13 @@
 {
   "$name": "Component Tokens",
   "width": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{sizing.tooltip-arrow}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{sizing.tooltip-arrow}"
   },
   "container": {
     "background": {

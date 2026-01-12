@@ -2,15 +2,13 @@
   "$name": "Component Tokens",
   "default": {
     "track": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-subtle}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background-passive-neutral-subtle}"
     },
     "fill": {
       "default": {

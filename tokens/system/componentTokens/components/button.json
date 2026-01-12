@@ -41,15 +41,13 @@
         }
       },
       "content": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-passive-on-accent}"
-        }
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content-passive-on-accent}"
       }
     },
     "plain": {
@@ -332,15 +330,13 @@
         }
       },
       "content": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-passive-on-danger}"
-        }
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content-passive-on-danger}"
       }
     },
     "plain": {
@@ -534,15 +530,13 @@
         }
       },
       "content": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-passive-on-upgrade}"
-        }
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content-passive-on-upgrade}"
       }
     },
     "plain": {

@@ -329,14 +329,12 @@
     }
   },
   "pagination": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.xs}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "spacing",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{gap.xs}"
   }
 }

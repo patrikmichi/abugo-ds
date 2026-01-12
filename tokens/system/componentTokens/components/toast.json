@@ -1,15 +1,13 @@
 {
   "$name": "Component Tokens",
   "icon": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "color",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{content-passive-on-info}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{content-passive-on-info}"
   },
   "info": {
     "content": {
@@ -55,15 +53,13 @@
       }
     },
     "icon": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content-passive-on-danger}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-on-danger}"
     }
   }
 }

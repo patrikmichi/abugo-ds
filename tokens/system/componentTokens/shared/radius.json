@@ -59,48 +59,40 @@
     }
   },
   "toggle": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.full}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.full}"
   },
   "checkbox": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.xs}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.xs}"
   },
   "radio": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.full}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.full}"
   },
   "chip": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.full}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.full}"
   },
   "alert": {
     "lg": {
@@ -143,47 +135,39 @@
     }
   },
   "card": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.sm}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.sm}"
   },
   "popover": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.sm}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.sm}"
   },
   "pagination": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.full}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.full}"
   },
   "tooltip": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.xs}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.xs}"
   }
 }

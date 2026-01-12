@@ -50,15 +50,13 @@
     }
   },
   "checkbox": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{icon.xs}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{icon.xs}"
   },
   "chip": {
     "sm": {

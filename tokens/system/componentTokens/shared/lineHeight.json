@@ -50,26 +50,22 @@
     }
   },
   "checkbox": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "lineHeights",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-line.md}"
   },
   "radio": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "lineHeights",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-line.md}"
   },
   "chip": {
     "sm": {
@@ -101,25 +97,21 @@
     }
   },
   "alert": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "lineHeights",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-line.md}"
   },
   "toast": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "lineHeights",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.md}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-line.md}"
   }
 }

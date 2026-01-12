@@ -23,15 +23,13 @@
     }
   },
   "icon": {
-    "default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "color",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{content-passive-info}"
-    }
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{content-passive-info}"
   },
   "danger": {
     "content": {
@@ -55,15 +53,13 @@
       }
     },
     "icon": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content-passive-danger}"
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-danger}"
     }
   },
   "warning": {

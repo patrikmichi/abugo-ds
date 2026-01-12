@@ -28,6 +28,7 @@ primitivesFiles.forEach((file) => {
     unknown
   >;
 
+  // Merge content directly without filename wrapper
   Object.keys(content).forEach((key) => {
     if (!key.startsWith('$')) {
       mergedPrimitives[key] = content[key] as Primitives[string];
@@ -68,6 +69,7 @@ function mergeSemanticDirectory(dirPath: string): void {
       const content = JSON.parse(
         fs.readFileSync(itemPath, 'utf8')
       ) as Record<string, unknown>;
+      // Merge content directly without filename/directory wrapper
       Object.keys(content).forEach((key) => {
         if (!key.startsWith('$')) {
           mergedSemantic[key] = content[key] as SemanticTokens[string];
@@ -101,7 +103,42 @@ const mergedComponents: ComponentTokens = {
   $name: 'Component Tokens',
 };
 
+/**
+ * Deep merge two objects
+ */
+function deepMerge(
+  target: Record<string, unknown>,
+  source: Record<string, unknown>
+): void {
+  Object.keys(source).forEach((key) => {
+    if (key.startsWith('$')) {
+      // Metadata keys - only set if not exists
+      if (!target[key]) {
+        target[key] = source[key];
+      }
+    } else if (
+      typeof source[key] === 'object' &&
+      source[key] !== null &&
+      !Array.isArray(source[key]) &&
+      !(source[key] as Record<string, unknown>).$type
+    ) {
+      // Nested object - merge recursively
+      if (!target[key] || typeof target[key] !== 'object') {
+        target[key] = {};
+      }
+      deepMerge(
+        target[key] as Record<string, unknown>,
+        source[key] as Record<string, unknown>
+      );
+    } else {
+      // Primitive or token value - overwrite
+      target[key] = source[key];
+    }
+  });
+}
+
 // Load shared property files (category-first)
+// Structure: { "button": { "sm": {...} } } → { "radius": { "button": { "sm": {...} } } }
 if (fs.existsSync(componentSharedDir)) {
   const sharedFiles = fs
     .readdirSync(componentSharedDir)
@@ -114,19 +151,27 @@ if (fs.existsSync(componentSharedDir)) {
     ) as Record<string, unknown>;
     const propertyName = file.replace('.json', '');
 
-    mergedComponents[propertyName] = {} as ComponentTokens[string];
+    // Create category-first structure: { propertyName: { componentName: value } }
+    // Example: { "radius": { "button": { "sm": {...} } } }
+    if (!mergedComponents[propertyName]) {
+      mergedComponents[propertyName] = {} as ComponentTokens[string];
+    }
+    const propertyObj = mergedComponents[propertyName] as Record<string, unknown>;
+
     Object.keys(content).forEach((key) => {
       if (!key.startsWith('$')) {
-        (mergedComponents[propertyName] as Record<string, unknown>)[key] = content[key];
+        const componentName = key;
+        propertyObj[componentName] = content[key];
       }
     });
   });
   console.log(
-    `✅ Merged ${sharedFiles.length} shared property files (category-first)`
+    `✅ Merged ${sharedFiles.length} shared property files (category-first: radius.button.sm)`
   );
 }
 
 // Load component files (component-first)
+// Structure: { "primary": { "boxed": { "background": {...} } } } → { "button": { "primary": {...} } }
 if (fs.existsSync(componentComponentsDir)) {
   const componentFiles = fs
     .readdirSync(componentComponentsDir)
@@ -139,15 +184,28 @@ if (fs.existsSync(componentComponentsDir)) {
     ) as Record<string, unknown>;
     const componentName = file.replace('.json', '');
 
-    mergedComponents[componentName] = {} as ComponentTokens[string];
+    // Merge component content directly (component-first structure)
+    if (!mergedComponents[componentName]) {
+      mergedComponents[componentName] = {} as ComponentTokens[string];
+    }
     Object.keys(content).forEach((key) => {
       if (!key.startsWith('$')) {
-        (mergedComponents[componentName] as Record<string, unknown>)[key] = content[key];
+        // Deep merge to handle nested structures
+        const existing = mergedComponents[componentName] as Record<string, unknown>;
+        if (
+          typeof content[key] === 'object' &&
+          content[key] !== null &&
+          !Array.isArray(content[key])
+        ) {
+          deepMerge(existing, { [key]: content[key] } as Record<string, unknown>);
+        } else {
+          existing[key] = content[key];
+        }
       }
     });
   });
   console.log(
-    `✅ Merged ${componentFiles.length} component files (component-first)`
+    `✅ Merged ${componentFiles.length} component files (component-first: button.primary.background)`
   );
 }
 
