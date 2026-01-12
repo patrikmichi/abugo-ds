@@ -1,0 +1,13 @@
+[18:53:08.605] [INFO] Initializing Storybook
+[18:53:08.712] [DEBUG] Getting package.json info for /Users/patrikmichalicka/Desktop/figma tokens/package.json...
+[18:53:08.713] [DEBUG] Getting CLI versions from NPM for storybook...
+[18:53:08.713] [DEBUG] Executing command: npm info storybook version
+[18:53:09.336] [INFO] Adding Storybook version 10.1.11 to your project
+[18:53:09.337] [ERROR] Unable to initialize Storybook in this directory.
+
+Storybook couldn't detect a supported framework or configuration for your project. Make sure you're inside a framework project (e.g., React, Vue, Svelte, Angular, Next.js) and that its dependencies are installed.
+
+Tips:
+- Run init in an empty directory or create a new framework app first.
+- If this directory contains unrelated files, try a new directory for Storybook.
+[18:53:09.339] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry

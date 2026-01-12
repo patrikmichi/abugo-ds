@@ -1,1261 +1,1133 @@
 {
-  "modes": {
-    "Reservio": {
-      "content": {
-        "passive": {
-          "neutral": {
-            "strong": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.800}",
-              "$description": "passive token for neutral intent"
-            },
-            "default": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.700}",
-              "$description": "passive token for neutral intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.600}",
-              "$description": "passive token for neutral intent"
-            },
-            "muted": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.500}",
-              "$description": "passive token for neutral intent"
-            }
-          },
-          "on-neutral": {
-            "strong": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.000}",
-              "$description": "passive token for on-neutral intent"
-            },
-            "default": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.100}",
-              "$description": "passive token for on-neutral intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "SHAPE_FILL",
-                "TEXT_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.200}",
-              "$description": "passive token for on-neutral intent"
-            }
-          },
-          "on-accent": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.grey.000}",
-            "$description": "content token for passive intent"
-          },
-          "on-accent-inverse": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.upgrade.700}",
-            "$description": "content token for passive intent"
-          },
-          "on-success": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.grey.000}",
-            "$description": "content token for passive intent"
-          },
-          "on-danger": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.grey.000}",
-            "$description": "content token for passive intent"
-          },
-          "on-warning": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.grey.000}",
-            "$description": "content token for passive intent"
-          },
-          "on-info": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.grey.000}",
-            "$description": "content token for passive intent"
-          },
-          "on-upgrade": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.grey.000}",
-            "$description": "content token for passive intent"
-          },
-          "info": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.upgrade.700}",
-            "$description": "content token for passive intent"
-          },
-          "upgrade": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.upgrade.700}",
-            "$description": "content token for passive intent"
-          },
-          "success": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.success.700}",
-            "$description": "Text color for success content"
-          },
-          "danger": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.negative.700}",
-            "$description": "Text color for error/danger content"
-          },
-          "warning": {
-            "$scopes": [
-              "SHAPE_FILL",
-              "TEXT_FILL"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.warning.700}",
-            "$description": "content token for passive intent"
-          }
+  "content": {
+    "passive": {
+      "neutral": {
+        "strong": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.800}",
+          "$description": "passive token for neutral intent"
         },
-        "active": {
-          "neutral": {
-            "default": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.700}",
-              "$description": "active token for neutral intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.800}",
-              "$description": "active token for neutral intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.600}",
-              "$description": "active token for neutral intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.500}",
-              "$description": "active token for neutral intent"
-            }
+        "default": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.700}",
+          "$description": "passive token for neutral intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.600}",
+          "$description": "passive token for neutral intent"
+        },
+        "muted": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.500}",
+          "$description": "passive token for neutral intent"
+        }
+      },
+      "on-neutral": {
+        "strong": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.000}",
+          "$description": "passive token for on-neutral intent"
+        },
+        "default": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.100}",
+          "$description": "passive token for on-neutral intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.200}",
+          "$description": "passive token for on-neutral intent"
+        }
+      },
+      "on-accent": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.grey.000}",
+        "$description": "content token for passive intent"
+      },
+      "on-accent-inverse": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.upgrade.700}",
+        "$description": "content token for passive intent"
+      },
+      "on-success": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.grey.000}",
+        "$description": "content token for passive intent"
+      },
+      "on-danger": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.grey.000}",
+        "$description": "content token for passive intent"
+      },
+      "on-warning": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.grey.000}",
+        "$description": "content token for passive intent"
+      },
+      "on-info": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.grey.000}",
+        "$description": "content token for passive intent"
+      },
+      "on-upgrade": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.grey.000}",
+        "$description": "content token for passive intent"
+      },
+      "info": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.upgrade.700}",
+        "$description": "content token for passive intent"
+      },
+      "upgrade": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.upgrade.700}",
+        "$description": "content token for passive intent"
+      },
+      "success": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.success.700}",
+        "$description": "Text color for success content"
+      },
+      "danger": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.negative.700}",
+        "$description": "Text color for error/danger content"
+      },
+      "warning": {
+        "$scopes": [
+          "SHAPE_FILL",
+          "TEXT_FILL"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.warning.700}",
+        "$description": "content token for passive intent"
+      }
+    },
+    "active": {
+      "neutral": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.700}",
+          "$description": "active token for neutral intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.800}",
+          "$description": "active token for neutral intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.600}",
+          "$description": "active token for neutral intent"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.500}",
+          "$description": "active token for neutral intent"
+        }
+      },
+      "accent": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.700}",
+          "$description": "active token for accent intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.800}",
+          "$description": "active token for accent intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.600}",
+          "$description": "active token for accent intent"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.500}",
+          "$description": "active token for accent intent"
+        },
+        "inverse": {
+          "default": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.grey.000}",
+            "$description": "accent token for inverse intent"
           },
-          "accent": {
-            "default": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.700}",
-              "$description": "active token for accent intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.800}",
-              "$description": "active token for accent intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.600}",
-              "$description": "active token for accent intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.500}",
-              "$description": "active token for accent intent"
-            },
-            "inverse": {
-              "default": {
-                "$scopes": [
-                  "ALL_SCOPES"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.000}",
-                "$description": "accent token for inverse intent"
-              },
-              "hover": {
-                "$scopes": [
-                  "ALL_SCOPES"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.300}",
-                "$description": "accent token for inverse intent"
-              },
-              "pressed": {
-                "$scopes": [
-                  "ALL_SCOPES"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.300}",
-                "$description": "accent token for inverse intent"
-              },
-              "disabled": {
-                "$scopes": [
-                  "ALL_SCOPES"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.500}",
-                "$description": "accent token for inverse intent"
-              }
-            }
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.300}",
+            "$description": "accent token for inverse intent"
           },
-          "upgrade": {
-            "default": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.700}",
-              "$description": "active token for upgrade intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.800}",
-              "$description": "active token for upgrade intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.600}",
-              "$description": "active token for upgrade intent"
-            }
+          "pressed": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.300}",
+            "$description": "accent token for inverse intent"
           },
-          "danger": {
-            "default": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.700}",
-              "$description": "active token for danger intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.800}",
-              "$description": "active token for danger intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.600}",
-              "$description": "active token for danger intent"
-            }
+          "disabled": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.500}",
+            "$description": "accent token for inverse intent"
           }
         }
       },
-      "background": {
-        "passive": {
-          "neutral": {
-            "default": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.200}",
-              "$description": "passive token for neutral intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.100}",
-              "$description": "passive token for neutral intent"
-            },
-            "elevated": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.000}",
-              "$description": "passive token for neutral intent"
-            },
-            "strong": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.700}",
-              "$description": "passive token for neutral intent"
-            }
-          },
-          "danger": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.700}",
-              "$description": "passive token for danger intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.100}",
-              "$description": "passive token for danger intent"
-            }
-          },
-          "success": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.success.700}",
-              "$description": "passive token for success intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.success.100}",
-              "$description": "passive token for success intent"
-            }
-          },
-          "warning": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.warning.700}",
-              "$description": "passive token for warning intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.warning.100}",
-              "$description": "passive token for warning intent"
-            }
-          },
-          "info": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.700}",
-              "$description": "passive token for info intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.100}",
-              "$description": "passive token for info intent"
-            }
-          },
-          "upgrade": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.200}",
-              "$description": "passive token for upgrade intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.100}",
-              "$description": "passive token for upgrade intent"
-            },
-            "strong": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.700}",
-              "$description": "passive token for upgrade intent"
-            }
-          }
+      "upgrade": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.700}",
+          "$description": "active token for upgrade intent"
         },
-        "active": {
-          "neutral": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.000}",
-              "$description": "active token for neutral intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.200}",
-              "$description": "active token for neutral intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.100}",
-              "$description": "active token for neutral intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.200}",
-              "$description": "active token for neutral intent"
-            }
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.800}",
+          "$description": "active token for upgrade intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.600}",
+          "$description": "active token for upgrade intent"
+        }
+      },
+      "danger": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.700}",
+          "$description": "active token for danger intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.800}",
+          "$description": "active token for danger intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.600}",
+          "$description": "active token for danger intent"
+        }
+      }
+    }
+  },
+  "background": {
+    "passive": {
+      "neutral": {
+        "default": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.200}",
+          "$description": "passive token for neutral intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.100}",
+          "$description": "passive token for neutral intent"
+        },
+        "elevated": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.000}",
+          "$description": "passive token for neutral intent"
+        },
+        "strong": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.700}",
+          "$description": "passive token for neutral intent"
+        }
+      },
+      "danger": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.700}",
+          "$description": "passive token for danger intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.100}",
+          "$description": "passive token for danger intent"
+        }
+      },
+      "success": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.success.700}",
+          "$description": "passive token for success intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.success.100}",
+          "$description": "passive token for success intent"
+        }
+      },
+      "warning": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.warning.700}",
+          "$description": "passive token for warning intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.warning.100}",
+          "$description": "passive token for warning intent"
+        }
+      },
+      "info": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.700}",
+          "$description": "passive token for info intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.100}",
+          "$description": "passive token for info intent"
+        }
+      },
+      "upgrade": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.200}",
+          "$description": "passive token for upgrade intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.100}",
+          "$description": "passive token for upgrade intent"
+        },
+        "strong": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.700}",
+          "$description": "passive token for upgrade intent"
+        }
+      }
+    },
+    "active": {
+      "neutral": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.000}",
+          "$description": "active token for neutral intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.200}",
+          "$description": "active token for neutral intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.100}",
+          "$description": "active token for neutral intent"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.200}",
+          "$description": "active token for neutral intent"
+        }
+      },
+      "accent": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.700}",
+          "$description": "active token for accent intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.200}",
+          "$description": "active token for accent intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.800}",
+          "$description": "active token for accent intent"
+        },
+        "selected": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.700}",
+          "$description": "active token for accent intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.600}",
+          "$description": "active token for accent intent"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brand.500}",
+          "$description": "active token for accent intent"
+        },
+        "inverse": {
+          "default": {
+            "$scopes": [
+              "ALL_FILLS",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.grey.000}",
+            "$description": "accent token for inverse intent"
           },
-          "accent": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.700}",
-              "$description": "active token for accent intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.200}",
-              "$description": "active token for accent intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.800}",
-              "$description": "active token for accent intent"
-            },
-            "selected": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.700}",
-              "$description": "active token for accent intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.600}",
-              "$description": "active token for accent intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.500}",
-              "$description": "active token for accent intent"
-            },
-            "inverse": {
-              "default": {
-                "$scopes": [
-                  "ALL_FILLS",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.000}",
-                "$description": "accent token for inverse intent"
-              },
-              "subtle": {
-                "$scopes": [
-                  "ALL_FILLS",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.600}",
-                "$description": "accent token for inverse intent"
-              },
-              "hover": {
-                "$scopes": [
-                  "ALL_FILLS",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.200}",
-                "$description": "accent token for inverse intent"
-              },
-              "pressed": {
-                "$scopes": [
-                  "ALL_FILLS",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.300}",
-                "$description": "accent token for inverse intent"
-              },
-              "disabled": {
-                "$scopes": [
-                  "ALL_FILLS",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.400}",
-                "$description": "accent token for inverse intent"
-              }
-            }
+          "subtle": {
+            "$scopes": [
+              "ALL_FILLS",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.600}",
+            "$description": "accent token for inverse intent"
           },
-          "danger": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.700}",
-              "$description": "active token for danger intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.100}",
-              "$description": "active token for danger intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.800}",
-              "$description": "active token for danger intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.600}",
-              "$description": "active token for danger intent"
-            }
+          "hover": {
+            "$scopes": [
+              "ALL_FILLS",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.200}",
+            "$description": "accent token for inverse intent"
           },
-          "success": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.success.700}",
-              "$description": "active token for success intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.success.800}",
-              "$description": "active token for success intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.success.600}",
-              "$description": "active token for success intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.success.400}",
-              "$description": "active token for success intent"
-            }
+          "pressed": {
+            "$scopes": [
+              "ALL_FILLS",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.300}",
+            "$description": "accent token for inverse intent"
           },
-          "warning": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.warning.700}",
-              "$description": "active token for warning intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.warning.800}",
-              "$description": "active token for warning intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.warning.600}",
-              "$description": "active token for warning intent"
-            }
-          },
-          "upgrade": {
-            "default": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.700}",
-              "$description": "active token for upgrade intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.100}",
-              "$description": "active token for upgrade intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.800}",
-              "$description": "active token for upgrade intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_FILLS",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.600}",
-              "$description": "active token for upgrade intent"
-            }
+          "disabled": {
+            "$scopes": [
+              "ALL_FILLS",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.400}",
+            "$description": "accent token for inverse intent"
           }
         }
       },
-      "border": {
-        "passive": {
-          "neutral": {
-            "default": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.300}",
-              "$description": "passive token for neutral intent"
-            },
-            "subtle": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.200}",
-              "$description": "passive token for neutral intent"
-            },
-            "strong": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.300}",
-              "$description": "passive token for neutral intent"
-            },
-            "stronger": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.500}",
-              "$description": "passive token for neutral intent"
-            },
-            "strongest": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.grey.600}",
-              "$description": "passive token for neutral intent"
-            }
-          },
-          "danger": {
+      "danger": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.700}",
+          "$description": "active token for danger intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.100}",
+          "$description": "active token for danger intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.800}",
+          "$description": "active token for danger intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.600}",
+          "$description": "active token for danger intent"
+        }
+      },
+      "success": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.success.700}",
+          "$description": "active token for success intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.success.800}",
+          "$description": "active token for success intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.success.600}",
+          "$description": "active token for success intent"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.success.400}",
+          "$description": "active token for success intent"
+        }
+      },
+      "warning": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.warning.700}",
+          "$description": "active token for warning intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.warning.800}",
+          "$description": "active token for warning intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.warning.600}",
+          "$description": "active token for warning intent"
+        }
+      },
+      "upgrade": {
+        "default": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.700}",
+          "$description": "active token for upgrade intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.100}",
+          "$description": "active token for upgrade intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.800}",
+          "$description": "active token for upgrade intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_FILLS",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.600}",
+          "$description": "active token for upgrade intent"
+        }
+      }
+    }
+  },
+  "border": {
+    "passive": {
+      "neutral": {
+        "default": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.300}",
+          "$description": "passive token for neutral intent"
+        },
+        "subtle": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.200}",
+          "$description": "passive token for neutral intent"
+        },
+        "strong": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.300}",
+          "$description": "passive token for neutral intent"
+        },
+        "stronger": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.500}",
+          "$description": "passive token for neutral intent"
+        },
+        "strongest": {
+          "$scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.grey.600}",
+          "$description": "passive token for neutral intent"
+        }
+      },
+      "danger": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.negative.700}",
+        "$description": "border token for passive intent"
+      },
+      "success": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.success.700}",
+        "$description": "border token for passive intent"
+      },
+      "warning": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.warning.700}",
+        "$description": "border token for passive intent"
+      },
+      "info": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.upgrade.700}",
+        "$description": "border token for passive intent"
+      },
+      "upgrade": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.upgrade.700}",
+        "$description": "border token for passive intent"
+      }
+    },
+    "active": {
+      "neutral": {
+        "action": {
+          "default": {
             "$scopes": [
-              "ALL_SCOPES"
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
             ],
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.negative.700}",
-            "$description": "border token for passive intent"
+            "$value": "{colors.grey.300}",
+            "$description": "neutral token for action intent"
           },
-          "success": {
+          "hover": {
             "$scopes": [
-              "ALL_SCOPES"
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
             ],
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.success.700}",
-            "$description": "border token for passive intent"
+            "$value": "{colors.grey.400}",
+            "$description": "neutral token for action intent"
           },
-          "warning": {
+          "pressed": {
             "$scopes": [
-              "ALL_SCOPES"
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
             ],
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.warning.700}",
-            "$description": "border token for passive intent"
+            "$value": "{colors.grey.200}",
+            "$description": "neutral token for action intent"
           },
-          "info": {
+          "focused": {
             "$scopes": [
-              "ALL_SCOPES"
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
             ],
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.upgrade.700}",
-            "$description": "border token for passive intent"
+            "$value": "{colors.brand.500}",
+            "$description": "neutral token for action intent"
           },
-          "upgrade": {
+          "selected": {
             "$scopes": [
-              "ALL_SCOPES"
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
             ],
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.upgrade.700}",
-            "$description": "border token for passive intent"
+            "$value": "{colors.grey.700}",
+            "$description": "neutral token for action intent"
+          },
+          "disabled": {
+            "$scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.grey.400}",
+            "$description": "neutral token for action intent"
           }
         },
-        "active": {
-          "neutral": {
-            "action": {
-              "default": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.300}",
-                "$description": "neutral token for action intent"
-              },
-              "hover": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.400}",
-                "$description": "neutral token for action intent"
-              },
-              "pressed": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.200}",
-                "$description": "neutral token for action intent"
-              },
-              "focused": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.brand.500}",
-                "$description": "neutral token for action intent"
-              },
-              "selected": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.700}",
-                "$description": "neutral token for action intent"
-              },
-              "disabled": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.grey.400}",
-                "$description": "neutral token for action intent"
-              }
-            },
-            "control": {
-              "field": {
-                "default": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.grey.300}",
-                  "$description": "control token for field intent"
-                },
-                "hover": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.grey.400}",
-                  "$description": "control token for field intent"
-                },
-                "focused": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.brand.700}",
-                  "$description": "control token for field intent"
-                },
-                "selected": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.grey.700}",
-                  "$description": "control token for field intent"
-                },
-                "disabled": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.grey.400}",
-                  "$description": "control token for field intent"
-                }
-              },
-              "toggle": {
-                "default": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.brand.700}",
-                  "$description": "control token for toggle intent"
-                },
-                "hover": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.brand.800}",
-                  "$description": "control token for toggle intent"
-                },
-                "focused": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.brand.500}",
-                  "$description": "control token for toggle intent"
-                },
-                "selected": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.brand.700}",
-                  "$description": "control token for toggle intent"
-                },
-                "disabled": {
-                  "$scopes": [
-                    "FRAME_FILL",
-                    "SHAPE_FILL",
-                    "STROKE_COLOR"
-                  ],
-                  "$type": "color",
-                  "$libraryName": "",
-                  "$collectionName": "primitives",
-                  "$value": "{colors.modes.Reservio.brand.400}",
-                  "$description": "control token for toggle intent"
-                }
-              }
-            }
-          },
-          "accent": {
+        "control": {
+          "field": {
             "default": {
               "$scopes": [
                 "FRAME_FILL",
@@ -1265,8 +1137,8 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.700}",
-              "$description": "active token for accent intent"
+              "$value": "{colors.grey.300}",
+              "$description": "control token for field intent"
             },
             "hover": {
               "$scopes": [
@@ -1277,20 +1149,8 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.800}",
-              "$description": "active token for accent intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.600}",
-              "$description": "active token for accent intent"
+              "$value": "{colors.grey.400}",
+              "$description": "control token for field intent"
             },
             "focused": {
               "$scopes": [
@@ -1301,8 +1161,8 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.500}",
-              "$description": "active token for accent intent"
+              "$value": "{colors.brand.700}",
+              "$description": "control token for field intent"
             },
             "selected": {
               "$scopes": [
@@ -1313,8 +1173,8 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.600}",
-              "$description": "active token for accent intent"
+              "$value": "{colors.grey.700}",
+              "$description": "control token for field intent"
             },
             "disabled": {
               "$scopes": [
@@ -1325,603 +1185,583 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brand.500}",
-              "$description": "active token for accent intent"
-            },
-            "inverse": {
-              "default": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.300}",
-                "$description": "accent token for inverse intent"
-              },
-              "hover": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.400}",
-                "$description": "accent token for inverse intent"
-              },
-              "pressed": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.500}",
-                "$description": "accent token for inverse intent"
-              },
-              "disabled": {
-                "$scopes": [
-                  "FRAME_FILL",
-                  "SHAPE_FILL",
-                  "STROKE_COLOR"
-                ],
-                "$type": "color",
-                "$libraryName": "",
-                "$collectionName": "primitives",
-                "$value": "{colors.modes.Reservio.upgrade.600}",
-                "$description": "accent token for inverse intent"
-              }
+              "$value": "{colors.grey.400}",
+              "$description": "control token for field intent"
             }
           },
-          "danger": {
+          "toggle": {
             "default": {
               "$scopes": [
-                "ALL_SCOPES"
+                "FRAME_FILL",
+                "SHAPE_FILL",
+                "STROKE_COLOR"
               ],
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.700}",
-              "$description": "active token for danger intent"
+              "$value": "{colors.brand.700}",
+              "$description": "control token for toggle intent"
             },
             "hover": {
               "$scopes": [
-                "ALL_SCOPES"
+                "FRAME_FILL",
+                "SHAPE_FILL",
+                "STROKE_COLOR"
               ],
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.800}",
-              "$description": "active token for danger intent"
+              "$value": "{colors.brand.800}",
+              "$description": "control token for toggle intent"
             },
-            "pressed": {
+            "focused": {
               "$scopes": [
-                "ALL_SCOPES"
+                "FRAME_FILL",
+                "SHAPE_FILL",
+                "STROKE_COLOR"
               ],
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.negative.600}",
-              "$description": "active token for danger intent"
+              "$value": "{colors.brand.500}",
+              "$description": "control token for toggle intent"
+            },
+            "selected": {
+              "$scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL",
+                "STROKE_COLOR"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{colors.brand.700}",
+              "$description": "control token for toggle intent"
+            },
+            "disabled": {
+              "$scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL",
+                "STROKE_COLOR"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{colors.brand.400}",
+              "$description": "control token for toggle intent"
             }
-          },
-          "upgrade": {
-            "default": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.700}",
-              "$description": "active token for upgrade intent"
-            },
-            "hover": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.800}",
-              "$description": "active token for upgrade intent"
-            },
-            "pressed": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.upgrade.600}",
-              "$description": "active token for upgrade intent"
-            }
-          }
-        },
-        "width": {
-          "thin": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{borderWidth.modes.Reservio.border-1}",
-            "$description": "border token for width intent"
-          },
-          "thicker": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{borderWidth.modes.Reservio.border-2}",
-            "$description": "border token for width intent"
-          },
-          "thick": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{borderWidth.modes.Reservio.border-3}",
-            "$description": "border token for width intent"
           }
         }
       },
-      "custom": {
-        "notes": {
-          "content": {
-            "filled": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brown.700}",
-              "$description": "notes token for content intent"
-            },
-            "placeholder": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{colors.modes.Reservio.brown.600}",
-              "$description": "notes token for content intent"
-            }
-          },
-          "background": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{colors.modes.Reservio.yellow.400}",
-            "$description": "custom token for notes intent"
-          }
-        },
-        "rating": {
+      "accent": {
+        "default": {
           "$scopes": [
             "FRAME_FILL",
-            "SHAPE_FILL"
+            "SHAPE_FILL",
+            "STROKE_COLOR"
           ],
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.modes.Reservio.yellow.700}",
-          "$description": "Reservio token for custom intent"
-        }
-      },
-      "padding": {
-        "xxxs": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.1}",
-          "$description": "Reservio token for padding intent"
+          "$value": "{colors.brand.700}",
+          "$description": "active token for accent intent"
         },
-        "xxs": {
+        "hover": {
           "$scopes": [
-            "ALL_SCOPES"
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.2}",
-          "$description": "Reservio token for padding intent"
+          "$value": "{colors.brand.800}",
+          "$description": "active token for accent intent"
         },
-        "xs": {
+        "pressed": {
           "$scopes": [
-            "ALL_SCOPES"
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.3}",
-          "$description": "Reservio token for padding intent"
+          "$value": "{colors.brand.600}",
+          "$description": "active token for accent intent"
         },
-        "s": {
+        "focused": {
           "$scopes": [
-            "ALL_SCOPES"
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.4}",
-          "$description": "Reservio token for padding intent"
+          "$value": "{colors.brand.500}",
+          "$description": "active token for accent intent"
         },
-        "m": {
+        "selected": {
           "$scopes": [
-            "ALL_SCOPES"
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.5}",
-          "$description": "Reservio token for padding intent"
+          "$value": "{colors.brand.600}",
+          "$description": "active token for accent intent"
         },
-        "l": {
+        "disabled": {
           "$scopes": [
-            "ALL_SCOPES"
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.6}",
-          "$description": "Reservio token for padding intent"
+          "$value": "{colors.brand.500}",
+          "$description": "active token for accent intent"
         },
-        "xl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.8}",
-          "$description": "Reservio token for padding intent"
-        },
-        "xxl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.12}",
-          "$description": "Reservio token for padding intent"
-        },
-        "xxxl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.20}",
-          "$description": "Reservio token for padding intent"
-        },
-        "xxxxl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.30}",
-          "$description": "Reservio token for padding intent"
-        }
-      },
-      "typography": {
-        "headline": {
-          "font-size": {
-            "h1": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.9}",
-              "$description": "headline token for font-size intent"
-            },
-            "h2": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.8}",
-              "$description": "headline token for font-size intent"
-            },
-            "h3": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.7}",
-              "$description": "headline token for font-size intent"
-            },
-            "h4": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.6}",
-              "$description": "headline token for font-size intent"
-            },
-            "h5": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.5}",
-              "$description": "headline token for font-size intent"
-            },
-            "h6": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.4}",
-              "$description": "headline token for font-size intent"
-            }
+        "inverse": {
+          "default": {
+            "$scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.300}",
+            "$description": "accent token for inverse intent"
           },
-          "line-height": {
-            "h1": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "headline token for line-height intent"
-            },
-            "h2": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "headline token for line-height intent"
-            },
-            "h3": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "headline token for line-height intent"
-            },
-            "h4": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "headline token for line-height intent"
-            },
-            "h5": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "headline token for line-height intent"
-            },
-            "h6": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "headline token for line-height intent"
-            }
-          }
-        },
-        "body": {
-          "font-size": {
-            "large": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.4}",
-              "$description": "body token for font-size intent"
-            },
-            "medium": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.3}",
-              "$description": "body token for font-size intent"
-            },
-            "small": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.2}",
-              "$description": "body token for font-size intent"
-            },
-            "extra-small": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontSize.1}",
-              "$description": "body token for font-size intent"
-            }
+          "hover": {
+            "$scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.400}",
+            "$description": "accent token for inverse intent"
           },
-          "line-height": {
-            "large": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.lineHeight.base}",
-              "$description": "body token for line-height intent"
-            },
-            "default": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "semanticTokens",
-              "$value": "{modes.Reservio.typography.body.font-size.medium}",
-              "$description": "body token for line-height intent"
-            },
-            "small": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "semanticTokens",
-              "$value": "{modes.Reservio.typography.body.font-size.medium}",
-              "$description": "body token for line-height intent"
-            },
-            "extra-small": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "dimension",
-              "$libraryName": "",
-              "$collectionName": "semanticTokens",
-              "$value": "{modes.Reservio.typography.body.font-size.medium}",
-              "$description": "body token for line-height intent"
-            }
+          "pressed": {
+            "$scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.500}",
+            "$description": "accent token for inverse intent"
           },
-          "font-weight": {
-            "light": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "number",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontWeight.regular}",
-              "$description": "body token for font-weight intent"
-            },
-            "normal": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "number",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontWeight.regular}",
-              "$description": "body token for font-weight intent"
-            },
-            "medium": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "number",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontWeight.medium}",
-              "$description": "body token for font-weight intent"
-            },
-            "semibold": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "number",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontWeight.bold}",
-              "$description": "body token for font-weight intent"
-            },
-            "bold": {
-              "$scopes": [
-                "ALL_SCOPES"
-              ],
-              "$type": "number",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{typography.modes.Reservio.fontWeight.bold}",
-              "$description": "body token for font-weight intent"
-            }
+          "disabled": {
+            "$scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL",
+              "STROKE_COLOR"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{colors.upgrade.600}",
+            "$description": "accent token for inverse intent"
           }
         }
       },
-      "radius": {
-        "none": {
+      "danger": {
+        "default": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-0}",
-          "$description": "Reservio token for radius intent"
+          "$value": "{colors.negative.700}",
+          "$description": "active token for danger intent"
         },
-        "xsmall": {
+        "hover": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-1}",
-          "$description": "Reservio token for radius intent"
+          "$value": "{colors.negative.800}",
+          "$description": "active token for danger intent"
         },
-        "small": {
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.negative.600}",
+          "$description": "active token for danger intent"
+        }
+      },
+      "upgrade": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.700}",
+          "$description": "active token for upgrade intent"
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.800}",
+          "$description": "active token for upgrade intent"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.upgrade.600}",
+          "$description": "active token for upgrade intent"
+        }
+      }
+    },
+    "width": {
+      "thin": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{borderWidth.border-1}",
+        "$description": "border token for width intent"
+      },
+      "thicker": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{borderWidth.border-2}",
+        "$description": "border token for width intent"
+      },
+      "thick": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{borderWidth.border-3}",
+        "$description": "border token for width intent"
+      }
+    }
+  },
+  "custom": {
+    "notes": {
+      "content": {
+        "filled": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brown.700}",
+          "$description": "notes token for content intent"
+        },
+        "placeholder": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{colors.brown.600}",
+          "$description": "notes token for content intent"
+        }
+      },
+      "background": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{colors.yellow.400}",
+        "$description": "custom token for notes intent"
+      }
+    },
+    "rating": {
+      "$scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{colors.yellow.700}",
+      "$description": "Reservio token for custom intent"
+    }
+  },
+  "padding": {
+    "xxxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.1}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.2}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.3}",
+      "$description": "Reservio token for padding intent"
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.4}",
+      "$description": "Reservio token for padding intent"
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.5}",
+      "$description": "Reservio token for padding intent"
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.6}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.8}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.12}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.20}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxxxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.30}",
+      "$description": "Reservio token for padding intent"
+    }
+  },
+  "typography": {
+    "headline": {
+      "font-size": {
+        "h1": {
           "$scopes": [
             "ALL_SCOPES"
           ],
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-2}",
-          "$description": "Reservio token for radius intent"
+          "$value": "{typography.fontSize.9}",
+          "$description": "headline token for font-size intent"
+        },
+        "h2": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.8}",
+          "$description": "headline token for font-size intent"
+        },
+        "h3": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.7}",
+          "$description": "headline token for font-size intent"
+        },
+        "h4": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.6}",
+          "$description": "headline token for font-size intent"
+        },
+        "h5": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.5}",
+          "$description": "headline token for font-size intent"
+        },
+        "h6": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.4}",
+          "$description": "headline token for font-size intent"
+        }
+      },
+      "line-height": {
+        "h1": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.lineHeight.base}",
+          "$description": "headline token for line-height intent"
+        },
+        "h2": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.lineHeight.base}",
+          "$description": "headline token for line-height intent"
+        },
+        "h3": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.lineHeight.base}",
+          "$description": "headline token for line-height intent"
+        },
+        "h4": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.lineHeight.base}",
+          "$description": "headline token for line-height intent"
+        },
+        "h5": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.lineHeight.base}",
+          "$description": "headline token for line-height intent"
+        },
+        "h6": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.lineHeight.base}",
+          "$description": "headline token for line-height intent"
+        }
+      }
+    },
+    "body": {
+      "font-size": {
+        "large": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.4}",
+          "$description": "body token for font-size intent"
         },
         "medium": {
           "$scopes": [
@@ -1930,9 +1770,31 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-3}",
-          "$description": "Reservio token for radius intent"
+          "$value": "{typography.fontSize.3}",
+          "$description": "body token for font-size intent"
         },
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.2}",
+          "$description": "body token for font-size intent"
+        },
+        "extra-small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{typography.fontSize.1}",
+          "$description": "body token for font-size intent"
+        }
+      },
+      "line-height": {
         "large": {
           "$scopes": [
             "ALL_SCOPES"
@@ -1940,669 +1802,803 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-4}",
-          "$description": "Reservio token for radius intent"
+          "$value": "{typography.lineHeight.base}",
+          "$description": "body token for line-height intent"
         },
-        "xlarge": {
+        "default": {
           "$scopes": [
             "ALL_SCOPES"
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-5}",
-          "$description": "Reservio token for radius intent"
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.body.font-size.medium}",
+          "$description": "body token for line-height intent"
         },
-        "xxlarge": {
+        "small": {
           "$scopes": [
             "ALL_SCOPES"
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-6}",
-          "$description": "Reservio token for radius intent"
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.body.font-size.medium}",
+          "$description": "body token for line-height intent"
         },
-        "full": {
+        "extra-small": {
           "$scopes": [
             "ALL_SCOPES"
           ],
           "$type": "dimension",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{borderRadius.modes.Survio.radius-round}",
-          "$description": "Reservio token for radius intent"
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.body.font-size.medium}",
+          "$description": "body token for line-height intent"
         }
       },
-      "icon": {
-        "icon-xxsmall": {
+      "font-weight": {
+        "light": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "number",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-1}",
-          "$description": "Reservio token for icon intent"
+          "$value": "{typography.fontWeight.regular}",
+          "$description": "body token for font-weight intent"
         },
-        "icon-xsmall": {
+        "normal": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "number",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-2}",
-          "$description": "Reservio token for icon intent"
+          "$value": "{typography.fontWeight.regular}",
+          "$description": "body token for font-weight intent"
         },
-        "icon-small": {
+        "medium": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "number",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-3}",
-          "$description": "Reservio token for icon intent"
+          "$value": "{typography.fontWeight.medium}",
+          "$description": "body token for font-weight intent"
         },
-        "icon-medium": {
+        "semibold": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "number",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-4}",
-          "$description": "Reservio token for icon intent"
+          "$value": "{typography.fontWeight.bold}",
+          "$description": "body token for font-weight intent"
         },
-        "icon-large": {
+        "bold": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$type": "dimension",
+          "$type": "number",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-5}",
-          "$description": "Reservio token for icon intent"
-        },
-        "icon-xlarge": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-6}",
-          "$description": "Reservio token for icon intent"
-        },
-        "icon-xxlarge": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-7}",
-          "$description": "Reservio token for icon intent"
-        },
-        "icon-huge": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{iconSize.modes.Survio.icon-size-8}",
-          "$description": "Reservio token for icon intent"
+          "$value": "{typography.fontWeight.bold}",
+          "$description": "body token for font-weight intent"
         }
+      }
+    }
+  },
+  "radius": {
+    "none": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-0}",
+      "$description": "Reservio token for radius intent"
+    },
+    "xsmall": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-1}",
+      "$description": "Reservio token for radius intent"
+    },
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-2}",
+      "$description": "Reservio token for radius intent"
+    },
+    "medium": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-3}",
+      "$description": "Reservio token for radius intent"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-4}",
+      "$description": "Reservio token for radius intent"
+    },
+    "xlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-5}",
+      "$description": "Reservio token for radius intent"
+    },
+    "xxlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-6}",
+      "$description": "Reservio token for radius intent"
+    },
+    "full": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{borderRadius.radius-round}",
+      "$description": "Reservio token for radius intent"
+    }
+  },
+  "icon": {
+    "icon-xxsmall": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-1}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-xsmall": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-2}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-3}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-medium": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-4}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-5}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-xlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-6}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-xxlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-7}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-huge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{iconSize.icon-size-8}",
+      "$description": "Reservio token for icon intent"
+    }
+  },
+  "gap": {
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.1}",
+      "$description": "Reservio token for gap intent"
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.2}",
+      "$description": "Reservio token for gap intent"
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.3}",
+      "$description": "Reservio token for gap intent"
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.4}",
+      "$description": "Reservio token for gap intent"
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.5}",
+      "$description": "Reservio token for gap intent"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.6}",
+      "$description": "Reservio token for gap intent"
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing.8}",
+      "$description": "Reservio token for gap intent"
+    }
+  },
+  "control": {
+    "height": {
+      "xxxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing.size-1}",
+        "$description": "control token for height intent"
       },
-      "gap": {
-        "xxs": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.1}",
-          "$description": "Reservio token for gap intent"
-        },
-        "xs": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.2}",
-          "$description": "Reservio token for gap intent"
-        },
-        "s": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.3}",
-          "$description": "Reservio token for gap intent"
-        },
-        "m": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.4}",
-          "$description": "Reservio token for gap intent"
-        },
-        "l": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.5}",
-          "$description": "Reservio token for gap intent"
-        },
-        "xl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.6}",
-          "$description": "Reservio token for gap intent"
-        },
-        "xxl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{spacing.modes.Reservio.8}",
-          "$description": "Reservio token for gap intent"
-        }
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing.size-2}",
+        "$description": "control token for height intent"
       },
-      "control": {
-        "height": {
-          "xxxs": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{sizing.modes.Survio.size-1}",
-            "$description": "control token for height intent"
-          },
-          "xxs": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{sizing.modes.Survio.size-2}",
-            "$description": "control token for height intent"
-          },
-          "xs": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{sizing.modes.Survio.size-3}",
-            "$description": "control token for height intent"
-          },
-          "s": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{sizing.modes.Survio.size-4}",
-            "$description": "control token for height intent"
-          },
-          "m": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{sizing.modes.Survio.size-5}",
-            "$description": "control token for height intent"
-          },
-          "l": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "dimension",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{sizing.modes.Survio.size-6}",
-            "$description": "control token for height intent"
-          }
-        }
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing.size-3}",
+        "$description": "control token for height intent"
       },
-      "shadow": {
-        "xs": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-xs}",
-          "$description": "Reservio token for shadow intent"
-        },
-        "sm": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-sm}",
-          "$description": "Reservio token for shadow intent"
-        },
-        "md": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-md}",
-          "$description": "Reservio token for shadow intent"
-        },
-        "lg": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-lg}",
-          "$description": "Reservio token for shadow intent"
-        },
-        "xl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-xl}",
-          "$description": "Reservio token for shadow intent"
-        },
-        "2xl": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-2xl}",
-          "$description": "Reservio token for shadow intent"
-        },
-        "inner": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "boxShadow",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{boxShadow.modes.Survio.shadow-inner}",
-          "$description": "Reservio token for shadow intent"
-        }
+      "s": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing.size-4}",
+        "$description": "control token for height intent"
       },
-      "opacity": {
-        "0": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-0}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "5": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-5}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "10": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-10}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "20": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-20}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "25": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-25}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "30": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-30}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "40": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-40}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "50": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-50}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "60": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-60}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "70": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-70}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "75": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-75}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "80": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-80}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "90": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-90}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "95": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-95}",
-          "$description": "Reservio token for opacity intent"
-        },
-        "100": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{opacity.modes.Survio.opacity-100}",
-          "$description": "Reservio token for opacity intent"
-        }
+      "m": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing.size-5}",
+        "$description": "control token for height intent"
       },
-      "z-index": {
-        "base": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-base}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "dropdown": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-dropdown}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "sticky": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-sticky}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "fixed": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-fixed}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "modal-backdrop": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-modal-backdrop}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "modal": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-modal}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "popover": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-popover}",
-          "$description": "Reservio token for z-index intent"
-        },
-        "tooltip": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{zIndex.modes.Survio.z-tooltip}",
-          "$description": "Reservio token for z-index intent"
-        }
+      "l": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing.size-6}",
+        "$description": "control token for height intent"
+      }
+    }
+  },
+  "shadow": {
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-xs}",
+      "$description": "Reservio token for shadow intent"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-sm}",
+      "$description": "Reservio token for shadow intent"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-md}",
+      "$description": "Reservio token for shadow intent"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-lg}",
+      "$description": "Reservio token for shadow intent"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-xl}",
+      "$description": "Reservio token for shadow intent"
+    },
+    "2xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-2xl}",
+      "$description": "Reservio token for shadow intent"
+    },
+    "inner": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{boxShadow.shadow-inner}",
+      "$description": "Reservio token for shadow intent"
+    }
+  },
+  "opacity": {
+    "0": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-0}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "5": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-5}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "10": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-10}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "20": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-20}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "25": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-25}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "30": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-30}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "40": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-40}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "50": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-50}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "60": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-60}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "70": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-70}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "75": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-75}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "80": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-80}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "90": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-90}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "95": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-95}",
+      "$description": "Reservio token for opacity intent"
+    },
+    "100": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{opacity.opacity-100}",
+      "$description": "Reservio token for opacity intent"
+    }
+  },
+  "z-index": {
+    "base": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-base}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "dropdown": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-dropdown}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "sticky": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-sticky}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "fixed": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-fixed}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "modal-backdrop": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-modal-backdrop}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "modal": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-modal}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "popover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-popover}",
+      "$description": "Reservio token for z-index intent"
+    },
+    "tooltip": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{zIndex.z-tooltip}",
+      "$description": "Reservio token for z-index intent"
+    }
+  },
+  "animation": {
+    "duration": {
+      "instant": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.duration.instant}",
+        "$description": "animation token for duration intent"
       },
-      "animation": {
-        "duration": {
-          "instant": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "number",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.duration.instant}",
-            "$description": "animation token for duration intent"
-          },
-          "fast": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "number",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.duration.fast}",
-            "$description": "animation token for duration intent"
-          },
-          "base": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "number",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.duration.base}",
-            "$description": "animation token for duration intent"
-          },
-          "slow": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "number",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.duration.slow}",
-            "$description": "animation token for duration intent"
-          },
-          "slower": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "number",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.duration.slower}",
-            "$description": "animation token for duration intent"
-          },
-          "slowest": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "number",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.duration.slowest}",
-            "$description": "animation token for duration intent"
-          }
-        },
-        "easing": {
-          "linear": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "string",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.easing.linear}",
-            "$description": "animation token for easing intent"
-          },
-          "ease-in": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "string",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.easing.ease-in}",
-            "$description": "animation token for easing intent"
-          },
-          "ease-out": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "string",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.easing.ease-out}",
-            "$description": "animation token for easing intent"
-          },
-          "ease-in-out": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "string",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{animation.modes.Reservio.easing.ease-in-out}",
-            "$description": "animation token for easing intent"
-          }
-        }
+      "fast": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.duration.fast}",
+        "$description": "animation token for duration intent"
+      },
+      "base": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.duration.base}",
+        "$description": "animation token for duration intent"
+      },
+      "slow": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.duration.slow}",
+        "$description": "animation token for duration intent"
+      },
+      "slower": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.duration.slower}",
+        "$description": "animation token for duration intent"
+      },
+      "slowest": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.duration.slowest}",
+        "$description": "animation token for duration intent"
+      }
+    },
+    "easing": {
+      "linear": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.easing.linear}",
+        "$description": "animation token for easing intent"
+      },
+      "ease-in": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.easing.ease-in}",
+        "$description": "animation token for easing intent"
+      },
+      "ease-out": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.easing.ease-out}",
+        "$description": "animation token for easing intent"
+      },
+      "ease-in-out": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation.easing.ease-in-out}",
+        "$description": "animation token for easing intent"
       }
     }
   },
