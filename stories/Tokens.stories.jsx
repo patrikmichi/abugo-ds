@@ -148,122 +148,173 @@ export const PrimitivesColors = () => {
   );
 };
 
+// Helper function to group tokens by category
+function groupTokensByCategory(tokens, prefix) {
+  const groups = {};
+  
+  tokens.forEach((key) => {
+    const parts = key.replace(prefix, '').split('-');
+    if (parts.length >= 2) {
+      const participation = parts[0]; // passive or active
+      let intent, state;
+      
+      // Handle special cases like "on-neutral", "on-accent", etc.
+      if (parts[1] === 'on' && parts.length >= 3) {
+        intent = `on-${parts[2]}`; // on-neutral, on-accent, etc.
+        state = parts.slice(3).join('-') || 'default';
+      } else {
+        intent = parts[1]; // neutral, accent, danger, etc.
+        state = parts.slice(2).join('-') || 'default';
+      }
+      
+      if (!groups[participation]) groups[participation] = {};
+      if (!groups[participation][intent]) groups[participation][intent] = [];
+      groups[participation][intent].push({ key, state });
+    }
+  });
+  
+  return groups;
+}
+
 // Semantic Colors
 export const SemanticColors = () => {
-  // Get all content tokens (37 total)
+  // Get all content tokens
   const contentTokens = Object.keys(semanticTokens)
     .filter((key) => key.startsWith('content-'))
     .sort();
   
-  // Get all background tokens (45 total)
+  // Get all background tokens
   const backgroundTokens = Object.keys(semanticTokens)
     .filter((key) => key.startsWith('background-'))
     .sort();
   
+  // Group tokens by category
+  const contentGroups = groupTokensByCategory(contentTokens, 'content-');
+  const backgroundGroups = groupTokensByCategory(backgroundTokens, 'background-');
+  
   // Get border tokens (nested structure)
-  const borderTokens = semanticTokens.border ? (() => {
-    const borders = [];
+  const borderGroups = semanticTokens.border ? (() => {
+    const groups = {};
     function extractBorderColors(obj, path = []) {
       for (const [k, v] of Object.entries(obj)) {
         if (k.startsWith('$')) continue;
         if (v && typeof v === 'object' && v.$type === 'color') {
           const fullPath = [...path, k].join('.');
-          borders.push({ path: `border.${fullPath}`, token: v });
+          const participation = path[0] || 'active';
+          const intent = path[1] || 'neutral';
+          const controlType = path[2] || '';
+          const state = k;
+          
+          if (!groups[participation]) groups[participation] = {};
+          const groupKey = controlType ? `${intent}.${controlType}` : intent;
+          if (!groups[participation][groupKey]) groups[participation][groupKey] = [];
+          groups[participation][groupKey].push({ path: `border.${fullPath}`, token: v, state });
         } else if (v && typeof v === 'object') {
           extractBorderColors(v, [...path, k]);
         }
       }
     }
     extractBorderColors(semanticTokens.border);
-    return borders;
-  })() : [];
+    return groups;
+  })() : {};
   
   // Get custom tokens
   const customTokens = Object.keys(semanticTokens)
     .filter((key) => key.startsWith('custom-'))
     .sort();
   
+  const renderColorGroup = (tokens, title) => (
+    <div style={{ marginBottom: '48px' }}>
+      <h2>{title}</h2>
+      {Object.keys(tokens).sort().map((participation) => (
+        <div key={participation} style={{ marginBottom: '32px' }}>
+          <h3 style={{ textTransform: 'capitalize', marginBottom: '16px', color: '#666' }}>
+            {participation}
+          </h3>
+          {Object.keys(tokens[participation]).sort().map((intent) => (
+            <div key={intent} style={{ marginBottom: '24px' }}>
+              <h4 style={{ textTransform: 'capitalize', marginBottom: '12px', fontSize: '14px', fontWeight: '600' }}>
+                {intent.replace(/-/g, ' ')}
+              </h4>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                  gap: '16px',
+                }}
+              >
+                {tokens[participation][intent].map(({ key, state }) => {
+                  const token = semanticTokens[key];
+                  const resolvedValue = resolveToken(token?.$value, primitives);
+                  const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
+                  return (
+                    <ColorSwatch
+                      key={key}
+                      name={key}
+                      value={colorValue}
+                      description={token?.$description}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+  
+  const renderBorderGroup = (groups, title) => (
+    <div style={{ marginBottom: '48px' }}>
+      <h2>{title}</h2>
+      {Object.keys(groups).sort().map((participation) => (
+        <div key={participation} style={{ marginBottom: '32px' }}>
+          <h3 style={{ textTransform: 'capitalize', marginBottom: '16px', color: '#666' }}>
+            {participation}
+          </h3>
+          {Object.keys(groups[participation]).sort().map((intent) => (
+            <div key={intent} style={{ marginBottom: '24px' }}>
+              <h4 style={{ textTransform: 'capitalize', marginBottom: '12px', fontSize: '14px', fontWeight: '600' }}>
+                {intent.replace(/\./g, ' / ').replace(/-/g, ' ')}
+              </h4>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                  gap: '16px',
+                }}
+              >
+                {groups[participation][intent].map(({ path, token, state }) => {
+                  const resolvedValue = resolveToken(token?.$value, primitives);
+                  const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
+                  return (
+                    <ColorSwatch
+                      key={path}
+                      name={path}
+                      value={colorValue}
+                      description={token?.$description}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+  
   return (
     <div>
       <h1>Semantic Colors</h1>
-      <p>Meaning-based color tokens that reference primitives.</p>
+      <p>Meaning-based color tokens that reference primitives, organized by category.</p>
       
-      <div style={{ marginBottom: '48px' }}>
-        <h2>Content Colors ({contentTokens.length} tokens)</h2>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: '16px',
-          }}
-        >
-          {contentTokens.map((key) => {
-            const token = semanticTokens[key];
-            const resolvedValue = resolveToken(token?.$value, primitives);
-            // Ensure we have a string value (color)
-            const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
-            return (
-              <ColorSwatch
-                key={key}
-                name={key}
-                value={colorValue}
-                description={token?.$description}
-              />
-            );
-          })}
-        </div>
-      </div>
+      {renderColorGroup(contentGroups, `Content Colors (${contentTokens.length} tokens)`)}
       
-      <div style={{ marginBottom: '48px' }}>
-        <h2>Background Colors ({backgroundTokens.length} tokens)</h2>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: '16px',
-          }}
-        >
-          {backgroundTokens.map((key) => {
-            const token = semanticTokens[key];
-            const resolvedValue = resolveToken(token?.$value, primitives);
-            // Ensure we have a string value (color)
-            const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
-            return (
-              <ColorSwatch
-                key={key}
-                name={key}
-                value={colorValue}
-                description={token?.$description}
-              />
-            );
-          })}
-        </div>
-      </div>
+      {renderColorGroup(backgroundGroups, `Background Colors (${backgroundTokens.length} tokens)`)}
       
-      {borderTokens.length > 0 && (
-        <div style={{ marginBottom: '48px' }}>
-          <h2>Border Colors ({borderTokens.length} tokens)</h2>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-              gap: '16px',
-            }}
-          >
-            {borderTokens.map(({ path, token }) => {
-              const resolvedValue = resolveToken(token?.$value, primitives);
-              const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
-              return (
-                <ColorSwatch
-                  key={path}
-                  name={path}
-                  value={colorValue}
-                  description={token?.$description}
-                />
-              );
-            })}
-          </div>
-        </div>
+      {Object.keys(borderGroups).length > 0 && (
+        renderBorderGroup(borderGroups, 'Border Colors')
       )}
       
       {customTokens.length > 0 && (
