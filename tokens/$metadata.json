@@ -1,25 +1,7 @@
 {
   "tokenSetOrder": [
-    "colors",
-    "featureColors",
-    "borderWidth",
-    "iconSize",
-    "borderRadius",
-    "sizing",
-    "spacing",
-    "typography",
-    "universal",
-    "boxShadow",
-    "opacity",
-    "zIndex",
-    "animation",
+    "primitives",
     "semanticTokens",
-    "componentTokens",
-    "border",
-    "typography-composite",
-    "asset",
-    "boolean",
-    "text",
-    "other"
+    "componentTokens"
   ]
 }
