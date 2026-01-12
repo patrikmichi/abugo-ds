@@ -92,7 +92,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.800}",
+          "$value": "{colors-grey-800}",
           "$description": "passive token for neutral intent"
         },
         "default": {
@@ -103,7 +103,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.700}",
+          "$value": "{colors-grey-700}",
           "$description": "passive token for neutral intent"
         },
         "subtle": {
@@ -114,7 +114,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.600}",
+          "$value": "{colors-grey-600}",
           "$description": "passive token for neutral intent"
         },
         "muted": {
@@ -125,7 +125,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.500}",
+          "$value": "{colors-grey-500}",
           "$description": "passive token for neutral intent"
         }
       },
@@ -138,7 +138,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.000}",
+          "$value": "{colors-grey-000}",
           "$description": "passive token for on-neutral intent"
         },
         "default": {
@@ -149,7 +149,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.100}",
+          "$value": "{colors-upgrade-100}",
           "$description": "passive token for on-neutral intent"
         },
         "subtle": {
@@ -160,7 +160,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.200}",
+          "$value": "{colors-upgrade-200}",
           "$description": "passive token for on-neutral intent"
         }
       },
@@ -172,7 +172,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.grey.000}",
+        "$value": "{colors-grey-000}",
         "$description": "content token for passive intent"
       },
       "on-accent-inverse": {
@@ -183,7 +183,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.upgrade.700}",
+        "$value": "{colors-upgrade-700}",
         "$description": "content token for passive intent"
       },
       "on-success": {
@@ -194,7 +194,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.grey.000}",
+        "$value": "{colors-grey-000}",
         "$description": "content token for passive intent"
       },
       "on-danger": {
@@ -205,7 +205,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.grey.000}",
+        "$value": "{colors-grey-000}",
         "$description": "content token for passive intent"
       },
       "on-warning": {
@@ -216,7 +216,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.grey.000}",
+        "$value": "{colors-grey-000}",
         "$description": "content token for passive intent"
       },
       "on-info": {
@@ -227,7 +227,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.grey.000}",
+        "$value": "{colors-grey-000}",
         "$description": "content token for passive intent"
       },
       "on-upgrade": {
@@ -238,7 +238,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.grey.000}",
+        "$value": "{colors-grey-000}",
         "$description": "content token for passive intent"
       },
       "info": {
@@ -249,7 +249,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.upgrade.700}",
+        "$value": "{colors-upgrade-700}",
         "$description": "content token for passive intent"
       },
       "upgrade": {
@@ -260,7 +260,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.upgrade.700}",
+        "$value": "{colors-upgrade-700}",
         "$description": "content token for passive intent"
       },
       "success": {
@@ -271,7 +271,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.success.700}",
+        "$value": "{colors-success-700}",
         "$description": "Text color for success content"
       },
       "danger": {
@@ -282,7 +282,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.negative.700}",
+        "$value": "{colors-negative-700}",
         "$description": "Text color for error/danger content"
       },
       "warning": {
@@ -293,7 +293,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.warning.700}",
+        "$value": "{colors-warning-700}",
         "$description": "content token for passive intent"
       }
     },
@@ -306,7 +306,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.700}",
+          "$value": "{colors-grey-700}",
           "$description": "active token for neutral intent"
         },
         "hover": {
@@ -316,7 +316,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.800}",
+          "$value": "{colors-grey-800}",
           "$description": "active token for neutral intent"
         },
         "pressed": {
@@ -326,7 +326,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.600}",
+          "$value": "{colors-grey-600}",
           "$description": "active token for neutral intent"
         },
         "disabled": {
@@ -336,7 +336,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.500}",
+          "$value": "{colors-grey-500}",
           "$description": "active token for neutral intent"
         }
       },
@@ -348,7 +348,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.700}",
+          "$value": "{colors-brand-700}",
           "$description": "active token for accent intent"
         },
         "hover": {
@@ -358,7 +358,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.800}",
+          "$value": "{colors-brand-800}",
           "$description": "active token for accent intent"
         },
         "pressed": {
@@ -368,7 +368,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.600}",
+          "$value": "{colors-brand-600}",
           "$description": "active token for accent intent"
         },
         "disabled": {
@@ -378,7 +378,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.500}",
+          "$value": "{colors-brand-500}",
           "$description": "active token for accent intent"
         },
         "inverse": {
@@ -389,7 +389,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.000}",
+            "$value": "{colors-grey-000}",
             "$description": "accent token for inverse intent"
           },
           "hover": {
@@ -399,7 +399,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.300}",
+            "$value": "{colors-upgrade-300}",
             "$description": "accent token for inverse intent"
           },
           "pressed": {
@@ -409,7 +409,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.300}",
+            "$value": "{colors-upgrade-300}",
             "$description": "accent token for inverse intent"
           },
           "disabled": {
@@ -419,7 +419,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.500}",
+            "$value": "{colors-upgrade-500}",
             "$description": "accent token for inverse intent"
           }
         }
@@ -432,7 +432,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.700}",
+          "$value": "{colors-upgrade-700}",
           "$description": "active token for upgrade intent"
         },
         "hover": {
@@ -442,7 +442,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.800}",
+          "$value": "{colors-upgrade-800}",
           "$description": "active token for upgrade intent"
         },
         "pressed": {
@@ -452,7 +452,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.600}",
+          "$value": "{colors-upgrade-600}",
           "$description": "active token for upgrade intent"
         }
       },
@@ -464,7 +464,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.700}",
+          "$value": "{colors-negative-700}",
           "$description": "active token for danger intent"
         },
         "hover": {
@@ -474,7 +474,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.800}",
+          "$value": "{colors-negative-800}",
           "$description": "active token for danger intent"
         },
         "pressed": {
@@ -484,7 +484,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.600}",
+          "$value": "{colors-negative-600}",
           "$description": "active token for danger intent"
         }
       }
@@ -501,7 +501,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.200}",
+          "$value": "{colors-grey-200}",
           "$description": "passive token for neutral intent"
         },
         "subtle": {
@@ -512,7 +512,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.100}",
+          "$value": "{colors-grey-100}",
           "$description": "passive token for neutral intent"
         },
         "elevated": {
@@ -523,7 +523,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.000}",
+          "$value": "{colors-grey-000}",
           "$description": "passive token for neutral intent"
         },
         "strong": {
@@ -534,7 +534,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.700}",
+          "$value": "{colors-upgrade-700}",
           "$description": "passive token for neutral intent"
         }
       },
@@ -547,7 +547,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.700}",
+          "$value": "{colors-negative-700}",
           "$description": "passive token for danger intent"
         },
         "subtle": {
@@ -558,7 +558,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.100}",
+          "$value": "{colors-negative-100}",
           "$description": "passive token for danger intent"
         }
       },
@@ -571,7 +571,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.success.700}",
+          "$value": "{colors-success-700}",
           "$description": "passive token for success intent"
         },
         "subtle": {
@@ -582,7 +582,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.success.100}",
+          "$value": "{colors-success-100}",
           "$description": "passive token for success intent"
         }
       },
@@ -595,7 +595,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.warning.700}",
+          "$value": "{colors-warning-700}",
           "$description": "passive token for warning intent"
         },
         "subtle": {
@@ -606,7 +606,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.warning.100}",
+          "$value": "{colors-warning-100}",
           "$description": "passive token for warning intent"
         }
       },
@@ -619,7 +619,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.700}",
+          "$value": "{colors-upgrade-700}",
           "$description": "passive token for info intent"
         },
         "subtle": {
@@ -630,7 +630,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.100}",
+          "$value": "{colors-upgrade-100}",
           "$description": "passive token for info intent"
         }
       },
@@ -643,7 +643,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.200}",
+          "$value": "{colors-upgrade-200}",
           "$description": "passive token for upgrade intent"
         },
         "subtle": {
@@ -654,7 +654,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.100}",
+          "$value": "{colors-upgrade-100}",
           "$description": "passive token for upgrade intent"
         },
         "strong": {
@@ -665,7 +665,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.700}",
+          "$value": "{colors-upgrade-700}",
           "$description": "passive token for upgrade intent"
         }
       }
@@ -680,7 +680,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.000}",
+          "$value": "{colors-grey-000}",
           "$description": "active token for neutral intent"
         },
         "hover": {
@@ -691,7 +691,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.200}",
+          "$value": "{colors-grey-200}",
           "$description": "active token for neutral intent"
         },
         "pressed": {
@@ -702,7 +702,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.100}",
+          "$value": "{colors-grey-100}",
           "$description": "active token for neutral intent"
         },
         "disabled": {
@@ -713,7 +713,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.200}",
+          "$value": "{colors-grey-200}",
           "$description": "active token for neutral intent"
         }
       },
@@ -726,7 +726,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.700}",
+          "$value": "{colors-brand-700}",
           "$description": "active token for accent intent"
         },
         "subtle": {
@@ -737,7 +737,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.200}",
+          "$value": "{colors-brand-200}",
           "$description": "active token for accent intent"
         },
         "hover": {
@@ -748,7 +748,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.800}",
+          "$value": "{colors-brand-800}",
           "$description": "active token for accent intent"
         },
         "selected": {
@@ -759,7 +759,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.700}",
+          "$value": "{colors-brand-700}",
           "$description": "active token for accent intent"
         },
         "pressed": {
@@ -770,7 +770,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.600}",
+          "$value": "{colors-brand-600}",
           "$description": "active token for accent intent"
         },
         "disabled": {
@@ -781,7 +781,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.500}",
+          "$value": "{colors-brand-500}",
           "$description": "active token for accent intent"
         },
         "inverse": {
@@ -793,7 +793,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.000}",
+            "$value": "{colors-grey-000}",
             "$description": "accent token for inverse intent"
           },
           "subtle": {
@@ -804,7 +804,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.600}",
+            "$value": "{colors-upgrade-600}",
             "$description": "accent token for inverse intent"
           },
           "hover": {
@@ -815,7 +815,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.200}",
+            "$value": "{colors-upgrade-200}",
             "$description": "accent token for inverse intent"
           },
           "pressed": {
@@ -826,7 +826,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.300}",
+            "$value": "{colors-upgrade-300}",
             "$description": "accent token for inverse intent"
           },
           "disabled": {
@@ -837,7 +837,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.400}",
+            "$value": "{colors-upgrade-400}",
             "$description": "accent token for inverse intent"
           }
         }
@@ -851,7 +851,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.700}",
+          "$value": "{colors-negative-700}",
           "$description": "active token for danger intent"
         },
         "subtle": {
@@ -862,7 +862,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.100}",
+          "$value": "{colors-negative-100}",
           "$description": "active token for danger intent"
         },
         "hover": {
@@ -873,7 +873,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.800}",
+          "$value": "{colors-negative-800}",
           "$description": "active token for danger intent"
         },
         "pressed": {
@@ -884,7 +884,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.600}",
+          "$value": "{colors-negative-600}",
           "$description": "active token for danger intent"
         }
       },
@@ -897,7 +897,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.success.700}",
+          "$value": "{colors-success-700}",
           "$description": "active token for success intent"
         },
         "hover": {
@@ -908,7 +908,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.success.800}",
+          "$value": "{colors-success-800}",
           "$description": "active token for success intent"
         },
         "pressed": {
@@ -919,7 +919,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.success.600}",
+          "$value": "{colors-success-600}",
           "$description": "active token for success intent"
         },
         "disabled": {
@@ -930,7 +930,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.success.400}",
+          "$value": "{colors-success-400}",
           "$description": "active token for success intent"
         }
       },
@@ -943,7 +943,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.warning.700}",
+          "$value": "{colors-warning-700}",
           "$description": "active token for warning intent"
         },
         "hover": {
@@ -954,7 +954,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.warning.800}",
+          "$value": "{colors-warning-800}",
           "$description": "active token for warning intent"
         },
         "pressed": {
@@ -965,7 +965,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.warning.600}",
+          "$value": "{colors-warning-600}",
           "$description": "active token for warning intent"
         }
       },
@@ -978,7 +978,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.700}",
+          "$value": "{colors-upgrade-700}",
           "$description": "active token for upgrade intent"
         },
         "subtle": {
@@ -989,7 +989,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.100}",
+          "$value": "{colors-upgrade-100}",
           "$description": "active token for upgrade intent"
         },
         "hover": {
@@ -1000,7 +1000,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.800}",
+          "$value": "{colors-upgrade-800}",
           "$description": "active token for upgrade intent"
         },
         "pressed": {
@@ -1011,7 +1011,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.600}",
+          "$value": "{colors-upgrade-600}",
           "$description": "active token for upgrade intent"
         }
       }
@@ -1029,7 +1029,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.300}",
+          "$value": "{colors-grey-300}",
           "$description": "passive token for neutral intent"
         },
         "subtle": {
@@ -1041,7 +1041,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.200}",
+          "$value": "{colors-grey-200}",
           "$description": "passive token for neutral intent"
         },
         "strong": {
@@ -1053,7 +1053,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.300}",
+          "$value": "{colors-grey-300}",
           "$description": "passive token for neutral intent"
         },
         "stronger": {
@@ -1065,7 +1065,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.500}",
+          "$value": "{colors-grey-500}",
           "$description": "passive token for neutral intent"
         },
         "strongest": {
@@ -1077,7 +1077,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.grey.600}",
+          "$value": "{colors-grey-600}",
           "$description": "passive token for neutral intent"
         }
       },
@@ -1088,7 +1088,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.negative.700}",
+        "$value": "{colors-negative-700}",
         "$description": "border token for passive intent"
       },
       "success": {
@@ -1098,7 +1098,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.success.700}",
+        "$value": "{colors-success-700}",
         "$description": "border token for passive intent"
       },
       "warning": {
@@ -1108,7 +1108,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.warning.700}",
+        "$value": "{colors-warning-700}",
         "$description": "border token for passive intent"
       },
       "info": {
@@ -1118,7 +1118,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.upgrade.700}",
+        "$value": "{colors-upgrade-700}",
         "$description": "border token for passive intent"
       },
       "upgrade": {
@@ -1128,7 +1128,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.upgrade.700}",
+        "$value": "{colors-upgrade-700}",
         "$description": "border token for passive intent"
       }
     },
@@ -1144,7 +1144,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.300}",
+            "$value": "{colors-grey-300}",
             "$description": "neutral token for action intent"
           },
           "hover": {
@@ -1156,7 +1156,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.400}",
+            "$value": "{colors-grey-400}",
             "$description": "neutral token for action intent"
           },
           "pressed": {
@@ -1168,7 +1168,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.200}",
+            "$value": "{colors-grey-200}",
             "$description": "neutral token for action intent"
           },
           "focused": {
@@ -1180,7 +1180,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.brand.500}",
+            "$value": "{colors-brand-500}",
             "$description": "neutral token for action intent"
           },
           "selected": {
@@ -1192,7 +1192,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.700}",
+            "$value": "{colors-grey-700}",
             "$description": "neutral token for action intent"
           },
           "disabled": {
@@ -1204,7 +1204,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.grey.400}",
+            "$value": "{colors-grey-400}",
             "$description": "neutral token for action intent"
           }
         },
@@ -1219,7 +1219,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.grey.300}",
+              "$value": "{colors-grey-300}",
               "$description": "control token for field intent"
             },
             "hover": {
@@ -1231,7 +1231,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.grey.400}",
+              "$value": "{colors-grey-400}",
               "$description": "control token for field intent"
             },
             "focused": {
@@ -1243,7 +1243,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.brand.700}",
+              "$value": "{colors-brand-700}",
               "$description": "control token for field intent"
             },
             "selected": {
@@ -1255,7 +1255,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.grey.700}",
+              "$value": "{colors-grey-700}",
               "$description": "control token for field intent"
             },
             "disabled": {
@@ -1267,7 +1267,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.grey.400}",
+              "$value": "{colors-grey-400}",
               "$description": "control token for field intent"
             }
           },
@@ -1281,7 +1281,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.brand.700}",
+              "$value": "{colors-brand-700}",
               "$description": "control token for toggle intent"
             },
             "hover": {
@@ -1293,7 +1293,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.brand.800}",
+              "$value": "{colors-brand-800}",
               "$description": "control token for toggle intent"
             },
             "focused": {
@@ -1305,7 +1305,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.brand.500}",
+              "$value": "{colors-brand-500}",
               "$description": "control token for toggle intent"
             },
             "selected": {
@@ -1317,7 +1317,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.brand.700}",
+              "$value": "{colors-brand-700}",
               "$description": "control token for toggle intent"
             },
             "disabled": {
@@ -1329,7 +1329,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{colors.brand.400}",
+              "$value": "{colors-brand-400}",
               "$description": "control token for toggle intent"
             }
           }
@@ -1345,7 +1345,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.700}",
+          "$value": "{colors-brand-700}",
           "$description": "active token for accent intent"
         },
         "hover": {
@@ -1357,7 +1357,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.800}",
+          "$value": "{colors-brand-800}",
           "$description": "active token for accent intent"
         },
         "pressed": {
@@ -1369,7 +1369,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.600}",
+          "$value": "{colors-brand-600}",
           "$description": "active token for accent intent"
         },
         "focused": {
@@ -1381,7 +1381,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.500}",
+          "$value": "{colors-brand-500}",
           "$description": "active token for accent intent"
         },
         "selected": {
@@ -1393,7 +1393,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.600}",
+          "$value": "{colors-brand-600}",
           "$description": "active token for accent intent"
         },
         "disabled": {
@@ -1405,7 +1405,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brand.500}",
+          "$value": "{colors-brand-500}",
           "$description": "active token for accent intent"
         },
         "inverse": {
@@ -1418,7 +1418,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.300}",
+            "$value": "{colors-upgrade-300}",
             "$description": "accent token for inverse intent"
           },
           "hover": {
@@ -1430,7 +1430,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.400}",
+            "$value": "{colors-upgrade-400}",
             "$description": "accent token for inverse intent"
           },
           "pressed": {
@@ -1442,7 +1442,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.500}",
+            "$value": "{colors-upgrade-500}",
             "$description": "accent token for inverse intent"
           },
           "disabled": {
@@ -1454,7 +1454,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{colors.upgrade.600}",
+            "$value": "{colors-upgrade-600}",
             "$description": "accent token for inverse intent"
           }
         }
@@ -1467,7 +1467,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.700}",
+          "$value": "{colors-negative-700}",
           "$description": "active token for danger intent"
         },
         "hover": {
@@ -1477,7 +1477,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.800}",
+          "$value": "{colors-negative-800}",
           "$description": "active token for danger intent"
         },
         "pressed": {
@@ -1487,7 +1487,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.negative.600}",
+          "$value": "{colors-negative-600}",
           "$description": "active token for danger intent"
         }
       },
@@ -1499,7 +1499,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.700}",
+          "$value": "{colors-upgrade-700}",
           "$description": "active token for upgrade intent"
         },
         "hover": {
@@ -1509,7 +1509,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.800}",
+          "$value": "{colors-upgrade-800}",
           "$description": "active token for upgrade intent"
         },
         "pressed": {
@@ -1519,7 +1519,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.upgrade.600}",
+          "$value": "{colors-upgrade-600}",
           "$description": "active token for upgrade intent"
         }
       }
@@ -1567,7 +1567,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brown.700}",
+          "$value": "{colors-brown-700}",
           "$description": "notes token for content intent"
         },
         "placeholder": {
@@ -1577,7 +1577,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{colors.brown.600}",
+          "$value": "{colors-brown-600}",
           "$description": "notes token for content intent"
         }
       },
@@ -1588,7 +1588,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{colors.yellow.400}",
+        "$value": "{colors-yellow-400}",
         "$description": "custom token for notes intent"
       }
     },
@@ -1600,7 +1600,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{colors.yellow.700}",
+      "$value": "{colors-yellow-700}",
       "$description": "Reservio token for custom intent"
     }
   },
