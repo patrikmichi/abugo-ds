@@ -120,7 +120,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.sm}"
@@ -129,7 +129,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -138,7 +138,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.lg}"
@@ -147,7 +147,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.sm}"
@@ -156,7 +156,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -165,7 +165,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.lg}"
@@ -174,7 +174,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -183,7 +183,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -192,7 +192,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.l}"
@@ -201,7 +201,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -210,7 +210,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -219,7 +219,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -228,7 +228,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.xs}"
@@ -237,7 +237,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -246,7 +246,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.md}"
@@ -255,7 +255,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -264,7 +264,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -273,7 +273,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.s}"
@@ -327,7 +327,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border-width-thin}"
@@ -723,7 +723,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -732,7 +732,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -741,7 +741,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -750,7 +750,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -759,7 +759,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -768,7 +768,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -804,91 +804,91 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 15
   },
   "button-outline-padding-x-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 19
   },
   "button-outline-padding-x-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 23
   },
   "button-outline-padding-y-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "button-outline-padding-y-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "button-outline-padding-y-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 15
   },
   "button-outline-icon-only-padding-x-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "button-outline-icon-only-padding-x-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "button-outline-icon-only-padding-x-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 15
   },
   "button-outline-icon-only-padding-y-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "button-outline-icon-only-padding-y-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "button-outline-icon-only-padding-y-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 15
   },
   "button-plain-padding-x-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -897,7 +897,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -906,7 +906,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -915,7 +915,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -924,7 +924,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -933,7 +933,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -942,7 +942,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -951,7 +951,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -960,7 +960,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -969,7 +969,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -978,7 +978,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -987,7 +987,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -996,7 +996,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "sizing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{control.height.sm}"
@@ -1005,7 +1005,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "sizing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{control.height.md}"
@@ -1014,7 +1014,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "sizing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{control.height.lg}"
@@ -1023,7 +1023,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -1032,7 +1032,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.lg}"
@@ -1041,7 +1041,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -1050,7 +1050,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.lg}"
@@ -1059,7 +1059,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -1068,7 +1068,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -1077,7 +1077,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.l}"
@@ -1086,7 +1086,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -1095,7 +1095,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -1104,7 +1104,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -1113,7 +1113,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -1122,7 +1122,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -1131,7 +1131,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -1140,7 +1140,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.xs}"
@@ -1149,7 +1149,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -1158,7 +1158,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -1356,7 +1356,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border-width-thin}"
@@ -1365,7 +1365,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xxs}"
@@ -1374,7 +1374,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xxs}"
@@ -1383,7 +1383,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -1392,7 +1392,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.s}"
@@ -1401,7 +1401,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -1410,7 +1410,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xxs}"
@@ -1419,7 +1419,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -1428,7 +1428,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.s}"
@@ -1437,7 +1437,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -1446,7 +1446,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -1455,7 +1455,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.s}"
@@ -1464,7 +1464,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -1473,7 +1473,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xxs}"
@@ -1482,7 +1482,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -1491,7 +1491,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -1536,7 +1536,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.full}"
@@ -1545,7 +1545,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -1662,7 +1662,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -1671,7 +1671,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -1680,7 +1680,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.xs}"
@@ -1698,7 +1698,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border-width-thicker}"
@@ -1734,7 +1734,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -1815,7 +1815,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border-width-thicker}"
@@ -1851,7 +1851,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -1860,7 +1860,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -1869,7 +1869,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.full}"
@@ -1878,7 +1878,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -2040,7 +2040,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border-width-thin}"
@@ -2049,7 +2049,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.full}"
@@ -2058,7 +2058,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xxs}"
@@ -2067,7 +2067,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -2076,7 +2076,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -2085,7 +2085,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -2094,7 +2094,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -2103,7 +2103,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -2112,7 +2112,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -2121,7 +2121,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -2130,7 +2130,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -2139,7 +2139,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -2148,7 +2148,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -2157,7 +2157,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
@@ -2166,7 +2166,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -2175,7 +2175,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.sm}"
@@ -2184,7 +2184,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -2193,7 +2193,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -2202,7 +2202,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.sm}"
@@ -2211,7 +2211,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -2220,7 +2220,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -2256,84 +2256,84 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "chip-outline-padding-x-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "chip-outline-padding-x-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 15
   },
   "chip-outline-padding-y-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 3
   },
   "chip-outline-padding-y-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "chip-outline-padding-y-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "chip-outline-padding-left-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 3
   },
   "chip-outline-padding-left-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "chip-outline-padding-left-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "chip-outline-padding-right-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 3
   },
   "chip-outline-padding-right-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 7
   },
   "chip-outline-padding-right-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$value": 11
   },
   "alert-success-content-background": {
@@ -2367,7 +2367,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -2376,7 +2376,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -2421,7 +2421,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.s}"
@@ -2430,7 +2430,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -2493,7 +2493,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -2502,7 +2502,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.xs}"
@@ -2511,7 +2511,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -2520,7 +2520,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -2529,7 +2529,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -2538,7 +2538,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -2556,7 +2556,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-size.md}"
@@ -2565,7 +2565,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{typography.body-line.md}"
@@ -2583,7 +2583,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.s}"
@@ -2592,7 +2592,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -2601,7 +2601,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.xs}"
@@ -2610,7 +2610,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -2673,7 +2673,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -2682,7 +2682,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -2691,7 +2691,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -2700,7 +2700,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -2727,7 +2727,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -2736,7 +2736,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -2745,7 +2745,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.l}"
@@ -2754,7 +2754,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xl}"
@@ -2763,7 +2763,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.m}"
@@ -2772,7 +2772,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.l}"
@@ -2781,7 +2781,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xl}"
@@ -2844,7 +2844,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -2853,7 +2853,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -2862,7 +2862,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.l}"
@@ -2871,7 +2871,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.s}"
@@ -2880,7 +2880,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.m}"
@@ -2889,7 +2889,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.l}"
@@ -2916,7 +2916,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.sm}"
@@ -2934,7 +2934,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border-width-thin}"
@@ -3087,7 +3087,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "sizing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{control.height.xs}"
@@ -3096,7 +3096,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "sizing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{control.height.sm}"
@@ -3105,7 +3105,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -3114,7 +3114,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxxs}"
@@ -3177,7 +3177,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.full}"
@@ -3186,7 +3186,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{gap.xs}"
@@ -3195,7 +3195,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "borderRadius",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{radius.xs}"
@@ -3204,7 +3204,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xs}"
@@ -3213,7 +3213,7 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "dimension",
+    "$type": "spacing",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{padding.xxs}"
