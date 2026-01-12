@@ -1532,7 +1532,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{border-width.border-1}",
+        "$value": "{border-width-border-1}",
         "$description": "border token for width intent"
       },
       "thicker": {
@@ -1542,7 +1542,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{border-width.border-2}",
+        "$value": "{border-width-border-2}",
         "$description": "border token for width intent"
       },
       "thick": {
@@ -1552,7 +1552,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{border-width.border-3}",
+        "$value": "{border-width-border-3}",
         "$description": "border token for width intent"
       }
     }
@@ -1980,7 +1980,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-0}",
+      "$value": "{border-radius-radius-0}",
       "$description": "Reservio token for radius intent"
     },
     "xsmall": {
@@ -1990,7 +1990,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-1}",
+      "$value": "{border-radius-radius-1}",
       "$description": "Reservio token for radius intent"
     },
     "small": {
@@ -2000,7 +2000,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-2}",
+      "$value": "{border-radius-radius-2}",
       "$description": "Reservio token for radius intent"
     },
     "medium": {
@@ -2010,7 +2010,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-3}",
+      "$value": "{border-radius-radius-3}",
       "$description": "Reservio token for radius intent"
     },
     "large": {
@@ -2020,7 +2020,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-4}",
+      "$value": "{border-radius-radius-4}",
       "$description": "Reservio token for radius intent"
     },
     "xlarge": {
@@ -2030,7 +2030,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-5}",
+      "$value": "{border-radius-radius-5}",
       "$description": "Reservio token for radius intent"
     },
     "xxlarge": {
@@ -2040,7 +2040,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-6}",
+      "$value": "{border-radius-radius-6}",
       "$description": "Reservio token for radius intent"
     },
     "full": {
@@ -2050,7 +2050,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{border-radius.radius-round}",
+      "$value": "{border-radius-radius-round}",
       "$description": "Reservio token for radius intent"
     }
   },
@@ -2217,7 +2217,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{sizing.size-1}",
+        "$value": "{sizing-size-1}",
         "$description": "control token for height intent"
       },
       "xxs": {
@@ -2227,7 +2227,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{sizing.size-2}",
+        "$value": "{sizing-size-2}",
         "$description": "control token for height intent"
       },
       "xs": {
@@ -2237,7 +2237,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{sizing.size-3}",
+        "$value": "{sizing-size-3}",
         "$description": "control token for height intent"
       },
       "s": {
@@ -2247,7 +2247,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{sizing.size-4}",
+        "$value": "{sizing-size-4}",
         "$description": "control token for height intent"
       },
       "m": {
@@ -2257,7 +2257,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{sizing.size-5}",
+        "$value": "{sizing-size-5}",
         "$description": "control token for height intent"
       },
       "l": {
@@ -2267,7 +2267,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{sizing.size-6}",
+        "$value": "{sizing-size-6}",
         "$description": "control token for height intent"
       }
     }
@@ -2280,7 +2280,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-xs}",
+      "$value": "{box-shadow-shadow-xs}",
       "$description": "Reservio token for shadow intent"
     },
     "sm": {
@@ -2290,7 +2290,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-sm}",
+      "$value": "{box-shadow-shadow-sm}",
       "$description": "Reservio token for shadow intent"
     },
     "md": {
@@ -2300,7 +2300,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-md}",
+      "$value": "{box-shadow-shadow-md}",
       "$description": "Reservio token for shadow intent"
     },
     "lg": {
@@ -2310,7 +2310,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-lg}",
+      "$value": "{box-shadow-shadow-lg}",
       "$description": "Reservio token for shadow intent"
     },
     "xl": {
@@ -2320,7 +2320,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-xl}",
+      "$value": "{box-shadow-shadow-xl}",
       "$description": "Reservio token for shadow intent"
     },
     "2xl": {
@@ -2330,7 +2330,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-2xl}",
+      "$value": "{box-shadow-shadow-2xl}",
       "$description": "Reservio token for shadow intent"
     },
     "inner": {
@@ -2340,7 +2340,7 @@
       "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{box-shadow.shadow-inner}",
+      "$value": "{box-shadow-shadow-inner}",
       "$description": "Reservio token for shadow intent"
     }
   },
@@ -2352,7 +2352,7 @@
       "$type": "number",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{opacity.opacity-75}",
+      "$value": "{opacity-75}",
       "$description": "Overlay opacity for modals and backdrops"
     }
   },
@@ -2410,7 +2410,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{sizing.size-1}",
+      "$value": "{sizing-size-1}",
       "$description": "Tooltip arrow size"
     }
   },

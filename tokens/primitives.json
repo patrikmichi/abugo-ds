@@ -67,40 +67,6 @@
       }
     }
   },
-  "border-width": {
-    "border-0": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderWidth",
-      "$value": 0
-    },
-    "border-1": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderWidth",
-      "$value": 1
-    },
-    "border-2": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderWidth",
-      "$value": 2
-    },
-    "border-3": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderWidth",
-      "$value": 4
-    }
-  },
   "icon-size": {
     "icon-size-1": {
       "$scopes": [
@@ -165,210 +131,6 @@
       "$hiddenFromPublishing": true,
       "$type": "dimension",
       "$value": 64
-    }
-  },
-  "border-radius": {
-    "radius-0": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 0
-    },
-    "radius-1": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 4
-    },
-    "radius-2": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 8
-    },
-    "radius-3": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 12
-    },
-    "radius-4": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 16
-    },
-    "radius-5": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 20
-    },
-    "radius-6": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 24
-    },
-    "radius-round": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "borderRadius",
-      "$value": 999
-    }
-  },
-  "box-shadow": {
-    "shadow-xs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
-    },
-    "shadow-sm": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)"
-    },
-    "shadow-md": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)"
-    },
-    "shadow-lg": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)"
-    },
-    "shadow-xl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)"
-    },
-    "shadow-2xl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-    },
-    "shadow-inner": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)"
-    },
-    "shadow-1-down": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 4px 8px 0 rgba(0, 0, 0, 0.08)"
-    },
-    "shadow-2-down": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 8px 12px 0 rgba(0, 0, 0, 0.08)"
-    },
-    "shadow-3-down": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 8px 16px 0 rgba(0, 0, 0, 0.12)"
-    },
-    "shadow-4-down": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 8px 24px 0 rgba(0, 0, 0, 0.16)"
-    },
-    "shadow-5-down": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 12px 40px 0 rgba(0, 0, 0, 0.16)"
-    },
-    "shadow-1-up": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 -4px 8px 0 rgba(0, 0, 0, 0.08)"
-    },
-    "shadow-2-up": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 -8px 12px 0 rgba(0, 0, 0, 0.08)"
-    },
-    "shadow-3-up": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 -8px 16px 0 rgba(0, 0, 0, 0.12)"
-    },
-    "shadow-4-up": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 -8px 24px 0 rgba(0, 0, 0, 0.16)"
-    },
-    "shadow-5-up": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boxShadow",
-      "$value": "0 -12px 40px 0 rgba(0, 0, 0, 0.16)"
     }
   },
   "z-index": {
@@ -1343,50 +1105,6 @@
       }
     }
   },
-  "sizing": {
-    "size-1": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$value": 16
-    },
-    "size-2": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$value": 24
-    },
-    "size-3": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$value": 32
-    },
-    "size-4": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$value": 40
-    },
-    "size-5": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$value": 48
-    },
-    "size-6": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$value": 56
-    }
-  },
   "typography": {
     "fontSize": {
       "1": {
@@ -1777,128 +1495,6 @@
       "$value": "rgba(255, 255, 255, 0)"
     }
   },
-  "opacity": {
-    "opacity-0": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0
-    },
-    "opacity-5": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.05
-    },
-    "opacity-10": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.1
-    },
-    "opacity-20": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.2
-    },
-    "opacity-25": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.25
-    },
-    "opacity-30": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.3
-    },
-    "opacity-40": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.4
-    },
-    "opacity-50": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.5
-    },
-    "opacity-60": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.6
-    },
-    "opacity-70": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.7
-    },
-    "opacity-75": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.75
-    },
-    "opacity-80": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.8
-    },
-    "opacity-90": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.9
-    },
-    "opacity-95": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 0.95
-    },
-    "opacity-100": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "opacity",
-      "$value": 1
-    }
-  },
   "animation": {
     "duration": {
       "instant": {
@@ -1983,80 +1579,6 @@
         "$type": "string",
         "$value": "cubic-bezier(0.4, 0, 0.2, 1)"
       }
-    }
-  },
-  "border": {
-    "border-default": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "border",
-      "$value": {
-        "color": "{colors.grey.300}",
-        "width": "{borderWidth.border-1}",
-        "style": "solid"
-      }
-    },
-    "border-focus": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "border",
-      "$value": {
-        "color": "{colors.brand.500}",
-        "width": "{borderWidth.border-2}",
-        "style": "solid"
-      }
-    }
-  },
-  "asset": {
-    "asset-placeholder": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "asset",
-      "$value": "path/to/asset.png"
-    }
-  },
-  "boolean": {
-    "boolean-true": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boolean",
-      "$value": true
-    },
-    "boolean-false": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "boolean",
-      "$value": false
-    }
-  },
-  "text": {
-    "text-placeholder": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "text",
-      "$value": "Example text"
-    }
-  },
-  "other": {
-    "other-placeholder": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$hiddenFromPublishing": true,
-      "$type": "other",
-      "$value": "custom value"
     }
   },
   "spacing-1": {
@@ -2242,5 +1764,463 @@
     "$hiddenFromPublishing": true,
     "$type": "spacing",
     "$value": 10
+  },
+  "border-width-border-0": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 0
+  },
+  "border-width-border-1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 1
+  },
+  "border-width-border-2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 2
+  },
+  "border-width-border-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 4
+  },
+  "border-radius-radius-0": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 0
+  },
+  "border-radius-radius-1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 4
+  },
+  "border-radius-radius-2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 8
+  },
+  "border-radius-radius-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 12
+  },
+  "border-radius-radius-4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 16
+  },
+  "border-radius-radius-5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 20
+  },
+  "border-radius-radius-6": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 24
+  },
+  "border-radius-radius-round": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 999
+  },
+  "box-shadow-shadow-xs": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
+  },
+  "box-shadow-shadow-sm": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)"
+  },
+  "box-shadow-shadow-md": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)"
+  },
+  "box-shadow-shadow-lg": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)"
+  },
+  "box-shadow-shadow-xl": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)"
+  },
+  "box-shadow-shadow-2xl": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+  },
+  "box-shadow-shadow-inner": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)"
+  },
+  "box-shadow-shadow-1-down": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 4px 8px 0 rgba(0, 0, 0, 0.08)"
+  },
+  "box-shadow-shadow-2-down": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 8px 12px 0 rgba(0, 0, 0, 0.08)"
+  },
+  "box-shadow-shadow-3-down": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 8px 16px 0 rgba(0, 0, 0, 0.12)"
+  },
+  "box-shadow-shadow-4-down": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 8px 24px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "box-shadow-shadow-5-down": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 12px 40px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "box-shadow-shadow-1-up": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 -4px 8px 0 rgba(0, 0, 0, 0.08)"
+  },
+  "box-shadow-shadow-2-up": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 -8px 12px 0 rgba(0, 0, 0, 0.08)"
+  },
+  "box-shadow-shadow-3-up": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 -8px 16px 0 rgba(0, 0, 0, 0.12)"
+  },
+  "box-shadow-shadow-4-up": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 -8px 24px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "box-shadow-shadow-5-up": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boxShadow",
+    "$value": "0 -12px 40px 0 rgba(0, 0, 0, 0.16)"
+  },
+  "sizing-size-1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 16
+  },
+  "sizing-size-2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 24
+  },
+  "sizing-size-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 32
+  },
+  "sizing-size-4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 40
+  },
+  "sizing-size-5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 48
+  },
+  "sizing-size-6": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 56
+  },
+  "opacity-0": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0
+  },
+  "opacity-5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.05
+  },
+  "opacity-10": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.1
+  },
+  "opacity-20": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.2
+  },
+  "opacity-25": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.25
+  },
+  "opacity-30": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.3
+  },
+  "opacity-40": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.4
+  },
+  "opacity-50": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.5
+  },
+  "opacity-60": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.6
+  },
+  "opacity-70": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.7
+  },
+  "opacity-75": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.75
+  },
+  "opacity-80": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.8
+  },
+  "opacity-90": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.9
+  },
+  "opacity-95": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 0.95
+  },
+  "opacity-100": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "opacity",
+    "$value": 1
+  },
+  "border-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "border",
+    "$value": {
+      "color": "{colors.grey.300}",
+      "width": "{borderWidth.border-1}",
+      "style": "solid"
+    }
+  },
+  "border-focus": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "border",
+    "$value": {
+      "color": "{colors.brand.500}",
+      "width": "{borderWidth.border-2}",
+      "style": "solid"
+    }
+  },
+  "asset-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "asset",
+    "$value": "path/to/asset.png"
+  },
+  "boolean-true": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boolean",
+    "$value": true
+  },
+  "boolean-false": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boolean",
+    "$value": false
+  },
+  "text-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "text",
+    "$value": "Example text"
+  },
+  "other-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "other",
+    "$value": "custom value"
   }
 }

@@ -3570,7 +3570,7 @@
         "$type": "dimension",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{sizing.tooltip-arrow}"
+        "$value": "{sizing-tooltip-arrow}"
       }
     },
     "shadow": {
@@ -4053,7 +4053,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{opacity.overlay}"
+          "$value": "{opacity-overlay}"
         }
       },
       "border": {
