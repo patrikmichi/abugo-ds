@@ -12,7 +12,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+                "$value": "{modes.Reservio.background.active.accent.default}"
               },
               "hover": {
                 "$scopes": [
@@ -21,7 +21,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.accent.hover}"
+                "$value": "{modes.Reservio.background.active.accent.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -30,7 +30,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.accent.pressed}"
+                "$value": "{modes.Reservio.background.active.accent.pressed}"
               },
               "disabled": {
                 "$scopes": [
@@ -39,7 +39,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.accent.disabled}"
+                "$value": "{modes.Reservio.background.active.accent.disabled}"
               }
             },
             "content": {
@@ -49,7 +49,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-accent}"
+              "$value": "{modes.Reservio.content.passive.on-accent}"
             }
           },
           "plain": {
@@ -61,7 +61,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "hover": {
                 "$scopes": [
@@ -70,7 +70,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.accent.subtle}"
+                "$value": "{modes.Reservio.background.active.accent.subtle}"
               },
               "pressed": {
                 "$scopes": [
@@ -79,7 +79,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "disabled": {
                 "$scopes": [
@@ -88,7 +88,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               }
             },
             "content": {
@@ -99,7 +99,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+                "$value": "{modes.Reservio.content.active.accent.default}"
               },
               "hover": {
                 "$scopes": [
@@ -108,7 +108,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.hover}"
+                "$value": "{modes.Reservio.content.active.accent.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -117,7 +117,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.pressed}"
+                "$value": "{modes.Reservio.content.active.accent.pressed}"
               },
               "disabled": {
                 "$scopes": [
@@ -126,7 +126,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.disabled}"
+                "$value": "{modes.Reservio.content.active.accent.disabled}"
               }
             }
           }
@@ -140,7 +140,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+              "$value": "{modes.Reservio.padding.xxs}"
             },
             "medium": {
               "$scopes": [
@@ -149,7 +149,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+              "$value": "{modes.Reservio.padding.xs}"
             },
             "large": {
               "$scopes": [
@@ -158,7 +158,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.s}"
+              "$value": "{modes.Reservio.padding.s}"
             }
           },
           "padding-y": {
@@ -169,7 +169,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+              "$value": "{modes.Reservio.padding.xxs}"
             },
             "medium": {
               "$scopes": [
@@ -178,7 +178,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+              "$value": "{modes.Reservio.padding.xs}"
             },
             "large": {
               "$scopes": [
@@ -187,7 +187,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.s}"
+              "$value": "{modes.Reservio.padding.s}"
             }
           }
         },
@@ -199,7 +199,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.small}"
+            "$value": "{modes.Reservio.typography.body.font-size.small}"
           },
           "medium": {
             "$scopes": [
@@ -208,7 +208,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+            "$value": "{modes.Reservio.typography.body.font-size.medium}"
           },
           "large": {
             "$scopes": [
@@ -217,7 +217,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.large}"
+            "$value": "{modes.Reservio.typography.body.font-size.large}"
           }
         },
         "line-height": {
@@ -228,7 +228,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.small}"
+            "$value": "{modes.Reservio.typography.body.line-height.small}"
           },
           "medium": {
             "$scopes": [
@@ -237,7 +237,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+            "$value": "{modes.Reservio.typography.body.line-height.default}"
           },
           "large": {
             "$scopes": [
@@ -246,7 +246,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.large}"
+            "$value": "{modes.Reservio.typography.body.line-height.large}"
           }
         },
         "padding-x": {
@@ -257,7 +257,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           },
           "medium": {
             "$scopes": [
@@ -266,7 +266,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           },
           "large": {
             "$scopes": [
@@ -275,7 +275,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.l}"
+            "$value": "{modes.Reservio.padding.l}"
           }
         },
         "padding-y": {
@@ -286,7 +286,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "medium": {
             "$scopes": [
@@ -295,7 +295,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           },
           "large": {
             "$scopes": [
@@ -304,7 +304,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           }
         },
         "outline": {
@@ -411,7 +411,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.xsmall}"
+            "$value": "{modes.Reservio.radius.xsmall}"
           },
           "medium": {
             "$scopes": [
@@ -420,7 +420,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.small}"
+            "$value": "{modes.Reservio.radius.small}"
           },
           "large": {
             "$scopes": [
@@ -429,7 +429,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.medium}"
+            "$value": "{modes.Reservio.radius.medium}"
           }
         },
         "icon": {
@@ -440,7 +440,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+            "$value": "{modes.Reservio.icon.icon-small}"
           },
           "medium": {
             "$scopes": [
@@ -449,7 +449,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+            "$value": "{modes.Reservio.icon.icon-small}"
           },
           "large": {
             "$scopes": [
@@ -458,7 +458,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+            "$value": "{modes.Reservio.icon.icon-small}"
           }
         },
         "gap-icon": {
@@ -469,7 +469,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+            "$value": "{modes.Reservio.gap.xs}"
           },
           "medium": {
             "$scopes": [
@@ -478,7 +478,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+            "$value": "{modes.Reservio.gap.xs}"
           },
           "large": {
             "$scopes": [
@@ -487,7 +487,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.gap.s}"
+            "$value": "{modes.Reservio.gap.s}"
           }
         },
         "secondary": {
@@ -500,7 +500,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.accent.subtle}"
+                "$value": "{modes.Reservio.background.active.accent.subtle}"
               }
             },
             "border": {
@@ -511,7 +511,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.border.active.accent.default}"
+                "$value": "{modes.Reservio.border.active.accent.default}"
               },
               "hover": {
                 "$scopes": [
@@ -520,7 +520,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.border.active.accent.hover}"
+                "$value": "{modes.Reservio.border.active.accent.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -529,7 +529,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.border.active.accent.pressed}"
+                "$value": "{modes.Reservio.border.active.accent.pressed}"
               },
               "disabled": {
                 "$scopes": [
@@ -538,7 +538,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.border.active.accent.disabled}"
+                "$value": "{modes.Reservio.border.active.accent.disabled}"
               },
               "width": {
                 "$scopes": [
@@ -547,7 +547,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.border.width.thin}"
+                "$value": "{modes.Reservio.border.width.thin}"
               }
             },
             "content": {
@@ -558,7 +558,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+                "$value": "{modes.Reservio.content.active.accent.default}"
               },
               "hover": {
                 "$scopes": [
@@ -567,7 +567,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.hover}"
+                "$value": "{modes.Reservio.content.active.accent.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -576,7 +576,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.pressed}"
+                "$value": "{modes.Reservio.content.active.accent.pressed}"
               },
               "disabled": {
                 "$scopes": [
@@ -585,7 +585,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.accent.disabled}"
+                "$value": "{modes.Reservio.content.active.accent.disabled}"
               }
             }
           },
@@ -598,7 +598,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "hover": {
                 "$scopes": [
@@ -607,7 +607,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+                "$value": "{modes.Reservio.background.active.neutral.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -616,7 +616,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "disabled": {
                 "$scopes": [
@@ -625,7 +625,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               }
             },
             "content": {
@@ -636,7 +636,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.neutral.default}"
+                "$value": "{modes.Reservio.content.active.neutral.default}"
               },
               "hover": {
                 "$scopes": [
@@ -645,7 +645,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.neutral.hover}"
+                "$value": "{modes.Reservio.content.active.neutral.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -654,7 +654,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.neutral.pressed}"
+                "$value": "{modes.Reservio.content.active.neutral.pressed}"
               },
               "disabled": {
                 "$scopes": [
@@ -663,7 +663,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.neutral.disabled}"
+                "$value": "{modes.Reservio.content.active.neutral.disabled}"
               }
             }
           }
@@ -678,7 +678,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.danger.default}"
+                "$value": "{modes.Reservio.background.active.danger.default}"
               },
               "hover": {
                 "$scopes": [
@@ -687,7 +687,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.danger.hover}"
+                "$value": "{modes.Reservio.background.active.danger.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -696,7 +696,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.danger.pressed}"
+                "$value": "{modes.Reservio.background.active.danger.pressed}"
               }
             },
             "content": {
@@ -706,7 +706,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-danger}"
+              "$value": "{modes.Reservio.content.passive.on-danger}"
             }
           },
           "plain": {
@@ -718,7 +718,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "hover": {
                 "$scopes": [
@@ -727,7 +727,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.danger.subtle}"
+                "$value": "{modes.Reservio.background.active.danger.subtle}"
               },
               "pressed": {
                 "$scopes": [
@@ -736,7 +736,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "disabled": {
                 "$scopes": [
@@ -745,7 +745,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               }
             },
             "content": {
@@ -756,7 +756,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.danger.default}"
+                "$value": "{modes.Reservio.content.active.danger.default}"
               },
               "hover": {
                 "$scopes": [
@@ -765,7 +765,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.danger.hover}"
+                "$value": "{modes.Reservio.content.active.danger.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -774,7 +774,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.danger.pressed}"
+                "$value": "{modes.Reservio.content.active.danger.pressed}"
               }
             }
           }
@@ -788,7 +788,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+              "$value": "{modes.Reservio.background.active.neutral.hover}"
             }
           },
           "border": {
@@ -799,7 +799,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.default}"
+              "$value": "{modes.Reservio.border.active.neutral.action.default}"
             },
             "hover": {
               "$scopes": [
@@ -808,7 +808,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.action.hover}"
             },
             "pressed": {
               "$scopes": [
@@ -817,7 +817,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.pressed}"
+              "$value": "{modes.Reservio.border.active.neutral.action.pressed}"
             },
             "disabled": {
               "$scopes": [
@@ -826,7 +826,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.disabled}"
+              "$value": "{modes.Reservio.border.active.neutral.action.disabled}"
             }
           },
           "content": {
@@ -837,7 +837,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.default}"
+              "$value": "{modes.Reservio.content.active.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -846,7 +846,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.hover}"
+              "$value": "{modes.Reservio.content.active.neutral.hover}"
             },
             "pressed": {
               "$scopes": [
@@ -855,7 +855,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.pressed}"
+              "$value": "{modes.Reservio.content.active.neutral.pressed}"
             },
             "disabled": {
               "$scopes": [
@@ -864,7 +864,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.disabled}"
+              "$value": "{modes.Reservio.content.active.neutral.disabled}"
             }
           }
         },
@@ -878,7 +878,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.upgrade.default}"
+                "$value": "{modes.Reservio.background.active.upgrade.default}"
               },
               "hover": {
                 "$scopes": [
@@ -887,7 +887,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.upgrade.hover}"
+                "$value": "{modes.Reservio.background.active.upgrade.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -896,7 +896,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.upgrade.pressed}"
+                "$value": "{modes.Reservio.background.active.upgrade.pressed}"
               }
             },
             "content": {
@@ -906,7 +906,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-upgrade}"
+              "$value": "{modes.Reservio.content.passive.on-upgrade}"
             }
           },
           "plain": {
@@ -918,7 +918,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "hover": {
                 "$scopes": [
@@ -927,7 +927,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.background.active.upgrade.subtle}"
+                "$value": "{modes.Reservio.background.active.upgrade.subtle}"
               },
               "pressed": {
                 "$scopes": [
@@ -936,7 +936,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               },
               "disabled": {
                 "$scopes": [
@@ -945,7 +945,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "primitives",
-                "$value": "{primitives.universal.modes.Reservio.transparent}"
+                "$value": "{universal.modes.Reservio.transparent}"
               }
             },
             "content": {
@@ -956,7 +956,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.upgrade.default}"
+                "$value": "{modes.Reservio.content.active.upgrade.default}"
               },
               "hover": {
                 "$scopes": [
@@ -965,7 +965,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.upgrade.hover}"
+                "$value": "{modes.Reservio.content.active.upgrade.hover}"
               },
               "pressed": {
                 "$scopes": [
@@ -974,7 +974,7 @@
                 "$type": "color",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.content.active.upgrade.pressed}"
+                "$value": "{modes.Reservio.content.active.upgrade.pressed}"
               }
             }
           }
@@ -988,7 +988,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+              "$value": "{modes.Reservio.padding.xxs}"
             },
             "medium": {
               "$scopes": [
@@ -997,7 +997,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+              "$value": "{modes.Reservio.padding.xs}"
             },
             "large": {
               "$scopes": [
@@ -1006,7 +1006,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.s}"
+              "$value": "{modes.Reservio.padding.s}"
             }
           },
           "padding-y": {
@@ -1017,7 +1017,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+              "$value": "{modes.Reservio.padding.xxxs}"
             },
             "medium": {
               "$scopes": [
@@ -1026,7 +1026,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+              "$value": "{modes.Reservio.padding.xxs}"
             },
             "large": {
               "$scopes": [
@@ -1035,7 +1035,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+              "$value": "{modes.Reservio.padding.xs}"
             }
           },
           "icon-only": {
@@ -1047,7 +1047,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+                "$value": "{modes.Reservio.padding.xxxs}"
               },
               "medium": {
                 "$scopes": [
@@ -1056,7 +1056,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+                "$value": "{modes.Reservio.padding.xxs}"
               },
               "large": {
                 "$scopes": [
@@ -1065,7 +1065,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+                "$value": "{modes.Reservio.padding.xs}"
               }
             },
             "padding-y": {
@@ -1076,7 +1076,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+                "$value": "{modes.Reservio.padding.xxxs}"
               },
               "medium": {
                 "$scopes": [
@@ -1085,7 +1085,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+                "$value": "{modes.Reservio.padding.xxs}"
               },
               "large": {
                 "$scopes": [
@@ -1094,7 +1094,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+                "$value": "{modes.Reservio.padding.xs}"
               }
             }
           }
@@ -1109,7 +1109,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.control.height.s}"
+            "$value": "{modes.Reservio.control.height.s}"
           },
           "medium": {
             "$scopes": [
@@ -1118,7 +1118,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.control.height.m}"
+            "$value": "{modes.Reservio.control.height.m}"
           },
           "large": {
             "$scopes": [
@@ -1127,7 +1127,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.control.height.l}"
+            "$value": "{modes.Reservio.control.height.l}"
           }
         },
         "font-size": {
@@ -1138,7 +1138,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+            "$value": "{modes.Reservio.typography.body.font-size.medium}"
           },
           "large": {
             "$scopes": [
@@ -1147,7 +1147,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.large}"
+            "$value": "{modes.Reservio.typography.body.font-size.large}"
           }
         },
         "line-height": {
@@ -1158,7 +1158,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+            "$value": "{modes.Reservio.typography.body.line-height.default}"
           },
           "label": {
             "$scopes": [
@@ -1167,7 +1167,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.large}"
+            "$value": "{modes.Reservio.typography.body.line-height.large}"
           }
         },
         "padding-x": {
@@ -1178,7 +1178,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           },
           "medium": {
             "$scopes": [
@@ -1187,7 +1187,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           },
           "large": {
             "$scopes": [
@@ -1196,7 +1196,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.l}"
+            "$value": "{modes.Reservio.padding.l}"
           }
         },
         "padding-y": {
@@ -1207,7 +1207,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "medium": {
             "$scopes": [
@@ -1216,7 +1216,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           },
           "large": {
             "$scopes": [
@@ -1225,7 +1225,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           }
         },
         "radius": {
@@ -1236,7 +1236,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.xsmall}"
+            "$value": "{modes.Reservio.radius.xsmall}"
           },
           "medium": {
             "$scopes": [
@@ -1245,7 +1245,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.small}"
+            "$value": "{modes.Reservio.radius.small}"
           },
           "large": {
             "$scopes": [
@@ -1254,7 +1254,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.small}"
+            "$value": "{modes.Reservio.radius.small}"
           }
         },
         "icon": {
@@ -1265,7 +1265,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-xsmall}"
+            "$value": "{modes.Reservio.icon.icon-xsmall}"
           },
           "large": {
             "$scopes": [
@@ -1274,7 +1274,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+            "$value": "{modes.Reservio.icon.icon-small}"
           }
         },
         "status": {
@@ -1286,7 +1286,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             },
             "background": {
               "$scopes": [
@@ -1295,7 +1295,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             },
             "content": {
               "$scopes": [
@@ -1304,7 +1304,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "error": {
@@ -1315,7 +1315,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.danger.default}"
+              "$value": "{modes.Reservio.border.active.danger.default}"
             },
             "background": {
               "$scopes": [
@@ -1324,7 +1324,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             },
             "shadow": {
               "$scopes": [
@@ -1333,7 +1333,7 @@
               "$type": "boxShadow",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.shadow.sm}"
+              "$value": "{modes.Reservio.shadow.sm}"
             },
             "content": {
               "$scopes": [
@@ -1342,7 +1342,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.danger}"
+              "$value": "{modes.Reservio.content.passive.danger}"
             }
           },
           "disabled": {
@@ -1353,7 +1353,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.disabled}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.disabled}"
             },
             "background": {
               "$scopes": [
@@ -1362,7 +1362,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             },
             "content": {
               "$scopes": [
@@ -1371,7 +1371,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.content.passive.neutral.subtle}"
             }
           }
         },
@@ -1384,7 +1384,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             },
             "hover": {
               "$scopes": [
@@ -1393,7 +1393,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.hover}"
             },
             "focused": {
               "$scopes": [
@@ -1402,7 +1402,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.focused}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.focused}"
             },
             "active": {
               "$scopes": [
@@ -1411,7 +1411,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.selected}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.selected}"
             }
           },
           "background": {
@@ -1422,7 +1422,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             },
             "hover": {
               "$scopes": [
@@ -1431,7 +1431,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             },
             "focused": {
               "$scopes": [
@@ -1440,7 +1440,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             }
           }
         },
@@ -1453,7 +1453,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "placeholder": {
@@ -1463,7 +1463,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.muted}"
+            "$value": "{modes.Reservio.content.passive.neutral.muted}"
           },
           "required": {
             "$scopes": [
@@ -1472,7 +1472,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.danger}"
+            "$value": "{modes.Reservio.content.passive.danger}"
           }
         },
         "min-width": {
@@ -1482,7 +1482,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.padding.xxxxl}"
+          "$value": "{modes.Reservio.padding.xxxxl}"
         },
         "border": {
           "width": {
@@ -1492,7 +1492,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.width.thin}"
+            "$value": "{modes.Reservio.border.width.thin}"
           }
         },
         "gap": {
@@ -1503,7 +1503,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.gap.xxs}"
+            "$value": "{modes.Reservio.gap.xxs}"
           },
           "helper-text": {
             "$scopes": [
@@ -1512,7 +1512,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.gap.xxs}"
+            "$value": "{modes.Reservio.gap.xxs}"
           },
           "leading-icon": {
             "small": {
@@ -1522,7 +1522,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+              "$value": "{modes.Reservio.gap.xs}"
             },
             "medium": {
               "$scopes": [
@@ -1531,7 +1531,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.s}"
+              "$value": "{modes.Reservio.gap.s}"
             },
             "large": {
               "$scopes": [
@@ -1540,7 +1540,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.m}"
+              "$value": "{modes.Reservio.gap.m}"
             },
             "group": {
               "small": {
@@ -1550,7 +1550,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.gap.xxs}"
+                "$value": "{modes.Reservio.gap.xxs}"
               },
               "medium": {
                 "$scopes": [
@@ -1559,7 +1559,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+                "$value": "{modes.Reservio.gap.xs}"
               },
               "large": {
                 "$scopes": [
@@ -1568,7 +1568,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.gap.s}"
+                "$value": "{modes.Reservio.gap.s}"
               }
             }
           },
@@ -1579,7 +1579,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+            "$value": "{modes.Reservio.gap.xs}"
           },
           "trailing-icon": {
             "small": {
@@ -1589,7 +1589,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+              "$value": "{modes.Reservio.gap.xs}"
             },
             "medium": {
               "$scopes": [
@@ -1598,7 +1598,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.s}"
+              "$value": "{modes.Reservio.gap.s}"
             },
             "large": {
               "$scopes": [
@@ -1607,7 +1607,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.m}"
+              "$value": "{modes.Reservio.gap.m}"
             },
             "group": {
               "small": {
@@ -1617,7 +1617,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.gap.xxs}"
+                "$value": "{modes.Reservio.gap.xxs}"
               },
               "medium": {
                 "$scopes": [
@@ -1626,7 +1626,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+                "$value": "{modes.Reservio.gap.xs}"
               },
               "large": {
                 "$scopes": [
@@ -1635,7 +1635,7 @@
                 "$type": "dimension",
                 "$libraryName": "",
                 "$collectionName": "semanticTokens",
-                "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+                "$value": "{modes.Reservio.gap.xs}"
               }
             }
           }
@@ -1648,7 +1648,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+            "$value": "{modes.Reservio.padding.xxxs}"
           },
           "medium": {
             "$scopes": [
@@ -1657,7 +1657,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "large": {
             "$scopes": [
@@ -1666,7 +1666,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           }
         },
         "animation": {
@@ -1677,7 +1677,7 @@
             "$type": "number",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.animation.duration.fast}"
+            "$value": "{modes.Reservio.animation.duration.fast}"
           },
           "easing": {
             "$scopes": [
@@ -1686,7 +1686,7 @@
             "$type": "string",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.animation.easing.ease-out}"
+            "$value": "{modes.Reservio.animation.easing.ease-out}"
           }
         }
       },
@@ -1698,7 +1698,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.full}"
+          "$value": "{modes.Reservio.radius.full}"
         },
         "gap-label": {
           "$scopes": [
@@ -1707,7 +1707,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.m}"
+          "$value": "{modes.Reservio.gap.m}"
         },
         "background": {
           "off": {
@@ -1718,7 +1718,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.default}"
+              "$value": "{modes.Reservio.background.active.neutral.default}"
             },
             "disabled": {
               "$scopes": [
@@ -1727,7 +1727,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.disabled}"
+              "$value": "{modes.Reservio.background.active.neutral.disabled}"
             }
           },
           "on": {
@@ -1738,7 +1738,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.success.default}"
+              "$value": "{modes.Reservio.background.active.success.default}"
             },
             "disabled": {
               "$scopes": [
@@ -1747,7 +1747,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.success.disabled}"
+              "$value": "{modes.Reservio.background.active.success.disabled}"
             }
           }
         },
@@ -1760,7 +1760,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-neutral.strong}"
+              "$value": "{modes.Reservio.content.passive.on-neutral.strong}"
             },
             "disabled": {
               "$scopes": [
@@ -1769,7 +1769,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-neutral.subtle}"
+              "$value": "{modes.Reservio.content.passive.on-neutral.subtle}"
             }
           },
           "on": {
@@ -1780,7 +1780,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-success}"
+              "$value": "{modes.Reservio.content.passive.on-success}"
             },
             "disabled": {
               "$scopes": [
@@ -1789,7 +1789,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-success}"
+              "$value": "{modes.Reservio.content.passive.on-success}"
             }
           }
         }
@@ -1804,7 +1804,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{primitives.universal.modes.Reservio.transparent}"
+              "$value": "{universal.modes.Reservio.transparent}"
             }
           },
           "checked": {
@@ -1815,7 +1815,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             },
             "hover": {
               "$scopes": [
@@ -1824,7 +1824,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.hover}"
+              "$value": "{modes.Reservio.background.active.accent.hover}"
             },
             "disabled": {
               "$scopes": [
@@ -1833,7 +1833,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.disabled}"
+              "$value": "{modes.Reservio.background.active.accent.disabled}"
             }
           }
         },
@@ -1844,7 +1844,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+          "$value": "{modes.Reservio.typography.body.font-size.medium}"
         },
         "line-height": {
           "$scopes": [
@@ -1853,7 +1853,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+          "$value": "{modes.Reservio.typography.body.line-height.default}"
         },
         "radius": {
           "$scopes": [
@@ -1862,7 +1862,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.xsmall}"
+          "$value": "{modes.Reservio.radius.xsmall}"
         },
         "icon": {
           "$scopes": [
@@ -1871,7 +1871,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.icon.icon-xsmall}"
+          "$value": "{modes.Reservio.icon.icon-xsmall}"
         },
         "border": {
           "width": {
@@ -1881,7 +1881,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.width.thicker}"
+            "$value": "{modes.Reservio.border.width.thicker}"
           },
           "unchecked": {
             "default": {
@@ -1891,7 +1891,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.default}"
             },
             "hover": {
               "$scopes": [
@@ -1900,7 +1900,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.hover}"
             },
             "disabled": {
               "$scopes": [
@@ -1909,7 +1909,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.disabled}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.disabled}"
             }
           }
         },
@@ -1920,7 +1920,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.m}"
+          "$value": "{modes.Reservio.gap.m}"
         },
         "content": {
           "$scopes": [
@@ -1929,7 +1929,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.content.passive.on-accent}"
+          "$value": "{modes.Reservio.content.passive.on-accent}"
         }
       },
       "radio-button": {
@@ -1942,7 +1942,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{primitives.universal.modes.Reservio.transparent}"
+              "$value": "{universal.modes.Reservio.transparent}"
             }
           },
           "selected": {
@@ -1953,7 +1953,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             },
             "hover": {
               "$scopes": [
@@ -1962,7 +1962,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.hover}"
+              "$value": "{modes.Reservio.background.active.accent.hover}"
             },
             "disabled": {
               "$scopes": [
@@ -1971,7 +1971,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.disabled}"
+              "$value": "{modes.Reservio.background.active.accent.disabled}"
             }
           }
         },
@@ -1984,7 +1984,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.default}"
             },
             "hover": {
               "$scopes": [
@@ -1993,7 +1993,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.hover}"
             },
             "disabled": {
               "$scopes": [
@@ -2002,7 +2002,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.disabled}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.disabled}"
             }
           },
           "width": {
@@ -2012,7 +2012,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.width.thicker}"
+            "$value": "{modes.Reservio.border.width.thicker}"
           },
           "selected": {
             "default": {
@@ -2022,7 +2022,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.default}"
             },
             "hover": {
               "$scopes": [
@@ -2031,7 +2031,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.hover}"
             },
             "disabled": {
               "$scopes": [
@@ -2040,7 +2040,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.toggle.disabled}"
+              "$value": "{modes.Reservio.border.active.neutral.control.toggle.disabled}"
             }
           }
         },
@@ -2051,7 +2051,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+          "$value": "{modes.Reservio.typography.body.font-size.medium}"
         },
         "line-height": {
           "$scopes": [
@@ -2060,7 +2060,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+          "$value": "{modes.Reservio.typography.body.line-height.default}"
         },
         "radius": {
           "$scopes": [
@@ -2069,7 +2069,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.full}"
+          "$value": "{modes.Reservio.radius.full}"
         },
         "gap-label": {
           "$scopes": [
@@ -2078,7 +2078,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.m}"
+          "$value": "{modes.Reservio.gap.m}"
         }
       },
       "chip": {
@@ -2091,7 +2091,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.default}"
+              "$value": "{modes.Reservio.background.active.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -2100,7 +2100,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+              "$value": "{modes.Reservio.background.active.neutral.hover}"
             },
             "pressed": {
               "$scopes": [
@@ -2109,7 +2109,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.pressed}"
+              "$value": "{modes.Reservio.background.active.neutral.pressed}"
             },
             "disabled": {
               "$scopes": [
@@ -2118,7 +2118,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.disabled}"
+              "$value": "{modes.Reservio.background.active.neutral.disabled}"
             }
           },
           "selected": {
@@ -2129,7 +2129,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             },
             "hover": {
               "$scopes": [
@@ -2138,7 +2138,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.hover}"
+              "$value": "{modes.Reservio.background.active.accent.hover}"
             },
             "pressed": {
               "$scopes": [
@@ -2147,7 +2147,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.pressed}"
+              "$value": "{modes.Reservio.background.active.accent.pressed}"
             },
             "disabled": {
               "$scopes": [
@@ -2156,7 +2156,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.disabled}"
+              "$value": "{modes.Reservio.background.active.accent.disabled}"
             }
           }
         },
@@ -2168,7 +2168,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.on-accent}"
+            "$value": "{modes.Reservio.content.passive.on-accent}"
           },
           "unselected": {
             "default": {
@@ -2178,7 +2178,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.default}"
+              "$value": "{modes.Reservio.content.active.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -2187,7 +2187,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.hover}"
+              "$value": "{modes.Reservio.content.active.neutral.hover}"
             },
             "pressed": {
               "$scopes": [
@@ -2196,7 +2196,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.pressed}"
+              "$value": "{modes.Reservio.content.active.neutral.pressed}"
             },
             "dissabled": {
               "$scopes": [
@@ -2205,7 +2205,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.disabled}"
+              "$value": "{modes.Reservio.content.active.neutral.disabled}"
             }
           }
         },
@@ -2218,7 +2218,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.default}"
+              "$value": "{modes.Reservio.border.active.neutral.action.default}"
             },
             "hover": {
               "$scopes": [
@@ -2227,7 +2227,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.action.hover}"
             },
             "pressed": {
               "$scopes": [
@@ -2236,7 +2236,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.pressed}"
+              "$value": "{modes.Reservio.border.active.neutral.action.pressed}"
             },
             "disabled": {
               "$scopes": [
@@ -2245,7 +2245,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.disabled}"
+              "$value": "{modes.Reservio.border.active.neutral.action.disabled}"
             }
           },
           "width": {
@@ -2255,7 +2255,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.width.thin}"
+            "$value": "{modes.Reservio.border.width.thin}"
           }
         },
         "radius": {
@@ -2265,7 +2265,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.full}"
+          "$value": "{modes.Reservio.radius.full}"
         },
         "icon": {
           "small": {
@@ -2275,7 +2275,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-xsmall}"
+            "$value": "{modes.Reservio.icon.icon-xsmall}"
           },
           "medium": {
             "$scopes": [
@@ -2284,7 +2284,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+            "$value": "{modes.Reservio.icon.icon-small}"
           },
           "large": {
             "$scopes": [
@@ -2293,7 +2293,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+            "$value": "{modes.Reservio.icon.icon-small}"
           }
         },
         "outline": {
@@ -2397,7 +2397,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.xxs}"
+          "$value": "{modes.Reservio.gap.xxs}"
         },
         "padding-x": {
           "small": {
@@ -2407,7 +2407,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "medium": {
             "$scopes": [
@@ -2416,7 +2416,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           },
           "large": {
             "$scopes": [
@@ -2425,7 +2425,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           }
         },
         "padding-y": {
@@ -2436,7 +2436,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+            "$value": "{modes.Reservio.padding.xxxs}"
           },
           "medium": {
             "$scopes": [
@@ -2445,7 +2445,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "large": {
             "$scopes": [
@@ -2454,7 +2454,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           }
         },
         "padding-left": {
@@ -2465,7 +2465,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+            "$value": "{modes.Reservio.padding.xxxs}"
           },
           "medium": {
             "$scopes": [
@@ -2474,7 +2474,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "large": {
             "$scopes": [
@@ -2483,7 +2483,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           }
         },
         "padding-right": {
@@ -2494,7 +2494,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+            "$value": "{modes.Reservio.padding.xxxs}"
           },
           "medium": {
             "$scopes": [
@@ -2503,7 +2503,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+            "$value": "{modes.Reservio.padding.xxs}"
           },
           "large": {
             "$scopes": [
@@ -2512,7 +2512,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           }
         },
         "font-size": {
@@ -2523,7 +2523,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.small}"
+            "$value": "{modes.Reservio.typography.body.font-size.small}"
           },
           "medium": {
             "$scopes": [
@@ -2532,7 +2532,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+            "$value": "{modes.Reservio.typography.body.font-size.medium}"
           },
           "large": {
             "$scopes": [
@@ -2541,7 +2541,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+            "$value": "{modes.Reservio.typography.body.font-size.medium}"
           }
         },
         "line-height": {
@@ -2552,7 +2552,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.small}"
+            "$value": "{modes.Reservio.typography.body.line-height.small}"
           },
           "medium": {
             "$scopes": [
@@ -2561,7 +2561,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+            "$value": "{modes.Reservio.typography.body.line-height.default}"
           },
           "large": {
             "$scopes": [
@@ -2570,7 +2570,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+            "$value": "{modes.Reservio.typography.body.line-height.default}"
           }
         }
       },
@@ -2584,7 +2584,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.success.subtle}"
+              "$value": "{modes.Reservio.background.passive.success.subtle}"
             },
             "content": {
               "$scopes": [
@@ -2593,7 +2593,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             },
             "icon": {
               "$scopes": [
@@ -2602,7 +2602,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.success}"
+              "$value": "{modes.Reservio.content.passive.success}"
             }
           }
         },
@@ -2613,7 +2613,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+          "$value": "{modes.Reservio.typography.body.font-size.medium}"
         },
         "line-height": {
           "$scopes": [
@@ -2622,7 +2622,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+          "$value": "{modes.Reservio.typography.body.line-height.default}"
         },
         "danger": {
           "content": {
@@ -2633,7 +2633,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.danger.subtle}"
+              "$value": "{modes.Reservio.background.passive.danger.subtle}"
             },
             "content": {
               "$scopes": [
@@ -2642,7 +2642,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             },
             "icon": {
               "$scopes": [
@@ -2651,7 +2651,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.danger}"
+              "$value": "{modes.Reservio.content.passive.danger}"
             }
           }
         },
@@ -2662,7 +2662,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+          "$value": "{modes.Reservio.icon.icon-small}"
         },
         "gap-icon": {
           "$scopes": [
@@ -2671,7 +2671,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.s}"
+          "$value": "{modes.Reservio.gap.s}"
         },
         "gap-actions": {
           "$scopes": [
@@ -2680,7 +2680,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.m}"
+          "$value": "{modes.Reservio.gap.m}"
         },
         "warning": {
           "content": {
@@ -2691,7 +2691,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.warning.subtle}"
+              "$value": "{modes.Reservio.background.passive.warning.subtle}"
             },
             "content": {
               "$scopes": [
@@ -2700,7 +2700,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             },
             "icon": {
               "$scopes": [
@@ -2709,7 +2709,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.warning}"
+              "$value": "{modes.Reservio.content.passive.warning}"
             }
           }
         },
@@ -2722,7 +2722,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.info.subtle}"
+              "$value": "{modes.Reservio.background.passive.info.subtle}"
             },
             "content": {
               "$scopes": [
@@ -2731,7 +2731,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.info}"
+              "$value": "{modes.Reservio.content.passive.info}"
             },
             "icon": {
               "$scopes": [
@@ -2740,7 +2740,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.info}"
+              "$value": "{modes.Reservio.content.passive.info}"
             }
           }
         },
@@ -2752,7 +2752,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.small}"
+            "$value": "{modes.Reservio.radius.small}"
           },
           "small": {
             "$scopes": [
@@ -2761,7 +2761,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.xsmall}"
+            "$value": "{modes.Reservio.radius.xsmall}"
           }
         },
         "padding-x": {
@@ -2772,7 +2772,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           },
           "large": {
             "$scopes": [
@@ -2781,7 +2781,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           }
         },
         "padding-y": {
@@ -2792,7 +2792,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           },
           "large": {
             "$scopes": [
@@ -2801,7 +2801,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           }
         },
         "shadow": {
@@ -2811,7 +2811,7 @@
           "$type": "boxShadow",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.shadow.sm}"
+          "$value": "{modes.Reservio.shadow.sm}"
         }
       },
       "toast": {
@@ -2822,7 +2822,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.font-size.medium}"
+          "$value": "{modes.Reservio.typography.body.font-size.medium}"
         },
         "line-height": {
           "$scopes": [
@@ -2831,7 +2831,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.typography.body.line-height.default}"
+          "$value": "{modes.Reservio.typography.body.line-height.default}"
         },
         "icon": {
           "$scopes": [
@@ -2840,7 +2840,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.icon.icon-small}"
+          "$value": "{modes.Reservio.icon.icon-small}"
         },
         "gap-icon": {
           "$scopes": [
@@ -2849,7 +2849,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.s}"
+          "$value": "{modes.Reservio.gap.s}"
         },
         "gap-actions": {
           "$scopes": [
@@ -2858,7 +2858,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.m}"
+          "$value": "{modes.Reservio.gap.m}"
         },
         "radius": {
           "small": {
@@ -2868,7 +2868,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.xsmall}"
+            "$value": "{modes.Reservio.radius.xsmall}"
           },
           "large": {
             "$scopes": [
@@ -2877,7 +2877,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.small}"
+            "$value": "{modes.Reservio.radius.small}"
           }
         },
         "info": {
@@ -2889,7 +2889,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.info.default}"
+              "$value": "{modes.Reservio.background.passive.info.default}"
             },
             "content": {
               "$scopes": [
@@ -2898,7 +2898,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-info}"
+              "$value": "{modes.Reservio.content.passive.on-info}"
             },
             "icon": {
               "$scopes": [
@@ -2907,7 +2907,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-info}"
+              "$value": "{modes.Reservio.content.passive.on-info}"
             }
           }
         },
@@ -2920,7 +2920,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.danger.default}"
+              "$value": "{modes.Reservio.background.passive.danger.default}"
             },
             "content": {
               "$scopes": [
@@ -2929,7 +2929,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-danger}"
+              "$value": "{modes.Reservio.content.passive.on-danger}"
             },
             "icon": {
               "$scopes": [
@@ -2938,7 +2938,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-danger}"
+              "$value": "{modes.Reservio.content.passive.on-danger}"
             }
           }
         },
@@ -2950,7 +2950,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           },
           "large": {
             "$scopes": [
@@ -2959,7 +2959,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           }
         },
         "padding-y": {
@@ -2970,7 +2970,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+            "$value": "{modes.Reservio.padding.xs}"
           },
           "large": {
             "$scopes": [
@@ -2979,7 +2979,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           }
         },
         "shadow": {
@@ -2989,7 +2989,7 @@
           "$type": "boxShadow",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.shadow.lg}"
+          "$value": "{modes.Reservio.shadow.lg}"
         },
         "z-index": {
           "$scopes": [
@@ -2998,7 +2998,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.z-index.modal}"
+          "$value": "{modes.Reservio.z-index.modal}"
         }
       },
       "card": {
@@ -3009,7 +3009,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.small}"
+          "$value": "{modes.Reservio.radius.small}"
         },
         "gap": {
           "title": {
@@ -3020,7 +3020,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.m}"
+              "$value": "{modes.Reservio.gap.m}"
             },
             "medium": {
               "$scopes": [
@@ -3029,7 +3029,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.l}"
+              "$value": "{modes.Reservio.gap.l}"
             },
             "large": {
               "$scopes": [
@@ -3038,7 +3038,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.xl}"
+              "$value": "{modes.Reservio.gap.xl}"
             }
           },
           "actions": {
@@ -3049,7 +3049,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.m}"
+              "$value": "{modes.Reservio.gap.m}"
             },
             "medium": {
               "$scopes": [
@@ -3058,7 +3058,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.l}"
+              "$value": "{modes.Reservio.gap.l}"
             },
             "large": {
               "$scopes": [
@@ -3067,7 +3067,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.gap.xl}"
+              "$value": "{modes.Reservio.gap.xl}"
             }
           }
         },
@@ -3078,7 +3078,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+          "$value": "{modes.Reservio.background.passive.neutral.elevated}"
         },
         "content": {
           "strong": {
@@ -3088,7 +3088,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.strong}"
+            "$value": "{modes.Reservio.content.passive.neutral.strong}"
           },
           "default": {
             "$scopes": [
@@ -3097,7 +3097,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+            "$value": "{modes.Reservio.content.passive.neutral.default}"
           }
         },
         "border": {
@@ -3108,7 +3108,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.default}"
+            "$value": "{modes.Reservio.border.active.neutral.action.default}"
           },
           "hover": {
             "$scopes": [
@@ -3117,7 +3117,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.active.neutral.action.hover}"
+            "$value": "{modes.Reservio.border.active.neutral.action.hover}"
           },
           "selected": {
             "$scopes": [
@@ -3126,7 +3126,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.active.accent.selected}"
+            "$value": "{modes.Reservio.border.active.accent.selected}"
           }
         },
         "padding-x": {
@@ -3137,7 +3137,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           },
           "medium": {
             "$scopes": [
@@ -3146,7 +3146,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           },
           "large": {
             "$scopes": [
@@ -3155,7 +3155,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.l}"
+            "$value": "{modes.Reservio.padding.l}"
           }
         },
         "padding-y": {
@@ -3166,7 +3166,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.s}"
+            "$value": "{modes.Reservio.padding.s}"
           },
           "medium": {
             "$scopes": [
@@ -3175,7 +3175,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.m}"
+            "$value": "{modes.Reservio.padding.m}"
           },
           "large": {
             "$scopes": [
@@ -3184,7 +3184,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.padding.l}"
+            "$value": "{modes.Reservio.padding.l}"
           }
         },
         "shadow": {
@@ -3194,7 +3194,7 @@
           "$type": "boxShadow",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.shadow.sm}"
+          "$value": "{modes.Reservio.shadow.sm}"
         }
       },
       "popover": {
@@ -3205,7 +3205,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+          "$value": "{modes.Reservio.background.passive.neutral.elevated}"
         },
         "radius": {
           "$scopes": [
@@ -3214,7 +3214,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.small}"
+          "$value": "{modes.Reservio.radius.small}"
         },
         "border": {
           "default": {
@@ -3224,7 +3224,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.passive.neutral.default}"
+            "$value": "{modes.Reservio.border.passive.neutral.default}"
           },
           "width": {
             "$scopes": [
@@ -3233,7 +3233,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.border.width.thin}"
+            "$value": "{modes.Reservio.border.width.thin}"
           }
         },
         "shadow": {
@@ -3243,7 +3243,7 @@
           "$type": "boxShadow",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.shadow.md}"
+          "$value": "{modes.Reservio.shadow.md}"
         },
         "z-index": {
           "$scopes": [
@@ -3252,7 +3252,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.z-index.popover}"
+          "$value": "{modes.Reservio.z-index.popover}"
         }
       },
       "calendar-day": {
@@ -3264,7 +3264,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.active.neutral.default}"
+            "$value": "{modes.Reservio.content.active.neutral.default}"
           },
           "today": {
             "$scopes": [
@@ -3273,7 +3273,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+            "$value": "{modes.Reservio.content.active.accent.default}"
           },
           "selected": {
             "$scopes": [
@@ -3282,7 +3282,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.on-accent}"
+            "$value": "{modes.Reservio.content.passive.on-accent}"
           },
           "in-range": {
             "$scopes": [
@@ -3291,7 +3291,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+            "$value": "{modes.Reservio.content.active.accent.default}"
           },
           "range-start": {
             "$scopes": [
@@ -3300,7 +3300,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+            "$value": "{modes.Reservio.content.active.accent.default}"
           },
           "range-end": {
             "$scopes": [
@@ -3309,7 +3309,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+            "$value": "{modes.Reservio.content.active.accent.default}"
           },
           "disabled": {
             "$scopes": [
@@ -3318,7 +3318,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.muted}"
+            "$value": "{modes.Reservio.content.passive.neutral.muted}"
           }
         },
         "background": {
@@ -3329,7 +3329,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+            "$value": "{modes.Reservio.background.passive.neutral.elevated}"
           },
           "hover": {
             "$scopes": [
@@ -3338,7 +3338,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+            "$value": "{modes.Reservio.background.active.neutral.hover}"
           },
           "today": {
             "$scopes": [
@@ -3347,7 +3347,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+            "$value": "{modes.Reservio.background.passive.neutral.elevated}"
           },
           "selected": {
             "$scopes": [
@@ -3356,7 +3356,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.active.accent.selected}"
+            "$value": "{modes.Reservio.background.active.accent.selected}"
           },
           "in-range": {
             "$scopes": [
@@ -3365,7 +3365,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.active.accent.subtle}"
+            "$value": "{modes.Reservio.background.active.accent.subtle}"
           },
           "range-start": {
             "$scopes": [
@@ -3374,7 +3374,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.active.accent.subtle}"
+            "$value": "{modes.Reservio.background.active.accent.subtle}"
           },
           "range-end": {
             "$scopes": [
@@ -3383,7 +3383,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.active.accent.subtle}"
+            "$value": "{modes.Reservio.background.active.accent.subtle}"
           }
         }
       },
@@ -3397,7 +3397,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.control.height.xs}"
+              "$value": "{modes.Reservio.control.height.xs}"
             },
             "l": {
               "$scopes": [
@@ -3406,7 +3406,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.control.height.s}"
+              "$value": "{modes.Reservio.control.height.s}"
             }
           },
           "padding-x": {
@@ -3417,7 +3417,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+              "$value": "{modes.Reservio.padding.xxxs}"
             },
             "l": {
               "$scopes": [
@@ -3426,7 +3426,7 @@
               "$type": "dimension",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.padding.xxxs}"
+              "$value": "{modes.Reservio.padding.xxxs}"
             }
           },
           "background": {
@@ -3437,7 +3437,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{primitives.universal.modes.Reservio.transparent}"
+              "$value": "{universal.modes.Reservio.transparent}"
             },
             "selected": {
               "$scopes": [
@@ -3446,7 +3446,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.selected}"
+              "$value": "{modes.Reservio.background.active.accent.selected}"
             }
           },
           "content": {
@@ -3457,7 +3457,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.default}"
+              "$value": "{modes.Reservio.content.active.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -3466,7 +3466,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.hover}"
+              "$value": "{modes.Reservio.content.active.accent.hover}"
             },
             "selected": {
               "$scopes": [
@@ -3475,7 +3475,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+              "$value": "{modes.Reservio.content.active.accent.default}"
             },
             "disabled": {
               "$scopes": [
@@ -3484,7 +3484,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.neutral.disabled}"
+              "$value": "{modes.Reservio.content.active.neutral.disabled}"
             }
           },
           "radius": {
@@ -3494,7 +3494,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.radius.full}"
+            "$value": "{modes.Reservio.radius.full}"
           }
         },
         "gap": {
@@ -3504,7 +3504,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.gap.xs}"
+          "$value": "{modes.Reservio.gap.xs}"
         }
       },
       "tooltip": {
@@ -3515,7 +3515,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.radius.xsmall}"
+          "$value": "{modes.Reservio.radius.xsmall}"
         },
         "padding-x": {
           "$scopes": [
@@ -3524,7 +3524,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.padding.xs}"
+          "$value": "{modes.Reservio.padding.xs}"
         },
         "padding-y": {
           "$scopes": [
@@ -3533,7 +3533,7 @@
           "$type": "dimension",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.padding.xxs}"
+          "$value": "{modes.Reservio.padding.xxs}"
         },
         "container": {
           "background": {
@@ -3543,7 +3543,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.passive.info.default}"
+            "$value": "{modes.Reservio.background.passive.info.default}"
           },
           "content": {
             "$scopes": [
@@ -3552,7 +3552,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.content.passive.on-accent}"
+            "$value": "{modes.Reservio.content.passive.on-accent}"
           }
         },
         "arrow": {
@@ -3563,7 +3563,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.background.passive.info.default}"
+            "$value": "{modes.Reservio.background.passive.info.default}"
           },
           "width": {
             "$scopes": [
@@ -3572,7 +3572,7 @@
             "$type": "dimension",
             "$libraryName": "",
             "$collectionName": "primitives",
-            "$value": "{primitives.sizing.modes.Survio.size-1}"
+            "$value": "{sizing.modes.Survio.size-1}"
           }
         },
         "shadow": {
@@ -3582,7 +3582,7 @@
           "$type": "boxShadow",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.shadow.md}"
+          "$value": "{modes.Reservio.shadow.md}"
         },
         "z-index": {
           "$scopes": [
@@ -3591,7 +3591,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.z-index.tooltip}"
+          "$value": "{modes.Reservio.z-index.tooltip}"
         }
       },
       "breadcrumbs": {
@@ -3602,7 +3602,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+          "$value": "{modes.Reservio.background.passive.neutral.elevated}"
         },
         "hover": {
           "$scopes": [
@@ -3611,7 +3611,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+          "$value": "{modes.Reservio.background.passive.neutral.elevated}"
         },
         "pressed": {
           "$scopes": [
@@ -3620,7 +3620,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+          "$value": "{modes.Reservio.background.passive.neutral.elevated}"
         },
         "disabled": {
           "$scopes": [
@@ -3629,7 +3629,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+          "$value": "{modes.Reservio.background.passive.neutral.elevated}"
         }
       },
       "link": {
@@ -3642,7 +3642,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+              "$value": "{modes.Reservio.content.active.accent.default}"
             },
             "hover": {
               "$scopes": [
@@ -3651,7 +3651,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.hover}"
+              "$value": "{modes.Reservio.content.active.accent.hover}"
             },
             "active": {
               "$scopes": [
@@ -3660,7 +3660,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.pressed}"
+              "$value": "{modes.Reservio.content.active.accent.pressed}"
             },
             "visited": {
               "$scopes": [
@@ -3669,7 +3669,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+              "$value": "{modes.Reservio.content.active.accent.default}"
             },
             "disabled": {
               "$scopes": [
@@ -3678,7 +3678,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.disabled}"
+              "$value": "{modes.Reservio.content.active.accent.disabled}"
             }
           }
         }
@@ -3693,7 +3693,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             }
           },
           "content": {
@@ -3704,7 +3704,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "border": {
@@ -3715,7 +3715,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             }
           }
         },
@@ -3728,7 +3728,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.success.default}"
+              "$value": "{modes.Reservio.background.passive.success.default}"
             }
           },
           "content": {
@@ -3739,7 +3739,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-success}"
+              "$value": "{modes.Reservio.content.passive.on-success}"
             }
           }
         },
@@ -3752,7 +3752,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.warning.default}"
+              "$value": "{modes.Reservio.background.passive.warning.default}"
             }
           },
           "content": {
@@ -3763,7 +3763,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-warning}"
+              "$value": "{modes.Reservio.content.passive.on-warning}"
             }
           }
         },
@@ -3776,7 +3776,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.danger.default}"
+              "$value": "{modes.Reservio.background.passive.danger.default}"
             }
           },
           "content": {
@@ -3787,7 +3787,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-danger}"
+              "$value": "{modes.Reservio.content.passive.on-danger}"
             }
           }
         },
@@ -3800,7 +3800,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.info.default}"
+              "$value": "{modes.Reservio.background.passive.info.default}"
             }
           },
           "content": {
@@ -3811,7 +3811,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-info}"
+              "$value": "{modes.Reservio.content.passive.on-info}"
             }
           }
         }
@@ -3826,7 +3826,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             }
           },
           "content": {
@@ -3837,7 +3837,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "border": {
@@ -3848,7 +3848,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             }
           }
         }
@@ -3863,7 +3863,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.passive.neutral.default}"
+              "$value": "{modes.Reservio.border.passive.neutral.default}"
             }
           }
         },
@@ -3876,7 +3876,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.passive.neutral.default}"
+              "$value": "{modes.Reservio.border.passive.neutral.default}"
             }
           }
         }
@@ -3891,7 +3891,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             }
           },
           "fill": {
@@ -3902,7 +3902,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             },
             "success": {
               "$scopes": [
@@ -3911,7 +3911,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.success.default}"
+              "$value": "{modes.Reservio.background.passive.success.default}"
             },
             "error": {
               "$scopes": [
@@ -3920,7 +3920,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.danger.default}"
+              "$value": "{modes.Reservio.background.passive.danger.default}"
             }
           },
           "content": {
@@ -3931,7 +3931,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           }
         },
@@ -3944,7 +3944,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             }
           },
           "fill": {
@@ -3955,7 +3955,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             }
           }
         }
@@ -3970,7 +3970,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             }
           }
         },
@@ -3983,7 +3983,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             }
           }
         },
@@ -3996,7 +3996,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             }
           }
         }
@@ -4011,7 +4011,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+              "$value": "{modes.Reservio.content.active.accent.default}"
             }
           }
         }
@@ -4026,7 +4026,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             }
           },
           "overlay": {
@@ -4037,7 +4037,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             },
             "z-index": {
               "$scopes": [
@@ -4046,7 +4046,7 @@
               "$type": "number",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.z-index.modal-backdrop}"
+              "$value": "{modes.Reservio.z-index.modal-backdrop}"
             },
             "opacity": {
               "$scopes": [
@@ -4055,7 +4055,7 @@
               "$type": "number",
               "$libraryName": "",
               "$collectionName": "primitives",
-              "$value": "{primitives.colors.modes.Reservio.opacity.opacity-75}"
+              "$value": "{colors.modes.Reservio.opacity.opacity-75}"
             }
           },
           "border": {
@@ -4066,7 +4066,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             }
           },
           "content": {
@@ -4077,7 +4077,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "shadow": {
@@ -4087,7 +4087,7 @@
             "$type": "boxShadow",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.shadow.xl}"
+            "$value": "{modes.Reservio.shadow.xl}"
           },
           "z-index": {
             "$scopes": [
@@ -4096,7 +4096,7 @@
             "$type": "number",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.z-index.modal}"
+            "$value": "{modes.Reservio.z-index.modal}"
           }
         }
       },
@@ -4110,7 +4110,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.elevated}"
+              "$value": "{modes.Reservio.background.passive.neutral.elevated}"
             }
           },
           "border": {
@@ -4121,7 +4121,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             }
           },
           "content": {
@@ -4132,7 +4132,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "shadow": {
@@ -4142,7 +4142,7 @@
             "$type": "boxShadow",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.shadow.lg}"
+            "$value": "{modes.Reservio.shadow.lg}"
           },
           "z-index": {
             "$scopes": [
@@ -4151,7 +4151,7 @@
             "$type": "number",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{semanticTokens.modes.Reservio.z-index.modal}"
+            "$value": "{modes.Reservio.z-index.modal}"
           }
         }
       },
@@ -4165,7 +4165,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -4174,7 +4174,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+              "$value": "{modes.Reservio.background.active.neutral.hover}"
             },
             "expanded": {
               "$scopes": [
@@ -4183,7 +4183,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.default}"
+              "$value": "{modes.Reservio.background.active.neutral.default}"
             }
           },
           "border": {
@@ -4194,7 +4194,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             }
           },
           "content": {
@@ -4205,7 +4205,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "animation": {
@@ -4216,7 +4216,7 @@
               "$type": "number",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.duration.base}"
+              "$value": "{modes.Reservio.animation.duration.base}"
             },
             "easing": {
               "$scopes": [
@@ -4225,7 +4225,7 @@
               "$type": "string",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.easing.ease-in-out}"
+              "$value": "{modes.Reservio.animation.easing.ease-in-out}"
             }
           }
         }
@@ -4240,7 +4240,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -4249,7 +4249,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+              "$value": "{modes.Reservio.background.active.neutral.hover}"
             },
             "active": {
               "$scopes": [
@@ -4258,7 +4258,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.selected}"
+              "$value": "{modes.Reservio.background.active.accent.selected}"
             }
           },
           "border": {
@@ -4269,7 +4269,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             },
             "active": {
               "$scopes": [
@@ -4278,7 +4278,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.accent.selected}"
+              "$value": "{modes.Reservio.border.active.accent.selected}"
             }
           },
           "content": {
@@ -4289,7 +4289,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             },
             "active": {
               "$scopes": [
@@ -4298,7 +4298,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+              "$value": "{modes.Reservio.content.active.accent.default}"
             }
           },
           "indicator": {
@@ -4309,7 +4309,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             }
           },
           "animation": {
@@ -4320,7 +4320,7 @@
               "$type": "number",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.duration.fast}"
+              "$value": "{modes.Reservio.animation.duration.fast}"
             },
             "easing": {
               "$scopes": [
@@ -4329,7 +4329,7 @@
               "$type": "string",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.easing.ease-out}"
+              "$value": "{modes.Reservio.animation.easing.ease-out}"
             }
           }
         }
@@ -4344,7 +4344,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             }
           },
           "fill": {
@@ -4355,7 +4355,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             },
             "hover": {
               "$scopes": [
@@ -4364,7 +4364,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.hover}"
+              "$value": "{modes.Reservio.background.active.accent.hover}"
             }
           },
           "thumb": {
@@ -4375,7 +4375,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.default}"
+              "$value": "{modes.Reservio.background.active.accent.default}"
             },
             "hover": {
               "$scopes": [
@@ -4384,7 +4384,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.hover}"
+              "$value": "{modes.Reservio.background.active.accent.hover}"
             },
             "active": {
               "$scopes": [
@@ -4393,7 +4393,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.pressed}"
+              "$value": "{modes.Reservio.background.active.accent.pressed}"
             }
           },
           "animation": {
@@ -4404,7 +4404,7 @@
               "$type": "number",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.duration.base}"
+              "$value": "{modes.Reservio.animation.duration.base}"
             },
             "easing": {
               "$scopes": [
@@ -4413,7 +4413,7 @@
               "$type": "string",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.easing.ease-out}"
+              "$value": "{modes.Reservio.animation.easing.ease-out}"
             }
           }
         }
@@ -4428,7 +4428,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             },
             "active": {
               "$scopes": [
@@ -4437,7 +4437,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.selected}"
+              "$value": "{modes.Reservio.background.active.accent.selected}"
             },
             "completed": {
               "$scopes": [
@@ -4446,7 +4446,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.success.default}"
+              "$value": "{modes.Reservio.background.passive.success.default}"
             },
             "error": {
               "$scopes": [
@@ -4455,7 +4455,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.danger.default}"
+              "$value": "{modes.Reservio.background.passive.danger.default}"
             }
           },
           "border": {
@@ -4466,7 +4466,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             },
             "active": {
               "$scopes": [
@@ -4475,7 +4475,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.accent.selected}"
+              "$value": "{modes.Reservio.border.active.accent.selected}"
             }
           },
           "content": {
@@ -4486,7 +4486,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             },
             "active": {
               "$scopes": [
@@ -4495,7 +4495,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.active.accent.default}"
+              "$value": "{modes.Reservio.content.active.accent.default}"
             },
             "completed": {
               "$scopes": [
@@ -4504,7 +4504,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.on-success}"
+              "$value": "{modes.Reservio.content.passive.on-success}"
             }
           }
         }
@@ -4519,7 +4519,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.default}"
+              "$value": "{modes.Reservio.background.passive.neutral.default}"
             },
             "hover": {
               "$scopes": [
@@ -4528,7 +4528,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.neutral.hover}"
+              "$value": "{modes.Reservio.background.active.neutral.hover}"
             },
             "drag-over": {
               "$scopes": [
@@ -4537,7 +4537,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.active.accent.subtle}"
+              "$value": "{modes.Reservio.background.active.accent.subtle}"
             },
             "error": {
               "$scopes": [
@@ -4546,7 +4546,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.danger.default}"
+              "$value": "{modes.Reservio.background.passive.danger.default}"
             }
           },
           "border": {
@@ -4557,7 +4557,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.default}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.default}"
             },
             "hover": {
               "$scopes": [
@@ -4566,7 +4566,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.neutral.control.field.hover}"
+              "$value": "{modes.Reservio.border.active.neutral.control.field.hover}"
             },
             "drag-over": {
               "$scopes": [
@@ -4575,7 +4575,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.accent.default}"
+              "$value": "{modes.Reservio.border.active.accent.default}"
             },
             "error": {
               "$scopes": [
@@ -4584,7 +4584,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.border.active.danger.default}"
+              "$value": "{modes.Reservio.border.active.danger.default}"
             }
           },
           "content": {
@@ -4595,7 +4595,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.content.passive.neutral.default}"
+              "$value": "{modes.Reservio.content.passive.neutral.default}"
             }
           },
           "animation": {
@@ -4606,7 +4606,7 @@
               "$type": "number",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.duration.base}"
+              "$value": "{modes.Reservio.animation.duration.base}"
             },
             "easing": {
               "$scopes": [
@@ -4615,7 +4615,7 @@
               "$type": "string",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.animation.easing.ease-in-out}"
+              "$value": "{modes.Reservio.animation.easing.ease-in-out}"
             }
           }
         }
@@ -4630,7 +4630,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.background.passive.neutral.subtle}"
+              "$value": "{modes.Reservio.background.passive.neutral.subtle}"
             },
             "filled": {
               "$scopes": [
@@ -4639,7 +4639,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.custom.rating}"
+              "$value": "{modes.Reservio.custom.rating}"
             },
             "hover": {
               "$scopes": [
@@ -4648,7 +4648,7 @@
               "$type": "color",
               "$libraryName": "",
               "$collectionName": "semanticTokens",
-              "$value": "{semanticTokens.modes.Reservio.custom.rating}"
+              "$value": "{modes.Reservio.custom.rating}"
             }
           }
         }
