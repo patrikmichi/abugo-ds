@@ -1184,7 +1184,7 @@
   },
   "$name": "Semantic Tokens",
   "typography": {
-    "headline-font-size-h1": {
+    "headline-size-h1": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1194,7 +1194,7 @@
       "$value": "{typography-fontSize-9}",
       "$description": "headline token for font-size intent"
     },
-    "headline-font-size-h2": {
+    "headline-size-h2": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1204,7 +1204,7 @@
       "$value": "{typography-fontSize-8}",
       "$description": "headline token for font-size intent"
     },
-    "headline-font-size-h3": {
+    "headline-size-h3": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1214,7 +1214,7 @@
       "$value": "{typography-fontSize-7}",
       "$description": "headline token for font-size intent"
     },
-    "headline-font-size-h4": {
+    "headline-size-h4": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1224,7 +1224,7 @@
       "$value": "{typography-fontSize-6}",
       "$description": "headline token for font-size intent"
     },
-    "headline-font-size-h5": {
+    "headline-size-h5": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1234,7 +1234,7 @@
       "$value": "{typography-fontSize-5}",
       "$description": "headline token for font-size intent"
     },
-    "headline-font-size-h6": {
+    "headline-size-h6": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1244,7 +1244,7 @@
       "$value": "{typography-fontSize-4}",
       "$description": "headline token for font-size intent"
     },
-    "headline-line-height-h1": {
+    "headline-line-h1": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1254,7 +1254,7 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "headline token for line-height intent"
     },
-    "headline-line-height-h2": {
+    "headline-line-h2": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1264,7 +1264,7 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "headline token for line-height intent"
     },
-    "headline-line-height-h3": {
+    "headline-line-h3": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1274,7 +1274,7 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "headline token for line-height intent"
     },
-    "headline-line-height-h4": {
+    "headline-line-h4": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1284,7 +1284,7 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "headline token for line-height intent"
     },
-    "headline-line-height-h5": {
+    "headline-line-h5": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1294,7 +1294,7 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "headline token for line-height intent"
     },
-    "headline-line-height-h6": {
+    "headline-line-h6": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1304,7 +1304,7 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "headline token for line-height intent"
     },
-    "body-font-size-large": {
+    "body-size-lg": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1314,7 +1314,7 @@
       "$value": "{typography-fontSize-4}",
       "$description": "body token for font-size intent"
     },
-    "body-font-size-medium": {
+    "body-size-md": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1324,7 +1324,7 @@
       "$value": "{typography-fontSize-3}",
       "$description": "body token for font-size intent"
     },
-    "body-font-size-small": {
+    "body-size-sm": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1334,7 +1334,7 @@
       "$value": "{typography-fontSize-2}",
       "$description": "body token for font-size intent"
     },
-    "body-font-size-extra-small": {
+    "body-size-xs": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1344,7 +1344,7 @@
       "$value": "{typography-fontSize-1}",
       "$description": "body token for font-size intent"
     },
-    "body-line-height-large": {
+    "body-line-lg": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1354,37 +1354,37 @@
       "$value": "{typography-lineHeight-base}",
       "$description": "body token for line-height intent"
     },
-    "body-line-height-default": {
+    "body-line-md": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "dimension",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography-body-font-size-medium}",
+      "$collectionName": "primitives",
+      "$value": "{typography-lineHeight-base}",
       "$description": "body token for line-height intent"
     },
-    "body-line-height-small": {
+    "body-line-sm": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "dimension",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography-body-font-size-medium}",
+      "$collectionName": "primitives",
+      "$value": "{typography-lineHeight-base}",
       "$description": "body token for line-height intent"
     },
-    "body-line-height-extra-small": {
+    "body-line-xs": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "dimension",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography-body-font-size-medium}",
+      "$collectionName": "primitives",
+      "$value": "{typography-lineHeight-base}",
       "$description": "body token for line-height intent"
     },
-    "body-font-weight-light": {
+    "body-weight-light": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1394,7 +1394,7 @@
       "$value": "{typography-fontWeight-regular}",
       "$description": "body token for font-weight intent"
     },
-    "body-font-weight-normal": {
+    "body-weight-normal": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1404,7 +1404,7 @@
       "$value": "{typography-fontWeight-regular}",
       "$description": "body token for font-weight intent"
     },
-    "body-font-weight-medium": {
+    "body-weight-md": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1414,7 +1414,7 @@
       "$value": "{typography-fontWeight-medium}",
       "$description": "body token for font-weight intent"
     },
-    "body-font-weight-semibold": {
+    "body-weight-semibold": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1424,7 +1424,7 @@
       "$value": "{typography-fontWeight-bold}",
       "$description": "body token for font-weight intent"
     },
-    "body-font-weight-bold": {
+    "body-weight-bold": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1446,7 +1446,7 @@
       "$value": "{border-radius-radius-0}",
       "$description": "Reservio token for radius intent"
     },
-    "xsmall": {
+    "xs": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1456,7 +1456,7 @@
       "$value": "{border-radius-radius-1}",
       "$description": "Reservio token for radius intent"
     },
-    "small": {
+    "sm": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1466,7 +1466,7 @@
       "$value": "{border-radius-radius-2}",
       "$description": "Reservio token for radius intent"
     },
-    "medium": {
+    "md": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1476,7 +1476,7 @@
       "$value": "{border-radius-radius-3}",
       "$description": "Reservio token for radius intent"
     },
-    "large": {
+    "lg": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1486,7 +1486,7 @@
       "$value": "{border-radius-radius-4}",
       "$description": "Reservio token for radius intent"
     },
-    "xlarge": {
+    "xl": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1496,7 +1496,7 @@
       "$value": "{border-radius-radius-5}",
       "$description": "Reservio token for radius intent"
     },
-    "xxlarge": {
+    "xxl": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1518,7 +1518,7 @@
     }
   },
   "icon": {
-    "icon-xxsmall": {
+    "xxs": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1528,7 +1528,7 @@
       "$value": "{icon-size-1}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-xsmall": {
+    "xs": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1538,7 +1538,7 @@
       "$value": "{icon-size-2}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-small": {
+    "sm": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1548,7 +1548,7 @@
       "$value": "{icon-size-3}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-medium": {
+    "md": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1558,7 +1558,7 @@
       "$value": "{icon-size-4}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-large": {
+    "lg": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1568,7 +1568,7 @@
       "$value": "{icon-size-5}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-xlarge": {
+    "xl": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1578,7 +1578,7 @@
       "$value": "{icon-size-6}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-xxlarge": {
+    "xxl": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1588,7 +1588,7 @@
       "$value": "{icon-size-7}",
       "$description": "Reservio token for icon intent"
     },
-    "icon-huge": {
+    "huge": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1672,65 +1672,67 @@
     }
   },
   "control": {
-    "height-xxxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-1}",
-      "$description": "control token for height intent"
-    },
-    "height-xxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-2}",
-      "$description": "control token for height intent"
-    },
-    "height-xs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-3}",
-      "$description": "control token for height intent"
-    },
-    "height-s": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-4}",
-      "$description": "control token for height intent"
-    },
-    "height-m": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-5}",
-      "$description": "control token for height intent"
-    },
-    "height-l": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-6}",
-      "$description": "control token for height intent"
+    "height": {
+      "xxxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-1}",
+        "$description": "control token for height intent"
+      },
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-2}",
+        "$description": "control token for height intent"
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-3}",
+        "$description": "control token for height intent"
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-4}",
+        "$description": "control token for height intent"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-5}",
+        "$description": "control token for height intent"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-6}",
+        "$description": "control token for height intent"
+      }
     }
   },
   "padding": {
