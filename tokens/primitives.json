@@ -1421,7 +1421,7 @@
     "$type": "border",
     "$value": {
       "color": "{grey.300}",
-      "width": "{borderWidth.border-1}",
+      "width": "{border-width-border-1}",
       "style": "solid"
     }
   },
@@ -1433,7 +1433,7 @@
     "$type": "border",
     "$value": {
       "color": "{brand.500}",
-      "width": "{borderWidth.border-2}",
+      "width": "{border-width-border-2}",
       "style": "solid"
     }
   },
