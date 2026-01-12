@@ -1840,5 +1840,217 @@
       "$value": "{size-1}",
       "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
     }
+  },
+  "border": {
+    "active": {
+      "accent": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{brand.500}",
+          "$description": "Active border color for accent intent. Use for primary interactive borders."
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{brand.600}",
+          "$description": "Active border color for accent intent on hover. Use for hover states."
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{brand.700}",
+          "$description": "Active border color for accent intent when pressed. Use for pressed states."
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{brand.400}",
+          "$description": "Active border color for accent intent when disabled. Use for disabled states."
+        },
+        "selected": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{brand.700}",
+          "$description": "Active border color for accent intent when selected. Use for selected states."
+        }
+      },
+      "neutral": {
+        "action": {
+          "default": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{grey.300}",
+            "$description": "Active border color for neutral action intent. Use for interactive element borders."
+          },
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{grey.400}",
+            "$description": "Active border color for neutral action intent on hover. Use for hover states."
+          },
+          "pressed": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{grey.500}",
+            "$description": "Active border color for neutral action intent when pressed. Use for pressed states."
+          },
+          "disabled": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{grey.200}",
+            "$description": "Active border color for neutral action intent when disabled. Use for disabled states."
+          }
+        },
+        "control": {
+          "field": {
+            "default": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{grey.300}",
+              "$description": "Active border color for neutral control field intent. Use for input field borders."
+            },
+            "hover": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{grey.400}",
+              "$description": "Active border color for neutral control field intent on hover. Use for hover states."
+            },
+            "focused": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{brand.500}",
+              "$description": "Active border color for neutral control field intent when focused. Use for focus states."
+            },
+            "selected": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{brand.500}",
+              "$description": "Active border color for neutral control field intent when selected. Use for selected states."
+            },
+            "disabled": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{grey.200}",
+              "$description": "Active border color for neutral control field intent when disabled. Use for disabled states."
+            }
+          },
+          "toggle": {
+            "default": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{grey.300}",
+              "$description": "Active border color for neutral control toggle intent. Use for checkbox and radio button borders."
+            },
+            "hover": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{grey.400}",
+              "$description": "Active border color for neutral control toggle intent on hover. Use for hover states."
+            },
+            "disabled": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "primitives",
+              "$value": "{grey.200}",
+              "$description": "Active border color for neutral control toggle intent when disabled. Use for disabled states."
+            }
+          }
+        }
+      },
+      "danger": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{negative.500}",
+          "$description": "Active border color for danger intent. Use for error states and destructive actions."
+        }
+      }
+    },
+    "passive": {
+      "neutral": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{grey.300}",
+          "$description": "Passive border color for neutral intent. Use for dividers and non-interactive borders."
+        }
+      }
+    }
   }
 }
