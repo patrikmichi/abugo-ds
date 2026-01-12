@@ -140,11 +140,30 @@ Semantic tokens reference primitives and provide meaning-based naming following 
 
 Component-specific tokens that reference semantic tokens. All component tokens use nested structures organized by component, variant, property, and state/size.
 
-**Icon Tokens** (grouped at root level):
-- `icon.button.{sm, md, lg}` - Button icon sizes
-- `icon.field.{sm, lg}` - Field icon sizes
-- `icon.checkbox.default` - Checkbox icon size
-- `icon.chip.{sm, md, lg}` - Chip icon sizes
+**Icon Tokens** (consistent structure across all components):
+
+Icon tokens follow a consistent structure for better organization:
+
+1. **Icon Sizes** (dimension type) - Top-level grouping:
+   - `icon.button.{sm, md, lg}` - Button icon sizes
+   - `icon.field.{sm, lg}` - Field icon sizes
+   - `icon.checkbox.default` - Checkbox icon size
+   - `icon.chip.{sm, md, lg}` - Chip icon sizes
+
+2. **Icon Gaps** (spacing type) - Component-level:
+   - `button.gap.icon.{sm, md, lg}` - Button icon gaps
+   - `chip.gap.icon.{sm, md, lg}` - Chip icon gaps
+   - `alert.gap.icon` - Alert icon gap
+   - `toast.gap.icon` - Toast icon gap
+
+3. **Icon Colors** (color type) - Component-level:
+   - `alert.icon.default` - Alert icon color
+   - `alert.danger.icon.default` - Danger alert icon color
+   - `toast.icon.default` - Toast icon color
+   - `toast.danger.icon.default` - Danger toast icon color
+
+4. **Icon Padding** (spacing type) - Component-level:
+   - `button.icon.only.padding.{x, y}.{sm, md, lg}` - Icon-only button padding
 
 **Component Categories**:
 - `button.*` - Button styling tokens (primary, secondary, danger, etc.)
@@ -342,6 +361,11 @@ Component tokens reference semantic tokens and are organized by component, varia
 - **Follow naming conventions** (kebab-case for tokens, camelCase for typography properties)
 - **Use standardized size abbreviations** (xs, sm, md, lg, xl, xxl)
 - **Group related tokens** (e.g., all icon sizes under `icon.*`)
+- **Keep icon token structure consistent**:
+  - Icon sizes: `icon.{component}.{size}` (top-level)
+  - Icon gaps: `{component}.gap.icon` (component-level)
+  - Icon colors: `{component}.icon` or `{component}.{variant}.icon` (component-level)
+  - Icon padding: `{component}.icon.only.padding` (component-level)
 
 ## Security Note
 
