@@ -122,6 +122,74 @@ figma tokens/
 
 **Note:** To sync with Figma Tokens Studio, you'll need to combine the separated files into a single `tokens.json` file, or export directly from Figma.
 
+## Token Usage Examples
+
+### Referencing Tokens
+
+Tokens can reference other tokens using the `{token.path}` syntax:
+
+```json
+{
+  "$type": "color",
+  "$value": "{primitives.modes.Reservio.colors.yellow.100}"
+}
+```
+
+### Semantic Token Structure
+
+Semantic tokens follow the `[property]-[participation]-[intent]` pattern:
+
+- **Property**: What you're styling (content, background, border)
+- **Participation**: Interactive state (passive, active)
+- **Intent**: Semantic meaning (neutral, accent, danger, success)
+
+**Example:**
+```json
+{
+  "content": {
+    "passive": {
+      "neutral": {
+        "default": {
+          "$type": "color",
+          "$value": "{primitives.modes.Reservio.colors.grey.700}"
+        }
+      }
+    }
+  }
+}
+```
+
+### Component Token Structure
+
+Component tokens reference semantic tokens:
+
+```json
+{
+  "button": {
+    "primary": {
+      "background": {
+        "default": {
+          "$type": "color",
+          "$value": "{background.active.accent.default}"
+        }
+      }
+    }
+  }
+}
+```
+
+### Mode Structure
+
+**Primitives** (multiple modes):
+- `primitives.modes.Reservio.colors.yellow.100`
+- `primitives.modes.Survio.colors.brand.100`
+
+**Semantic & Component Tokens** (single mode):
+- `semantic-tokens.Reservio.content.passive.neutral.default`
+- `component-tokens.Reservio.button.primary.background.default`
+
+**Note:** Primitives uses `.modes` wrapper because it supports multiple brands (Reservio, Survio). Semantic and component tokens are flattened since they only have one mode.
+
 ## Security Note
 
 The PAT is stored in `.env` which is already listed in `.gitignore` to prevent committing sensitive tokens to version control.
