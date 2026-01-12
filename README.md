@@ -17,6 +17,11 @@ This repository contains design tokens exported from Figma Tokens Studio. The to
 ```
 figma tokens/
 ├── .env                    # Personal Access Token (gitignored)
+├── .storybook/             # Storybook configuration
+├── docs/                   # Documentation files
+│   ├── TOKENS.md          # Comprehensive token reference
+│   └── tokens-structure.json # Token structure metadata
+├── stories/                # Storybook stories
 ├── tokens/
 │   ├── $metadata.json      # Token set order configuration
 │   ├── $themes.json        # Theme configuration (Reservio, Survio)
@@ -181,6 +186,31 @@ The design system supports two themes managed via `$themes.json`:
 
 Both themes use the same token structure, with brand-specific values handled at the primitive level through color families.
 
+## Documentation
+
+### Live Storybook Documentation
+
+View all tokens in an interactive Storybook:
+
+```bash
+npm run storybook
+```
+
+Then open [http://localhost:6006](http://localhost:6006) in your browser.
+
+The Storybook includes:
+- **Primitives Colors** - All base color tokens organized by family
+- **Semantic Colors** - Meaning-based color tokens
+- **Spacing** - Spacing scale tokens
+- **Typography** - Font sizes, line heights, and typography tokens
+- **Border Radius** - Border radius values
+- **Shadows** - Box shadow tokens
+- **Component Tokens** - Overview of component-specific tokens
+
+### Token Reference Documentation
+
+See [`docs/TOKENS.md`](docs/TOKENS.md) for comprehensive token reference documentation.
+
 ## How to Use
 
 ### Syncing with Figma Tokens Studio
@@ -192,6 +222,12 @@ Both themes use the same token structure, with brand-specific values handled at 
    pat_ebf8c29a_62db_449f_b55c_c60451a17d67
    ```
 4. The plugin will use this token to authenticate and sync your design tokens
+
+Tokens Studio will automatically create Figma Variables from your tokens:
+- **Color tokens** → Figma Color Variables
+- **Spacing tokens** → Figma Number Variables
+- **Typography tokens** → Figma Typography Variables
+- **Shadow tokens** → Figma Shadow Variables
 
 ### Referencing Tokens
 
