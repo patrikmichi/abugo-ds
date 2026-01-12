@@ -11,14 +11,25 @@ function resolveToken(path, collection) {
   
   let current = collection;
   for (const part of parts) {
-    if (current && current[part]) {
+    if (current && typeof current === 'object' && current[part] !== undefined) {
       current = current[part];
     } else {
       return null;
     }
   }
   
-  return current?.$value || current;
+  // Always return a primitive value, never an object
+  if (current && typeof current === 'object') {
+    // If it's a token object, extract the value
+    if (current.$value !== undefined) {
+      return current.$value;
+    }
+    // If it's not a token object, return null
+    return null;
+  }
+  
+  // Return primitive values directly
+  return current;
 }
 
 // Color Swatch Component
@@ -163,13 +174,15 @@ export const SemanticColors = () => {
         >
           {contentTokens.map((key) => {
             const token = semanticTokens[key];
-            const value = resolveToken(token.$value, primitives);
+            const resolvedValue = resolveToken(token?.$value, primitives);
+            // Ensure we have a string value (color)
+            const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
             return (
               <ColorSwatch
                 key={key}
                 name={key}
-                value={value || token.$value}
-                description={token.$description}
+                value={colorValue}
+                description={token?.$description}
               />
             );
           })}
@@ -187,13 +200,15 @@ export const SemanticColors = () => {
         >
           {backgroundTokens.map((key) => {
             const token = semanticTokens[key];
-            const value = resolveToken(token.$value, primitives);
+            const resolvedValue = resolveToken(token?.$value, primitives);
+            // Ensure we have a string value (color)
+            const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
             return (
               <ColorSwatch
                 key={key}
                 name={key}
-                value={value || token.$value}
-                description={token.$description}
+                value={colorValue}
+                description={token?.$description}
               />
             );
           })}
@@ -276,15 +291,19 @@ export const Typography = () => {
             {Object.keys(semanticTokens.typography.headlineSize || {}).map((level) => {
               const sizeToken = semanticTokens.typography.headlineSize[level];
               const lineToken = semanticTokens.typography.headlineLine[level];
-              const size = resolveToken(sizeToken.$value, primitives);
-              const lineHeight = resolveToken(lineToken.$value, primitives);
+              const size = resolveToken(sizeToken?.$value, primitives);
+              const lineHeight = resolveToken(lineToken?.$value, primitives);
+              
+              // Ensure we have valid string/number values
+              const fontSizeValue = typeof size === 'string' || typeof size === 'number' ? size : '1rem';
+              const lineHeightValue = typeof lineHeight === 'string' || typeof lineHeight === 'number' ? lineHeight : '1.5';
               
               return (
                 <TypographySample
                   key={level}
                   name={`Headline ${level.toUpperCase()}`}
-                  fontSize={size}
-                  lineHeight={lineHeight}
+                  fontSize={fontSizeValue}
+                  lineHeight={lineHeightValue}
                   fontWeight="700"
                 />
               );
@@ -294,15 +313,19 @@ export const Typography = () => {
             {Object.keys(semanticTokens.typography.bodySize || {}).map((size) => {
               const sizeToken = semanticTokens.typography.bodySize[size];
               const lineToken = semanticTokens.typography.bodyLine[size];
-              const fontSize = resolveToken(sizeToken.$value, primitives);
-              const lineHeight = resolveToken(lineToken.$value, primitives);
+              const fontSize = resolveToken(sizeToken?.$value, primitives);
+              const lineHeight = resolveToken(lineToken?.$value, primitives);
+              
+              // Ensure we have valid string/number values
+              const fontSizeValue = typeof fontSize === 'string' || typeof fontSize === 'number' ? fontSize : '1rem';
+              const lineHeightValue = typeof lineHeight === 'string' || typeof lineHeight === 'number' ? lineHeight : '1.5';
               
               return (
                 <TypographySample
                   key={size}
                   name={`Body ${size.toUpperCase()}`}
-                  fontSize={fontSize}
-                  lineHeight={lineHeight}
+                  fontSize={fontSizeValue}
+                  lineHeight={lineHeightValue}
                   fontWeight="400"
                 />
               );
@@ -354,7 +377,10 @@ export const BorderRadius = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '24px' }}>
             {Object.keys(semanticTokens.radius).map((key) => {
               const token = semanticTokens.radius[key];
-              const value = resolveToken(token.$value, primitives);
+              const value = resolveToken(token?.$value, primitives);
+              
+              // Ensure we have a valid number value
+              const radiusValue = typeof value === 'number' ? value : (typeof value === 'string' ? parseFloat(value) || 0 : 0);
               
               return (
                 <div key={key} style={{ textAlign: 'center' }}>
@@ -363,12 +389,12 @@ export const BorderRadius = () => {
                       width: '120px',
                       height: '120px',
                       backgroundColor: '#5690f5',
-                      borderRadius: `${value}px`,
+                      borderRadius: `${radiusValue}px`,
                       margin: '0 auto 16px',
                     }}
                   />
                   <div style={{ fontWeight: '600', marginBottom: '4px' }}>radius.{key}</div>
-                  <div style={{ fontSize: '12px', color: '#666' }}>{value}px</div>
+                  <div style={{ fontSize: '12px', color: '#666' }}>{radiusValue}px</div>
                 </div>
               );
             })}
