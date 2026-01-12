@@ -123,7 +123,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-sm}"
+    "$value": "{typography.body-size.sm}"
   },
   "button-font-size-md": {
     "$scopes": [
@@ -132,7 +132,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "button-font-size-lg": {
     "$scopes": [
@@ -141,7 +141,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-lg}"
+    "$value": "{typography.body-size.lg}"
   },
   "button-line-height-sm": {
     "$scopes": [
@@ -150,7 +150,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-sm}"
+    "$value": "{typography.body-line.sm}"
   },
   "button-line-height-md": {
     "$scopes": [
@@ -159,7 +159,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "button-line-height-lg": {
     "$scopes": [
@@ -168,7 +168,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-lg}"
+    "$value": "{typography.body-line.lg}"
   },
   "button-padding-x-sm": {
     "$scopes": [
@@ -177,7 +177,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "button-padding-x-md": {
     "$scopes": [
@@ -186,7 +186,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "button-padding-x-lg": {
     "$scopes": [
@@ -195,7 +195,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-l}"
+    "$value": "{padding.l}"
   },
   "button-padding-y-sm": {
     "$scopes": [
@@ -204,7 +204,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-padding-y-md": {
     "$scopes": [
@@ -213,7 +213,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "button-padding-y-lg": {
     "$scopes": [
@@ -222,7 +222,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "button-radius-sm": {
     "$scopes": [
@@ -231,7 +231,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-xs}"
+    "$value": "{radius.xs}"
   },
   "button-radius-md": {
     "$scopes": [
@@ -240,7 +240,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "button-radius-lg": {
     "$scopes": [
@@ -249,7 +249,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-md}"
+    "$value": "{radius.md}"
   },
   "button-gap-icon-sm": {
     "$scopes": [
@@ -258,7 +258,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "button-gap-icon-md": {
     "$scopes": [
@@ -267,7 +267,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "button-gap-icon-lg": {
     "$scopes": [
@@ -276,7 +276,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-s}"
+    "$value": "{gap.s}"
   },
   "button-secondary-boxed-background-hover": {
     "$scopes": [
@@ -726,7 +726,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-icon-only-padding-x-md": {
     "$scopes": [
@@ -735,7 +735,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "button-icon-only-padding-x-lg": {
     "$scopes": [
@@ -744,7 +744,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "button-icon-only-padding-y-sm": {
     "$scopes": [
@@ -753,7 +753,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-icon-only-padding-y-md": {
     "$scopes": [
@@ -762,7 +762,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "button-icon-only-padding-y-lg": {
     "$scopes": [
@@ -771,7 +771,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "button-icon-sm": {
     "$scopes": [
@@ -780,7 +780,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "button-icon-md": {
     "$scopes": [
@@ -789,7 +789,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "button-icon-lg": {
     "$scopes": [
@@ -798,7 +798,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "button-outline-padding-x-sm": {
     "$scopes": [
@@ -891,7 +891,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-plain-padding-x-md": {
     "$scopes": [
@@ -900,7 +900,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "button-plain-padding-x-lg": {
     "$scopes": [
@@ -909,7 +909,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "button-plain-padding-y-sm": {
     "$scopes": [
@@ -918,7 +918,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "button-plain-padding-y-md": {
     "$scopes": [
@@ -927,7 +927,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-plain-padding-y-lg": {
     "$scopes": [
@@ -936,7 +936,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "button-plain-icon-only-padding-x-sm": {
     "$scopes": [
@@ -945,7 +945,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "button-plain-icon-only-padding-x-md": {
     "$scopes": [
@@ -954,7 +954,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-plain-icon-only-padding-x-lg": {
     "$scopes": [
@@ -963,7 +963,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "button-plain-icon-only-padding-y-sm": {
     "$scopes": [
@@ -972,7 +972,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "button-plain-icon-only-padding-y-md": {
     "$scopes": [
@@ -981,7 +981,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "button-plain-icon-only-padding-y-lg": {
     "$scopes": [
@@ -990,7 +990,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "field-height-sm": {
     "$scopes": [
@@ -999,7 +999,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{control-height-sm}"
+    "$value": "{control.height.sm}"
   },
   "field-height-md": {
     "$scopes": [
@@ -1008,7 +1008,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{control-height-md}"
+    "$value": "{control.height.md}"
   },
   "field-height-lg": {
     "$scopes": [
@@ -1017,7 +1017,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{control-height-lg}"
+    "$value": "{control.height.lg}"
   },
   "field-font-size-sm": {
     "$scopes": [
@@ -1026,7 +1026,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "field-font-size-lg": {
     "$scopes": [
@@ -1035,7 +1035,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-lg}"
+    "$value": "{typography.body-size.lg}"
   },
   "field-line-height-value": {
     "$scopes": [
@@ -1044,7 +1044,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "field-line-height-label": {
     "$scopes": [
@@ -1053,7 +1053,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-lg}"
+    "$value": "{typography.body-line.lg}"
   },
   "field-padding-x-sm": {
     "$scopes": [
@@ -1062,7 +1062,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "field-padding-x-md": {
     "$scopes": [
@@ -1071,7 +1071,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "field-padding-x-lg": {
     "$scopes": [
@@ -1080,7 +1080,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-l}"
+    "$value": "{padding.l}"
   },
   "field-padding-y-sm": {
     "$scopes": [
@@ -1089,7 +1089,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "field-padding-y-md": {
     "$scopes": [
@@ -1098,7 +1098,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "field-padding-y-lg": {
     "$scopes": [
@@ -1107,7 +1107,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "field-padding-right-sm": {
     "$scopes": [
@@ -1116,7 +1116,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "field-padding-right-md": {
     "$scopes": [
@@ -1125,7 +1125,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "field-padding-right-lg": {
     "$scopes": [
@@ -1134,7 +1134,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "field-radius-sm": {
     "$scopes": [
@@ -1143,7 +1143,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-xs}"
+    "$value": "{radius.xs}"
   },
   "field-radius-md": {
     "$scopes": [
@@ -1152,7 +1152,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "field-radius-lg": {
     "$scopes": [
@@ -1161,7 +1161,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "field-status-enabled-border": {
     "$scopes": [
@@ -1350,7 +1350,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxxl}"
+    "$value": "{padding.xxxxl}"
   },
   "field-border-width": {
     "$scopes": [
@@ -1368,7 +1368,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xxs}"
+    "$value": "{gap.xxs}"
   },
   "field-gap-helper-text": {
     "$scopes": [
@@ -1377,7 +1377,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xxs}"
+    "$value": "{gap.xxs}"
   },
   "field-gap-leading-icon-sm": {
     "$scopes": [
@@ -1386,7 +1386,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "field-gap-leading-icon-md": {
     "$scopes": [
@@ -1395,7 +1395,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-s}"
+    "$value": "{gap.s}"
   },
   "field-gap-leading-icon-lg": {
     "$scopes": [
@@ -1404,7 +1404,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "field-gap-leading-icon-group-sm": {
     "$scopes": [
@@ -1413,7 +1413,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xxs}"
+    "$value": "{gap.xxs}"
   },
   "field-gap-leading-icon-group-md": {
     "$scopes": [
@@ -1422,7 +1422,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "field-gap-leading-icon-group-lg": {
     "$scopes": [
@@ -1431,7 +1431,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-s}"
+    "$value": "{gap.s}"
   },
   "field-gap-error-message": {
     "$scopes": [
@@ -1440,7 +1440,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "field-gap-trailing-icon-sm": {
     "$scopes": [
@@ -1449,7 +1449,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "field-gap-trailing-icon-md": {
     "$scopes": [
@@ -1458,7 +1458,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-s}"
+    "$value": "{gap.s}"
   },
   "field-gap-trailing-icon-lg": {
     "$scopes": [
@@ -1467,7 +1467,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "field-gap-trailing-icon-group-sm": {
     "$scopes": [
@@ -1476,7 +1476,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xxs}"
+    "$value": "{gap.xxs}"
   },
   "field-gap-trailing-icon-group-md": {
     "$scopes": [
@@ -1485,7 +1485,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "field-gap-trailing-icon-group-lg": {
     "$scopes": [
@@ -1494,7 +1494,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "field-animation-duration": {
     "$scopes": [
@@ -1521,7 +1521,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-xs}"
+    "$value": "{icon.xs}"
   },
   "field-icon-lg": {
     "$scopes": [
@@ -1530,7 +1530,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "toggle-radius": {
     "$scopes": [
@@ -1539,7 +1539,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-full}"
+    "$value": "{radius.full}"
   },
   "toggle-gap-label": {
     "$scopes": [
@@ -1548,7 +1548,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "toggle-background-off-default": {
     "$scopes": [
@@ -1665,7 +1665,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "checkbox-line-height": {
     "$scopes": [
@@ -1674,7 +1674,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "checkbox-radius": {
     "$scopes": [
@@ -1683,7 +1683,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-xs}"
+    "$value": "{radius.xs}"
   },
   "checkbox-icon": {
     "$scopes": [
@@ -1692,7 +1692,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-xs}"
+    "$value": "{icon.xs}"
   },
   "checkbox-border-width": {
     "$scopes": [
@@ -1737,7 +1737,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "checkbox-content": {
     "$scopes": [
@@ -1854,7 +1854,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "radio-button-line-height": {
     "$scopes": [
@@ -1863,7 +1863,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "radio-button-radius": {
     "$scopes": [
@@ -1872,7 +1872,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-full}"
+    "$value": "{radius.full}"
   },
   "radio-button-gap-label": {
     "$scopes": [
@@ -1881,7 +1881,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "chip-background-unselected-default": {
     "$scopes": [
@@ -2052,7 +2052,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-full}"
+    "$value": "{radius.full}"
   },
   "chip-gap-icon": {
     "$scopes": [
@@ -2061,7 +2061,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xxs}"
+    "$value": "{gap.xxs}"
   },
   "chip-padding-x-sm": {
     "$scopes": [
@@ -2070,7 +2070,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "chip-padding-x-md": {
     "$scopes": [
@@ -2079,7 +2079,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "chip-padding-x-lg": {
     "$scopes": [
@@ -2088,7 +2088,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "chip-padding-y-sm": {
     "$scopes": [
@@ -2097,7 +2097,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "chip-padding-y-md": {
     "$scopes": [
@@ -2106,7 +2106,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "chip-padding-y-lg": {
     "$scopes": [
@@ -2115,7 +2115,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "chip-padding-left-sm": {
     "$scopes": [
@@ -2124,7 +2124,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "chip-padding-left-md": {
     "$scopes": [
@@ -2133,7 +2133,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "chip-padding-left-lg": {
     "$scopes": [
@@ -2142,7 +2142,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "chip-padding-right-sm": {
     "$scopes": [
@@ -2151,7 +2151,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "chip-padding-right-md": {
     "$scopes": [
@@ -2160,7 +2160,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "chip-padding-right-lg": {
     "$scopes": [
@@ -2169,7 +2169,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "chip-font-size-sm": {
     "$scopes": [
@@ -2178,7 +2178,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-sm}"
+    "$value": "{typography.body-size.sm}"
   },
   "chip-font-size-md": {
     "$scopes": [
@@ -2187,7 +2187,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "chip-font-size-lg": {
     "$scopes": [
@@ -2196,7 +2196,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "chip-line-height-sm": {
     "$scopes": [
@@ -2205,7 +2205,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-sm}"
+    "$value": "{typography.body-line.sm}"
   },
   "chip-line-height-md": {
     "$scopes": [
@@ -2214,7 +2214,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "chip-line-height-lg": {
     "$scopes": [
@@ -2223,7 +2223,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "chip-icon-sm": {
     "$scopes": [
@@ -2232,7 +2232,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-xs}"
+    "$value": "{icon.xs}"
   },
   "chip-icon-md": {
     "$scopes": [
@@ -2241,7 +2241,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "chip-icon-lg": {
     "$scopes": [
@@ -2250,7 +2250,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "chip-outline-padding-x-sm": {
     "$scopes": [
@@ -2370,7 +2370,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "alert-line-height": {
     "$scopes": [
@@ -2379,7 +2379,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "alert-danger-content-background": {
     "$scopes": [
@@ -2415,7 +2415,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "alert-gap-icon": {
     "$scopes": [
@@ -2424,7 +2424,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-s}"
+    "$value": "{gap.s}"
   },
   "alert-gap-actions": {
     "$scopes": [
@@ -2433,7 +2433,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "alert-warning-content-background": {
     "$scopes": [
@@ -2496,7 +2496,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "alert-radius-sm": {
     "$scopes": [
@@ -2505,7 +2505,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-xs}"
+    "$value": "{radius.xs}"
   },
   "alert-padding-x-sm": {
     "$scopes": [
@@ -2514,7 +2514,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "alert-padding-x-lg": {
     "$scopes": [
@@ -2523,7 +2523,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "alert-padding-y-sm": {
     "$scopes": [
@@ -2532,7 +2532,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "alert-padding-y-lg": {
     "$scopes": [
@@ -2541,7 +2541,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "alert-shadow": {
     "$scopes": [
@@ -2559,7 +2559,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-size-md}"
+    "$value": "{typography.body-size.md}"
   },
   "toast-line-height": {
     "$scopes": [
@@ -2568,7 +2568,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography-body-line-md}"
+    "$value": "{typography.body-line.md}"
   },
   "toast-icon": {
     "$scopes": [
@@ -2577,7 +2577,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{icon-sm}"
+    "$value": "{icon.sm}"
   },
   "toast-gap-icon": {
     "$scopes": [
@@ -2586,7 +2586,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-s}"
+    "$value": "{gap.s}"
   },
   "toast-gap-actions": {
     "$scopes": [
@@ -2595,7 +2595,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "toast-radius-sm": {
     "$scopes": [
@@ -2604,7 +2604,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-xs}"
+    "$value": "{radius.xs}"
   },
   "toast-radius-lg": {
     "$scopes": [
@@ -2613,7 +2613,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "toast-info-content-background": {
     "$scopes": [
@@ -2676,7 +2676,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "toast-padding-x-lg": {
     "$scopes": [
@@ -2685,7 +2685,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "toast-padding-y-sm": {
     "$scopes": [
@@ -2694,7 +2694,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "toast-padding-y-lg": {
     "$scopes": [
@@ -2703,7 +2703,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "toast-shadow": {
     "$scopes": [
@@ -2730,7 +2730,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "card-gap-title-sm": {
     "$scopes": [
@@ -2739,7 +2739,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "card-gap-title-md": {
     "$scopes": [
@@ -2748,7 +2748,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-l}"
+    "$value": "{gap.l}"
   },
   "card-gap-title-lg": {
     "$scopes": [
@@ -2757,7 +2757,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xl}"
+    "$value": "{gap.xl}"
   },
   "card-gap-actions-sm": {
     "$scopes": [
@@ -2766,7 +2766,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-m}"
+    "$value": "{gap.m}"
   },
   "card-gap-actions-md": {
     "$scopes": [
@@ -2775,7 +2775,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-l}"
+    "$value": "{gap.l}"
   },
   "card-gap-actions-lg": {
     "$scopes": [
@@ -2784,7 +2784,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xl}"
+    "$value": "{gap.xl}"
   },
   "card-background": {
     "$scopes": [
@@ -2847,7 +2847,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "card-padding-x-md": {
     "$scopes": [
@@ -2856,7 +2856,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "card-padding-x-lg": {
     "$scopes": [
@@ -2865,7 +2865,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-l}"
+    "$value": "{padding.l}"
   },
   "card-padding-y-sm": {
     "$scopes": [
@@ -2874,7 +2874,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-s}"
+    "$value": "{padding.s}"
   },
   "card-padding-y-md": {
     "$scopes": [
@@ -2883,7 +2883,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-m}"
+    "$value": "{padding.m}"
   },
   "card-padding-y-lg": {
     "$scopes": [
@@ -2892,7 +2892,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-l}"
+    "$value": "{padding.l}"
   },
   "card-shadow": {
     "$scopes": [
@@ -2919,7 +2919,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-sm}"
+    "$value": "{radius.sm}"
   },
   "popover-border-default": {
     "$scopes": [
@@ -3090,7 +3090,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{control-height-xs}"
+    "$value": "{control.height.xs}"
   },
   "pagination-item-height-l": {
     "$scopes": [
@@ -3099,7 +3099,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{control-height-sm}"
+    "$value": "{control.height.sm}"
   },
   "pagination-item-padding-x-s": {
     "$scopes": [
@@ -3108,7 +3108,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "pagination-item-padding-x-l": {
     "$scopes": [
@@ -3117,7 +3117,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxxs}"
+    "$value": "{padding.xxxs}"
   },
   "pagination-item-background-default": {
     "$scopes": [
@@ -3180,7 +3180,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-full}"
+    "$value": "{radius.full}"
   },
   "pagination-gap": {
     "$scopes": [
@@ -3189,7 +3189,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{gap-xs}"
+    "$value": "{gap.xs}"
   },
   "tooltip-radius": {
     "$scopes": [
@@ -3198,7 +3198,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius-xs}"
+    "$value": "{radius.xs}"
   },
   "tooltip-padding-x": {
     "$scopes": [
@@ -3207,7 +3207,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xs}"
+    "$value": "{padding.xs}"
   },
   "tooltip-padding-y": {
     "$scopes": [
@@ -3216,7 +3216,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{padding-xxs}"
+    "$value": "{padding.xxs}"
   },
   "tooltip-container-background": {
     "$scopes": [
