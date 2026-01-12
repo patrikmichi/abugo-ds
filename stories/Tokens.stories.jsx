@@ -150,13 +150,38 @@ export const PrimitivesColors = () => {
 
 // Semantic Colors
 export const SemanticColors = () => {
+  // Get all content tokens (37 total)
   const contentTokens = Object.keys(semanticTokens)
     .filter((key) => key.startsWith('content-'))
-    .slice(0, 20);
+    .sort();
   
+  // Get all background tokens (45 total)
   const backgroundTokens = Object.keys(semanticTokens)
     .filter((key) => key.startsWith('background-'))
-    .slice(0, 20);
+    .sort();
+  
+  // Get border tokens (nested structure)
+  const borderTokens = semanticTokens.border ? (() => {
+    const borders = [];
+    function extractBorderColors(obj, path = []) {
+      for (const [k, v] of Object.entries(obj)) {
+        if (k.startsWith('$')) continue;
+        if (v && typeof v === 'object' && v.$type === 'color') {
+          const fullPath = [...path, k].join('.');
+          borders.push({ path: `border.${fullPath}`, token: v });
+        } else if (v && typeof v === 'object') {
+          extractBorderColors(v, [...path, k]);
+        }
+      }
+    }
+    extractBorderColors(semanticTokens.border);
+    return borders;
+  })() : [];
+  
+  // Get custom tokens
+  const customTokens = Object.keys(semanticTokens)
+    .filter((key) => key.startsWith('custom-'))
+    .sort();
   
   return (
     <div>
@@ -164,7 +189,7 @@ export const SemanticColors = () => {
       <p>Meaning-based color tokens that reference primitives.</p>
       
       <div style={{ marginBottom: '48px' }}>
-        <h2>Content Colors</h2>
+        <h2>Content Colors ({contentTokens.length} tokens)</h2>
         <div
           style={{
             display: 'grid',
@@ -189,8 +214,8 @@ export const SemanticColors = () => {
         </div>
       </div>
       
-      <div>
-        <h2>Background Colors</h2>
+      <div style={{ marginBottom: '48px' }}>
+        <h2>Background Colors ({backgroundTokens.length} tokens)</h2>
         <div
           style={{
             display: 'grid',
@@ -214,6 +239,59 @@ export const SemanticColors = () => {
           })}
         </div>
       </div>
+      
+      {borderTokens.length > 0 && (
+        <div style={{ marginBottom: '48px' }}>
+          <h2>Border Colors ({borderTokens.length} tokens)</h2>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+              gap: '16px',
+            }}
+          >
+            {borderTokens.map(({ path, token }) => {
+              const resolvedValue = resolveToken(token?.$value, primitives);
+              const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
+              return (
+                <ColorSwatch
+                  key={path}
+                  name={path}
+                  value={colorValue}
+                  description={token?.$description}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
+      
+      {customTokens.length > 0 && (
+        <div>
+          <h2>Custom Colors ({customTokens.length} tokens)</h2>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+              gap: '16px',
+            }}
+          >
+            {customTokens.map((key) => {
+              const token = semanticTokens[key];
+              const resolvedValue = resolveToken(token?.$value, primitives);
+              const colorValue = typeof resolvedValue === 'string' ? resolvedValue : (token?.$value && typeof token.$value === 'string' ? token.$value : '#000000');
+              return (
+                <ColorSwatch
+                  key={key}
+                  name={key}
+                  value={colorValue}
+                  description={token?.$description}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
