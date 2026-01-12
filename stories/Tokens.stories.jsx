@@ -45,7 +45,21 @@ const ColorSwatch = ({ name, value, description }) => (
         marginBottom: '8px',
       }}
     />
-    <div style={{ fontWeight: '600', marginBottom: '4px' }}>{name}</div>
+    <div
+      style={{
+        fontWeight: '600',
+        marginBottom: '4px',
+        display: '-webkit-box',
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
+        wordBreak: 'break-word',
+        lineHeight: '1.4',
+        minHeight: '1.4em',
+      }}
+    >
+      {name}
+    </div>
     <div style={{ fontSize: '12px', color: '#666', marginBottom: '4px' }}>
       {value}
     </div>
