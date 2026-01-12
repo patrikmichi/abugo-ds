@@ -228,7 +228,8 @@ The Storybook includes:
 
 ### Token Reference Documentation
 
-See [`docs/TOKENS.md`](docs/TOKENS.md) for comprehensive token reference documentation.
+- [`docs/TOKENS.md`](docs/TOKENS.md) - Comprehensive token reference documentation
+- [`docs/DESIGNER_GUIDE.md`](docs/DESIGNER_GUIDE.md) - Guide for designers on using tokens for new components
 
 ## How to Use
 
