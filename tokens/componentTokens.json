@@ -2721,7 +2721,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{z-index-modal}"
+    "$value": "{z-index.modal}"
   },
   "card-radius": {
     "$scopes": [
@@ -2955,7 +2955,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{z-index-popover}"
+    "$value": "{z-index.popover}"
   },
   "calendar-day-content-default": {
     "$scopes": [
@@ -3252,7 +3252,7 @@
     "$type": "dimension",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{sizing-tooltip-arrow}"
+    "$value": "{sizing.tooltip-arrow}"
   },
   "tooltip-shadow": {
     "$scopes": [
@@ -3270,7 +3270,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{z-index-tooltip}"
+    "$value": "{z-index.tooltip}"
   },
   "breadcrumbs-default": {
     "$scopes": [
@@ -3621,7 +3621,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{z-index-modal}"
+    "$value": "{z-index.modal}"
   },
   "modal-default-overlay-opacity": {
     "$scopes": [
@@ -3630,7 +3630,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{opacity-overlay}"
+    "$value": "{opacity.overlay}"
   },
   "modal-default-border-default": {
     "$scopes": [
@@ -3666,7 +3666,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{z-index-modal}"
+    "$value": "{z-index.modal}"
   },
   "drawer-default-background-default": {
     "$scopes": [
@@ -3711,7 +3711,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{z-index-modal}"
+    "$value": "{z-index.modal}"
   },
   "accordion-default-background-default": {
     "$scopes": [

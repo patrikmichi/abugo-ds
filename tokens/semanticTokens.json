@@ -1,85 +1,5 @@
 {
   "$name": "Semantic Tokens",
-  "z-index-base": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-base}",
-    "$description": "Base z-index layer"
-  },
-  "z-index-dropdown": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-dropdown}",
-    "$description": "Dropdown z-index layer"
-  },
-  "z-index-sticky": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-sticky}",
-    "$description": "Sticky element z-index layer"
-  },
-  "z-index-fixed": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-fixed}",
-    "$description": "Fixed element z-index layer"
-  },
-  "z-index-modal-backdrop": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-modal-backdrop}",
-    "$description": "Modal backdrop z-index layer"
-  },
-  "z-index-modal": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-modal}",
-    "$description": "Modal z-index layer"
-  },
-  "z-index-popover": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-popover}",
-    "$description": "Popover z-index layer"
-  },
-  "z-index-tooltip": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{z-index.z-tooltip}",
-    "$description": "Tooltip z-index layer"
-  },
   "content-passive-neutral-strong": {
     "$scopes": [
       "SHAPE_FILL",
@@ -1105,66 +1025,6 @@
     "$value": "{shadow-inner}",
     "$description": "Inner shadow. Use for inset effects like pressed buttons or input focus."
   },
-  "opacity-overlay": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "",
-    "$value": 75,
-    "$description": "Overlay opacity (75%). Use for modal backdrops and overlay layers."
-  },
-  "animation-duration-fast": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{duration-fast}",
-    "$description": "Fast animation duration (100ms). Use for quick micro-interactions and hover effects."
-  },
-  "animation-duration-base": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "number",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{duration-base}",
-    "$description": "Base animation duration (200ms). Use for standard transitions and interactions."
-  },
-  "animation-easing-ease-out": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "string",
-    "$libraryName": "",
-    "$collectionName": "",
-    "$value": "{easing-ease-out}",
-    "$description": "Ease-out easing function. Use for elements entering the viewport."
-  },
-  "animation-easing-ease-in-out": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "string",
-    "$libraryName": "",
-    "$collectionName": "",
-    "$value": "{easing-ease-in-out}",
-    "$description": "Ease-in-out easing function. Use for smooth bidirectional transitions."
-  },
-  "sizing-tooltip-arrow": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "dimension",
-    "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{size-1}",
-    "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
-  },
   "typography": {
     "headline-size": {
       "h1": {
@@ -1827,6 +1687,158 @@
       "$collectionName": "primitives",
       "$value": "{spacing-30}",
       "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
+    }
+  },
+  "z-index": {
+    "base": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-base}",
+      "$description": "Base z-index layer"
+    },
+    "dropdown": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-dropdown}",
+      "$description": "Dropdown z-index layer"
+    },
+    "sticky": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-sticky}",
+      "$description": "Sticky element z-index layer"
+    },
+    "fixed": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-fixed}",
+      "$description": "Fixed element z-index layer"
+    },
+    "modal-backdrop": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-modal-backdrop}",
+      "$description": "Modal backdrop z-index layer"
+    },
+    "modal": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-modal}",
+      "$description": "Modal z-index layer"
+    },
+    "popover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-popover}",
+      "$description": "Popover z-index layer"
+    },
+    "tooltip": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-tooltip}",
+      "$description": "Tooltip z-index layer"
+    }
+  },
+  "opacity": {
+    "overlay": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 75,
+      "$description": "Overlay opacity (75%). Use for modal backdrops and overlay layers."
+    }
+  },
+  "animation": {
+    "duration": {
+      "fast": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{duration-fast}",
+        "$description": "Fast animation duration (100ms). Use for quick micro-interactions and hover effects."
+      },
+      "base": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{duration-base}",
+        "$description": "Base animation duration (200ms). Use for standard transitions and interactions."
+      }
+    },
+    "easing": {
+      "ease-out": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": "{easing-ease-out}",
+        "$description": "Ease-out easing function. Use for elements entering the viewport."
+      },
+      "ease-in-out": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": "{easing-ease-in-out}",
+        "$description": "Ease-in-out easing function. Use for smooth bidirectional transitions."
+      }
+    }
+  },
+  "sizing": {
+    "tooltip-arrow": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{size-1}",
+      "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
     }
   }
 }
