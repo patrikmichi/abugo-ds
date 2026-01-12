@@ -1,0 +1,2378 @@
+[
+  {
+    "semantic tokens": {
+      "modes": {
+        "Reservio": {
+          "content": {
+            "passive": {
+              "neutral": {
+                "strong": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.800}"
+                },
+                "default": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.600}"
+                },
+                "muted": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.500}"
+                }
+              },
+              "on-neutral": {
+                "strong": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.000}"
+                },
+                "default": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.100}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "SHAPE_FILL",
+                    "TEXT_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.200}"
+                }
+              },
+              "on-accent": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{grey.000}"
+              },
+              "on-accent-inverse": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{upgrade.700}"
+              },
+              "on-success": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{grey.000}"
+              },
+              "on-danger": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{grey.000}"
+              },
+              "on-warning": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{grey.000}"
+              },
+              "on-info": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{grey.000}"
+              },
+              "on-upgrade": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{grey.000}"
+              },
+              "info": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{upgrade.700}"
+              },
+              "upgrade": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{upgrade.700}"
+              },
+              "success": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{success.700}"
+              },
+              "danger": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{negative.700}"
+              },
+              "warning": {
+                "$scopes": [
+                  "SHAPE_FILL",
+                  "TEXT_FILL"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{warning.700}"
+              }
+            },
+            "active": {
+              "neutral": {
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.600}"
+                },
+                "disabled": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.500}"
+                }
+              },
+              "accent": {
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.600}"
+                },
+                "disabled": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.500}"
+                },
+                "inverse": {
+                  "default": {
+                    "$scopes": [
+                      "ALL_SCOPES"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.000}"
+                  },
+                  "hover": {
+                    "$scopes": [
+                      "ALL_SCOPES"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.300}"
+                  },
+                  "pressed": {
+                    "$scopes": [
+                      "ALL_SCOPES"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.300}"
+                  },
+                  "disabled": {
+                    "$scopes": [
+                      "ALL_SCOPES"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.500}"
+                  }
+                }
+              },
+              "upgrade": {
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.600}"
+                }
+              },
+              "danger": {
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.600}"
+                }
+              }
+            }
+          },
+          "background": {
+            "passive": {
+              "neutral": {
+                "default": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.200}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.100}"
+                },
+                "elevated": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.000}"
+                },
+                "strong": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.700}"
+                }
+              },
+              "danger": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.100}"
+                }
+              },
+              "success": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{success.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{success.100}"
+                }
+              },
+              "warning": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{warning.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{warning.100}"
+                }
+              },
+              "info": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.100}"
+                }
+              },
+              "upgrade": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.200}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.100}"
+                },
+                "strong": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.700}"
+                }
+              }
+            },
+            "active": {
+              "neutral": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.000}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.200}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.100}"
+                },
+                "disabled": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.200}"
+                }
+              },
+              "accent": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.200}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.800}"
+                },
+                "selected": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.700}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.600}"
+                },
+                "disabled": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.500}"
+                },
+                "inverse": {
+                  "default": {
+                    "$scopes": [
+                      "ALL_FILLS",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.000}"
+                  },
+                  "subtle": {
+                    "$scopes": [
+                      "ALL_FILLS",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.600}"
+                  },
+                  "hover": {
+                    "$scopes": [
+                      "ALL_FILLS",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.200}"
+                  },
+                  "pressed": {
+                    "$scopes": [
+                      "ALL_FILLS",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.300}"
+                  },
+                  "disabled": {
+                    "$scopes": [
+                      "ALL_FILLS",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.400}"
+                  }
+                }
+              },
+              "danger": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.100}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.600}"
+                }
+              },
+              "success": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{success.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{success.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{success.600}"
+                },
+                "disabled": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{success.400}"
+                }
+              },
+              "warning": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{warning.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{warning.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{warning.600}"
+                }
+              },
+              "upgrade": {
+                "default": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.700}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.100}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_FILLS",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.600}"
+                }
+              }
+            }
+          },
+          "border": {
+            "passive": {
+              "neutral": {
+                "default": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.300}"
+                },
+                "subtle": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.200}"
+                },
+                "strong": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.300}"
+                },
+                "stronger": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.500}"
+                },
+                "strongest": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{grey.600}"
+                }
+              },
+              "danger": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{negative.700}"
+              },
+              "success": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{success.700}"
+              },
+              "warning": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{warning.700}"
+              },
+              "info": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{upgrade.700}"
+              },
+              "upgrade": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{upgrade.700}"
+              }
+            },
+            "active": {
+              "neutral": {
+                "action": {
+                  "default": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.300}"
+                  },
+                  "hover": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.400}"
+                  },
+                  "pressed": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.200}"
+                  },
+                  "focused": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{brand.500}"
+                  },
+                  "selected": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.700}"
+                  },
+                  "disabled": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{grey.400}"
+                  }
+                },
+                "control": {
+                  "field": {
+                    "default": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{grey.300}"
+                    },
+                    "hover": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{grey.400}"
+                    },
+                    "focused": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{brand.700}"
+                    },
+                    "selected": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{grey.700}"
+                    },
+                    "disabled": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{grey.400}"
+                    }
+                  },
+                  "toggle": {
+                    "default": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{brand.700}"
+                    },
+                    "hover": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{brand.800}"
+                    },
+                    "focused": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{brand.500}"
+                    },
+                    "selected": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{brand.700}"
+                    },
+                    "disabled": {
+                      "$scopes": [
+                        "FRAME_FILL",
+                        "SHAPE_FILL",
+                        "STROKE_COLOR"
+                      ],
+                      "$type": "color",
+                      "$libraryName": "",
+                      "$collectionName": "colors",
+                      "$value": "{brand.400}"
+                    }
+                  }
+                }
+              },
+              "accent": {
+                "default": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.600}"
+                },
+                "focused": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.500}"
+                },
+                "selected": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.600}"
+                },
+                "disabled": {
+                  "$scopes": [
+                    "FRAME_FILL",
+                    "SHAPE_FILL",
+                    "STROKE_COLOR"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brand.500}"
+                },
+                "inverse": {
+                  "default": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.300}"
+                  },
+                  "hover": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.400}"
+                  },
+                  "pressed": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.500}"
+                  },
+                  "disabled": {
+                    "$scopes": [
+                      "FRAME_FILL",
+                      "SHAPE_FILL",
+                      "STROKE_COLOR"
+                    ],
+                    "$type": "color",
+                    "$libraryName": "",
+                    "$collectionName": "colors",
+                    "$value": "{upgrade.600}"
+                  }
+                }
+              },
+              "danger": {
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{negative.600}"
+                }
+              },
+              "upgrade": {
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.700}"
+                },
+                "hover": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.800}"
+                },
+                "pressed": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{upgrade.600}"
+                }
+              }
+            },
+            "width": {
+              "thin": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "border",
+                "$value": "{border-1}"
+              },
+              "thicker": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "border",
+                "$value": "{border-2}"
+              },
+              "thick": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "border",
+                "$value": "{border-3}"
+              }
+            }
+          },
+          "custom": {
+            "notes": {
+              "content": {
+                "filled": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brown.700}"
+                },
+                "placeholder": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "color",
+                  "$libraryName": "",
+                  "$collectionName": "colors",
+                  "$value": "{brown.600}"
+                }
+              },
+              "background": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "colors",
+                "$value": "{yellow.400}"
+              }
+            },
+            "rating": {
+              "$scopes": [
+                "FRAME_FILL",
+                "SHAPE_FILL"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "colors",
+              "$value": "{yellow.700}"
+            }
+          },
+          "padding": {
+            "xxxs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{1}"
+            },
+            "xxs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{2}"
+            },
+            "xs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{3}"
+            },
+            "s": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{4}"
+            },
+            "m": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{5}"
+            },
+            "l": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{6}"
+            },
+            "xl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{8}"
+            },
+            "xxl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{12}"
+            },
+            "xxxl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{20}"
+            },
+            "xxxxl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{30}"
+            }
+          },
+          "typography": {
+            "headline": {
+              "font-size": {
+                "h1": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-9}"
+                },
+                "h2": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-8}"
+                },
+                "h3": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-7}"
+                },
+                "h4": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-6}"
+                },
+                "h5": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-5}"
+                },
+                "h6": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-4}"
+                }
+              },
+              "line-height": {
+                "h1": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                },
+                "h2": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                },
+                "h3": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                },
+                "h4": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                },
+                "h5": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                },
+                "h6": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                }
+              }
+            },
+            "body": {
+              "font-size": {
+                "large": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-4}"
+                },
+                "medium": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-3}"
+                },
+                "small": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-2}"
+                },
+                "extra-small": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{typescale.font-size-1}"
+                }
+              },
+              "line-height": {
+                "large": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{line-height-scale.base}"
+                },
+                "default": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "semantic tokens",
+                  "$value": "{typography.body.font-size.medium}"
+                },
+                "small": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "semantic tokens",
+                  "$value": "{typography.body.font-size.medium}"
+                },
+                "extra-small": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "float",
+                  "$libraryName": "",
+                  "$collectionName": "semantic tokens",
+                  "$value": "{typography.body.font-size.medium}"
+                }
+              },
+              "font-weight": {
+                "light": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "number",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{font-weight.light}"
+                },
+                "normal": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "number",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{font-weight.normal}"
+                },
+                "medium": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "number",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{font-weight.medium}"
+                },
+                "semibold": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "number",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{font-weight.semibold}"
+                },
+                "bold": {
+                  "$scopes": [
+                    "ALL_SCOPES"
+                  ],
+                  "$type": "number",
+                  "$libraryName": "",
+                  "$collectionName": "type",
+                  "$value": "{font-weight.bold}"
+                }
+              }
+            }
+          },
+          "radius": {
+            "none": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-0}"
+            },
+            "xsmall": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-1}"
+            },
+            "small": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-2}"
+            },
+            "medium": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-3}"
+            },
+            "large": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-4}"
+            },
+            "xlarge": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-5}"
+            },
+            "xxlarge": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-6}"
+            },
+            "full": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "radius",
+              "$value": "{radius-round}"
+            }
+          },
+          "icon": {
+            "icon-xxsmall": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-1}"
+            },
+            "icon-xsmall": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-2}"
+            },
+            "icon-small": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-3}"
+            },
+            "icon-medium": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-4}"
+            },
+            "icon-large": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-5}"
+            },
+            "icon-xlarge": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-6}"
+            },
+            "icon-xxlarge": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-7}"
+            },
+            "icon-huge": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "icon-size",
+              "$value": "{icon-size-8}"
+            }
+          },
+          "gap": {
+            "xxs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{1}"
+            },
+            "xs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{2}"
+            },
+            "s": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{3}"
+            },
+            "m": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{4}"
+            },
+            "l": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{5}"
+            },
+            "xl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{6}"
+            },
+            "xxl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "spacing",
+              "$value": "{8}"
+            }
+          },
+          "control": {
+            "height": {
+              "xxxs": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "size",
+                "$value": "{size-1}"
+              },
+              "xxs": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "size",
+                "$value": "{size-2}"
+              },
+              "xs": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "size",
+                "$value": "{size-3}"
+              },
+              "s": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "size",
+                "$value": "{size-4}"
+              },
+              "m": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "size",
+                "$value": "{size-5}"
+              },
+              "l": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "float",
+                "$libraryName": "",
+                "$collectionName": "size",
+                "$value": "{size-6}"
+              }
+            }
+          },
+          "shadow": {
+            "xs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-xs}"
+            },
+            "sm": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-sm}"
+            },
+            "md": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-md}"
+            },
+            "lg": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-lg}"
+            },
+            "xl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-xl}"
+            },
+            "2xl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-2xl}"
+            },
+            "inner": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "boxShadow",
+              "$libraryName": "",
+              "$collectionName": "shadow",
+              "$value": "{shadow-inner}"
+            }
+          },
+          "opacity": {
+            "0": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-0}"
+            },
+            "5": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-5}"
+            },
+            "10": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-10}"
+            },
+            "20": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-20}"
+            },
+            "25": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-25}"
+            },
+            "30": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-30}"
+            },
+            "40": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-40}"
+            },
+            "50": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-50}"
+            },
+            "60": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-60}"
+            },
+            "70": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-70}"
+            },
+            "75": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-75}"
+            },
+            "80": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-80}"
+            },
+            "90": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-90}"
+            },
+            "95": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-95}"
+            },
+            "100": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "opacity",
+              "$value": "{opacity-100}"
+            }
+          },
+          "z-index": {
+            "base": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-base}"
+            },
+            "dropdown": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-dropdown}"
+            },
+            "sticky": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-sticky}"
+            },
+            "fixed": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-fixed}"
+            },
+            "modal-backdrop": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-modal-backdrop}"
+            },
+            "modal": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-modal}"
+            },
+            "popover": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-popover}"
+            },
+            "tooltip": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "number",
+              "$libraryName": "",
+              "$collectionName": "z-index",
+              "$value": "{z-tooltip}"
+            }
+          },
+          "animation": {
+            "duration": {
+              "instant": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "number",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{duration.instant}"
+              },
+              "fast": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "number",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{duration.fast}"
+              },
+              "base": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "number",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{duration.base}"
+              },
+              "slow": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "number",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{duration.slow}"
+              },
+              "slower": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "number",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{duration.slower}"
+              },
+              "slowest": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "number",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{duration.slowest}"
+              }
+            },
+            "easing": {
+              "linear": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "string",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{easing.linear}"
+              },
+              "ease-in": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "string",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{easing.ease-in}"
+              },
+              "ease-out": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "string",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{easing.ease-out}"
+              },
+              "ease-in-out": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "string",
+                "$libraryName": "",
+                "$collectionName": "animation",
+                "$value": "{easing.ease-in-out}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
