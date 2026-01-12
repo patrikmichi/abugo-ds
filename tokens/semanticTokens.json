@@ -972,7 +972,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{border-width-1}",
-    "$description": "border token for width intent"
+    "$description": "Thin border width (1px). Use for standard borders on inputs and cards."
   },
   "border-width-thicker": {
     "$scopes": [
@@ -982,7 +982,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{border-width-2}",
-    "$description": "border token for width intent"
+    "$description": "Thicker border width (2px). Use for emphasis and focus states."
   },
   "border-width-thick": {
     "$scopes": [
@@ -992,7 +992,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{border-width-3}",
-    "$description": "border token for width intent"
+    "$description": "Thick border width (4px). Use for strong emphasis and dividers."
   },
   "custom-notes-content-filled": {
     "$scopes": [
@@ -1002,7 +1002,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{brown.700}",
-    "$description": "notes token for content intent"
+    "$description": "Text color for filled note content. Use for active note text."
   },
   "custom-notes-content-placeholder": {
     "$scopes": [
@@ -1012,7 +1012,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{brown.600}",
-    "$description": "notes token for content intent"
+    "$description": "Text color for placeholder note content. Use for empty note states."
   },
   "custom-notes-background": {
     "$scopes": [
@@ -1022,7 +1022,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{yellow.400}",
-    "$description": "custom token for notes intent"
+    "$description": "Background color for notes. Use for note containers and highlights."
   },
   "custom-rating": {
     "$scopes": [
@@ -1033,7 +1033,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{yellow.700}",
-    "$description": "Reservio token for custom intent"
+    "$description": "Color for rating elements. Use for star ratings and score displays."
   },
   "shadow-xs": {
     "$scopes": [
@@ -1043,7 +1043,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-xs}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Extra small shadow. Use for subtle elevation on small elements."
   },
   "shadow-sm": {
     "$scopes": [
@@ -1053,7 +1053,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-sm}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Small shadow. Use for light elevation on buttons and inputs."
   },
   "shadow-md": {
     "$scopes": [
@@ -1063,7 +1063,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-md}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Medium shadow. Use for standard elevation on cards and dropdowns."
   },
   "shadow-lg": {
     "$scopes": [
@@ -1073,7 +1073,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-lg}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Large shadow. Use for prominent elevation on modals and popovers."
   },
   "shadow-xl": {
     "$scopes": [
@@ -1083,7 +1083,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-xl}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Extra large shadow. Use for strong elevation on major overlays."
   },
   "shadow-2xl": {
     "$scopes": [
@@ -1093,7 +1093,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-2xl}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Extra extra large shadow. Use for maximum elevation on top-level modals."
   },
   "shadow-inner": {
     "$scopes": [
@@ -1103,7 +1103,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{shadow-inner}",
-    "$description": "Reservio token for shadow intent"
+    "$description": "Inner shadow. Use for inset effects like pressed buttons or input focus."
   },
   "opacity-overlay": {
     "$scopes": [
@@ -1113,7 +1113,7 @@
     "$libraryName": "",
     "$collectionName": "",
     "$value": 75,
-    "$description": "Overlay opacity for modals and backdrops"
+    "$description": "Overlay opacity (75%). Use for modal backdrops and overlay layers."
   },
   "animation-duration-fast": {
     "$scopes": [
@@ -1123,7 +1123,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{duration-fast}",
-    "$description": "Fast animation duration"
+    "$description": "Fast animation duration (100ms). Use for quick micro-interactions and hover effects."
   },
   "animation-duration-base": {
     "$scopes": [
@@ -1133,7 +1133,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{duration-base}",
-    "$description": "Base animation duration"
+    "$description": "Base animation duration (200ms). Use for standard transitions and interactions."
   },
   "animation-easing-ease-out": {
     "$scopes": [
@@ -1143,7 +1143,7 @@
     "$libraryName": "",
     "$collectionName": "",
     "$value": "{easing-ease-out}",
-    "$description": "Ease-out animation easing"
+    "$description": "Ease-out easing function. Use for elements entering the viewport."
   },
   "animation-easing-ease-in-out": {
     "$scopes": [
@@ -1153,7 +1153,7 @@
     "$libraryName": "",
     "$collectionName": "",
     "$value": "{easing-ease-in-out}",
-    "$description": "Ease-in-out animation easing"
+    "$description": "Ease-in-out easing function. Use for smooth bidirectional transitions."
   },
   "sizing-tooltip-arrow": {
     "$scopes": [
@@ -1163,7 +1163,7 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{size-1}",
-    "$description": "Tooltip arrow size"
+    "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
   },
   "typography": {
     "headline-size": {
@@ -1175,7 +1175,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-9}",
-        "$description": "headline token for font-size intent"
+        "$description": "Font size for H1 headline. Use for page titles and major headings."
       },
       "h2": {
         "$scopes": [
@@ -1185,7 +1185,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-8}",
-        "$description": "headline token for font-size intent"
+        "$description": "Font size for H2 headline. Use for page titles and major headings."
       },
       "h3": {
         "$scopes": [
@@ -1195,7 +1195,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-7}",
-        "$description": "headline token for font-size intent"
+        "$description": "Font size for H3 headline. Use for page titles and major headings."
       },
       "h4": {
         "$scopes": [
@@ -1205,7 +1205,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-6}",
-        "$description": "headline token for font-size intent"
+        "$description": "Font size for H4 headline. Use for page titles and major headings."
       },
       "h5": {
         "$scopes": [
@@ -1215,7 +1215,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-5}",
-        "$description": "headline token for font-size intent"
+        "$description": "Font size for H5 headline. Use for page titles and major headings."
       },
       "h6": {
         "$scopes": [
@@ -1225,7 +1225,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-4}",
-        "$description": "headline token for font-size intent"
+        "$description": "Font size for H6 headline. Use for page titles and major headings."
       }
     },
     "headline-line": {
@@ -1237,7 +1237,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "headline token for line-height intent"
+        "$description": "Line height for H1 headline. Ensures proper vertical rhythm."
       },
       "h2": {
         "$scopes": [
@@ -1247,7 +1247,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "headline token for line-height intent"
+        "$description": "Line height for H2 headline. Ensures proper vertical rhythm."
       },
       "h3": {
         "$scopes": [
@@ -1257,7 +1257,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "headline token for line-height intent"
+        "$description": "Line height for H3 headline. Ensures proper vertical rhythm."
       },
       "h4": {
         "$scopes": [
@@ -1267,7 +1267,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "headline token for line-height intent"
+        "$description": "Line height for H4 headline. Ensures proper vertical rhythm."
       },
       "h5": {
         "$scopes": [
@@ -1277,7 +1277,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "headline token for line-height intent"
+        "$description": "Line height for H5 headline. Ensures proper vertical rhythm."
       },
       "h6": {
         "$scopes": [
@@ -1287,7 +1287,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "headline token for line-height intent"
+        "$description": "Line height for H6 headline. Ensures proper vertical rhythm."
       }
     },
     "body-size": {
@@ -1299,7 +1299,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-4}",
-        "$description": "body token for font-size intent"
+        "$description": "Large body text size. Use for prominent body content and lead paragraphs."
       },
       "md": {
         "$scopes": [
@@ -1309,7 +1309,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-3}",
-        "$description": "body token for font-size intent"
+        "$description": "Medium body text size. Use for standard body content and paragraphs."
       },
       "sm": {
         "$scopes": [
@@ -1319,7 +1319,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-2}",
-        "$description": "body token for font-size intent"
+        "$description": "Small body text size. Use for secondary text and captions."
       },
       "xs": {
         "$scopes": [
@@ -1329,7 +1329,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontSize-1}",
-        "$description": "body token for font-size intent"
+        "$description": "Extra small body text size. Use for fine print and disclaimers."
       }
     },
     "body-line": {
@@ -1341,7 +1341,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "body token for line-height intent"
+        "$description": "Line height for body text lg variant. Ensures readable line spacing."
       },
       "md": {
         "$scopes": [
@@ -1351,7 +1351,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "body token for line-height intent"
+        "$description": "Line height for body text md variant. Ensures readable line spacing."
       },
       "sm": {
         "$scopes": [
@@ -1361,7 +1361,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "body token for line-height intent"
+        "$description": "Line height for body text sm variant. Ensures readable line spacing."
       },
       "xs": {
         "$scopes": [
@@ -1371,7 +1371,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-lineHeight-base}",
-        "$description": "body token for line-height intent"
+        "$description": "Line height for body text xs variant. Ensures readable line spacing."
       }
     },
     "body-weight": {
@@ -1383,7 +1383,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontWeight-regular}",
-        "$description": "body token for font-weight intent"
+        "$description": "Light font weight. Use for subtle emphasis."
       },
       "normal": {
         "$scopes": [
@@ -1393,7 +1393,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontWeight-regular}",
-        "$description": "body token for font-weight intent"
+        "$description": "Normal font weight. Use for standard body text."
       },
       "md": {
         "$scopes": [
@@ -1403,7 +1403,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontWeight-medium}",
-        "$description": "body token for font-weight intent"
+        "$description": "Medium font weight. Use for moderate emphasis."
       },
       "semibold": {
         "$scopes": [
@@ -1413,7 +1413,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontWeight-bold}",
-        "$description": "body token for font-weight intent"
+        "$description": "Semibold font weight. Use for strong emphasis in body text."
       },
       "bold": {
         "$scopes": [
@@ -1423,7 +1423,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{typography-fontWeight-bold}",
-        "$description": "body token for font-weight intent"
+        "$description": "Bold font weight. Use for maximum emphasis."
       }
     }
   },
@@ -1436,7 +1436,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-0}",
-      "$description": "Reservio token for radius intent"
+      "$description": "No border radius (0px). Use for square corners."
     },
     "xs": {
       "$scopes": [
@@ -1446,7 +1446,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-1}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Extra small border radius (4px). Use for compact components like badges or small buttons."
     },
     "sm": {
       "$scopes": [
@@ -1456,7 +1456,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-2}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Small border radius (8px). Use for standard buttons and input fields."
     },
     "md": {
       "$scopes": [
@@ -1466,7 +1466,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-3}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Medium border radius (12px). Use for cards and larger interactive elements."
     },
     "lg": {
       "$scopes": [
@@ -1476,7 +1476,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-4}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Large border radius (16px). Use for prominent cards and containers."
     },
     "xl": {
       "$scopes": [
@@ -1486,7 +1486,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-5}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Extra large border radius (20px). Use for large containers and modals."
     },
     "xxl": {
       "$scopes": [
@@ -1496,7 +1496,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-6}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Extra extra large border radius (24px). Use for very large containers."
     },
     "full": {
       "$scopes": [
@@ -1506,7 +1506,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{radius-round}",
-      "$description": "Reservio token for radius intent"
+      "$description": "Full border radius (999px). Use for pill-shaped elements like tags or rounded buttons."
     }
   },
   "icon": {
@@ -1518,7 +1518,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-1}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Extra extra small icon size (16px). Use for inline icons in compact text."
     },
     "xs": {
       "$scopes": [
@@ -1528,7 +1528,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-2}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Extra small icon size (20px). Use for icons in small buttons or dense interfaces."
     },
     "sm": {
       "$scopes": [
@@ -1538,7 +1538,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-3}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Small icon size (24px). Use for standard icons in buttons and navigation."
     },
     "md": {
       "$scopes": [
@@ -1548,7 +1548,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-4}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Medium icon size (32px). Use for prominent icons in cards and headers."
     },
     "lg": {
       "$scopes": [
@@ -1558,7 +1558,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-5}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Large icon size (40px). Use for feature icons and large buttons."
     },
     "xl": {
       "$scopes": [
@@ -1568,7 +1568,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-6}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Extra large icon size (48px). Use for hero sections and large displays."
     },
     "xxl": {
       "$scopes": [
@@ -1578,7 +1578,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-7}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Extra extra large icon size (56px). Use for very prominent displays."
     },
     "huge": {
       "$scopes": [
@@ -1588,7 +1588,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{icon-size.icon-size-8}",
-      "$description": "Reservio token for icon intent"
+      "$description": "Huge icon size (64px). Use for maximum visual impact in hero sections."
     }
   },
   "gap": {
@@ -1600,7 +1600,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-1}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Extra extra small gap (4px). Use for tight spacing between related elements."
     },
     "xs": {
       "$scopes": [
@@ -1610,7 +1610,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-2}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Extra small gap (8px). Use for compact spacing in dense layouts."
     },
     "s": {
       "$scopes": [
@@ -1620,7 +1620,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-3}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Small gap (12px). Use for standard spacing between related elements."
     },
     "m": {
       "$scopes": [
@@ -1630,7 +1630,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-4}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Medium gap (16px). Use for comfortable spacing in standard layouts."
     },
     "l": {
       "$scopes": [
@@ -1640,7 +1640,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-5}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Large gap (20px). Use for increased spacing between sections."
     },
     "xl": {
       "$scopes": [
@@ -1650,7 +1650,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-6}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Extra large gap (24px). Use for prominent spacing between major sections."
     },
     "xxl": {
       "$scopes": [
@@ -1660,7 +1660,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-8}",
-      "$description": "Reservio token for gap intent"
+      "$description": "Extra extra large gap (32px). Use for maximum spacing between distinct sections."
     }
   },
   "control": {
@@ -1673,7 +1673,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-1}",
-        "$description": "control token for height intent"
+        "$description": "Extra extra extra small control height (16px). Use for compact inputs and buttons."
       },
       "xxs": {
         "$scopes": [
@@ -1683,7 +1683,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-2}",
-        "$description": "control token for height intent"
+        "$description": "Extra extra small control height (24px). Use for small inputs and buttons."
       },
       "xs": {
         "$scopes": [
@@ -1693,7 +1693,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-3}",
-        "$description": "control token for height intent"
+        "$description": "Extra small control height (32px). Use for compact interactive elements."
       },
       "sm": {
         "$scopes": [
@@ -1703,7 +1703,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-4}",
-        "$description": "control token for height intent"
+        "$description": "Small control height (40px). Use for standard inputs and buttons."
       },
       "md": {
         "$scopes": [
@@ -1713,7 +1713,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-5}",
-        "$description": "control token for height intent"
+        "$description": "Medium control height (48px). Use for comfortable interactive elements."
       },
       "lg": {
         "$scopes": [
@@ -1723,7 +1723,7 @@
         "$libraryName": "",
         "$collectionName": "primitives",
         "$value": "{size-6}",
-        "$description": "control token for height intent"
+        "$description": "Large control height (56px). Use for prominent buttons and inputs."
       }
     }
   },
@@ -1736,7 +1736,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-1}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra extra extra small padding (4px). Use for very compact internal spacing."
     },
     "xxs": {
       "$scopes": [
@@ -1746,7 +1746,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-2}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra extra small padding (8px). Use for compact internal spacing."
     },
     "xs": {
       "$scopes": [
@@ -1756,7 +1756,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-3}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra small padding (12px). Use for tight internal spacing in dense components."
     },
     "s": {
       "$scopes": [
@@ -1766,7 +1766,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-4}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Small padding (16px). Use for standard internal spacing in buttons and inputs."
     },
     "m": {
       "$scopes": [
@@ -1776,7 +1776,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-5}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Medium padding (20px). Use for comfortable internal spacing in cards."
     },
     "l": {
       "$scopes": [
@@ -1786,7 +1786,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-6}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Large padding (24px). Use for increased internal spacing in larger containers."
     },
     "xl": {
       "$scopes": [
@@ -1796,7 +1796,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-8}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra large padding (32px). Use for prominent internal spacing in major containers."
     },
     "xxl": {
       "$scopes": [
@@ -1806,7 +1806,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-12}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra extra large padding (48px). Use for maximum internal spacing in hero sections."
     },
     "xxxl": {
       "$scopes": [
@@ -1816,7 +1816,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-20}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra extra extra large padding (80px). Use for very large containers."
     },
     "xxxxl": {
       "$scopes": [
@@ -1826,7 +1826,7 @@
       "$libraryName": "",
       "$collectionName": "primitives",
       "$value": "{spacing-30}",
-      "$description": "Reservio token for padding intent"
+      "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
     }
   }
 }
