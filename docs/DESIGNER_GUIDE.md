@@ -43,20 +43,35 @@ Our design system has three layers of tokens:
 
 Only these **base components** from the repository:
 
-- `button` - All button variants
-- `field` - Form input fields
-- `toggle` - Toggle switches
-- `checkbox` - Checkboxes
-- `radio.button` - Radio buttons
-- `chip` - Chips/tags
+- `accordion` - Accordion components
 - `alert` - Alert messages
-- `toast` - Toast notifications
+- `avatar` - Avatar components
+- `badge` - Badge components
+- `breadcrumbs` - Breadcrumb navigation
+- `button` - All button variants
+- `calendar` - Calendar components
 - `card` - Cards
-- `popover` - Popovers
-- `tooltip` - Tooltips
-- `modal` - Modals
+- `checkbox` - Checkboxes
+- `chip` - Chips/tags
+- `divider` - Divider components
 - `drawer` - Drawers
+- `field` - Form input fields
+- `file` - File input components
+- `link` - Link components
+- `loading` - Loading indicators
+- `modal` - Modals
 - `pagination` - Pagination components
+- `popover` - Popovers
+- `progress` - Progress indicators
+- `radio` - Radio buttons
+- `rating` - Rating components
+- `skeleton` - Skeleton loaders
+- `slider` - Slider components
+- `stepper` - Stepper components
+- `tabs` - Tab components
+- `toast` - Toast notifications
+- `toggle` - Toggle switches
+- `tooltip` - Tooltips
 
 ### ✅ Use Semantic Tokens For:
 
@@ -583,8 +598,10 @@ border.active.neutral.control.field.focused
 ### Base Components (Use Component Tokens):
 
 ```
-button, field, toggle, checkbox, radio.button, chip,
-alert, toast, card, popover, tooltip, modal, drawer, pagination
+accordion, alert, avatar, badge, breadcrumbs, button, calendar,
+card, checkbox, chip, divider, drawer, field, file, link,
+loading, modal, pagination, popover, progress, radio, rating,
+skeleton, slider, stepper, tabs, toast, toggle, tooltip
 ```
 
 ### Everything Else (Use Semantic Tokens):
