@@ -1728,65 +1728,67 @@
     }
   },
   "control": {
-    "height-xxxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-1}",
-      "$description": "control token for height intent"
-    },
-    "height-xxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-2}",
-      "$description": "control token for height intent"
-    },
-    "height-xs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-3}",
-      "$description": "control token for height intent"
-    },
-    "height-s": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-4}",
-      "$description": "control token for height intent"
-    },
-    "height-m": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-5}",
-      "$description": "control token for height intent"
-    },
-    "height-l": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{sizing-size-6}",
-      "$description": "control token for height intent"
+    "height": {
+      "xxxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-1}",
+        "$description": "control token for height intent"
+      },
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-2}",
+        "$description": "control token for height intent"
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-3}",
+        "$description": "control token for height intent"
+      },
+      "s": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-4}",
+        "$description": "control token for height intent"
+      },
+      "m": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-5}",
+        "$description": "control token for height intent"
+      },
+      "l": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{sizing-size-6}",
+        "$description": "control token for height intent"
+      }
     }
   },
   "padding": {
