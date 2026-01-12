@@ -47,7 +47,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       },
       "background": {
         "$scopes": [
@@ -76,7 +76,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.danger.default}"
+        "$value": "{border-active-danger-default}"
       },
       "background": {
         "$scopes": [
@@ -105,7 +105,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.disabled}"
+        "$value": "{border-active-neutral-control-field-disabled}"
       },
       "background": {
         "$scopes": [
@@ -136,7 +136,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       },
       "hover": {
         "$scopes": [
@@ -145,7 +145,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.hover}"
+        "$value": "{border-active-neutral-control-field-hover}"
       },
       "focused": {
         "$scopes": [
@@ -154,7 +154,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.focused}"
+        "$value": "{border-active-neutral-control-field-focused}"
       },
       "active": {
         "$scopes": [
@@ -163,7 +163,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.selected}"
+        "$value": "{border-active-neutral-control-field-selected}"
       }
     },
     "background": {

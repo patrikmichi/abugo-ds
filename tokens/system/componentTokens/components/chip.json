@@ -136,7 +136,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.default}"
+        "$value": "{border-active-neutral-action-default}"
       },
       "hover": {
         "$scopes": [
@@ -145,7 +145,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.hover}"
+        "$value": "{border-active-neutral-action-hover}"
       },
       "pressed": {
         "$scopes": [
@@ -154,7 +154,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.pressed}"
+        "$value": "{border-active-neutral-action-pressed}"
       },
       "disabled": {
         "$scopes": [
@@ -163,7 +163,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.disabled}"
+        "$value": "{border-active-neutral-action-disabled}"
       }
     }
   }

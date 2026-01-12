@@ -74,5 +74,492 @@
         "replacedBy": null
       }
     }
+  },
+  "border-active-neutral-control-field-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.300}",
+    "$description": "Active border color for neutral control field intent (default). Use for input field borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "field",
+        "state": "default",
+        "usage": [
+          "input-fields",
+          "form-controls",
+          "text-inputs"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-field-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Active border color for neutral control field intent (hover). Use for input field borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "field",
+        "state": "hover",
+        "usage": [
+          "input-fields",
+          "form-controls",
+          "text-inputs"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-field-focused": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Active border color for neutral control field intent (focused). Use for input field borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "field",
+        "state": "focused",
+        "usage": [
+          "input-fields",
+          "form-controls",
+          "text-inputs"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-field-selected": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Active border color for neutral control field intent (selected). Use for input field borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "field",
+        "state": "selected",
+        "usage": [
+          "input-fields",
+          "form-controls",
+          "text-inputs"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-field-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Active border color for neutral control field intent (disabled). Use for input field borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "field",
+        "state": "disabled",
+        "usage": [
+          "input-fields",
+          "form-controls",
+          "text-inputs"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-toggle-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.300}",
+    "$description": "Active border color for neutral control toggle intent (default). Use for checkbox and radio button borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "toggle",
+        "state": "default",
+        "usage": [
+          "checkboxes",
+          "radio-buttons",
+          "toggle-controls"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-toggle-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Active border color for neutral control toggle intent (hover). Use for checkbox and radio button borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "toggle",
+        "state": "hover",
+        "usage": [
+          "checkboxes",
+          "radio-buttons",
+          "toggle-controls"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-control-toggle-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Active border color for neutral control toggle intent (disabled). Use for checkbox and radio button borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "control": "toggle",
+        "state": "disabled",
+        "usage": [
+          "checkboxes",
+          "radio-buttons",
+          "toggle-controls"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-accent-default": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Active border color for accent intent (default). Use for accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "accent",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-accent-hover": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.600}",
+    "$description": "Active border color for accent intent (hover). Use for accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-accent-pressed": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Active border color for accent intent (pressed). Use for accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-accent-disabled": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Active border color for accent intent (disabled). Use for accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "accent",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-accent-selected": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Active border color for accent intent (selected). Use for accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "accent",
+        "state": "selected",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-danger-default": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+      "$value": "{negative.700}",
+    "$description": "Active border color for danger intent. Use for error states and destructive actions.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "error-states",
+          "destructive-actions",
+          "danger-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-action-default": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.300}",
+    "$description": "Active border color for neutral action intent (default). Use for action buttons and interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "action": "default",
+        "state": "default",
+        "usage": [
+          "action-buttons",
+          "interactive-elements",
+          "secondary-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-action-hover": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Active border color for neutral action intent (hover). Use for action buttons and interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "action": "default",
+        "state": "hover",
+        "usage": [
+          "action-buttons",
+          "interactive-elements",
+          "secondary-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-action-pressed": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.500}",
+    "$description": "Active border color for neutral action intent (pressed). Use for action buttons and interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "action": "default",
+        "state": "pressed",
+        "usage": [
+          "action-buttons",
+          "interactive-elements",
+          "secondary-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-active-neutral-action-disabled": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Active border color for neutral action intent (disabled). Use for action buttons and interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "active",
+        "intent": "neutral",
+        "action": "default",
+        "state": "disabled",
+        "usage": [
+          "action-buttons",
+          "interactive-elements",
+          "secondary-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-passive-neutral-default": {
+    "$scopes": [
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Passive border color for neutral intent. Use for dividers, separators, and non-interactive borders.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "dividers",
+          "separators",
+          "non-interactive-borders"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
   }
 }

@@ -150,7 +150,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.accent.default}"
+          "$value": "{border-active-accent-default}"
         },
         "hover": {
           "$scopes": [
@@ -159,7 +159,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.accent.hover}"
+          "$value": "{border-active-accent-hover}"
         },
         "pressed": {
           "$scopes": [
@@ -168,7 +168,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.accent.pressed}"
+          "$value": "{border-active-accent-pressed}"
         },
         "disabled": {
           "$scopes": [
@@ -177,7 +177,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.accent.disabled}"
+          "$value": "{border-active-accent-disabled}"
         }
       },
       "content": {
@@ -429,7 +429,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.default}"
+        "$value": "{border-active-neutral-action-default}"
       },
       "hover": {
         "$scopes": [
@@ -438,7 +438,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.hover}"
+        "$value": "{border-active-neutral-action-hover}"
       },
       "pressed": {
         "$scopes": [
@@ -447,7 +447,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.pressed}"
+        "$value": "{border-active-neutral-action-pressed}"
       },
       "disabled": {
         "$scopes": [
@@ -456,7 +456,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.disabled}"
+        "$value": "{border-active-neutral-action-disabled}"
       }
     },
     "content": {

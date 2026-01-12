@@ -261,6 +261,7 @@ Both themes use the same token structure, with brand-specific values handled at 
 8. **Use correct `$type` values** for proper categorization
 9. **Test references** to ensure they resolve correctly
 10. **Document changes** in commit messages
+11. **Delete helper scripts** after implementation (see Script Management Rules)
 
 ## Common Mistakes to Avoid
 

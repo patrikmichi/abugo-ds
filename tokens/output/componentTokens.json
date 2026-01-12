@@ -1571,7 +1571,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       },
       "content": {
         "$scopes": [
@@ -1719,7 +1719,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       }
     }
   },
@@ -1750,7 +1750,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       }
     },
     "success": {
@@ -2023,7 +2023,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.accent.default}"
+            "$value": "{border-active-accent-default}"
           },
           "hover": {
             "$scopes": [
@@ -2032,7 +2032,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.accent.hover}"
+            "$value": "{border-active-accent-hover}"
           },
           "pressed": {
             "$scopes": [
@@ -2041,7 +2041,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.accent.pressed}"
+            "$value": "{border-active-accent-pressed}"
           },
           "disabled": {
             "$scopes": [
@@ -2050,7 +2050,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.accent.disabled}"
+            "$value": "{border-active-accent-disabled}"
           }
         },
         "content": {
@@ -2302,7 +2302,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.default}"
+          "$value": "{border-active-neutral-action-default}"
         },
         "hover": {
           "$scopes": [
@@ -2311,7 +2311,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.hover}"
+          "$value": "{border-active-neutral-action-hover}"
         },
         "pressed": {
           "$scopes": [
@@ -2320,7 +2320,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.pressed}"
+          "$value": "{border-active-neutral-action-pressed}"
         },
         "disabled": {
           "$scopes": [
@@ -2329,7 +2329,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.disabled}"
+          "$value": "{border-active-neutral-action-disabled}"
         }
       },
       "content": {
@@ -2663,7 +2663,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.default}"
+        "$value": "{border-active-neutral-action-default}"
       },
       "hover": {
         "$scopes": [
@@ -2672,7 +2672,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.action.hover}"
+        "$value": "{border-active-neutral-action-hover}"
       },
       "selected": {
         "$scopes": [
@@ -2681,7 +2681,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.accent.selected}"
+        "$value": "{border-active-accent-selected}"
       }
     }
   },
@@ -2735,7 +2735,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.toggle.default}"
+          "$value": "{border-active-neutral-control-toggle-default}"
         },
         "hover": {
           "$scopes": [
@@ -2744,7 +2744,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.toggle.hover}"
+          "$value": "{border-active-neutral-control-toggle-hover}"
         },
         "disabled": {
           "$scopes": [
@@ -2753,7 +2753,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.toggle.disabled}"
+          "$value": "{border-active-neutral-control-toggle-disabled}"
         }
       }
     },
@@ -2904,7 +2904,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.default}"
+          "$value": "{border-active-neutral-action-default}"
         },
         "hover": {
           "$scopes": [
@@ -2913,7 +2913,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.hover}"
+          "$value": "{border-active-neutral-action-hover}"
         },
         "pressed": {
           "$scopes": [
@@ -2922,7 +2922,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.pressed}"
+          "$value": "{border-active-neutral-action-pressed}"
         },
         "disabled": {
           "$scopes": [
@@ -2931,7 +2931,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.action.disabled}"
+          "$value": "{border-active-neutral-action-disabled}"
         }
       }
     }
@@ -2945,7 +2945,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.passive.neutral.default}"
+        "$value": "{border-passive-neutral-default}"
       }
     },
     "vertical": {
@@ -2956,7 +2956,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.passive.neutral.default}"
+        "$value": "{border-passive-neutral-default}"
       }
     }
   },
@@ -2978,7 +2978,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       },
       "content": {
         "$scopes": [
@@ -3039,7 +3039,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.default}"
+          "$value": "{border-active-neutral-control-field-default}"
         },
         "background": {
           "$scopes": [
@@ -3068,7 +3068,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.danger.default}"
+          "$value": "{border-active-danger-default}"
         },
         "background": {
           "$scopes": [
@@ -3097,7 +3097,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.disabled}"
+          "$value": "{border-active-neutral-control-field-disabled}"
         },
         "background": {
           "$scopes": [
@@ -3128,7 +3128,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.default}"
+          "$value": "{border-active-neutral-control-field-default}"
         },
         "hover": {
           "$scopes": [
@@ -3137,7 +3137,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.hover}"
+          "$value": "{border-active-neutral-control-field-hover}"
         },
         "focused": {
           "$scopes": [
@@ -3146,7 +3146,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.focused}"
+          "$value": "{border-active-neutral-control-field-focused}"
         },
         "active": {
           "$scopes": [
@@ -3155,7 +3155,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.selected}"
+          "$value": "{border-active-neutral-control-field-selected}"
         }
       },
       "background": {
@@ -3268,7 +3268,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.default}"
+          "$value": "{border-active-neutral-control-field-default}"
         },
         "hover": {
           "$scopes": [
@@ -3277,7 +3277,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.hover}"
+          "$value": "{border-active-neutral-control-field-hover}"
         },
         "drag": {
           "over": {
@@ -3287,7 +3287,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.accent.default}"
+            "$value": "{border-active-accent-default}"
           }
         },
         "error": {
@@ -3297,7 +3297,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.danger.default}"
+          "$value": "{border-active-danger-default}"
         }
       },
       "content": {
@@ -3411,7 +3411,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border.active.neutral.control.field.default}"
+        "$value": "{border-active-neutral-control-field-default}"
       },
       "content": {
         "$scopes": [
@@ -3523,7 +3523,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border.passive.neutral.default}"
+      "$value": "{border-passive-neutral-default}"
     }
   },
   "progress": {
@@ -3648,7 +3648,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.neutral.control.toggle.default}"
+            "$value": "{border-active-neutral-control-toggle-default}"
           },
           "hover": {
             "$scopes": [
@@ -3657,7 +3657,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.neutral.control.toggle.hover}"
+            "$value": "{border-active-neutral-control-toggle-hover}"
           },
           "disabled": {
             "$scopes": [
@@ -3666,7 +3666,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.neutral.control.toggle.disabled}"
+            "$value": "{border-active-neutral-control-toggle-disabled}"
           }
         },
         "selected": {
@@ -3677,7 +3677,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.neutral.control.toggle.default}"
+            "$value": "{border-active-neutral-control-toggle-default}"
           },
           "hover": {
             "$scopes": [
@@ -3686,7 +3686,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.neutral.control.toggle.hover}"
+            "$value": "{border-active-neutral-control-toggle-hover}"
           },
           "disabled": {
             "$scopes": [
@@ -3695,7 +3695,7 @@
             "$type": "color",
             "$libraryName": "",
             "$collectionName": "semanticTokens",
-            "$value": "{border.active.neutral.control.toggle.disabled}"
+            "$value": "{border-active-neutral-control-toggle-disabled}"
           }
         }
       }
@@ -3879,7 +3879,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.default}"
+          "$value": "{border-active-neutral-control-field-default}"
         },
         "active": {
           "$scopes": [
@@ -3888,7 +3888,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.accent.selected}"
+          "$value": "{border-active-accent-selected}"
         }
       },
       "content": {
@@ -3961,7 +3961,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.neutral.control.field.default}"
+          "$value": "{border-active-neutral-control-field-default}"
         },
         "active": {
           "$scopes": [
@@ -3970,7 +3970,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{border.active.accent.selected}"
+          "$value": "{border-active-accent-selected}"
         }
       },
       "content": {

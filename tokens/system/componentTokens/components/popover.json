@@ -16,6 +16,6 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{border.passive.neutral.default}"
+    "$value": "{border-passive-neutral-default}"
   }
 }
