@@ -1018,512 +1018,6 @@
     }
   },
   "border": {
-    "passive": {
-      "neutral": {
-        "default": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{grey.300}",
-          "$description": "passive token for neutral intent"
-        },
-        "subtle": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{grey.200}",
-          "$description": "passive token for neutral intent"
-        },
-        "strong": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{grey.300}",
-          "$description": "passive token for neutral intent"
-        },
-        "stronger": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{grey.500}",
-          "$description": "passive token for neutral intent"
-        },
-        "strongest": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{grey.600}",
-          "$description": "passive token for neutral intent"
-        }
-      },
-      "danger": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{negative.700}",
-        "$description": "border token for passive intent"
-      },
-      "success": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{success.700}",
-        "$description": "border token for passive intent"
-      },
-      "warning": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{warning.700}",
-        "$description": "border token for passive intent"
-      },
-      "info": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{upgrade.700}",
-        "$description": "border token for passive intent"
-      },
-      "upgrade": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{upgrade.700}",
-        "$description": "border token for passive intent"
-      }
-    },
-    "active": {
-      "neutral": {
-        "action": {
-          "default": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{grey.300}",
-            "$description": "neutral token for action intent"
-          },
-          "hover": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{grey.400}",
-            "$description": "neutral token for action intent"
-          },
-          "pressed": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{grey.200}",
-            "$description": "neutral token for action intent"
-          },
-          "focused": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{brand.500}",
-            "$description": "neutral token for action intent"
-          },
-          "selected": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{grey.700}",
-            "$description": "neutral token for action intent"
-          },
-          "disabled": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{grey.400}",
-            "$description": "neutral token for action intent"
-          }
-        },
-        "control": {
-          "field": {
-            "default": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{grey.300}",
-              "$description": "control token for field intent"
-            },
-            "hover": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{grey.400}",
-              "$description": "control token for field intent"
-            },
-            "focused": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{brand.700}",
-              "$description": "control token for field intent"
-            },
-            "selected": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{grey.700}",
-              "$description": "control token for field intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{grey.400}",
-              "$description": "control token for field intent"
-            }
-          },
-          "toggle": {
-            "default": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{brand.700}",
-              "$description": "control token for toggle intent"
-            },
-            "hover": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{brand.800}",
-              "$description": "control token for toggle intent"
-            },
-            "focused": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{brand.500}",
-              "$description": "control token for toggle intent"
-            },
-            "selected": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{brand.700}",
-              "$description": "control token for toggle intent"
-            },
-            "disabled": {
-              "$scopes": [
-                "FRAME_FILL",
-                "SHAPE_FILL",
-                "STROKE_COLOR"
-              ],
-              "$type": "color",
-              "$libraryName": "",
-              "$collectionName": "primitives",
-              "$value": "{brand.400}",
-              "$description": "control token for toggle intent"
-            }
-          }
-        }
-      },
-      "accent": {
-        "default": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{brand.700}",
-          "$description": "active token for accent intent"
-        },
-        "hover": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{brand.800}",
-          "$description": "active token for accent intent"
-        },
-        "pressed": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{brand.600}",
-          "$description": "active token for accent intent"
-        },
-        "focused": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{brand.500}",
-          "$description": "active token for accent intent"
-        },
-        "selected": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{brand.600}",
-          "$description": "active token for accent intent"
-        },
-        "disabled": {
-          "$scopes": [
-            "FRAME_FILL",
-            "SHAPE_FILL",
-            "STROKE_COLOR"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{brand.500}",
-          "$description": "active token for accent intent"
-        },
-        "inverse": {
-          "default": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{upgrade.300}",
-            "$description": "accent token for inverse intent"
-          },
-          "hover": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{upgrade.400}",
-            "$description": "accent token for inverse intent"
-          },
-          "pressed": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{upgrade.500}",
-            "$description": "accent token for inverse intent"
-          },
-          "disabled": {
-            "$scopes": [
-              "FRAME_FILL",
-              "SHAPE_FILL",
-              "STROKE_COLOR"
-            ],
-            "$type": "color",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{upgrade.600}",
-            "$description": "accent token for inverse intent"
-          }
-        }
-      },
-      "danger": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{negative.700}",
-          "$description": "active token for danger intent"
-        },
-        "hover": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{negative.800}",
-          "$description": "active token for danger intent"
-        },
-        "pressed": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{negative.600}",
-          "$description": "active token for danger intent"
-        }
-      },
-      "upgrade": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{upgrade.700}",
-          "$description": "active token for upgrade intent"
-        },
-        "hover": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{upgrade.800}",
-          "$description": "active token for upgrade intent"
-        },
-        "pressed": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{upgrade.600}",
-          "$description": "active token for upgrade intent"
-        }
-      }
-    },
     "width": {
       "thin": {
         "$scopes": [
@@ -1602,674 +1096,6 @@
       "$collectionName": "primitives",
       "$value": "{yellow.700}",
       "$description": "Reservio token for custom intent"
-    }
-  },
-  "padding": {
-    "xxxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-1}",
-      "$description": "Reservio token for padding intent"
-    },
-    "xxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-2}",
-      "$description": "Reservio token for padding intent"
-    },
-    "xs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-3}",
-      "$description": "Reservio token for padding intent"
-    },
-    "s": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-4}",
-      "$description": "Reservio token for padding intent"
-    },
-    "m": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-5}",
-      "$description": "Reservio token for padding intent"
-    },
-    "l": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-6}",
-      "$description": "Reservio token for padding intent"
-    },
-    "xl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-8}",
-      "$description": "Reservio token for padding intent"
-    },
-    "xxl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-12}",
-      "$description": "Reservio token for padding intent"
-    },
-    "xxxl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-20}",
-      "$description": "Reservio token for padding intent"
-    },
-    "xxxxl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-30}",
-      "$description": "Reservio token for padding intent"
-    }
-  },
-  "typography": {
-    "headline": {
-      "font-size": {
-        "h1": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.9}",
-          "$description": "headline token for font-size intent"
-        },
-        "h2": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.8}",
-          "$description": "headline token for font-size intent"
-        },
-        "h3": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.7}",
-          "$description": "headline token for font-size intent"
-        },
-        "h4": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.6}",
-          "$description": "headline token for font-size intent"
-        },
-        "h5": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.5}",
-          "$description": "headline token for font-size intent"
-        },
-        "h6": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.4}",
-          "$description": "headline token for font-size intent"
-        }
-      },
-      "line-height": {
-        "h1": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "headline token for line-height intent"
-        },
-        "h2": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "headline token for line-height intent"
-        },
-        "h3": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "headline token for line-height intent"
-        },
-        "h4": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "headline token for line-height intent"
-        },
-        "h5": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "headline token for line-height intent"
-        },
-        "h6": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "headline token for line-height intent"
-        }
-      }
-    },
-    "body": {
-      "font-size": {
-        "large": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.4}",
-          "$description": "body token for font-size intent"
-        },
-        "medium": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.3}",
-          "$description": "body token for font-size intent"
-        },
-        "small": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.2}",
-          "$description": "body token for font-size intent"
-        },
-        "extra-small": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontSize.1}",
-          "$description": "body token for font-size intent"
-        }
-      },
-      "line-height": {
-        "large": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.lineHeight.base}",
-          "$description": "body token for line-height intent"
-        },
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{typography.body.font-size.medium}",
-          "$description": "body token for line-height intent"
-        },
-        "small": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{typography.body.font-size.medium}",
-          "$description": "body token for line-height intent"
-        },
-        "extra-small": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "dimension",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{typography.body.font-size.medium}",
-          "$description": "body token for line-height intent"
-        }
-      },
-      "font-weight": {
-        "light": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontWeight.regular}",
-          "$description": "body token for font-weight intent"
-        },
-        "normal": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontWeight.regular}",
-          "$description": "body token for font-weight intent"
-        },
-        "medium": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontWeight.medium}",
-          "$description": "body token for font-weight intent"
-        },
-        "semibold": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontWeight.bold}",
-          "$description": "body token for font-weight intent"
-        },
-        "bold": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "number",
-          "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{typography.fontWeight.bold}",
-          "$description": "body token for font-weight intent"
-        }
-      }
-    }
-  },
-  "radius": {
-    "none": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-0}",
-      "$description": "Reservio token for radius intent"
-    },
-    "xsmall": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-1}",
-      "$description": "Reservio token for radius intent"
-    },
-    "small": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-2}",
-      "$description": "Reservio token for radius intent"
-    },
-    "medium": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-3}",
-      "$description": "Reservio token for radius intent"
-    },
-    "large": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-4}",
-      "$description": "Reservio token for radius intent"
-    },
-    "xlarge": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-5}",
-      "$description": "Reservio token for radius intent"
-    },
-    "xxlarge": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-6}",
-      "$description": "Reservio token for radius intent"
-    },
-    "full": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{border-radius-radius-round}",
-      "$description": "Reservio token for radius intent"
-    }
-  },
-  "icon": {
-    "icon-xxsmall": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-1}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-xsmall": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-2}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-small": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-3}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-medium": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-4}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-large": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-5}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-xlarge": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-6}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-xxlarge": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-7}",
-      "$description": "Reservio token for icon intent"
-    },
-    "icon-huge": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{icon-size.icon-size-8}",
-      "$description": "Reservio token for icon intent"
-    }
-  },
-  "gap": {
-    "xxs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-1}",
-      "$description": "Reservio token for gap intent"
-    },
-    "xs": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-2}",
-      "$description": "Reservio token for gap intent"
-    },
-    "s": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-3}",
-      "$description": "Reservio token for gap intent"
-    },
-    "m": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-4}",
-      "$description": "Reservio token for gap intent"
-    },
-    "l": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-5}",
-      "$description": "Reservio token for gap intent"
-    },
-    "xl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-6}",
-      "$description": "Reservio token for gap intent"
-    },
-    "xxl": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "dimension",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{spacing-8}",
-      "$description": "Reservio token for gap intent"
-    }
-  },
-  "control": {
-    "height": {
-      "xxxs": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing-size-1}",
-        "$description": "control token for height intent"
-      },
-      "xxs": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing-size-2}",
-        "$description": "control token for height intent"
-      },
-      "xs": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing-size-3}",
-        "$description": "control token for height intent"
-      },
-      "s": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing-size-4}",
-        "$description": "control token for height intent"
-      },
-      "m": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing-size-5}",
-        "$description": "control token for height intent"
-      },
-      "l": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing-size-6}",
-        "$description": "control token for height intent"
-      }
     }
   },
   "shadow": {
@@ -2414,5 +1240,655 @@
       "$description": "Tooltip arrow size"
     }
   },
-  "$name": "Semantic Tokens"
+  "$name": "Semantic Tokens",
+  "typography-headline-font-size-h1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-9}",
+    "$description": "headline token for font-size intent"
+  },
+  "typography-headline-font-size-h2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-8}",
+    "$description": "headline token for font-size intent"
+  },
+  "typography-headline-font-size-h3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-7}",
+    "$description": "headline token for font-size intent"
+  },
+  "typography-headline-font-size-h4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-6}",
+    "$description": "headline token for font-size intent"
+  },
+  "typography-headline-font-size-h5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-5}",
+    "$description": "headline token for font-size intent"
+  },
+  "typography-headline-font-size-h6": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-4}",
+    "$description": "headline token for font-size intent"
+  },
+  "typography-headline-line-height-h1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "headline token for line-height intent"
+  },
+  "typography-headline-line-height-h2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "headline token for line-height intent"
+  },
+  "typography-headline-line-height-h3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "headline token for line-height intent"
+  },
+  "typography-headline-line-height-h4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "headline token for line-height intent"
+  },
+  "typography-headline-line-height-h5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "headline token for line-height intent"
+  },
+  "typography-headline-line-height-h6": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "headline token for line-height intent"
+  },
+  "typography-body-font-size-large": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-4}",
+    "$description": "body token for font-size intent"
+  },
+  "typography-body-font-size-medium": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-3}",
+    "$description": "body token for font-size intent"
+  },
+  "typography-body-font-size-small": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-2}",
+    "$description": "body token for font-size intent"
+  },
+  "typography-body-font-size-extra-small": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontSize-1}",
+    "$description": "body token for font-size intent"
+  },
+  "typography-body-line-height-large": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-lineHeight-base}",
+    "$description": "body token for line-height intent"
+  },
+  "typography-body-line-height-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography-body-font-size-medium}",
+    "$description": "body token for line-height intent"
+  },
+  "typography-body-line-height-small": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography-body-font-size-medium}",
+    "$description": "body token for line-height intent"
+  },
+  "typography-body-line-height-extra-small": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography-body-font-size-medium}",
+    "$description": "body token for line-height intent"
+  },
+  "typography-body-font-weight-light": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontWeight-regular}",
+    "$description": "body token for font-weight intent"
+  },
+  "typography-body-font-weight-normal": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontWeight-regular}",
+    "$description": "body token for font-weight intent"
+  },
+  "typography-body-font-weight-medium": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontWeight-medium}",
+    "$description": "body token for font-weight intent"
+  },
+  "typography-body-font-weight-semibold": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontWeight-bold}",
+    "$description": "body token for font-weight intent"
+  },
+  "typography-body-font-weight-bold": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontWeight-bold}",
+    "$description": "body token for font-weight intent"
+  },
+  "radius": {
+    "none": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-0}",
+      "$description": "Reservio token for radius intent"
+    },
+    "xsmall": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-1}",
+      "$description": "Reservio token for radius intent"
+    },
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-2}",
+      "$description": "Reservio token for radius intent"
+    },
+    "medium": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-3}",
+      "$description": "Reservio token for radius intent"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-4}",
+      "$description": "Reservio token for radius intent"
+    },
+    "xlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-5}",
+      "$description": "Reservio token for radius intent"
+    },
+    "xxlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-6}",
+      "$description": "Reservio token for radius intent"
+    },
+    "full": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-radius-radius-round}",
+      "$description": "Reservio token for radius intent"
+    }
+  },
+  "icon": {
+    "icon-xxsmall": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-1}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-xsmall": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-2}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-3}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-medium": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-4}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-5}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-xlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-6}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-xxlarge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-7}",
+      "$description": "Reservio token for icon intent"
+    },
+    "icon-huge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size-8}",
+      "$description": "Reservio token for icon intent"
+    }
+  },
+  "gap": {
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Reservio token for gap intent"
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-2}",
+      "$description": "Reservio token for gap intent"
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Reservio token for gap intent"
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Reservio token for gap intent"
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Reservio token for gap intent"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Reservio token for gap intent"
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-8}",
+      "$description": "Reservio token for gap intent"
+    }
+  },
+  "control": {
+    "height-xxxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{sizing-size-1}",
+      "$description": "control token for height intent"
+    },
+    "height-xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{sizing-size-2}",
+      "$description": "control token for height intent"
+    },
+    "height-xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{sizing-size-3}",
+      "$description": "control token for height intent"
+    },
+    "height-s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{sizing-size-4}",
+      "$description": "control token for height intent"
+    },
+    "height-m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{sizing-size-5}",
+      "$description": "control token for height intent"
+    },
+    "height-l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{sizing-size-6}",
+      "$description": "control token for height intent"
+    }
+  },
+  "padding": {
+    "xxxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-2}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Reservio token for padding intent"
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Reservio token for padding intent"
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Reservio token for padding intent"
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-8}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-12}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-20}",
+      "$description": "Reservio token for padding intent"
+    },
+    "xxxxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-30}",
+      "$description": "Reservio token for padding intent"
+    }
+  }
 }
