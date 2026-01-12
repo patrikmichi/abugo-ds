@@ -1675,7 +1675,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{animation.duration.fast}"
+        "$value": "{animation-duration-fast}"
       },
       "easing": {
         "$scopes": [
@@ -1684,7 +1684,7 @@
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{animation.easing.ease-out}"
+        "$value": "{animation-easing-ease-out}"
       }
     }
   },
@@ -4214,7 +4214,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.duration.base}"
+          "$value": "{animation-duration-base}"
         },
         "easing": {
           "$scopes": [
@@ -4223,7 +4223,7 @@
           "$type": "string",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.easing.ease-in-out}"
+          "$value": "{animation-easing-ease-in-out}"
         }
       }
     }
@@ -4318,7 +4318,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.duration.fast}"
+          "$value": "{animation-duration-fast}"
         },
         "easing": {
           "$scopes": [
@@ -4327,7 +4327,7 @@
           "$type": "string",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.easing.ease-out}"
+          "$value": "{animation-easing-ease-out}"
         }
       }
     }
@@ -4402,7 +4402,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.duration.base}"
+          "$value": "{animation-duration-base}"
         },
         "easing": {
           "$scopes": [
@@ -4411,7 +4411,7 @@
           "$type": "string",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.easing.ease-out}"
+          "$value": "{animation-easing-ease-out}"
         }
       }
     }
@@ -4604,7 +4604,7 @@
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.duration.base}"
+          "$value": "{animation-duration-base}"
         },
         "easing": {
           "$scopes": [
@@ -4613,7 +4613,7 @@
           "$type": "string",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{animation.easing.ease-in-out}"
+          "$value": "{animation-easing-ease-in-out}"
         }
       }
     }

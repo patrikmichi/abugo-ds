@@ -2365,7 +2365,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation.duration.fast}",
+        "$value": "{animation-duration-fast}",
         "$description": "Fast animation duration"
       },
       "base": {
@@ -2375,7 +2375,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation.duration.base}",
+        "$value": "{animation-duration-base}",
         "$description": "Base animation duration"
       }
     },
@@ -2387,7 +2387,7 @@
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation.easing.ease-out}",
+        "$value": "{animation-easing-ease-out}",
         "$description": "Ease-out animation easing"
       },
       "ease-in-out": {
@@ -2397,7 +2397,7 @@
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation.easing.ease-in-out}",
+        "$value": "{animation-easing-ease-in-out}",
         "$description": "Ease-in-out animation easing"
       }
     }
