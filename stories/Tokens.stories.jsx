@@ -588,6 +588,699 @@ export const Shadows = () => {
   );
 };
 
+// Feature Colors (Primitives)
+export const FeatureColors = () => {
+  const featureFamilies = ['passes', 'ai-features'];
+  
+  return (
+    <div>
+      <h1>Feature Colors (Primitives)</h1>
+      <p>Feature-specific color tokens for passes and AI features.</p>
+      
+      {featureFamilies.map((family) => {
+        const familyTokens = primitives[family];
+        if (!familyTokens) return null;
+        
+        return (
+          <div key={family} style={{ marginBottom: '48px' }}>
+            <h2 style={{ textTransform: 'capitalize', marginBottom: '24px' }}>
+              {family.replace(/-/g, ' ')}
+            </h2>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+                gap: '16px',
+              }}
+            >
+              {Object.keys(familyTokens).map((category) => {
+                const categoryTokens = familyTokens[category];
+                if (typeof categoryTokens === 'object' && categoryTokens !== null) {
+                  return Object.keys(categoryTokens).map((variant) => {
+                    const token = categoryTokens[variant];
+                    return (
+                      <ColorSwatch
+                        key={`${family}.${category}.${variant}`}
+                        name={`${family}.${category}.${variant}`}
+                        value={token.$value}
+                        description={token.$description}
+                      />
+                    );
+                  });
+                }
+                return null;
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+// Border Width (Primitives)
+export const BorderWidth = () => {
+  const borderWidthKeys = Object.keys(primitives)
+    .filter((key) => key.startsWith('border-width-'))
+    .sort();
+  
+  return (
+    <div>
+      <h1>Border Width Tokens (Primitives)</h1>
+      <p>Border width values for consistent borders.</p>
+      
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '24px' }}>
+        {borderWidthKeys.map((key) => {
+          const token = primitives[key];
+          const value = token.$value;
+          
+          return (
+            <div key={key} style={{ textAlign: 'center' }}>
+              <div
+                style={{
+                  width: '120px',
+                  height: '120px',
+                  backgroundColor: '#f7f7f7',
+                  border: `${value}px solid #5690f5`,
+                  borderRadius: '8px',
+                  margin: '0 auto 16px',
+                }}
+              />
+              <div style={{ fontWeight: '600', marginBottom: '4px' }}>{key}</div>
+              <div style={{ fontSize: '12px', color: '#666' }}>{value}px</div>
+            </div>
+          );
+        })}
+      </div>
+      
+      {semanticTokens['border-width-thin'] && (
+        <div style={{ marginTop: '48px' }}>
+          <h2>Semantic Border Width</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '24px' }}>
+            {['border-width-thin', 'border-width-thicker', 'border-width-thick'].map((key) => {
+              const token = semanticTokens[key];
+              if (!token) return null;
+              const value = resolveToken(token?.$value, primitives);
+              const borderValue = typeof value === 'number' ? value : 0;
+              
+              return (
+                <div key={key} style={{ textAlign: 'center' }}>
+                  <div
+                    style={{
+                      width: '120px',
+                      height: '120px',
+                      backgroundColor: '#f7f7f7',
+                      border: `${borderValue}px solid #5690f5`,
+                      borderRadius: '8px',
+                      margin: '0 auto 16px',
+                    }}
+                  />
+                  <div style={{ fontWeight: '600', marginBottom: '4px' }}>{key}</div>
+                  <div style={{ fontSize: '12px', color: '#666' }}>{borderValue}px</div>
+                  {token.$description && (
+                    <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Icon Size (Primitives)
+export const IconSize = () => {
+  const iconSizeTokens = primitives['icon-size'];
+  
+  return (
+    <div>
+      <h1>Icon Size Tokens (Primitives)</h1>
+      <p>Icon size scale for consistent iconography.</p>
+      
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '24px' }}>
+        {iconSizeTokens && Object.keys(iconSizeTokens).map((key) => {
+          const token = iconSizeTokens[key];
+          const value = token.$value;
+          
+          return (
+            <div key={key} style={{ textAlign: 'center' }}>
+              <div
+                style={{
+                  width: `${value}px`,
+                  height: `${value}px`,
+                  backgroundColor: '#5690f5',
+                  borderRadius: '4px',
+                  margin: '0 auto 16px',
+                }}
+              />
+              <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>{key}</div>
+              <div style={{ fontSize: '12px', color: '#666' }}>{value}px</div>
+            </div>
+          );
+        })}
+      </div>
+      
+      {semanticTokens.icon && (
+        <div style={{ marginTop: '48px' }}>
+          <h2>Semantic Icon Sizes</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '24px' }}>
+            {Object.keys(semanticTokens.icon).map((key) => {
+              const token = semanticTokens.icon[key];
+              const value = resolveToken(token?.$value, primitives);
+              const iconValue = typeof value === 'number' ? value : 24;
+              
+              return (
+                <div key={key} style={{ textAlign: 'center' }}>
+                  <div
+                    style={{
+                      width: `${iconValue}px`,
+                      height: `${iconValue}px`,
+                      backgroundColor: '#5690f5',
+                      borderRadius: '4px',
+                      margin: '0 auto 16px',
+                    }}
+                  />
+                  <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>icon.{key}</div>
+                  <div style={{ fontSize: '12px', color: '#666' }}>{iconValue}px</div>
+                  {token.$description && (
+                    <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Z-Index (Primitives & Semantic)
+export const ZIndex = () => {
+  const zIndexTokens = primitives['z-index'];
+  
+  return (
+    <div>
+      <h1>Z-Index Tokens</h1>
+      <p>Z-index values for layering elements.</p>
+      
+      <div style={{ marginBottom: '48px' }}>
+        <h2>Primitive Z-Index</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+          {zIndexTokens && Object.keys(zIndexTokens).map((key) => {
+            const token = zIndexTokens[key];
+            const value = token.$value;
+            
+            return (
+              <div
+                key={key}
+                style={{
+                  padding: '16px',
+                  border: '1px solid #e0e0e0',
+                  borderRadius: '8px',
+                  backgroundColor: '#f7f7f7',
+                }}
+              >
+                <div style={{ fontWeight: '600', marginBottom: '4px' }}>{key}</div>
+                <div style={{ fontSize: '24px', color: '#5690f5', fontWeight: 'bold' }}>{value}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      
+      {semanticTokens['z-index'] && (
+        <div>
+          <h2>Semantic Z-Index</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+            {Object.keys(semanticTokens['z-index']).map((key) => {
+              const token = semanticTokens['z-index'][key];
+              const value = resolveToken(token?.$value, primitives);
+              const zValue = typeof value === 'number' ? value : 0;
+              
+              return (
+                <div
+                  key={key}
+                  style={{
+                    padding: '16px',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    backgroundColor: '#f7f7f7',
+                  }}
+                >
+                  <div style={{ fontWeight: '600', marginBottom: '4px' }}>z-index.{key}</div>
+                  <div style={{ fontSize: '24px', color: '#5690f5', fontWeight: 'bold' }}>{zValue}</div>
+                  {token.$description && (
+                    <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Opacity (Primitives & Semantic)
+export const Opacity = () => {
+  const opacityKeys = Object.keys(primitives)
+    .filter((key) => key.startsWith('opacity-'))
+    .sort((a, b) => {
+      const aNum = parseInt(a.replace('opacity-', '')) || 0;
+      const bNum = parseInt(b.replace('opacity-', '')) || 0;
+      return aNum - bNum;
+    });
+  
+  return (
+    <div>
+      <h1>Opacity Tokens</h1>
+      <p>Opacity values for transparency effects.</p>
+      
+      <div style={{ marginBottom: '48px' }}>
+        <h2>Primitive Opacity</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '16px' }}>
+          {opacityKeys.map((key) => {
+            const token = primitives[key];
+            const value = token.$value;
+            const percentage = Math.round(value * 100);
+            
+            return (
+              <div key={key} style={{ textAlign: 'center' }}>
+                <div
+                  style={{
+                    width: '100px',
+                    height: '100px',
+                    backgroundColor: `rgba(86, 144, 245, ${value})`,
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '8px',
+                    margin: '0 auto 16px',
+                  }}
+                />
+                <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>{key}</div>
+                <div style={{ fontSize: '12px', color: '#666' }}>{percentage}%</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      
+      {semanticTokens.opacity && (
+        <div>
+          <h2>Semantic Opacity</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+            {Object.keys(semanticTokens.opacity).map((key) => {
+              const token = semanticTokens.opacity[key];
+              const value = token.$value;
+              const percentage = typeof value === 'number' ? value : 0;
+              
+              return (
+                <div key={key} style={{ textAlign: 'center' }}>
+                  <div
+                    style={{
+                      width: '100px',
+                      height: '100px',
+                      backgroundColor: `rgba(86, 144, 245, ${percentage / 100})`,
+                      border: '1px solid #e0e0e0',
+                      borderRadius: '8px',
+                      margin: '0 auto 16px',
+                    }}
+                  />
+                  <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>opacity.{key}</div>
+                  <div style={{ fontSize: '12px', color: '#666' }}>{percentage}%</div>
+                  {token.$description && (
+                    <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Sizing (Primitives & Semantic)
+export const Sizing = () => {
+  const sizeKeys = Object.keys(primitives)
+    .filter((key) => key.startsWith('size-'))
+    .sort();
+  
+  return (
+    <div>
+      <h1>Sizing Tokens</h1>
+      <p>Size values for dimensions and control heights.</p>
+      
+      <div style={{ marginBottom: '48px' }}>
+        <h2>Primitive Sizing</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '24px' }}>
+          {sizeKeys.map((key) => {
+            const token = primitives[key];
+            const value = token.$value;
+            
+            return (
+              <div key={key} style={{ textAlign: 'center' }}>
+                <div
+                  style={{
+                    width: `${value}px`,
+                    height: `${value}px`,
+                    backgroundColor: '#5690f5',
+                    borderRadius: '4px',
+                    margin: '0 auto 16px',
+                  }}
+                />
+                <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>{key}</div>
+                <div style={{ fontSize: '12px', color: '#666' }}>{value}px</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      
+      {semanticTokens.control && semanticTokens.control.height && (
+        <div style={{ marginBottom: '48px' }}>
+          <h2>Semantic Control Heights</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '24px' }}>
+            {Object.keys(semanticTokens.control.height).map((key) => {
+              const token = semanticTokens.control.height[key];
+              const value = resolveToken(token?.$value, primitives);
+              const heightValue = typeof value === 'number' ? value : 40;
+              
+              return (
+                <div key={key} style={{ textAlign: 'center' }}>
+                  <div
+                    style={{
+                      width: '120px',
+                      height: `${heightValue}px`,
+                      backgroundColor: '#5690f5',
+                      borderRadius: '4px',
+                      margin: '0 auto 16px',
+                    }}
+                  />
+                  <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>control.height.{key}</div>
+                  <div style={{ fontSize: '12px', color: '#666' }}>{heightValue}px</div>
+                  {token.$description && (
+                    <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      
+      {semanticTokens.sizing && (
+        <div>
+          <h2>Semantic Sizing</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+            {Object.keys(semanticTokens.sizing).map((key) => {
+              const token = semanticTokens.sizing[key];
+              const value = resolveToken(token?.$value, primitives);
+              const sizeValue = typeof value === 'number' ? value : 16;
+              
+              return (
+                <div key={key} style={{ textAlign: 'center' }}>
+                  <div
+                    style={{
+                      width: `${sizeValue}px`,
+                      height: `${sizeValue}px`,
+                      backgroundColor: '#5690f5',
+                      borderRadius: '4px',
+                      margin: '0 auto 16px',
+                    }}
+                  />
+                  <div style={{ fontWeight: '600', marginBottom: '4px', fontSize: '14px' }}>sizing.{key}</div>
+                  <div style={{ fontSize: '12px', color: '#666' }}>{sizeValue}px</div>
+                  {token.$description && (
+                    <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Animation (Primitives & Semantic)
+export const Animation = () => {
+  const durationKeys = Object.keys(primitives)
+    .filter((key) => key.startsWith('duration-') || key.startsWith('animation-duration-'))
+    .sort();
+  
+  const easingKeys = Object.keys(primitives)
+    .filter((key) => key.startsWith('easing-') || key.startsWith('animation-easing-'))
+    .sort();
+  
+  return (
+    <div>
+      <h1>Animation Tokens</h1>
+      <p>Animation duration and easing values for transitions.</p>
+      
+      <div style={{ marginBottom: '48px' }}>
+        <h2>Primitive Durations</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+          {durationKeys.map((key) => {
+            const token = primitives[key];
+            const value = token.$value;
+            
+            return (
+              <div
+                key={key}
+                style={{
+                  padding: '16px',
+                  border: '1px solid #e0e0e0',
+                  borderRadius: '8px',
+                  backgroundColor: '#f7f7f7',
+                }}
+              >
+                <div style={{ fontWeight: '600', marginBottom: '4px' }}>{key}</div>
+                <div style={{ fontSize: '20px', color: '#5690f5', fontWeight: 'bold' }}>{value}ms</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      
+      <div style={{ marginBottom: '48px' }}>
+        <h2>Primitive Easing</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+          {easingKeys.map((key) => {
+            const token = primitives[key];
+            const value = token.$value;
+            
+            return (
+              <div
+                key={key}
+                style={{
+                  padding: '16px',
+                  border: '1px solid #e0e0e0',
+                  borderRadius: '8px',
+                  backgroundColor: '#f7f7f7',
+                }}
+              >
+                <div style={{ fontWeight: '600', marginBottom: '4px' }}>{key}</div>
+                <div style={{ fontSize: '12px', color: '#666', wordBreak: 'break-all' }}>{value}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      
+      {semanticTokens.animation && (
+        <div>
+          <h2>Semantic Animation</h2>
+          {semanticTokens.animation.duration && (
+            <div style={{ marginBottom: '32px' }}>
+              <h3>Duration</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+                {Object.keys(semanticTokens.animation.duration).map((key) => {
+                  const token = semanticTokens.animation.duration[key];
+                  const value = resolveToken(token?.$value, primitives);
+                  const durationValue = typeof value === 'number' ? value : 200;
+                  
+                  return (
+                    <div
+                      key={key}
+                      style={{
+                        padding: '16px',
+                        border: '1px solid #e0e0e0',
+                        borderRadius: '8px',
+                        backgroundColor: '#f7f7f7',
+                      }}
+                    >
+                      <div style={{ fontWeight: '600', marginBottom: '4px' }}>animation.duration.{key}</div>
+                      <div style={{ fontSize: '20px', color: '#5690f5', fontWeight: 'bold' }}>{durationValue}ms</div>
+                      {token.$description && (
+                        <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          
+          {semanticTokens.animation.easing && (
+            <div>
+              <h3>Easing</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+                {Object.keys(semanticTokens.animation.easing).map((key) => {
+                  const token = semanticTokens.animation.easing[key];
+                  const value = resolveToken(token?.$value, primitives);
+                  const easingValue = typeof value === 'string' ? value : 'linear';
+                  
+                  return (
+                    <div
+                      key={key}
+                      style={{
+                        padding: '16px',
+                        border: '1px solid #e0e0e0',
+                        borderRadius: '8px',
+                        backgroundColor: '#f7f7f7',
+                      }}
+                    >
+                      <div style={{ fontWeight: '600', marginBottom: '4px' }}>animation.easing.{key}</div>
+                      <div style={{ fontSize: '12px', color: '#666', wordBreak: 'break-all' }}>{easingValue}</div>
+                      {token.$description && (
+                        <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Gap & Padding (Semantic)
+export const GapAndPadding = () => {
+  return (
+    <div>
+      <h1>Gap & Padding Tokens (Semantic)</h1>
+      <p>Spacing tokens for gaps and padding, referencing primitive spacing values.</p>
+      
+      {semanticTokens.gap && (
+        <div style={{ marginBottom: '48px' }}>
+          <h2>Gap Tokens</h2>
+          <div style={{ maxWidth: '600px' }}>
+            {Object.keys(semanticTokens.gap).map((key) => {
+              const token = semanticTokens.gap[key];
+              const value = resolveToken(token?.$value, primitives);
+              const gapValue = typeof value === 'number' ? value : 0;
+              
+              return (
+                <div key={key} style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div
+                    style={{
+                      width: `${gapValue}px`,
+                      height: '40px',
+                      backgroundColor: '#5690f5',
+                      borderRadius: '4px',
+                    }}
+                  />
+                  <div>
+                    <div style={{ fontWeight: '600' }}>gap.{key}</div>
+                    <div style={{ fontSize: '12px', color: '#666' }}>{gapValue}px</div>
+                    {token.$description && (
+                      <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}>{token.$description}</div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      
+      {semanticTokens.padding && (
+        <div>
+          <h2>Padding Tokens</h2>
+          <div style={{ maxWidth: '600px' }}>
+            {Object.keys(semanticTokens.padding).map((key) => {
+              const token = semanticTokens.padding[key];
+              const value = resolveToken(token?.$value, primitives);
+              const paddingValue = typeof value === 'number' ? value : 0;
+              
+              return (
+                <div key={key} style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div
+                    style={{
+                      width: `${paddingValue}px`,
+                      height: '40px',
+                      backgroundColor: '#5690f5',
+                      borderRadius: '4px',
+                    }}
+                  />
+                  <div>
+                    <div style={{ fontWeight: '600' }}>padding.{key}</div>
+                    <div style={{ fontSize: '12px', color: '#666' }}>{paddingValue}px</div>
+                    {token.$description && (
+                      <div style={{ fontSize: '11px', color: '#999', marginTop: '2px' }}>{token.$description}</div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Semantic Shadows
+export const SemanticShadows = () => {
+  return (
+    <div>
+      <h1>Semantic Shadow Tokens</h1>
+      <p>Semantic shadow tokens that reference primitive shadow values.</p>
+      
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '24px' }}>
+        {Object.keys(semanticTokens)
+          .filter((key) => key.startsWith('shadow-'))
+          .map((key) => {
+            const token = semanticTokens[key];
+            const shadowValue = resolveToken(token?.$value, primitives);
+            const shadow = typeof shadowValue === 'string' ? shadowValue : '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+            
+            return (
+              <div key={key} style={{ textAlign: 'center' }}>
+                <div
+                  style={{
+                    width: '150px',
+                    height: '150px',
+                    backgroundColor: '#ffffff',
+                    borderRadius: '8px',
+                    boxShadow: shadow,
+                    margin: '0 auto 16px',
+                  }}
+                />
+                <div style={{ fontWeight: '600', marginBottom: '4px' }}>{key}</div>
+                <div style={{ fontSize: '11px', color: '#666', wordBreak: 'break-all' }}>
+                  {shadow}
+                </div>
+                {token.$description && (
+                  <div style={{ fontSize: '11px', color: '#999', marginTop: '4px' }}>{token.$description}</div>
+                )}
+              </div>
+            );
+          })}
+      </div>
+    </div>
+  );
+};
+
 // Component Tokens Overview
 export const ComponentTokens = () => {
   const components = Object.keys(componentTokens).filter((key) => !key.startsWith('$') && key !== 'icon');
