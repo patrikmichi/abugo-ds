@@ -1,0 +1,73 @@
+{
+  "modes": {
+    "Reservio": {
+      "border-0": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 0
+      },
+      "border-1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 1
+      },
+      "border-2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 2
+      },
+      "border-3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 4
+      }
+    },
+    "Survio": {
+      "border-0": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 0
+      },
+      "border-1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 1
+      },
+      "border-2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 2
+      },
+      "border-3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "borderWidth",
+        "$value": 4
+      }
+    }
+  },
+  "$name": "Border Width"
+}

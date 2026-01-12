@@ -1,0 +1,41 @@
+{
+  "modes": {
+    "Reservio": {
+      "transparent": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0)"
+      },
+      "not assigned": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0)"
+      }
+    },
+    "Survio": {
+      "transparent": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0)"
+      },
+      "not assigned": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0)"
+      }
+    }
+  },
+  "$name": "Universal"
+}

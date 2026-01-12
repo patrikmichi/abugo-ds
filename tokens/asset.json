@@ -1,0 +1,24 @@
+{
+  "modes": {
+    "Reservio": {
+      "asset-placeholder": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "asset",
+        "$value": "path/to/asset.png"
+      }
+    },
+    "Survio": {
+      "asset-placeholder": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "asset",
+        "$value": "path/to/asset.png"
+      }
+    }
+  }
+}

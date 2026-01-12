@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Reservio",
+    "selectedTokenSets": {
+      "colors": "enabled",
+      "featureColors": "enabled",
+      "borderWidth": "enabled",
+      "iconSize": "enabled",
+      "borderRadius": "enabled",
+      "sizing": "enabled",
+      "spacing": "enabled",
+      "typography": "enabled",
+      "universal": "enabled",
+      "boxShadow": "enabled",
+      "opacity": "enabled",
+      "zIndex": "enabled",
+      "animation": "enabled",
+      "semanticTokens": "enabled",
+      "componentTokens": "enabled",
+      "border": "enabled",
+      "typography-composite": "enabled",
+      "asset": "enabled",
+      "boolean": "enabled",
+      "text": "enabled",
+      "other": "enabled"
+    }
+  },
+  {
+    "name": "Survio",
+    "selectedTokenSets": {
+      "colors": "enabled",
+      "featureColors": "enabled",
+      "borderWidth": "enabled",
+      "iconSize": "enabled",
+      "borderRadius": "enabled",
+      "sizing": "enabled",
+      "spacing": "enabled",
+      "typography": "enabled",
+      "universal": "enabled",
+      "boxShadow": "enabled",
+      "opacity": "enabled",
+      "zIndex": "enabled",
+      "animation": "enabled",
+      "semanticTokens": "enabled",
+      "componentTokens": "enabled",
+      "border": "enabled",
+      "typography-composite": "enabled",
+      "asset": "enabled",
+      "boolean": "enabled",
+      "text": "enabled",
+      "other": "enabled"
+    }
+  }
+]

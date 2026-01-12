@@ -1,0 +1,377 @@
+{
+  "modes": {
+    "Reservio": {
+      "1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 4
+      },
+      "2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 8
+      },
+      "3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 12
+      },
+      "4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 16
+      },
+      "5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 20
+      },
+      "6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 24
+      },
+      "7": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 28
+      },
+      "8": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 32
+      },
+      "9": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 36
+      },
+      "10": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 40
+      },
+      "12": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 48
+      },
+      "14": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 56
+      },
+      "16": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 64
+      },
+      "18": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 72
+      },
+      "20": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 80
+      },
+      "22": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 88
+      },
+      "24": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 96
+      },
+      "26": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 104
+      },
+      "28": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 112
+      },
+      "30": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 120
+      },
+      "0-5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 2
+      },
+      "1-5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 6
+      },
+      "2-5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 10
+      }
+    },
+    "Survio": {
+      "1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 4
+      },
+      "2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 8
+      },
+      "3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 12
+      },
+      "4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 16
+      },
+      "5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 20
+      },
+      "6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 24
+      },
+      "7": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 28
+      },
+      "8": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 32
+      },
+      "9": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 36
+      },
+      "10": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 40
+      },
+      "12": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 48
+      },
+      "14": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 56
+      },
+      "16": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 64
+      },
+      "18": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 72
+      },
+      "20": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 80
+      },
+      "22": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 88
+      },
+      "24": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 96
+      },
+      "26": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 104
+      },
+      "28": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 112
+      },
+      "30": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 120
+      },
+      "0-5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 2
+      },
+      "1-5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 6
+      },
+      "2-5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "spacing",
+        "$value": 10
+      }
+    }
+  },
+  "$name": "Spacing"
+}

@@ -1,0 +1,73 @@
+{
+  "modes": {
+    "Reservio": {
+      "passes": {
+        "credits": {
+          "strong": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$value": "#270cb4"
+          },
+          "subtle": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$value": "#e5e2f6"
+          }
+        },
+        "punch cards": {
+          "strong": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$value": "#077871"
+          },
+          "subtle": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$value": "#e1efee"
+          }
+        },
+        "memberships": {
+          "strong": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$value": "#a74915"
+          },
+          "subtle": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$value": "#f4e9e3"
+          }
+        }
+      },
+      "ai-features": {
+        "strong": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$value": "#7e0d9d"
+        },
+        "subtle": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$value": "#f5ecf7"
+        }
+      }
+    }
+  },
+  "$name": "Feature Colors"
+}

@@ -1,0 +1,40 @@
+{
+  "modes": {
+    "Reservio": {
+      "boolean-true": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "boolean",
+        "$value": true
+      },
+      "boolean-false": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "boolean",
+        "$value": false
+      }
+    },
+    "Survio": {
+      "boolean-true": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "boolean",
+        "$value": true
+      },
+      "boolean-false": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "boolean",
+        "$value": false
+      }
+    }
+  }
+}

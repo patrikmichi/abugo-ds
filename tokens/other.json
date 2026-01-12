@@ -1,0 +1,24 @@
+{
+  "modes": {
+    "Reservio": {
+      "other-placeholder": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "other",
+        "$value": "custom value"
+      }
+    },
+    "Survio": {
+      "other-placeholder": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "other",
+        "$value": "custom value"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "modes": {
+    "Reservio": {
+      "typography-body": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.fontFamily.sans}",
+          "fontSize": "{typography.fontSize.3}",
+          "fontWeight": "{typography.fontWeight.normal}",
+          "lineHeight": "{typography.lineHeight.base}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      }
+    },
+    "Survio": {
+      "typography-body": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$hiddenFromPublishing": true,
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{typography.fontFamily.sans}",
+          "fontSize": "{typography.fontSize.3}",
+          "fontWeight": "{typography.fontWeight.normal}",
+          "lineHeight": "{typography.lineHeight.base}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      }
+    }
+  }
+}
