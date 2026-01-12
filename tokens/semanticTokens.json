@@ -2351,8 +2351,8 @@
       ],
       "$type": "number",
       "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{opacity-75}",
+      "$collectionName": "",
+      "$value": 75,
       "$description": "Overlay opacity for modals and backdrops"
     }
   },
