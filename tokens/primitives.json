@@ -561,7 +561,7 @@
     "$type": "spacing",
     "$value": 10
   },
-  "border-width-border-0": {
+  "border-width-0": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -569,7 +569,7 @@
     "$type": "borderWidth",
     "$value": 0
   },
-  "border-width-border-1": {
+  "border-width-1": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -577,7 +577,7 @@
     "$type": "borderWidth",
     "$value": 1
   },
-  "border-width-border-2": {
+  "border-width-2": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -585,7 +585,7 @@
     "$type": "borderWidth",
     "$value": 2
   },
-  "border-width-border-3": {
+  "border-width-3": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -593,7 +593,7 @@
     "$type": "borderWidth",
     "$value": 4
   },
-  "border-radius-radius-0": {
+  "radius-0": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -601,7 +601,7 @@
     "$type": "borderRadius",
     "$value": 0
   },
-  "border-radius-radius-1": {
+  "radius-1": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -609,7 +609,7 @@
     "$type": "borderRadius",
     "$value": 4
   },
-  "border-radius-radius-2": {
+  "radius-2": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -617,7 +617,7 @@
     "$type": "borderRadius",
     "$value": 8
   },
-  "border-radius-radius-3": {
+  "radius-3": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -625,7 +625,7 @@
     "$type": "borderRadius",
     "$value": 12
   },
-  "border-radius-radius-4": {
+  "radius-4": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -633,7 +633,7 @@
     "$type": "borderRadius",
     "$value": 16
   },
-  "border-radius-radius-5": {
+  "radius-5": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -641,7 +641,7 @@
     "$type": "borderRadius",
     "$value": 20
   },
-  "border-radius-radius-6": {
+  "radius-6": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -649,7 +649,7 @@
     "$type": "borderRadius",
     "$value": 24
   },
-  "border-radius-radius-round": {
+  "radius-round": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -657,7 +657,7 @@
     "$type": "borderRadius",
     "$value": 999
   },
-  "box-shadow-shadow-xs": {
+  "shadow-xs": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -665,7 +665,7 @@
     "$type": "boxShadow",
     "$value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
   },
-  "box-shadow-shadow-sm": {
+  "shadow-sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -673,7 +673,7 @@
     "$type": "boxShadow",
     "$value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)"
   },
-  "box-shadow-shadow-md": {
+  "shadow-md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -681,7 +681,7 @@
     "$type": "boxShadow",
     "$value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)"
   },
-  "box-shadow-shadow-lg": {
+  "shadow-lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -689,7 +689,7 @@
     "$type": "boxShadow",
     "$value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)"
   },
-  "box-shadow-shadow-xl": {
+  "shadow-xl": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -697,7 +697,7 @@
     "$type": "boxShadow",
     "$value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)"
   },
-  "box-shadow-shadow-2xl": {
+  "shadow-2xl": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -705,7 +705,7 @@
     "$type": "boxShadow",
     "$value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
   },
-  "box-shadow-shadow-inner": {
+  "shadow-inner": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -713,7 +713,7 @@
     "$type": "boxShadow",
     "$value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)"
   },
-  "box-shadow-shadow-1-down": {
+  "shadow-1-down": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -721,7 +721,7 @@
     "$type": "boxShadow",
     "$value": "0 4px 8px 0 rgba(0, 0, 0, 0.08)"
   },
-  "box-shadow-shadow-2-down": {
+  "shadow-2-down": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -729,7 +729,7 @@
     "$type": "boxShadow",
     "$value": "0 8px 12px 0 rgba(0, 0, 0, 0.08)"
   },
-  "box-shadow-shadow-3-down": {
+  "shadow-3-down": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -737,7 +737,7 @@
     "$type": "boxShadow",
     "$value": "0 8px 16px 0 rgba(0, 0, 0, 0.12)"
   },
-  "box-shadow-shadow-4-down": {
+  "shadow-4-down": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -745,7 +745,7 @@
     "$type": "boxShadow",
     "$value": "0 8px 24px 0 rgba(0, 0, 0, 0.16)"
   },
-  "box-shadow-shadow-5-down": {
+  "shadow-5-down": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -753,7 +753,7 @@
     "$type": "boxShadow",
     "$value": "0 12px 40px 0 rgba(0, 0, 0, 0.16)"
   },
-  "box-shadow-shadow-1-up": {
+  "shadow-1-up": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -761,7 +761,7 @@
     "$type": "boxShadow",
     "$value": "0 -4px 8px 0 rgba(0, 0, 0, 0.08)"
   },
-  "box-shadow-shadow-2-up": {
+  "shadow-2-up": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -769,7 +769,7 @@
     "$type": "boxShadow",
     "$value": "0 -8px 12px 0 rgba(0, 0, 0, 0.08)"
   },
-  "box-shadow-shadow-3-up": {
+  "shadow-3-up": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -777,7 +777,7 @@
     "$type": "boxShadow",
     "$value": "0 -8px 16px 0 rgba(0, 0, 0, 0.12)"
   },
-  "box-shadow-shadow-4-up": {
+  "shadow-4-up": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -785,7 +785,7 @@
     "$type": "boxShadow",
     "$value": "0 -8px 24px 0 rgba(0, 0, 0, 0.16)"
   },
-  "box-shadow-shadow-5-up": {
+  "shadow-5-up": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -793,42 +793,42 @@
     "$type": "boxShadow",
     "$value": "0 -12px 40px 0 rgba(0, 0, 0, 0.16)"
   },
-  "sizing-size-1": {
+  "size-1": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "sizing",
     "$value": 16
   },
-  "sizing-size-2": {
+  "size-2": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "sizing",
     "$value": 24
   },
-  "sizing-size-3": {
+  "size-3": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "sizing",
     "$value": 32
   },
-  "sizing-size-4": {
+  "size-4": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "sizing",
     "$value": 40
   },
-  "sizing-size-5": {
+  "size-5": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "sizing",
     "$value": 48
   },
-  "sizing-size-6": {
+  "size-6": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -963,7 +963,7 @@
     "$type": "border",
     "$value": {
       "color": "{grey.300}",
-      "width": "{border-width-border-1}",
+      "width": "{border-width-1}",
       "style": "solid"
     }
   },
@@ -975,7 +975,7 @@
     "$type": "border",
     "$value": {
       "color": "{brand.500}",
-      "width": "{border-width-border-2}",
+      "width": "{border-width-2}",
       "style": "solid"
     }
   },
@@ -1753,7 +1753,7 @@
       "$value": "#f5ecf7"
     }
   },
-  "animation-duration-instant": {
+  "duration-instant": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1761,7 +1761,7 @@
     "$type": "number",
     "$value": 0
   },
-  "animation-duration-fast": {
+  "duration-fast": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1769,7 +1769,7 @@
     "$type": "number",
     "$value": 100
   },
-  "animation-duration-base": {
+  "duration-base": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1817,7 +1817,7 @@
     "$type": "string",
     "$value": "cubic-bezier(0.4, 0, 1, 1)"
   },
-  "animation-easing-ease-out": {
+  "easing-ease-out": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1825,7 +1825,7 @@
     "$type": "string",
     "$value": "cubic-bezier(0, 0, 0.2, 1)"
   },
-  "animation-easing-ease-in-out": {
+  "easing-ease-in-out": {
     "$scopes": [
       "ALL_SCOPES"
     ],

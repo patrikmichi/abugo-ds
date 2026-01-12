@@ -1503,7 +1503,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-duration-fast}"
+    "$value": "{duration-fast}"
   },
   "field-animation-easing": {
     "$scopes": [
@@ -1512,7 +1512,7 @@
     "$type": "string",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-easing-ease-out}"
+    "$value": "{easing-ease-out}"
   },
   "field-icon-sm": {
     "$scopes": [
@@ -3765,7 +3765,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-duration-base}"
+    "$value": "{duration-base}"
   },
   "accordion-default-animation-easing": {
     "$scopes": [
@@ -3774,7 +3774,7 @@
     "$type": "string",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-easing-ease-in-out}"
+    "$value": "{easing-ease-in-out}"
   },
   "tabs-default-background-default": {
     "$scopes": [
@@ -3855,7 +3855,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-duration-fast}"
+    "$value": "{duration-fast}"
   },
   "tabs-default-animation-easing": {
     "$scopes": [
@@ -3864,7 +3864,7 @@
     "$type": "string",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-easing-ease-out}"
+    "$value": "{easing-ease-out}"
   },
   "slider-default-track-default": {
     "$scopes": [
@@ -3927,7 +3927,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-duration-base}"
+    "$value": "{duration-base}"
   },
   "slider-default-animation-easing": {
     "$scopes": [
@@ -3936,7 +3936,7 @@
     "$type": "string",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-easing-ease-out}"
+    "$value": "{easing-ease-out}"
   },
   "stepper-default-background-default": {
     "$scopes": [
@@ -4107,7 +4107,7 @@
     "$type": "number",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-duration-base}"
+    "$value": "{duration-base}"
   },
   "file-upload-default-animation-easing": {
     "$scopes": [
@@ -4116,7 +4116,7 @@
     "$type": "string",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{animation-easing-ease-in-out}"
+    "$value": "{easing-ease-in-out}"
   },
   "rating-default-background-default": {
     "$scopes": [
