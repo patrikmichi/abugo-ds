@@ -4,7 +4,8 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "generate-docs": "node generate-docs.js"
   },
   "devDependencies": {
     "@pandacss/dev": "^1.8.0",
