@@ -1,25 +1,5 @@
 {
   "$name": "Component Tokens",
-  "height": {
-    "s": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{control.height.xs}"
-    },
-    "l": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "sizing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{control.height.sm}"
-    }
-  },
   "item": {
     "background": {
       "default": {

@@ -31,6 +31,7 @@ These properties are organized **category-first** because they're used across mu
 | `borderWidth` | `borderWidth.{component}` | `borderWidth.input`, `borderWidth.card` |
 | `zIndex` | `zIndex.{component}` | `zIndex.modal`, `zIndex.tooltip` |
 | `icon` | `icon.{component}.{size}` | `icon.button.sm`, `icon.field.sm` |
+| `height` | `height.{component}.{size}` | `height.button.sm`, `height.field.md`, `height.chip.xxs` |
 
 **Criteria for Category-First:**
 - Used by **3+ components**
@@ -53,7 +54,6 @@ These properties are organized **component-first** because they're unique to spe
 | Property | Pattern | Example |
 |----------|---------|---------|
 | Colors | `{component}.{variant}.{property}.{state}` | `button.primary.background.default` |
-| Height | `{component}.height.{size}` | `field.height.sm`, `field.height.md` |
 | Width | `{component}.width.{value}` | `field.width.full`, `field.width.auto` |
 | Opacity | `{component}.opacity.{state}` | `loading.opacity.default` |
 
