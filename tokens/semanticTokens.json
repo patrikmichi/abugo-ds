@@ -914,7 +914,7 @@
     "$value": "{border-width-3}",
     "$description": "Thick border width (4px). Use for strong emphasis and dividers."
   },
-  "custom-notes-content-filled": {
+  "notes-content-filled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -924,7 +924,7 @@
     "$value": "{brown.700}",
     "$description": "Text color for filled note content. Use for active note text."
   },
-  "custom-notes-content-placeholder": {
+  "notes-content-placeholder": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -934,7 +934,7 @@
     "$value": "{brown.600}",
     "$description": "Text color for placeholder note content. Use for empty note states."
   },
-  "custom-notes-background": {
+  "notes-background": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -944,7 +944,7 @@
     "$value": "{yellow.400}",
     "$description": "Background color for notes. Use for note containers and highlights."
   },
-  "custom-rating": {
+  "rating": {
     "$scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"

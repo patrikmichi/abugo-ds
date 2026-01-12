@@ -232,9 +232,9 @@ export const SemanticColors = () => {
     return groups;
   })() : {};
   
-  // Get custom tokens
+  // Get custom tokens (notes and rating)
   const customTokens = Object.keys(semanticTokens)
-    .filter((key) => key.startsWith('custom-'))
+    .filter((key) => key.startsWith('notes-') || key === 'rating')
     .sort();
   
   const renderColorGroup = (tokens, title) => (

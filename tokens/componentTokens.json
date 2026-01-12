@@ -4567,7 +4567,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{custom-rating}"
+          "$value": "{rating}"
         },
         "hover": {
           "$scopes": [
@@ -4576,7 +4576,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{custom-rating}"
+          "$value": "{rating}"
         }
       }
     }
