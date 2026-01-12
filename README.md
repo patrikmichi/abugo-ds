@@ -230,6 +230,7 @@ The Storybook includes:
 
 - [`docs/TOKENS.md`](docs/TOKENS.md) - Comprehensive token reference documentation
 - [`docs/DESIGNER_GUIDE.md`](docs/DESIGNER_GUIDE.md) - Guide for designers on using tokens for new components
+- [`docs/DEVELOPER_GUIDE.md`](docs/DEVELOPER_GUIDE.md) - Guide for developers on using tokens with Panda CSS
 
 ## How to Use
 
@@ -367,6 +368,31 @@ Component tokens reference semantic tokens and are organized by component, varia
   - Icon gaps: `{component}.gap.icon` (component-level)
   - Icon colors: `{component}.icon` or `{component}.{variant}.icon` (component-level)
   - Icon padding: `{component}.icon.only.padding` (component-level)
+
+## Panda CSS Integration
+
+This repository includes Panda CSS configuration that automatically generates CSS utilities and TypeScript types from design tokens.
+
+### Generating CSS System
+
+After making changes to tokens, regenerate the CSS system:
+
+```bash
+npm run panda:codegen
+```
+
+Or watch for changes:
+
+```bash
+npm run panda:watch
+```
+
+The generated system is available in the `styled-system/` directory and includes:
+- CSS utilities for all tokens
+- TypeScript types for type-safe token usage
+- Layout patterns and helpers
+
+See [`docs/DEVELOPER_GUIDE.md`](docs/DEVELOPER_GUIDE.md) for detailed usage instructions.
 
 ## Security Note
 
