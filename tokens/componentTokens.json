@@ -2522,8 +2522,10 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{content-passive-neutral-default}"
-        },
-        "icon": {
+        }
+      },
+      "icon": {
+        "default": {
           "$scopes": [
             "ALL_SCOPES"
           ],
@@ -2787,8 +2789,10 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{content-passive-on-danger}"
-        },
-        "icon": {
+        }
+      },
+      "icon": {
+        "default": {
           "$scopes": [
             "ALL_SCOPES"
           ],
