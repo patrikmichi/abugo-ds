@@ -1,5 +1,5 @@
 {
-  "featureColors": {
+  "feature-colors": {
     "passes": {
       "credits": {
         "strong": {
@@ -67,7 +67,7 @@
       }
     }
   },
-  "borderWidth": {
+  "border-width": {
     "border-0": {
       "$scopes": [
         "ALL_SCOPES"
@@ -101,7 +101,7 @@
       "$value": 4
     }
   },
-  "iconSize": {
+  "icon-size": {
     "icon-size-1": {
       "$scopes": [
         "ALL_SCOPES"
@@ -167,7 +167,7 @@
       "$value": 64
     }
   },
-  "borderRadius": {
+  "border-radius": {
     "radius-0": {
       "$scopes": [
         "ALL_SCOPES"
@@ -233,7 +233,7 @@
       "$value": 999
     }
   },
-  "boxShadow": {
+  "box-shadow": {
     "shadow-xs": {
       "$scopes": [
         "ALL_SCOPES"
@@ -371,7 +371,7 @@
       "$value": "0 -12px 40px 0 rgba(0, 0, 0, 0.16)"
     }
   },
-  "zIndex": {
+  "z-index": {
     "z-base": {
       "$scopes": [
         "ALL_SCOPES"
@@ -437,7 +437,7 @@
       "$value": 1070
     }
   },
-  "typographyComposite": {
+  "typography-composite": {
     "typography-body": {
       "$scopes": [
         "ALL_SCOPES"
