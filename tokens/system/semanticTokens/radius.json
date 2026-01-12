@@ -1,0 +1,85 @@
+{
+  "$name": "Semantic Tokens",
+  "radius": {
+    "none": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-0}",
+      "$description": "No border radius (0px). Use for square corners."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-1}",
+      "$description": "Extra small border radius (4px). Use for compact components like badges or small buttons."
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-2}",
+      "$description": "Small border radius (8px). Use for standard buttons and input fields."
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-3}",
+      "$description": "Medium border radius (12px). Use for cards and larger interactive elements."
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-4}",
+      "$description": "Large border radius (16px). Use for prominent cards and containers."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-5}",
+      "$description": "Extra large border radius (20px). Use for large containers and modals."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-6}",
+      "$description": "Extra extra large border radius (24px). Use for very large containers."
+    },
+    "full": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-round}",
+      "$description": "Full border radius (999px). Use for pill-shaped elements like tags or rounded buttons."
+    }
+  }
+}

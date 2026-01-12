@@ -1,0 +1,59 @@
+{
+  "$name": "Semantic Tokens",
+  "background-passive-warning-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}",
+    "$description": "Default warning background for passive elements. Use for warning states, caution messages, or attention-requiring information.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "warning",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-warning-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.100}",
+    "$description": "Subtle warning background for passive elements. Use for warning message backgrounds or caution indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "warning",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

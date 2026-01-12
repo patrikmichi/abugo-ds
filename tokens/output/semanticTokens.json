@@ -1,0 +1,3667 @@
+{
+  "$name": "Semantic Tokens",
+  "$description": "Semantic aliases for common design patterns. These provide shorter, more intuitive names for frequently used token combinations.",
+  "surface": {
+    "default": {
+      "$scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background-passive-neutral-default}",
+      "$description": "Default surface color for UI containers. Alias for background-passive-neutral-default. Use for cards, panels, and base surfaces.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "surface",
+          "participation": "passive",
+          "intent": "neutral",
+          "state": "default",
+          "usage": [
+            "cards",
+            "panels",
+            "containers",
+            "surfaces"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "elevated": {
+      "$scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background-passive-neutral-elevated}",
+      "$description": "Elevated surface color for UI containers above the base layer. Alias for background-passive-neutral-elevated. Use for modals, dropdowns, and floating panels.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "surface",
+          "participation": "passive",
+          "intent": "neutral",
+          "state": "elevated",
+          "usage": [
+            "modals",
+            "dropdowns",
+            "floating-panels",
+            "popovers"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "interactive": {
+      "$scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background-active-neutral-default}",
+      "$description": "Interactive surface color for clickable elements. Alias for background-active-neutral-default. Use for buttons, links, and interactive areas.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "surface",
+          "participation": "active",
+          "intent": "neutral",
+          "state": "default",
+          "usage": [
+            "buttons",
+            "links",
+            "interactive-elements"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    }
+  },
+  "text": {
+    "primary": {
+      "$scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-neutral-default}",
+      "$description": "Primary text color for main content. Alias for content-passive-neutral-default. Use for body text, headings, and primary content.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "text",
+          "participation": "passive",
+          "intent": "neutral",
+          "state": "primary",
+          "usage": [
+            "body-text",
+            "headings",
+            "primary-content"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "secondary": {
+      "$scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-neutral-subtle}",
+      "$description": "Secondary text color for less important content. Alias for content-passive-neutral-subtle. Use for captions, secondary text, and less emphasized content.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "text",
+          "participation": "passive",
+          "intent": "neutral",
+          "state": "secondary",
+          "usage": [
+            "captions",
+            "secondary-text",
+            "less-emphasized-content"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "muted": {
+      "$scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-passive-neutral-muted}",
+      "$description": "Muted text color for tertiary content. Alias for content-passive-neutral-muted. Use for placeholder text, hints, and very low-emphasis content.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "text",
+          "participation": "passive",
+          "intent": "neutral",
+          "state": "muted",
+          "usage": [
+            "placeholder-text",
+            "hints",
+            "low-emphasis-content"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "disabled": {
+      "$scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-active-neutral-disabled}",
+      "$description": "Disabled text color for inactive content. Alias for content-active-neutral-disabled. Use for disabled buttons, inactive links, and unavailable content.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "text",
+          "participation": "active",
+          "intent": "neutral",
+          "state": "disabled",
+          "usage": [
+            "disabled-buttons",
+            "inactive-links",
+            "unavailable-content"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    }
+  },
+  "link": {
+    "default": {
+      "$scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-active-accent-default}",
+      "$description": "Default link color for interactive text. Alias for content-active-accent-default. Use for standard links and clickable text.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "link",
+          "participation": "active",
+          "intent": "accent",
+          "state": "default",
+          "usage": [
+            "links",
+            "clickable-text",
+            "interactive-content"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "hover": {
+      "$scopes": [
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content-active-accent-hover}",
+      "$description": "Hover state color for links. Alias for content-active-accent-hover. Use when user hovers over links.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "link",
+          "participation": "active",
+          "intent": "accent",
+          "state": "hover",
+          "usage": [
+            "links-hover",
+            "interactive-text-hover"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    }
+  },
+  "border": {
+    "default": {
+      "$scopes": [
+        "STROKE_COLOR"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border-passive-neutral-default}",
+      "$description": "Default border color for UI elements. Alias for border-passive-neutral-default. Use for standard borders, dividers, and outlines.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "border",
+          "participation": "passive",
+          "intent": "neutral",
+          "state": "default",
+          "usage": [
+            "borders",
+            "dividers",
+            "outlines"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    },
+    "focus": {
+      "$scopes": [
+        "STROKE_COLOR"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border-active-accent-default}",
+      "$description": "Focus border color for interactive elements. Alias for border-active-accent-default. Use for focus states on inputs, buttons, and interactive elements.",
+      "$extensions": {
+        "design-tokens": {
+          "category": "border",
+          "participation": "active",
+          "intent": "accent",
+          "state": "focus",
+          "usage": [
+            "focus-states",
+            "input-focus",
+            "interactive-focus"
+          ],
+          "deprecated": false,
+          "replacedBy": null
+        }
+      }
+    }
+  },
+  "animation": {
+    "duration": {
+      "fast": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation-duration-fast}",
+        "$description": "Fast animation duration (100ms). Use for quick micro-interactions and hover effects."
+      },
+      "base": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{animation-duration-base}",
+        "$description": "Base animation duration (200ms). Use for standard transitions and interactions."
+      }
+    },
+    "easing": {
+      "ease-out": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": "{animation-easing-ease-out}",
+        "$description": "Ease-out easing function. Use for elements entering the viewport."
+      },
+      "ease-in-out": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": "{animation-easing-ease-in-out}",
+        "$description": "Ease-in-out easing function. Use for smooth bidirectional transitions."
+      }
+    }
+  },
+  "background-active-accent-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Default accent background for primary interactive elements. Use for primary buttons, main CTAs, or key interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.200}",
+    "$description": "Subtle accent background for secondary interactive elements. Use for secondary buttons or less prominent interactive areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.800}",
+    "$description": "Hover state background for accent interactive elements. Use when user hovers over primary buttons or accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-selected": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Selected state background for accent interactive elements. Use for selected primary options or active accent-colored elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "selected",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.600}",
+    "$description": "Pressed state background for accent interactive elements. Use when user clicks primary buttons or accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Disabled state background for accent interactive elements. Use for disabled primary buttons or accent-colored controls.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Inverse accent background for interactive elements on dark surfaces. Use for primary buttons on dark backgrounds.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.600}",
+    "$description": "Subtle inverse accent background for secondary interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.200}",
+    "$description": "Hover state for inverse accent interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.300}",
+    "$description": "Pressed state for inverse accent interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.400}",
+    "$description": "Disabled state for inverse accent interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Default danger background for interactive elements. Use for destructive buttons, delete actions, or critical interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.100}",
+    "$description": "Subtle danger background for secondary destructive actions.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.800}",
+    "$description": "Hover state background for danger interactive elements. Use when user hovers over destructive buttons or danger-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.600}",
+    "$description": "Pressed state background for danger interactive elements. Use when user clicks destructive buttons or danger-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Default neutral background for interactive elements. Use for buttons, links, or clickable areas in their default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Hover state background for interactive neutral elements. Use when user hovers over buttons, links, or clickable areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.100}",
+    "$description": "Pressed state background for interactive neutral elements. Use when user clicks or presses buttons or interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Disabled state background for interactive neutral elements. Use for buttons or controls that are currently disabled or unavailable.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}",
+    "$description": "Default success background for interactive elements. Use for success buttons, confirm actions, or positive interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.800}",
+    "$description": "Hover state background for success interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.600}",
+    "$description": "Pressed state background for success interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.400}",
+    "$description": "Disabled state background for success interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Default upgrade background for interactive elements. Use for upgrade buttons, premium CTAs, or special interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Active token for upgrade intent in subtle state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.800}",
+    "$description": "Active token for upgrade intent in hover state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.600}",
+    "$description": "Active token for upgrade intent in pressed state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-warning-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}",
+    "$description": "Default warning background for interactive elements. Use for warning buttons or caution-requiring interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "warning",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-warning-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.800}",
+    "$description": "Hover state background for warning interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "warning",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-warning-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.600}",
+    "$description": "Pressed state background for warning interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "warning",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-danger-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Default danger background for passive elements. Use for error states, destructive actions, or critical information that requires attention.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-danger-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.100}",
+    "$description": "Subtle danger background for passive elements. Use for error message backgrounds or warning areas that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-info-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Default info background for passive elements. Use for informational states, help messages, or neutral information displays.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "info",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-info-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Subtle info background for passive elements. Use for info message backgrounds or informational indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "info",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-default": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Default neutral background for passive UI elements. Use for cards, containers, and surfaces that don't require user interaction. Provides subtle visual separation without drawing attention.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-subtle": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.100}",
+    "$description": "Subtle neutral background for passive elements. Lighter than default, use for nested containers or areas that need minimal visual weight.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-elevated": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Elevated neutral background for passive elements. Use for surfaces that appear above the base layer, such as modals, dropdowns, or floating panels.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "elevated",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-strong": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Strong neutral background for passive elements. Use for high-contrast backgrounds or emphasis areas that need to stand out.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "strong",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-success-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}",
+    "$description": "Default success background for passive elements. Use for success states, confirmation messages, or positive feedback indicators.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "success",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-success-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.100}",
+    "$description": "Subtle success background for passive elements. Use for success message backgrounds or positive indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "success",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-upgrade-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.200}",
+    "$description": "Default upgrade background for passive elements. Use for premium features, upgrade prompts, or special content areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-upgrade-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Subtle upgrade background for passive elements. Use for upgrade message backgrounds or premium indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-upgrade-strong": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Strong upgrade background for passive elements. Use for prominent upgrade calls-to-action or premium feature highlights.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "strong",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-warning-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}",
+    "$description": "Default warning background for passive elements. Use for warning states, caution messages, or attention-requiring information.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "warning",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-warning-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.100}",
+    "$description": "Subtle warning background for passive elements. Use for warning message backgrounds or caution indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "warning",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-width-thin": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{border-width-1}",
+    "$description": "Width token for thin intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "width",
+        "intent": "thin",
+        "state": "default",
+        "usage": [
+          "borders",
+          "dividers",
+          "outlines"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-width-thicker": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{border-width-2}",
+    "$description": "Width token for thicker intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "width",
+        "intent": "thicker",
+        "state": "default",
+        "usage": [
+          "borders",
+          "dividers",
+          "outlines"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-width-thick": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{border-width-3}",
+    "$description": "Width token for thick intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "width",
+        "intent": "thick",
+        "state": "default",
+        "usage": [
+          "borders",
+          "dividers",
+          "outlines"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Default accent text color for primary interactive content. Use for primary links or accent-colored interactive text.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.800}",
+    "$description": "Hover state text color for accent interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.600}",
+    "$description": "Pressed state text color for accent interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Disabled state text color for accent interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "disabled",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Active token for accent intent in inverse-default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.300}",
+    "$description": "Active token for accent intent in inverse-hover state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.300}",
+    "$description": "Active token for accent intent in inverse-pressed state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.500}",
+    "$description": "Active token for accent intent in inverse-disabled state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-disabled",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-danger-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Default danger text color for destructive interactive content. Use for delete links or danger-colored interactive text.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-danger-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.800}",
+    "$description": "Hover state text color for danger interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "danger",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-danger-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.600}",
+    "$description": "Pressed state text color for danger interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "danger",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.700}",
+    "$description": "Default neutral text color for interactive content. Use for links, clickable text, or interactive content in default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.800}",
+    "$description": "Hover state text color for interactive neutral content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.600}",
+    "$description": "Pressed state text color for interactive neutral content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.500}",
+    "$description": "Disabled state text color for interactive neutral content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "disabled",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-upgrade-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Active token for upgrade intent in default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-upgrade-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.800}",
+    "$description": "Active token for upgrade intent in hover state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-upgrade-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.600}",
+    "$description": "Active token for upgrade intent in pressed state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "notes-content-filled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brown.700}",
+    "$description": "Content token for filled intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "notes",
+        "participation": "content",
+        "intent": "filled",
+        "state": "default",
+        "usage": [],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "notes-content-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brown.600}",
+    "$description": "Content token for placeholder intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "notes",
+        "participation": "content",
+        "intent": "placeholder",
+        "state": "default",
+        "usage": [],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "notes-background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{yellow.400}",
+    "$description": "Background color for notes. Use for note containers and highlights.",
+    "$extensions": {}
+  },
+  "rating": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{yellow.700}",
+    "$description": "Color for rating elements. Use for star ratings and score displays.",
+    "$extensions": {}
+  },
+  "default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.300}",
+    "$description": "Passive border color for neutral intent. Use for dividers and non-interactive borders.",
+    "$extensions": {}
+  },
+  "hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Active border color for neutral action intent on hover. Use for hover states.",
+    "$extensions": {}
+  },
+  "pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.500}",
+    "$description": "Active border color for neutral action intent when pressed. Use for pressed states.",
+    "$extensions": {}
+  },
+  "disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Active border color for neutral action intent when disabled. Use for disabled states.",
+    "$extensions": {}
+  },
+  "selected": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Active border color for accent intent when selected. Use for selected states.",
+    "$extensions": {}
+  },
+  "content-passive-danger": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Passive token for danger intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-info": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Passive token for info intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "info",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-neutral-strong": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.800}",
+    "$description": "Strong neutral text color for emphasis. Use for headings, labels, or content that needs high contrast.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "strong",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-neutral-default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.700}",
+    "$description": "Default neutral text color for passive content. Use for primary body text, headings, and main content areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-neutral-subtle": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.600}",
+    "$description": "Subtle neutral text color for secondary content. Use for secondary text, captions, or less important information.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "subtle",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-neutral-muted": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.500}",
+    "$description": "Muted neutral text color for tertiary content. Use for placeholder text, hints, or very low-emphasis content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "muted",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-neutral-strong": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in neutral-strong state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "neutral-strong",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-neutral-default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Passive token for on intent in neutral-default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "neutral-default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-neutral-subtle": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.200}",
+    "$description": "Passive token for on intent in neutral-subtle state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "neutral-subtle",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-accent": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in accent state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "accent",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-accent-inverse": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Passive token for on intent in accent-inverse state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "accent-inverse",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-success": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in success state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "success",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-danger": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in danger state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "danger",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-warning": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in warning state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "warning",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-info": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in info state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "info",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-upgrade": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in upgrade state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "upgrade",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-success": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}",
+    "$description": "Passive token for success intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "success",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-upgrade": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Passive token for upgrade intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-warning": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}",
+    "$description": "Passive token for warning intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "warning",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "control": {
+    "height": {
+      "xxxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{size-1}",
+        "$description": "Extra extra extra small control height (16px). Use for compact inputs and buttons."
+      },
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{size-2}",
+        "$description": "Extra extra small control height (24px). Use for small inputs and buttons."
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{size-3}",
+        "$description": "Extra small control height (32px). Use for compact interactive elements."
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{size-4}",
+        "$description": "Small control height (40px). Use for standard inputs and buttons."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{size-5}",
+        "$description": "Medium control height (48px). Use for comfortable interactive elements."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{size-6}",
+        "$description": "Large control height (56px). Use for prominent buttons and inputs."
+      }
+    },
+    "field": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{grey.300}",
+        "$description": "Active border color for neutral control field intent. Use for input field borders."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{grey.400}",
+        "$description": "Active border color for neutral control field intent on hover. Use for hover states."
+      },
+      "focused": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{brand.500}",
+        "$description": "Active border color for neutral control field intent when focused. Use for focus states."
+      },
+      "selected": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{brand.500}",
+        "$description": "Active border color for neutral control field intent when selected. Use for selected states."
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{grey.200}",
+        "$description": "Active border color for neutral control field intent when disabled. Use for disabled states."
+      }
+    },
+    "toggle": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{grey.300}",
+        "$description": "Active border color for neutral control toggle intent. Use for checkbox and radio button borders."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{grey.400}",
+        "$description": "Active border color for neutral control toggle intent on hover. Use for hover states."
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{grey.200}",
+        "$description": "Active border color for neutral control toggle intent when disabled. Use for disabled states."
+      }
+    }
+  },
+  "gap": {
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Extra extra small gap (4px). Use for tight spacing between related elements."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-2}",
+      "$description": "Extra small gap (8px). Use for compact spacing in dense layouts."
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Small gap (12px). Use for standard spacing between related elements."
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Medium gap (16px). Use for comfortable spacing in standard layouts."
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Large gap (20px). Use for increased spacing between sections."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Extra large gap (24px). Use for prominent spacing between major sections."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-8}",
+      "$description": "Extra extra large gap (32px). Use for maximum spacing between distinct sections."
+    }
+  },
+  "icon": {
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-1}",
+      "$description": "Extra extra small icon size (16px). Use for inline icons in compact text."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-2}",
+      "$description": "Extra small icon size (20px). Use for icons in small buttons or dense interfaces."
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-3}",
+      "$description": "Small icon size (24px). Use for standard icons in buttons and navigation."
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-4}",
+      "$description": "Medium icon size (32px). Use for prominent icons in cards and headers."
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-5}",
+      "$description": "Large icon size (40px). Use for feature icons and large buttons."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-6}",
+      "$description": "Extra large icon size (48px). Use for hero sections and large displays."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-7}",
+      "$description": "Extra extra large icon size (56px). Use for very prominent displays."
+    },
+    "huge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-8}",
+      "$description": "Huge icon size (64px). Use for maximum visual impact in hero sections."
+    }
+  },
+  "opacity": {
+    "overlay": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 75,
+      "$description": "Overlay opacity (75%). Use for modal backdrops and overlay layers."
+    }
+  },
+  "padding": {
+    "xxxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Extra extra extra small padding (4px). Use for very compact internal spacing."
+    },
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-2}",
+      "$description": "Extra extra small padding (8px). Use for compact internal spacing."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Extra small padding (12px). Use for tight internal spacing in dense components."
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Small padding (16px). Use for standard internal spacing in buttons and inputs."
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Medium padding (20px). Use for comfortable internal spacing in cards."
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Large padding (24px). Use for increased internal spacing in larger containers."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-8}",
+      "$description": "Extra large padding (32px). Use for prominent internal spacing in major containers."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-12}",
+      "$description": "Extra extra large padding (48px). Use for maximum internal spacing in hero sections."
+    },
+    "xxxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-20}",
+      "$description": "Extra extra extra large padding (80px). Use for very large containers."
+    },
+    "xxxxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-30}",
+      "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
+    }
+  },
+  "radius": {
+    "none": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-0}",
+      "$description": "No border radius (0px). Use for square corners."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-1}",
+      "$description": "Extra small border radius (4px). Use for compact components like badges or small buttons."
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-2}",
+      "$description": "Small border radius (8px). Use for standard buttons and input fields."
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-3}",
+      "$description": "Medium border radius (12px). Use for cards and larger interactive elements."
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-4}",
+      "$description": "Large border radius (16px). Use for prominent cards and containers."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-5}",
+      "$description": "Extra large border radius (20px). Use for large containers and modals."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-6}",
+      "$description": "Extra extra large border radius (24px). Use for very large containers."
+    },
+    "full": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderRadius",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{radius-round}",
+      "$description": "Full border radius (999px). Use for pill-shaped elements like tags or rounded buttons."
+    }
+  },
+  "shadow-xs": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-xs}",
+    "$description": "Extra small shadow. Use for subtle elevation on small elements.",
+    "$extensions": {}
+  },
+  "shadow-sm": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-sm}",
+    "$description": "Small shadow. Use for light elevation on buttons and inputs.",
+    "$extensions": {}
+  },
+  "shadow-md": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-md}",
+    "$description": "Medium shadow. Use for standard elevation on cards and dropdowns.",
+    "$extensions": {}
+  },
+  "shadow-lg": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-lg}",
+    "$description": "Large shadow. Use for prominent elevation on modals and popovers.",
+    "$extensions": {}
+  },
+  "shadow-xl": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-xl}",
+    "$description": "Extra large shadow. Use for strong elevation on major overlays.",
+    "$extensions": {}
+  },
+  "shadow-2xl": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-2xl}",
+    "$description": "Extra extra large shadow. Use for maximum elevation on top-level modals.",
+    "$extensions": {}
+  },
+  "shadow-inner": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-inner}",
+    "$description": "Inner shadow. Use for inset effects like pressed buttons or input focus.",
+    "$extensions": {}
+  },
+  "sizing": {
+    "tooltip-arrow": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{size-1}",
+      "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
+    }
+  },
+  "typography": {
+    "headline-size": {
+      "h1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-9}",
+        "$description": "Font size for H1 headline. Use for page titles and major headings."
+      },
+      "h2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-8}",
+        "$description": "Font size for H2 headline. Use for page titles and major headings."
+      },
+      "h3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-7}",
+        "$description": "Font size for H3 headline. Use for page titles and major headings."
+      },
+      "h4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-6}",
+        "$description": "Font size for H4 headline. Use for page titles and major headings."
+      },
+      "h5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-5}",
+        "$description": "Font size for H5 headline. Use for page titles and major headings."
+      },
+      "h6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-4}",
+        "$description": "Font size for H6 headline. Use for page titles and major headings."
+      }
+    },
+    "headline-line": {
+      "h1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for H1 headline. Ensures proper vertical rhythm."
+      },
+      "h2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for H2 headline. Ensures proper vertical rhythm."
+      },
+      "h3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for H3 headline. Ensures proper vertical rhythm."
+      },
+      "h4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for H4 headline. Ensures proper vertical rhythm."
+      },
+      "h5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for H5 headline. Ensures proper vertical rhythm."
+      },
+      "h6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for H6 headline. Ensures proper vertical rhythm."
+      }
+    },
+    "body-size": {
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-4}",
+        "$description": "Large body text size. Use for prominent body content and lead paragraphs."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-3}",
+        "$description": "Medium body text size. Use for standard body content and paragraphs."
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-2}",
+        "$description": "Small body text size. Use for secondary text and captions."
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-1}",
+        "$description": "Extra small body text size. Use for fine print and disclaimers."
+      }
+    },
+    "body-line": {
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for body text lg variant. Ensures readable line spacing."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for body text md variant. Ensures readable line spacing."
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for body text sm variant. Ensures readable line spacing."
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-base}",
+        "$description": "Line height for body text xs variant. Ensures readable line spacing."
+      }
+    },
+    "body-weight": {
+      "light": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-regular}",
+        "$description": "Light font weight. Use for subtle emphasis."
+      },
+      "normal": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-regular}",
+        "$description": "Normal font weight. Use for standard body text."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-medium}",
+        "$description": "Medium font weight. Use for moderate emphasis."
+      },
+      "semibold": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-bold}",
+        "$description": "Semibold font weight. Use for strong emphasis in body text."
+      },
+      "bold": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-bold}",
+        "$description": "Bold font weight. Use for maximum emphasis."
+      }
+    }
+  },
+  "z-index": {
+    "base": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-base}",
+      "$description": "Base z-index layer"
+    },
+    "dropdown": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-dropdown}",
+      "$description": "Dropdown z-index layer"
+    },
+    "sticky": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-sticky}",
+      "$description": "Sticky element z-index layer"
+    },
+    "fixed": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-fixed}",
+      "$description": "Fixed element z-index layer"
+    },
+    "modal-backdrop": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-modal-backdrop}",
+      "$description": "Modal backdrop z-index layer"
+    },
+    "modal": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-modal}",
+      "$description": "Modal z-index layer"
+    },
+    "popover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-popover}",
+      "$description": "Popover z-index layer"
+    },
+    "tooltip": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-tooltip}",
+      "$description": "Tooltip z-index layer"
+    }
+  }
+}

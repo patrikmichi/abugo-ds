@@ -1,0 +1,78 @@
+{
+  "$name": "Semantic Tokens",
+  "border-width-thin": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{border-width-1}",
+    "$description": "Width token for thin intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "width",
+        "intent": "thin",
+        "state": "default",
+        "usage": [
+          "borders",
+          "dividers",
+          "outlines"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-width-thicker": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{border-width-2}",
+    "$description": "Width token for thicker intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "width",
+        "intent": "thicker",
+        "state": "default",
+        "usage": [
+          "borders",
+          "dividers",
+          "outlines"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "border-width-thick": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{border-width-3}",
+    "$description": "Width token for thick intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "border",
+        "participation": "width",
+        "intent": "thick",
+        "state": "default",
+        "usage": [
+          "borders",
+          "dividers",
+          "outlines"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

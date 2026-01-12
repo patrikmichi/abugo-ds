@@ -1,0 +1,219 @@
+{
+  "$name": "Semantic Tokens",
+  "content-active-accent-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Default accent text color for primary interactive content. Use for primary links or accent-colored interactive text.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.800}",
+    "$description": "Hover state text color for accent interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.600}",
+    "$description": "Pressed state text color for accent interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Disabled state text color for accent interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "disabled",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Active token for accent intent in inverse-default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.300}",
+    "$description": "Active token for accent intent in inverse-hover state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.300}",
+    "$description": "Active token for accent intent in inverse-pressed state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-accent-inverse-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.500}",
+    "$description": "Active token for accent intent in inverse-disabled state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-disabled",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

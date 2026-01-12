@@ -1,0 +1,107 @@
+{
+  "$name": "Semantic Tokens",
+  "background-active-upgrade-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Default upgrade background for interactive elements. Use for upgrade buttons, premium CTAs, or special interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Active token for upgrade intent in subtle state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.800}",
+    "$description": "Active token for upgrade intent in hover state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-upgrade-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.600}",
+    "$description": "Active token for upgrade intent in pressed state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

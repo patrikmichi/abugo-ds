@@ -1,0 +1,103 @@
+{
+  "$name": "Semantic Tokens",
+  "content-active-neutral-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.700}",
+    "$description": "Default neutral text color for interactive content. Use for links, clickable text, or interactive content in default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.800}",
+    "$description": "Hover state text color for interactive neutral content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.600}",
+    "$description": "Pressed state text color for interactive neutral content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-neutral-disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.500}",
+    "$description": "Disabled state text color for interactive neutral content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "disabled",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

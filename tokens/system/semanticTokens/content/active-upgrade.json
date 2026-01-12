@@ -1,0 +1,78 @@
+{
+  "$name": "Semantic Tokens",
+  "content-active-upgrade-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Active token for upgrade intent in default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-upgrade-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.800}",
+    "$description": "Active token for upgrade intent in hover state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-upgrade-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.600}",
+    "$description": "Active token for upgrade intent in pressed state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "upgrade",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

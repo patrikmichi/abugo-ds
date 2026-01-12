@@ -1,6 +1,6 @@
 # Design Tokens Repository
 
-> Design tokens exported from Figma Tokens Studio, ready for use in code and design tools.
+> Production-ready design tokens exported from Figma Tokens Studio, with TypeScript support and Next.js documentation.
 
 This repository contains the complete design token system for the design system, including primitives, semantic tokens, and component tokens. All tokens are synced with Figma and can be used in code via Panda CSS.
 
@@ -8,17 +8,35 @@ This repository contains the complete design token system for the design system,
 
 ## 🚀 Quick Start
 
-### For Designers
+### Prerequisites
 
-1. **Sync with Figma**: Use the Tokens Studio plugin to sync tokens
-2. **Use Semantic Tokens**: For new components, use semantic tokens (see [Designer Guide](docs/DESIGNER_GUIDE.md))
-3. **View in Storybook**: Run `npm run storybook` to see all tokens visually
+- Node.js 18+ 
+- npm or yarn
 
-### For Developers
+### Installation
 
-1. **Install dependencies**: `npm install`
-2. **Generate CSS**: `npm run panda:codegen` to generate CSS utilities
-3. **Use tokens**: Import from `styled-system/` (see [Developer Guide](docs/DEVELOPER_GUIDE.md))
+```bash
+npm install
+```
+
+### Development
+
+```bash
+# Start Next.js documentation site
+npm run dev
+
+# Run Storybook
+npm run storybook
+
+# Generate Panda CSS
+npm run panda:codegen
+
+# Type check
+npm run type-check
+
+# Build tokens
+npm run build:tokens
+```
 
 ---
 
@@ -26,67 +44,84 @@ This repository contains the complete design token system for the design system,
 
 ```
 figma tokens/
-├── tokens/              # Token files (JSON)
-│   ├── primitives.json      # Base tokens
-│   ├── semanticTokens.json  # Semantic tokens
-│   └── componentTokens.json # Component tokens
-├── docs/                # Documentation
-│   ├── TOKENS.md           # Complete token reference
-│   ├── DESIGNER_GUIDE.md   # Guide for designers
-│   └── DEVELOPER_GUIDE.md  # Guide for developers
-├── styled-system/       # Generated Panda CSS (auto-generated)
-├── stories/             # Storybook stories
-└── panda.config.mjs     # Panda CSS configuration
+├── app/                    # Next.js app (documentation site)
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── tokens/                 # Tokens root
+│   ├── output/             # Generated files (for Tokens Studio)
+│   │   ├── primitives.json
+│   │   ├── semanticTokens.json
+│   │   ├── componentTokens.json
+│   │   ├── $metadata.json
+│   │   └── $themes.json
+│   ├── system/             # Source files (organized for maintainability)
+│   │   ├── primitives/
+│   │   ├── semanticTokens/
+│   │   └── componentTokens/
+│   ├── types/              # TypeScript type definitions
+│   │   └── index.d.ts
+│   ├── scripts/            # Build scripts (TypeScript)
+│   │   ├── merge-tokens.ts
+│   │   ├── split-tokens.ts
+│   │   └── load-tokens.ts
+│   └── docs/               # Documentation
+├── storybook/              # Storybook documentation
+│   ├── stories/
+│   └── .storybook/
+├── panda/                  # Panda CSS
+│   ├── panda.config.mjs
+│   └── styled-system/
+└── package.json
 ```
 
 ---
 
-## 📚 Documentation
+## 🛠️ Technology Stack
 
-- **[Token Reference](docs/TOKENS.md)** - Complete reference of all tokens
-- **[Designer Guide](docs/DESIGNER_GUIDE.md)** - How to use tokens in Figma for new components
-- **[Developer Guide](docs/DEVELOPER_GUIDE.md)** - How to use tokens in code with Panda CSS
+- **TypeScript** - Type-safe development
+- **Next.js 15** - Documentation site
+- **Storybook** - Component and token documentation
+- **Panda CSS** - CSS-in-JS with design tokens
+- **ESLint + Prettier** - Code quality and formatting
 
 ---
 
-## 🔄 Syncing with Figma
+## 📖 Documentation
 
-### Setup
+- **[Complete Token Reference](tokens/docs/TOKENS.md)** - All tokens documented
+- **[Designer Guide](tokens/docs/DESIGNER_GUIDE.md)** - Using tokens in Figma
+- **[Developer Guide](tokens/docs/DEVELOPER_GUIDE.md)** - Using tokens in code
+- **[Token Structure](tokens/docs/TOKEN_STRUCTURE.md)** - How tokens are organized
 
-1. Open Figma and launch the **Tokens Studio** plugin
-2. Go to **Sync** settings
-3. Enter your Personal Access Token (stored in `.env`)
+---
 
-The plugin will automatically:
-- Create Figma Variables from tokens
-- Sync changes between Figma and this repository
-- Maintain token references and structure
-
-### Token Structure
+## 🎯 Token Architecture
 
 Tokens follow a three-layer architecture:
-- **Primitives** → Raw values (colors, spacing, typography)
-- **Semantic Tokens** → Meaning-based tokens (content colors, backgrounds)
-- **Component Tokens** → Component-specific tokens (buttons, fields, etc.)
 
-See [Token Reference](docs/TOKENS.md) for complete details.
+1. **Primitives** → Raw values (colors, spacing, typography)
+2. **Semantic Tokens** → Meaning-based tokens (content colors, backgrounds)
+3. **Component Tokens** → Component-specific tokens using hybrid approach:
+   - **Category-first** for shared properties (radius, gap, padding, shadow, etc.)
+   - **Component-first** for unique properties (colors, heights, widths, etc.)
 
 ---
 
 ## 💻 Using in Code
 
-### Panda CSS
+### TypeScript
 
-This repository includes Panda CSS configuration that generates CSS utilities from tokens.
+```typescript
+import { loadTokens } from '@tokens/scripts/load-tokens';
 
-**Generate CSS system:**
-```bash
-npm run panda:codegen
+const { primitives, semanticTokens, componentTokens } = loadTokens();
 ```
 
-**Use in code:**
+### Panda CSS
+
 ```tsx
-import { css } from '../styled-system/css';
+import { css } from '../panda/styled-system/css';
 
 const button = css({
   backgroundColor: 'brand.700',
@@ -96,87 +131,60 @@ const button = css({
 });
 ```
 
-See [Developer Guide](docs/DEVELOPER_GUIDE.md) for complete examples.
-
 ---
 
-## 📖 Viewing Tokens
+## 🔄 Syncing with Figma
 
-### Storybook
-
-View all tokens in an interactive Storybook:
-
-```bash
-npm run storybook
-```
-
-Then open [http://localhost:6006](http://localhost:6006)
-
----
-
-## 🎨 Token Naming
-
-- **Token names**: kebab-case (W3C DTCG compliance)
-- **Typography properties**: camelCase (W3C DTCG standard)
-- **Size abbreviations**: `xs`, `sm`, `md`, `lg`, `xl`, `xxl`
-
----
-
-## 🎯 Themes
-
-The design system supports two themes:
-- **Reservio** - Baseline theme
-- **Survio** - Extended theme
-
-Both themes use the same token structure, with brand-specific values handled at the primitive level.
+1. Open Figma and launch the **Tokens Studio** plugin
+2. Go to **Sync** settings
+3. Enter your Personal Access Token (stored in `.env`)
+4. The plugin will automatically sync tokens between Figma and this repository
 
 ---
 
 ## 📝 Scripts
 
 ```bash
-# Generate documentation
-npm run generate-docs
+# Development
+npm run dev              # Start Next.js dev server
+npm run storybook        # Start Storybook
+npm run type-check       # TypeScript type checking
 
-# Generate Panda CSS system
-npm run panda:codegen
+# Build
+npm run build            # Build Next.js app
+npm run build:tokens     # Merge token files
+npm run panda:codegen    # Generate Panda CSS
 
-# Watch mode for Panda CSS
-npm run panda:watch
-
-# Run Storybook
-npm run storybook
-
-# Build Storybook
-npm run build-storybook
+# Code Quality
+npm run lint             # Run ESLint
+npm run format           # Format with Prettier
 ```
 
 ---
 
-## 🔐 Security
+## 🎨 Path Aliases
 
-The Personal Access Token (PAT) is stored in `.env` (gitignored). Never commit tokens to version control.
+All paths use `@tokens/` aliases for consistency:
+
+- `@tokens/scripts/*` - Build scripts
+- `@tokens/docs/*` - Documentation
+- `@tokens/output/*` - Generated token files
+- `@tokens/system/*` - Source token files
+
+Configured in:
+- `tsconfig.json` - TypeScript
+- `next.config.ts` - Next.js
+- `storybook/.storybook/main.ts` - Storybook
 
 ---
 
 ## 🤝 Contributing
 
-When adding or modifying tokens:
-
-1. **Update token files** in `tokens/`
-2. **Regenerate documentation**: `npm run generate-docs`
-3. **Regenerate CSS**: `npm run panda:codegen`
-4. **Test in Storybook**: `npm run storybook`
+1. **Update token files** in `tokens/system/`
+2. **Regenerate tokens**: `npm run build:tokens`
+3. **Type check**: `npm run type-check`
+4. **Test**: `npm run dev` and `npm run storybook`
 5. **Sync with Figma**: Use Tokens Studio plugin
-
----
-
-## 📖 Learn More
-
-- [Complete Token Reference](docs/TOKENS.md)
-- [Designer Guide](docs/DESIGNER_GUIDE.md) - Using tokens in Figma
-- [Developer Guide](docs/DEVELOPER_GUIDE.md) - Using tokens in code
-- [Figma Tokens Studio Docs](https://docs.tokens.studio/)
 
 ---
 

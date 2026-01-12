@@ -1,0 +1,263 @@
+{
+  "$name": "Semantic Tokens",
+  "content-passive-on-neutral-strong": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in neutral-strong state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "neutral-strong",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-neutral-default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Passive token for on intent in neutral-default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "neutral-default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-neutral-subtle": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.200}",
+    "$description": "Passive token for on intent in neutral-subtle state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "neutral-subtle",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-accent": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in accent state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "accent",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-accent-inverse": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Passive token for on intent in accent-inverse state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "accent-inverse",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-success": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in success state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "success",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-danger": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in danger state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "danger",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-warning": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in warning state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "warning",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-info": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in info state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "info",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-passive-on-upgrade": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in upgrade state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "upgrade",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

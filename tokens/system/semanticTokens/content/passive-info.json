@@ -1,0 +1,29 @@
+{
+  "$name": "Semantic Tokens",
+  "content-passive-info": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Passive token for info intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "info",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

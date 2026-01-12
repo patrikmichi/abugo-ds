@@ -1,0 +1,85 @@
+{
+  "$name": "Semantic Tokens",
+  "icon": {
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-1}",
+      "$description": "Extra extra small icon size (16px). Use for inline icons in compact text."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-2}",
+      "$description": "Extra small icon size (20px). Use for icons in small buttons or dense interfaces."
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-3}",
+      "$description": "Small icon size (24px). Use for standard icons in buttons and navigation."
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-4}",
+      "$description": "Medium icon size (32px). Use for prominent icons in cards and headers."
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-5}",
+      "$description": "Large icon size (40px). Use for feature icons and large buttons."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-6}",
+      "$description": "Extra large icon size (48px). Use for hero sections and large displays."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-7}",
+      "$description": "Extra extra large icon size (56px). Use for very prominent displays."
+    },
+    "huge": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{icon-size.icon-size-8}",
+      "$description": "Huge icon size (64px). Use for maximum visual impact in hero sections."
+    }
+  }
+}

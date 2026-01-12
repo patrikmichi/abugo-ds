@@ -1,0 +1,59 @@
+{
+  "$name": "Semantic Tokens",
+  "background-passive-success-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}",
+    "$description": "Default success background for passive elements. Use for success states, confirmation messages, or positive feedback indicators.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "success",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-success-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.100}",
+    "$description": "Subtle success background for passive elements. Use for success message backgrounds or positive indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "success",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

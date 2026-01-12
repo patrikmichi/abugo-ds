@@ -12,3 +12,22 @@ node_modules/
 ## Panda
 styled-system
 styled-system-studio
+
+## Logs
+*.log
+debug-*.log
+
+## Storybook
+storybook-static/
+storybook/.storybook-static/
+storybook/.cache/
+
+## Next.js
+.next/
+out/
+build/
+dist/
+
+## TypeScript
+*.tsbuildinfo
+next-env.d.ts

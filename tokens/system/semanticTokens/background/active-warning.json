@@ -1,0 +1,87 @@
+{
+  "$name": "Semantic Tokens",
+  "background-active-warning-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}",
+    "$description": "Default warning background for interactive elements. Use for warning buttons or caution-requiring interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "warning",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-warning-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.800}",
+    "$description": "Hover state background for warning interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "warning",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-warning-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.600}",
+    "$description": "Pressed state background for warning interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "warning",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "$name": "Semantic Tokens",
+  "background-active-danger-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Default danger background for interactive elements. Use for destructive buttons, delete actions, or critical interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.100}",
+    "$description": "Subtle danger background for secondary destructive actions.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.800}",
+    "$description": "Hover state background for danger interactive elements. Use when user hovers over destructive buttons or danger-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-danger-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.600}",
+    "$description": "Pressed state background for danger interactive elements. Use when user clicks destructive buttons or danger-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "danger",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$name": "Component Tokens",
+  "spinner": {
+    "default": {
+      "content": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{content-active-accent-default}"
+        }
+      }
+    }
+  }
+}

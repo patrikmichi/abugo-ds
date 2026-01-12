@@ -1,0 +1,311 @@
+{
+  "$name": "Semantic Tokens",
+  "background-active-accent-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Default accent background for primary interactive elements. Use for primary buttons, main CTAs, or key interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.200}",
+    "$description": "Subtle accent background for secondary interactive elements. Use for secondary buttons or less prominent interactive areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.800}",
+    "$description": "Hover state background for accent interactive elements. Use when user hovers over primary buttons or accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-selected": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Selected state background for accent interactive elements. Use for selected primary options or active accent-colored elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "selected",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.600}",
+    "$description": "Pressed state background for accent interactive elements. Use when user clicks primary buttons or accent-colored interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.500}",
+    "$description": "Disabled state background for accent interactive elements. Use for disabled primary buttons or accent-colored controls.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Inverse accent background for interactive elements on dark surfaces. Use for primary buttons on dark backgrounds.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.600}",
+    "$description": "Subtle inverse accent background for secondary interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-subtle",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.200}",
+    "$description": "Hover state for inverse accent interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.300}",
+    "$description": "Pressed state for inverse accent interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-accent-inverse-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.400}",
+    "$description": "Disabled state for inverse accent interactive elements on dark surfaces.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "inverse-disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "primary-actions",
+          "ctas"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

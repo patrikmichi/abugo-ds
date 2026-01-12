@@ -1,0 +1,81 @@
+{
+  "$name": "Semantic Tokens",
+  "background-passive-upgrade-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.200}",
+    "$description": "Default upgrade background for passive elements. Use for premium features, upgrade prompts, or special content areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-upgrade-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Subtle upgrade background for passive elements. Use for upgrade message backgrounds or premium indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-upgrade-strong": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Strong upgrade background for passive elements. Use for prominent upgrade calls-to-action or premium feature highlights.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "upgrade",
+        "state": "strong",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

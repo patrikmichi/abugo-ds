@@ -1,0 +1,58 @@
+{
+  "border-width-0": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 0
+  },
+  "border-width-1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 1
+  },
+  "border-width-2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 2
+  },
+  "border-width-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderWidth",
+    "$value": 4
+  },
+  "border-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "border",
+    "$value": {
+      "color": "{grey.300}",
+      "width": "{border-width-1}",
+      "style": "solid"
+    }
+  },
+  "border-focus": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "border",
+    "$value": {
+      "color": "{brand.500}",
+      "width": "{border-width-2}",
+      "style": "solid"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$name": "Semantic Tokens",
+  "background-passive-info-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Default info background for passive elements. Use for informational states, help messages, or neutral information displays.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "info",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-info-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.100}",
+    "$description": "Subtle info background for passive elements. Use for info message backgrounds or informational indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "info",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

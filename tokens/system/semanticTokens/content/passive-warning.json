@@ -1,0 +1,31 @@
+{
+  "$name": "Semantic Tokens",
+  "content-passive-warning": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}",
+    "$description": "Passive token for warning intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "warning",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "warnings",
+          "cautions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

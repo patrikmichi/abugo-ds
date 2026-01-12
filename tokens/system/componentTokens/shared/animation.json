@@ -1,0 +1,103 @@
+{
+  "$name": "Component Tokens",
+  "field": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-fast}"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-out}"
+    }
+  },
+  "accordion": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-base}"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-in-out}"
+    }
+  },
+  "tabs": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-fast}"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-out}"
+    }
+  },
+  "slider": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-base}"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-out}"
+    }
+  },
+  "file": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-base}"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-in-out}"
+    }
+  }
+}

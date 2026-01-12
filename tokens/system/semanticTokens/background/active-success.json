@@ -1,0 +1,115 @@
+{
+  "$name": "Semantic Tokens",
+  "background-active-success-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}",
+    "$description": "Default success background for interactive elements. Use for success buttons, confirm actions, or positive interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.800}",
+    "$description": "Hover state background for success interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.600}",
+    "$description": "Pressed state background for success interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-success-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.400}",
+    "$description": "Disabled state background for success interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "success",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

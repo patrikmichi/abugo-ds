@@ -1,0 +1,59 @@
+{
+  "$name": "Semantic Tokens",
+  "background-passive-danger-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Default danger background for passive elements. Use for error states, destructive actions, or critical information that requires attention.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-danger-subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.100}",
+    "$description": "Subtle danger background for passive elements. Use for error message backgrounds or warning areas that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

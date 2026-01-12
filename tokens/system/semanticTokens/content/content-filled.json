@@ -1,0 +1,24 @@
+{
+  "$name": "Semantic Tokens",
+  "notes-content-filled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brown.700}",
+    "$description": "Content token for filled intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "notes",
+        "participation": "content",
+        "intent": "filled",
+        "state": "default",
+        "usage": [],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

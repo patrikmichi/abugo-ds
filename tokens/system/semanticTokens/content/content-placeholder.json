@@ -1,0 +1,24 @@
+{
+  "$name": "Semantic Tokens",
+  "notes-content-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brown.600}",
+    "$description": "Content token for placeholder intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "notes",
+        "participation": "content",
+        "intent": "placeholder",
+        "state": "default",
+        "usage": [],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

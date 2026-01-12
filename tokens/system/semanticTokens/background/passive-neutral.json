@@ -1,0 +1,107 @@
+{
+  "$name": "Semantic Tokens",
+  "background-passive-neutral-default": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Default neutral background for passive UI elements. Use for cards, containers, and surfaces that don't require user interaction. Provides subtle visual separation without drawing attention.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-subtle": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.100}",
+    "$description": "Subtle neutral background for passive elements. Lighter than default, use for nested containers or areas that need minimal visual weight.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "subtle",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-elevated": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Elevated neutral background for passive elements. Use for surfaces that appear above the base layer, such as modals, dropdowns, or floating panels.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "elevated",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-passive-neutral-strong": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}",
+    "$description": "Strong neutral background for passive elements. Use for high-contrast backgrounds or emphasis areas that need to stand out.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "neutral",
+        "state": "strong",
+        "usage": [
+          "cards",
+          "containers",
+          "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "icon-size": {
+    "icon-size-1": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 16
+    },
+    "icon-size-2": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 20
+    },
+    "icon-size-3": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 24
+    },
+    "icon-size-4": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 32
+    },
+    "icon-size-5": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 40
+    },
+    "icon-size-6": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 48
+    },
+    "icon-size-7": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 56
+    },
+    "icon-size-8": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$hiddenFromPublishing": true,
+      "$type": "dimension",
+      "$value": 64
+    }
+  },
+  "size-1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 16
+  },
+  "size-2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 24
+  },
+  "size-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 32
+  },
+  "size-4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 40
+  },
+  "size-5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 48
+  },
+  "size-6": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "sizing",
+    "$value": 56
+  },
+  "asset-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "asset",
+    "$value": "path/to/asset.png"
+  },
+  "boolean-true": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boolean",
+    "$value": true
+  },
+  "boolean-false": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "boolean",
+    "$value": false
+  },
+  "text-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "text",
+    "$value": "Example text"
+  },
+  "other-placeholder": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "other",
+    "$value": "custom value"
+  }
+}

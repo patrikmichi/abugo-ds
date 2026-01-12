@@ -1,0 +1,107 @@
+{
+  "$name": "Semantic Tokens",
+  "background-active-neutral-default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Default neutral background for interactive elements. Use for buttons, links, or clickable areas in their default state.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "default",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Hover state background for interactive neutral elements. Use when user hovers over buttons, links, or clickable areas.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "hover",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.100}",
+    "$description": "Pressed state background for interactive neutral elements. Use when user clicks or presses buttons or interactive elements.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "pressed",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background-active-neutral-disabled": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Disabled state background for interactive neutral elements. Use for buttons or controls that are currently disabled or unavailable.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "disabled",
+        "usage": [
+          "buttons",
+          "links",
+          "interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@tokens/*": ["./tokens/*"],
+      "@tokens/scripts/*": ["./tokens/scripts/*"],
+      "@tokens/docs/*": ["./tokens/docs/*"],
+      "@tokens/output/*": ["./tokens/output/*"],
+      "@tokens/system/*": ["./tokens/system/*"],
+      "@tokens/types/*": ["./tokens/types/*"]
+    },
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "storybook-static",
+    "panda/styled-system"
+  ]
+}

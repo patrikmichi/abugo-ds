@@ -1,0 +1,81 @@
+{
+  "$name": "Semantic Tokens",
+  "notes-background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{yellow.400}",
+    "$description": "Background color for notes. Use for note containers and highlights.",
+    "$extensions": {}
+  },
+  "rating": {
+    "$scopes": [
+      "FRAME_FILL",
+      "SHAPE_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{yellow.700}",
+    "$description": "Color for rating elements. Use for star ratings and score displays.",
+    "$extensions": {}
+  },
+  "default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.300}",
+    "$description": "Passive border color for neutral intent. Use for dividers and non-interactive borders.",
+    "$extensions": {}
+  },
+  "hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Active border color for neutral action intent on hover. Use for hover states.",
+    "$extensions": {}
+  },
+  "pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.500}",
+    "$description": "Active border color for neutral action intent when pressed. Use for pressed states.",
+    "$extensions": {}
+  },
+  "disabled": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.200}",
+    "$description": "Active border color for neutral action intent when disabled. Use for disabled states.",
+    "$extensions": {}
+  },
+  "selected": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{brand.700}",
+    "$description": "Active border color for accent intent when selected. Use for selected states.",
+    "$extensions": {}
+  }
+}

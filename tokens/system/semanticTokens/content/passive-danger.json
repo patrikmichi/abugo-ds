@@ -1,0 +1,31 @@
+{
+  "$name": "Semantic Tokens",
+  "content-passive-danger": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Passive token for danger intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

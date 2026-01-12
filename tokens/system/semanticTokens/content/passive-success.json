@@ -1,0 +1,31 @@
+{
+  "$name": "Semantic Tokens",
+  "content-passive-success": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}",
+    "$description": "Passive token for success intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "success",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "success-states",
+          "confirmations"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

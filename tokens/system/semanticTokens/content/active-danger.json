@@ -1,0 +1,84 @@
+{
+  "$name": "Semantic Tokens",
+  "content-active-danger-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Default danger text color for destructive interactive content. Use for delete links or danger-colored interactive text.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-danger-hover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.800}",
+    "$description": "Hover state text color for danger interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "danger",
+        "state": "hover",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content-active-danger-pressed": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.600}",
+    "$description": "Pressed state text color for danger interactive content.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "active",
+        "intent": "danger",
+        "state": "pressed",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

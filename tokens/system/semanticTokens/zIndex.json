@@ -1,0 +1,85 @@
+{
+  "$name": "Semantic Tokens",
+  "z-index": {
+    "base": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-base}",
+      "$description": "Base z-index layer"
+    },
+    "dropdown": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-dropdown}",
+      "$description": "Dropdown z-index layer"
+    },
+    "sticky": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-sticky}",
+      "$description": "Sticky element z-index layer"
+    },
+    "fixed": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-fixed}",
+      "$description": "Fixed element z-index layer"
+    },
+    "modal-backdrop": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-modal-backdrop}",
+      "$description": "Modal backdrop z-index layer"
+    },
+    "modal": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-modal}",
+      "$description": "Modal z-index layer"
+    },
+    "popover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-popover}",
+      "$description": "Popover z-index layer"
+    },
+    "tooltip": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{z-index.z-tooltip}",
+      "$description": "Tooltip z-index layer"
+    }
+  }
+}

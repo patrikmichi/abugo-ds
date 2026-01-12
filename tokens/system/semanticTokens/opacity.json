@@ -1,0 +1,15 @@
+{
+  "$name": "Semantic Tokens",
+  "opacity": {
+    "overlay": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 75,
+      "$description": "Overlay opacity (75%). Use for modal backdrops and overlay layers."
+    }
+  }
+}
