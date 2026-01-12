@@ -864,33 +864,6 @@
             }
           }
         }
-      },
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.sm}"
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.sm}"
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.sm}"
       }
     },
     "outline": {
@@ -1588,26 +1561,6 @@
         "$collectionName": "semanticTokens",
         "$value": "{easing-ease-out}"
       }
-    },
-    "icon": {
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.xs}"
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.sm}"
-      }
     }
   },
   "toggle": {
@@ -1792,17 +1745,6 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{radius.xs}"
-      }
-    },
-    "icon": {
-      "default": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.xs}"
       }
     },
     "borderWidth": {
@@ -2406,35 +2348,6 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{typography.body-line.md}"
-      }
-    },
-    "icon": {
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.xs}"
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.sm}"
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "dimension",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{icon.sm}"
       }
     },
     "outline": {
@@ -4664,5 +4577,96 @@
       }
     }
   },
-  "$name": "Component Tokens"
+  "$name": "Component Tokens",
+  "icon": {
+    "button": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      }
+    },
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xs}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      }
+    },
+    "checkbox": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xs}"
+      }
+    },
+    "chip": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xs}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      }
+    }
+  }
 }
