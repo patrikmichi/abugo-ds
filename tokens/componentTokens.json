@@ -129,8 +129,8 @@
         }
       }
     },
-    "icon-only": {
-      "padding-x": {
+    "iconOnly": {
+      "paddingX": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -159,7 +159,7 @@
           "$value": "{padding.s}"
         }
       },
-      "padding-y": {
+      "paddingY": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -189,7 +189,7 @@
         }
       }
     },
-    "font-size": {
+    "fontSize": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -218,7 +218,7 @@
         "$value": "{typography.body.font-size.large}"
       }
     },
-    "line-height": {
+    "lineHeight": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -247,7 +247,7 @@
         "$value": "{typography.body.line-height.large}"
       }
     },
-    "padding-x": {
+    "paddingX": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -276,7 +276,7 @@
         "$value": "{padding.l}"
       }
     },
-    "padding-y": {
+    "paddingY": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -306,7 +306,7 @@
       }
     },
     "outline": {
-      "padding-x": {
+      "paddingX": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -329,7 +329,7 @@
           "$value": 23
         }
       },
-      "padding-y": {
+      "paddingY": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -352,8 +352,8 @@
           "$value": 15
         }
       },
-      "icon-only": {
-        "padding-x": {
+      "iconOnly": {
+        "paddingX": {
           "small": {
             "$scopes": [
               "ALL_SCOPES"
@@ -376,7 +376,7 @@
             "$value": 15
           }
         },
-        "padding-y": {
+        "paddingY": {
           "small": {
             "$scopes": [
               "ALL_SCOPES"
@@ -459,7 +459,7 @@
         "$value": "{icon.icon-small}"
       }
     },
-    "gap-icon": {
+    "gapIcon": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -978,7 +978,7 @@
       }
     },
     "plain": {
-      "padding-x": {
+      "paddingX": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -1007,7 +1007,7 @@
           "$value": "{padding.s}"
         }
       },
-      "padding-y": {
+      "paddingY": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -1036,8 +1036,8 @@
           "$value": "{padding.xs}"
         }
       },
-      "icon-only": {
-        "padding-x": {
+      "iconOnly": {
+        "paddingX": {
           "small": {
             "$scopes": [
               "ALL_SCOPES"
@@ -1066,7 +1066,7 @@
             "$value": "{padding.xs}"
           }
         },
-        "padding-y": {
+        "paddingY": {
           "small": {
             "$scopes": [
               "ALL_SCOPES"
@@ -1128,7 +1128,7 @@
         "$value": "{control.height.l}"
       }
     },
-    "font-size": {
+    "fontSize": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -1148,7 +1148,7 @@
         "$value": "{typography.body.font-size.large}"
       }
     },
-    "line-height": {
+    "lineHeight": {
       "value": {
         "$scopes": [
           "ALL_SCOPES"
@@ -1168,7 +1168,7 @@
         "$value": "{typography.body.line-height.large}"
       }
     },
-    "padding-x": {
+    "paddingX": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -1197,7 +1197,7 @@
         "$value": "{padding.l}"
       }
     },
-    "padding-y": {
+    "paddingY": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -1473,7 +1473,7 @@
         "$value": "{content.passive.danger}"
       }
     },
-    "min-width": {
+    "minWidth": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1503,7 +1503,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{gap.xxs}"
       },
-      "helper-text": {
+      "helperText": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -1512,7 +1512,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{gap.xxs}"
       },
-      "leading-icon": {
+      "leadingIcon": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -1570,7 +1570,7 @@
           }
         }
       },
-      "error-message": {
+      "errorMessage": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -1579,7 +1579,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{gap.xs}"
       },
-      "trailing-icon": {
+      "trailingIcon": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -1638,7 +1638,7 @@
         }
       }
     },
-    "padding-right": {
+    "paddingRight": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -1698,7 +1698,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{radius.full}"
     },
-    "gap-label": {
+    "gapLabel": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1835,7 +1835,7 @@
         }
       }
     },
-    "font-size": {
+    "fontSize": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1844,7 +1844,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{typography.body.font-size.medium}"
     },
-    "line-height": {
+    "lineHeight": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1911,7 +1911,7 @@
         }
       }
     },
-    "gap-label": {
+    "gapLabel": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -1930,7 +1930,7 @@
       "$value": "{content.passive.on-accent}"
     }
   },
-  "radio-button": {
+  "radioButton": {
     "background": {
       "unselected": {
         "default": {
@@ -2042,7 +2042,7 @@
         }
       }
     },
-    "font-size": {
+    "fontSize": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2051,7 +2051,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{typography.body.font-size.medium}"
     },
-    "line-height": {
+    "lineHeight": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2069,7 +2069,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{radius.full}"
     },
-    "gap-label": {
+    "gapLabel": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2295,7 +2295,7 @@
       }
     },
     "outline": {
-      "padding-x": {
+      "paddingX": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -2318,7 +2318,7 @@
           "$value": 15
         }
       },
-      "padding-y": {
+      "paddingY": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -2341,7 +2341,7 @@
           "$value": 11
         }
       },
-      "padding-left": {
+      "paddingLeft": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -2364,7 +2364,7 @@
           "$value": 11
         }
       },
-      "padding-right": {
+      "paddingRight": {
         "small": {
           "$scopes": [
             "ALL_SCOPES"
@@ -2388,7 +2388,7 @@
         }
       }
     },
-    "gap-icon": {
+    "gapIcon": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2397,7 +2397,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{gap.xxs}"
     },
-    "padding-x": {
+    "paddingX": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2426,7 +2426,7 @@
         "$value": "{padding.s}"
       }
     },
-    "padding-y": {
+    "paddingY": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2455,7 +2455,7 @@
         "$value": "{padding.xs}"
       }
     },
-    "padding-left": {
+    "paddingLeft": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2484,7 +2484,7 @@
         "$value": "{padding.xs}"
       }
     },
-    "padding-right": {
+    "paddingRight": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2513,7 +2513,7 @@
         "$value": "{padding.xs}"
       }
     },
-    "font-size": {
+    "fontSize": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2542,7 +2542,7 @@
         "$value": "{typography.body.font-size.medium}"
       }
     },
-    "line-height": {
+    "lineHeight": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2604,7 +2604,7 @@
         }
       }
     },
-    "font-size": {
+    "fontSize": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2613,7 +2613,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{typography.body.font-size.medium}"
     },
-    "line-height": {
+    "lineHeight": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2662,7 +2662,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{icon.icon-small}"
     },
-    "gap-icon": {
+    "gapIcon": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2671,7 +2671,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{gap.s}"
     },
-    "gap-actions": {
+    "gapActions": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2762,7 +2762,7 @@
         "$value": "{radius.xsmall}"
       }
     },
-    "padding-x": {
+    "paddingX": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2782,7 +2782,7 @@
         "$value": "{padding.m}"
       }
     },
-    "padding-y": {
+    "paddingY": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2813,7 +2813,7 @@
     }
   },
   "toast": {
-    "font-size": {
+    "fontSize": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2822,7 +2822,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{typography.body.font-size.medium}"
     },
-    "line-height": {
+    "lineHeight": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2840,7 +2840,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{icon.icon-small}"
     },
-    "gap-icon": {
+    "gapIcon": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2849,7 +2849,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{gap.s}"
     },
-    "gap-actions": {
+    "gapActions": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -2940,7 +2940,7 @@
         }
       }
     },
-    "padding-x": {
+    "paddingX": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2960,7 +2960,7 @@
         "$value": "{padding.m}"
       }
     },
-    "padding-y": {
+    "paddingY": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -2989,14 +2989,14 @@
       "$collectionName": "semanticTokens",
       "$value": "{shadow.lg}"
     },
-    "z-index": {
+    "zIndex": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{z-index.modal}"
+      "$value": "{zIndex.modal}"
     }
   },
   "card": {
@@ -3127,7 +3127,7 @@
         "$value": "{border.active.accent.selected}"
       }
     },
-    "padding-x": {
+    "paddingX": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -3156,7 +3156,7 @@
         "$value": "{padding.l}"
       }
     },
-    "padding-y": {
+    "paddingY": {
       "small": {
         "$scopes": [
           "ALL_SCOPES"
@@ -3243,17 +3243,17 @@
       "$collectionName": "semanticTokens",
       "$value": "{shadow.md}"
     },
-    "z-index": {
+    "zIndex": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{z-index.popover}"
+      "$value": "{zIndex.popover}"
     }
   },
-  "calendar-day": {
+  "calendarDay": {
     "content": {
       "default": {
         "$scopes": [
@@ -3282,7 +3282,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{content.passive.on-accent}"
       },
-      "in-range": {
+      "inRange": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -3291,7 +3291,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{content.active.accent.default}"
       },
-      "range-start": {
+      "rangeStart": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -3300,7 +3300,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{content.active.accent.default}"
       },
-      "range-end": {
+      "rangeEnd": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -3356,7 +3356,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{background.active.accent.selected}"
       },
-      "in-range": {
+      "inRange": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -3365,7 +3365,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{background.active.accent.subtle}"
       },
-      "range-start": {
+      "rangeStart": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -3374,7 +3374,7 @@
         "$collectionName": "semanticTokens",
         "$value": "{background.active.accent.subtle}"
       },
-      "range-end": {
+      "rangeEnd": {
         "$scopes": [
           "ALL_SCOPES"
         ],
@@ -3407,7 +3407,7 @@
           "$value": "{control.height.s}"
         }
       },
-      "padding-x": {
+      "paddingX": {
         "s": {
           "$scopes": [
             "ALL_SCOPES"
@@ -3515,7 +3515,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{radius.xsmall}"
     },
-    "padding-x": {
+    "paddingX": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -3524,7 +3524,7 @@
       "$collectionName": "semanticTokens",
       "$value": "{padding.xs}"
     },
-    "padding-y": {
+    "paddingY": {
       "$scopes": [
         "ALL_SCOPES"
       ],
@@ -3569,8 +3569,8 @@
         ],
         "$type": "dimension",
         "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{sizing.size-1}"
+        "$collectionName": "semanticTokens",
+        "$value": "{sizing.tooltip-arrow}"
       }
     },
     "shadow": {
@@ -3582,14 +3582,14 @@
       "$collectionName": "semanticTokens",
       "$value": "{shadow.md}"
     },
-    "z-index": {
+    "zIndex": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{z-index.tooltip}"
+      "$value": "{zIndex.tooltip}"
     }
   },
   "breadcrumbs": {
@@ -3999,7 +3999,7 @@
       }
     }
   },
-  "loading-spinner": {
+  "loadingSpinner": {
     "default": {
       "content": {
         "default": {
@@ -4037,14 +4037,14 @@
           "$collectionName": "semanticTokens",
           "$value": "{background.passive.neutral.default}"
         },
-        "z-index": {
+        "zIndex": {
           "$scopes": [
             "ALL_SCOPES"
           ],
           "$type": "number",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{z-index.modal-backdrop}"
+          "$value": "{zIndex.modal}"
         },
         "opacity": {
           "$scopes": [
@@ -4052,8 +4052,8 @@
           ],
           "$type": "number",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{colors.opacity.opacity-75}"
+          "$collectionName": "semanticTokens",
+          "$value": "{opacity.overlay}"
         }
       },
       "border": {
@@ -4087,14 +4087,14 @@
         "$collectionName": "semanticTokens",
         "$value": "{shadow.xl}"
       },
-      "z-index": {
+      "zIndex": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{z-index.modal}"
+        "$value": "{zIndex.modal}"
       }
     }
   },
@@ -4142,14 +4142,14 @@
         "$collectionName": "semanticTokens",
         "$value": "{shadow.lg}"
       },
-      "z-index": {
+      "zIndex": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{z-index.modal}"
+        "$value": "{zIndex.modal}"
       }
     }
   },
@@ -4507,7 +4507,7 @@
       }
     }
   },
-  "file-upload": {
+  "fileUpload": {
     "default": {
       "background": {
         "default": {
@@ -4528,7 +4528,7 @@
           "$collectionName": "semanticTokens",
           "$value": "{background.active.neutral.hover}"
         },
-        "drag-over": {
+        "dragOver": {
           "$scopes": [
             "ALL_SCOPES"
           ],
@@ -4566,7 +4566,7 @@
           "$collectionName": "semanticTokens",
           "$value": "{border.active.neutral.control.field.hover}"
         },
-        "drag-over": {
+        "dragOver": {
           "$scopes": [
             "ALL_SCOPES"
           ],
