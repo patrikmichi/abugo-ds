@@ -288,9 +288,9 @@ export const Typography = () => {
         {semanticTokens.typography && (
           <>
             <h3>Headlines</h3>
-            {Object.keys(semanticTokens.typography.headlineSize || {}).map((level) => {
-              const sizeToken = semanticTokens.typography.headlineSize[level];
-              const lineToken = semanticTokens.typography.headlineLine[level];
+            {Object.keys(semanticTokens.typography['headline-size'] || {}).map((level) => {
+              const sizeToken = semanticTokens.typography['headline-size'][level];
+              const lineToken = semanticTokens.typography['headline-line'][level];
               const size = resolveToken(sizeToken?.$value, primitives);
               const lineHeight = resolveToken(lineToken?.$value, primitives);
               
@@ -310,9 +310,9 @@ export const Typography = () => {
             })}
             
             <h3>Body Text</h3>
-            {Object.keys(semanticTokens.typography.bodySize || {}).map((size) => {
-              const sizeToken = semanticTokens.typography.bodySize[size];
-              const lineToken = semanticTokens.typography.bodyLine[size];
+            {Object.keys(semanticTokens.typography['body-size'] || {}).map((size) => {
+              const sizeToken = semanticTokens.typography['body-size'][size];
+              const lineToken = semanticTokens.typography['body-line'][size];
               const fontSize = resolveToken(sizeToken?.$value, primitives);
               const lineHeight = resolveToken(lineToken?.$value, primitives);
               
