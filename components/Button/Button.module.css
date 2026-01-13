@@ -2,7 +2,7 @@
 
 .button {
   /* Base styles */
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--token-component-gap-button-icon-md);
@@ -41,7 +41,6 @@
 /* Full width button */
 .button.fullWidth {
   width: 100%;
-  display: flex;
 }
 
 /* Icon-only button (square) */
@@ -87,30 +86,30 @@
   font-size: var(--token-component-icon-button-lg);
 }
 
-/* Icon spacing - use inline-flex to align with text baseline */
+/* Icon spacing */
 .startIcon,
 .endIcon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   width: var(--token-component-icon-button-md);
   height: var(--token-component-icon-button-md);
   color: inherit;
-  vertical-align: middle;
+  /* Optical adjustment for perfect centering */
+  transform: translateY(-1px);
 }
 
-/* Material Icons - ensure proper sizing and alignment */
+/* Material Icons - ensure proper sizing */
 .startIcon .material-symbols-outlined,
 .endIcon .material-symbols-outlined {
   font-size: var(--token-component-icon-button-md);
   width: 1em;
   height: 1em;
-  display: inline-block;
+  display: block;
   line-height: 1;
   margin: 0;
   padding: 0;
-  vertical-align: middle;
   /* Material Icons font variation settings */
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
@@ -124,15 +123,16 @@
 }
 
 .text {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   white-space: nowrap;
   color: inherit;
   line-height: 1;
-  vertical-align: middle;
-  /* Remove any extra spacing - flexbox handles centering */
+  /* Remove any extra spacing */
   margin: 0;
   padding: 0;
+  /* Optical adjustment for perfect centering */
+  transform: translateY(-1px);
 }
 
 /* Size-specific text - all use line-height 1 for perfect centering */
