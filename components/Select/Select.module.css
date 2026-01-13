@@ -30,7 +30,7 @@
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
-  padding-inline-end: 40px;
+  padding-inline-end: var(--token-component-padding-right-field-select-md);
   /* Compensate for descender space using cap unit */
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
@@ -52,7 +52,7 @@
   /* Fallback for older browsers that don't support cap unit or text-box-trim */
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-md);
-    padding-right: 40px;
+    padding-right: var(--token-component-padding-right-field-select-md);
     padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
     padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
@@ -180,13 +180,13 @@
 
 .sm {
   padding-inline-start: var(--token-component-padding-x-field-sm);
-  padding-inline-end: 40px;
+  padding-inline-end: var(--token-component-padding-right-field-select-sm);
   padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-sm);
-    padding-right: 40px;
+    padding-right: var(--token-component-padding-right-field-select-sm);
     padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
     padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
   }
@@ -202,7 +202,7 @@
 
 .md {
   padding-inline-start: var(--token-component-padding-x-field-md);
-  padding-inline-end: 40px;
+  padding-inline-end: var(--token-component-padding-right-field-select-md);
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
 }
@@ -217,13 +217,13 @@
 
 .lg {
   padding-inline-start: var(--token-component-padding-x-field-lg);
-  padding-inline-end: 40px;
+  padding-inline-end: var(--token-component-padding-right-field-select-lg);
   padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-lg);
-    padding-right: 40px;
+    padding-right: var(--token-component-padding-right-field-select-lg);
     padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
     padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }

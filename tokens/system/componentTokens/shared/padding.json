@@ -339,6 +339,38 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{padding.s}"
+      },
+      "select": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "36px",
+          "$description": "Right padding for select component small (accounts for chevron icon: padding-x + chevron-size + gap = 12px + 20px + 4px = 36px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "40px",
+          "$description": "Right padding for select component medium (accounts for chevron icon: padding-x + chevron-size + gap = 16px + 20px + 4px = 40px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "44px",
+          "$description": "Right padding for select component large (accounts for chevron icon: padding-x + chevron-size + gap = 20px + 20px + 4px = 44px)."
+        }
       }
     }
   },
