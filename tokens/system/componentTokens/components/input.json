@@ -8,7 +8,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-neutral-control-field-default}"
+      "$value": "{border.active.neutral.control.field.default}"
     },
     "hover": {
       "$scopes": [
@@ -17,7 +17,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-neutral-control-field-hover}"
+      "$value": "{border.active.neutral.control.field.hover}"
     },
     "focused": {
       "$scopes": [
@@ -26,7 +26,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-neutral-control-field-focused}"
+      "$value": "{border.active.neutral.control.field.focused}"
     },
     "active": {
       "$scopes": [
@@ -35,7 +35,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-neutral-control-field-selected}"
+      "$value": "{border.active.neutral.control.field.selected}"
     }
   },
   "background": {
@@ -46,7 +46,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-elevated}"
+      "$value": "{background.passive.neutral.elevated}"
     },
     "hover": {
       "$scopes": [
@@ -55,7 +55,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-elevated}"
+      "$value": "{background.passive.neutral.elevated}"
     },
     "focused": {
       "$scopes": [
@@ -64,7 +64,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-elevated}"
+      "$value": "{background.passive.neutral.elevated}"
     }
   },
   "content": {
@@ -75,7 +75,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-default}"
+      "$value": "{content.passive.neutral.default}"
     },
     "placeholder": {
       "$scopes": [
@@ -84,7 +84,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-muted}"
+      "$value": "{content.passive.neutral.muted}"
     }
   }
 }

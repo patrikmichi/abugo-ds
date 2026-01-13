@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "background-active-upgrade-default": {
+  "background.active.upgrade.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -26,7 +26,7 @@
       }
     }
   },
-  "background-active-upgrade-subtle": {
+  "background.active.upgrade.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -52,7 +52,7 @@
       }
     }
   },
-  "background-active-upgrade-hover": {
+  "background.active.upgrade.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -78,7 +78,7 @@
       }
     }
   },
-  "background-active-upgrade-pressed": {
+  "background.active.upgrade.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"

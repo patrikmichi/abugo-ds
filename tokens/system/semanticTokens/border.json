@@ -1,13 +1,13 @@
 {
   "$name": "Semantic Tokens",
-  "border-width-thin": {
+  "border.width.thin": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border-width-1}",
+    "$value": "{border.width.1}",
     "$description": "Width token for thin intent.",
     "$extensions": {
       "design-tokens": {
@@ -25,14 +25,14 @@
       }
     }
   },
-  "border-width-thicker": {
+  "border.width.thicker": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border-width-2}",
+    "$value": "{border.width.2}",
     "$description": "Width token for thicker intent.",
     "$extensions": {
       "design-tokens": {
@@ -50,14 +50,14 @@
       }
     }
   },
-  "border-width-thick": {
+  "border.width.thick": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border-width-3}",
+    "$value": "{border.width.3}",
     "$description": "Width token for thick intent.",
     "$extensions": {
       "design-tokens": {
@@ -75,7 +75,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-default": {
+  "border.active.neutral.control.field.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -101,7 +101,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-hover": {
+  "border.active.neutral.control.field.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -127,7 +127,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-focused": {
+  "border.active.neutral.control.field.focused": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -153,7 +153,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-selected": {
+  "border.active.neutral.control.field.selected": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -179,7 +179,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-disabled": {
+  "border.active.neutral.control.field.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -205,7 +205,7 @@
       }
     }
   },
-  "border-active-neutral-control-toggle-default": {
+  "border.active.neutral.control.toggle.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -231,7 +231,7 @@
       }
     }
   },
-  "border-active-neutral-control-toggle-hover": {
+  "border.active.neutral.control.toggle.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -257,7 +257,7 @@
       }
     }
   },
-  "border-active-neutral-control-toggle-disabled": {
+  "border.active.neutral.control.toggle.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -283,7 +283,7 @@
       }
     }
   },
-  "border-active-accent-default": {
+  "border.active.accent.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -308,7 +308,7 @@
       }
     }
   },
-  "border-active-accent-hover": {
+  "border.active.accent.hover": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -333,7 +333,7 @@
       }
     }
   },
-  "border-active-accent-pressed": {
+  "border.active.accent.pressed": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -358,7 +358,7 @@
       }
     }
   },
-  "border-active-accent-disabled": {
+  "border.active.accent.disabled": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -383,7 +383,7 @@
       }
     }
   },
-  "border-active-accent-selected": {
+  "border.active.accent.selected": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -408,14 +408,14 @@
       }
     }
   },
-  "border-active-danger-default": {
+  "border.active.danger.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-      "$value": "{negative.700}",
+    "$value": "{negative.700}",
     "$description": "Active border color for danger intent. Use for error states and destructive actions.",
     "$extensions": {
       "design-tokens": {
@@ -433,7 +433,7 @@
       }
     }
   },
-  "border-active-neutral-action-default": {
+  "border.active.neutral.action.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -459,7 +459,7 @@
       }
     }
   },
-  "border-active-neutral-action-hover": {
+  "border.active.neutral.action.hover": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -485,7 +485,7 @@
       }
     }
   },
-  "border-active-neutral-action-pressed": {
+  "border.active.neutral.action.pressed": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -511,7 +511,7 @@
       }
     }
   },
-  "border-active-neutral-action-disabled": {
+  "border.active.neutral.action.disabled": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -537,7 +537,7 @@
       }
     }
   },
-  "border-passive-neutral-default": {
+  "border.passive.neutral.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],

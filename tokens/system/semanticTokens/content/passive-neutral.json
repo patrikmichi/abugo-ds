@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-passive-neutral-strong": {
+  "content.passive.neutral.strong": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -26,7 +26,7 @@
       }
     }
   },
-  "content-passive-neutral-default": {
+  "content.passive.neutral.default": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -52,7 +52,7 @@
       }
     }
   },
-  "content-passive-neutral-subtle": {
+  "content.passive.neutral.subtle": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -78,7 +78,7 @@
       }
     }
   },
-  "content-passive-neutral-muted": {
+  "content.passive.neutral.muted": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"

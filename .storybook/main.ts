@@ -24,22 +24,11 @@ const config: StorybookConfig = {
       shouldExtractLiteralValuesFromEnum: true,
       shouldRemoveUndefinedFromOptional: true,
       tsconfigPath: path.resolve(projectRoot, 'tsconfig.json'),
-      compilerOptions: {
-        allowSyntheticDefaultImports: true,
-        esModuleInterop: true,
-      },
       propFilter: (prop) => {
         if (prop.parent) {
           return !prop.parent.fileName.includes('node_modules');
         }
         return true;
-      },
-      // Handle forwardRef components better
-      componentNameResolver: (exp, source) => {
-        if (exp.getName() === 'forwardRef') {
-          return exp.getSourceFile().getFilePath().split('/').pop()?.replace('.tsx', '') || 'Unknown';
-        }
-        return exp.getName();
       },
     },
   },

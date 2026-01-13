@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-active-upgrade-default": {
+  "content.active.upgrade.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -25,7 +25,7 @@
       }
     }
   },
-  "content-active-upgrade-hover": {
+  "content.active.upgrade.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -50,7 +50,7 @@
       }
     }
   },
-  "content-active-upgrade-pressed": {
+  "content.active.upgrade.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],

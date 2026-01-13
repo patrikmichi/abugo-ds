@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-active-accent-default": {
+  "content.active.accent.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -27,7 +27,7 @@
       }
     }
   },
-  "content-active-accent-hover": {
+  "content.active.accent.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -54,7 +54,7 @@
       }
     }
   },
-  "content-active-accent-pressed": {
+  "content.active.accent.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -81,7 +81,7 @@
       }
     }
   },
-  "content-active-accent-disabled": {
+  "content.active.accent.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -108,7 +108,7 @@
       }
     }
   },
-  "content-active-accent-inverse-default": {
+  "content.active.accent.inverse.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -135,7 +135,7 @@
       }
     }
   },
-  "content-active-accent-inverse-hover": {
+  "content.active.accent.inverse.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -162,7 +162,7 @@
       }
     }
   },
-  "content-active-accent-inverse-pressed": {
+  "content.active.accent.inverse.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -189,7 +189,7 @@
       }
     }
   },
-  "content-active-accent-inverse-disabled": {
+  "content.active.accent.inverse.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],

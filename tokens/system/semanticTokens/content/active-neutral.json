@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-active-neutral-default": {
+  "content.active.neutral.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -25,7 +25,7 @@
       }
     }
   },
-  "content-active-neutral-hover": {
+  "content.active.neutral.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -50,7 +50,7 @@
       }
     }
   },
-  "content-active-neutral-pressed": {
+  "content.active.neutral.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -75,7 +75,7 @@
       }
     }
   },
-  "content-active-neutral-disabled": {
+  "content.active.neutral.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],

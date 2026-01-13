@@ -9,7 +9,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-active-neutral-default}"
+        "$value": "{content.active.neutral.default}"
       },
       "today": {
         "$scopes": [
@@ -18,7 +18,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-active-accent-default}"
+        "$value": "{content.active.accent.default}"
       },
       "selected": {
         "$scopes": [
@@ -27,7 +27,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-passive-on-accent}"
+        "$value": "{content.passive.on.accent}"
       },
       "in": {
         "range": {
@@ -37,7 +37,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{content-active-accent-default}"
+          "$value": "{content.active.accent.default}"
         }
       },
       "range": {
@@ -48,7 +48,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{content-active-accent-default}"
+          "$value": "{content.active.accent.default}"
         },
         "end": {
           "$scopes": [
@@ -57,7 +57,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{content-active-accent-default}"
+          "$value": "{content.active.accent.default}"
         }
       },
       "disabled": {
@@ -67,7 +67,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-passive-neutral-muted}"
+        "$value": "{content.passive.neutral.muted}"
       }
     },
     "background": {
@@ -78,7 +78,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-elevated}"
+        "$value": "{background.passive.neutral.elevated}"
       },
       "hover": {
         "$scopes": [
@@ -87,7 +87,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-neutral-hover}"
+        "$value": "{background.active.neutral.hover}"
       },
       "today": {
         "$scopes": [
@@ -96,7 +96,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-elevated}"
+        "$value": "{background.passive.neutral.elevated}"
       },
       "selected": {
         "$scopes": [
@@ -105,7 +105,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-selected}"
+        "$value": "{background.active.accent.selected}"
       },
       "in": {
         "range": {
@@ -115,7 +115,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background-active-accent-subtle}"
+          "$value": "{background.active.accent.subtle}"
         }
       },
       "range": {
@@ -126,7 +126,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background-active-accent-subtle}"
+          "$value": "{background.active.accent.subtle}"
         },
         "end": {
           "$scopes": [
@@ -135,7 +135,7 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background-active-accent-subtle}"
+          "$value": "{background.active.accent.subtle}"
         }
       }
     }

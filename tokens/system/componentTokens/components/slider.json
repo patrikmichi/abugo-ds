@@ -8,7 +8,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-subtle}"
+      "$value": "{background.passive.neutral.subtle}"
     },
     "fill": {
       "default": {
@@ -18,7 +18,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-default}"
+        "$value": "{background.active.accent.default}"
       },
       "hover": {
         "$scopes": [
@@ -27,7 +27,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-hover}"
+        "$value": "{background.active.accent.hover}"
       }
     },
     "thumb": {
@@ -38,7 +38,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-default}"
+        "$value": "{background.active.accent.default}"
       },
       "hover": {
         "$scopes": [
@@ -47,7 +47,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-hover}"
+        "$value": "{background.active.accent.hover}"
       },
       "active": {
         "$scopes": [
@@ -56,7 +56,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-pressed}"
+        "$value": "{background.active.accent.pressed}"
       }
     }
   }

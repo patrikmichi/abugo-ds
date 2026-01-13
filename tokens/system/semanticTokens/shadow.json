@@ -1,79 +1,79 @@
 {
   "$name": "Semantic Tokens",
-  "shadow-xs": {
+  "shadow.xs": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-xs}",
+    "$value": "{shadow.xs}",
     "$description": "Extra small shadow. Use for subtle elevation on small elements.",
     "$extensions": {}
   },
-  "shadow-sm": {
+  "shadow.sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-sm}",
+    "$value": "{shadow.sm}",
     "$description": "Small shadow. Use for light elevation on buttons and inputs.",
     "$extensions": {}
   },
-  "shadow-md": {
+  "shadow.md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-md}",
+    "$value": "{shadow.md}",
     "$description": "Medium shadow. Use for standard elevation on cards and dropdowns.",
     "$extensions": {}
   },
-  "shadow-lg": {
+  "shadow.lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-lg}",
+    "$value": "{shadow.lg}",
     "$description": "Large shadow. Use for prominent elevation on modals and popovers.",
     "$extensions": {}
   },
-  "shadow-xl": {
+  "shadow.xl": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-xl}",
+    "$value": "{shadow.xl}",
     "$description": "Extra large shadow. Use for strong elevation on major overlays.",
     "$extensions": {}
   },
-  "shadow-2xl": {
+  "shadow.2xl": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-2xl}",
+    "$value": "{shadow.2xl}",
     "$description": "Extra extra large shadow. Use for maximum elevation on top-level modals.",
     "$extensions": {}
   },
-  "shadow-inner": {
+  "shadow.inner": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-inner}",
+    "$value": "{shadow.inner}",
     "$description": "Inner shadow. Use for inset effects like pressed buttons or input focus.",
     "$extensions": {}
   }

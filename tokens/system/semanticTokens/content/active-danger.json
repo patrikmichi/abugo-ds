@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-active-danger-default": {
+  "content.active.danger.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -27,7 +27,7 @@
       }
     }
   },
-  "content-active-danger-hover": {
+  "content.active.danger.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -54,7 +54,7 @@
       }
     }
   },
-  "content-active-danger-pressed": {
+  "content.active.danger.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],

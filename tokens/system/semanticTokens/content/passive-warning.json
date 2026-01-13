@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-passive-warning": {
+  "content.passive.warning": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"

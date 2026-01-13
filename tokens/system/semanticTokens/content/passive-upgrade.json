@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-passive-upgrade": {
+  "content.passive.upgrade": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"

@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-passive-on-neutral-strong": {
+  "content.passive.on.neutral.strong": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -26,7 +26,7 @@
       }
     }
   },
-  "content-passive-on-neutral-default": {
+  "content.passive.on.neutral.default": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -52,7 +52,7 @@
       }
     }
   },
-  "content-passive-on-neutral-subtle": {
+  "content.passive.on.neutral.subtle": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -78,7 +78,7 @@
       }
     }
   },
-  "content-passive-on-accent": {
+  "content.passive.on.accent": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -104,7 +104,7 @@
       }
     }
   },
-  "content-passive-on-accent-inverse": {
+  "content.passive.on.accent.inverse": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -130,7 +130,7 @@
       }
     }
   },
-  "content-passive-on-success": {
+  "content.passive.on.success": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -156,7 +156,7 @@
       }
     }
   },
-  "content-passive-on-danger": {
+  "content.passive.on.danger": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -182,7 +182,7 @@
       }
     }
   },
-  "content-passive-on-warning": {
+  "content.passive.on.warning": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -208,7 +208,7 @@
       }
     }
   },
-  "content-passive-on-info": {
+  "content.passive.on.info": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -234,7 +234,7 @@
       }
     }
   },
-  "content-passive-on-upgrade": {
+  "content.passive.on.upgrade": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"

@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "background-active-accent-default": {
+  "background.active.accent.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -28,7 +28,7 @@
       }
     }
   },
-  "background-active-accent-subtle": {
+  "background.active.accent.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -56,7 +56,7 @@
       }
     }
   },
-  "background-active-accent-hover": {
+  "background.active.accent.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -84,7 +84,7 @@
       }
     }
   },
-  "background-active-accent-selected": {
+  "background.active.accent.selected": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -112,7 +112,7 @@
       }
     }
   },
-  "background-active-accent-pressed": {
+  "background.active.accent.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -140,7 +140,7 @@
       }
     }
   },
-  "background-active-accent-disabled": {
+  "background.active.accent.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -168,7 +168,7 @@
       }
     }
   },
-  "background-active-accent-inverse-default": {
+  "background.active.accent.inverse.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -196,7 +196,7 @@
       }
     }
   },
-  "background-active-accent-inverse-subtle": {
+  "background.active.accent.inverse.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -224,7 +224,7 @@
       }
     }
   },
-  "background-active-accent-inverse-hover": {
+  "background.active.accent.inverse.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -252,7 +252,7 @@
       }
     }
   },
-  "background-active-accent-inverse-pressed": {
+  "background.active.accent.inverse.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -280,7 +280,7 @@
       }
     }
   },
-  "background-active-accent-inverse-disabled": {
+  "background.active.accent.inverse.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"

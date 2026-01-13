@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "background-active-success-default": {
+  "background.active.success.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -28,7 +28,7 @@
       }
     }
   },
-  "background-active-success-hover": {
+  "background.active.success.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -56,7 +56,7 @@
       }
     }
   },
-  "background-active-success-pressed": {
+  "background.active.success.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -84,7 +84,7 @@
       }
     }
   },
-  "background-active-success-disabled": {
+  "background.active.success.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"

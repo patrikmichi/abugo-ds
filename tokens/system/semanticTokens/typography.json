@@ -1,7 +1,7 @@
 {
   "$name": "Semantic Tokens",
   "typography": {
-    "headline-size": {
+    "headline.size": {
       "h1": {
         "$scopes": [
           "ALL_SCOPES"
@@ -9,7 +9,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-9}",
+        "$value": "{typography.fontSize.9}",
         "$description": "Font size for H1 headline. Use for page titles and major headings."
       },
       "h2": {
@@ -19,7 +19,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-8}",
+        "$value": "{typography.fontSize.8}",
         "$description": "Font size for H2 headline. Use for page titles and major headings."
       },
       "h3": {
@@ -29,7 +29,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-7}",
+        "$value": "{typography.fontSize.7}",
         "$description": "Font size for H3 headline. Use for page titles and major headings."
       },
       "h4": {
@@ -39,7 +39,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-6}",
+        "$value": "{typography.fontSize.6}",
         "$description": "Font size for H4 headline. Use for page titles and major headings."
       },
       "h5": {
@@ -49,7 +49,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-5}",
+        "$value": "{typography.fontSize.5}",
         "$description": "Font size for H5 headline. Use for page titles and major headings."
       },
       "h6": {
@@ -59,11 +59,11 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-4}",
+        "$value": "{typography.fontSize.4}",
         "$description": "Font size for H6 headline. Use for page titles and major headings."
       }
     },
-    "headline-line": {
+    "headline.line": {
       "h1": {
         "$scopes": [
           "ALL_SCOPES"
@@ -71,7 +71,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H1 headline. Ensures proper vertical rhythm."
       },
       "h2": {
@@ -81,7 +81,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H2 headline. Ensures proper vertical rhythm."
       },
       "h3": {
@@ -91,7 +91,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H3 headline. Ensures proper vertical rhythm."
       },
       "h4": {
@@ -101,7 +101,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H4 headline. Ensures proper vertical rhythm."
       },
       "h5": {
@@ -111,7 +111,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H5 headline. Ensures proper vertical rhythm."
       },
       "h6": {
@@ -121,11 +121,11 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H6 headline. Ensures proper vertical rhythm."
       }
     },
-    "body-size": {
+    "body.size": {
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
@@ -133,7 +133,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-4}",
+        "$value": "{typography.fontSize.4}",
         "$description": "Large body text size. Use for prominent body content and lead paragraphs."
       },
       "md": {
@@ -143,7 +143,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-3}",
+        "$value": "{typography.fontSize.3}",
         "$description": "Medium body text size. Use for standard body content and paragraphs."
       },
       "sm": {
@@ -153,7 +153,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-2}",
+        "$value": "{typography.fontSize.2}",
         "$description": "Small body text size. Use for secondary text and captions."
       },
       "xs": {
@@ -163,11 +163,11 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-1}",
+        "$value": "{typography.fontSize.1}",
         "$description": "Extra small body text size. Use for fine print and disclaimers."
       }
     },
-    "body-line": {
+    "body.line": {
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
@@ -175,7 +175,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text lg variant. Ensures readable line spacing."
       },
       "md": {
@@ -185,7 +185,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text md variant. Ensures readable line spacing."
       },
       "sm": {
@@ -195,7 +195,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text sm variant. Ensures readable line spacing."
       },
       "xs": {
@@ -205,11 +205,11 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text xs variant. Ensures readable line spacing."
       }
     },
-    "body-weight": {
+    "body.weight": {
       "light": {
         "$scopes": [
           "ALL_SCOPES"
@@ -217,7 +217,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-regular}",
+        "$value": "{typography.fontWeight.regular}",
         "$description": "Light font weight. Use for subtle emphasis."
       },
       "normal": {
@@ -227,7 +227,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-regular}",
+        "$value": "{typography.fontWeight.regular}",
         "$description": "Normal font weight. Use for standard body text."
       },
       "md": {
@@ -237,7 +237,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-medium}",
+        "$value": "{typography.fontWeight.medium}",
         "$description": "Medium font weight. Use for moderate emphasis."
       },
       "semibold": {
@@ -247,7 +247,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-bold}",
+        "$value": "{typography.fontWeight.bold}",
         "$description": "Semibold font weight. Use for strong emphasis in body text."
       },
       "bold": {
@@ -257,7 +257,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-bold}",
+        "$value": "{typography.fontWeight.bold}",
         "$description": "Bold font weight. Use for maximum emphasis."
       }
     }

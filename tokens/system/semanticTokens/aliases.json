@@ -10,7 +10,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-default}",
+      "$value": "{background.passive.neutral.default}",
       "$description": "Default surface color for UI containers. Alias for background-passive-neutral-default. Use for cards, panels, and base surfaces.",
       "$extensions": {
         "design-tokens": {
@@ -37,7 +37,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-elevated}",
+      "$value": "{background.passive.neutral.elevated}",
       "$description": "Elevated surface color for UI containers above the base layer. Alias for background-passive-neutral-elevated. Use for modals, dropdowns, and floating panels.",
       "$extensions": {
         "design-tokens": {
@@ -64,7 +64,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-active-neutral-default}",
+      "$value": "{background.active.neutral.default}",
       "$description": "Interactive surface color for clickable elements. Alias for background-active-neutral-default. Use for buttons, links, and interactive areas.",
       "$extensions": {
         "design-tokens": {
@@ -92,7 +92,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-default}",
+      "$value": "{content.passive.neutral.default}",
       "$description": "Primary text color for main content. Alias for content-passive-neutral-default. Use for body text, headings, and primary content.",
       "$extensions": {
         "design-tokens": {
@@ -118,7 +118,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-subtle}",
+      "$value": "{content.passive.neutral.subtle}",
       "$description": "Secondary text color for less important content. Alias for content-passive-neutral-subtle. Use for captions, secondary text, and less emphasized content.",
       "$extensions": {
         "design-tokens": {
@@ -144,7 +144,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-muted}",
+      "$value": "{content.passive.neutral.muted}",
       "$description": "Muted text color for tertiary content. Alias for content-passive-neutral-muted. Use for placeholder text, hints, and very low-emphasis content.",
       "$extensions": {
         "design-tokens": {
@@ -170,7 +170,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-neutral-disabled}",
+      "$value": "{content.active.neutral.disabled}",
       "$description": "Disabled text color for inactive content. Alias for content-active-neutral-disabled. Use for disabled buttons, inactive links, and unavailable content.",
       "$extensions": {
         "design-tokens": {
@@ -198,7 +198,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-accent-default}",
+      "$value": "{content.active.accent.default}",
       "$description": "Default link color for interactive text. Alias for content-active-accent-default. Use for standard links and clickable text.",
       "$extensions": {
         "design-tokens": {
@@ -224,7 +224,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-accent-hover}",
+      "$value": "{content.active.accent.hover}",
       "$description": "Hover state color for links. Alias for content-active-accent-hover. Use when user hovers over links.",
       "$extensions": {
         "design-tokens": {
@@ -250,7 +250,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-passive-neutral-default}",
+      "$value": "{border.passive.neutral.default}",
       "$description": "Default border color for UI elements. Alias for border-passive-neutral-default. Use for standard borders, dividers, and outlines.",
       "$extensions": {
         "design-tokens": {
@@ -275,7 +275,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-accent-default}",
+      "$value": "{border.active.accent.default}",
       "$description": "Focus border color for interactive elements. Alias for border-active-accent-default. Use for focus states on inputs, buttons, and interactive elements.",
       "$extensions": {
         "design-tokens": {

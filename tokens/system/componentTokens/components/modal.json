@@ -17,7 +17,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-elevated}"
+      "$value": "{background.passive.neutral.elevated}"
     },
     "overlay": {
       "$scopes": [
@@ -26,7 +26,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-default}"
+      "$value": "{background.passive.neutral.default}"
     },
     "border": {
       "$scopes": [
@@ -35,7 +35,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-neutral-control-field-default}"
+      "$value": "{border.active.neutral.control.field.default}"
     },
     "content": {
       "$scopes": [
@@ -44,7 +44,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-default}"
+      "$value": "{content.passive.neutral.default}"
     }
   }
 }

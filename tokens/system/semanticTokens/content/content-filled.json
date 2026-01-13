@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "notes-content-filled": {
+  "notes.content.filled": {
     "$scopes": [
       "ALL_SCOPES"
     ],

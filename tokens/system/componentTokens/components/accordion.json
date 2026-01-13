@@ -9,7 +9,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-default}"
+        "$value": "{background.passive.neutral.default}"
       },
       "hover": {
         "$scopes": [
@@ -18,7 +18,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-neutral-hover}"
+        "$value": "{background.active.neutral.hover}"
       },
       "expanded": {
         "$scopes": [
@@ -27,7 +27,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-neutral-default}"
+        "$value": "{background.active.neutral.default}"
       }
     },
     "border": {
@@ -37,7 +37,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-neutral-control-field-default}"
+      "$value": "{border.active.neutral.control.field.default}"
     },
     "content": {
       "$scopes": [
@@ -46,7 +46,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-default}"
+      "$value": "{content.passive.neutral.default}"
     }
   }
 }

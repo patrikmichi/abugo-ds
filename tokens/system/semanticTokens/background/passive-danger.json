@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "background-passive-danger-default": {
+  "background.passive.danger.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -28,7 +28,7 @@
       }
     }
   },
-  "background-passive-danger-subtle": {
+  "background.passive.danger.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"

@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "background-active-danger-default": {
+  "background.active.danger.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -28,7 +28,7 @@
       }
     }
   },
-  "background-active-danger-subtle": {
+  "background.active.danger.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -56,7 +56,7 @@
       }
     }
   },
-  "background-active-danger-hover": {
+  "background.active.danger.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -84,7 +84,7 @@
       }
     }
   },
-  "background-active-danger-pressed": {
+  "background.active.danger.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"

@@ -9,7 +9,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation-duration-fast}",
+        "$value": "{animation.duration.fast}",
         "$description": "Fast animation duration (100ms). Use for quick micro-interactions and hover effects."
       },
       "base": {
@@ -19,29 +19,29 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation-duration-base}",
+        "$value": "{animation.duration.base}",
         "$description": "Base animation duration (200ms). Use for standard transitions and interactions."
       }
     },
     "easing": {
-      "ease-out": {
+      "ease.out": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "",
-        "$value": "{animation-easing-ease-out}",
+        "$value": "{animation.easing.ease.out}",
         "$description": "Ease-out easing function. Use for elements entering the viewport."
       },
-      "ease-in-out": {
+      "ease.in.out": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "",
-        "$value": "{animation-easing-ease-in-out}",
+        "$value": "{animation.easing.ease.in.out}",
         "$description": "Ease-in-out easing function. Use for smooth bidirectional transitions."
       }
     }

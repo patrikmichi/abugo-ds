@@ -8,7 +8,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-subtle}"
+      "$value": "{background.passive.neutral.subtle}"
     },
     "fill": {
       "default": {
@@ -18,7 +18,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-default}"
+        "$value": "{background.active.accent.default}"
       },
       "success": {
         "$scopes": [
@@ -27,7 +27,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-success-default}"
+        "$value": "{background.passive.success.default}"
       },
       "error": {
         "$scopes": [
@@ -36,7 +36,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-danger-default}"
+        "$value": "{background.passive.danger.default}"
       }
     },
     "content": {
@@ -46,7 +46,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-default}"
+      "$value": "{content.passive.neutral.default}"
     }
   },
   "circular": {
@@ -57,7 +57,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-subtle}"
+      "$value": "{background.passive.neutral.subtle}"
     },
     "fill": {
       "$scopes": [
@@ -66,7 +66,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-active-accent-default}"
+      "$value": "{background.active.accent.default}"
     }
   }
 }

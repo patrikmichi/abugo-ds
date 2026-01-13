@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "notes-background": {
+  "notes.background": {
     "$scopes": [
       "ALL_SCOPES"
     ],

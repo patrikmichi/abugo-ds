@@ -9,7 +9,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-default}"
+        "$value": "{background.passive.neutral.default}"
       },
       "active": {
         "$scopes": [
@@ -18,7 +18,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-active-accent-selected}"
+        "$value": "{background.active.accent.selected}"
       },
       "completed": {
         "$scopes": [
@@ -27,7 +27,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-success-default}"
+        "$value": "{background.passive.success.default}"
       },
       "error": {
         "$scopes": [
@@ -36,7 +36,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-danger-default}"
+        "$value": "{background.passive.danger.default}"
       }
     },
     "border": {
@@ -47,7 +47,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border-active-neutral-control-field-default}"
+        "$value": "{border.active.neutral.control.field.default}"
       },
       "active": {
         "$scopes": [
@@ -56,7 +56,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{border-active-accent-selected}"
+        "$value": "{border.active.accent.selected}"
       }
     },
     "content": {
@@ -67,7 +67,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-passive-neutral-default}"
+        "$value": "{content.passive.neutral.default}"
       },
       "active": {
         "$scopes": [
@@ -76,7 +76,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-active-accent-default}"
+        "$value": "{content.active.accent.default}"
       },
       "completed": {
         "$scopes": [
@@ -85,7 +85,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content-passive-on-success}"
+        "$value": "{content.passive.on.success}"
       }
     }
   }

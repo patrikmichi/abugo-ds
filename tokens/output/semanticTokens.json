@@ -10,7 +10,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-default}",
+      "$value": "{background.passive.neutral.default}",
       "$description": "Default surface color for UI containers. Alias for background-passive-neutral-default. Use for cards, panels, and base surfaces.",
       "$extensions": {
         "design-tokens": {
@@ -37,7 +37,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-passive-neutral-elevated}",
+      "$value": "{background.passive.neutral.elevated}",
       "$description": "Elevated surface color for UI containers above the base layer. Alias for background-passive-neutral-elevated. Use for modals, dropdowns, and floating panels.",
       "$extensions": {
         "design-tokens": {
@@ -64,7 +64,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background-active-neutral-default}",
+      "$value": "{background.active.neutral.default}",
       "$description": "Interactive surface color for clickable elements. Alias for background-active-neutral-default. Use for buttons, links, and interactive areas.",
       "$extensions": {
         "design-tokens": {
@@ -92,7 +92,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-default}",
+      "$value": "{content.passive.neutral.default}",
       "$description": "Primary text color for main content. Alias for content-passive-neutral-default. Use for body text, headings, and primary content.",
       "$extensions": {
         "design-tokens": {
@@ -118,7 +118,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-subtle}",
+      "$value": "{content.passive.neutral.subtle}",
       "$description": "Secondary text color for less important content. Alias for content-passive-neutral-subtle. Use for captions, secondary text, and less emphasized content.",
       "$extensions": {
         "design-tokens": {
@@ -144,7 +144,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-passive-neutral-muted}",
+      "$value": "{content.passive.neutral.muted}",
       "$description": "Muted text color for tertiary content. Alias for content-passive-neutral-muted. Use for placeholder text, hints, and very low-emphasis content.",
       "$extensions": {
         "design-tokens": {
@@ -170,7 +170,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-neutral-disabled}",
+      "$value": "{content.active.neutral.disabled}",
       "$description": "Disabled text color for inactive content. Alias for content-active-neutral-disabled. Use for disabled buttons, inactive links, and unavailable content.",
       "$extensions": {
         "design-tokens": {
@@ -198,7 +198,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-accent-default}",
+      "$value": "{content.active.accent.default}",
       "$description": "Default link color for interactive text. Alias for content-active-accent-default. Use for standard links and clickable text.",
       "$extensions": {
         "design-tokens": {
@@ -224,7 +224,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-accent-hover}",
+      "$value": "{content.active.accent.hover}",
       "$description": "Hover state color for links. Alias for content-active-accent-hover. Use when user hovers over links.",
       "$extensions": {
         "design-tokens": {
@@ -250,7 +250,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-passive-neutral-default}",
+      "$value": "{border.passive.neutral.default}",
       "$description": "Default border color for UI elements. Alias for border-passive-neutral-default. Use for standard borders, dividers, and outlines.",
       "$extensions": {
         "design-tokens": {
@@ -275,7 +275,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{border-active-accent-default}",
+      "$value": "{border.active.accent.default}",
       "$description": "Focus border color for interactive elements. Alias for border-active-accent-default. Use for focus states on inputs, buttons, and interactive elements.",
       "$extensions": {
         "design-tokens": {
@@ -303,7 +303,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation-duration-fast}",
+        "$value": "{animation.duration.fast}",
         "$description": "Fast animation duration (100ms). Use for quick micro-interactions and hover effects."
       },
       "base": {
@@ -313,34 +313,34 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{animation-duration-base}",
+        "$value": "{animation.duration.base}",
         "$description": "Base animation duration (200ms). Use for standard transitions and interactions."
       }
     },
     "easing": {
-      "ease-out": {
+      "ease.out": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "",
-        "$value": "{animation-easing-ease-out}",
+        "$value": "{animation.easing.ease.out}",
         "$description": "Ease-out easing function. Use for elements entering the viewport."
       },
-      "ease-in-out": {
+      "ease.in.out": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "string",
         "$libraryName": "",
         "$collectionName": "",
-        "$value": "{animation-easing-ease-in-out}",
+        "$value": "{animation.easing.ease.in.out}",
         "$description": "Ease-in-out easing function. Use for smooth bidirectional transitions."
       }
     }
   },
-  "background-active-accent-default": {
+  "background.active.accent.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -368,7 +368,7 @@
       }
     }
   },
-  "background-active-accent-subtle": {
+  "background.active.accent.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -396,7 +396,7 @@
       }
     }
   },
-  "background-active-accent-hover": {
+  "background.active.accent.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -424,7 +424,7 @@
       }
     }
   },
-  "background-active-accent-selected": {
+  "background.active.accent.selected": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -452,7 +452,7 @@
       }
     }
   },
-  "background-active-accent-pressed": {
+  "background.active.accent.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -480,7 +480,7 @@
       }
     }
   },
-  "background-active-accent-disabled": {
+  "background.active.accent.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -508,7 +508,7 @@
       }
     }
   },
-  "background-active-accent-inverse-default": {
+  "background.active.accent.inverse.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -536,7 +536,7 @@
       }
     }
   },
-  "background-active-accent-inverse-subtle": {
+  "background.active.accent.inverse.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -564,7 +564,7 @@
       }
     }
   },
-  "background-active-accent-inverse-hover": {
+  "background.active.accent.inverse.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -592,7 +592,7 @@
       }
     }
   },
-  "background-active-accent-inverse-pressed": {
+  "background.active.accent.inverse.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -620,7 +620,7 @@
       }
     }
   },
-  "background-active-accent-inverse-disabled": {
+  "background.active.accent.inverse.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -648,7 +648,7 @@
       }
     }
   },
-  "background-active-danger-default": {
+  "background.active.danger.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -676,7 +676,7 @@
       }
     }
   },
-  "background-active-danger-subtle": {
+  "background.active.danger.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -704,7 +704,7 @@
       }
     }
   },
-  "background-active-danger-hover": {
+  "background.active.danger.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -732,7 +732,7 @@
       }
     }
   },
-  "background-active-danger-pressed": {
+  "background.active.danger.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -760,7 +760,7 @@
       }
     }
   },
-  "background-active-neutral-default": {
+  "background.active.neutral.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -786,7 +786,7 @@
       }
     }
   },
-  "background-active-neutral-hover": {
+  "background.active.neutral.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -812,7 +812,7 @@
       }
     }
   },
-  "background-active-neutral-pressed": {
+  "background.active.neutral.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -838,7 +838,7 @@
       }
     }
   },
-  "background-active-neutral-disabled": {
+  "background.active.neutral.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -864,7 +864,7 @@
       }
     }
   },
-  "background-active-success-default": {
+  "background.active.success.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -892,7 +892,7 @@
       }
     }
   },
-  "background-active-success-hover": {
+  "background.active.success.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -920,7 +920,7 @@
       }
     }
   },
-  "background-active-success-pressed": {
+  "background.active.success.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -948,7 +948,7 @@
       }
     }
   },
-  "background-active-success-disabled": {
+  "background.active.success.disabled": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -976,7 +976,7 @@
       }
     }
   },
-  "background-active-upgrade-default": {
+  "background.active.upgrade.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1002,7 +1002,7 @@
       }
     }
   },
-  "background-active-upgrade-subtle": {
+  "background.active.upgrade.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1028,7 +1028,7 @@
       }
     }
   },
-  "background-active-upgrade-hover": {
+  "background.active.upgrade.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1054,7 +1054,7 @@
       }
     }
   },
-  "background-active-upgrade-pressed": {
+  "background.active.upgrade.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1080,7 +1080,7 @@
       }
     }
   },
-  "background-active-warning-default": {
+  "background.active.warning.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1108,7 +1108,7 @@
       }
     }
   },
-  "background-active-warning-hover": {
+  "background.active.warning.hover": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1136,7 +1136,7 @@
       }
     }
   },
-  "background-active-warning-pressed": {
+  "background.active.warning.pressed": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1164,7 +1164,7 @@
       }
     }
   },
-  "background-passive-danger-default": {
+  "background.passive.danger.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1192,7 +1192,7 @@
       }
     }
   },
-  "background-passive-danger-subtle": {
+  "background.passive.danger.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1220,7 +1220,7 @@
       }
     }
   },
-  "background-passive-info-default": {
+  "background.passive.info.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1246,7 +1246,7 @@
       }
     }
   },
-  "background-passive-info-subtle": {
+  "background.passive.info.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1272,7 +1272,7 @@
       }
     }
   },
-  "background-passive-neutral-default": {
+  "background.passive.neutral.default": {
     "$scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"
@@ -1298,7 +1298,7 @@
       }
     }
   },
-  "background-passive-neutral-subtle": {
+  "background.passive.neutral.subtle": {
     "$scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"
@@ -1324,7 +1324,7 @@
       }
     }
   },
-  "background-passive-neutral-elevated": {
+  "background.passive.neutral.elevated": {
     "$scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"
@@ -1350,7 +1350,7 @@
       }
     }
   },
-  "background-passive-neutral-strong": {
+  "background.passive.neutral.strong": {
     "$scopes": [
       "FRAME_FILL",
       "SHAPE_FILL"
@@ -1376,7 +1376,7 @@
       }
     }
   },
-  "background-passive-success-default": {
+  "background.passive.success.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1404,7 +1404,7 @@
       }
     }
   },
-  "background-passive-success-subtle": {
+  "background.passive.success.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1432,7 +1432,7 @@
       }
     }
   },
-  "background-passive-upgrade-default": {
+  "background.passive.upgrade.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1458,7 +1458,7 @@
       }
     }
   },
-  "background-passive-upgrade-subtle": {
+  "background.passive.upgrade.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1484,7 +1484,7 @@
       }
     }
   },
-  "background-passive-upgrade-strong": {
+  "background.passive.upgrade.strong": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1510,7 +1510,7 @@
       }
     }
   },
-  "background-passive-warning-default": {
+  "background.passive.warning.default": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1538,7 +1538,7 @@
       }
     }
   },
-  "background-passive-warning-subtle": {
+  "background.passive.warning.subtle": {
     "$scopes": [
       "ALL_FILLS",
       "STROKE_COLOR"
@@ -1566,14 +1566,14 @@
       }
     }
   },
-  "border-width-thin": {
+  "border.width.thin": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border-width-1}",
+    "$value": "{border.width.1}",
     "$description": "Width token for thin intent.",
     "$extensions": {
       "design-tokens": {
@@ -1591,14 +1591,14 @@
       }
     }
   },
-  "border-width-thicker": {
+  "border.width.thicker": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border-width-2}",
+    "$value": "{border.width.2}",
     "$description": "Width token for thicker intent.",
     "$extensions": {
       "design-tokens": {
@@ -1616,14 +1616,14 @@
       }
     }
   },
-  "border-width-thick": {
+  "border.width.thick": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border-width-3}",
+    "$value": "{border.width.3}",
     "$description": "Width token for thick intent.",
     "$extensions": {
       "design-tokens": {
@@ -1641,7 +1641,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-default": {
+  "border.active.neutral.control.field.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1667,7 +1667,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-hover": {
+  "border.active.neutral.control.field.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1693,7 +1693,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-focused": {
+  "border.active.neutral.control.field.focused": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1719,7 +1719,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-selected": {
+  "border.active.neutral.control.field.selected": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1745,7 +1745,7 @@
       }
     }
   },
-  "border-active-neutral-control-field-disabled": {
+  "border.active.neutral.control.field.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1771,7 +1771,7 @@
       }
     }
   },
-  "border-active-neutral-control-toggle-default": {
+  "border.active.neutral.control.toggle.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1797,7 +1797,7 @@
       }
     }
   },
-  "border-active-neutral-control-toggle-hover": {
+  "border.active.neutral.control.toggle.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1823,7 +1823,7 @@
       }
     }
   },
-  "border-active-neutral-control-toggle-disabled": {
+  "border.active.neutral.control.toggle.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -1849,7 +1849,7 @@
       }
     }
   },
-  "border-active-accent-default": {
+  "border.active.accent.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -1874,7 +1874,7 @@
       }
     }
   },
-  "border-active-accent-hover": {
+  "border.active.accent.hover": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -1899,7 +1899,7 @@
       }
     }
   },
-  "border-active-accent-pressed": {
+  "border.active.accent.pressed": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -1924,7 +1924,7 @@
       }
     }
   },
-  "border-active-accent-disabled": {
+  "border.active.accent.disabled": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -1949,7 +1949,7 @@
       }
     }
   },
-  "border-active-accent-selected": {
+  "border.active.accent.selected": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -1974,7 +1974,7 @@
       }
     }
   },
-  "border-active-danger-default": {
+  "border.active.danger.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -1999,7 +1999,7 @@
       }
     }
   },
-  "border-active-neutral-action-default": {
+  "border.active.neutral.action.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -2025,7 +2025,7 @@
       }
     }
   },
-  "border-active-neutral-action-hover": {
+  "border.active.neutral.action.hover": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -2051,7 +2051,7 @@
       }
     }
   },
-  "border-active-neutral-action-pressed": {
+  "border.active.neutral.action.pressed": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -2077,7 +2077,7 @@
       }
     }
   },
-  "border-active-neutral-action-disabled": {
+  "border.active.neutral.action.disabled": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -2103,7 +2103,7 @@
       }
     }
   },
-  "border-passive-neutral-default": {
+  "border.passive.neutral.default": {
     "$scopes": [
       "STROKE_COLOR"
     ],
@@ -2128,7 +2128,7 @@
       }
     }
   },
-  "content-active-accent-default": {
+  "content.active.accent.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2155,7 +2155,7 @@
       }
     }
   },
-  "content-active-accent-hover": {
+  "content.active.accent.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2182,7 +2182,7 @@
       }
     }
   },
-  "content-active-accent-pressed": {
+  "content.active.accent.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2209,7 +2209,7 @@
       }
     }
   },
-  "content-active-accent-disabled": {
+  "content.active.accent.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2236,7 +2236,7 @@
       }
     }
   },
-  "content-active-accent-inverse-default": {
+  "content.active.accent.inverse.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2263,7 +2263,7 @@
       }
     }
   },
-  "content-active-accent-inverse-hover": {
+  "content.active.accent.inverse.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2290,7 +2290,7 @@
       }
     }
   },
-  "content-active-accent-inverse-pressed": {
+  "content.active.accent.inverse.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2317,7 +2317,7 @@
       }
     }
   },
-  "content-active-accent-inverse-disabled": {
+  "content.active.accent.inverse.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2344,7 +2344,7 @@
       }
     }
   },
-  "content-active-danger-default": {
+  "content.active.danger.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2371,7 +2371,7 @@
       }
     }
   },
-  "content-active-danger-hover": {
+  "content.active.danger.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2398,7 +2398,7 @@
       }
     }
   },
-  "content-active-danger-pressed": {
+  "content.active.danger.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2425,7 +2425,7 @@
       }
     }
   },
-  "content-active-neutral-default": {
+  "content.active.neutral.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2450,7 +2450,7 @@
       }
     }
   },
-  "content-active-neutral-hover": {
+  "content.active.neutral.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2475,7 +2475,7 @@
       }
     }
   },
-  "content-active-neutral-pressed": {
+  "content.active.neutral.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2500,7 +2500,7 @@
       }
     }
   },
-  "content-active-neutral-disabled": {
+  "content.active.neutral.disabled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2525,7 +2525,7 @@
       }
     }
   },
-  "content-active-upgrade-default": {
+  "content.active.upgrade.default": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2550,7 +2550,7 @@
       }
     }
   },
-  "content-active-upgrade-hover": {
+  "content.active.upgrade.hover": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2575,7 +2575,7 @@
       }
     }
   },
-  "content-active-upgrade-pressed": {
+  "content.active.upgrade.pressed": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2600,7 +2600,7 @@
       }
     }
   },
-  "notes-content-filled": {
+  "notes.content.filled": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2621,7 +2621,7 @@
       }
     }
   },
-  "notes-content-placeholder": {
+  "notes.content.placeholder": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2642,7 +2642,7 @@
       }
     }
   },
-  "notes-background": {
+  "notes.background": {
     "$scopes": [
       "ALL_SCOPES"
     ],
@@ -2720,7 +2720,7 @@
     "$description": "Active border color for accent intent when selected. Use for selected states.",
     "$extensions": {}
   },
-  "content-passive-danger": {
+  "content.passive.danger": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2748,7 +2748,7 @@
       }
     }
   },
-  "content-passive-info": {
+  "content.passive.info": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2774,7 +2774,7 @@
       }
     }
   },
-  "content-passive-neutral-strong": {
+  "content.passive.neutral.strong": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2800,7 +2800,7 @@
       }
     }
   },
-  "content-passive-neutral-default": {
+  "content.passive.neutral.default": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2826,7 +2826,7 @@
       }
     }
   },
-  "content-passive-neutral-subtle": {
+  "content.passive.neutral.subtle": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2852,7 +2852,7 @@
       }
     }
   },
-  "content-passive-neutral-muted": {
+  "content.passive.neutral.muted": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2878,7 +2878,7 @@
       }
     }
   },
-  "content-passive-on-neutral-strong": {
+  "content.passive.on.neutral.strong": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2904,7 +2904,7 @@
       }
     }
   },
-  "content-passive-on-neutral-default": {
+  "content.passive.on.neutral.default": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2930,7 +2930,7 @@
       }
     }
   },
-  "content-passive-on-neutral-subtle": {
+  "content.passive.on.neutral.subtle": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2956,7 +2956,7 @@
       }
     }
   },
-  "content-passive-on-accent": {
+  "content.passive.on.accent": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -2982,7 +2982,7 @@
       }
     }
   },
-  "content-passive-on-accent-inverse": {
+  "content.passive.on.accent.inverse": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3008,7 +3008,7 @@
       }
     }
   },
-  "content-passive-on-success": {
+  "content.passive.on.success": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3034,7 +3034,7 @@
       }
     }
   },
-  "content-passive-on-danger": {
+  "content.passive.on.danger": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3060,7 +3060,7 @@
       }
     }
   },
-  "content-passive-on-warning": {
+  "content.passive.on.warning": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3086,7 +3086,7 @@
       }
     }
   },
-  "content-passive-on-info": {
+  "content.passive.on.info": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3112,7 +3112,7 @@
       }
     }
   },
-  "content-passive-on-upgrade": {
+  "content.passive.on.upgrade": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3138,7 +3138,7 @@
       }
     }
   },
-  "content-passive-success": {
+  "content.passive.success": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3166,7 +3166,7 @@
       }
     }
   },
-  "content-passive-upgrade": {
+  "content.passive.upgrade": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3192,7 +3192,7 @@
       }
     }
   },
-  "content-passive-warning": {
+  "content.passive.warning": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -3229,7 +3229,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size-1}",
+        "$value": "{size.1}",
         "$description": "Extra extra extra small control height (16px). Use for compact inputs and buttons."
       },
       "xxs": {
@@ -3239,7 +3239,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size-2}",
+        "$value": "{size.2}",
         "$description": "Extra extra small control height (24px). Use for small inputs and buttons."
       },
       "xs": {
@@ -3249,7 +3249,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size-3}",
+        "$value": "{size.3}",
         "$description": "Extra small control height (32px). Use for compact interactive elements."
       },
       "sm": {
@@ -3259,7 +3259,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size-4}",
+        "$value": "{size.4}",
         "$description": "Small control height (40px). Use for standard inputs and buttons."
       },
       "md": {
@@ -3269,7 +3269,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size-5}",
+        "$value": "{size.5}",
         "$description": "Medium control height (48px). Use for comfortable interactive elements."
       },
       "lg": {
@@ -3279,7 +3279,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size-6}",
+        "$value": "{size.6}",
         "$description": "Large control height (56px). Use for prominent buttons and inputs."
       }
     },
@@ -3376,7 +3376,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-1}",
+      "$value": "{spacing.1}",
       "$description": "Extra extra small gap (4px). Use for tight spacing between related elements."
     },
     "xs": {
@@ -3386,7 +3386,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-2}",
+      "$value": "{spacing.2}",
       "$description": "Extra small gap (8px). Use for compact spacing in dense layouts."
     },
     "s": {
@@ -3396,7 +3396,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-3}",
+      "$value": "{spacing.3}",
       "$description": "Small gap (12px). Use for standard spacing between related elements."
     },
     "m": {
@@ -3406,7 +3406,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-4}",
+      "$value": "{spacing.4}",
       "$description": "Medium gap (16px). Use for comfortable spacing in standard layouts."
     },
     "l": {
@@ -3416,7 +3416,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-5}",
+      "$value": "{spacing.5}",
       "$description": "Large gap (20px). Use for increased spacing between sections."
     },
     "xl": {
@@ -3426,7 +3426,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-6}",
+      "$value": "{spacing.6}",
       "$description": "Extra large gap (24px). Use for prominent spacing between major sections."
     },
     "xxl": {
@@ -3436,7 +3436,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-8}",
+      "$value": "{spacing.8}",
       "$description": "Extra extra large gap (32px). Use for maximum spacing between distinct sections."
     }
   },
@@ -3542,7 +3542,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-1}",
+      "$value": "{spacing.1}",
       "$description": "Extra extra extra small padding (4px). Use for very compact internal spacing."
     },
     "xxs": {
@@ -3552,7 +3552,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-2}",
+      "$value": "{spacing.2}",
       "$description": "Extra extra small padding (8px). Use for compact internal spacing."
     },
     "xs": {
@@ -3562,7 +3562,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-3}",
+      "$value": "{spacing.3}",
       "$description": "Extra small padding (12px). Use for tight internal spacing in dense components."
     },
     "s": {
@@ -3572,7 +3572,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-4}",
+      "$value": "{spacing.4}",
       "$description": "Small padding (16px). Use for standard internal spacing in buttons and inputs."
     },
     "m": {
@@ -3582,7 +3582,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-5}",
+      "$value": "{spacing.5}",
       "$description": "Medium padding (20px). Use for comfortable internal spacing in cards."
     },
     "l": {
@@ -3592,7 +3592,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-6}",
+      "$value": "{spacing.6}",
       "$description": "Large padding (24px). Use for increased internal spacing in larger containers."
     },
     "xl": {
@@ -3602,7 +3602,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-8}",
+      "$value": "{spacing.8}",
       "$description": "Extra large padding (32px). Use for prominent internal spacing in major containers."
     },
     "xxl": {
@@ -3612,7 +3612,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-12}",
+      "$value": "{spacing.12}",
       "$description": "Extra extra large padding (48px). Use for maximum internal spacing in hero sections."
     },
     "xxxl": {
@@ -3622,7 +3622,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-20}",
+      "$value": "{spacing.20}",
       "$description": "Extra extra extra large padding (80px). Use for very large containers."
     },
     "xxxxl": {
@@ -3632,7 +3632,7 @@
       "$type": "spacing",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{spacing-30}",
+      "$value": "{spacing.30}",
       "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
     }
   },
@@ -3644,7 +3644,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-0}",
+      "$value": "{radius.0}",
       "$description": "No border radius (0px). Use for square corners."
     },
     "xs": {
@@ -3654,7 +3654,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-1}",
+      "$value": "{radius.1}",
       "$description": "Extra small border radius (4px). Use for compact components like badges or small buttons."
     },
     "sm": {
@@ -3664,7 +3664,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-2}",
+      "$value": "{radius.2}",
       "$description": "Small border radius (8px). Use for standard buttons and input fields."
     },
     "md": {
@@ -3674,7 +3674,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-3}",
+      "$value": "{radius.3}",
       "$description": "Medium border radius (12px). Use for cards and larger interactive elements."
     },
     "lg": {
@@ -3684,7 +3684,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-4}",
+      "$value": "{radius.4}",
       "$description": "Large border radius (16px). Use for prominent cards and containers."
     },
     "xl": {
@@ -3694,7 +3694,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-5}",
+      "$value": "{radius.5}",
       "$description": "Extra large border radius (20px). Use for large containers and modals."
     },
     "xxl": {
@@ -3704,7 +3704,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-6}",
+      "$value": "{radius.6}",
       "$description": "Extra extra large border radius (24px). Use for very large containers."
     },
     "full": {
@@ -3714,101 +3714,101 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius-round}",
+      "$value": "{radius.round}",
       "$description": "Full border radius (999px). Use for pill-shaped elements like tags or rounded buttons."
     }
   },
-  "shadow-xs": {
+  "shadow.xs": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-xs}",
+    "$value": "{shadow.xs}",
     "$description": "Extra small shadow. Use for subtle elevation on small elements.",
     "$extensions": {}
   },
-  "shadow-sm": {
+  "shadow.sm": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-sm}",
+    "$value": "{shadow.sm}",
     "$description": "Small shadow. Use for light elevation on buttons and inputs.",
     "$extensions": {}
   },
-  "shadow-md": {
+  "shadow.md": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-md}",
+    "$value": "{shadow.md}",
     "$description": "Medium shadow. Use for standard elevation on cards and dropdowns.",
     "$extensions": {}
   },
-  "shadow-lg": {
+  "shadow.lg": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-lg}",
+    "$value": "{shadow.lg}",
     "$description": "Large shadow. Use for prominent elevation on modals and popovers.",
     "$extensions": {}
   },
-  "shadow-xl": {
+  "shadow.xl": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-xl}",
+    "$value": "{shadow.xl}",
     "$description": "Extra large shadow. Use for strong elevation on major overlays.",
     "$extensions": {}
   },
-  "shadow-2xl": {
+  "shadow.2xl": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-2xl}",
+    "$value": "{shadow.2xl}",
     "$description": "Extra extra large shadow. Use for maximum elevation on top-level modals.",
     "$extensions": {}
   },
-  "shadow-inner": {
+  "shadow.inner": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "boxShadow",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{shadow-inner}",
+    "$value": "{shadow.inner}",
     "$description": "Inner shadow. Use for inset effects like pressed buttons or input focus.",
     "$extensions": {}
   },
   "sizing": {
-    "tooltip-arrow": {
+    "tooltip.arrow": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{size-1}",
+      "$value": "{size.1}",
       "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
     }
   },
   "typography": {
-    "headline-size": {
+    "headline.size": {
       "h1": {
         "$scopes": [
           "ALL_SCOPES"
@@ -3816,7 +3816,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-9}",
+        "$value": "{typography.fontSize.9}",
         "$description": "Font size for H1 headline. Use for page titles and major headings."
       },
       "h2": {
@@ -3826,7 +3826,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-8}",
+        "$value": "{typography.fontSize.8}",
         "$description": "Font size for H2 headline. Use for page titles and major headings."
       },
       "h3": {
@@ -3836,7 +3836,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-7}",
+        "$value": "{typography.fontSize.7}",
         "$description": "Font size for H3 headline. Use for page titles and major headings."
       },
       "h4": {
@@ -3846,7 +3846,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-6}",
+        "$value": "{typography.fontSize.6}",
         "$description": "Font size for H4 headline. Use for page titles and major headings."
       },
       "h5": {
@@ -3856,7 +3856,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-5}",
+        "$value": "{typography.fontSize.5}",
         "$description": "Font size for H5 headline. Use for page titles and major headings."
       },
       "h6": {
@@ -3866,11 +3866,11 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-4}",
+        "$value": "{typography.fontSize.4}",
         "$description": "Font size for H6 headline. Use for page titles and major headings."
       }
     },
-    "headline-line": {
+    "headline.line": {
       "h1": {
         "$scopes": [
           "ALL_SCOPES"
@@ -3878,7 +3878,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H1 headline. Ensures proper vertical rhythm."
       },
       "h2": {
@@ -3888,7 +3888,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H2 headline. Ensures proper vertical rhythm."
       },
       "h3": {
@@ -3898,7 +3898,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H3 headline. Ensures proper vertical rhythm."
       },
       "h4": {
@@ -3908,7 +3908,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H4 headline. Ensures proper vertical rhythm."
       },
       "h5": {
@@ -3918,7 +3918,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H5 headline. Ensures proper vertical rhythm."
       },
       "h6": {
@@ -3928,11 +3928,11 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H6 headline. Ensures proper vertical rhythm."
       }
     },
-    "body-size": {
+    "body.size": {
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
@@ -3940,7 +3940,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-4}",
+        "$value": "{typography.fontSize.4}",
         "$description": "Large body text size. Use for prominent body content and lead paragraphs."
       },
       "md": {
@@ -3950,7 +3950,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-3}",
+        "$value": "{typography.fontSize.3}",
         "$description": "Medium body text size. Use for standard body content and paragraphs."
       },
       "sm": {
@@ -3960,7 +3960,7 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-2}",
+        "$value": "{typography.fontSize.2}",
         "$description": "Small body text size. Use for secondary text and captions."
       },
       "xs": {
@@ -3970,11 +3970,11 @@
         "$type": "fontSizes",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontSize-1}",
+        "$value": "{typography.fontSize.1}",
         "$description": "Extra small body text size. Use for fine print and disclaimers."
       }
     },
-    "body-line": {
+    "body.line": {
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
@@ -3982,7 +3982,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text lg variant. Ensures readable line spacing."
       },
       "md": {
@@ -3992,7 +3992,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text md variant. Ensures readable line spacing."
       },
       "sm": {
@@ -4002,7 +4002,7 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text sm variant. Ensures readable line spacing."
       },
       "xs": {
@@ -4012,11 +4012,11 @@
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-lineHeight-base}",
+        "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text xs variant. Ensures readable line spacing."
       }
     },
-    "body-weight": {
+    "body.weight": {
       "light": {
         "$scopes": [
           "ALL_SCOPES"
@@ -4024,7 +4024,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-regular}",
+        "$value": "{typography.fontWeight.regular}",
         "$description": "Light font weight. Use for subtle emphasis."
       },
       "normal": {
@@ -4034,7 +4034,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-regular}",
+        "$value": "{typography.fontWeight.regular}",
         "$description": "Normal font weight. Use for standard body text."
       },
       "md": {
@@ -4044,7 +4044,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-medium}",
+        "$value": "{typography.fontWeight.medium}",
         "$description": "Medium font weight. Use for moderate emphasis."
       },
       "semibold": {
@@ -4054,7 +4054,7 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-bold}",
+        "$value": "{typography.fontWeight.bold}",
         "$description": "Semibold font weight. Use for strong emphasis in body text."
       },
       "bold": {
@@ -4064,12 +4064,12 @@
         "$type": "number",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{typography-fontWeight-bold}",
+        "$value": "{typography.fontWeight.bold}",
         "$description": "Bold font weight. Use for maximum emphasis."
       }
     }
   },
-  "z-index": {
+  "z.index": {
     "base": {
       "$scopes": [
         "ALL_SCOPES"
@@ -4110,7 +4110,7 @@
       "$value": "{z-index.z-fixed}",
       "$description": "Fixed element z-index layer"
     },
-    "modal-backdrop": {
+    "modal.backdrop": {
       "$scopes": [
         "ALL_SCOPES"
       ],

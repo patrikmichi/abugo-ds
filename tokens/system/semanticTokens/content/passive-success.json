@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "content-passive-success": {
+  "content.passive.success": {
     "$scopes": [
       "SHAPE_FILL",
       "TEXT_FILL"
@@ -10,8 +10,8 @@
     "$collectionName": "primitives",
     "$value": "{success.700}",
     "$description": "Passive token for success intent.",
-    "$extensions": {
-      "design-tokens": {
+      "$extensions": {
+        "design-tokens": {
         "category": "content",
         "participation": "passive",
         "intent": "success",

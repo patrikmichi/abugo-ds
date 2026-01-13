@@ -9,7 +9,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{background-passive-neutral-subtle}"
+        "$value": "{background.passive.neutral.subtle}"
       },
       "filled": {
         "$scopes": [

@@ -38,7 +38,7 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.s}"
+        "$value": "{padding.xs}"
       },
       "md": {
         "$scopes": [
@@ -47,7 +47,7 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.m}"
+        "$value": "{padding.s}"
       },
       "lg": {
         "$scopes": [
@@ -56,7 +56,7 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.l}"
+        "$value": "{padding.m}"
       }
     },
     "chip": {

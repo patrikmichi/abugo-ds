@@ -8,7 +8,7 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content-active-accent-default}"
+      "$value": "{content.active.accent.default}"
     }
   }
 }

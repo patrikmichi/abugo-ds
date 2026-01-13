@@ -1,6 +1,6 @@
 {
   "$name": "Semantic Tokens",
-  "z-index": {
+  "z.index": {
     "base": {
       "$scopes": [
         "ALL_SCOPES"
@@ -41,7 +41,7 @@
       "$value": "{z-index.z-fixed}",
       "$description": "Fixed element z-index layer"
     },
-    "modal-backdrop": {
+    "modal.backdrop": {
       "$scopes": [
         "ALL_SCOPES"
       ],
