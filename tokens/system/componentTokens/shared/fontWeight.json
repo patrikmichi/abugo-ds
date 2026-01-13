@@ -1,0 +1,12 @@
+{
+  "$name": "Component Tokens",
+  "button": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontWeights",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-fontWeight-bold}"
+  }
+}

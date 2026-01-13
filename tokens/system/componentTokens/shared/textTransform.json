@@ -1,0 +1,12 @@
+{
+  "$name": "Component Tokens",
+  "button": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "textCase",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{typography-textCase-none}"
+  }
+}

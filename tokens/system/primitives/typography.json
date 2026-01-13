@@ -212,7 +212,7 @@
         "letterSpacing": "{typography-letterSpacing-button}",
         "paragraphSpacing": "{typography-paragraphSpacing-none}",
         "paragraphIndent": "{typography-paragraphIndent-none}",
-        "textCase": "{typography-textCase-uppercase}",
+        "textCase": "{typography-textCase-none}",
         "textDecoration": "{typography-textDecoration-none}"
       }
     },
@@ -230,7 +230,7 @@
         "letterSpacing": "{typography-letterSpacing-button-large}",
         "paragraphSpacing": "{typography-paragraphSpacing-none}",
         "paragraphIndent": "{typography-paragraphIndent-none}",
-        "textCase": "{typography-textCase-uppercase}",
+        "textCase": "{typography-textCase-none}",
         "textDecoration": "{typography-textDecoration-none}"
       }
     }

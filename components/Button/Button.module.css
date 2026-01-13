@@ -16,8 +16,8 @@
   /* Typography - default to medium size */
   font-size: var(--token-component-font-size-button-md);
   line-height: 1;
-  font-weight: var(--token-primitive-typography-font-weight-medium);
-  text-transform: var(--token-primitive-typography-text-case-uppercase);
+  font-weight: var(--token-primitive-typography-font-weight-bold);
+  text-transform: none;
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
   
   /* Spacing & Sizing - default to medium size */
@@ -130,11 +130,9 @@
   color: inherit;
   line-height: 1;
   vertical-align: middle;
-  /* Remove any extra spacing - let flexbox handle centering */
+  /* Remove any extra spacing - flexbox handles centering */
   margin: 0;
   padding: 0;
-  /* Ensure text is perfectly centered */
-  height: 100%;
 }
 
 /* Size-specific text - all use line-height 1 for perfect centering */
@@ -203,7 +201,7 @@
   min-width: auto;
   border-radius: calc(var(--token-component-radius-button-sm) * 1px);
   font-size: var(--token-component-font-size-button-sm);
-  line-height: var(--token-component-line-height-button-sm);
+  line-height: 1;
   gap: var(--token-component-gap-button-icon-sm);
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
 }
@@ -250,7 +248,7 @@
   min-width: auto;
   border-radius: calc(var(--token-component-radius-button-lg) * 1px);
   font-size: var(--token-component-font-size-button-lg);
-  line-height: var(--token-component-line-height-button-lg);
+  line-height: 1;
   gap: var(--token-component-gap-button-icon-lg);
   letter-spacing: var(--token-primitive-typography-letter-spacing-button-large);
 }
