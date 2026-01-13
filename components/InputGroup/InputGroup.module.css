@@ -15,17 +15,25 @@
 }
 
 /* Input section - override wrapper and input styles for nested usage */
-.input,
-.input :global(.inputWrapper),
-.input :global(.input) {
+.input {
   flex: 1;
-  border: none !important;
-  border-radius: 0 !important;
   min-width: 0;
   height: 100%;
-  background: transparent;
-  padding: 0;
-  margin: 0;
+}
+
+/* Override Input component's wrapper and input element */
+.input > * {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+}
+
+.input input {
+  flex: 1;
+  min-width: 0;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
@@ -34,8 +42,7 @@
   /* Optical alignment handled by parent container padding adjustments */
 }
 
-.input:focus,
-.input :global(.input):focus {
+.input input:focus {
   outline: none;
   box-shadow: none;
 }
@@ -49,18 +56,24 @@
 }
 
 /* Select section - override wrapper and select styles for nested usage */
-.select,
-.select :global(.selectWrapper),
-.select :global(.select) {
+.select {
   flex-shrink: 0;
   min-width: var(--token-component-field-select-min-width-md);
+  height: 100%;
+}
+
+/* Override Select component's wrapper and select element */
+.select > * {
   border: none !important;
   border-radius: 0 !important;
-  background: transparent;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+}
+
+.select > * > * {
   background-image: none; /* Override default select arrow */
-  padding: 0;
-  margin: 0;
-  height: 100%;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
@@ -69,8 +82,7 @@
   /* Optical alignment handled by parent container padding adjustments */
 }
 
-.select:focus,
-.select :global(.select):focus {
+.select > * > *:focus {
   outline: none;
   box-shadow: none;
 }

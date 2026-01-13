@@ -16,19 +16,27 @@
 
 /* Input sections - override wrapper and input styles for nested usage */
 .firstInput,
-.firstInput :global(.inputWrapper),
-.firstInput :global(.input),
-.secondInput,
-.secondInput :global(.inputWrapper),
-.secondInput :global(.input) {
+.secondInput {
   flex: 1;
-  border: none !important;
-  border-radius: 0 !important;
   min-width: 0;
   height: 100%;
-  background: transparent;
-  padding: 0;
-  margin: 0;
+}
+
+/* Override Input component's wrapper and input element */
+.firstInput > *,
+.secondInput > * {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+}
+
+.firstInput input,
+.secondInput input {
+  flex: 1;
+  min-width: 0;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
@@ -37,10 +45,8 @@
   /* Optical alignment handled by parent container padding adjustments */
 }
 
-.firstInput:focus,
-.firstInput :global(.input):focus,
-.secondInput:focus,
-.secondInput :global(.input):focus {
+.firstInput input:focus,
+.secondInput input:focus {
   outline: none;
   box-shadow: none;
 }

@@ -76,17 +76,25 @@
 }
 
 /* Phone input - override wrapper and input styles for nested usage */
-.phoneInput,
-.phoneInput :global(.inputWrapper),
-.phoneInput :global(.input) {
+.phoneInput {
   flex: 1;
-  border: none !important;
-  border-radius: 0 !important;
   min-width: 0;
   height: 100%;
-  background: transparent;
-  padding: 0;
-  margin: 0;
+}
+
+/* Override Input component's wrapper and input element */
+.phoneInput > * {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+}
+
+.phoneInput input {
+  flex: 1;
+  min-width: 0;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
@@ -95,8 +103,7 @@
   /* Optical alignment handled by parent container padding adjustments */
 }
 
-.phoneInput:focus,
-.phoneInput :global(.input):focus {
+.phoneInput input:focus {
   outline: none;
   box-shadow: none;
 }
