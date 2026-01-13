@@ -22,19 +22,28 @@ export function Input({
   const isDisabled = finalStatus === 'disabled' || disabled;
   
   return (
-    <input
-      type="text"
+    <div 
       className={cn(
-        styles.input,
+        styles.inputWrapper,
         size === 'sm' && styles.sm,
         size === 'md' && styles.md,
-        size === 'lg' && styles.lg,
-        finalStatus === 'error' && styles.error,
-        finalStatus === 'disabled' && styles.disabled,
-        className
+        size === 'lg' && styles.lg
       )}
-      disabled={isDisabled}
-      {...props}
-    />
+    >
+      <input
+        type="text"
+        className={cn(
+          styles.input,
+          size === 'sm' && styles.sm,
+          size === 'md' && styles.md,
+          size === 'lg' && styles.lg,
+          finalStatus === 'error' && styles.error,
+          finalStatus === 'disabled' && styles.disabled,
+          className
+        )}
+        disabled={isDisabled}
+        {...props}
+      />
+    </div>
   );
 }

@@ -9,8 +9,16 @@
   overflow: visible;
 }
 
+.selectWrapper.sm {
+  height: var(--token-component-height-field-sm);
+}
+
 .selectWrapper.md {
   height: var(--token-component-height-field-md);
+}
+
+.selectWrapper.lg {
+  height: var(--token-component-height-field-lg);
 }
 
 .select {

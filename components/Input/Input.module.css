@@ -1,23 +1,42 @@
 /* Input component styles using design tokens */
-/* Following Material UI, Chakra UI, and Ant Design patterns */
+/* Unified structure for all field controls */
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  /* Height set per size variant */
+}
+
+.inputWrapper.sm {
+  height: var(--token-component-height-field-sm);
+}
+
+.inputWrapper.md {
+  height: var(--token-component-height-field-md);
+}
+
+.inputWrapper.lg {
+  height: var(--token-component-height-field-lg);
+}
 
 .input {
   /* Base styles - use field control tokens */
+  width: 100%;
+  height: 100%;
   background-color: var(--token-component-field-control-background-default);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   color: var(--token-component-field-content-value);
-  padding-inline: var(--token-component-padding-x-field-md);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
   /* Compensate for descender space using cap unit */
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  height: var(--token-component-height-field-md);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);
   font-family: var(--token-primitive-typography-font-family-sans);
   transition: 
     border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
     background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  width: 100%;
   box-sizing: border-box;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
@@ -38,12 +57,13 @@
 }
 
 /* Enabled state (default) */
-.input:not(.error):not(.disabled):hover {
+.input:not(.error):not(.disabled):hover:not(:disabled) {
   background-color: var(--token-component-field-control-background-hover);
   border-color: var(--token-component-field-control-border-hover);
 }
 
-.input:not(.error):not(.disabled):focus {
+.input:not(.error):not(.disabled):focus:not(:disabled),
+.input:not(.error):not(.disabled):focus-visible:not(:disabled) {
   background-color: var(--token-component-field-control-background-focused);
   border-color: var(--token-component-field-control-border-focused);
   /* Show focus ring on focus */
@@ -51,7 +71,7 @@
   outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
 }
 
-.input:not(.error):not(.disabled):active {
+.input:not(.error):not(.disabled):active:not(:disabled) {
   border-color: var(--token-component-field-control-border-active);
 }
 
@@ -59,7 +79,6 @@
 .input.error {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
-  /* Keep default text color, only border should be red */
   color: var(--token-component-field-content-value);
 }
 
@@ -82,11 +101,12 @@
   opacity: 1; /* Don't use opacity, use actual disabled colors */
 }
 
+/* Size variants */
 .sm {
-  padding-inline: var(--token-component-padding-x-field-sm);
+  padding-inline-start: var(--token-component-padding-x-field-sm);
+  padding-inline-end: var(--token-component-padding-x-field-sm);
   padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-  height: var(--token-component-height-field-sm);
   font-size: var(--token-component-font-size-field-sm);
   
   @supports not (padding-block: 1cap) {
@@ -98,10 +118,10 @@
 }
 
 .md {
-  padding-inline: var(--token-component-padding-x-field-md);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  height: var(--token-component-height-field-md);
   
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-md);
@@ -112,10 +132,10 @@
 }
 
 .lg {
-  padding-inline: var(--token-component-padding-x-field-lg);
+  padding-inline-start: var(--token-component-padding-x-field-lg);
+  padding-inline-end: var(--token-component-padding-x-field-lg);
   padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
-  height: var(--token-component-height-field-lg);
   font-size: var(--token-component-font-size-field-lg);
   
   @supports not (padding-block: 1cap) {
@@ -125,4 +145,3 @@
     padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
 }
-

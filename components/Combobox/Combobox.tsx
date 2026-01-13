@@ -14,15 +14,17 @@ export function Combobox({
   ...props
 }: ComboboxProps) {
   return (
-    <div
-      className={cn(
-        styles.combobox,
-        variant && styles.value,
-        className
-      )}
-      {...props}
-    >
-      {children}
+    <div className={styles.comboboxWrapper}>
+      <div
+        className={cn(
+          styles.combobox,
+          variant && styles.value,
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </div>
     </div>
   );
 }

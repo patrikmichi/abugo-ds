@@ -22,18 +22,20 @@ export function Textarea({
   const isDisabled = finalStatus === 'disabled' || disabled;
   
   return (
-    <textarea
-      className={cn(
-        styles.textarea,
-        size === 'sm' && styles.sm,
-        size === 'md' && styles.md,
-        size === 'lg' && styles.lg,
-        finalStatus === 'error' && styles.error,
-        finalStatus === 'disabled' && styles.disabled,
-        className
-      )}
-      disabled={isDisabled}
-      {...props}
-    />
+    <div className={styles.textareaWrapper}>
+      <textarea
+        className={cn(
+          styles.textarea,
+          size === 'sm' && styles.sm,
+          size === 'md' && styles.md,
+          size === 'lg' && styles.lg,
+          finalStatus === 'error' && styles.error,
+          finalStatus === 'disabled' && styles.disabled,
+          className
+        )}
+        disabled={isDisabled}
+        {...props}
+      />
+    </div>
   );
 }

@@ -14,15 +14,17 @@ export function Datepicker({
   ...props
 }: DatepickerProps) {
   return (
-    <div
-      className={cn(
-        styles.datepicker,
-        variant && styles.value,
-        className
-      )}
-      {...props}
-    >
-      {children}
+    <div className={styles.datepickerWrapper}>
+      <div
+        className={cn(
+          styles.datepicker,
+          variant && styles.value,
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </div>
     </div>
   );
 }

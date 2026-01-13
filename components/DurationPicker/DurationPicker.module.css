@@ -1,17 +1,33 @@
 /* DurationPicker component styles using design tokens */
+/* Unified structure for all field controls */
+
+.durationPickerWrapper {
+  position: relative;
+  width: 100%;
+  height: var(--token-component-height-field-md);
+}
+
+.durationPickerWrapper.sm {
+  height: var(--token-component-height-field-sm);
+}
+
+.durationPickerWrapper.lg {
+  height: var(--token-component-height-field-lg);
+}
 
 .durationPicker {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   background-color: var(--token-component-field-control-background-default);
-  padding-inline: var(--token-component-padding-x-field-picker-md);
+  padding-inline-start: var(--token-component-padding-x-field-picker-md);
+  padding-inline-end: var(--token-component-padding-x-field-picker-md);
   /* Compensate for descender space using cap unit */
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
-  height: var(--token-component-height-field-md);
   transition: 
     border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
     background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
@@ -48,16 +64,14 @@
   width: var(--token-component-field-picker-input-width);
   text-align: center;
   font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-md, 16px); /* Fallback */
-  font-weight: var(--token-primitive-typography-font-weight-regular, 400); /* Fallback */
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
+  font-size: var(--token-component-font-size-field-md);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  color: var(--token-component-field-content-value);
   outline: none;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
-  
-  /* Optical alignment handled by parent container padding adjustments */
 }
 
 .hoursInput:focus,
@@ -89,7 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
+  color: var(--token-component-field-content-value);
   flex-shrink: 0;
 }
 
@@ -116,9 +130,9 @@
 }
 
 /* Size variants */
-.durationPicker.sm {
-  height: var(--token-component-height-field-sm);
-  padding-inline: var(--token-component-padding-x-field-picker-sm);
+.sm {
+  padding-inline-start: var(--token-component-padding-x-field-picker-sm);
+  padding-inline-end: var(--token-component-padding-x-field-picker-sm);
   padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   
@@ -130,9 +144,9 @@
   }
 }
 
-.durationPicker.lg {
-  height: var(--token-component-height-field-lg);
-  padding-inline: var(--token-component-padding-x-field-picker-lg);
+.lg {
+  padding-inline-start: var(--token-component-padding-x-field-picker-lg);
+  padding-inline-end: var(--token-component-padding-x-field-picker-lg);
   padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   

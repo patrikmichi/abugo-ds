@@ -1,17 +1,33 @@
 /* TimePicker component styles using design tokens */
+/* Unified structure for all field controls */
+
+.timePickerWrapper {
+  position: relative;
+  width: 100%;
+  height: var(--token-component-height-field-md);
+}
+
+.timePickerWrapper.sm {
+  height: var(--token-component-height-field-sm);
+}
+
+.timePickerWrapper.lg {
+  height: var(--token-component-height-field-lg);
+}
 
 .timePicker {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   background-color: var(--token-component-field-control-background-default);
-  padding-inline: var(--token-component-padding-x-field-picker-md);
+  padding-inline-start: var(--token-component-padding-x-field-picker-md);
+  padding-inline-end: var(--token-component-padding-x-field-picker-md);
   /* Compensate for descender space using cap unit */
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
-  height: var(--token-component-height-field-md);
   transition: 
     border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
     background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
@@ -48,11 +64,14 @@
   width: var(--token-component-field-picker-input-width);
   text-align: center;
   font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-md, 16px); /* Fallback */
-  font-weight: var(--token-primitive-typography-font-weight-regular, 400); /* Fallback */
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
+  font-size: var(--token-component-font-size-field-md);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  color: var(--token-component-field-content-value);
   outline: none;
-  /* Optical centering handled by parent container padding adjustments */
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
 .hoursInput:focus,
@@ -84,7 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
+  color: var(--token-component-field-content-value);
   flex-shrink: 0;
 }
 
@@ -111,9 +130,9 @@
 }
 
 /* Size variants */
-.timePicker.sm {
-  height: var(--token-component-height-field-sm);
-  padding-inline: var(--token-component-padding-x-field-picker-sm);
+.sm {
+  padding-inline-start: var(--token-component-padding-x-field-picker-sm);
+  padding-inline-end: var(--token-component-padding-x-field-picker-sm);
   padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   
@@ -125,9 +144,9 @@
   }
 }
 
-.timePicker.lg {
-  height: var(--token-component-height-field-lg);
-  padding-inline: var(--token-component-padding-x-field-picker-lg);
+.lg {
+  padding-inline-start: var(--token-component-padding-x-field-picker-lg);
+  padding-inline-end: var(--token-component-padding-x-field-picker-lg);
   padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   
@@ -155,7 +174,6 @@
 
 .timePicker:not(.error):not(.disabled):active {
   border-color: var(--token-component-field-control-border-active);
-  transform: translateY(-1px);
 }
 
 /* Error state - use status.error tokens */
@@ -182,89 +200,4 @@
   pointer-events: none;
   opacity: 1; /* Don't use opacity, use actual disabled colors */
   outline: none;
-}
-
-/* Focused segment highlight */
-.focusedSegment {
-  background-color: #e4edfd; /* Hardcoded: focused segment background - missing token */
-  border-radius: 4px; /* Hardcoded: segment border radius - missing token */
-}
-
-/* Separator (colon) */
-.separator {
-  font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-md, 16px); /* Fallback */
-  font-weight: var(--token-primitive-typography-font-weight-regular, 400); /* Fallback */
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
-  margin: 0 4px; /* Hardcoded: margin around separator - missing token */
-}
-
-/* Expand button */
-.expandButton {
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
-  flex-shrink: 0;
-}
-
-.expandButton:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.expandButton:focus-visible {
-  outline: 2px solid var(--token-component-field-control-border-focused, #93b8f9); /* Hardcoded fallback */
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Chevron icon */
-.chevron {
-  width: 12px; /* Hardcoded: chevron size - missing token */
-  height: 12px;
-  transition: transform var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-}
-
-.chevronExpanded {
-  transform: rotate(180deg);
-}
-
-/* Size variants */
-.timePicker.sm {
-  height: var(--token-component-height-field-sm);
-  padding: 0 10px; /* Hardcoded: smaller padding for sm */
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-}
-
-.timePicker.lg {
-  height: var(--token-component-height-field-lg);
-  padding: 0 14px; /* Hardcoded: larger padding for lg */
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
-}
-
-/* Focus state */
-.timePicker.focused {
-  border-color: var(--token-component-field-control-border-focused, #93b8f9); /* Hardcoded fallback */
-}
-
-/* Error state */
-.timePicker.error {
-  border-color: var(--token-semantic-border-active-danger-default, #ff434e); /* Hardcoded fallback */
-}
-
-/* Disabled state */
-.timePicker.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-/* Hover state */
-.timePicker:not(.disabled):not(.focused):hover {
-  border-color: var(--token-component-field-control-border-hover, #c9c9c9); /* Hardcoded fallback */
 }

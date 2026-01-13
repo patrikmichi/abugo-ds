@@ -95,18 +95,27 @@ export function TimePicker({
   return (
     <div
       className={cn(
-        styles.timePicker,
-        size && styles[size],
-        hasError && styles.error,
-        isDisabled && styles.disabled,
-        isFocused && styles.focused,
-        expanded && styles.expanded,
-        className
+        styles.timePickerWrapper,
+        size === 'sm' && styles.sm,
+        size === 'md' && styles.md,
+        size === 'lg' && styles.lg
       )}
-      role="group"
-      aria-label={ariaLabel}
-      {...props}
     >
+      <div
+        className={cn(
+          styles.timePicker,
+          size === 'sm' && styles.sm,
+          size === 'lg' && styles.lg,
+          hasError && styles.error,
+          isDisabled && styles.disabled,
+          isFocused && styles.focused,
+          expanded && styles.expanded,
+          className
+        )}
+        role="group"
+        aria-label={ariaLabel}
+        {...props}
+      >
       <div className={styles.inputs}>
         <input
           id={hoursId}
@@ -175,6 +184,7 @@ export function TimePicker({
           <path d="M6 9L1 4h10z" fill="currentColor" />
         </svg>
       </button>
+      </div>
     </div>
   );
 }

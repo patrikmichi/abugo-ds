@@ -1,23 +1,37 @@
 /* Combobox component styles using design tokens */
+/* Unified structure for all field controls */
+
+.comboboxWrapper {
+  position: relative;
+  width: 100%;
+  height: var(--token-component-height-field-md);
+}
 
 .combobox {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
   width: 100%;
-  min-height: var(--token-component-height-field-md);
-  padding-left: var(--token-component-padding-x-field-md);
-  padding-right: var(--token-component-padding-x-field-md);
+  height: 100%;
+  background-color: var(--token-component-combobox-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-combobox-border-default);
+  color: var(--token-component-combobox-content-value);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
   padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
   padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
-  background-color: var(--token-component-combobox-background-default);
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-combobox-border-default);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  color: var(--token-component-combobox-content-value);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);
-  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  transition: 
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-sizing: border-box;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
 }
 
 .combobox:hover {
@@ -29,7 +43,8 @@
 .combobox:focus-within {
   background-color: var(--token-component-combobox-background-focused);
   border-color: var(--token-component-combobox-border-focused);
-  outline: none;
+  outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
+  outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
 }
 
 .combobox:active {
