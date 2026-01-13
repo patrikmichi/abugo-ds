@@ -61,7 +61,6 @@ Our design system now aligns with major design systems:
 ### 3. **Tool Compatibility**
 The 50-900 scale works excellently with:
 - Figma Tokens Studio
-- Panda CSS
 - Storybook
 - Material Design tools
 - All modern design system tooling

@@ -1,0 +1,20 @@
+/* Accordion component styles using design tokens */
+
+.accordion {
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.default {
+  background-color: var(--token-component-accordion-default-background-default);
+  color: var(--token-component-accordion-default-content);
+}
+
+.background {
+}
+
+.border {
+}
+
+.content {
+}

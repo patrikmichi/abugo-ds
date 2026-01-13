@@ -1,0 +1,13 @@
+/* Loading component styles using design tokens */
+
+.loading {
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.spinner {
+  color: var(--token-component-loading-spinner-content);
+}
+
+.content {
+}

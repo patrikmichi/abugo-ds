@@ -1,0 +1,20 @@
+/* Stepper component styles using design tokens */
+
+.stepper {
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.default {
+  background-color: var(--token-component-stepper-default-background-default);
+  color: var(--token-component-stepper-default-content-default);
+}
+
+.background {
+}
+
+.border {
+}
+
+.content {
+}

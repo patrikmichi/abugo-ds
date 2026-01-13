@@ -50,7 +50,7 @@
         "$value": "{content-passive-on-accent}"
       }
     },
-    "text": {
+    "plain": {
       "background": {
         "default": {
           "$scopes": [
@@ -130,7 +130,7 @@
     }
   },
   "secondary": {
-    "outlined": {
+    "outline": {
       "background": {
         "hover": {
           "$scopes": [
@@ -219,7 +219,7 @@
         }
       }
     },
-    "text": {
+    "plain": {
       "background": {
         "default": {
           "$scopes": [
@@ -339,7 +339,7 @@
         "$value": "{content-passive-on-danger}"
       }
     },
-    "text": {
+    "plain": {
       "background": {
         "default": {
           "$scopes": [
@@ -410,7 +410,7 @@
     }
   },
   "tertiary": {
-    "outlined": {
+    "outline": {
       "background": {
         "hover": {
           "$scopes": [
@@ -499,7 +499,7 @@
         }
       }
     },
-    "text": {
+    "plain": {
       "background": {
         "default": {
           "$scopes": [
@@ -619,7 +619,7 @@
         "$value": "{content-passive-on-upgrade}"
       }
     },
-    "text": {
+    "plain": {
       "background": {
         "default": {
           "$scopes": [

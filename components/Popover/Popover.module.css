@@ -1,0 +1,46 @@
+/* Popover component styles using design tokens */
+
+.popoverContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.popover {
+  position: absolute;
+  background-color: var(--token-component-popover-background);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-popover-border);
+  border-radius: var(--token-semantic-radius-md);
+  box-shadow: var(--token-semantic-shadow-lg);
+  padding: var(--token-semantic-padding-m);
+  z-index: var(--token-semantic-z-index-popover);
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.popover.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.popover.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+}
+
+.popover.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.popover.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}

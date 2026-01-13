@@ -1,0 +1,23 @@
+/* Card component styles using design tokens */
+
+.card {
+  background-color: var(--token-component-card-background);
+  color: var(--token-component-card-content-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-card-border-default);
+  padding: var(--token-component-padding-x-card-md);
+  border-radius: var(--token-semantic-radius-md);
+  box-shadow: var(--token-semantic-shadow-sm);
+  transition: border-color var(--token-semantic-animation-duration-fast) var(--token-semantic-animation-easing-ease-out);
+}
+
+.card:hover {
+  border-color: var(--token-component-card-border-hover);
+}
+
+.card.selected {
+  border-color: var(--token-component-card-border-selected);
+}
+
+.strong {
+  color: var(--token-component-card-content-strong);
+}

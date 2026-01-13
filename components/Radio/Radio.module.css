@@ -1,0 +1,68 @@
+/* Radio component styles using design tokens */
+
+.radioWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-semantic-gap-xs);
+  cursor: pointer;
+}
+
+.radioWrapper.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-radio-button-border-unselected-default);
+  border-radius: 50%;
+  background-color: var(--token-component-radio-button-background-unselected);
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  position: relative;
+}
+
+.radio:hover:not(:disabled) {
+  border-color: var(--token-component-radio-button-border-unselected-hover);
+}
+
+.radio:checked {
+  background-color: var(--token-component-radio-button-background-selected-default);
+  border-color: var(--token-component-radio-button-border-selected-default);
+}
+
+.radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--token-semantic-content-passive-on-accent);
+}
+
+.radio:checked:hover:not(:disabled) {
+  background-color: var(--token-component-radio-button-background-selected-hover);
+  border-color: var(--token-component-radio-button-border-selected-hover);
+}
+
+.radio:disabled {
+  border-color: var(--token-component-radio-button-border-unselected-disabled);
+  background-color: var(--token-component-radio-button-background-unselected);
+  cursor: not-allowed;
+}
+
+.radio:checked:disabled {
+  background-color: var(--token-component-radio-button-background-selected-disabled);
+  border-color: var(--token-component-radio-button-border-selected-disabled);
+}
+
+.label {
+  color: var(--token-semantic-content-passive-neutral-default);
+  user-select: none;
+}

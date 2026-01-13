@@ -1,0 +1,26 @@
+/* Combobox component styles using design tokens */
+
+.combobox {
+  background-color: var(--token-component-combobox-background-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-combobox-border-default);
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.value {
+}
+
+.placeholder {
+}
+
+.combobox:hover {
+  background-color: var(--token-component-combobox-hover);
+}
+
+.combobox:focus {
+  background-color: var(--token-component-combobox-focused);
+}
+
+.combobox:active {
+  background-color: var(--token-component-combobox-active);
+}

@@ -1,0 +1,24 @@
+/* Field component styles using design tokens */
+
+.field {
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.width {
+}
+
+.status {
+}
+
+.enabled {
+}
+
+.error {
+}
+
+.required {
+}
+
+.field:disabled {
+}

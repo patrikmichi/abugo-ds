@@ -1,0 +1,52 @@
+/* Chip component styles using design tokens */
+
+.chip {
+  padding: var(--token-component-padding-x-chip-sm);
+  border-radius: var(--token-semantic-radius-full);
+  border: none;
+  cursor: pointer;
+  font-size: var(--token-semantic-typography-body-size-sm);
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-semantic-gap-xs);
+}
+
+.unselected {
+  background-color: var(--token-component-chip-background-unselected-default);
+  color: var(--token-semantic-content-passive-neutral-default);
+}
+
+.unselected:hover:not(:disabled) {
+  background-color: var(--token-component-chip-background-unselected-hover);
+}
+
+.unselected:active:not(:disabled) {
+  background-color: var(--token-component-chip-background-unselected-pressed);
+}
+
+.selected {
+  background-color: var(--token-component-chip-background-selected-default);
+  color: var(--token-component-chip-content-selected);
+}
+
+.selected:hover:not(:disabled) {
+  background-color: var(--token-component-chip-background-selected-hover);
+}
+
+.selected:active:not(:disabled) {
+  background-color: var(--token-component-chip-background-selected-pressed);
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.unselected.disabled {
+  background-color: var(--token-component-chip-background-unselected-disabled);
+}
+
+.selected.disabled {
+  background-color: var(--token-component-chip-background-selected-disabled);
+}

@@ -1,0 +1,78 @@
+/* Toggle component styles using design tokens */
+
+.toggleWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-semantic-gap-xs);
+  cursor: pointer;
+}
+
+.toggleWrapper.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--token-component-toggle-background-off-default);
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  position: relative;
+  outline: none;
+}
+
+.toggle::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--token-component-toggle-content-off-default);
+  top: 2px;
+  left: 2px;
+  transition: transform var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-shadow: var(--token-semantic-shadow-sm);
+}
+
+.toggle.off {
+  background-color: var(--token-component-toggle-background-off-default);
+}
+
+.toggle.on {
+  background-color: var(--token-component-toggle-background-on-default);
+}
+
+.toggle.on::before {
+  transform: translateX(20px);
+  background-color: var(--token-component-toggle-content-on-default);
+}
+
+.toggle:disabled {
+  cursor: not-allowed;
+}
+
+.toggle.off:disabled {
+  background-color: var(--token-component-toggle-background-off-disabled);
+}
+
+.toggle.off:disabled::before {
+  background-color: var(--token-component-toggle-content-off-disabled);
+}
+
+.toggle.on:disabled {
+  background-color: var(--token-component-toggle-background-on-disabled);
+}
+
+.toggle.on:disabled::before {
+  background-color: var(--token-component-toggle-content-on-disabled);
+}
+
+.label {
+  color: var(--token-semantic-content-passive-neutral-default);
+  user-select: none;
+}

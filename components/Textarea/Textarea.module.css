@@ -1,0 +1,55 @@
+/* Textarea component styles using design tokens */
+
+.textarea {
+  background-color: var(--token-component-textarea-background-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-textarea-border-default);
+  color: var(--token-component-textarea-content-value);
+  padding: var(--token-component-padding-x-field-md);
+  border-radius: var(--token-component-radius-field-md);
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  width: 100%;
+}
+
+.textarea::placeholder {
+  color: var(--token-component-textarea-content-placeholder);
+}
+
+.textarea:hover:not(:disabled) {
+  background-color: var(--token-component-textarea-background-hover);
+  border-color: var(--token-component-textarea-border-hover);
+}
+
+.textarea:focus {
+  background-color: var(--token-component-textarea-background-focused);
+  border-color: var(--token-component-textarea-border-focused);
+  outline: none;
+}
+
+.sm {
+  padding: var(--token-component-padding-x-field-sm);
+  border-radius: var(--token-component-radius-field-sm);
+  min-height: 80px;
+}
+
+.md {
+  padding: var(--token-component-padding-x-field-md);
+  border-radius: var(--token-component-radius-field-md);
+  min-height: 100px;
+}
+
+.lg {
+  padding: var(--token-component-padding-x-field-lg);
+  border-radius: var(--token-component-radius-field-lg);
+  min-height: 120px;
+}
+
+.error {
+  border-color: var(--token-semantic-border-active-danger-default);
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

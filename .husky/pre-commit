@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Validate tokens before commit
+npm run validate:tokens || exit 1
+
+# Regenerate CSS variables if tokens changed
+if git diff --cached --name-only | grep -q "tokens/system/"; then
+  echo "🔄 Tokens changed, regenerating CSS variables..."
+  npm run build:css-variables
+  npm run build:token-types
+  git add styles/tokens.css styles/token-types.d.ts
+fi

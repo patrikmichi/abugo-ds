@@ -2,7 +2,7 @@
 
 > Production-ready design tokens exported from Figma Tokens Studio, with TypeScript support and Next.js documentation.
 
-This repository contains the complete design token system for the design system, including primitives, semantic tokens, and component tokens. All tokens are synced with Figma and can be used in code via Panda CSS.
+This repository contains the complete design token system for the design system, including primitives, semantic tokens, and component tokens. All tokens are synced with Figma and ready for use in code.
 
 ---
 
@@ -27,9 +27,6 @@ npm run dev
 
 # Run Storybook
 npm run storybook
-
-# Generate Panda CSS
-npm run panda:codegen
 
 # Type check
 npm run type-check
@@ -69,9 +66,6 @@ figma tokens/
 ├── storybook/              # Storybook documentation
 │   ├── stories/
 │   └── .storybook/
-├── panda/                  # Panda CSS
-│   ├── panda.config.mjs
-│   └── styled-system/
 └── package.json
 ```
 
@@ -82,7 +76,6 @@ figma tokens/
 - **TypeScript** - Type-safe development
 - **Next.js 15** - Documentation site
 - **Storybook** - Component and token documentation
-- **Panda CSS** - CSS-in-JS with design tokens
 - **ESLint + Prettier** - Code quality and formatting
 
 ---
@@ -90,8 +83,9 @@ figma tokens/
 ## 📖 Documentation
 
 - **[Complete Token Reference](tokens/docs/TOKENS.md)** - All tokens documented
+- **[CSS Modules Guide](tokens/docs/CSS_MODULES_GUIDE.md)** - Using tokens in CSS Modules
+- **[Validation Guide](tokens/docs/VALIDATION_GUIDE.md)** - Automated token validation and linting
 - **[Designer Guide](tokens/docs/DESIGNER_GUIDE.md)** - Using tokens in Figma
-- **[Developer Guide](tokens/docs/DEVELOPER_GUIDE.md)** - Using tokens in code
 - **[Token Structure](tokens/docs/TOKEN_STRUCTURE.md)** - How tokens are organized
 
 ---
@@ -110,6 +104,52 @@ Tokens follow a three-layer architecture:
 
 ## 💻 Using in Code
 
+### React Components
+
+All components are generated from your design tokens:
+
+```tsx
+import { Button, Input, Alert, Card } from '@/components';
+
+function MyComponent() {
+  return (
+    <>
+      <Button variant="primary" size="md">Click me</Button>
+      <Input size="md" status="enabled" />
+      <Alert variant="success">Success message</Alert>
+      <Card>Card content</Card>
+    </>
+  );
+}
+```
+
+**Generate components:**
+```bash
+npm run build:components
+```
+
+See [Components README](components/README.md) for complete documentation.
+
+### CSS Modules (Recommended)
+
+All tokens are available as CSS custom properties (CSS variables) in CSS Modules:
+
+```css
+/* Button.module.css */
+.button {
+  padding: var(--token-component-button-padding-sm);
+  background-color: var(--token-semantic-background-active-accent-default);
+  color: var(--token-semantic-content-passive-on-accent);
+}
+```
+
+**Generate CSS variables:**
+```bash
+npm run build:css-variables
+```
+
+See [CSS Modules Guide](tokens/docs/CSS_MODULES_GUIDE.md) for complete documentation.
+
 ### TypeScript
 
 ```typescript
@@ -118,18 +158,6 @@ import { loadTokens } from '@tokens/scripts/load-tokens';
 const { primitives, semanticTokens, componentTokens } = loadTokens();
 ```
 
-### Panda CSS
-
-```tsx
-import { css } from '../panda/styled-system/css';
-
-const button = css({
-  backgroundColor: 'brand.700',
-  color: 'content-passive-on-accent',
-  padding: 'spacing-4',
-  borderRadius: 'radius-2',
-});
-```
 
 ---
 
@@ -153,7 +181,12 @@ npm run type-check       # TypeScript type checking
 # Build
 npm run build            # Build Next.js app
 npm run build:tokens     # Merge token files
-npm run panda:codegen    # Generate Panda CSS
+npm run build:css-variables  # Generate CSS variables from tokens
+npm run build:token-types    # Generate TypeScript types for tokens
+npm run build:components     # Generate React components from tokens
+
+# Validation
+npm run validate:tokens  # Validate token usage in CSS modules
 
 # Code Quality
 npm run lint             # Run ESLint
@@ -182,9 +215,22 @@ Configured in:
 
 1. **Update token files** in `tokens/system/`
 2. **Regenerate tokens**: `npm run build:tokens`
-3. **Type check**: `npm run type-check`
-4. **Test**: `npm run dev` and `npm run storybook`
-5. **Sync with Figma**: Use Tokens Studio plugin
+3. **Regenerate CSS variables**: `npm run build:css-variables`
+4. **Regenerate TypeScript types**: `npm run build:token-types`
+5. **Validate tokens**: `npm run validate:tokens`
+6. **Type check**: `npm run type-check`
+7. **Test**: `npm run dev` and `npm run storybook`
+8. **Sync with Figma**: Use Tokens Studio plugin
+
+### Automated Validation
+
+The repository includes automated validation that:
+- ✅ Checks for missing tokens in CSS modules
+- ✅ Warns about deprecated tokens
+- ✅ Generates TypeScript types
+- ✅ Runs automatically on commit (via pre-commit hooks)
+
+See [Validation Guide](tokens/docs/VALIDATION_GUIDE.md) for details.
 
 ---
 

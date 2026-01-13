@@ -14,7 +14,7 @@ These scripts are part of the permanent build and development workflow:
 - `merge-tokens.ts` - Merges token subfolders into main JSON files for Tokens Studio
 - `split-tokens.js` - Splits main JSON files into organized subfolders
 - `generate-docs.js` - Generates documentation from token files
-- `load-tokens.ts` / `load-tokens.mjs` - Loads tokens from subfolders for Panda CSS and Storybook
+- `load-tokens.ts` - Loads tokens from subfolders for Storybook
 
 **Never delete these scripts** unless they are replaced by improved versions.
 
@@ -63,7 +63,7 @@ Scripts used for one-time migrations (e.g., color scale migration) should be:
 - All scripts should be in `tokens/scripts/`
 - Use TypeScript (`.ts`) for new scripts when possible
 - Use JavaScript (`.js`) for scripts that need to run in older Node.js environments
-- Use ES modules (`.mjs`) when needed for compatibility (e.g., Panda CSS)
+- Use ES modules (`.mjs`) when needed for compatibility with specific tools
 
 ## Best Practices
 

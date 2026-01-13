@@ -24,7 +24,8 @@
       "@tokens/docs/*": ["./tokens/docs/*"],
       "@tokens/output/*": ["./tokens/output/*"],
       "@tokens/system/*": ["./tokens/system/*"],
-      "@tokens/types/*": ["./tokens/types/*"]
+      "@tokens/types/*": ["./tokens/types/*"],
+      "@/*": ["./*"]
     },
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true
@@ -38,7 +39,6 @@
   "exclude": [
     "node_modules",
     ".next",
-    "storybook-static",
-    "panda/styled-system"
+    "storybook-static"
   ]
 }

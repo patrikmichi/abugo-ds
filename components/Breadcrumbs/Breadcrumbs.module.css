@@ -1,0 +1,26 @@
+/* Breadcrumbs component styles using design tokens */
+
+.breadcrumbs {
+  padding: var(--token-semantic-padding-xs) 0;
+}
+
+.link {
+  color: var(--token-component-link-default-content-default);
+  text-decoration: none;
+  transition: color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+.link:hover {
+  color: var(--token-component-link-default-content-hover);
+  text-decoration: underline;
+}
+
+.current {
+  color: var(--token-semantic-content-passive-neutral-default);
+  font-weight: 500;
+}
+
+.separator {
+  color: var(--token-semantic-content-passive-neutral-muted);
+  margin: 0 var(--token-semantic-gap-xs);
+}

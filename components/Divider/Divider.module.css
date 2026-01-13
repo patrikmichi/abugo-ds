@@ -1,0 +1,15 @@
+/* Divider component styles using design tokens */
+
+.divider {
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.horizontal {
+}
+
+.border {
+}
+
+.vertical {
+}

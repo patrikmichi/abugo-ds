@@ -1,0 +1,28 @@
+/* Link component styles using design tokens */
+
+.link {
+  color: var(--token-component-link-default-content-default);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+.link:hover {
+  color: var(--token-component-link-default-content-hover);
+  text-decoration: underline;
+}
+
+.link:active {
+  color: var(--token-component-link-default-content-active);
+}
+
+.link:visited {
+  color: var(--token-component-link-default-content-visited);
+}
+
+.link:disabled,
+.link[aria-disabled="true"] {
+  color: var(--token-component-link-default-content-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}

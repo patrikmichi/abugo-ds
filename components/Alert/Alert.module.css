@@ -1,0 +1,45 @@
+/* Alert component styles using design tokens */
+
+.alert {
+  padding: var(--token-component-padding-x-alert-lg);
+  border-radius: var(--token-semantic-radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--token-semantic-gap-xs);
+}
+
+.success {
+  background-color: var(--token-component-alert-success-content-background);
+  color: var(--token-component-alert-success-content-content);
+}
+
+.success .icon {
+  color: var(--token-component-alert-icon);
+}
+
+.danger {
+  background-color: var(--token-component-alert-danger-content-background);
+  color: var(--token-component-alert-danger-content-content);
+}
+
+.danger .icon {
+  color: var(--token-component-alert-danger-icon);
+}
+
+.warning {
+  background-color: var(--token-component-alert-warning-content-background);
+  color: var(--token-component-alert-warning-content-content);
+}
+
+.info {
+  background-color: var(--token-component-alert-info-content-background);
+  color: var(--token-component-alert-info-content-content);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}

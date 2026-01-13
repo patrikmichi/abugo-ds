@@ -1,0 +1,30 @@
+/* Input component styles using design tokens */
+
+.input {
+  background-color: var(--token-component-input-background-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-input-border-default);
+  color: var(--token-component-input-content-value);
+  padding: var(--token-component-padding-x-field-md);
+  border-radius: var(--token-component-radius-field-md);
+  height: var(--token-component-height-field-md);
+  transition: border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+.input::placeholder {
+  color: var(--token-component-input-content-placeholder);
+}
+
+.input:hover {
+  background-color: var(--token-component-input-background-hover);
+  border-color: var(--token-component-input-border-hover);
+}
+
+.input:focus {
+  background-color: var(--token-component-input-background-focused);
+  border-color: var(--token-component-input-border-focused);
+  outline: none;
+}
+
+.input:active {
+  border-color: var(--token-component-input-border-active);
+}

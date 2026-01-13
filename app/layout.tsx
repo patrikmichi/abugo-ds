@@ -1,5 +1,30 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import './globals.css';
+
+// Load Venn font family for Reservio
+const venn = localFont({
+  src: [
+    {
+      path: '../public/fonts/Venn_Rg.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Venn_Md.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Venn_Bd.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-venn',
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: 'Design Tokens',
@@ -12,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={venn.variable}>
       <body>{children}</body>
     </html>
   );

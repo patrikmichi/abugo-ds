@@ -1,7 +1,6 @@
 node_modules
 .next
 storybook-static
-panda/styled-system
 *.min.js
 *.min.css
 package-lock.json

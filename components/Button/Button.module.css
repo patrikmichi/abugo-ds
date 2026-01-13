@@ -1,0 +1,294 @@
+/* Button component styles using design tokens */
+
+.button {
+  /* Base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-component-gap-button-icon-md);
+  border: none;
+  cursor: pointer;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  
+  /* Typography - default to medium size */
+  font-size: var(--token-component-font-size-button-md);
+  line-height: var(--token-component-line-height-button-md);
+  font-weight: 500;
+  
+  /* Spacing & Sizing - default to medium size */
+  padding-left: var(--token-component-padding-x-button-md);
+  padding-right: var(--token-component-padding-x-button-md);
+  height: var(--token-component-height-button-md);
+  
+  /* Border radius - default to medium size */
+  border-radius: calc(var(--token-component-radius-button-md) * 1px);
+  
+  /* Transitions */
+  transition: 
+    background-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
+    color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
+    border-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing);
+}
+
+/* Size variants */
+.sm {
+  padding-left: var(--token-component-padding-x-button-sm);
+  padding-right: var(--token-component-padding-x-button-sm);
+  height: var(--token-component-height-button-sm);
+  border-radius: calc(var(--token-component-radius-button-sm) * 1px);
+  font-size: var(--token-component-font-size-button-sm);
+  line-height: var(--token-component-line-height-button-sm);
+  gap: var(--token-component-gap-button-icon-sm);
+}
+
+.md {
+  padding-left: var(--token-component-padding-x-button-md);
+  padding-right: var(--token-component-padding-x-button-md);
+  height: var(--token-component-height-button-md);
+  border-radius: calc(var(--token-component-radius-button-md) * 1px);
+  font-size: var(--token-component-font-size-button-md);
+  line-height: var(--token-component-line-height-button-md);
+  gap: var(--token-component-gap-button-icon-md);
+}
+
+.lg {
+  padding-left: var(--token-component-padding-x-button-lg);
+  padding-right: var(--token-component-padding-x-button-lg);
+  height: var(--token-component-height-button-lg);
+  border-radius: calc(var(--token-component-radius-button-lg) * 1px);
+  font-size: var(--token-component-font-size-button-lg);
+  line-height: var(--token-component-line-height-button-lg);
+  gap: var(--token-component-gap-button-icon-lg);
+}
+
+/* Disabled state */
+.disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Primary Variants */
+.primary.filled,
+.primaryFilled {
+  background-color: var(--token-component-button-primary-filled-background-default);
+  color: var(--token-component-button-primary-filled-content);
+}
+
+.primary.filled:hover:not(:disabled),
+.primaryFilled:hover:not(:disabled) {
+  background-color: var(--token-component-button-primary-filled-background-hover);
+}
+
+.primary.filled:active:not(:disabled),
+.primaryFilled:active:not(:disabled) {
+  background-color: var(--token-component-button-primary-filled-background-pressed);
+}
+
+.primary.filled:disabled,
+.primaryFilled:disabled {
+  background-color: var(--token-component-button-primary-filled-background-disabled);
+}
+
+.primary.plain,
+.primaryPlain {
+  background-color: var(--token-component-button-primary-plain-background-default);
+  color: var(--token-component-button-primary-plain-content-default);
+}
+
+.primary.plain:hover:not(:disabled),
+.primaryPlain:hover:not(:disabled) {
+  background-color: var(--token-component-button-primary-plain-background-hover);
+  color: var(--token-component-button-primary-plain-content-hover);
+}
+
+.primary.plain:active:not(:disabled),
+.primaryPlain:active:not(:disabled) {
+  background-color: var(--token-component-button-primary-plain-background-pressed);
+  color: var(--token-component-button-primary-plain-content-pressed);
+}
+
+.primary.plain:disabled,
+.primaryPlain:disabled {
+  background-color: var(--token-component-button-primary-plain-background-disabled);
+  color: var(--token-component-button-primary-plain-content-disabled);
+}
+
+/* Secondary Variants */
+.secondary.outline,
+.secondaryOutline {
+  background-color: transparent;
+  color: var(--token-component-button-secondary-outline-content-default);
+  border: calc(var(--token-semantic-border-width-thin) * 1px) solid var(--token-component-button-secondary-outline-border-default);
+}
+
+.secondary.outline:hover:not(:disabled),
+.secondaryOutline:hover:not(:disabled) {
+  background-color: var(--token-component-button-secondary-outline-background-hover);
+  color: var(--token-component-button-secondary-outline-content-hover);
+  border-color: var(--token-component-button-secondary-outline-border-hover);
+}
+
+.secondary.outline:active:not(:disabled),
+.secondaryOutline:active:not(:disabled) {
+  border-color: var(--token-component-button-secondary-outline-border-pressed);
+  color: var(--token-component-button-secondary-outline-content-pressed);
+}
+
+.secondary.outline:disabled,
+.secondaryOutline:disabled {
+  border-color: var(--token-component-button-secondary-outline-border-disabled);
+  color: var(--token-component-button-secondary-outline-content-disabled);
+}
+
+.secondary.plain,
+.secondaryPlain {
+  background-color: var(--token-component-button-secondary-plain-background-default);
+  color: var(--token-component-button-secondary-plain-content-default);
+}
+
+.secondary.plain:hover:not(:disabled),
+.secondaryPlain:hover:not(:disabled) {
+  background-color: var(--token-component-button-secondary-plain-background-hover);
+  color: var(--token-component-button-secondary-plain-content-hover);
+}
+
+.secondary.plain:active:not(:disabled),
+.secondaryPlain:active:not(:disabled) {
+  color: var(--token-component-button-secondary-plain-content-pressed);
+}
+
+.secondary.plain:disabled,
+.secondaryPlain:disabled {
+  color: var(--token-component-button-secondary-plain-content-disabled);
+}
+
+/* Danger Variants */
+.danger.filled,
+.dangerFilled {
+  background-color: var(--token-component-button-danger-filled-background-default);
+  color: var(--token-component-button-danger-filled-content);
+}
+
+.danger.filled:hover:not(:disabled),
+.dangerFilled:hover:not(:disabled) {
+  background-color: var(--token-component-button-danger-filled-background-hover);
+}
+
+.danger.filled:active:not(:disabled),
+.dangerFilled:active:not(:disabled) {
+  background-color: var(--token-component-button-danger-filled-background-pressed);
+}
+
+.danger.plain,
+.dangerPlain {
+  background-color: var(--token-component-button-danger-plain-background-default);
+  color: var(--token-component-button-danger-plain-content-default);
+}
+
+.danger.plain:hover:not(:disabled),
+.dangerPlain:hover:not(:disabled) {
+  background-color: var(--token-component-button-danger-plain-background-hover);
+  color: var(--token-component-button-danger-plain-content-hover);
+}
+
+.danger.plain:active:not(:disabled),
+.dangerPlain:active:not(:disabled) {
+  color: var(--token-component-button-danger-plain-content-pressed);
+}
+
+.danger.plain:disabled,
+.dangerPlain:disabled {
+  background-color: var(--token-component-button-danger-plain-background-disabled);
+  color: var(--token-component-button-danger-plain-content-disabled);
+}
+
+/* Tertiary Variants */
+.tertiary.outline,
+.tertiaryOutline {
+  background-color: transparent;
+  color: var(--token-component-button-tertiary-outline-content-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-button-tertiary-outline-border-default);
+}
+
+.tertiary.outline:hover:not(:disabled),
+.tertiaryOutline:hover:not(:disabled) {
+  background-color: var(--token-component-button-tertiary-outline-background-hover);
+  color: var(--token-component-button-tertiary-outline-content-hover);
+  border-color: var(--token-component-button-tertiary-outline-border-hover);
+}
+
+.tertiary.outline:active:not(:disabled),
+.tertiaryOutline:active:not(:disabled) {
+  border-color: var(--token-component-button-tertiary-outline-border-pressed);
+  color: var(--token-component-button-tertiary-outline-content-pressed);
+}
+
+.tertiary.outline:disabled,
+.tertiaryOutline:disabled {
+  border-color: var(--token-component-button-tertiary-outline-border-disabled);
+  color: var(--token-component-button-tertiary-outline-content-disabled);
+}
+
+.tertiary.plain,
+.tertiaryPlain {
+  background-color: var(--token-component-button-tertiary-plain-background-default);
+  color: var(--token-component-button-tertiary-plain-content-default);
+}
+
+.tertiary.plain:hover:not(:disabled),
+.tertiaryPlain:hover:not(:disabled) {
+  background-color: var(--token-component-button-tertiary-plain-background-hover);
+  color: var(--token-component-button-tertiary-plain-content-hover);
+}
+
+.tertiary.plain:active:not(:disabled),
+.tertiaryPlain:active:not(:disabled) {
+  color: var(--token-component-button-tertiary-plain-content-pressed);
+}
+
+.tertiary.plain:disabled,
+.tertiaryPlain:disabled {
+  background-color: var(--token-component-button-tertiary-plain-background-disabled);
+  color: var(--token-component-button-tertiary-plain-content-disabled);
+}
+
+/* Upgrade Variants */
+.upgrade.filled,
+.upgradeFilled {
+  background-color: var(--token-component-button-upgrade-filled-background-default);
+  color: var(--token-component-button-upgrade-filled-content);
+}
+
+.upgrade.filled:hover:not(:disabled),
+.upgradeFilled:hover:not(:disabled) {
+  background-color: var(--token-component-button-upgrade-filled-background-hover);
+}
+
+.upgrade.filled:active:not(:disabled),
+.upgradeFilled:active:not(:disabled) {
+  background-color: var(--token-component-button-upgrade-filled-background-pressed);
+}
+
+.upgrade.plain,
+.upgradePlain {
+  background-color: var(--token-component-button-upgrade-plain-background-default);
+  color: var(--token-component-button-upgrade-plain-content-default);
+}
+
+.upgrade.plain:hover:not(:disabled),
+.upgradePlain:hover:not(:disabled) {
+  background-color: var(--token-component-button-upgrade-plain-background-hover);
+  color: var(--token-component-button-upgrade-plain-content-hover);
+}
+
+.upgrade.plain:active:not(:disabled),
+.upgradePlain:active:not(:disabled) {
+  color: var(--token-component-button-upgrade-plain-content-pressed);
+}
+
+.upgrade.plain:disabled,
+.upgradePlain:disabled {
+  background-color: var(--token-component-button-upgrade-plain-background-disabled);
+  color: var(--token-component-button-upgrade-plain-content-disabled);
+}

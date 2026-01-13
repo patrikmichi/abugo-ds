@@ -9,10 +9,6 @@ node_modules/
 # OS files
 .DS_Store
 
-## Panda
-styled-system
-styled-system-studio
-
 ## Logs
 *.log
 debug-*.log
@@ -31,3 +27,7 @@ dist/
 ## TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+## Fonts (keep in repo, but ignore any generated files)
+# public/fonts/*.woff
+# public/fonts/*.woff2

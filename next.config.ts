@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
       '@tokens/output': path.resolve(__dirname, './tokens/output'),
       '@tokens/system': path.resolve(__dirname, './tokens/system'),
       '@tokens/types': path.resolve(__dirname, './tokens/types'),
+      '@': path.resolve(__dirname, '.'),
     };
     return config;
   },

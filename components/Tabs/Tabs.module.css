@@ -1,0 +1,48 @@
+/* Tabs component styles using design tokens */
+
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabsList {
+  display: flex;
+  gap: var(--token-semantic-gap-xs);
+  border-bottom: var(--token-semantic-border-width-thin) solid var(--token-component-tabs-default-border-default);
+  position: relative;
+}
+
+.tab {
+  background-color: var(--token-component-tabs-default-background-default);
+  color: var(--token-component-tabs-default-content-default);
+  border: none;
+  padding: var(--token-semantic-padding-s) var(--token-semantic-padding-m);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--token-component-animation-tabs-duration) var(--token-component-animation-tabs-easing);
+  position: relative;
+}
+
+.tab:hover {
+  background-color: var(--token-component-tabs-default-background-hover);
+}
+
+.tab.active {
+  background-color: var(--token-component-tabs-default-background-active);
+  color: var(--token-component-tabs-default-content-active);
+  border-bottom-color: var(--token-component-tabs-default-indicator);
+}
+
+.indicator {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background-color: var(--token-component-tabs-default-indicator);
+  transition: left var(--token-component-animation-tabs-duration) var(--token-component-animation-tabs-easing),
+              width var(--token-component-animation-tabs-duration) var(--token-component-animation-tabs-easing);
+}
+
+.tabPanel {
+  padding: var(--token-semantic-padding-m);
+  min-height: 100px;
+}

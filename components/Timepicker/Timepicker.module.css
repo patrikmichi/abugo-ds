@@ -1,0 +1,26 @@
+/* Timepicker component styles using design tokens */
+
+.timepicker {
+  background-color: var(--token-component-timepicker-background-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-timepicker-border-default);
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.value {
+}
+
+.placeholder {
+}
+
+.timepicker:hover {
+  background-color: var(--token-component-timepicker-hover);
+}
+
+.timepicker:focus {
+  background-color: var(--token-component-timepicker-focused);
+}
+
+.timepicker:active {
+  background-color: var(--token-component-timepicker-active);
+}

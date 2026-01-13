@@ -1,0 +1,19 @@
+/* Drawer component styles using design tokens */
+
+.drawer {
+  padding: var(--token-semantic-padding-m);
+  border-radius: var(--token-semantic-radius-md);
+}
+
+.default {
+  color: var(--token-component-drawer-default-content);
+}
+
+.background {
+}
+
+.border {
+}
+
+.content {
+}
