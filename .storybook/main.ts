@@ -15,6 +15,15 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
+  // Explicitly specify builder for Storybook 10
+  core: {
+    builder: '@storybook/builder-vite',
+    disableTelemetry: true,
+  },
+  // Ensure docs are properly configured
+  features: {
+    buildStoriesJson: true,
+  },
   docs: {
     autodocs: 'tag',
   },
@@ -51,9 +60,16 @@ const config: StorybookConfig = {
           localsConvention: 'camelCase',
         },
       },
-      // Optimize dependencies
+      // Optimize dependencies for React 19
       optimizeDeps: {
-        include: ['react', 'react-dom'],
+        include: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime'],
+        esbuildOptions: {
+          jsx: 'automatic',
+        },
+      },
+      // Disable React Compiler for Storybook (can cause docs issues)
+      define: {
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       },
     });
   },

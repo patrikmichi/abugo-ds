@@ -12,6 +12,13 @@ const preview: Preview = {
       },
     },
     layout: 'padded',
+    docs: {
+      // Storybook 10 autodocs configuration
+      autodocs: 'tag',
+      source: {
+        type: 'code',
+      },
+    },
   },
 };
 
