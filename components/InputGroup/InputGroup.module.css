@@ -118,8 +118,11 @@
   border-color: var(--token-component-field-control-border-focused);
   background-color: var(--token-component-field-control-background-focused);
   /* Show focus ring on focus */
-  outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
-  outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
+  /* Show soft glowing focus ring on focus */
+  outline: none;
+  box-shadow: 
+    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
 }
 
 .inputGroup:not(.error):not(.disabled).focused .separator {
