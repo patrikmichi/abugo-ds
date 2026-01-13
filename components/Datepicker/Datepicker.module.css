@@ -9,7 +9,7 @@
   padding: 0 var(--token-component-padding-x-field-md);
   background-color: var(--token-component-datepicker-background-default);
   border: var(--token-semantic-border-width-thin) solid var(--token-component-datepicker-border-default);
-  border-radius: var(--token-component-radius-field-md);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
   color: var(--token-component-datepicker-content-value);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);

@@ -8,7 +8,7 @@ export interface StepperProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Stepper({
-  variant?,
+  variant,
   className,
   children,
   ...props

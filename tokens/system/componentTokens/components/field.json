@@ -100,13 +100,26 @@
   },
   "content": {
     "label": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "color",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{content.passive.neutral.default}"
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Label text color in default state."
+      },
+      "error": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.danger}",
+        "$description": "Label text color in error state (red)."
+      }
     },
     "required": {
       "$scopes": [
@@ -238,6 +251,304 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{background.passive.neutral.elevated}"
+      }
+    }
+  },
+  "required": {
+    "asterisk": {
+      "margin": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Margin after label text before required asterisk (2px)."
+      },
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.danger}",
+        "$description": "Required asterisk color (red)."
+      }
+    }
+  },
+  "separator": {
+    "width": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-width-1}",
+      "$description": "Separator line width between compound field parts (1px)."
+    },
+    "color": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$description": "Separator color in default state."
+      },
+      "focus": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}",
+        "$description": "Separator color in focus state."
+      },
+      "error": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.danger.default}",
+        "$description": "Separator color in error state."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.hover}",
+        "$description": "Separator color in hover state."
+      }
+    }
+  },
+  "selector": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.neutral.subtle}",
+      "$description": "Country code selector background color (light gray)."
+    },
+    "minWidth": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "50px",
+        "$description": "Minimum width for country code selector small (50px)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "60px",
+        "$description": "Minimum width for country code selector medium (60px)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "70px",
+        "$description": "Minimum width for country code selector large (70px)."
+      }
+    },
+    "flag": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "20px",
+        "$description": "Flag emoji size (20px)."
+      }
+    },
+    "chevron": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "12px",
+        "$description": "Chevron icon size (12px)."
+      },
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Chevron icon color."
+      }
+    }
+  },
+  "picker": {
+    "input": {
+      "width": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "32px",
+        "$description": "Width for 2-digit numeric inputs (32px)."
+      }
+    },
+    "segment": {
+      "background": {
+        "focus": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.accent.subtle}",
+          "$description": "Focused segment background color (light blue)."
+        }
+      },
+      "radius": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{radius-1}",
+        "$description": "Focused segment border radius (4px)."
+      }
+    },
+    "label": {
+      "margin": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{spacing-1}",
+        "$description": "Margin around labels (h, min) (4px)."
+      }
+    },
+    "separator": {
+      "margin": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{spacing-1}",
+        "$description": "Margin around time separator (:) (4px)."
+      }
+    },
+    "chevron": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "12px",
+        "$description": "Chevron icon size (12px)."
+      }
+    }
+  },
+  "select": {
+    "minWidth": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "100px",
+        "$description": "Minimum width for select in InputGroup small (100px)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "120px",
+        "$description": "Minimum width for select in InputGroup medium (120px)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "140px",
+        "$description": "Minimum width for select in InputGroup large (140px)."
+      }
+    }
+  },
+  "focus": {
+    "outline": {
+      "width": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderWidth",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{border-width-2}",
+        "$description": "Focus ring width (2px)."
+      },
+      "offset": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Focus ring offset from field edge (2px)."
+      },
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}",
+        "$description": "Focus ring color (blue)."
       }
     }
   }

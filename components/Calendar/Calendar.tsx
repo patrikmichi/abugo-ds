@@ -8,7 +8,7 @@ export interface CalendarProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Calendar({
-  variant?,
+  variant,
   className,
   children,
   ...props

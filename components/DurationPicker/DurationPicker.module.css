@@ -1,6 +1,6 @@
-/* TimePicker component styles using design tokens */
+/* DurationPicker component styles using design tokens */
 
-.timePicker {
+.durationPicker {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,8 +49,15 @@
   font-weight: var(--token-primitive-typography-font-weight-regular, 400); /* Fallback */
   color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
   outline: none;
-  /* Optical centering: move text up 1px to account for space under text */
-  transform: translateY(-1px);
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  
+  /* Fallback for older browsers - optical adjustment */
+  @supports not (text-box-trim: both) {
+    transform: translateY(-1px);
+  }
 }
 
 .hoursInput:focus,
@@ -64,13 +71,13 @@
   border-radius: calc(var(--token-component-field-picker-segment-radius) * 1px);
 }
 
-/* Separator (colon) */
-.separator {
+/* Labels (h, min) */
+.label {
   font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-field-md);
-  font-weight: var(--token-primitive-typography-font-weight-regular);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
   color: var(--token-component-field-content-value);
-  margin: 0 var(--token-component-field-picker-separator-margin);
+  margin: 0 var(--token-component-field-picker-label-margin);
 }
 
 /* Expand button */
@@ -109,7 +116,7 @@
 }
 
 /* Size variants */
-.timePicker.sm {
+.durationPicker.sm {
   height: var(--token-component-height-field-sm);
   padding-inline: var(--token-component-padding-x-field-picker-sm);
   padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
@@ -120,7 +127,7 @@
   }
 }
 
-.timePicker.lg {
+.durationPicker.lg {
   height: var(--token-component-height-field-lg);
   padding-inline: var(--token-component-padding-x-field-picker-lg);
   padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
@@ -132,12 +139,12 @@
 }
 
 /* Enabled state (default) - hover and focus */
-.timePicker:not(.error):not(.disabled):hover {
+.durationPicker:not(.error):not(.disabled):hover {
   border-color: var(--token-component-field-control-border-hover);
   background-color: var(--token-component-field-control-background-hover);
 }
 
-.timePicker:not(.error):not(.disabled).focused {
+.durationPicker:not(.error):not(.disabled).focused {
   border-color: var(--token-component-field-control-border-focused);
   background-color: var(--token-component-field-control-background-focused);
   /* Show focus ring on focus */
@@ -145,118 +152,31 @@
   outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
 }
 
-.timePicker:not(.error):not(.disabled):active {
+.durationPicker:not(.error):not(.disabled):active {
   border-color: var(--token-component-field-control-border-active);
-  transform: translateY(-1px);
 }
 
 /* Error state - use status.error tokens */
-.timePicker.error {
+.durationPicker.error {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
 }
 
-.timePicker.error:hover:not(.disabled) {
+.durationPicker.error:hover:not(.disabled) {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
 }
 
-.timePicker.error.focused:not(.disabled) {
+.durationPicker.error.focused:not(.disabled) {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
 }
 
 /* Disabled state - use status.disabled tokens */
-.timePicker.disabled {
+.durationPicker.disabled {
   border-color: var(--token-component-field-status-disabled-border);
   background-color: var(--token-component-field-status-disabled-background);
   cursor: not-allowed;
   pointer-events: none;
   opacity: 1; /* Don't use opacity, use actual disabled colors */
-  outline: none;
-}
-
-/* Focused segment highlight */
-.focusedSegment {
-  background-color: #e4edfd; /* Hardcoded: focused segment background - missing token */
-  border-radius: 4px; /* Hardcoded: segment border radius - missing token */
-}
-
-/* Separator (colon) */
-.separator {
-  font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-md, 16px); /* Fallback */
-  font-weight: var(--token-primitive-typography-font-weight-regular, 400); /* Fallback */
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
-  margin: 0 4px; /* Hardcoded: margin around separator - missing token */
-}
-
-/* Expand button */
-.expandButton {
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
-  flex-shrink: 0;
-}
-
-.expandButton:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.expandButton:focus-visible {
-  outline: 2px solid var(--token-component-field-control-border-focused, #93b8f9); /* Hardcoded fallback */
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Chevron icon */
-.chevron {
-  width: 12px; /* Hardcoded: chevron size - missing token */
-  height: 12px;
-  transition: transform var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-}
-
-.chevronExpanded {
-  transform: rotate(180deg);
-}
-
-/* Size variants */
-.timePicker.sm {
-  height: var(--token-component-height-field-sm);
-  padding: 0 10px; /* Hardcoded: smaller padding for sm */
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-}
-
-.timePicker.lg {
-  height: var(--token-component-height-field-lg);
-  padding: 0 14px; /* Hardcoded: larger padding for lg */
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
-}
-
-/* Focus state */
-.timePicker.focused {
-  border-color: var(--token-component-field-control-border-focused, #93b8f9); /* Hardcoded fallback */
-}
-
-/* Error state */
-.timePicker.error {
-  border-color: var(--token-semantic-border-active-danger-default, #ff434e); /* Hardcoded fallback */
-}
-
-/* Disabled state */
-.timePicker.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-/* Hover state */
-.timePicker:not(.disabled):not(.focused):hover {
-  border-color: var(--token-component-field-control-border-hover, #c9c9c9); /* Hardcoded fallback */
 }

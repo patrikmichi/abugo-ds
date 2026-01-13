@@ -1,22 +1,26 @@
-/* Textarea component styles using design tokens */
-/* Following Material UI, Chakra UI, and Ant Design patterns */
+/* InputPair component styles using design tokens */
 
-.textarea {
-  /* Base styles - use field control tokens */
-  background-color: var(--token-component-field-control-background-default);
+.inputPair {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
-  color: var(--token-component-field-content-value);
-  padding: var(--token-component-padding-x-field-md);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  font-size: var(--token-component-font-size-field-sm);
-  line-height: var(--token-component-line-height-field-value);
-  font-family: var(--token-primitive-typography-font-family-sans);
-  resize: vertical;
+  background-color: var(--token-component-field-control-background-default);
+  overflow: hidden;
   transition: 
     border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
     background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  width: 100%;
   box-sizing: border-box;
+}
+
+/* Input sections */
+.firstInput,
+.secondInput {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  min-width: 0;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
@@ -28,70 +32,80 @@
   }
 }
 
-.textarea::placeholder {
-  color: var(--token-component-field-content-placeholder);
+.firstInput:focus,
+.secondInput:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-/* Enabled state (default) */
-.textarea:not(.error):not(.disabled):hover:not(:disabled) {
-  background-color: var(--token-component-field-control-background-hover);
+/* Separator */
+.separator {
+  width: calc(var(--token-component-field-separator-width) * 1px);
+  background-color: var(--token-component-field-separator-color-default);
+  flex-shrink: 0;
+  transition: background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+/* Size variants */
+.inputPair.sm {
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+}
+
+.inputPair.lg {
+  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+}
+
+/* Enabled state (default) - hover and focus */
+.inputPair:not(.error):not(.disabled):hover {
   border-color: var(--token-component-field-control-border-hover);
+  background-color: var(--token-component-field-control-background-hover);
 }
 
-.textarea:not(.error):not(.disabled):focus:not(:disabled) {
-  background-color: var(--token-component-field-control-background-focused);
+.inputPair:not(.error):not(.disabled):hover .separator {
+  background-color: var(--token-component-field-separator-color-hover);
+}
+
+.inputPair:not(.error):not(.disabled).focused {
   border-color: var(--token-component-field-control-border-focused);
+  background-color: var(--token-component-field-control-background-focused);
   /* Show focus ring on focus */
   outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
   outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
 }
 
-.textarea:not(.error):not(.disabled):active:not(:disabled) {
+.inputPair:not(.error):not(.disabled).focused .separator {
+  background-color: var(--token-component-field-separator-color-focus);
+}
+
+.inputPair:not(.error):not(.disabled):active {
   border-color: var(--token-component-field-control-border-active);
 }
 
 /* Error state - use status.error tokens */
-.textarea.error {
+.inputPair.error {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
-  /* Keep default text color, only border should be red */
-  color: var(--token-component-field-content-value);
 }
 
-.textarea.error:hover:not(:disabled) {
+.inputPair.error .separator {
+  background-color: var(--token-component-field-separator-color-error);
+}
+
+.inputPair.error:hover:not(.disabled) {
   border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
 }
 
-.textarea.error:focus:not(:disabled) {
+.inputPair.error.focused:not(.disabled) {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
 }
 
 /* Disabled state - use status.disabled tokens */
-.textarea.disabled,
-.textarea:disabled {
+.inputPair.disabled {
   border-color: var(--token-component-field-status-disabled-border);
   background-color: var(--token-component-field-status-disabled-background);
-  color: var(--token-component-field-status-disabled-content);
   cursor: not-allowed;
+  pointer-events: none;
   opacity: 1; /* Don't use opacity, use actual disabled colors */
 }
-
-.sm {
-  padding: var(--token-component-padding-x-field-sm);
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-  min-height: 80px;
-}
-
-.md {
-  padding: var(--token-component-padding-x-field-md);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  min-height: 100px;
-}
-
-.lg {
-  padding: var(--token-component-padding-x-field-lg);
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
-  min-height: 120px;
-}
-

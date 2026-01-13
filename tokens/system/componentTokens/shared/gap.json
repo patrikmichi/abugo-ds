@@ -33,13 +33,36 @@
   },
   "field": {
     "label": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.xxs}"
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1p5}",
+        "$description": "Gap between label and control for small fields (6px)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-2}",
+        "$description": "Gap between label and control for medium fields (8px)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-2p5}",
+        "$description": "Gap between label and control for large fields (10px)."
+      }
     },
     "helper": {
       "text": {
@@ -119,9 +142,60 @@
         ],
         "$type": "spacing",
         "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{gap.xs}"
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between control and error message (4px)."
       }
+    },
+    "helper": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Gap between control and helper text (4px)."
+    },
+    "internal": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Gap between compound field parts (input+select, etc.) (4px)."
+    },
+    "selector": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{spacing-2}",
+      "$description": "Gap between flag, code, and chevron in selector (8px)."
+    },
+    "picker": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{spacing-2}",
+      "$description": "Gap between inputs and expand button (8px)."
+    },
+    "pickerInput": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Gap between inputs and labels/separators (4px)."
     },
     "trailing": {
       "icon": {

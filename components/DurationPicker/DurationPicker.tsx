@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from './TimePicker.module.css';
+import styles from './DurationPicker.module.css';
 import { cn } from '@/lib/utils';
 
-export interface TimePickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
+export interface DurationPickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   /** Field size */
   size?: 'sm' | 'md' | 'lg';
   /** Field status */
@@ -11,7 +11,7 @@ export interface TimePickerProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   disabled?: boolean;
   /** Error state (deprecated - use status prop) */
   error?: boolean;
-  /** Hours value (0-23) */
+  /** Hours value (0-99) */
   hours?: number;
   /** Minutes value (0-59) */
   minutes?: number;
@@ -26,18 +26,18 @@ export interface TimePickerProps extends Omit<React.HTMLAttributes<HTMLDivElemen
 }
 
 /**
- * TimePicker component - Input for time in hours and minutes (24-hour format)
+ * DurationPicker component - Input for duration in hours and minutes
  * 
  * @example
  * ```tsx
- * <TimePicker
- *   hours={14}
+ * <DurationPicker
+ *   hours={2}
  *   minutes={30}
- *   onChange={(h, m) => console.log(`${h}:${m}`)}
+ *   onChange={(h, m) => console.log(`${h}h ${m}min`)}
  * />
  * ```
  */
-export function TimePicker({
+export function DurationPicker({
   size = 'md',
   status,
   disabled = false,
@@ -45,13 +45,13 @@ export function TimePicker({
   hours: initialHours = 0,
   minutes: initialMinutes = 0,
   onChange,
-  'aria-label': ariaLabel = 'Time',
+  'aria-label': ariaLabel = 'Duration',
   expanded: controlledExpanded,
   onToggleExpanded,
   className,
   id,
   ...props
-}: TimePickerProps) {
+}: DurationPickerProps) {
   const [hours, setHours] = useState(initialHours);
   const [minutes, setMinutes] = useState(initialMinutes);
   const [isFocused, setIsFocused] = useState(false);
@@ -73,7 +73,7 @@ export function TimePicker({
   const minutesId = `${finalId}-minutes`;
   
   const handleHoursChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = Math.max(0, Math.min(23, parseInt(e.target.value) || 0));
+    const value = Math.max(0, Math.min(99, parseInt(e.target.value) || 0));
     setHours(value);
     onChange?.(value, minutes);
   };
@@ -95,7 +95,7 @@ export function TimePicker({
   return (
     <div
       className={cn(
-        styles.timePicker,
+        styles.durationPicker,
         size && styles[size],
         hasError && styles.error,
         isDisabled && styles.disabled,
@@ -112,7 +112,7 @@ export function TimePicker({
           id={hoursId}
           type="number"
           min="0"
-          max="23"
+          max="99"
           value={hours.toString().padStart(2, '0')}
           onChange={handleHoursChange}
           onFocus={() => {
@@ -127,10 +127,10 @@ export function TimePicker({
           className={cn(styles.hoursInput, focusedSegment === 'hours' && styles.focusedSegment)}
           aria-label="Hours"
           aria-valuemin={0}
-          aria-valuemax={23}
+          aria-valuemax={99}
           aria-valuenow={hours}
         />
-        <span className={styles.separator} aria-hidden="true">:</span>
+        <span className={styles.label} aria-hidden="true">h</span>
         
         <input
           id={minutesId}
@@ -154,6 +154,7 @@ export function TimePicker({
           aria-valuemax={59}
           aria-valuenow={minutes}
         />
+        <span className={styles.label} aria-hidden="true">min</span>
       </div>
       
       <button
@@ -161,7 +162,7 @@ export function TimePicker({
         className={styles.expandButton}
         onClick={handleToggleExpanded}
         disabled={isDisabled}
-        aria-label={expanded ? 'Collapse time picker' : 'Expand time picker'}
+        aria-label={expanded ? 'Collapse duration picker' : 'Expand duration picker'}
         aria-expanded={expanded}
       >
         <svg

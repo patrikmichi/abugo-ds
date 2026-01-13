@@ -8,7 +8,7 @@ export interface DividerProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Divider({
-  variant?,
+  variant,
   className,
   children,
   ...props

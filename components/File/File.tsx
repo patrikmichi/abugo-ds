@@ -8,7 +8,7 @@ export interface FileProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function File({
-  variant?,
+  variant,
   className,
   children,
   ...props

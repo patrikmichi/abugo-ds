@@ -40,13 +40,56 @@
       "$value": "{typography.body-line.md}"
     },
     "label": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Label line height for small fields (1.5)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Label line height for medium fields (1.5)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Label line height for large fields (1.5)."
+      }
+    },
+    "error": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "lineHeights",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.lg}"
+      "$value": "{typography.lineHeight.6}",
+      "$description": "Error message line height (1.5)."
+    },
+    "helper": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.lineHeight.6}",
+      "$description": "Helper text line height (1.5)."
     }
   },
   "checkbox": {

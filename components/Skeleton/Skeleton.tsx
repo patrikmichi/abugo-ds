@@ -8,7 +8,7 @@ export interface SkeletonProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Skeleton({
-  variant?,
+  variant,
   className,
   children,
   ...props

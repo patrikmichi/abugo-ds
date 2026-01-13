@@ -8,7 +8,7 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Avatar({
-  variant?,
+  variant,
   className,
   children,
   ...props

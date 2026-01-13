@@ -8,7 +8,7 @@ export interface DrawerProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Drawer({
-  variant?,
+  variant,
   className,
   children,
   ...props

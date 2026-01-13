@@ -8,7 +8,7 @@ export interface AccordionProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Accordion({
-  variant?,
+  variant,
   className,
   children,
   ...props

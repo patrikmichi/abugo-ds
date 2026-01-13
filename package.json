@@ -13,6 +13,7 @@
     "build:token-types": "tsx tokens/scripts/generate-token-types.ts",
     "build:components": "tsx tokens/scripts/generate-components.ts",
     "validate:tokens": "tsx tokens/scripts/validate-tokens.ts",
+    "lint:unresolved-tokens": "node scripts/lint-unresolved-tokens.js",
     "split:tokens": "node tokens/scripts/split-tokens.js",
     "generate-docs": "node tokens/scripts/generate-docs.js",
     "storybook": "storybook dev -p 6006",
@@ -22,8 +23,6 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mui/icons-material": "^7.3.7",
-    "@mui/material": "^7.3.7",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"

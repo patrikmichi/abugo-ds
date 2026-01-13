@@ -11,3 +11,7 @@ if git diff --cached --name-only | grep -q "tokens/system/"; then
   npm run build:token-types
   git add styles/tokens.css styles/token-types.d.ts
 fi
+
+# Lint for unresolved tokens in generated CSS (warn only for now)
+# TODO: Remove --warn once token resolution is fixed
+npm run lint:unresolved-tokens -- --warn || exit 1

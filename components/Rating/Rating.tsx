@@ -8,7 +8,7 @@ export interface RatingProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Rating({
-  variant?,
+  variant,
   className,
   children,
   ...props

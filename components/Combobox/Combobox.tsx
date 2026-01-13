@@ -8,7 +8,7 @@ export interface ComboboxProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Combobox({
-  variant?,
+  variant,
   className,
   children,
   ...props

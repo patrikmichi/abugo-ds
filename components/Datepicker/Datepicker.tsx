@@ -8,7 +8,7 @@ export interface DatepickerProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Datepicker({
-  variant?,
+  variant,
   className,
   children,
   ...props

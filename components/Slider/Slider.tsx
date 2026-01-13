@@ -8,7 +8,7 @@ export interface SliderProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Slider({
-  variant?,
+  variant,
   className,
   children,
   ...props

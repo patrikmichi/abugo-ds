@@ -11,8 +11,16 @@ export function Input({
   size = 'md',
   status = 'enabled',
   className,
+  disabled,
   ...props
 }: InputProps) {
+  // Determine final status: prioritize status prop, but also check disabled prop
+  const finalStatus: 'enabled' | 'disabled' | 'error' = 
+    disabled || status === 'disabled' ? 'disabled' :
+    status === 'error' ? 'error' :
+    'enabled';
+  const isDisabled = finalStatus === 'disabled' || disabled;
+  
   return (
     <input
       type="text"
@@ -21,11 +29,11 @@ export function Input({
         size === 'sm' && styles.sm,
         size === 'md' && styles.md,
         size === 'lg' && styles.lg,
-        status === 'error' && styles.error,
-        status === 'disabled' && styles.disabled,
+        finalStatus === 'error' && styles.error,
+        finalStatus === 'disabled' && styles.disabled,
         className
       )}
-      disabled={status === 'disabled'}
+      disabled={isDisabled}
       {...props}
     />
   );

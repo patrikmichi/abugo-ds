@@ -197,6 +197,58 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{typography.body-size.lg}"
+      },
+      "label": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "fontSizes",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.fontSize.1}",
+          "$description": "Label font size for small fields (12px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "fontSizes",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.fontSize.2}",
+          "$description": "Label font size for medium fields (14px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "fontSizes",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.fontSize.2}",
+          "$description": "Label font size for large fields (14px)."
+        }
+      },
+      "error": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.1}",
+        "$description": "Error message font size (12px)."
+      },
+      "helper": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.1}",
+        "$description": "Helper text font size (12px)."
       }
     },
     "checkbox": {
@@ -310,24 +362,46 @@
     },
     "field": {
       "label": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{gap.xxs}"
-      },
-      "helper": {
-        "text": {
+        "sm": {
           "$scopes": [
             "ALL_SCOPES"
           ],
           "$type": "spacing",
           "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{gap.xxs}"
+          "$collectionName": "primitives",
+          "$value": "{spacing-1p5}",
+          "$description": "Gap between label and control for small fields (6px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2}",
+          "$description": "Gap between label and control for medium fields (8px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Gap between label and control for large fields (10px)."
         }
+      },
+      "helper": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between control and helper text (4px)."
       },
       "leading": {
         "icon": {
@@ -396,9 +470,50 @@
           ],
           "$type": "spacing",
           "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{gap.xs}"
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Gap between control and error message (4px)."
         }
+      },
+      "internal": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between compound field parts (input+select, etc.) (4px)."
+      },
+      "selector": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{spacing-2}",
+        "$description": "Gap between flag, code, and chevron in selector (8px)."
+      },
+      "picker": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{spacing-2}",
+        "$description": "Gap between inputs and expand button (8px)."
+      },
+      "pickerInput": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between inputs and labels/separators (4px)."
       },
       "trailing": {
         "icon": {
@@ -1036,13 +1151,56 @@
         "$value": "{typography.body-line.md}"
       },
       "label": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "lineHeights",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.lineHeight.6}",
+          "$description": "Label line height for small fields (1.5)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "lineHeights",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.lineHeight.6}",
+          "$description": "Label line height for medium fields (1.5)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "lineHeights",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{typography.lineHeight.6}",
+          "$description": "Label line height for large fields (1.5)."
+        }
+      },
+      "error": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{typography.body-line.lg}"
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Error message line height (1.5)."
+      },
+      "helper": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Helper text line height (1.5)."
       }
     },
     "checkbox": {
@@ -1169,6 +1327,70 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{padding.m}"
+        },
+        "selector": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "10px",
+            "$description": "Selector horizontal padding for small fields (10px)."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "12px",
+            "$description": "Selector horizontal padding for medium fields (12px)."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "14px",
+            "$description": "Selector horizontal padding for large fields (14px)."
+          }
+        },
+        "picker": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "10px",
+            "$description": "Picker horizontal padding for small fields (10px)."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "12px",
+            "$description": "Picker horizontal padding for medium fields (12px)."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "14px",
+            "$description": "Picker horizontal padding for large fields (14px)."
+          }
         }
       },
       "chip": {
@@ -1418,6 +1640,106 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{padding.s}"
+        }
+      },
+      "field": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Base vertical padding for small fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Base vertical padding for medium fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Base vertical padding for large fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+        }
+      }
+    },
+    "top": {
+      "field": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Base top padding for small fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm))"
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Base top padding for medium fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md))"
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Base top padding for large fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg))"
+        }
+      }
+    },
+    "bottom": {
+      "field": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Base bottom padding for small fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm))"
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Base bottom padding for medium fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md))"
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Base bottom padding for large fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg))"
         }
       }
     },
@@ -3703,13 +4025,26 @@
     },
     "content": {
       "label": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content.passive.neutral.default}"
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{content.passive.neutral.default}",
+          "$description": "Label text color in default state."
+        },
+        "error": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{content.passive.danger}",
+          "$description": "Label text color in error state (red)."
+        }
       },
       "required": {
         "$scopes": [
@@ -3841,6 +4176,304 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{background.passive.neutral.elevated}"
+        }
+      }
+    },
+    "required": {
+      "asterisk": {
+        "margin": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Margin after label text before required asterisk (2px)."
+        },
+        "color": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{content.passive.danger}",
+          "$description": "Required asterisk color (red)."
+        }
+      }
+    },
+    "separator": {
+      "width": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderWidth",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{border-width-1}",
+        "$description": "Separator line width between compound field parts (1px)."
+      },
+      "color": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.neutral.control.field.default}",
+          "$description": "Separator color in default state."
+        },
+        "focus": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.neutral.control.field.focused}",
+          "$description": "Separator color in focus state."
+        },
+        "error": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.danger.default}",
+          "$description": "Separator color in error state."
+        },
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.neutral.control.field.hover}",
+          "$description": "Separator color in hover state."
+        }
+      }
+    },
+    "selector": {
+      "background": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.subtle}",
+        "$description": "Country code selector background color (light gray)."
+      },
+      "minWidth": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "50px",
+          "$description": "Minimum width for country code selector small (50px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "60px",
+          "$description": "Minimum width for country code selector medium (60px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "70px",
+          "$description": "Minimum width for country code selector large (70px)."
+        }
+      },
+      "flag": {
+        "size": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "20px",
+          "$description": "Flag emoji size (20px)."
+        }
+      },
+      "chevron": {
+        "size": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "12px",
+          "$description": "Chevron icon size (12px)."
+        },
+        "color": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{content.passive.neutral.default}",
+          "$description": "Chevron icon color."
+        }
+      }
+    },
+    "picker": {
+      "input": {
+        "width": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "32px",
+          "$description": "Width for 2-digit numeric inputs (32px)."
+        }
+      },
+      "segment": {
+        "background": {
+          "focus": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{background.active.accent.subtle}",
+            "$description": "Focused segment background color (light blue)."
+          }
+        },
+        "radius": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{radius-1}",
+          "$description": "Focused segment border radius (4px)."
+        }
+      },
+      "label": {
+        "margin": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{spacing-1}",
+          "$description": "Margin around labels (h, min) (4px)."
+        }
+      },
+      "separator": {
+        "margin": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{spacing-1}",
+          "$description": "Margin around time separator (:) (4px)."
+        }
+      },
+      "chevron": {
+        "size": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "12px",
+          "$description": "Chevron icon size (12px)."
+        }
+      }
+    },
+    "select": {
+      "minWidth": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "100px",
+          "$description": "Minimum width for select in InputGroup small (100px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "120px",
+          "$description": "Minimum width for select in InputGroup medium (120px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "sizing",
+          "$libraryName": "",
+          "$collectionName": "componentTokens",
+          "$value": "140px",
+          "$description": "Minimum width for select in InputGroup large (140px)."
+        }
+      }
+    },
+    "focus": {
+      "outline": {
+        "width": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "borderWidth",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{border-width-2}",
+          "$description": "Focus ring width (2px)."
+        },
+        "offset": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Focus ring offset from field edge (2px)."
+        },
+        "color": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.neutral.control.field.focused}",
+          "$description": "Focus ring color (blue)."
         }
       }
     }

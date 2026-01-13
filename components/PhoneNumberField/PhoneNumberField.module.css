@@ -1,0 +1,181 @@
+/* PhoneNumberField component styles using design tokens */
+
+.phoneNumberField {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  background-color: var(--token-component-field-control-background-default);
+  overflow: hidden;
+  transition: 
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-sizing: border-box;
+}
+
+/* Country code wrapper */
+.countryCodeWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-gap-field-selector);
+  padding: 0 var(--token-component-padding-x-field-selector-md);
+  background-color: var(--token-component-field-selector-background);
+  border-right: calc(var(--token-component-field-separator-width) * 1px) solid var(--token-component-field-separator-color-default);
+  flex-shrink: 0;
+}
+
+/* Flag emoji */
+.flag {
+  font-size: var(--token-component-field-selector-flag-size);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Country code select */
+.countryCodeSelect {
+  border: none;
+  background: transparent;
+  padding: 0;
+  min-width: var(--token-component-field-selector-min-width-md);
+  appearance: none;
+  background-image: none; /* Override default select arrow */
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  
+  /* Fallback for older browsers - optical adjustment */
+  @supports not (text-box-trim: both) {
+    transform: translateY(-1px);
+  }
+}
+
+.countryCodeSelect:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Chevron icon */
+.chevron {
+  display: flex;
+  align-items: center;
+  color: var(--token-component-field-selector-chevron-color);
+  flex-shrink: 0;
+}
+
+.chevron svg {
+  width: var(--token-component-field-selector-chevron-size);
+  height: var(--token-component-field-selector-chevron-size);
+}
+
+/* Separator */
+.separator {
+  width: calc(var(--token-component-field-separator-width) * 1px);
+  background-color: var(--token-component-field-separator-color-default);
+  flex-shrink: 0;
+  transition: background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+/* Phone input */
+.phoneInput {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  min-width: 0;
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  
+  /* Fallback for older browsers - optical adjustment */
+  @supports not (text-box-trim: both) {
+    transform: translateY(-1px);
+  }
+}
+
+.phoneInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Size variants */
+.phoneNumberField.sm {
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+}
+
+.phoneNumberField.sm .countryCodeWrapper {
+  padding: 0 var(--token-component-padding-x-field-selector-sm);
+}
+
+.phoneNumberField.sm .countryCodeSelect {
+  min-width: var(--token-component-field-selector-min-width-sm);
+}
+
+.phoneNumberField.lg {
+  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+}
+
+.phoneNumberField.lg .countryCodeWrapper {
+  padding: 0 var(--token-component-padding-x-field-selector-lg);
+}
+
+.phoneNumberField.lg .countryCodeSelect {
+  min-width: var(--token-component-field-selector-min-width-lg);
+}
+
+/* Enabled state (default) - hover and focus */
+.phoneNumberField:not(.error):not(.disabled):hover {
+  border-color: var(--token-component-field-control-border-hover);
+  background-color: var(--token-component-field-control-background-hover);
+}
+
+.phoneNumberField:not(.error):not(.disabled):hover .separator {
+  background-color: var(--token-component-field-separator-color-hover);
+}
+
+.phoneNumberField:not(.error):not(.disabled).focused {
+  border-color: var(--token-component-field-control-border-focused);
+  background-color: var(--token-component-field-control-background-focused);
+  /* Show focus ring on focus */
+  outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
+  outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
+}
+
+.phoneNumberField:not(.error):not(.disabled).focused .separator {
+  background-color: var(--token-component-field-separator-color-focus);
+}
+
+.phoneNumberField:not(.error):not(.disabled):active {
+  border-color: var(--token-component-field-control-border-active);
+}
+
+/* Error state - use status.error tokens */
+.phoneNumberField.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+.phoneNumberField.error .separator {
+  background-color: var(--token-component-field-separator-color-error);
+}
+
+.phoneNumberField.error:hover:not(.disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+.phoneNumberField.error.focused:not(.disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+/* Disabled state - use status.disabled tokens */
+.phoneNumberField.disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 1; /* Don't use opacity, use actual disabled colors */
+}

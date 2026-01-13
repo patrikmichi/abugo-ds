@@ -113,6 +113,40 @@
   font-size: var(--token-component-icon-button-lg);
 }
 
+/* Icon-only plain buttons use plain button heights */
+.button.iconOnly.plain.sm,
+.button.iconOnly.primaryPlain.sm,
+.button.iconOnly.secondaryPlain.sm,
+.button.iconOnly.dangerPlain.sm,
+.button.iconOnly.tertiaryPlain.sm,
+.button.iconOnly.upgradePlain.sm {
+  width: var(--token-component-height-button-plain-sm);
+  min-width: var(--token-component-height-button-plain-sm);
+  height: var(--token-component-height-button-plain-sm);
+}
+
+.button.iconOnly.plain.md,
+.button.iconOnly.primaryPlain.md,
+.button.iconOnly.secondaryPlain.md,
+.button.iconOnly.dangerPlain.md,
+.button.iconOnly.tertiaryPlain.md,
+.button.iconOnly.upgradePlain.md {
+  width: var(--token-component-height-button-plain-md);
+  min-width: var(--token-component-height-button-plain-md);
+  height: var(--token-component-height-button-plain-md);
+}
+
+.button.iconOnly.plain.lg,
+.button.iconOnly.primaryPlain.lg,
+.button.iconOnly.secondaryPlain.lg,
+.button.iconOnly.dangerPlain.lg,
+.button.iconOnly.tertiaryPlain.lg,
+.button.iconOnly.upgradePlain.lg {
+  width: var(--token-component-height-button-plain-lg);
+  min-width: var(--token-component-height-button-plain-lg);
+  height: var(--token-component-height-button-plain-lg);
+}
+
 /* ==========================================================================
    Button Content Elements
    ========================================================================== */
@@ -188,6 +222,26 @@
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
 }
 
+/* Plain buttons use different height tokens */
+.plain,
+.primaryPlain,
+.secondaryPlain,
+.dangerPlain,
+.tertiaryPlain,
+.upgradePlain {
+  /* Default to medium height for plain buttons */
+  height: var(--token-component-height-button-plain-md);
+}
+
+.plain.sm,
+.primaryPlain.sm,
+.secondaryPlain.sm,
+.dangerPlain.sm,
+.tertiaryPlain.sm,
+.upgradePlain.sm {
+  height: var(--token-component-height-button-plain-sm);
+}
+
 .sm:has(.startIcon) {
   padding-left: calc(var(--token-component-padding-left-button-sm) - var(--token-component-padding-optical-button-icon));
 }
@@ -221,6 +275,16 @@
   gap: var(--token-component-gap-button-icon-md);
 }
 
+/* Plain buttons use different height tokens */
+.plain.md,
+.primaryPlain.md,
+.secondaryPlain.md,
+.dangerPlain.md,
+.tertiaryPlain.md,
+.upgradePlain.md {
+  height: var(--token-component-height-button-plain-md);
+}
+
 .lg {
   padding-left: var(--token-component-padding-left-button-lg);
   padding-right: var(--token-component-padding-right-button-lg);
@@ -233,6 +297,16 @@
   line-height: 1;
   gap: var(--token-component-gap-button-icon-lg);
   letter-spacing: var(--token-primitive-typography-letter-spacing-button-large);
+}
+
+/* Plain buttons use different height tokens */
+.plain.lg,
+.primaryPlain.lg,
+.secondaryPlain.lg,
+.dangerPlain.lg,
+.tertiaryPlain.lg,
+.upgradePlain.lg {
+  height: var(--token-component-height-button-plain-lg);
 }
 
 .lg:has(.startIcon) {

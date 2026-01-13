@@ -1,68 +1,197 @@
 /* Select component styles using design tokens */
+/* Following Material UI, Chakra UI, and Ant Design patterns */
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+  /* Ensure dropdown is not clipped */
+  overflow: visible;
+}
 
 .select {
-  background-color: var(--token-component-select-background-default);
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-select-border-default);
-  color: var(--token-component-select-content-value);
-  padding: var(--token-component-padding-x-field-md);
-  border-radius: var(--token-component-radius-field-md);
+  /* Base styles - use field control tokens */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--token-component-field-control-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
+  padding-inline: var(--token-component-padding-x-field-md);
+  padding-inline-end: calc(var(--token-component-padding-x-field-md) + 20px);
+  /* Compensate for descender space using cap unit */
+  padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
   height: var(--token-component-height-field-md);
+  font-size: var(--token-component-font-size-field-sm);
+  line-height: var(--token-component-line-height-field-value);
+  font-family: var(--token-primitive-typography-font-family-sans);
   cursor: pointer;
-  transition: border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23464646' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right var(--token-semantic-padding-xs) center;
-  padding-right: calc(var(--token-semantic-padding-xs) + 16px);
+  transition: 
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  width: 100%;
+  box-sizing: border-box;
+  gap: var(--token-semantic-spacing-2, 8px);
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  
+  /* Fallback for older browsers that don't support cap unit or text-box-trim */
+  @supports not (padding-block: 1cap) {
+    padding: 0 var(--token-component-padding-x-field-md);
+    padding-right: calc(var(--token-component-padding-x-field-md) + 20px);
+  }
 }
 
-.select::placeholder {
-  color: var(--token-component-select-content-placeholder);
+.selectValue {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  
+  /* Fallback for older browsers - optical adjustment */
+  @supports not (text-box-trim: both) {
+    transform: translateY(-1px);
+  }
 }
 
-.select:hover:not(:disabled) {
-  background-color: var(--token-component-select-background-hover);
-  border-color: var(--token-component-select-border-hover);
+.selectValue.placeholder {
+  color: var(--token-component-field-content-placeholder);
 }
 
-.select:focus {
-  background-color: var(--token-component-select-background-focused);
-  border-color: var(--token-component-select-border-focused);
+.chevron {
+  flex-shrink: 0;
+  color: var(--token-component-select-arrow-default);
+  transition: color 0.15s ease;
+  font-size: 20px;
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select:hover:not(.disabled) .chevron {
+  color: var(--token-component-select-arrow-hover);
+}
+
+.hiddenSelect {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Enabled state (default) */
+.select:not(.error):not(.disabled):hover:not(:disabled) {
+  background-color: var(--token-component-field-control-background-hover);
+  border-color: var(--token-component-field-control-border-hover);
+}
+
+.select:not(.error):not(.disabled):focus:not(:disabled),
+.select:not(.error):not(.disabled):focus-visible:not(:disabled) {
+  background-color: var(--token-component-field-control-background-focused);
+  border-color: var(--token-component-field-control-border-focused);
+  /* Show focus ring on focus */
+  outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
+  outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
+}
+
+.select:not(.error):not(.disabled):active:not(:disabled) {
+  border-color: var(--token-component-field-control-border-active);
+}
+
+
+.select.open:not(.error):not(.disabled) {
+  background-color: var(--token-component-field-control-background-focused);
+  border-color: var(--token-component-field-control-border-focused);
+  /* Show focus ring when dropdown is open */
+  outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
+  outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
+}
+
+/* Focus-visible: Only show focus ring when keyboard navigating */
+.select:focus-visible {
+  outline: calc(var(--token-component-field-focus-outline-width) * 1px) solid var(--token-component-field-focus-outline-color);
+  outline-offset: calc(var(--token-component-field-focus-outline-offset) * 1px);
+}
+
+/* Fallback for browsers that don't support :focus-visible */
+.select:focus:not(:focus-visible) {
   outline: none;
 }
 
-.select:active:not(:disabled) {
-  border-color: var(--token-component-select-border-active);
+/* Error state - use status.error tokens */
+.select.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  /* Keep default text color, only border should be red */
+  color: var(--token-component-field-content-value);
 }
 
+.select.error:hover:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+}
+
+.select.error:focus:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+/* Disabled state - use status.disabled tokens */
+.select.disabled,
 .select:disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  color: var(--token-component-field-status-disabled-content);
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 1; /* Don't use opacity, use actual disabled colors */
 }
 
 .sm {
-  padding: var(--token-component-padding-x-field-sm);
-  border-radius: var(--token-component-radius-field-sm);
+  padding-inline: var(--token-component-padding-x-field-sm);
+  padding-inline-end: calc(var(--token-component-padding-x-field-sm) + 20px);
+  padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   height: var(--token-component-height-field-sm);
+  
+  @supports not (padding-block: 1cap) {
+    padding: var(--token-component-padding-x-field-sm);
+    padding-right: calc(var(--token-component-padding-x-field-sm) + 20px);
+  }
 }
 
 .md {
-  padding: var(--token-component-padding-x-field-md);
-  border-radius: var(--token-component-radius-field-md);
+  padding-inline: var(--token-component-padding-x-field-md);
+  padding-inline-end: calc(var(--token-component-padding-x-field-md) + 20px);
+  padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
   height: var(--token-component-height-field-md);
+  
+  @supports not (padding-block: 1cap) {
+    padding: var(--token-component-padding-x-field-md);
+    padding-right: calc(var(--token-component-padding-x-field-md) + 20px);
+  }
 }
 
 .lg {
-  padding: var(--token-component-padding-x-field-lg);
-  border-radius: var(--token-component-radius-field-lg);
+  padding-inline: var(--token-component-padding-x-field-lg);
+  padding-inline-end: calc(var(--token-component-padding-x-field-lg) + 20px);
+  padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
+  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   height: var(--token-component-height-field-lg);
+  
+  @supports not (padding-block: 1cap) {
+    padding: var(--token-component-padding-x-field-lg);
+    padding-right: calc(var(--token-component-padding-x-field-lg) + 20px);
+  }
 }
 
-.error {
-  border-color: var(--token-semantic-border-active-danger-default);
-}
-
-.disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}

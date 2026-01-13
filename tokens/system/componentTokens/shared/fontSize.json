@@ -47,6 +47,58 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{typography.body-size.lg}"
+    },
+    "label": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.1}",
+        "$description": "Label font size for small fields (12px)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.2}",
+        "$description": "Label font size for medium fields (14px)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.2}",
+        "$description": "Label font size for large fields (14px)."
+      }
+    },
+    "error": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.fontSize.1}",
+      "$description": "Error message font size (12px)."
+    },
+    "helper": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.fontSize.1}",
+      "$description": "Helper text font size (12px)."
     }
   },
   "checkbox": {

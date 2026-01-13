@@ -8,7 +8,7 @@ export interface LoadingProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Loading({
-  variant?,
+  variant,
   className,
   children,
   ...props

@@ -57,6 +57,70 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{padding.m}"
+      },
+      "selector": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "10px",
+          "$description": "Selector horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "12px",
+          "$description": "Selector horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "14px",
+          "$description": "Selector horizontal padding for large fields (14px)."
+        }
+      },
+      "picker": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "10px",
+          "$description": "Picker horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "12px",
+          "$description": "Picker horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "14px",
+          "$description": "Picker horizontal padding for large fields (14px)."
+        }
       }
     },
     "chip": {
@@ -306,6 +370,106 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{padding.s}"
+      }
+    },
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Base vertical padding for small fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Base vertical padding for medium fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Base vertical padding for large fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+      }
+    }
+  },
+  "top": {
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Base top padding for small fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm))"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Base top padding for medium fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md))"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Base top padding for large fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg))"
+      }
+    }
+  },
+  "bottom": {
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Base bottom padding for small fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm))"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Base bottom padding for medium fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md))"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Base bottom padding for large fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg))"
       }
     }
   },

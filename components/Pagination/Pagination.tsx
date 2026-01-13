@@ -8,7 +8,7 @@ export interface PaginationProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function Pagination({
-  variant?,
+  variant,
   className,
   children,
   ...props

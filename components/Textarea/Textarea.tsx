@@ -14,6 +14,13 @@ export function Textarea({
   disabled,
   ...props
 }: TextareaProps) {
+  // Determine final status: prioritize status prop, but also check disabled prop
+  const finalStatus: 'enabled' | 'disabled' | 'error' = 
+    disabled || status === 'disabled' ? 'disabled' :
+    status === 'error' ? 'error' :
+    'enabled';
+  const isDisabled = finalStatus === 'disabled' || disabled;
+  
   return (
     <textarea
       className={cn(
@@ -21,11 +28,11 @@ export function Textarea({
         size === 'sm' && styles.sm,
         size === 'md' && styles.md,
         size === 'lg' && styles.lg,
-        status === 'error' && styles.error,
-        (status === 'disabled' || disabled) && styles.disabled,
+        finalStatus === 'error' && styles.error,
+        finalStatus === 'disabled' && styles.disabled,
         className
       )}
-      disabled={disabled || status === 'disabled'}
+      disabled={isDisabled}
       {...props}
     />
   );

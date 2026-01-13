@@ -4067,6 +4067,42 @@
         "$value": "{typography.fontWeight.bold}",
         "$description": "Bold font weight. Use for maximum emphasis."
       }
+    },
+    "optical": {
+      "alignment": {
+        "offset": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-1}",
+            "$description": "Optical alignment offset for small text (4px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields. Reduces padding-top and increases padding-bottom to compensate for visual space under text."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-1}",
+            "$description": "Optical alignment offset for medium text (4px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-2}",
+            "$description": "Optical alignment offset for large text (8px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields."
+          }
+        }
+      }
     }
   },
   "z.index": {

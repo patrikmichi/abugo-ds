@@ -1,0 +1,147 @@
+/* SelectDropdown component styles using design tokens */
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background-color: var(--token-component-popover-background, #ffffff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: var(--token-semantic-z-index-dropdown, 1000);
+  /* Use hidden for border-radius, but allow list to scroll */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  min-width: 100%;
+  width: 100%;
+}
+
+/* List container */
+.list {
+  overflow-y: auto;
+  overflow-x: visible;
+  flex: 1;
+  min-height: 0;
+  /* Ensure content is not clipped */
+  max-height: 250px;
+}
+
+/* Dropdown item */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--token-semantic-padding-xxs, 8px) var(--token-semantic-padding-xs, 12px);
+  background-color: var(--token-component-select-row-background-default);
+  color: var(--token-component-select-row-content-default);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  font-size: var(--token-component-font-size-field-sm);
+  line-height: var(--token-component-line-height-field-value);
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+.item:hover:not(.itemDisabled) {
+  background-color: var(--token-component-select-row-background-hover);
+  color: var(--token-component-select-row-content-hover);
+}
+
+.item.selected {
+  background-color: var(--token-component-select-row-background-selected);
+  color: var(--token-component-select-row-content-selected);
+}
+
+.item.itemDisabled {
+  background-color: var(--token-component-select-row-background-disabled);
+  color: var(--token-component-select-row-content-disabled);
+  cursor: not-allowed;
+}
+
+.itemLabel {
+  flex: 1;
+}
+
+/* Checkmark icon */
+.checkmark {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-left: var(--token-semantic-padding-xxs, 8px);
+  color: var(--token-component-select-row-content-selected);
+}
+
+.item.selected .checkmark {
+  color: white;
+}
+
+/* Footer with buttons */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--token-semantic-padding-xxs, 8px) var(--token-semantic-padding-xs, 12px);
+  border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  gap: var(--token-semantic-padding-xxs, 8px);
+}
+
+.cancelButton {
+  background: none;
+  border: none;
+  color: var(--token-component-select-row-content-default);
+  font-size: var(--token-component-font-size-field-sm);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+  cursor: pointer;
+  padding: var(--token-semantic-padding-xxxs, 4px) var(--token-semantic-padding-xxs, 8px);
+  transition: color 0.15s ease;
+}
+
+.cancelButton:hover {
+  color: var(--token-component-select-row-content-hover);
+}
+
+.saveButton {
+  background-color: var(--token-semantic-background-active-accent-default);
+  border: none;
+  color: white;
+  font-size: var(--token-component-font-size-field-sm);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+  cursor: pointer;
+  padding: var(--token-semantic-padding-xxxs, 4px) var(--token-semantic-padding-xs, 12px);
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+  transition: background-color 0.15s ease;
+  margin-left: auto;
+}
+
+.saveButton:hover {
+  background-color: var(--token-semantic-background-active-accent-hover);
+}
+
+.saveButton:active {
+  background-color: var(--token-semantic-background-active-accent-pressed);
+}
+
+/* Size variants */
+.dropdown.sm {
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+}
+
+.dropdown.lg {
+  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+}
+
+/* Error state */
+.dropdown.error {
+  border-color: var(--token-component-field-status-error-border);
+}
+
+/* Disabled state */
+.dropdown.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}

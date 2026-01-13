@@ -3,39 +3,90 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--token-component-gap-field-label);
-  width: var(--token-component-field-width);
+  gap: var(--token-component-gap-field-label-md);
+  width: 100%;
 }
 
-.width {
-  width: var(--token-component-field-width);
+/* Size variants */
+.field.sm {
+  gap: var(--token-component-gap-field-label-sm);
 }
 
-.status {
+.field.md {
+  gap: var(--token-component-gap-field-label-md);
 }
 
-.enabled {
-  border-color: var(--token-component-field-status-enabled-border);
-  background-color: var(--token-component-field-status-enabled-background);
-  color: var(--token-component-field-status-enabled-content);
+.field.lg {
+  gap: var(--token-component-gap-field-label-lg);
 }
 
-.error {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-  color: var(--token-component-field-status-error-content);
+/* Label styles */
+.label {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-label-md);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+  line-height: var(--token-component-line-height-field-label-md);
+  color: var(--token-component-field-content-label-default);
+  display: block;
+  margin: 0;
 }
 
-.required::after {
-  content: '*';
-  color: var(--token-component-field-content-required);
-  margin-left: var(--token-semantic-spacing-1);
+.field.sm .label {
+  font-size: var(--token-component-font-size-field-label-sm);
+  line-height: var(--token-component-line-height-field-label-sm);
 }
 
-.field:disabled {
-  border-color: var(--token-component-field-status-disabled-border);
-  background-color: var(--token-component-field-status-disabled-background);
+.field.lg .label {
+  font-size: var(--token-component-font-size-field-label-lg);
+  line-height: var(--token-component-line-height-field-label-lg);
+}
+
+/* Required asterisk */
+.requiredAsterisk {
+  color: var(--token-component-field-required-asterisk-color);
+  margin-left: var(--token-component-field-required-asterisk-margin);
+}
+
+/* Control wrapper */
+.control {
+  width: 100%;
+  /* Ensure dropdowns are not clipped */
+  overflow: visible;
+  position: relative;
+}
+
+/* Error message */
+.errorMessage {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-error);
+  line-height: var(--token-component-line-height-field-error);
+  color: var(--token-component-field-content-error);
+  margin-top: var(--token-component-gap-field-error-message);
+  display: block;
+}
+
+/* Helper text */
+.helperText {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-helper);
+  line-height: var(--token-component-line-height-field-helper);
+  color: var(--token-component-field-content-help);
+  margin-top: var(--token-component-gap-field-helper);
+  display: block;
+}
+
+/* Error state */
+.field.error .label {
+  color: var(--token-component-field-content-label-error);
+}
+
+/* Disabled state */
+.field.disabled .label {
   color: var(--token-component-field-status-disabled-content);
-  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.field.disabled .errorMessage,
+.field.disabled .helperText {
   opacity: 0.6;
 }
