@@ -549,6 +549,36 @@
         "$collectionName": "semanticTokens",
         "$value": "{border.active.neutral.control.field.focused}",
         "$description": "Focus ring color (blue)."
+      },
+      "blur": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": 8,
+        "$description": "Focus ring blur radius for soft glow effect (8px)."
+      },
+      "spread": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": 0,
+        "$description": "Focus ring spread radius (0px)."
+      },
+      "opacity": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "opacity",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": 0.3,
+        "$description": "Focus ring opacity for soft glow effect (30%)."
       }
     }
   }
