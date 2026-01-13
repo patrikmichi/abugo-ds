@@ -151,95 +151,61 @@
   },
   "chip": {
     "x": {
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
       "sm": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "spacing",
-        "$value": 7
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 11
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 15
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
       }
     },
     "y": {
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
       "sm": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "spacing",
-        "$value": 3
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 7
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 11
-      }
-    },
-    "left": {
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 3
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 7
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 11
-      }
-    },
-    "right": {
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 3
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 7
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$value": 11
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
       }
     }
   },
