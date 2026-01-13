@@ -34,13 +34,13 @@
   text-box-edge: cap alphabetic;
 }
 
-.combobox:hover {
+.combobox:not(.error):not(.disabled):hover:not(:disabled) {
   background-color: var(--token-component-field-control-background-hover);
   border-color: var(--token-component-field-control-border-hover);
 }
 
-.combobox:focus,
-.combobox:focus-within {
+.combobox:not(.error):not(.disabled):focus:not(:disabled),
+.combobox:not(.error):not(.disabled):focus-within:not(:disabled) {
   background-color: var(--token-component-field-control-background-focused);
   border-color: var(--token-component-field-control-border-focused);
   /* Show soft glowing focus ring on focus */
@@ -50,8 +50,38 @@
     0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
 }
 
-.combobox:active {
+.combobox:not(.error):not(.disabled):active:not(:disabled) {
   border-color: var(--token-component-field-control-border-active);
+}
+
+/* Error state - use status.error tokens */
+.combobox.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  color: var(--token-component-field-content-value);
+}
+
+.combobox.error:hover:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+}
+
+.combobox.error:focus:not(:disabled),
+.combobox.error:focus-within:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  /* No focus ring on error state - keep red border */
+  outline: none;
+  box-shadow: none;
+}
+
+/* Disabled state - use status.disabled tokens */
+.combobox.disabled,
+.combobox:disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  color: var(--token-component-field-status-disabled-content);
+  cursor: not-allowed;
+  opacity: 1; /* Don't use opacity, use actual disabled colors */
 }
 
 .value {
