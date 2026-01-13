@@ -5,7 +5,8 @@ import { SelectDropdown, SelectOption } from './SelectDropdown';
 
 export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'onChange' | 'value'> {
   size?: 'sm' | 'md' | 'lg';
-  status?: 'enabled' | 'error' | 'disabled';
+  /** Whether the field has a validation error */
+  error?: boolean;
   /** Options array (alternative to children) */
   options?: SelectOption[];
   /** Selected value */
@@ -18,7 +19,7 @@ export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectE
 
 export function Select({
   size = 'md',
-  status = 'enabled',
+  error = false,
   className,
   disabled,
   children,
@@ -30,13 +31,6 @@ export function Select({
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLDivElement>(null);
-
-  // Determine final status: prioritize status prop, but also check disabled prop
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    disabled || status === 'disabled' ? 'disabled' :
-    status === 'error' ? 'error' :
-    'enabled';
-  const isDisabled = finalStatus === 'disabled' || disabled;
 
   // Parse options from children or use options prop
   const options: SelectOption[] = useMemo(() => {
@@ -63,7 +57,7 @@ export function Select({
   const displayValue = selectedOption?.label || placeholder;
 
   const handleToggle = () => {
-    if (!isDisabled) {
+    if (!disabled) {
       setIsOpen(!isOpen);
     }
   };
@@ -95,16 +89,16 @@ export function Select({
           size === 'sm' && styles.sm,
           size === 'md' && styles.md,
           size === 'lg' && styles.lg,
-          finalStatus === 'error' && styles.error,
-          finalStatus === 'disabled' && styles.disabled,
+          error && styles.error,
+          disabled && styles.disabled,
           isOpen && styles.open
         )}
         onClick={handleToggle}
         role="combobox"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
-        aria-disabled={isDisabled}
-        tabIndex={isDisabled ? -1 : 0}
+        aria-disabled={disabled}
+        tabIndex={disabled ? -1 : 0}
       >
         <span className={cn(styles.selectValue, !selectedOption && styles.placeholder)}>
           {displayValue}
@@ -123,7 +117,8 @@ export function Select({
         onChange={handleChange}
         onClose={handleClose}
         size={size}
-        status={finalStatus}
+        error={error}
+        disabled={disabled}
         placeholder={placeholder}
         triggerRef={triggerRef}
       />
@@ -132,7 +127,7 @@ export function Select({
         {...props}
         value={valueProp}
         onChange={(e) => onChange?.(e.target.value)}
-        disabled={isDisabled}
+        disabled={disabled}
         className={styles.hiddenSelect}
         aria-hidden="true"
         tabIndex={-1}

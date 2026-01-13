@@ -6,12 +6,10 @@ import { Input } from '@/components/Input';
 export interface InputPairProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Field size */
   size?: 'sm' | 'md' | 'lg';
-  /** Field status */
-  status?: 'enabled' | 'disabled' | 'error';
+  /** Whether the field has a validation error */
+  error?: boolean;
   /** Whether the field is disabled */
   disabled?: boolean;
-  /** Error state (deprecated - use status prop) */
-  error?: boolean;
   /** First input value */
   firstValue?: string;
   /** Second input value */
@@ -45,9 +43,8 @@ export interface InputPairProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 export function InputPair({
   size = 'md',
-  status,
-  disabled = false,
   error = false,
+  disabled = false,
   firstValue = '',
   secondValue = '',
   onFirstChange,
@@ -61,13 +58,6 @@ export function InputPair({
 }: InputPairProps) {
   const [isFocused, setIsFocused] = useState(false);
   
-  // Determine status: priority is status prop > disabled > error prop
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    status || 
-    (disabled ? 'disabled' : (error ? 'error' : 'enabled'));
-  const isDisabled = finalStatus === 'disabled' || disabled;
-  const hasError = finalStatus === 'error' || error;
-  
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
   
@@ -76,8 +66,8 @@ export function InputPair({
       className={cn(
         styles.inputPair,
         size && styles[size],
-        hasError && styles.error,
-        isDisabled && styles.disabled,
+        error && styles.error,
+        disabled && styles.disabled,
         isFocused && styles.focused,
         className
       )}
@@ -91,9 +81,9 @@ export function InputPair({
         onFocus={handleFocus}
         onBlur={handleBlur}
         placeholder={firstPlaceholder}
-        disabled={isDisabled}
+        disabled={disabled}
+        error={error}
         size={size}
-        status={finalStatus}
         className={styles.firstInput}
         aria-label={firstAriaLabel}
       />
@@ -107,9 +97,9 @@ export function InputPair({
         onFocus={handleFocus}
         onBlur={handleBlur}
         placeholder={secondPlaceholder}
-        disabled={isDisabled}
+        disabled={disabled}
+        error={error}
         size={size}
-        status={finalStatus}
         className={styles.secondInput}
         aria-label={secondAriaLabel}
       />

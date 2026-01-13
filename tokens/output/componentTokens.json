@@ -1609,6 +1609,38 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{padding.s}"
+        },
+        "select": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "36px",
+            "$description": "Right padding for select component small (accounts for chevron icon: padding-x + chevron-size + gap = 12px + 20px + 4px = 36px)."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "40px",
+            "$description": "Right padding for select component medium (accounts for chevron icon: padding-x + chevron-size + gap = 16px + 20px + 4px = 40px)."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "44px",
+            "$description": "Right padding for select component large (accounts for chevron icon: padding-x + chevron-size + gap = 20px + 20px + 4px = 44px)."
+          }
         }
       }
     },
@@ -1754,6 +1786,74 @@
           "$collectionName": "primitives",
           "$value": "{spacing-1}",
           "$description": "Optical padding adjustment when icon is present. Reduces padding on the side where icon is displayed for better visual balance."
+        }
+      }
+    },
+    "adornment": {
+      "field": {
+        "leading": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{padding.xs}",
+            "$description": "Padding adjustment when leading adornment is present for small fields. This replaces the left padding to accommodate the adornment."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{padding.s}",
+            "$description": "Padding adjustment when leading adornment is present for medium fields. This replaces the left padding to accommodate the adornment."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{padding.m}",
+            "$description": "Padding adjustment when leading adornment is present for large fields. This replaces the left padding to accommodate the adornment."
+          }
+        },
+        "trailing": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{padding.xs}",
+            "$description": "Padding adjustment when trailing adornment is present for small fields. This replaces the right padding to accommodate the adornment."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{padding.s}",
+            "$description": "Padding adjustment when trailing adornment is present for medium fields. This replaces the right padding to accommodate the adornment."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{padding.m}",
+            "$description": "Padding adjustment when trailing adornment is present for large fields. This replaces the right padding to accommodate the adornment."
+          }
         }
       }
     }
@@ -4474,6 +4574,36 @@
           "$collectionName": "semanticTokens",
           "$value": "{border.active.neutral.control.field.focused}",
           "$description": "Focus ring color (blue)."
+        },
+        "blur": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": 8,
+          "$description": "Focus ring blur radius for soft glow effect (8px)."
+        },
+        "spread": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": 0,
+          "$description": "Focus ring spread radius (0px)."
+        },
+        "opacity": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "opacity",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": 0.3,
+          "$description": "Focus ring opacity for soft glow effect (30%)."
         }
       }
     }

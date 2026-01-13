@@ -15,8 +15,9 @@
   color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
-  padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
+  /* Equal padding (text-box-trim handles font metric trimming) */
+  padding-top: var(--token-component-padding-top-field-md);
+  padding-bottom: var(--token-component-padding-bottom-field-md);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);
@@ -30,6 +31,12 @@
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
+  
+  /* Fallback for browsers without text-box-trim: optical alignment offset */
+  @supports not (text-box-trim: both) {
+    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
+  }
 }
 
 .textarea::placeholder {
@@ -68,9 +75,13 @@
   border-color: var(--token-component-field-status-error-border);
 }
 
-.textarea.error:focus:not(:disabled) {
+.textarea.error:focus:not(:disabled),
+.textarea.error:focus-visible:not(:disabled) {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
+  /* No focus ring on error state - keep red border */
+  outline: none;
+  box-shadow: none;
 }
 
 /* Disabled state - use status.disabled tokens */

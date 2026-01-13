@@ -4,23 +4,17 @@ import { cn } from '@/lib/utils';
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   size?: 'sm' | 'md' | 'lg';
-  status?: 'enabled' | 'error' | 'disabled';
+  /** Whether the field has a validation error */
+  error?: boolean;
 }
 
 export function Textarea({
   size = 'md',
-  status = 'enabled',
+  error = false,
   className,
   disabled,
   ...props
 }: TextareaProps) {
-  // Determine final status: prioritize status prop, but also check disabled prop
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    disabled || status === 'disabled' ? 'disabled' :
-    status === 'error' ? 'error' :
-    'enabled';
-  const isDisabled = finalStatus === 'disabled' || disabled;
-  
   return (
     <div className={styles.textareaWrapper}>
       <textarea
@@ -29,11 +23,11 @@ export function Textarea({
           size === 'sm' && styles.sm,
           size === 'md' && styles.md,
           size === 'lg' && styles.lg,
-          finalStatus === 'error' && styles.error,
-          finalStatus === 'disabled' && styles.disabled,
+          error && styles.error,
+          disabled && styles.disabled,
           className
         )}
-        disabled={isDisabled}
+        disabled={disabled}
         {...props}
       />
     </div>

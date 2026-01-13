@@ -5,12 +5,10 @@ import { cn } from '@/lib/utils';
 export interface DurationPickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   /** Field size */
   size?: 'sm' | 'md' | 'lg';
-  /** Field status */
-  status?: 'enabled' | 'disabled' | 'error';
+  /** Whether the field has a validation error */
+  error?: boolean;
   /** Whether the field is disabled */
   disabled?: boolean;
-  /** Error state (deprecated - use status prop) */
-  error?: boolean;
   /** Hours value (0-99) */
   hours?: number;
   /** Minutes value (0-59) */
@@ -39,9 +37,8 @@ export interface DurationPickerProps extends Omit<React.HTMLAttributes<HTMLDivEl
  */
 export function DurationPicker({
   size = 'md',
-  status,
-  disabled = false,
   error = false,
+  disabled = false,
   hours: initialHours = 0,
   minutes: initialMinutes = 0,
   onChange,
@@ -59,13 +56,6 @@ export function DurationPicker({
   const [internalExpanded, setInternalExpanded] = useState(false);
   
   const expanded = controlledExpanded !== undefined ? controlledExpanded : internalExpanded;
-  
-  // Determine status: priority is status prop > disabled > error prop
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    status || 
-    (disabled ? 'disabled' : (error ? 'error' : 'enabled'));
-  const isDisabled = finalStatus === 'disabled' || disabled;
-  const hasError = finalStatus === 'error' || error;
   
   const fieldId = React.useId();
   const finalId = id || fieldId;
@@ -106,8 +96,8 @@ export function DurationPicker({
           styles.durationPicker,
           size === 'sm' && styles.sm,
           size === 'lg' && styles.lg,
-          hasError && styles.error,
-          isDisabled && styles.disabled,
+          error && styles.error,
+          disabled && styles.disabled,
           isFocused && styles.focused,
           expanded && styles.expanded,
           className
@@ -132,7 +122,7 @@ export function DurationPicker({
             setIsFocused(false);
             setFocusedSegment(null);
           }}
-          disabled={isDisabled}
+          disabled={disabled}
           className={cn(styles.hoursInput, focusedSegment === 'hours' && styles.focusedSegment)}
           aria-label="Hours"
           aria-valuemin={0}
@@ -156,7 +146,7 @@ export function DurationPicker({
             setIsFocused(false);
             setFocusedSegment(null);
           }}
-          disabled={isDisabled}
+          disabled={disabled}
           className={cn(styles.minutesInput, focusedSegment === 'minutes' && styles.focusedSegment)}
           aria-label="Minutes"
           aria-valuemin={0}
@@ -170,7 +160,7 @@ export function DurationPicker({
         type="button"
         className={styles.expandButton}
         onClick={handleToggleExpanded}
-        disabled={isDisabled}
+        disabled={disabled}
         aria-label={expanded ? 'Collapse duration picker' : 'Expand duration picker'}
         aria-expanded={expanded}
       >

@@ -664,6 +664,9 @@
   --token-component-padding-right-field-sm: 8px;
   --token-component-padding-right-field-md: 12px;
   --token-component-padding-right-field-lg: 16px;
+  --token-component-padding-right-field-select-sm: 36px;
+  --token-component-padding-right-field-select-md: 40px;
+  --token-component-padding-right-field-select-lg: 44px;
   --token-component-padding-y-textarea-sm: 8px;
   --token-component-padding-y-textarea-md: 12px;
   --token-component-padding-y-textarea-lg: 16px;
@@ -677,6 +680,12 @@
   --token-component-padding-bottom-field-md: 16px;
   --token-component-padding-bottom-field-lg: 20px;
   --token-component-padding-optical-button-icon: 4px;
+  --token-component-padding-adornment-field-leading-sm: 12px;
+  --token-component-padding-adornment-field-leading-md: 16px;
+  --token-component-padding-adornment-field-leading-lg: 20px;
+  --token-component-padding-adornment-field-trailing-sm: 12px;
+  --token-component-padding-adornment-field-trailing-md: 16px;
+  --token-component-padding-adornment-field-trailing-lg: 20px;
   --token-component-radius-button-sm: 4;
   --token-component-radius-button-md: 8;
   --token-component-radius-button-lg: 12;
@@ -946,6 +955,9 @@
   --token-component-field-focus-outline-width: 2;
   --token-component-field-focus-outline-offset: 2px;
   --token-component-field-focus-outline-color: #93b8f9;
+  --token-component-field-focus-outline-blur: 8px;
+  --token-component-field-focus-outline-spread: 0px;
+  --token-component-field-focus-outline-opacity: 0.3;
   --token-component-file-upload-background-default: #efefef;
   --token-component-file-upload-background-hover: #efefef;
   --token-component-file-upload-background-drag-over: #e4edfd;

@@ -56,51 +56,51 @@ export function Field({
   const errorId = `${finalId}-error`;
   const helperId = `${finalId}-helper`;
   
-  // Determine field status: enabled, disabled, or error
   const hasError = !!error;
-  const isDisabled = disabled;
   
-  // Determine status for child components
-  // Priority: disabled > error > enabled
-  const fieldStatus: 'enabled' | 'disabled' | 'error' = 
-    isDisabled ? 'disabled' : 
-    hasError ? 'error' : 
-    'enabled';
-  
-  // Clone children to inject props (id, aria attributes, status, size)
+  // Clone children to inject props (id, aria attributes, error, disabled, size)
   const enhancedChildren = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      // Determine child's status
-      // Priority: Field's validation state (disabled > error) > child's explicit status > enabled
-      // This ensures Field's validation always takes precedence, but allows child to override in special cases
-      const childStatus = child.props.status;
-      const finalStatus: 'enabled' | 'disabled' | 'error' = 
-        isDisabled ? 'disabled' : // Field disabled always wins
-        hasError ? 'error' :      // Field error wins (unless disabled)
-        childStatus ||            // Use child's status if provided
-        'enabled';                // Default to enabled
+      // Determine if child should be disabled (Field's disabled prop takes precedence)
+      const childDisabled = disabled || child.props.disabled;
       
-      // Determine if child should be disabled
-      const childDisabled = isDisabled || child.props.disabled;
+      // Determine if child should show error (Field's error takes precedence)
+      const childError = hasError || child.props.error;
       
-      return React.cloneElement(child, {
+      const clonedProps: any = {
         id: finalId,
-        'aria-labelledby': label ? labelId : undefined,
-        'aria-describedby': [
-          error ? errorId : undefined,
-          helperText && !error ? helperId : undefined,
-        ].filter(Boolean).join(' ') || undefined,
-        'aria-invalid': hasError ? true : undefined,
-        'aria-required': required ? true : undefined,
         disabled: childDisabled,
-        // Always pass status to child components that support it
-        // Field's validation state takes priority over child's status
-        status: finalStatus,
-        // Pass size to child if it supports it and doesn't have its own
-        ...(child.props.size === undefined && { size }),
-        // Also pass error prop for backward compatibility
-        ...(child.props.error !== undefined && { error: hasError }),
-      } as any);
+        // Field's validation state takes priority over child's error prop
+        error: childError,
+      };
+      
+      // Add aria attributes only if they have values
+      if (label) {
+        clonedProps['aria-labelledby'] = labelId;
+      }
+      
+      const describedBy = [
+        error ? errorId : undefined,
+        helperText && !error ? helperId : undefined,
+      ].filter(Boolean);
+      if (describedBy.length > 0) {
+        clonedProps['aria-describedby'] = describedBy.join(' ');
+      }
+      
+      if (hasError) {
+        clonedProps['aria-invalid'] = true;
+      }
+      
+      if (required) {
+        clonedProps['aria-required'] = true;
+      }
+      
+      // Pass size to child if it supports it and doesn't have its own
+      if (child.props.size === undefined) {
+        clonedProps.size = size;
+      }
+      
+      return React.cloneElement(child, clonedProps);
     }
     return child;
   });

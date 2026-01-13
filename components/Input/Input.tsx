@@ -4,7 +4,8 @@ import { cn } from '@/lib/utils';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   size?: 'sm' | 'md' | 'lg';
-  status?: 'enabled' | 'error' | 'disabled';
+  /** Whether the field has a validation error */
+  error?: boolean;
   /** Leading adornment (e.g., icon on the left) */
   leadingAdornment?: React.ReactNode;
   /** Trailing adornment (e.g., icon on the right) */
@@ -13,20 +14,13 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 
 export function Input({
   size = 'md',
-  status = 'enabled',
+  error = false,
   className,
   disabled,
   leadingAdornment,
   trailingAdornment,
   ...props
 }: InputProps) {
-  // Determine final status: prioritize status prop, but also check disabled prop
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    disabled || status === 'disabled' ? 'disabled' :
-    status === 'error' ? 'error' :
-    'enabled';
-  const isDisabled = finalStatus === 'disabled' || disabled;
-  
   return (
     <div 
       className={cn(
@@ -35,7 +29,8 @@ export function Input({
         size === 'md' && styles.md,
         size === 'lg' && styles.lg,
         leadingAdornment && styles.hasLeading,
-        trailingAdornment && styles.hasTrailing
+        trailingAdornment && styles.hasTrailing,
+        className
       )}
     >
       {leadingAdornment && (
@@ -50,11 +45,10 @@ export function Input({
           size === 'sm' && styles.sm,
           size === 'md' && styles.md,
           size === 'lg' && styles.lg,
-          finalStatus === 'error' && styles.error,
-          finalStatus === 'disabled' && styles.disabled,
-          className
+          error && styles.error,
+          disabled && styles.disabled
         )}
-        disabled={isDisabled}
+        disabled={disabled}
         {...props}
       />
       {trailingAdornment && (

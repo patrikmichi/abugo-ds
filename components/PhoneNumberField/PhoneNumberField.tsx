@@ -18,12 +18,10 @@ export interface CountryCode {
 export interface PhoneNumberFieldProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'> {
   /** Field size */
   size?: 'sm' | 'md' | 'lg';
-  /** Field status */
-  status?: 'enabled' | 'disabled' | 'error';
+  /** Whether the field has a validation error */
+  error?: boolean;
   /** Whether the field is disabled */
   disabled?: boolean;
-  /** Error state (deprecated - use status prop) */
-  error?: boolean;
   /** Phone number value */
   value?: string;
   /** Change handler - receives full phone number with country code */
@@ -60,9 +58,8 @@ export interface PhoneNumberFieldProps extends Omit<React.InputHTMLAttributes<HT
  */
 export function PhoneNumberField({
   size = 'md',
-  status,
-  disabled = false,
   error = false,
+  disabled = false,
   value = '',
   onChange,
   countryCode: initialCountryCode = '+420',
@@ -82,14 +79,6 @@ export function PhoneNumberField({
   const finalId = id || fieldId;
   const countryCodeId = `${finalId}-country-code`;
   const phoneInputId = `${finalId}-phone`;
-  
-  // Determine status: priority is status prop > disabled > error prop
-  // If status is provided, use it; otherwise determine from disabled/error props
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    status || 
-    (disabled ? 'disabled' : (error ? 'error' : 'enabled'));
-  const isDisabled = finalStatus === 'disabled' || disabled;
-  const hasError = finalStatus === 'error' || error;
   
   const selectedCountry = countries.find(c => c.code === selectedCountryCode) || countries[0];
   

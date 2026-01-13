@@ -7,12 +7,10 @@ import { Select } from '@/components/Select';
 export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Field size */
   size?: 'sm' | 'md' | 'lg';
-  /** Field status */
-  status?: 'enabled' | 'disabled' | 'error';
+  /** Whether the field has a validation error */
+  error?: boolean;
   /** Whether the field is disabled */
   disabled?: boolean;
-  /** Error state (deprecated - use status prop) */
-  error?: boolean;
   /** Input value */
   inputValue?: string;
   /** Select value */
@@ -47,9 +45,8 @@ export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
  */
 export function InputGroup({
   size = 'md',
-  status,
-  disabled = false,
   error = false,
+  disabled = false,
   inputValue = '',
   selectValue = '',
   onInputChange,
@@ -63,13 +60,6 @@ export function InputGroup({
 }: InputGroupProps) {
   const [isFocused, setIsFocused] = useState(false);
   
-  // Determine status: priority is status prop > disabled > error prop
-  const finalStatus: 'enabled' | 'disabled' | 'error' = 
-    status || 
-    (disabled ? 'disabled' : (error ? 'error' : 'enabled'));
-  const isDisabled = finalStatus === 'disabled' || disabled;
-  const hasError = finalStatus === 'error' || error;
-  
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
   
@@ -78,8 +68,8 @@ export function InputGroup({
       className={cn(
         styles.inputGroup,
         size && styles[size],
-        hasError && styles.error,
-        isDisabled && styles.disabled,
+        error && styles.error,
+        disabled && styles.disabled,
         isFocused && styles.focused,
         className
       )}
@@ -93,9 +83,9 @@ export function InputGroup({
         onFocus={handleFocus}
         onBlur={handleBlur}
         placeholder={inputPlaceholder}
-        disabled={isDisabled}
+        disabled={disabled}
+        error={error}
         size={size}
-        status={finalStatus}
         className={styles.input}
         aria-label={inputAriaLabel}
       />
@@ -107,9 +97,9 @@ export function InputGroup({
         onChange={(e) => onSelectChange?.(e.target.value)}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        disabled={isDisabled}
+        disabled={disabled}
+        error={error}
         size={size}
-        status={finalStatus}
         className={styles.select}
         aria-label={selectAriaLabel}
       >

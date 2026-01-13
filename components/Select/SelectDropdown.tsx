@@ -23,8 +23,10 @@ export interface SelectDropdownProps {
   multiple?: boolean;
   /** Size variant */
   size?: 'sm' | 'md' | 'lg';
-  /** Status */
-  status?: 'enabled' | 'error' | 'disabled';
+  /** Whether the field has a validation error */
+  error?: boolean;
+  /** Whether the field is disabled */
+  disabled?: boolean;
   /** Placeholder text */
   placeholder?: string;
   /** Container ref for positioning */
@@ -39,7 +41,8 @@ export function SelectDropdown({
   onClose,
   multiple = false,
   size = 'md',
-  status = 'enabled',
+  error = false,
+  disabled = false,
   placeholder = 'Select...',
   triggerRef,
 }: SelectDropdownProps) {
@@ -121,8 +124,8 @@ export function SelectDropdown({
       className={cn(
         styles.dropdown,
         styles[size],
-        status === 'error' && styles.error,
-        status === 'disabled' && styles.disabled
+        error && styles.error,
+        disabled && styles.disabled
       )}
       role="listbox"
       aria-multiselectable={multiple}
@@ -130,7 +133,7 @@ export function SelectDropdown({
       <div className={styles.list}>
         {options.map((option) => {
           const selected = isSelected(option.value);
-          const disabled = status === 'disabled' || option.disabled;
+          const isOptionDisabled = disabled || option.disabled;
 
           return (
             <div
@@ -138,12 +141,12 @@ export function SelectDropdown({
               className={cn(
                 styles.item,
                 selected && styles.selected,
-                disabled && styles.itemDisabled
+                isOptionDisabled && styles.itemDisabled
               )}
-              onClick={() => !disabled && handleItemClick(option.value)}
+              onClick={() => !isOptionDisabled && handleItemClick(option.value)}
               role="option"
               aria-selected={selected}
-              aria-disabled={disabled}
+              aria-disabled={isOptionDisabled}
             >
               <span className={styles.itemLabel}>{option.label}</span>
               {selected && (

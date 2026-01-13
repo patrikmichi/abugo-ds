@@ -31,8 +31,9 @@
   color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  /* Compensate for descender space using cap unit */
-  padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
+  /* Equal padding (text-box-trim handles font metric trimming) */
+  padding-top: var(--token-component-padding-top-field-md);
+  padding-bottom: var(--token-component-padding-bottom-field-md);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);
@@ -46,10 +47,8 @@
   text-box-trim: both;
   text-box-edge: cap alphabetic;
   
-  /* Fallback for older browsers that don't support cap unit or text-box-trim */
-  @supports not (padding-block: 1cap) {
-    padding-left: var(--token-component-padding-x-field-md);
-    padding-right: var(--token-component-padding-x-field-md);
+  /* Fallback for browsers without text-box-trim: optical alignment offset */
+  @supports not (text-box-trim: both) {
     padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
     padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
@@ -142,9 +141,13 @@
   border-color: var(--token-component-field-status-error-border);
 }
 
-.input.error:focus:not(:disabled) {
+.input.error:focus:not(:disabled),
+.input.error:focus-visible:not(:disabled) {
   border-color: var(--token-component-field-status-error-border);
   background-color: var(--token-component-field-status-error-background);
+  /* No focus ring on error state - keep red border */
+  outline: none;
+  box-shadow: none;
 }
 
 /* Disabled state - use status.disabled tokens */
@@ -161,13 +164,14 @@
 .sm {
   padding-inline-start: var(--token-component-padding-x-field-sm);
   padding-inline-end: var(--token-component-padding-x-field-sm);
-  padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
+  /* Equal padding (text-box-trim handles font metric trimming) */
+  padding-top: var(--token-component-padding-top-field-sm);
+  padding-bottom: var(--token-component-padding-bottom-field-sm);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   font-size: var(--token-component-font-size-field-sm);
   
-  @supports not (padding-block: 1cap) {
-    padding-left: var(--token-component-padding-x-field-sm);
-    padding-right: var(--token-component-padding-x-field-sm);
+  /* Fallback for browsers without text-box-trim: optical alignment offset */
+  @supports not (text-box-trim: both) {
     padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
     padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
   }
@@ -200,12 +204,13 @@
 .md {
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
+  /* Equal padding (text-box-trim handles font metric trimming) */
+  padding-top: var(--token-component-padding-top-field-md);
+  padding-bottom: var(--token-component-padding-bottom-field-md);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   
-  @supports not (padding-block: 1cap) {
-    padding-left: var(--token-component-padding-x-field-md);
-    padding-right: var(--token-component-padding-x-field-md);
+  /* Fallback for browsers without text-box-trim: optical alignment offset */
+  @supports not (text-box-trim: both) {
     padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
     padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
@@ -214,13 +219,14 @@
 .lg {
   padding-inline-start: var(--token-component-padding-x-field-lg);
   padding-inline-end: var(--token-component-padding-x-field-lg);
-  padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
+  /* Equal padding (text-box-trim handles font metric trimming) */
+  padding-top: var(--token-component-padding-top-field-lg);
+  padding-bottom: var(--token-component-padding-bottom-field-lg);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   font-size: var(--token-component-font-size-field-lg);
   
-  @supports not (padding-block: 1cap) {
-    padding-left: var(--token-component-padding-x-field-lg);
-    padding-right: var(--token-component-padding-x-field-lg);
+  /* Fallback for browsers without text-box-trim: optical alignment offset */
+  @supports not (text-box-trim: both) {
     padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
     padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
