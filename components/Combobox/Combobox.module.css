@@ -10,9 +10,9 @@
 .combobox {
   width: 100%;
   height: 100%;
-  background-color: var(--token-component-combobox-background-default);
-  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-combobox-border-default);
-  color: var(--token-component-combobox-content-value);
+  background-color: var(--token-component-field-control-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
   padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
@@ -35,14 +35,14 @@
 }
 
 .combobox:hover {
-  background-color: var(--token-component-combobox-background-hover);
-  border-color: var(--token-component-combobox-border-hover);
+  background-color: var(--token-component-field-control-background-hover);
+  border-color: var(--token-component-field-control-border-hover);
 }
 
 .combobox:focus,
 .combobox:focus-within {
-  background-color: var(--token-component-combobox-background-focused);
-  border-color: var(--token-component-combobox-border-focused);
+  background-color: var(--token-component-field-control-background-focused);
+  border-color: var(--token-component-field-control-border-focused);
   /* Show soft glowing focus ring on focus */
   outline: none;
   box-shadow: 
@@ -51,13 +51,13 @@
 }
 
 .combobox:active {
-  border-color: var(--token-component-combobox-border-active);
+  border-color: var(--token-component-field-control-border-active);
 }
 
 .value {
-  color: var(--token-component-combobox-content-value);
+  color: var(--token-component-field-content-value);
 }
 
 .placeholder {
-  color: var(--token-component-combobox-content-placeholder);
+  color: var(--token-component-field-content-placeholder);
 }
