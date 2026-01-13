@@ -6,7 +6,10 @@
   align-items: center;
   width: 100%;
   min-height: var(--token-component-height-field-md);
-  padding: 0 var(--token-component-padding-x-field-md);
+  padding-left: var(--token-component-padding-x-field-md);
+  padding-right: var(--token-component-padding-x-field-md);
+  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+  padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   background-color: var(--token-component-datepicker-background-default);
   border: var(--token-semantic-border-width-thin) solid var(--token-component-datepicker-border-default);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);

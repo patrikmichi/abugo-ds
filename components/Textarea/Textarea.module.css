@@ -6,7 +6,10 @@
   background-color: var(--token-component-field-control-background-default);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   color: var(--token-component-field-content-value);
-  padding: var(--token-component-padding-x-field-md);
+  padding-left: var(--token-component-padding-x-field-md);
+  padding-right: var(--token-component-padding-x-field-md);
+  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+  padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);
@@ -21,11 +24,6 @@
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
-  
-  /* Fallback for older browsers - optical adjustment */
-  @supports not (text-box-trim: both) {
-    transform: translateY(-1px);
-  }
 }
 
 .textarea::placeholder {
@@ -78,19 +76,28 @@
 }
 
 .sm {
-  padding: var(--token-component-padding-x-field-sm);
+  padding-left: var(--token-component-padding-x-field-sm);
+  padding-right: var(--token-component-padding-x-field-sm);
+  padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
+  padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   min-height: 80px;
 }
 
 .md {
-  padding: var(--token-component-padding-x-field-md);
+  padding-left: var(--token-component-padding-x-field-md);
+  padding-right: var(--token-component-padding-x-field-md);
+  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+  padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   min-height: 100px;
 }
 
 .lg {
-  padding: var(--token-component-padding-x-field-lg);
+  padding-left: var(--token-component-padding-x-field-lg);
+  padding-right: var(--token-component-padding-x-field-lg);
+  padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
+  padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   min-height: 120px;
 }

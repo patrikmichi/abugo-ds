@@ -26,8 +26,10 @@
   
   /* Fallback for older browsers that don't support cap unit or text-box-trim */
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-md);
-    transform: translateY(-1px);
+    padding-left: var(--token-component-padding-x-field-md);
+    padding-right: var(--token-component-padding-x-field-md);
+    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
 }
 
@@ -88,8 +90,10 @@
   font-size: var(--token-component-font-size-field-sm);
   
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-sm);
-    transform: translateY(-1px);
+    padding-left: var(--token-component-padding-x-field-sm);
+    padding-right: var(--token-component-padding-x-field-sm);
+    padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
   }
 }
 
@@ -100,8 +104,10 @@
   height: var(--token-component-height-field-md);
   
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-md);
-    transform: translateY(-1px);
+    padding-left: var(--token-component-padding-x-field-md);
+    padding-right: var(--token-component-padding-x-field-md);
+    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
 }
 
@@ -113,8 +119,10 @@
   font-size: var(--token-component-font-size-field-lg);
   
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-lg);
-    transform: translateY(-1px);
+    padding-left: var(--token-component-padding-x-field-lg);
+    padding-right: var(--token-component-padding-x-field-lg);
+    padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
 }
 

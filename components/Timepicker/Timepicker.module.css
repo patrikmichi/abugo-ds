@@ -24,7 +24,10 @@
   
   /* Fallback for older browsers that don't support cap unit or text-box-trim */
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-picker-md);
+    padding-left: var(--token-component-padding-x-field-picker-md);
+    padding-right: var(--token-component-padding-x-field-picker-md);
+    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
 }
 
@@ -49,8 +52,7 @@
   font-weight: var(--token-primitive-typography-font-weight-regular, 400); /* Fallback */
   color: var(--token-component-field-content-value, #464646); /* Hardcoded fallback */
   outline: none;
-  /* Optical centering: move text up 1px to account for space under text */
-  transform: translateY(-1px);
+  /* Optical centering handled by parent container padding adjustments */
 }
 
 .hoursInput:focus,
@@ -116,7 +118,10 @@
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-picker-sm);
+    padding-left: var(--token-component-padding-x-field-picker-sm);
+    padding-right: var(--token-component-padding-x-field-picker-sm);
+    padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
   }
 }
 
@@ -127,7 +132,10 @@
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   
   @supports not (padding-block: 1cap) {
-    padding: 0 var(--token-component-padding-x-field-picker-lg);
+    padding-left: var(--token-component-padding-x-field-picker-lg);
+    padding-right: var(--token-component-padding-x-field-picker-lg);
+    padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
+    padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
 }
 

@@ -46,10 +46,7 @@
   text-box-trim: both;
   text-box-edge: cap alphabetic;
   
-  /* Fallback for older browsers - optical adjustment */
-  @supports not (text-box-trim: both) {
-    transform: translateY(-1px);
-  }
+  /* Optical alignment handled by parent container padding adjustments */
 }
 
 .countryCodeSelect:focus {
@@ -89,10 +86,7 @@
   text-box-trim: both;
   text-box-edge: cap alphabetic;
   
-  /* Fallback for older browsers - optical adjustment */
-  @supports not (text-box-trim: both) {
-    transform: translateY(-1px);
-  }
+  /* Optical alignment handled by Input component padding adjustments */
 }
 
 .phoneInput:focus {
