@@ -1,7 +1,7 @@
 {
   "$name": "Component Tokens",
   "primary": {
-    "boxed": {
+    "filled": {
       "background": {
         "default": {
           "$scopes": [
@@ -50,7 +50,7 @@
         "$value": "{content-passive-on-accent}"
       }
     },
-    "plain": {
+    "text": {
       "background": {
         "default": {
           "$scopes": [
@@ -130,7 +130,7 @@
     }
   },
   "secondary": {
-    "boxed": {
+    "outlined": {
       "background": {
         "hover": {
           "$scopes": [
@@ -219,7 +219,7 @@
         }
       }
     },
-    "plain": {
+    "text": {
       "background": {
         "default": {
           "$scopes": [
@@ -299,7 +299,7 @@
     }
   },
   "danger": {
-    "boxed": {
+    "filled": {
       "background": {
         "default": {
           "$scopes": [
@@ -339,7 +339,7 @@
         "$value": "{content-passive-on-danger}"
       }
     },
-    "plain": {
+    "text": {
       "background": {
         "default": {
           "$scopes": [

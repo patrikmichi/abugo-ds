@@ -27,7 +27,7 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{border-active-neutral-control-field-focused}"
-    },
+    }
   },
   "background": {
     "default": {
