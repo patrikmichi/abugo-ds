@@ -14,26 +14,33 @@
   box-sizing: border-box;
 }
 
-/* Input sections */
+/* Input sections - override wrapper and input styles for nested usage */
 .firstInput,
-.secondInput {
+.firstInput :global(.inputWrapper),
+.firstInput :global(.input),
+.secondInput,
+.secondInput :global(.inputWrapper),
+.secondInput :global(.input) {
   flex: 1;
-  border: none;
-  border-radius: 0;
+  border: none !important;
+  border-radius: 0 !important;
   min-width: 0;
+  height: 100%;
+  background: transparent;
+  padding: 0;
+  margin: 0;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
   
-  /* Fallback for older browsers - optical adjustment */
-  @supports not (text-box-trim: both) {
-    transform: translateY(-1px);
-  }
+  /* Optical alignment handled by parent container padding adjustments */
 }
 
 .firstInput:focus,
-.secondInput:focus {
+.firstInput :global(.input):focus,
+.secondInput:focus,
+.secondInput :global(.input):focus {
   outline: none;
   box-shadow: none;
 }

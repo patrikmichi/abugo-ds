@@ -75,21 +75,28 @@
   transition: background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
 }
 
-/* Phone input */
-.phoneInput {
+/* Phone input - override wrapper and input styles for nested usage */
+.phoneInput,
+.phoneInput :global(.inputWrapper),
+.phoneInput :global(.input) {
   flex: 1;
-  border: none;
-  border-radius: 0;
+  border: none !important;
+  border-radius: 0 !important;
   min-width: 0;
+  height: 100%;
+  background: transparent;
+  padding: 0;
+  margin: 0;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
   
-  /* Optical alignment handled by Input component padding adjustments */
+  /* Optical alignment handled by parent container padding adjustments */
 }
 
-.phoneInput:focus {
+.phoneInput:focus,
+.phoneInput :global(.input):focus {
   outline: none;
   box-shadow: none;
 }
