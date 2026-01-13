@@ -27,6 +27,38 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{control.height.lg}"
+    },
+    "plain": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.xs}",
+        "$description": "Small plain button height (32px)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.sm}",
+        "$description": "Medium plain button height (40px)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.md}",
+        "$description": "Large plain button height (48px)."
+      }
     }
   },
   "field": {
