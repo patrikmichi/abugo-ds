@@ -944,7 +944,7 @@
   --token-component-field-select-min-width-md: 120px;
   --token-component-field-select-min-width-lg: 140px;
   --token-component-field-focus-outline-width: 2;
-  --token-component-field-focus-outline-offset: 4px;
+  --token-component-field-focus-outline-offset: 2px;
   --token-component-field-focus-outline-color: #93b8f9;
   --token-component-file-upload-background-default: #efefef;
   --token-component-file-upload-background-hover: #efefef;

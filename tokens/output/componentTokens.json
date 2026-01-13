@@ -4462,7 +4462,7 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "primitives",
-          "$value": "{spacing-1}",
+          "$value": 2,
           "$description": "Focus ring offset from field edge (2px)."
         },
         "color": {
