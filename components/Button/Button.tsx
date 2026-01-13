@@ -39,14 +39,11 @@ export function ButtonIcon({ name, size = 24, className }: ButtonIconProps) {
       className={`material-symbols-outlined ${className || ''}`}
       style={{ 
         fontSize: size, 
-        width: size, 
-        height: size, 
-        display: 'inline-flex', 
-        alignItems: 'center', 
-        justifyContent: 'center',
+        width: '1em',
+        height: '1em',
+        display: 'block',
         lineHeight: 1,
         color: 'inherit',
-        flexShrink: 0
       }}
       aria-hidden="true"
     >
@@ -119,7 +116,10 @@ export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
  * <Button fullWidth variant="primary">Submit</Button>
  * ```
  */
-const ButtonComponent = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+const ButtonComponent = React.forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  ButtonProps
+>(
   function Button(
     {
       variant = 'primary',
@@ -255,7 +255,7 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, 
     return (
       <a
         ref={ref as React.ForwardedRef<HTMLAnchorElement>}
-        href={href}
+        href={isDisabled ? undefined : href}
         target={target}
         rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)}
         className={buttonClassName}
@@ -268,6 +268,7 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, 
           }
           onClick?.(e as any);
         }}
+        style={{ pointerEvents: isDisabled ? 'none' : undefined }}
         {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {renderContent()}

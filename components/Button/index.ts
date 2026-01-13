@@ -1,5 +1,4 @@
-export { Button, type ButtonProps } from './Button';
-export { ButtonIcon, type ButtonIconProps } from './ButtonIcon';
+export { Button, ButtonIcon, type ButtonProps, type ButtonIconProps } from './Button';
 
 // Convenience wrapper components for common patterns
 export {

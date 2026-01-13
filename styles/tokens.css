@@ -627,6 +627,12 @@
   --token-component-padding-x-pagination-s: 4px;
   --token-component-padding-x-pagination-l: 4px;
   --token-component-padding-x-tooltip: 12px;
+  --token-component-padding-left-button-sm: 12px;
+  --token-component-padding-left-button-md: 16px;
+  --token-component-padding-left-button-lg: 20px;
+  --token-component-padding-right-button-sm: 12px;
+  --token-component-padding-right-button-md: 16px;
+  --token-component-padding-right-button-lg: 20px;
   --token-component-padding-right-field-sm: 8px;
   --token-component-padding-right-field-md: 12px;
   --token-component-padding-right-field-lg: 16px;
