@@ -1,35 +1,41 @@
 /* Button component styles using design tokens */
 
+/* ==========================================================================
+   Base Button Styles
+   ========================================================================== */
+
 .button {
-  /* Base styles */
+  /* Layout */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--token-component-gap-button-icon-md);
-  border: 0;
-  cursor: pointer;
-  font-family: var(--token-primitive-typography-font-family-sans);
   box-sizing: border-box;
   vertical-align: middle;
-  text-decoration: none; /* For link buttons */
   
   /* Typography - default to medium size */
+  font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-button-md);
+  font-weight: var(--token-component-font-weight-button);
   line-height: 1;
-  font-weight: var(--token-primitive-typography-font-weight-bold);
-  text-transform: none;
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
+  text-transform: var(--token-component-text-transform-button);
+  text-decoration: none; /* For link buttons */
   
   /* Spacing & Sizing - default to medium size */
-  padding-left: var(--token-component-padding-x-button-md);
-  padding-right: var(--token-component-padding-x-button-md);
+  padding-left: var(--token-component-padding-left-button-md);
+  padding-right: var(--token-component-padding-right-button-md);
   padding-top: 0;
   padding-bottom: 0;
   height: var(--token-component-height-button-md);
   min-width: auto;
   
-  /* Border radius - default to medium size */
+  /* Border & Radius */
+  border: 0;
   border-radius: calc(var(--token-component-radius-button-md) * 1px);
+  
+  /* Interactions */
+  cursor: pointer;
   
   /* Transitions */
   transition: 
@@ -37,6 +43,10 @@
     color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
     border-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing);
 }
+
+/* ==========================================================================
+   Button Modifiers
+   ========================================================================== */
 
 /* Full width button */
 .button.fullWidth {
@@ -50,8 +60,6 @@
   min-width: var(--token-component-height-button-md);
   aspect-ratio: 1;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .button.iconOnly > * {
@@ -86,7 +94,11 @@
   font-size: var(--token-component-icon-button-lg);
 }
 
-/* Icon spacing */
+/* ==========================================================================
+   Button Content Elements
+   ========================================================================== */
+
+/* Icon containers */
 .startIcon,
 .endIcon {
   display: flex;
@@ -96,11 +108,10 @@
   width: var(--token-component-icon-button-md);
   height: var(--token-component-icon-button-md);
   color: inherit;
-  /* Optical adjustment for perfect centering */
-  transform: translateY(-1px);
+  margin: 0;
 }
 
-/* Material Icons - ensure proper sizing */
+/* Material Icons styling */
 .startIcon .material-symbols-outlined,
 .endIcon .material-symbols-outlined {
   font-size: var(--token-component-icon-button-md);
@@ -110,41 +121,125 @@
   line-height: 1;
   margin: 0;
   padding: 0;
-  /* Material Icons font variation settings */
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-.startIcon {
-  margin-right: 0;
-}
-
-.endIcon {
-  margin-left: 0;
-}
-
+/* Text element */
 .text {
   display: flex;
   align-items: center;
   white-space: nowrap;
   color: inherit;
   line-height: 1;
-  /* Remove any extra spacing */
   margin: 0;
   padding: 0;
   /* Optical adjustment for perfect centering */
-  transform: translateY(-1px);
+  transform: translateY(1px);
 }
 
-/* Size-specific text - all use line-height 1 for perfect centering */
-.sm .text {
+/* ==========================================================================
+   Optical Padding Adjustments (when icons are present)
+   ========================================================================== */
+
+/* Optical padding adjustment when start icon is present */
+.button:has(.startIcon) {
+  padding-left: calc(var(--token-component-padding-left-button-md) - var(--token-component-padding-optical-button-icon));
+}
+
+/* Optical padding adjustment when end icon is present */
+.button:has(.endIcon) {
+  padding-right: calc(var(--token-component-padding-right-button-md) - var(--token-component-padding-optical-button-icon));
+}
+
+/* ==========================================================================
+   Size Variants
+   ========================================================================== */
+
+.sm {
+  padding-left: var(--token-component-padding-left-button-sm);
+  padding-right: var(--token-component-padding-right-button-sm);
+  padding-top: 0;
+  padding-bottom: 0;
+  height: var(--token-component-height-button-sm);
+  min-width: auto;
+  border-radius: calc(var(--token-component-radius-button-sm) * 1px);
+  font-size: var(--token-component-font-size-button-sm);
   line-height: 1;
+  gap: var(--token-component-gap-button-icon-sm);
+  letter-spacing: var(--token-primitive-typography-letter-spacing-button);
 }
 
-.lg .text {
+.sm:has(.startIcon) {
+  padding-left: calc(var(--token-component-padding-left-button-sm) - var(--token-component-padding-optical-button-icon));
+}
+
+.sm:has(.endIcon) {
+  padding-right: calc(var(--token-component-padding-right-button-sm) - var(--token-component-padding-optical-button-icon));
+}
+
+.sm .startIcon,
+.sm .endIcon {
+  width: var(--token-component-icon-button-sm);
+  height: var(--token-component-icon-button-sm);
+  font-size: var(--token-component-icon-button-sm);
+}
+
+.sm .loadingSpinner {
+  width: var(--token-component-icon-button-sm);
+  height: var(--token-component-icon-button-sm);
+}
+
+.md {
+  padding-left: var(--token-component-padding-left-button-md);
+  padding-right: var(--token-component-padding-right-button-md);
+  padding-top: 0;
+  padding-bottom: 0;
+  height: var(--token-component-height-button-md);
+  min-width: auto;
+  border-radius: calc(var(--token-component-radius-button-md) * 1px);
+  font-size: var(--token-component-font-size-button-md);
   line-height: 1;
+  gap: var(--token-component-gap-button-icon-md);
 }
 
-/* Loading spinner */
+.lg {
+  padding-left: var(--token-component-padding-left-button-lg);
+  padding-right: var(--token-component-padding-right-button-lg);
+  padding-top: 0;
+  padding-bottom: 0;
+  height: var(--token-component-height-button-lg);
+  min-width: auto;
+  border-radius: calc(var(--token-component-radius-button-lg) * 1px);
+  font-size: var(--token-component-font-size-button-lg);
+  line-height: 1;
+  gap: var(--token-component-gap-button-icon-lg);
+  letter-spacing: var(--token-primitive-typography-letter-spacing-button-large);
+}
+
+.lg:has(.startIcon) {
+  padding-left: calc(var(--token-component-padding-left-button-lg) - var(--token-component-padding-optical-button-icon));
+}
+
+.lg:has(.endIcon) {
+  padding-right: calc(var(--token-component-padding-right-button-lg) - var(--token-component-padding-optical-button-icon));
+}
+
+.lg .startIcon,
+.lg .endIcon {
+  width: var(--token-component-icon-button-lg);
+  height: var(--token-component-icon-button-lg);
+  font-size: var(--token-component-icon-button-lg);
+}
+
+.lg .loadingSpinner {
+  width: var(--token-component-icon-button-lg);
+  height: var(--token-component-icon-button-lg);
+}
+
+/* ==========================================================================
+   Loading State
+   ========================================================================== */
+
 .loadingSpinner {
   display: inline-flex;
   align-items: center;
@@ -156,11 +251,11 @@
 .spinner {
   width: 100%;
   height: 100%;
-  animation: rotate 1.4s linear infinite;
+  animation: rotate var(--token-component-animation-field-duration)ms linear infinite;
 }
 
 .spinnerCircle {
-  animation: dash 1.4s ease-in-out infinite;
+  animation: dash var(--token-component-animation-field-duration)ms ease-in-out infinite;
 }
 
 @keyframes rotate {
@@ -191,96 +286,20 @@
   pointer-events: none;
 }
 
-/* Size variants */
-.sm {
-  padding-left: var(--token-component-padding-x-button-sm);
-  padding-right: var(--token-component-padding-x-button-sm);
-  padding-top: 0;
-  padding-bottom: 0;
-  height: var(--token-component-height-button-sm);
-  min-width: auto;
-  border-radius: calc(var(--token-component-radius-button-sm) * 1px);
-  font-size: var(--token-component-font-size-button-sm);
-  line-height: 1;
-  gap: var(--token-component-gap-button-icon-sm);
-  letter-spacing: var(--token-primitive-typography-letter-spacing-button);
-}
+/* ==========================================================================
+   Disabled State
+   ========================================================================== */
 
-.sm .startIcon,
-.sm .endIcon {
-  width: var(--token-component-icon-button-sm);
-  height: var(--token-component-icon-button-sm);
-  font-size: var(--token-component-icon-button-sm);
-}
-
-.sm .startIcon {
-  margin-right: 0;
-}
-
-.sm .endIcon {
-  margin-left: 0;
-}
-
-.sm .loadingSpinner {
-  width: var(--token-component-icon-button-sm);
-  height: var(--token-component-icon-button-sm);
-}
-
-.md {
-  padding-left: var(--token-component-padding-x-button-md);
-  padding-right: var(--token-component-padding-x-button-md);
-  padding-top: 0;
-  padding-bottom: 0;
-  height: var(--token-component-height-button-md);
-  min-width: auto;
-  border-radius: calc(var(--token-component-radius-button-md) * 1px);
-  font-size: var(--token-component-font-size-button-md);
-  line-height: var(--token-component-line-height-button-md);
-  gap: var(--token-component-gap-button-icon-md);
-}
-
-.lg {
-  padding-left: var(--token-component-padding-x-button-lg);
-  padding-right: var(--token-component-padding-x-button-lg);
-  padding-top: 0;
-  padding-bottom: 0;
-  height: var(--token-component-height-button-lg);
-  min-width: auto;
-  border-radius: calc(var(--token-component-radius-button-lg) * 1px);
-  font-size: var(--token-component-font-size-button-lg);
-  line-height: 1;
-  gap: var(--token-component-gap-button-icon-lg);
-  letter-spacing: var(--token-primitive-typography-letter-spacing-button-large);
-}
-
-.lg .startIcon,
-.lg .endIcon {
-  width: var(--token-component-icon-button-lg);
-  height: var(--token-component-icon-button-lg);
-  font-size: var(--token-component-icon-button-lg);
-}
-
-.lg .startIcon {
-  margin-right: 0;
-}
-
-.lg .endIcon {
-  margin-left: 0;
-}
-
-.lg .loadingSpinner {
-  width: var(--token-component-icon-button-lg);
-  height: var(--token-component-icon-button-lg);
-}
-
-/* Disabled state */
 .disabled,
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: var(--token-semantic-opacity-disabled, 0.6);
 }
 
-/* Primary Variants */
+/* ==========================================================================
+   Variant Styles - Primary
+   ========================================================================== */
+
 .primary.filled,
 .primaryFilled {
   background-color: var(--token-component-button-primary-filled-background-default);
@@ -326,7 +345,10 @@
   color: var(--token-component-button-primary-plain-content-disabled);
 }
 
-/* Secondary Variants */
+/* ==========================================================================
+   Variant Styles - Secondary
+   ========================================================================== */
+
 .secondary.outline,
 .secondaryOutline {
   background-color: transparent;
@@ -377,7 +399,10 @@
   color: var(--token-component-button-secondary-plain-content-disabled);
 }
 
-/* Danger Variants */
+/* ==========================================================================
+   Variant Styles - Danger
+   ========================================================================== */
+
 .danger.filled,
 .dangerFilled {
   background-color: var(--token-component-button-danger-filled-background-default);
@@ -417,7 +442,10 @@
   color: var(--token-component-button-danger-plain-content-disabled);
 }
 
-/* Tertiary Variants */
+/* ==========================================================================
+   Variant Styles - Tertiary
+   ========================================================================== */
+
 .tertiary.outline,
 .tertiaryOutline {
   background-color: transparent;
@@ -469,7 +497,10 @@
   color: var(--token-component-button-tertiary-plain-content-disabled);
 }
 
-/* Upgrade Variants */
+/* ==========================================================================
+   Variant Styles - Upgrade
+   ========================================================================== */
+
 .upgrade.filled,
 .upgradeFilled {
   background-color: var(--token-component-button-upgrade-filled-background-default);

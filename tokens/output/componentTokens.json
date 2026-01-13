@@ -1388,6 +1388,20 @@
           "$value": "{padding.s}"
         }
       }
+    },
+    "optical": {
+      "button": {
+        "icon": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Optical padding adjustment when icon is present. Reduces padding on the side where icon is displayed for better visual balance."
+        }
+      }
     }
   },
   "radius": {
