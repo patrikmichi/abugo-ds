@@ -9,7 +9,7 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.xxs}"
+        "$value": "{padding.s}"
       },
       "md": {
         "$scopes": [
@@ -18,7 +18,7 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.xs}"
+        "$value": "{padding.m}"
       },
       "lg": {
         "$scopes": [
@@ -27,7 +27,7 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.s}"
+        "$value": "{padding.l}"
       }
     },
     "field": {

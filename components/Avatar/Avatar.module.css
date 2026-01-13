@@ -1,19 +1,32 @@
 /* Avatar component styles using design tokens */
 
 .avatar {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-semantic-icon-md);
+  height: var(--token-semantic-icon-md);
+  border-radius: var(--token-semantic-radius-full);
+  background-color: var(--token-component-avatar-default-background);
+  color: var(--token-component-avatar-default-content);
+  font-size: var(--token-semantic-typography-body-size-sm);
+  font-weight: 500;
+  overflow: hidden;
 }
 
 .default {
+  background-color: var(--token-component-avatar-default-background);
   color: var(--token-component-avatar-default-content);
 }
 
 .background {
+  background-color: var(--token-component-avatar-default-background);
 }
 
 .content {
+  color: var(--token-component-avatar-default-content);
 }
 
 .border {
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-avatar-default-border);
 }

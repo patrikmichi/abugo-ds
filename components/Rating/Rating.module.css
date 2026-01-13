@@ -1,8 +1,26 @@
 /* Rating component styles using design tokens */
 
 .rating {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-semantic-gap-xs);
+}
+
+.ratingItem {
+  width: var(--token-semantic-icon-sm);
+  height: var(--token-semantic-icon-sm);
+  background-color: var(--token-component-rating-default-background-default);
+  border-radius: var(--token-semantic-radius-xs);
+  cursor: pointer;
+  transition: background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+.ratingItem:hover {
+  background-color: var(--token-component-rating-default-background-hover);
+}
+
+.ratingItem.filled {
+  background-color: var(--token-component-rating-default-background-filled);
 }
 
 .default {
@@ -10,4 +28,5 @@
 }
 
 .background {
+  background-color: var(--token-component-rating-default-background-default);
 }

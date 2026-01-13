@@ -1,8 +1,17 @@
 /* Accordion component styles using design tokens */
 
 .accordion {
-  padding: var(--token-semantic-padding-m);
+  display: flex;
+  flex-direction: column;
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-accordion-default-border);
   border-radius: var(--token-semantic-radius-md);
+  background-color: var(--token-component-accordion-default-background-default);
+  color: var(--token-component-accordion-default-content);
+  transition: background-color var(--token-component-animation-accordion-duration) var(--token-component-animation-accordion-easing);
+}
+
+.accordion:hover {
+  background-color: var(--token-component-accordion-default-background-hover);
 }
 
 .default {
@@ -10,11 +19,18 @@
   color: var(--token-component-accordion-default-content);
 }
 
+.default.expanded {
+  background-color: var(--token-component-accordion-default-background-expanded);
+}
+
 .background {
+  background-color: var(--token-component-accordion-default-background-default);
 }
 
 .border {
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-accordion-default-border);
 }
 
 .content {
+  color: var(--token-component-accordion-default-content);
 }

@@ -1,26 +1,42 @@
 /* Datepicker component styles using design tokens */
 
 .datepicker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  min-height: var(--token-component-height-field-md);
+  padding: 0 var(--token-component-padding-x-field-md);
   background-color: var(--token-component-datepicker-background-default);
   border: var(--token-semantic-border-width-thin) solid var(--token-component-datepicker-border-default);
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
-}
-
-.value {
-}
-
-.placeholder {
+  border-radius: var(--token-component-radius-field-md);
+  color: var(--token-component-datepicker-content-value);
+  font-size: var(--token-component-font-size-field-sm);
+  line-height: var(--token-component-line-height-field-value);
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  cursor: pointer;
 }
 
 .datepicker:hover {
-  background-color: var(--token-component-datepicker-hover);
+  background-color: var(--token-component-datepicker-background-hover);
+  border-color: var(--token-component-datepicker-border-hover);
 }
 
-.datepicker:focus {
-  background-color: var(--token-component-datepicker-focused);
+.datepicker:focus,
+.datepicker:focus-within {
+  background-color: var(--token-component-datepicker-background-focused);
+  border-color: var(--token-component-datepicker-border-focused);
+  outline: none;
 }
 
 .datepicker:active {
-  background-color: var(--token-component-datepicker-active);
+  border-color: var(--token-component-datepicker-border-active);
+}
+
+.value {
+  color: var(--token-component-datepicker-content-value);
+}
+
+.placeholder {
+  color: var(--token-component-datepicker-content-placeholder);
 }

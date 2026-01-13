@@ -1,15 +1,24 @@
 /* Divider component styles using design tokens */
 
 .divider {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  border: none;
+  margin: 0;
 }
 
 .horizontal {
-}
-
-.border {
+  width: 100%;
+  height: 1px;
+  background-color: var(--token-component-divider-horizontal-border);
+  border: none;
 }
 
 .vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--token-component-divider-vertical-border);
+  border: none;
+}
+
+.border {
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-divider-horizontal-border);
 }

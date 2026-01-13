@@ -1,8 +1,40 @@
 /* Stepper component styles using design tokens */
 
 .stepper {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--token-semantic-gap-s);
+}
+
+.stepperItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-semantic-icon-md);
+  height: var(--token-semantic-icon-md);
+  border-radius: var(--token-semantic-radius-full);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-stepper-default-border-default);
+  background-color: var(--token-component-stepper-default-background-default);
+  color: var(--token-component-stepper-default-content-default);
+  font-size: var(--token-semantic-typography-body-size-sm);
+  font-weight: 500;
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+.stepperItem.active {
+  background-color: var(--token-component-stepper-default-background-active);
+  border-color: var(--token-component-stepper-default-border-active);
+  color: var(--token-component-stepper-default-content-active);
+}
+
+.stepperItem.completed {
+  background-color: var(--token-component-stepper-default-background-completed);
+  color: var(--token-component-stepper-default-content-completed);
+}
+
+.stepperItem.error {
+  background-color: var(--token-component-stepper-default-background-error);
+  border-color: var(--token-component-stepper-default-background-error);
 }
 
 .default {
@@ -11,10 +43,13 @@
 }
 
 .background {
+  background-color: var(--token-component-stepper-default-background-default);
 }
 
 .border {
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-stepper-default-border-default);
 }
 
 .content {
+  color: var(--token-component-stepper-default-content-default);
 }

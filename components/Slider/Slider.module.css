@@ -1,18 +1,58 @@
 /* Slider component styles using design tokens */
 
 .slider {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
-}
-
-.default {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
 }
 
 .track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--token-component-slider-default-track);
+  border-radius: var(--token-semantic-radius-full);
 }
 
 .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--token-component-slider-default-fill-default);
+  border-radius: var(--token-semantic-radius-full);
+  transition: background-color var(--token-component-animation-slider-duration) var(--token-component-animation-slider-easing);
+}
+
+.fill:hover {
+  background-color: var(--token-component-slider-default-fill-hover);
 }
 
 .thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--token-component-slider-default-thumb-default);
+  border-radius: var(--token-semantic-radius-full);
+  cursor: grab;
+  transition: background-color var(--token-component-animation-slider-duration) var(--token-component-animation-slider-easing);
+  box-shadow: var(--token-semantic-shadow-sm);
+}
+
+.thumb:hover {
+  background-color: var(--token-component-slider-default-thumb-hover);
+}
+
+.thumb:active {
+  background-color: var(--token-component-slider-default-thumb-active);
+  cursor: grabbing;
+}
+
+.default {
+  background-color: var(--token-component-slider-default-track);
 }

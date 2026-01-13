@@ -7,9 +7,14 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
 
 const config: StorybookConfig = {
-  stories: ['../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    // MDX temporarily disabled due to Storybook 10.1.11 bugs
+    // '../stories/**/*.mdx',
+  ],
   addons: [
     '@storybook/addon-links',
+    '@storybook/addon-docs',
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -25,7 +30,9 @@ const config: StorybookConfig = {
     buildStoriesJson: true,
   },
   docs: {
-    autodocs: 'tag',
+    // Temporarily disabled due to Storybook 10.1.11 renderer bug
+    // autodocs: 'tag',
+    // Using manual MDX docs instead
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
@@ -71,6 +78,8 @@ const config: StorybookConfig = {
       define: {
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       },
+      // Ensure MDX files are handled correctly
+      assetsInclude: ['**/*.mdx'],
     });
   },
 };

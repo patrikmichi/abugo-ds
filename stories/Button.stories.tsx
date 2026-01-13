@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Button } from '@/components/Button';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button, ButtonIcon } from '@/components/Button';
 import type { ButtonProps } from '@/components/Button';
 import {
   PrimaryButton,
@@ -23,7 +23,7 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: 'padded',
   },
-  tags: ['autodocs'],
+  // tags: ['autodocs'], // Temporarily disabled due to Storybook 10.1.11 renderer bug
   argTypes: {
     variant: {
       control: 'select',
@@ -137,6 +137,117 @@ export const AllVariants: Story = {
           <Button variant="primary" type="filled" size="sm">Small</Button>
           <Button variant="primary" type="filled" size="md">Medium</Button>
           <Button variant="primary" type="filled" size="lg">Large</Button>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+/**
+ * Buttons with icons and icon-only buttons - Matching Figma designs
+ */
+export const WithIcons: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <div>
+        <h4 style={{ marginBottom: '1rem' }}>Text with Icons</h4>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Button variant="primary" type="filled" startIcon={<ButtonIcon name="add" />}>
+            Add Item
+          </Button>
+          <Button variant="primary" type="plain" endIcon={<ButtonIcon name="arrow_forward" />}>
+            Continue
+          </Button>
+        </div>
+      </div>
+      <div>
+        <h4 style={{ marginBottom: '1rem', fontWeight: 'bold' }}>Icon-Only Buttons</h4>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Button variant="primary" type="filled" iconOnly size="sm">
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="primary" type="filled" iconOnly size="md">
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="primary" type="filled" iconOnly size="lg">
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="primary" type="plain" iconOnly>
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="danger" type="filled" iconOnly>
+            <ButtonIcon name="delete" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+/**
+ * Exact match to Figma designs
+ */
+export const FigmaDesigns: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', padding: '2rem' }}>
+      {/* Filled button with icon and text */}
+      <Button variant="primary" type="filled" startIcon={<ButtonIcon name="add" />}>
+        Add Item
+      </Button>
+      
+      {/* Text button with icon */}
+      <Button variant="primary" type="plain" endIcon={<ButtonIcon name="arrow_forward" />}>
+        Continue
+      </Button>
+      
+      {/* Icon-Only Buttons section */}
+      <div>
+        <h4 style={{ marginBottom: '1rem', fontWeight: 'bold', fontSize: '1rem' }}>Icon-Only Buttons</h4>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Button variant="primary" type="filled" iconOnly>
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="primary" type="filled" iconOnly>
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="primary" type="filled" iconOnly>
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="primary" type="plain" iconOnly>
+            <ButtonIcon name="add" />
+          </Button>
+          <Button variant="danger" type="filled" iconOnly>
+            <ButtonIcon name="delete" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+/**
+ * Loading state buttons
+ */
+export const Loading: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <div>
+        <h4 style={{ marginBottom: '1rem' }}>Loading States</h4>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Button variant="primary" type="filled" loading>Loading</Button>
+          <Button variant="secondary" type="outline" loading>Loading</Button>
+          <Button variant="danger" type="filled" loading>Loading</Button>
+          <Button variant="primary" type="filled" iconOnly loading>
+            <ButtonIcon name="add" />
+          </Button>
+        </div>
+      </div>
+      <div>
+        <h4 style={{ marginBottom: '1rem' }}>Loading Sizes</h4>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Button variant="primary" type="filled" size="sm" loading>Loading</Button>
+          <Button variant="primary" type="filled" size="md" loading>Loading</Button>
+          <Button variant="primary" type="filled" size="lg" loading>Loading</Button>
         </div>
       </div>
     </div>

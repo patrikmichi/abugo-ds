@@ -4,17 +4,20 @@
   background-color: var(--token-component-input-background-default);
   border: var(--token-semantic-border-width-thin) solid var(--token-component-input-border-default);
   color: var(--token-component-input-content-value);
-  padding: var(--token-component-padding-x-field-md);
-  border-radius: var(--token-component-radius-field-md);
+  padding: 0 var(--token-component-padding-x-field-md);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
   height: var(--token-component-height-field-md);
-  transition: border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  font-size: var(--token-component-font-size-field-sm);
+  line-height: var(--token-component-line-height-field-value);
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  width: 100%;
 }
 
 .input::placeholder {
   color: var(--token-component-input-content-placeholder);
 }
 
-.input:hover {
+.input:hover:not(:disabled) {
   background-color: var(--token-component-input-background-hover);
   border-color: var(--token-component-input-border-hover);
 }
@@ -25,6 +28,40 @@
   outline: none;
 }
 
-.input:active {
+.input:active:not(:disabled) {
   border-color: var(--token-component-input-border-active);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.sm {
+  padding: 0 var(--token-component-padding-x-field-sm);
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+  height: var(--token-component-height-field-sm);
+  font-size: var(--token-component-font-size-field-sm);
+}
+
+.md {
+  padding: 0 var(--token-component-padding-x-field-md);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  height: var(--token-component-height-field-md);
+}
+
+.lg {
+  padding: 0 var(--token-component-padding-x-field-lg);
+  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+  height: var(--token-component-height-field-lg);
+  font-size: var(--token-component-font-size-field-lg);
+}
+
+.error {
+  border-color: var(--token-semantic-border-active-danger-default);
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }

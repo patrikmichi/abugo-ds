@@ -1,19 +1,35 @@
 /* Drawer component styles using design tokens */
 
 .drawer {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--token-component-drawer-default-background);
+  border-left: var(--token-semantic-border-width-thin) solid var(--token-component-drawer-default-border);
+  color: var(--token-component-drawer-default-content);
+  box-shadow: var(--token-component-shadow-drawer);
+  z-index: var(--token-component-z-index-drawer);
+  overflow-y: auto;
+  padding: var(--token-semantic-padding-l);
 }
 
 .default {
+  background-color: var(--token-component-drawer-default-background);
   color: var(--token-component-drawer-default-content);
+  border-left: var(--token-semantic-border-width-thin) solid var(--token-component-drawer-default-border);
 }
 
 .background {
+  background-color: var(--token-component-drawer-default-background);
 }
 
 .border {
+  border-left: var(--token-semantic-border-width-thin) solid var(--token-component-drawer-default-border);
 }
 
 .content {
+  color: var(--token-component-drawer-default-content);
 }

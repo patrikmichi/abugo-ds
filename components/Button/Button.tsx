@@ -24,7 +24,15 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   /** The size of the button */
   size?: 'sm' | 'md' | 'lg';
   /** The content of the button */
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  /** Icon to display before the text */
+  startIcon?: React.ReactNode;
+  /** Icon to display after the text */
+  endIcon?: React.ReactNode;
+  /** Show loading spinner instead of content */
+  loading?: boolean;
+  /** Icon-only button (square) */
+  iconOnly?: boolean;
 }
 
 /**
@@ -54,6 +62,10 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className,
       children,
       disabled,
+      startIcon,
+      endIcon,
+      loading = false,
+      iconOnly = false,
       ...props
     },
     ref
@@ -70,7 +82,7 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
     console.warn(
       `Invalid button combination: variant="${variant}" with type="${type}". ` +
       `Valid types for "${variant}" are: ${validTypes.join(', ')}. ` +
-      `Using default type "${defaultType}" instead.`
+      `Using default type="${defaultType}" instead.`
     );
   }
   
@@ -80,25 +92,79 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
   // Create compound class name for variant + type
   const variantTypeClass = variant && finalType ? `${variant}${finalType.charAt(0).toUpperCase() + finalType.slice(1)}` : '';
   
-    return (
-      <button
-        ref={ref}
-        type="button"
-        className={cn(
-          styles.button,
-          variant && styles[variant],
-          finalType && styles[finalType],
-          variantTypeClass && styles[variantTypeClass],
-          size && styles[size],
-          disabled && styles.disabled,
-          className
-        )}
-        disabled={disabled}
-        {...props}
+  // Determine if button should be disabled (loading also disables)
+  const isDisabled = disabled || loading;
+  
+  // Render loading spinner
+  const renderLoadingSpinner = () => (
+    <span className={styles.loadingSpinner} aria-hidden="true">
+      <svg
+        className={styles.spinner}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        {children}
-      </button>
-    );
+        <circle
+          className={styles.spinnerCircle}
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeDasharray="32"
+          strokeDashoffset="32"
+        >
+          <animate
+            attributeName="stroke-dasharray"
+            dur="1.5s"
+            values="0 32;16 16;0 32;0 32"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="stroke-dashoffset"
+            dur="1.5.5s"
+            values="0;-16;-32;-32"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </svg>
+    </span>
+  );
+  
+  return (
+    <button
+      ref={ref}
+      type="button"
+      className={cn(
+        styles.button,
+        variant && styles[variant],
+        finalType && styles[finalType],
+        variantTypeClass && styles[variantTypeClass],
+        size && styles[size],
+        iconOnly && styles.iconOnly,
+        loading && styles.loading,
+        isDisabled && styles.disabled,
+        className
+      )}
+      disabled={isDisabled}
+      aria-busy={loading}
+      {...props}
+    >
+      {loading ? (
+        renderLoadingSpinner()
+      ) : iconOnly ? (
+        // Icon-only button: render children directly (should be an icon)
+        children
+      ) : (
+        <>
+          {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
+          {children && <span className={styles.text}>{children}</span>}
+          {endIcon && <span className={styles.endIcon}>{endIcon}</span>}
+        </>
+      )}
+    </button>
+  );
   }
 );
 

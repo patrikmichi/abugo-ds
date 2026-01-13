@@ -1,17 +1,46 @@
 /* Pagination component styles using design tokens */
 
 .pagination {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-gap-pagination);
 }
 
 .item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--token-component-height-pagination-l);
+  height: var(--token-component-height-pagination-l);
+  padding: 0 var(--token-component-padding-x-pagination-l);
+  border-radius: var(--token-component-radius-pagination);
   background-color: var(--token-component-pagination-item-background-default);
   color: var(--token-component-pagination-item-content-default);
+  font-size: var(--token-semantic-typography-body-size-sm);
+  cursor: pointer;
+  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  border: none;
+}
+
+.item:hover:not(:disabled) {
+  color: var(--token-component-pagination-item-content-hover);
+}
+
+.item.selected {
+  background-color: var(--token-component-pagination-item-background-selected);
+  color: var(--token-component-pagination-item-content-selected);
+}
+
+.item:disabled {
+  color: var(--token-component-pagination-item-content-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .background {
+  background-color: var(--token-component-pagination-item-background-default);
 }
 
 .content {
+  color: var(--token-component-pagination-item-content-default);
 }

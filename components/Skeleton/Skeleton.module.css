@@ -1,18 +1,39 @@
 /* Skeleton component styles using design tokens */
 
 .skeleton {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  background-color: var(--token-component-skeleton-text-background);
+  border-radius: var(--token-semantic-radius-sm);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .text {
+  height: var(--token-semantic-typography-body-line-md);
+  background-color: var(--token-component-skeleton-text-background);
 }
 
 .background {
+  background-color: var(--token-component-skeleton-text-background);
 }
 
 .circular {
+  width: var(--token-semantic-icon-md);
+  height: var(--token-semantic-icon-md);
+  border-radius: var(--token-semantic-radius-full);
+  background-color: var(--token-component-skeleton-circular-background);
 }
 
 .rectangular {
+  width: 100%;
+  height: var(--token-semantic-control-height-md);
+  background-color: var(--token-component-skeleton-rectangular-background);
+  border-radius: var(--token-semantic-radius-sm);
 }

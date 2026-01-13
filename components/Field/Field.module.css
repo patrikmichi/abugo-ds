@@ -1,24 +1,41 @@
 /* Field component styles using design tokens */
 
 .field {
-  padding: var(--token-semantic-padding-m);
-  border-radius: var(--token-semantic-radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-gap-field-label);
+  width: var(--token-component-field-width);
 }
 
 .width {
+  width: var(--token-component-field-width);
 }
 
 .status {
 }
 
 .enabled {
+  border-color: var(--token-component-field-status-enabled-border);
+  background-color: var(--token-component-field-status-enabled-background);
+  color: var(--token-component-field-status-enabled-content);
 }
 
 .error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  color: var(--token-component-field-status-error-content);
 }
 
-.required {
+.required::after {
+  content: '*';
+  color: var(--token-component-field-content-required);
+  margin-left: var(--token-semantic-spacing-1);
 }
 
 .field:disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  color: var(--token-component-field-status-disabled-content);
+  cursor: not-allowed;
+  opacity: 0.6;
 }
