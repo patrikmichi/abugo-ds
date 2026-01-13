@@ -7,8 +7,8 @@
       ],
       "$type": "lineHeights",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.sm}"
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.12}"
     },
     "md": {
       "$scopes": [
@@ -16,8 +16,8 @@
       ],
       "$type": "lineHeights",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.md}"
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.12}"
     },
     "lg": {
       "$scopes": [
@@ -25,8 +25,8 @@
       ],
       "$type": "lineHeights",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{typography.body-line.lg}"
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.12}"
     }
   },
   "field": {

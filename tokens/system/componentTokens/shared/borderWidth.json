@@ -7,7 +7,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{border-width-thin}"
+    "$value": "{border.width.thin}"
   },
   "checkbox": {
     "$scopes": [
@@ -16,7 +16,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{border-width-thicker}"
+    "$value": "{border.width.thicker}"
   },
   "radio": {
     "$scopes": [
@@ -25,7 +25,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{border-width-thicker}"
+    "$value": "{border.width.thicker}"
   },
   "chip": {
     "$scopes": [
@@ -34,7 +34,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{border-width-thin}"
+    "$value": "{border.width.thin}"
   },
   "popover": {
     "$scopes": [
@@ -43,6 +43,6 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{border-width-thin}"
+    "$value": "{border.width.thin}"
   }
 }

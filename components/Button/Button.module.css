@@ -6,15 +6,16 @@
   align-items: center;
   justify-content: center;
   gap: var(--token-component-gap-button-icon-md);
-  border: none;
+  border: 0;
   cursor: pointer;
   font-family: var(--token-primitive-typography-font-family-sans);
   box-sizing: border-box;
+  vertical-align: middle;
   
   /* Typography - default to medium size */
   font-size: var(--token-component-font-size-button-md);
   line-height: var(--token-component-line-height-button-md);
-  font-weight: 500;
+  font-weight: var(--token-primitive-typography-font-weight-medium);
   text-transform: var(--token-primitive-typography-text-case-uppercase);
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
   
@@ -105,6 +106,8 @@
   display: inline-block;
   white-space: nowrap;
   color: inherit;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 /* Loading spinner */
@@ -294,7 +297,9 @@
 .secondaryOutline {
   background-color: transparent;
   color: var(--token-component-button-secondary-outline-content-default);
-  border: calc(var(--token-semantic-border-width-thin) * 1px) solid var(--token-component-button-secondary-outline-border-default);
+  border-width: calc(var(--token-semantic-border-width-thin) * 1px);
+  border-style: solid;
+  border-color: var(--token-component-button-secondary-outline-border-default);
 }
 
 .secondary.outline:hover:not(:disabled),
@@ -383,7 +388,9 @@
 .tertiaryOutline {
   background-color: transparent;
   color: var(--token-component-button-tertiary-outline-content-default);
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-button-tertiary-outline-border-default);
+  border-width: calc(var(--token-semantic-border-width-thin) * 1px);
+  border-style: solid;
+  border-color: var(--token-component-button-tertiary-outline-border-default);
 }
 
 .tertiary.outline:hover:not(:disabled),
