@@ -14,9 +14,51 @@ const VALID_COMBINATIONS: Record<string, string[]> = {
 };
 
 /**
- * Button component props
+ * Material Icon helper component (merged into Button file)
  */
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonIconProps {
+  /** Material Icon name (e.g., 'add', 'delete', 'arrow_forward') */
+  name: string;
+  /** Icon size */
+  size?: number | string;
+  /** Additional className */
+  className?: string;
+}
+
+/**
+ * ButtonIcon component for rendering Material Icons in buttons
+ * 
+ * @example
+ * ```tsx
+ * <ButtonIcon name="add" size={24} />
+ * ```
+ */
+export function ButtonIcon({ name, size = 24, className }: ButtonIconProps) {
+  return (
+    <span
+      className={`material-symbols-outlined ${className || ''}`}
+      style={{ 
+        fontSize: size, 
+        width: size, 
+        height: size, 
+        display: 'inline-flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        lineHeight: 1,
+        color: 'inherit',
+        flexShrink: 0
+      }}
+      aria-hidden="true"
+    >
+      {name}
+    </span>
+  );
+}
+
+/**
+ * Button component props - Standardized following major design system patterns
+ */
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
   /** The semantic variant of the button (primary, secondary, etc.) */
   variant?: 'primary' | 'secondary' | 'danger' | 'tertiary' | 'upgrade';
   /** The visual type of the button (filled, plain, outline) */
@@ -25,14 +67,28 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: 'sm' | 'md' | 'lg';
   /** The content of the button */
   children?: React.ReactNode;
-  /** Icon to display before the text */
+  
+  /** Icon to display - can be a Material Icon name or React node */
+  icon?: string | React.ReactNode;
+  /** Position of the icon when using `icon` prop */
+  iconPosition?: 'start' | 'end';
+  /** Icon to display before the text (alternative to icon + iconPosition) */
   startIcon?: React.ReactNode;
-  /** Icon to display after the text */
+  /** Icon to display after the text (alternative to icon + iconPosition) */
   endIcon?: React.ReactNode;
+  
   /** Show loading spinner instead of content */
   loading?: boolean;
   /** Icon-only button (square) */
   iconOnly?: boolean;
+  /** Full width button */
+  fullWidth?: boolean;
+  /** Render as link (href) instead of button */
+  href?: string;
+  /** Link target (when href is provided) */
+  target?: string;
+  /** Link rel (when href is provided) */
+  rel?: string;
 }
 
 /**
@@ -48,12 +104,22 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
  * 
  * @example
  * ```tsx
+ * // Basic button
  * <Button variant="primary" type="filled" size="md">
  *   Click me
  * </Button>
+ * 
+ * // With icon
+ * <Button icon="add" iconPosition="start">Add Item</Button>
+ * 
+ * // Link button
+ * <Button href="/page" variant="primary">Go to Page</Button>
+ * 
+ * // Full width
+ * <Button fullWidth variant="primary">Submit</Button>
  * ```
  */
-const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const ButtonComponent = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   function Button(
     {
       variant = 'primary',
@@ -62,10 +128,17 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className,
       children,
       disabled,
+      icon,
+      iconPosition = 'start',
       startIcon,
       endIcon,
       loading = false,
       iconOnly = false,
+      fullWidth = false,
+      href,
+      target,
+      rel,
+      onClick,
       ...props
     },
     ref
@@ -95,6 +168,19 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
   // Determine if button should be disabled (loading also disables)
   const isDisabled = disabled || loading;
   
+  // Handle icon prop - convert to startIcon/endIcon
+  let resolvedStartIcon = startIcon;
+  let resolvedEndIcon = endIcon;
+  
+  if (icon) {
+    const iconElement = typeof icon === 'string' ? <ButtonIcon name={icon} /> : icon;
+    if (iconPosition === 'start') {
+      resolvedStartIcon = iconElement;
+    } else {
+      resolvedEndIcon = iconElement;
+    }
+  }
+  
   // Render loading spinner
   const renderLoadingSpinner = () => (
     <span className={styles.loadingSpinner} aria-hidden="true">
@@ -123,7 +209,7 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
           />
           <animate
             attributeName="stroke-dashoffset"
-            dur="1.5.5s"
+            dur="1.5s"
             values="0;-16;-32;-32"
             repeatCount="indefinite"
           />
@@ -132,37 +218,75 @@ const ButtonComponent = React.forwardRef<HTMLButtonElement, ButtonProps>(
     </span>
   );
   
+  // Build className
+  const buttonClassName = cn(
+    styles.button,
+    variant && styles[variant],
+    finalType && styles[finalType],
+    variantTypeClass && styles[variantTypeClass],
+    size && styles[size],
+    iconOnly && styles.iconOnly,
+    loading && styles.loading,
+    isDisabled && styles.disabled,
+    fullWidth && styles.fullWidth,
+    className
+  );
+  
+  // Render content
+  const renderContent = () => {
+    if (loading) {
+      return renderLoadingSpinner();
+    }
+    if (iconOnly) {
+      // Icon-only button: render children directly (should be an icon)
+      return children;
+    }
+    return (
+      <>
+        {resolvedStartIcon && <span className={styles.startIcon}>{resolvedStartIcon}</span>}
+        {children && <span className={styles.text}>{children}</span>}
+        {resolvedEndIcon && <span className={styles.endIcon}>{resolvedEndIcon}</span>}
+      </>
+    );
+  };
+  
+  // Render as link if href is provided
+  if (href) {
+    return (
+      <a
+        ref={ref as React.ForwardedRef<HTMLAnchorElement>}
+        href={href}
+        target={target}
+        rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)}
+        className={buttonClassName}
+        aria-busy={loading}
+        aria-disabled={isDisabled}
+        onClick={(e) => {
+          if (isDisabled) {
+            e.preventDefault();
+            return;
+          }
+          onClick?.(e as any);
+        }}
+        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {renderContent()}
+      </a>
+    );
+  }
+  
+  // Render as button
   return (
     <button
-      ref={ref}
+      ref={ref as React.ForwardedRef<HTMLButtonElement>}
       type="button"
-      className={cn(
-        styles.button,
-        variant && styles[variant],
-        finalType && styles[finalType],
-        variantTypeClass && styles[variantTypeClass],
-        size && styles[size],
-        iconOnly && styles.iconOnly,
-        loading && styles.loading,
-        isDisabled && styles.disabled,
-        className
-      )}
+      className={buttonClassName}
       disabled={isDisabled}
       aria-busy={loading}
+      onClick={onClick}
       {...props}
     >
-      {loading ? (
-        renderLoadingSpinner()
-      ) : iconOnly ? (
-        // Icon-only button: render children directly (should be an icon)
-        children
-      ) : (
-        <>
-          {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
-          {children && <span className={styles.text}>{children}</span>}
-          {endIcon && <span className={styles.endIcon}>{endIcon}</span>}
-        </>
-      )}
+      {renderContent()}
     </button>
   );
   }
