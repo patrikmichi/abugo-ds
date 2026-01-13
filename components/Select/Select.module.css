@@ -73,6 +73,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  /* Align chevron with optically adjusted text */
+  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-md) * -1));
 }
 
 .select:hover:not(.disabled) .chevron {
@@ -169,6 +171,10 @@
   }
 }
 
+.sm .chevron {
+  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-sm) * -1));
+}
+
 .md {
   padding-inline: var(--token-component-padding-x-field-md);
   padding-inline-end: calc(var(--token-component-padding-x-field-md) + 20px);
@@ -184,6 +190,10 @@
   }
 }
 
+.md .chevron {
+  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-md) * -1));
+}
+
 .lg {
   padding-inline: var(--token-component-padding-x-field-lg);
   padding-inline-end: calc(var(--token-component-padding-x-field-lg) + 20px);
@@ -197,5 +207,9 @@
     padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
     padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
+}
+
+.lg .chevron {
+  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-lg) * -1));
 }
 
