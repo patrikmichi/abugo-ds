@@ -1106,7 +1106,7 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{padding.xs}"
+          "$value": "{padding.chip-xxs}"
         },
         "xs": {
           "$scopes": [
@@ -1115,7 +1115,7 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{padding.s}"
+          "$value": "{padding.chip-xs}"
         },
         "sm": {
           "$scopes": [
@@ -1124,7 +1124,7 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{padding.m}"
+          "$value": "{padding.chip-sm}"
         }
       }
     },

@@ -182,5 +182,29 @@
     "$hiddenFromPublishing": true,
     "$type": "spacing",
     "$value": 10
+  },
+  "spacing-11": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "spacing",
+    "$value": 11
+  },
+  "spacing-15": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "spacing",
+    "$value": 15
+  },
+  "spacing-19": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "spacing",
+    "$value": 19
   }
 }

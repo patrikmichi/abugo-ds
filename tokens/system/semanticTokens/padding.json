@@ -100,6 +100,36 @@
       "$collectionName": "primitives",
       "$value": "{spacing-30}",
       "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
+    },
+    "chip-xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-11}",
+      "$description": "Chip xxs vertical padding (11px). Calculated from fixed height 24px minus 1px border: (24px - 2px) / 2 = 11px. This deviates from the 4px grid to achieve exact component height."
+    },
+    "chip-xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-15}",
+      "$description": "Chip xs vertical padding (15px). Calculated from fixed height 32px minus 1px border: (32px - 2px) / 2 = 15px. This deviates from the 4px grid to achieve exact component height."
+    },
+    "chip-sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-19}",
+      "$description": "Chip sm vertical padding (19px). Calculated from fixed height 40px minus 1px border: (40px - 2px) / 2 = 19px. This deviates from the 4px grid to achieve exact component height."
     }
   }
 }
