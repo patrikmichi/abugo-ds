@@ -739,6 +739,9 @@
   --token-component-button-primary-plain-content-hover: #4573c4;
   --token-component-button-primary-plain-content-pressed: #78a6f7;
   --token-component-button-primary-plain-content-disabled: #93b8f9;
+  --token-component-button-primary-plain-height-sm: 32px;
+  --token-component-button-primary-plain-height-md: 40px;
+  --token-component-button-primary-plain-height-lg: 48px;
   --token-component-button-secondary-outline-background-hover: #e4edfd;
   --token-component-button-secondary-outline-border-default: #93b8f9;
   --token-component-button-secondary-outline-border-hover: #78a6f7;
