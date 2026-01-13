@@ -4,6 +4,8 @@
 .inputWrapper {
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
   /* Height set per size variant */
 }
 
@@ -21,6 +23,7 @@
 
 .input {
   /* Base styles - use field control tokens */
+  flex: 1;
   width: 100%;
   height: 100%;
   background-color: var(--token-component-field-control-background-default);
@@ -50,6 +53,57 @@
     padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
     padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
+}
+
+/* Adornment styles */
+.leadingAdornment {
+  position: absolute;
+  left: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-content-value);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.trailingAdornment {
+  position: absolute;
+  right: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-content-value);
+  z-index: 1;
+}
+
+/* Adjust input padding when adornments are present */
+.inputWrapper.hasLeading .input {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-md));
+  
+  @supports not (padding-block: 1cap) {
+    padding-left: calc(var(--token-component-padding-adornment-field-leading-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-md));
+  }
+}
+
+.inputWrapper.hasTrailing .input {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-md));
+  
+  @supports not (padding-block: 1cap) {
+    padding-right: calc(var(--token-component-padding-adornment-field-trailing-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-md));
+  }
+}
+
+.inputWrapper.hasLeading .leadingAdornment {
+  left: var(--token-component-padding-adornment-field-leading-md);
+}
+
+.inputWrapper.hasTrailing .trailingAdornment {
+  right: var(--token-component-padding-adornment-field-trailing-md);
 }
 
 .input::placeholder {
@@ -117,6 +171,30 @@
   }
 }
 
+.inputWrapper.sm.hasLeading .input {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-sm) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-sm));
+  
+  @supports not (padding-block: 1cap) {
+    padding-left: calc(var(--token-component-padding-adornment-field-leading-sm) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-sm));
+  }
+}
+
+.inputWrapper.sm.hasTrailing .input {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-sm) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-sm));
+  
+  @supports not (padding-block: 1cap) {
+    padding-right: calc(var(--token-component-padding-adornment-field-trailing-sm) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-sm));
+  }
+}
+
+.inputWrapper.sm .leadingAdornment {
+  left: var(--token-component-padding-adornment-field-leading-sm);
+}
+
+.inputWrapper.sm .trailingAdornment {
+  right: var(--token-component-padding-adornment-field-trailing-sm);
+}
+
 .md {
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
@@ -144,4 +222,28 @@
     padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
     padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
+}
+
+.inputWrapper.lg.hasLeading .input {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-lg) + var(--token-component-icon-field-lg) + var(--token-component-gap-field-leading-icon-lg));
+  
+  @supports not (padding-block: 1cap) {
+    padding-left: calc(var(--token-component-padding-adornment-field-leading-lg) + var(--token-component-icon-field-lg) + var(--token-component-gap-field-leading-icon-lg));
+  }
+}
+
+.inputWrapper.lg.hasTrailing .input {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-lg) + var(--token-component-icon-field-lg) + var(--token-component-gap-field-trailing-icon-lg));
+  
+  @supports not (padding-block: 1cap) {
+    padding-right: calc(var(--token-component-padding-adornment-field-trailing-lg) + var(--token-component-icon-field-lg) + var(--token-component-gap-field-trailing-icon-lg));
+  }
+}
+
+.inputWrapper.lg .leadingAdornment {
+  left: var(--token-component-padding-adornment-field-leading-lg);
+}
+
+.inputWrapper.lg .trailingAdornment {
+  right: var(--token-component-padding-adornment-field-trailing-lg);
 }

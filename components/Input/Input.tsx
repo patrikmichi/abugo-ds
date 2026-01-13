@@ -5,6 +5,10 @@ import { cn } from '@/lib/utils';
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   size?: 'sm' | 'md' | 'lg';
   status?: 'enabled' | 'error' | 'disabled';
+  /** Leading adornment (e.g., icon on the left) */
+  leadingAdornment?: React.ReactNode;
+  /** Trailing adornment (e.g., icon on the right) */
+  trailingAdornment?: React.ReactNode;
 }
 
 export function Input({
@@ -12,6 +16,8 @@ export function Input({
   status = 'enabled',
   className,
   disabled,
+  leadingAdornment,
+  trailingAdornment,
   ...props
 }: InputProps) {
   // Determine final status: prioritize status prop, but also check disabled prop
@@ -27,9 +33,16 @@ export function Input({
         styles.inputWrapper,
         size === 'sm' && styles.sm,
         size === 'md' && styles.md,
-        size === 'lg' && styles.lg
+        size === 'lg' && styles.lg,
+        leadingAdornment && styles.hasLeading,
+        trailingAdornment && styles.hasTrailing
       )}
     >
+      {leadingAdornment && (
+        <div className={styles.leadingAdornment}>
+          {leadingAdornment}
+        </div>
+      )}
       <input
         type="text"
         className={cn(
@@ -44,6 +57,11 @@ export function Input({
         disabled={isDisabled}
         {...props}
       />
+      {trailingAdornment && (
+        <div className={styles.trailingAdornment}>
+          {trailingAdornment}
+        </div>
+      )}
     </div>
   );
 }

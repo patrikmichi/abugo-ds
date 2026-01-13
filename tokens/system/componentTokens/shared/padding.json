@@ -486,5 +486,73 @@
         "$description": "Optical padding adjustment when icon is present. Reduces padding on the side where icon is displayed for better visual balance."
       }
     }
+  },
+  "adornment": {
+    "field": {
+      "leading": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Padding adjustment when leading adornment is present for small fields. This replaces the left padding to accommodate the adornment."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Padding adjustment when leading adornment is present for medium fields. This replaces the left padding to accommodate the adornment."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Padding adjustment when leading adornment is present for large fields. This replaces the left padding to accommodate the adornment."
+        }
+      },
+      "trailing": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Padding adjustment when trailing adornment is present for small fields. This replaces the right padding to accommodate the adornment."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Padding adjustment when trailing adornment is present for medium fields. This replaces the right padding to accommodate the adornment."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Padding adjustment when trailing adornment is present for large fields. This replaces the right padding to accommodate the adornment."
+        }
+      }
+    }
   }
 }
