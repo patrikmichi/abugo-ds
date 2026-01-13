@@ -4,24 +4,27 @@
 .selectWrapper {
   position: relative;
   width: 100%;
+  /* Height set per size variant */
   /* Ensure dropdown is not clipped */
   overflow: visible;
 }
 
+.selectWrapper.md {
+  height: var(--token-component-height-field-md);
+}
+
 .select {
   /* Base styles - use field control tokens */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  height: 100%;
   background-color: var(--token-component-field-control-background-default);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   color: var(--token-component-field-content-value);
-  padding-inline: var(--token-component-padding-x-field-md);
-  padding-inline-end: calc(var(--token-component-padding-x-field-md) + 20px);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: 40px;
   /* Compensate for descender space using cap unit */
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  height: var(--token-component-height-field-md);
   font-size: var(--token-component-font-size-field-sm);
   line-height: var(--token-component-line-height-field-value);
   font-family: var(--token-primitive-typography-font-family-sans);
@@ -29,9 +32,8 @@
   transition: 
     border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
     background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  width: 100%;
   box-sizing: border-box;
-  gap: var(--token-semantic-spacing-2, 8px);
+  appearance: none;
   
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
@@ -40,14 +42,14 @@
   /* Fallback for older browsers that don't support cap unit or text-box-trim */
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-md);
-    padding-right: calc(var(--token-component-padding-x-field-md) + 20px);
+    padding-right: 40px;
     padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
     padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
   }
 }
 
 .selectValue {
-  flex: 1;
+  display: block;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -56,7 +58,6 @@
   /* Font descender spacing fix - trim font metrics (modern browsers) */
   text-box-trim: both;
   text-box-edge: cap alphabetic;
-  
 }
 
 .selectValue.placeholder {
@@ -64,7 +65,11 @@
 }
 
 .chevron {
-  flex-shrink: 0;
+  position: absolute;
+  right: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
   color: var(--token-component-select-arrow-default);
   transition: color 0.15s ease;
   font-size: 20px;
@@ -73,8 +78,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* Align chevron with optically adjusted text */
-  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-md) * -1));
 }
 
 .select:hover:not(.disabled) .chevron {
@@ -157,59 +160,61 @@
 }
 
 .sm {
-  padding-inline: var(--token-component-padding-x-field-sm);
-  padding-inline-end: calc(var(--token-component-padding-x-field-sm) + 20px);
+  padding-inline-start: var(--token-component-padding-x-field-sm);
+  padding-inline-end: 40px;
   padding-block: calc((var(--token-component-height-field-sm) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-  height: var(--token-component-height-field-sm);
   
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-sm);
-    padding-right: calc(var(--token-component-padding-x-field-sm) + 20px);
+    padding-right: 40px;
     padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
     padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
   }
 }
 
+.selectWrapper.sm {
+  height: var(--token-component-height-field-sm);
+}
+
 .sm .chevron {
-  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-sm) * -1));
+  right: var(--token-component-padding-x-field-sm);
 }
 
 .md {
-  padding-inline: var(--token-component-padding-x-field-md);
-  padding-inline-end: calc(var(--token-component-padding-x-field-md) + 20px);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: 40px;
   padding-block: calc((var(--token-component-height-field-md) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
+}
+
+.selectWrapper.md {
   height: var(--token-component-height-field-md);
-  
-  @supports not (padding-block: 1cap) {
-    padding-left: var(--token-component-padding-x-field-md);
-    padding-right: calc(var(--token-component-padding-x-field-md) + 20px);
-    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
-    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
-  }
 }
 
 .md .chevron {
-  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-md) * -1));
+  right: var(--token-component-padding-x-field-md);
 }
 
 .lg {
-  padding-inline: var(--token-component-padding-x-field-lg);
-  padding-inline-end: calc(var(--token-component-padding-x-field-lg) + 20px);
+  padding-inline-start: var(--token-component-padding-x-field-lg);
+  padding-inline-end: 40px;
   padding-block: calc((var(--token-component-height-field-lg) - 1cap) / 2);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
-  height: var(--token-component-height-field-lg);
   
   @supports not (padding-block: 1cap) {
     padding-left: var(--token-component-padding-x-field-lg);
-    padding-right: calc(var(--token-component-padding-x-field-lg) + 20px);
+    padding-right: 40px;
     padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
     padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
   }
 }
 
+.selectWrapper.lg {
+  height: var(--token-component-height-field-lg);
+}
+
 .lg .chevron {
-  transform: translateY(calc(var(--token-semantic-typography-optical-alignment-offset-lg) * -1));
+  right: var(--token-component-padding-x-field-lg);
 }
 

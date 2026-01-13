@@ -79,7 +79,16 @@ export function Select({
   };
 
   return (
-    <div className={cn(styles.selectWrapper, className)} ref={triggerRef}>
+    <div 
+      className={cn(
+        styles.selectWrapper,
+        size === 'sm' && styles.sm,
+        size === 'md' && styles.md,
+        size === 'lg' && styles.lg,
+        className
+      )} 
+      ref={triggerRef}
+    >
       <div
         className={cn(
           styles.select,
