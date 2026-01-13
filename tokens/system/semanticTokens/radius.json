@@ -8,7 +8,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.0}",
+      "$value": "{radius-0}",
       "$description": "No border radius (0px). Use for square corners."
     },
     "xs": {
@@ -18,7 +18,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.1}",
+      "$value": "{radius-1}",
       "$description": "Extra small border radius (4px). Use for compact components like badges or small buttons."
     },
     "sm": {
@@ -28,7 +28,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.2}",
+      "$value": "{radius-2}",
       "$description": "Small border radius (8px). Use for standard buttons and input fields."
     },
     "md": {
@@ -38,7 +38,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.3}",
+      "$value": "{radius-3}",
       "$description": "Medium border radius (12px). Use for cards and larger interactive elements."
     },
     "lg": {
@@ -48,7 +48,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.4}",
+      "$value": "{radius-4}",
       "$description": "Large border radius (16px). Use for prominent cards and containers."
     },
     "xl": {
@@ -58,7 +58,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.5}",
+      "$value": "{radius-5}",
       "$description": "Extra large border radius (20px). Use for large containers and modals."
     },
     "xxl": {
@@ -68,7 +68,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.6}",
+      "$value": "{radius-6}",
       "$description": "Extra extra large border radius (24px). Use for very large containers."
     },
     "full": {
@@ -78,7 +78,7 @@
       "$type": "borderRadius",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{radius.round}",
+      "$value": "{radius-round}",
       "$description": "Full border radius (999px). Use for pill-shaped elements like tags or rounded buttons."
     }
   }

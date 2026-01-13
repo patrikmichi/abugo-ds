@@ -8,7 +8,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{size.1}",
+      "$value": "{size-1}",
       "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
     }
   }

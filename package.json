@@ -16,7 +16,9 @@
     "split:tokens": "node tokens/scripts/split-tokens.js",
     "generate-docs": "node tokens/scripts/generate-docs.js",
     "storybook": "storybook dev -p 6006",
+    "storybook:docs": "storybook dev --docs -p 6006",
     "build-storybook": "storybook build",
+    "build-storybook:docs": "storybook build --docs",
     "storybook:build": "storybook build"
   },
   "dependencies": {
@@ -26,8 +28,6 @@
   },
   "devDependencies": {
     "@storybook/addon-links": "^10.1.11",
-    "@storybook/blocks": "^8.6.14",
-    "@storybook/react": "^10.1.11",
     "@storybook/react-vite": "^10.1.11",
     "@types/node": "^22.10.2",
     "@types/react": "^19.2.8",

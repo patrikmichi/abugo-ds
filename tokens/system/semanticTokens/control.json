@@ -9,7 +9,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size.1}",
+        "$value": "{size-1}",
         "$description": "Extra extra extra small control height (16px). Use for compact inputs and buttons."
       },
       "xxs": {
@@ -19,7 +19,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size.2}",
+        "$value": "{size-2}",
         "$description": "Extra extra small control height (24px). Use for small inputs and buttons."
       },
       "xs": {
@@ -29,7 +29,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size.3}",
+        "$value": "{size-3}",
         "$description": "Extra small control height (32px). Use for compact interactive elements."
       },
       "sm": {
@@ -39,7 +39,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size.4}",
+        "$value": "{size-4}",
         "$description": "Small control height (40px). Use for standard inputs and buttons."
       },
       "md": {
@@ -49,7 +49,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size.5}",
+        "$value": "{size-5}",
         "$description": "Medium control height (48px). Use for comfortable interactive elements."
       },
       "lg": {
@@ -59,7 +59,7 @@
         "$type": "sizing",
         "$libraryName": "",
         "$collectionName": "primitives",
-        "$value": "{size.6}",
+        "$value": "{size-6}",
         "$description": "Large control height (56px). Use for prominent buttons and inputs."
       }
     },

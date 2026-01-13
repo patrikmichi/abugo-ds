@@ -23,7 +23,6 @@ const config: StorybookConfig = {
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       shouldRemoveUndefinedFromOptional: true,
-      tsconfigPath: path.resolve(projectRoot, 'tsconfig.json'),
       propFilter: (prop) => {
         if (prop.parent) {
           return !prop.parent.fileName.includes('node_modules');

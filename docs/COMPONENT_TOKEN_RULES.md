@@ -217,4 +217,4 @@ tokens/componentTokens/
 
 - [Token Structure](TOKEN_STRUCTURE.md) - Overall token organization
 - [Designer Guide](DESIGNER_GUIDE.md) - How to use tokens in Figma
-- [Developer Guide](DEVELOPER_GUIDE.md) - How to use tokens in code
+- [CSS Modules Guide](../tokens/docs/CSS_MODULES_GUIDE.md) - How to use tokens in CSS Modules

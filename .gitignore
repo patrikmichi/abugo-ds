@@ -24,6 +24,9 @@ out/
 build/
 dist/
 
+## Panda CSS (removed, but keep in gitignore for safety)
+styled-system/
+
 ## TypeScript
 *.tsbuildinfo
 next-env.d.ts
