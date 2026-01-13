@@ -1115,7 +1115,7 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{padding.xxxs}"
+          "$value": "{padding.xxs}"
         },
         "md": {
           "$scopes": [
@@ -1124,7 +1124,7 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{padding.xxs}"
+          "$value": "{padding.xs}"
         },
         "lg": {
           "$scopes": [
@@ -1133,7 +1133,38 @@
           "$type": "spacing",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
+          "$value": "{padding.s}"
+        }
+      }
+    },
+    "y": {
+      "textarea": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xxs}"
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
           "$value": "{padding.xs}"
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}"
         }
       }
     }
