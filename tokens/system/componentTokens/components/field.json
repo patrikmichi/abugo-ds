@@ -143,6 +143,33 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{content.passive.danger}"
+    },
+    "optional": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
+    },
+    "help": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
+    },
+    "counter": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
     }
   },
   "control": {

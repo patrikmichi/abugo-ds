@@ -3188,6 +3188,33 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{content.passive.danger}"
+      },
+      "optional": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.muted}"
+      },
+      "help": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.muted}"
+      },
+      "counter": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.muted}"
       }
     },
     "control": {
@@ -3777,6 +3804,26 @@
         "$collectionName": "semanticTokens",
         "$value": "{content.active.neutral.hover}"
       }
+    },
+    "arrow": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.neutral.hover}"
+      }
     }
   },
   "skeleton": {
@@ -4049,7 +4096,19 @@
       }
     }
   },
-  "textarea": {},
+  "textarea": {
+    "resize": {
+      "indicator": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.muted}"
+      }
+    }
+  },
   "timepicker": {
     "icon": {
       "default": {

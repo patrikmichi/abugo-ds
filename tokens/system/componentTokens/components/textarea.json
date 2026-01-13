@@ -1,3 +1,14 @@
 {
-  "$name": "Component Tokens"
+  "$name": "Component Tokens",
+  "resize": {
+    "indicator": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
+    }
+  }
 }
