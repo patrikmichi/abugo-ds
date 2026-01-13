@@ -1821,7 +1821,7 @@
           "$value": "{content-passive-on-accent}"
         }
       },
-      "text": {
+      "plain": {
         "background": {
           "default": {
             "$scopes": [
@@ -1901,7 +1901,7 @@
       }
     },
     "secondary": {
-      "outlined": {
+      "outline": {
         "background": {
           "hover": {
             "$scopes": [
@@ -1990,7 +1990,7 @@
           }
         }
       },
-      "text": {
+      "plain": {
         "background": {
           "default": {
             "$scopes": [
@@ -2181,96 +2181,176 @@
       }
     },
     "tertiary": {
-      "background": {
-        "hover": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{background-active-neutral-hover}"
+      "outline": {
+        "background": {
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{background-active-neutral-hover}"
+          }
+        },
+        "border": {
+          "default": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{border-active-neutral-action-default}"
+          },
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{border-active-neutral-action-hover}"
+          },
+          "pressed": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{border-active-neutral-action-pressed}"
+          },
+          "disabled": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{border-active-neutral-action-disabled}"
+          }
+        },
+        "content": {
+          "default": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-default}"
+          },
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-hover}"
+          },
+          "pressed": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-pressed}"
+          },
+          "disabled": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-disabled}"
+          }
         }
       },
-      "border": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{border-active-neutral-action-default}"
+      "plain": {
+        "background": {
+          "default": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{universal.transparent}"
+          },
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{background-active-neutral-hover}"
+          },
+          "pressed": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{universal.transparent}"
+          },
+          "disabled": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{universal.transparent}"
+          }
         },
-        "hover": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{border-active-neutral-action-hover}"
-        },
-        "pressed": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{border-active-neutral-action-pressed}"
-        },
-        "disabled": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{border-active-neutral-action-disabled}"
-        }
-      },
-      "content": {
-        "default": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-active-neutral-default}"
-        },
-        "hover": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-active-neutral-hover}"
-        },
-        "pressed": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-active-neutral-pressed}"
-        },
-        "disabled": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "color",
-          "$libraryName": "",
-          "$collectionName": "semanticTokens",
-          "$value": "{content-active-neutral-disabled}"
+        "content": {
+          "default": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-default}"
+          },
+          "hover": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-hover}"
+          },
+          "pressed": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-pressed}"
+          },
+          "disabled": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "color",
+            "$libraryName": "",
+            "$collectionName": "semanticTokens",
+            "$value": "{content-active-neutral-disabled}"
+          }
         }
       }
     },
     "upgrade": {
-      "boxed": {
+      "filled": {
         "background": {
           "default": {
             "$scopes": [

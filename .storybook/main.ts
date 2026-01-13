@@ -34,6 +34,13 @@ const config: StorybookConfig = {
         }
         return true;
       },
+      // Handle forwardRef components better
+      componentNameResolver: (exp, source) => {
+        if (exp.getName() === 'forwardRef') {
+          return exp.getSourceFile().getFilePath().split('/').pop()?.replace('.tsx', '') || 'Unknown';
+        }
+        return exp.getName();
+      },
     },
   },
   async viteFinal(config) {
