@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Button.module.css';
 import { cn } from '@/lib/utils';
+import { Tooltip } from '@/components/Tooltip';
 
 /**
  * Valid button type and variant combinations
@@ -55,10 +56,16 @@ export function ButtonIcon({ name, size = 24, className }: ButtonIconProps) {
 /**
  * Button component props - Standardized following major design system patterns
  */
-export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'onClick' | 'onKeyDown'> {
+  /** Click handler - accepts both button and anchor events */
+  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+  /** Key down handler - accepts both button and anchor events */
+  onKeyDown?: (e: React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
   /** The semantic variant of the button (primary, secondary, etc.) */
   variant?: 'primary' | 'secondary' | 'danger' | 'tertiary' | 'upgrade';
-  /** The visual type of the button (filled, plain, outline) */
+  /** The visual appearance of the button (filled, plain, outline) */
+  appearance?: 'filled' | 'plain' | 'outline';
+  /** @deprecated Use `appearance` instead. The visual type of the button (filled, plain, outline) */
   type?: 'filled' | 'plain' | 'outline';
   /** The size of the button */
   size?: 'sm' | 'md' | 'lg';
@@ -76,7 +83,7 @@ export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
   
   /** Show loading spinner instead of content */
   loading?: boolean;
-  /** Icon-only button (square) */
+  /** Icon-only button (square) - requires aria-label for accessibility */
   iconOnly?: boolean;
   /** Full width button */
   fullWidth?: boolean;
@@ -86,6 +93,19 @@ export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
   target?: string;
   /** Link rel (when href is provided) */
   rel?: string;
+  
+  /** Tooltip text to show when button is disabled */
+  disabledTooltip?: string;
+  /** ARIA label for icon-only buttons (required when iconOnly is true) */
+  'aria-label'?: string;
+  /** ARIA describedby - ID of element that describes the button */
+  'aria-describedby'?: string;
+  /** ARIA expanded - Whether the button controls an expanded element */
+  'aria-expanded'?: boolean;
+  /** ARIA pressed - Whether the button is in a pressed state (toggle buttons) */
+  'aria-pressed'?: boolean;
+  /** ARIA controls - ID of element controlled by this button */
+  'aria-controls'?: string;
 }
 
 /**
@@ -116,6 +136,10 @@ export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonE
  * <Button fullWidth variant="primary">Submit</Button>
  * ```
  */
+// Type for button/anchor click events - use union types properly
+type ButtonClickEvent = React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>;
+type ButtonKeyboardEvent = React.KeyboardEvent<HTMLButtonElement> | React.KeyboardEvent<HTMLAnchorElement>;
+
 const ButtonComponent = React.forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
   ButtonProps
@@ -123,7 +147,8 @@ const ButtonComponent = React.forwardRef<
   function Button(
     {
       variant = 'primary',
-      type,
+      appearance,
+      type, // Deprecated, use appearance instead
       size = 'md',
       className,
       children,
@@ -139,25 +164,86 @@ const ButtonComponent = React.forwardRef<
       target,
       rel,
       onClick,
+      onKeyDown,
+      disabledTooltip,
+      'aria-label': ariaLabel,
+      'aria-describedby': ariaDescribedBy,
+      'aria-expanded': ariaExpanded,
+      'aria-pressed': ariaPressed,
+      'aria-controls': ariaControls,
       ...props
     },
     ref
   ) {
+  // Validate icon-only buttons require aria-label
+  if (iconOnly && !ariaLabel && !children && process.env.NODE_ENV === 'development') {
+    console.warn(
+      'Button: iconOnly buttons require an aria-label prop for accessibility. ' +
+      'Please provide an aria-label describing the button\'s action.'
+    );
+  }
+
+  // Use appearance prop, fallback to deprecated type prop
+  const visualType = appearance || type;
+  
   // Determine default type based on variant if not provided
   const defaultType = variant === 'primary' || variant === 'danger' || variant === 'upgrade' ? 'filled' : 'outline';
-  const requestedType = type || defaultType;
+  const requestedType = visualType || defaultType;
   
   // Get valid types for this variant
   const validTypes = VALID_COMBINATIONS[variant] || [];
   
   // Validate combination (warn in development)
-  if (process.env.NODE_ENV === 'development' && type && !validTypes.includes(requestedType)) {
+  if (process.env.NODE_ENV === 'development' && visualType && !validTypes.includes(requestedType)) {
     console.warn(
-      `Invalid button combination: variant="${variant}" with type="${type}". ` +
-      `Valid types for "${variant}" are: ${validTypes.join(', ')}. ` +
-      `Using default type="${defaultType}" instead.`
+      `Invalid button combination: variant="${variant}" with appearance="${visualType}". ` +
+      `Valid appearances for "${variant}" are: ${validTypes.join(', ')}. ` +
+      `Using default appearance="${defaultType}" instead.`
     );
   }
+  
+  // Handle keyboard events - separate handlers for button and anchor
+  const handleButtonKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    // Handle Enter and Space keys
+    if ((e.key === 'Enter' || e.key === ' ') && !isDisabled) {
+      e.preventDefault();
+      // For buttons, programmatically trigger click which will call onClick
+      e.currentTarget.click();
+    }
+    // Call user's onKeyDown handler with proper typing
+    if (onKeyDown) {
+      onKeyDown(e as React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>);
+    }
+  };
+  
+  const handleAnchorKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+    // Handle Enter and Space keys
+    if ((e.key === 'Enter' || e.key === ' ') && !isDisabled) {
+      e.preventDefault();
+      e.currentTarget.click();
+    }
+    // Call user's onKeyDown handler - anchor keyboard events are compatible
+    onKeyDown?.(e as unknown as React.KeyboardEvent<HTMLButtonElement | HTMLAnchorElement>);
+  };
+  
+  // Handle click events - separate handlers for button and anchor
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (isDisabled) {
+      e.preventDefault();
+      return;
+    }
+    // Button click events are compatible with union type
+    onClick?.(e as unknown as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>);
+  };
+  
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isDisabled) {
+      e.preventDefault();
+      return;
+    }
+    // Anchor click events are compatible with union type
+    onClick?.(e as unknown as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>);
+  };
   
   // Use valid type (fallback to first valid option if invalid)
   const finalType = validTypes.includes(requestedType) ? requestedType : (validTypes[0] || 'filled');
@@ -250,49 +336,78 @@ const ButtonComponent = React.forwardRef<
     );
   };
   
+  // Build ARIA attributes
+  const ariaAttributes: React.AnchorHTMLAttributes<HTMLAnchorElement> & React.ButtonHTMLAttributes<HTMLButtonElement> = {
+    'aria-busy': loading,
+    'aria-disabled': isDisabled,
+    ...(ariaLabel && { 'aria-label': ariaLabel }),
+    ...(ariaDescribedBy && { 'aria-describedby': ariaDescribedBy }),
+    ...(ariaExpanded !== undefined && { 'aria-expanded': ariaExpanded }),
+    ...(ariaPressed !== undefined && { 'aria-pressed': ariaPressed }),
+    ...(ariaControls && { 'aria-controls': ariaControls }),
+  };
+  
   // Render as link if href is provided
   if (href) {
-    return (
+    const linkElement = (
       <a
         ref={ref as React.ForwardedRef<HTMLAnchorElement>}
         href={isDisabled ? undefined : href}
         target={target}
         rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)}
         className={buttonClassName}
-        aria-busy={loading}
-        aria-disabled={isDisabled}
-        onClick={(e) => {
-          if (isDisabled) {
-            e.preventDefault();
-            return;
-          }
-          onClick?.(e as any);
-        }}
+        onClick={handleAnchorClick}
+        onKeyDown={handleAnchorKeyDown}
         style={{ pointerEvents: isDisabled ? 'none' : undefined }}
+        title={isDisabled && disabledTooltip ? disabledTooltip : undefined}
+        {...ariaAttributes}
         {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {renderContent()}
       </a>
     );
+    
+    // Wrap with tooltip if disabled and tooltip provided
+    if (isDisabled && disabledTooltip) {
+      // For disabled links, we'll use title attribute (native tooltip)
+      // Tooltip component requires hover which doesn't work well with pointer-events: none
+      return linkElement;
+    }
+    
+    return linkElement;
   }
   
   // Render as button
-  return (
+  const buttonElement = (
     <button
       ref={ref as React.ForwardedRef<HTMLButtonElement>}
       type="button"
       className={buttonClassName}
       disabled={isDisabled}
-      aria-busy={loading}
-      onClick={onClick}
+      onClick={handleButtonClick}
+      onKeyDown={handleButtonKeyDown}
+      title={isDisabled && disabledTooltip ? disabledTooltip : undefined}
+      {...ariaAttributes}
       {...props}
     >
       {renderContent()}
     </button>
   );
+  
+  // Wrap with tooltip if disabled and tooltip provided
+  if (isDisabled && disabledTooltip) {
+    return (
+      <Tooltip content={disabledTooltip} placement="top">
+        {buttonElement}
+      </Tooltip>
+    );
+  }
+  
+  return buttonElement;
   }
 );
 
 ButtonComponent.displayName = 'Button';
 
-export const Button = ButtonComponent;
+// Memoize component for performance
+export const Button = React.memo(ButtonComponent);

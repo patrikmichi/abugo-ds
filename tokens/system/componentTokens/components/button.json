@@ -719,5 +719,39 @@
         "$value": "{control.height.lg}"
       }
     }
+  },
+  "focus": {
+    "outline": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.focus}",
+        "$description": "Focus ring color for buttons. Uses semantic focus border token."
+      },
+      "width": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderWidth",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{border-width-2}",
+        "$description": "Focus ring width for buttons (2px)."
+      },
+      "offset": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Focus ring offset from button edge (4px)."
+      }
+    }
   }
 }

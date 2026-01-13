@@ -30,13 +30,36 @@ const meta: Meta<typeof Button> = {
         defaultValue: { summary: 'primary' },
       },
     },
-    type: {
+    appearance: {
       control: 'select',
       options: ['filled', 'plain', 'outline'],
-      description: 'The visual type of the button (filled, plain, outline)',
+      description: 'The visual appearance of the button (filled, plain, outline)',
       table: {
         type: { summary: 'filled | plain | outline' },
         defaultValue: { summary: 'filled (primary/danger/upgrade) or outline (secondary/tertiary)' },
+      },
+    },
+    type: {
+      control: 'select',
+      options: ['filled', 'plain', 'outline'],
+      description: '⚠️ Deprecated: Use `appearance` instead. The visual type of the button (filled, plain, outline)',
+      table: {
+        type: { summary: 'filled | plain | outline (deprecated)' },
+        defaultValue: { summary: 'filled (primary/danger/upgrade) or outline (secondary/tertiary)' },
+      },
+    },
+    'aria-label': {
+      control: 'text',
+      description: 'ARIA label for icon-only buttons (required when iconOnly is true)',
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+    disabledTooltip: {
+      control: 'text',
+      description: 'Tooltip text to show when button is disabled',
+      table: {
+        type: { summary: 'string' },
       },
     },
     size: {
@@ -261,30 +284,39 @@ export const WithIcons: Story = {
 };
 
 /**
- * Icon-Only Buttons
+ * Icon-Only Buttons - Requires aria-label for accessibility
  */
 export const IconOnly: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       <div>
-        <h4 style={{ marginBottom: '1rem' }}>Icon-Only Buttons (Square)</h4>
+        <h4 style={{ marginBottom: '1rem' }}>Icon-Only Buttons (Square) - With aria-label</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
-          <Button variant="primary" type="filled" iconOnly size="sm">
+          <Button variant="primary" appearance="filled" iconOnly size="sm" aria-label="Add item">
             <ButtonIcon name="add" />
           </Button>
-          <Button variant="primary" type="filled" iconOnly size="md">
+          <Button variant="primary" appearance="filled" iconOnly size="md" aria-label="Add item">
             <ButtonIcon name="add" />
           </Button>
-          <Button variant="primary" type="filled" iconOnly size="lg">
+          <Button variant="primary" appearance="filled" iconOnly size="lg" aria-label="Add item">
             <ButtonIcon name="add" />
           </Button>
-          <Button variant="primary" type="plain" iconOnly>
+          <Button variant="primary" appearance="plain" iconOnly aria-label="Add item">
             <ButtonIcon name="add" />
           </Button>
-          <Button variant="danger" type="filled" iconOnly>
+          <Button variant="danger" appearance="filled" iconOnly aria-label="Delete item">
             <ButtonIcon name="delete" />
           </Button>
+          <Button variant="secondary" appearance="outline" iconOnly aria-label="Edit">
+            <ButtonIcon name="edit" />
+          </Button>
         </div>
+      </div>
+      <div>
+        <p style={{ color: 'var(--token-semantic-content-passive-neutral-subtle)', fontSize: '0.875rem' }}>
+          ⚠️ Icon-only buttons require an <code>aria-label</code> prop for screen reader accessibility.
+          Check the browser console for warnings if missing.
+        </p>
       </div>
     </div>
   ),
@@ -320,7 +352,7 @@ export const Loading: Story = {
 };
 
 /**
- * Disabled States
+ * Disabled States - With tooltips explaining why disabled
  */
 export const Disabled: Story = {
   render: () => (
@@ -328,11 +360,45 @@ export const Disabled: Story = {
       <div>
         <h4 style={{ marginBottom: '1rem' }}>Disabled Buttons</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="primary" type="filled" disabled>Disabled</Button>
-          <Button variant="secondary" type="outline" disabled>Disabled</Button>
-          <Button variant="danger" type="filled" disabled>Disabled</Button>
-          <Button variant="primary" type="filled" iconOnly disabled>
+          <Button variant="primary" appearance="filled" disabled>Disabled</Button>
+          <Button variant="secondary" appearance="outline" disabled>Disabled</Button>
+          <Button variant="danger" appearance="filled" disabled>Disabled</Button>
+          <Button variant="primary" appearance="filled" iconOnly disabled aria-label="Add item">
             <ButtonIcon name="add" />
+          </Button>
+        </div>
+      </div>
+      <div>
+        <h4 style={{ marginBottom: '1rem' }}>Disabled with Tooltips</h4>
+        <p style={{ color: 'var(--token-semantic-content-passive-neutral-subtle)', fontSize: '0.875rem', marginBottom: '1rem' }}>
+          Hover over disabled buttons to see tooltips explaining why they're disabled.
+        </p>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Button 
+            variant="primary" 
+            appearance="filled" 
+            disabled 
+            disabledTooltip="Please complete the form first"
+          >
+            Submit
+          </Button>
+          <Button 
+            variant="danger" 
+            appearance="filled" 
+            disabled 
+            disabledTooltip="You don't have permission to delete this item"
+          >
+            Delete
+          </Button>
+          <Button 
+            variant="primary" 
+            appearance="filled" 
+            iconOnly 
+            disabled 
+            aria-label="Save"
+            disabledTooltip="No changes to save"
+          >
+            <ButtonIcon name="save" />
           </Button>
         </div>
       </div>
@@ -391,6 +457,77 @@ export const LinkButtons: Story = {
 };
 
 /**
+ * Focus States - Keyboard Navigation
+ * Tab through these buttons to see focus rings
+ */
+export const FocusStates: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <div>
+        <h4 style={{ marginBottom: '1rem' }}>Focus States (Keyboard Navigation)</h4>
+        <p style={{ color: 'var(--token-semantic-content-passive-neutral-subtle)', fontSize: '0.875rem', marginBottom: '1rem' }}>
+          Press <kbd>Tab</kbd> to navigate and see focus rings. Focus rings only appear when using keyboard, not mouse clicks.
+        </p>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Button variant="primary" appearance="filled">Primary Filled</Button>
+          <Button variant="secondary" appearance="outline">Secondary Outline</Button>
+          <Button variant="danger" appearance="filled">Danger Filled</Button>
+          <Button variant="primary" appearance="plain">Primary Plain</Button>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+/**
+ * ARIA Attributes Examples
+ */
+export const AriaAttributes: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <div>
+        <h4 style={{ marginBottom: '1rem' }}>ARIA Attributes</h4>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div>
+            <p style={{ marginBottom: '0.5rem', fontSize: '0.875rem' }}>aria-label (Icon-only button):</p>
+            <Button variant="primary" appearance="filled" iconOnly aria-label="Close dialog">
+              <ButtonIcon name="close" />
+            </Button>
+          </div>
+          <div>
+            <p style={{ marginBottom: '0.5rem', fontSize: '0.875rem' }}>aria-expanded (Toggle button):</p>
+            <Button variant="secondary" appearance="outline" aria-expanded={false} aria-controls="menu">
+              Menu
+            </Button>
+          </div>
+          <div>
+            <p style={{ marginBottom: '0.5rem', fontSize: '0.875rem' }}>aria-pressed (Toggle state):</p>
+            <Button variant="primary" appearance="plain" aria-pressed={false}>
+              Toggle
+            </Button>
+          </div>
+          <div>
+            <p style={{ marginBottom: '0.5rem', fontSize: '0.875rem' }}>aria-describedby (With help text):</p>
+            <div>
+              <Button 
+                variant="primary" 
+                appearance="filled" 
+                aria-describedby="help-text"
+              >
+                Submit
+              </Button>
+              <p id="help-text" style={{ fontSize: '0.75rem', color: 'var(--token-semantic-content-passive-neutral-subtle)', marginTop: '0.25rem' }}>
+                This will submit your form
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
+/**
  * All Variants Overview
  */
 export const AllVariants: Story = {
@@ -399,34 +536,34 @@ export const AllVariants: Story = {
       <div>
         <h4 style={{ marginBottom: '1rem' }}>Primary</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="primary" type="filled">Filled</Button>
-          <Button variant="primary" type="plain">Plain</Button>
+          <Button variant="primary" appearance="filled">Filled</Button>
+          <Button variant="primary" appearance="plain">Plain</Button>
         </div>
       </div>
       <div>
         <h4 style={{ marginBottom: '1rem' }}>Secondary</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="secondary" type="outline">Outline</Button>
-          <Button variant="secondary" type="plain">Plain</Button>
+          <Button variant="secondary" appearance="outline">Outline</Button>
+          <Button variant="secondary" appearance="plain">Plain</Button>
         </div>
       </div>
       <div>
         <h4 style={{ marginBottom: '1rem' }}>Tertiary</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="tertiary" type="outline">Outline</Button>
+          <Button variant="tertiary" appearance="outline">Outline</Button>
         </div>
       </div>
       <div>
         <h4 style={{ marginBottom: '1rem' }}>Danger</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="danger" type="filled">Filled</Button>
-          <Button variant="danger" type="plain">Plain</Button>
+          <Button variant="danger" appearance="filled">Filled</Button>
+          <Button variant="danger" appearance="plain">Plain</Button>
         </div>
       </div>
       <div>
         <h4 style={{ marginBottom: '1rem' }}>Upgrade</h4>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="upgrade" type="filled">Filled</Button>
+          <Button variant="upgrade" appearance="filled">Filled</Button>
         </div>
       </div>
     </div>

@@ -41,7 +41,26 @@
   transition: 
     background-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
     color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
-    border-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing);
+    border-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
+    outline var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing);
+  
+  /* Remove default focus outline - we'll use focus-visible */
+  outline: none;
+}
+
+/* ==========================================================================
+   Focus States (Keyboard Navigation)
+   ========================================================================== */
+
+/* Focus-visible: Only show focus ring when keyboard navigating (not mouse clicks) */
+.button:focus-visible {
+  outline: calc(var(--token-component-button-focus-outline-width) * 1px) solid var(--token-component-button-focus-outline-color);
+  outline-offset: calc(var(--token-component-button-focus-outline-offset) * 1px);
+}
+
+/* Fallback for browsers that don't support :focus-visible */
+.button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* ==========================================================================

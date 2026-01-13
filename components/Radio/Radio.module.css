@@ -18,20 +18,20 @@
   margin: 0;
   cursor: pointer;
   appearance: none;
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-radio-button-border-unselected-default);
+  border: var(--token-semantic-border-width-thin) solid var(--token-component-radio-border-unselected-default);
   border-radius: 50%;
-  background-color: var(--token-component-radio-button-background-unselected);
+  background-color: var(--token-component-radio-background-unselected);
   transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
   position: relative;
 }
 
 .radio:hover:not(:disabled) {
-  border-color: var(--token-component-radio-button-border-unselected-hover);
+  border-color: var(--token-component-radio-border-unselected-hover);
 }
 
 .radio:checked {
-  background-color: var(--token-component-radio-button-background-selected-default);
-  border-color: var(--token-component-radio-button-border-selected-default);
+  background-color: var(--token-component-radio-background-selected-default);
+  border-color: var(--token-component-radio-border-selected-default);
 }
 
 .radio:checked::after {
@@ -47,19 +47,19 @@
 }
 
 .radio:checked:hover:not(:disabled) {
-  background-color: var(--token-component-radio-button-background-selected-hover);
-  border-color: var(--token-component-radio-button-border-selected-hover);
+  background-color: var(--token-component-radio-background-selected-hover);
+  border-color: var(--token-component-radio-border-selected-hover);
 }
 
 .radio:disabled {
-  border-color: var(--token-component-radio-button-border-unselected-disabled);
-  background-color: var(--token-component-radio-button-background-unselected);
+  border-color: var(--token-component-radio-border-unselected-disabled);
+  background-color: var(--token-component-radio-background-unselected);
   cursor: not-allowed;
 }
 
 .radio:checked:disabled {
-  background-color: var(--token-component-radio-button-background-selected-disabled);
-  border-color: var(--token-component-radio-button-border-selected-disabled);
+  background-color: var(--token-component-radio-background-selected-disabled);
+  border-color: var(--token-component-radio-border-selected-disabled);
 }
 
 .label {
