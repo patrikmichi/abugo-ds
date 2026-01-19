@@ -1,0 +1,85 @@
+/* Rate component styles using design tokens */
+
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-component-rating-gap, 4px);
+  font-size: var(--token-component-rating-font-size, 20px);
+  line-height: 1;
+  color: var(--token-component-rating-color, #fadb14);
+  cursor: pointer;
+}
+
+.rating.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Star */
+.star {
+  position: relative;
+  display: inline-block;
+  color: var(--token-component-rating-star-color, #f0f0f0);
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.star:hover:not(.disabled) {
+  transform: scale(1.1);
+}
+
+.star.filled {
+  color: var(--token-component-rating-star-color-filled, #fadb14);
+}
+
+.star.halfFilled .starFirst {
+  color: var(--token-component-rating-star-color-filled, #fadb14);
+}
+
+.star.halfFilled .starSecond {
+  color: var(--token-component-rating-star-color, #f0f0f0);
+}
+
+.star.focused {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.star.disabled {
+  cursor: not-allowed;
+}
+
+.rating.disabled .star {
+  cursor: not-allowed;
+}
+
+/* Half star support */
+.starFirst,
+.starSecond {
+  display: inline-block;
+  width: 50%;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.starFirst {
+  text-align: left;
+}
+
+.starSecond {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rating {
+    font-size: var(--token-component-rating-font-size-mobile, 18px);
+    gap: var(--token-component-rating-gap-mobile, 2px);
+  }
+}

@@ -8,5 +8,18 @@
     "$libraryName": "",
     "$collectionName": "primitives",
     "$value": "{typography-fontWeight-bold}"
+  },
+  "anchor": {
+    "link": {
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontWeight.medium}"
+      }
+    }
   }
 }

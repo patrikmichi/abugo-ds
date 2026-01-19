@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './PhoneNumberField.module.css';
 import { cn } from '@/lib/utils';
 import { Input } from '@/components/Input';
-import { Select } from '@/components/Select';
+import { Select } from '@/components/Select/Select';
 
 export interface CountryCode {
   /** Country code (e.g., "+420") */
@@ -102,8 +102,8 @@ export function PhoneNumberField({
       className={cn(
         styles.phoneNumberField,
         size && styles[size],
-        hasError && styles.error,
-        isDisabled && styles.disabled,
+        error && styles.error,
+        disabled && styles.disabled,
         isFocused && styles.focused,
         className
       )}
@@ -122,9 +122,9 @@ export function PhoneNumberField({
           onChange={handleCountryCodeChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          disabled={isDisabled}
+          disabled={disabled}
           size={size}
-          status={finalStatus}
+          error={error}
           className={styles.countryCodeSelect}
           aria-label={countryCodeAriaLabel}
           aria-describedby={props['aria-describedby']}
@@ -136,9 +136,9 @@ export function PhoneNumberField({
           ))}
         </Select>
         <span className={styles.chevron} aria-hidden="true">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 9L1 4h10z" fill="currentColor" />
-          </svg>
+          <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)', display: 'inline-flex', alignItems: 'center' }}>
+            expand_more
+          </span>
         </span>
       </div>
       
@@ -152,9 +152,9 @@ export function PhoneNumberField({
         onFocus={handleFocus}
         onBlur={handleBlur}
         placeholder={phonePlaceholder}
-        disabled={isDisabled}
+        disabled={disabled}
         size={size}
-        status={finalStatus}
+        error={error}
         className={styles.phoneInput}
         aria-label={ariaLabel || 'Phone number'}
         aria-describedby={props['aria-describedby']}

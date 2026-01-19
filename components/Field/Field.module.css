@@ -7,9 +7,35 @@
   width: 100%;
 }
 
+/* Grid layout for labelCol/wrapperCol */
+.field.hasLabelCol,
+.field.hasWrapperCol {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--token-semantic-gap-m, 16px);
+  align-items: start;
+}
+
+.field.hasLabelCol .label {
+  grid-column: 1;
+  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+}
+
+.field.hasLabelCol .controlWrapper {
+  grid-column: 2;
+}
+
 /* Size variants */
 .field.sm {
   gap: var(--token-component-gap-field-label-sm);
+}
+
+.field.sm.hasLabelCol {
+  gap: var(--token-semantic-gap-s, 12px);
+}
+
+.field.sm.hasLabelCol .label {
+  padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
 }
 
 .field.md {
@@ -20,6 +46,14 @@
   gap: var(--token-component-gap-field-label-lg);
 }
 
+.field.lg.hasLabelCol {
+  gap: var(--token-semantic-gap-l, 20px);
+}
+
+.field.lg.hasLabelCol .label {
+  padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
+}
+
 /* Label styles */
 .label {
   font-family: var(--token-primitive-typography-font-family-sans);
@@ -27,7 +61,9 @@
   font-weight: var(--token-primitive-typography-font-weight-medium);
   line-height: var(--token-component-line-height-field-label-md);
   color: var(--token-component-field-content-label-default);
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--token-semantic-gap-xxs, 8px);
   margin: 0;
 }
 
@@ -41,18 +77,98 @@
   line-height: var(--token-component-line-height-field-label-lg);
 }
 
+/* Label alignment - always left */
+.label {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.labelContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
 /* Required asterisk */
 .requiredAsterisk {
   color: var(--token-component-field-required-asterisk-color);
-  margin-left: var(--token-component-field-required-asterisk-margin);
+  margin-left: 2px;
+}
+
+/* Colon */
+.colon {
+  margin-left: 2px;
+  margin-right: 8px;
+}
+
+
+/* Tooltip */
+.tooltip {
+  display: inline-flex;
+  align-items: center;
+  color: var(--token-component-field-content-help);
+  cursor: help;
+  margin-left: 4px;
+}
+
+.tooltip:hover {
+  color: var(--token-component-field-content-label-default);
 }
 
 /* Control wrapper */
+.controlWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-semantic-gap-xxxs, 4px);
+  width: 100%;
+}
+
 .control {
   width: 100%;
   /* Ensure dropdowns are not clipped */
   overflow: visible;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Feedback icon */
+.feedbackIcon {
+  position: absolute;
+  right: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.feedbackIcon.error {
+  color: var(--token-component-field-content-error);
+}
+
+.feedbackIcon.warning {
+  color: var(--token-semantic-content-passive-warning-default, #faad14);
+}
+
+.feedbackIcon.success {
+  color: var(--token-semantic-content-passive-success-default, #52c41a);
+}
+
+.feedbackIcon.validating {
+  color: var(--token-component-field-content-value);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
 }
 
 /* Error message */
@@ -61,7 +177,6 @@
   font-size: var(--token-component-font-size-field-error);
   line-height: var(--token-component-line-height-field-error);
   color: var(--token-component-field-content-error);
-  margin-top: var(--token-component-gap-field-error-message);
   display: block;
 }
 
@@ -71,13 +186,48 @@
   font-size: var(--token-component-font-size-field-helper);
   line-height: var(--token-component-line-height-field-helper);
   color: var(--token-component-field-content-help);
-  margin-top: var(--token-component-gap-field-helper);
+  display: block;
+}
+
+/* Extra information */
+.extra {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-helper);
+  line-height: var(--token-component-line-height-field-helper);
+  color: var(--token-component-field-content-help);
   display: block;
 }
 
 /* Error state */
 .field.error .label {
   color: var(--token-component-field-content-label-error);
+}
+
+.field.error .labelContent {
+  color: var(--token-component-field-content-label-error);
+}
+
+/* Warning state */
+.field.warning .label {
+  color: var(--token-semantic-content-passive-warning-default, #faad14);
+}
+
+.field.warning .labelContent {
+  color: var(--token-semantic-content-passive-warning-default, #faad14);
+}
+
+/* Success state */
+.field.success .label {
+  color: var(--token-semantic-content-passive-success-default, #52c41a);
+}
+
+.field.success .labelContent {
+  color: var(--token-semantic-content-passive-success-default, #52c41a);
+}
+
+/* Validating state */
+.field.validating .label {
+  color: var(--token-component-field-content-label-default);
 }
 
 /* Disabled state */
@@ -87,6 +237,7 @@
 }
 
 .field.disabled .errorMessage,
-.field.disabled .helperText {
+.field.disabled .helperText,
+.field.disabled .extra {
   opacity: 0.6;
 }

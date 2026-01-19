@@ -99,5 +99,95 @@
       "$collectionName": "semanticTokens",
       "$value": "{animation-easing-ease-in-out}"
     }
+  },
+  "toast": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-base}",
+      "$description": "Toast transition duration (300ms)"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-out}",
+      "$description": "Toast transition easing"
+    },
+    "transform": {
+      "close": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "translateY(-10px)",
+        "$description": "Toast closing transform (translateY(-10px))"
+      }
+    }
+  },
+  "alert": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-base}",
+      "$description": "Alert transition duration (300ms)"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-ease-out}",
+      "$description": "Alert transition easing"
+    },
+    "transform": {
+      "close": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "string",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "scale(0.95)",
+        "$description": "Alert closing transform (scale(0.95))"
+      }
+    }
+  },
+  "spinner": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-duration-slow}",
+      "$description": "Spinner animation duration (1000ms)"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "string",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation-easing-linear}",
+      "$description": "Spinner animation easing (linear)"
+    }
   }
 }

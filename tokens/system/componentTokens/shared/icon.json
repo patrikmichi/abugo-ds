@@ -7,8 +7,9 @@
       ],
       "$type": "dimension",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{icon.sm}"
+      "$collectionName": "primitives",
+      "$value": "20px",
+      "$description": "Icon size for small buttons - 20x20px"
     },
     "md": {
       "$scopes": [
@@ -85,6 +86,38 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{icon.sm}"
+    }
+  },
+  "alert": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{icon.sm}",
+    "$description": "Alert icon size (24x24px)"
+  },
+  "toast": {
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}",
+      "$description": "Toast icon size for small size (20x20px)"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}",
+      "$description": "Toast icon size for large size (24x24px)"
     }
   },
   "container": {

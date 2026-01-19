@@ -2,54 +2,328 @@
 
 .stepper {
   display: flex;
-  align-items: center;
-  gap: var(--token-semantic-gap-s);
+  width: 100%;
+  font-family: var(--token-primitive-typography-font-family-sans);
 }
 
-.stepperItem {
+/* Direction variants */
+.stepper.horizontal {
+  flex-direction: row;
+}
+
+.stepper.vertical {
+  flex-direction: column;
+}
+
+/* Size variants */
+.stepper.small .step {
+  font-size: var(--token-component-stepper-font-size-sm);
+}
+
+/* Step */
+.step {
+  flex: 1;
+  position: relative;
+}
+
+.stepHorizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stepVertical {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: var(--token-component-stepper-vertical-step-padding-bottom);
+}
+
+.stepClickable {
+  cursor: pointer;
+}
+
+.stepDisabled {
+  cursor: not-allowed;
+  opacity: var(--token-component-stepper-disabled-opacity);
+}
+
+/* Step content */
+.stepContent {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.stepHorizontal .stepContent {
+  flex-direction: column;
+}
+
+.stepVertical .stepContent {
+  flex-direction: row;
+}
+
+/* Icon wrapper */
+.stepIconWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--token-semantic-icon-md);
-  height: var(--token-semantic-icon-md);
-  border-radius: var(--token-semantic-radius-full);
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-stepper-default-border-default);
-  background-color: var(--token-component-stepper-default-background-default);
-  color: var(--token-component-stepper-default-content-default);
-  font-size: var(--token-semantic-typography-body-size-sm);
-  font-weight: 500;
-  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  flex-shrink: 0;
 }
 
-.stepperItem.active {
-  background-color: var(--token-component-stepper-default-background-active);
-  border-color: var(--token-component-stepper-default-border-active);
-  color: var(--token-component-stepper-default-content-active);
+.stepHorizontal .stepIconWrapper {
+  margin-bottom: var(--token-component-stepper-icon-margin-bottom);
 }
 
-.stepperItem.completed {
-  background-color: var(--token-component-stepper-default-background-completed);
-  color: var(--token-component-stepper-default-content-completed);
+.stepVertical .stepIconWrapper {
+  margin-right: var(--token-component-stepper-icon-margin-right);
 }
 
-.stepperItem.error {
-  background-color: var(--token-component-stepper-default-background-error);
-  border-color: var(--token-component-stepper-default-background-error);
+/* Icon - Step Indicator Dot */
+.icon {
+  width: var(--token-component-stepper-icon-size);
+  height: var(--token-component-stepper-icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--token-component-stepper-icon-background-wait);
+  border: none;
+  color: var(--token-component-stepper-icon-color-wait);
+  font-size: var(--token-component-stepper-icon-font-size);
+  font-weight: var(--token-component-stepper-icon-font-weight);
+  transition: all var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+  z-index: 1;
+  position: relative;
 }
 
-.default {
-  background-color: var(--token-component-stepper-default-background-default);
-  color: var(--token-component-stepper-default-content-default);
+.stepper.small .icon {
+  width: var(--token-component-stepper-icon-size-sm);
+  height: var(--token-component-stepper-icon-size-sm);
+  font-size: var(--token-component-stepper-icon-font-size-sm);
 }
 
-.background {
-  background-color: var(--token-component-stepper-default-background-default);
+/* Dot (progress dot style) */
+.dot {
+  width: var(--token-component-stepper-dot-size);
+  height: var(--token-component-stepper-dot-size);
+  border-radius: 50%;
+  background-color: var(--token-component-stepper-dot-background-wait);
+  transition: all var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+  z-index: 1;
 }
 
-.border {
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-stepper-default-border-default);
+.stepper.small .dot {
+  width: var(--token-component-stepper-dot-size-sm);
+  height: var(--token-component-stepper-dot-size-sm);
 }
 
-.content {
-  color: var(--token-component-stepper-default-content-default);
+/* Tail (connector line) */
+.tail {
+  position: absolute;
+  background-color: var(--token-component-stepper-tail-background);
+  transition: background-color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+}
+
+.tailHorizontal {
+  top: var(--token-component-stepper-icon-size);
+  left: 50%;
+  width: calc(100% - var(--token-component-stepper-icon-size));
+  height: calc(var(--token-primitive-border-width-1) * 1px);
+  transform: translateY(-50%);
+}
+
+.stepper.small .tailHorizontal {
+  top: var(--token-component-stepper-icon-size-sm);
+  width: calc(100% - var(--token-component-stepper-icon-size-sm));
+}
+
+.tailVertical {
+  top: var(--token-component-stepper-icon-size);
+  left: 50%;
+  width: calc(var(--token-primitive-border-width-1) * 1px);
+  height: calc(100% - var(--token-component-stepper-icon-size));
+  transform: translateX(-50%);
+}
+
+.stepper.small .tailVertical {
+  top: var(--token-component-stepper-icon-size-sm);
+  height: calc(100% - var(--token-component-stepper-icon-size-sm));
+}
+
+.stepLast .tail {
+  display: none;
+}
+
+/* Step text */
+.stepText {
+  flex: 1;
+  min-width: 0;
+}
+
+.stepHorizontal .stepText {
+  text-align: center;
+  width: 100%;
+}
+
+.stepVertical .stepText {
+  flex: 1;
+}
+
+/* Step title */
+.stepTitle {
+  font-size: var(--token-component-stepper-title-font-size);
+  font-weight: var(--token-component-stepper-title-font-weight);
+  color: var(--token-component-stepper-title-color-wait));
+  line-height: var(--token-component-stepper-title-line-height);
+  margin-bottom: var(--token-component-stepper-title-margin-bottom);
+  transition: color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+}
+
+.stepper.small .stepTitle {
+  font-size: var(--token-component-stepper-title-font-size-sm);
+}
+
+/* Step description */
+.stepDescription {
+  font-size: var(--token-component-stepper-description-font-size);
+  color: var(--token-component-stepper-description-color-wait));
+  line-height: var(--token-component-stepper-description-line-height);
+  transition: color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+}
+
+.stepper.small .stepDescription {
+  font-size: var(--token-component-stepper-description-font-size-sm);
+}
+
+/* Status: Wait */
+.stepWait .icon {
+  background-color: var(--token-component-stepper-icon-background-wait);
+  border: none;
+  color: transparent;
+}
+
+.stepWait .dot {
+  background-color: var(--token-component-stepper-dot-background-wait);
+}
+
+.stepWait .stepTitle {
+  color: var(--token-component-stepper-title-color-wait));
+}
+
+.stepWait .stepDescription {
+  color: var(--token-component-stepper-description-color-wait));
+}
+
+/* Status: Process */
+.stepProcess .icon {
+  background-color: var(--token-component-stepper-icon-background-process);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-primitive-color-white);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1) * 1px) var(--token-component-stepper-icon-background-process);
+  color: transparent;
+}
+
+.stepProcess .dot {
+  background-color: var(--token-component-stepper-dot-background-process);
+}
+
+.stepProcess .stepTitle {
+  color: var(--token-component-stepper-title-color-process));
+  font-weight: var(--token-component-stepper-title-font-weight-process);
+}
+
+.stepProcess .stepDescription {
+  color: var(--token-component-stepper-description-color-process));
+}
+
+.stepProcess .tail {
+  background-color: var(--token-component-stepper-tail-background-process);
+}
+
+/* Status: Finish */
+.stepFinish .icon {
+  background-color: var(--token-component-stepper-icon-background-finish);
+  border: none;
+  color: var(--token-primitive-color-white);
+}
+
+.stepFinish .icon .material-symbols-outlined {
+  color: var(--token-primitive-color-white);
+  font-size: var(--token-primitive-icon-size-icon-size-1);
+}
+
+.stepFinish .dot {
+  background-color: var(--token-component-stepper-dot-background-finish);
+}
+
+.stepFinish .stepTitle {
+  color: var(--token-component-stepper-title-color-finish));
+}
+
+.stepFinish .stepDescription {
+  color: var(--token-component-stepper-description-color-finish));
+}
+
+.stepFinish .tail {
+  background-color: var(--token-component-stepper-tail-background-finish);
+}
+
+/* Status: Error */
+.stepError .icon {
+  background-color: var(--token-component-stepper-icon-background-error);
+  border-color: var(--token-component-stepper-icon-border-error);
+  color: var(--token-component-stepper-icon-color-error);
+}
+
+.stepError .dot {
+  background-color: var(--token-component-stepper-dot-background-error);
+}
+
+.stepError .stepTitle {
+  color: var(--token-component-stepper-title-color-error);
+}
+
+.stepError .stepDescription {
+  color: var(--token-component-stepper-description-color-error);
+}
+
+.stepError .tail {
+  background-color: var(--token-component-stepper-tail-background-error);
+}
+
+/* Progress dot style */
+.stepper.progressDot .stepIconWrapper {
+  width: auto;
+  height: auto;
+}
+
+.stepper.progressDot .stepHorizontal .stepIconWrapper {
+  margin-bottom: 0;
+  margin-right: var(--token-component-stepper-progress-dot-margin-right);
+}
+
+.stepper.progressDot .stepVertical .stepIconWrapper {
+  margin-right: var(--token-component-stepper-progress-dot-margin-right);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stepper.horizontal {
+    flex-direction: column;
+  }
+
+  .stepHorizontal {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .stepHorizontal .stepIconWrapper {
+    margin-bottom: 0;
+    margin-right: var(--token-component-stepper-icon-margin-right);
+  }
+
+  .stepHorizontal .stepText {
+    text-align: left;
+  }
 }

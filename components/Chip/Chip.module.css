@@ -1,52 +1,273 @@
 /* Chip component styles using design tokens */
+/* Based on Figma design - unselected/selected states only, full radius (pill shape) */
 
 .chip {
-  padding: var(--token-component-padding-x-chip-sm);
-  border-radius: var(--token-semantic-radius-full);
-  border: none;
-  cursor: pointer;
-  font-size: var(--token-semantic-typography-body-size-sm);
-  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
   display: inline-flex;
   align-items: center;
-  gap: var(--token-semantic-gap-xs);
+  justify-content: center;
+  gap: var(--token-component-gap-chip-icon, 4px);
+  border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid;
+  outline: none;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  /* All chips use same font size and line height */
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  /* Full radius (pill shape) - uses radius.full token */
+  border-radius: calc(var(--token-component-radius-chip, 999) * 1px);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  box-sizing: border-box;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
-.unselected {
-  background-color: var(--token-component-chip-background-unselected-default);
-  color: var(--token-semantic-content-passive-neutral-default);
+/* Base button reset for button element */
+.chip[type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.unselected:hover:not(:disabled) {
-  background-color: var(--token-component-chip-background-unselected-hover);
+/* Sizes - fixed heights: sm = 24px, md = 32px, lg = 40px */
+/* All sizes use same font-size and line-height */
+.chip.sm {
+  height: var(--token-component-height-chip-sm, 24px);
+  padding-inline-start: var(--token-component-padding-x-chip-sm, 8px);
+  padding-inline-end: var(--token-component-padding-x-chip-sm, 8px);
 }
 
-.unselected:active:not(:disabled) {
-  background-color: var(--token-component-chip-background-unselected-pressed);
+.chip.sm:has(.avatar),
+.chip.sm:has(.icon) {
+  padding-inline-start: var(--token-component-padding-x-chip-with-icon-sm, 4px);
 }
 
-.selected {
-  background-color: var(--token-component-chip-background-selected-default);
-  color: var(--token-component-chip-content-selected);
+.chip.md {
+  height: var(--token-component-height-chip-md, 32px);
+  padding-inline-start: var(--token-component-padding-x-chip-md, 12px);
+  padding-inline-end: var(--token-component-padding-x-chip-md, 12px);
 }
 
-.selected:hover:not(:disabled) {
-  background-color: var(--token-component-chip-background-selected-hover);
+.chip.md:has(.avatar),
+.chip.md:has(.icon) {
+  padding-inline-start: var(--token-component-padding-x-chip-with-icon-md, 8px);
 }
 
-.selected:active:not(:disabled) {
-  background-color: var(--token-component-chip-background-selected-pressed);
+.chip.lg {
+  height: var(--token-component-height-chip-lg, 40px);
+  padding-inline-start: var(--token-component-padding-x-chip-lg, 16px);
+  padding-inline-end: var(--token-component-padding-x-chip-lg, 16px);
 }
 
-.disabled {
+.chip.lg:has(.avatar),
+.chip.lg:has(.icon) {
+  padding-inline-start: var(--token-component-padding-x-chip-with-icon-lg, 12px);
+}
+
+/* Unselected state (default) */
+.chip {
+  background-color: var(--token-component-chip-background-unselected-default, #ffffff);
+  color: var(--token-component-chip-content-unselected-default, #464646);
+}
+
+.chip:not(.disabled):not(.selected):hover {
+  background-color: var(--token-component-chip-background-unselected-hover, #efefef);
+  color: var(--token-component-chip-content-unselected-hover, #161616);
+}
+
+.chip:not(.disabled):not(.selected):active {
+  background-color: var(--token-component-chip-background-unselected-pressed, #f7f7f7);
+  color: var(--token-component-chip-content-unselected-pressed, #737373);
+}
+
+/* Selected state */
+.chip.selected {
+  background-color: var(--token-component-chip-background-selected-default, #5690f5);
+  color: var(--token-component-chip-content-selected, #ffffff);
+}
+
+.chip.selected:not(.disabled):hover {
+  background-color: var(--token-component-chip-background-selected-hover, #4573c4);
+  color: var(--token-component-chip-content-selected, #ffffff);
+}
+
+.chip.selected:not(.disabled):active {
+  background-color: var(--token-component-chip-background-selected-pressed, #78a6f7);
+  color: var(--token-component-chip-content-selected, #ffffff);
+}
+
+/* Clickable */
+.chip.clickable {
+  cursor: pointer;
+}
+
+.chip.clickable:not(.disabled):focus-visible {
+  outline: 2px solid var(--token-semantic-border-active-neutral-control-field-focused);
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.chip.disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
 
-.unselected.disabled {
-  background-color: var(--token-component-chip-background-unselected-disabled);
+.chip.disabled {
+  background-color: var(--token-component-chip-background-unselected-disabled, #efefef);
+  color: var(--token-component-chip-content-unselected-disabled, #a2a2a2);
+  border-color: var(--token-component-chip-border-unselected-disabled, #efefef);
 }
 
-.selected.disabled {
-  background-color: var(--token-component-chip-background-selected-disabled);
+.chip.disabled.selected {
+  background-color: var(--token-component-chip-background-selected-disabled, #93b8f9);
+  color: var(--token-component-chip-content-unselected-disabled, #a2a2a2);
+  border-color: var(--token-component-chip-background-selected-disabled, #93b8f9);
+}
+
+/* Content elements */
+.avatar,
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chip.sm .avatar,
+.chip.sm .icon {
+  width: var(--token-component-icon-chip-sm, 16px);
+  height: var(--token-component-icon-chip-sm, 16px);
+  margin-inline-start: calc(var(--token-component-padding-x-chip-sm, 8px) * -0.5);
+}
+
+.chip.md .avatar,
+.chip.md .icon {
+  width: var(--token-component-icon-chip-md, 20px);
+  height: var(--token-component-icon-chip-md, 20px);
+  margin-inline-start: calc(var(--token-component-padding-x-chip-md, 12px) * -0.666666667);
+}
+
+.chip.lg .avatar,
+.chip.lg .icon {
+  width: var(--token-component-icon-chip-lg, 20px);
+  height: var(--token-component-icon-chip-lg, 20px);
+  margin-inline-start: calc(var(--token-component-padding-x-chip-lg, 16px) * -0.75);
+}
+
+.avatar {
+  margin-inline-end: calc(var(--token-component-gap-chip-icon, 4px) * -1);
+}
+
+.icon {
+  margin-inline-end: calc(var(--token-component-gap-chip-icon, 4px) * -1);
+}
+
+/* Material Icons in chip */
+.icon .material-symbols-outlined,
+.trailingIcon .material-symbols-outlined {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.chip.sm .icon .material-symbols-outlined,
+.chip.sm .trailingIcon .material-symbols-outlined {
+  font-size: var(--token-component-icon-chip-sm, 16px);
+}
+
+.chip.md .icon .material-symbols-outlined,
+.chip.md .trailingIcon .material-symbols-outlined {
+  font-size: var(--token-component-icon-chip-md, 20px);
+}
+
+.chip.lg .icon .material-symbols-outlined,
+.chip.lg .trailingIcon .material-symbols-outlined {
+  font-size: var(--token-component-icon-chip-lg, 20px);
+}
+
+.label {
+  flex: 0 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Trailing icon (delete or expand) */
+.trailingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  margin-inline-start: var(--token-component-gap-chip-icon, 4px);
+  margin-inline-end: 0;
+  padding: var(--token-component-chip-delete-icon-padding, 4px);
+  border-radius: 50%;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  color: inherit;
+  opacity: var(--token-component-chip-delete-icon-opacity-default, 0.6);
+}
+
+.trailingIconSymbol {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  display: block;
+  line-height: 1;
+}
+
+/* Trailing icon hover - using opacity hovers like plain buttons */
+.trailingIcon:hover:not(.disabled) {
+  opacity: var(--token-component-chip-delete-icon-opacity-hover, 1);
+  /* Use grey-700 with 5% opacity for hover - matches plain button approach */
+  /* Fallback for browsers without color-mix support */
+  background-color: rgba(70, 70, 70, 0.05);
+  background-color: color-mix(in srgb, var(--token-semantic-background-active-neutral-subtle-hover, var(--token-primitive-grey-700, #464646)) 5%, transparent);
+}
+
+.chip.selected .trailingIcon:hover:not(.disabled) {
+  /* Use white with 20% opacity for hover on selected chips */
+  /* Fallback for browsers without color-mix support */
+  background-color: rgba(255, 255, 255, 0.2);
+  background-color: color-mix(in srgb, var(--token-primitive-color-white, #ffffff) 20%, transparent);
+}
+
+.trailingIcon:active:not(.disabled) {
+  /* Slightly more opacity on active */
+  background-color: rgba(70, 70, 70, 0.08);
+  background-color: color-mix(in srgb, var(--token-semantic-background-active-neutral-subtle-pressed, var(--token-primitive-grey-700, #464646)) 8%, transparent);
+}
+
+.chip.selected .trailingIcon:active:not(.disabled) {
+  /* Use white with 30% opacity for active on selected chips */
+  background-color: rgba(255, 255, 255, 0.3);
+  background-color: color-mix(in srgb, var(--token-primitive-color-white, #ffffff) 30%, transparent);
+}
+
+.chip.disabled .trailingIcon {
+  cursor: not-allowed;
+  opacity: var(--token-component-chip-delete-icon-opacity-disabled, 0.4);
+}
+
+/* Adjust padding when trailing icon is present */
+.chip.hasTrailingIcon {
+  padding-inline-end: var(--token-component-chip-delete-icon-padding, 4px);
+}
+
+/* Adjust spacing when avatar or icon is present */
+.chip:has(.avatar) .label,
+.chip:has(.icon) .label {
+  margin-inline-start: 0;
+}
+
+/* Focus styles */
+.chip:focus-visible {
+  outline: 2px solid var(--token-semantic-border-active-neutral-control-field-focused);
+  outline-offset: 2px;
 }

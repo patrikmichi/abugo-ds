@@ -1,39 +1,212 @@
 /* Skeleton component styles using design tokens */
 
+
 .skeleton {
-  background-color: var(--token-component-skeleton-text-background);
-  border-radius: var(--token-semantic-radius-sm);
-  animation: pulse 1.5s ease-in-out infinite;
+  display: flex;
+  gap: var(--token-semantic-gap-md, 16px);
+  width: 100%;
 }
 
-@keyframes pulse {
-  0%, 100% {
+.skeleton.active {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.text {
-  height: var(--token-semantic-typography-body-line-md);
-  background-color: var(--token-component-skeleton-text-background);
+.skeleton.round .title,
+.skeleton.round .paragraph li {
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
 }
 
-.background {
-  background-color: var(--token-component-skeleton-text-background);
+/* Avatar */
+.avatar {
+  flex-shrink: 0;
+  background: var(--token-component-skeleton-background, #f2f2f2);
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  width: var(--token-component-skeleton-avatar-size-default, 40px);
+  height: var(--token-component-skeleton-avatar-size-default, 40px);
 }
 
-.circular {
-  width: var(--token-semantic-icon-md);
-  height: var(--token-semantic-icon-md);
-  border-radius: var(--token-semantic-radius-full);
-  background-color: var(--token-component-skeleton-circular-background);
+.avatar.active {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
 }
 
-.rectangular {
+.avatarCircle {
+  border-radius: 50%;
+}
+
+.avatarSquare {
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+}
+
+.avatarLarge {
+  width: var(--token-component-skeleton-avatar-size-large, 48px);
+  height: var(--token-component-skeleton-avatar-size-large, 48px);
+}
+
+.avatarSmall {
+  width: var(--token-component-skeleton-avatar-size-small, 24px);
+  height: var(--token-component-skeleton-avatar-size-small, 24px);
+}
+
+/* Content wrapper */
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-semantic-gap-xs, 8px);
+}
+
+/* Title */
+.title {
+  background: var(--token-component-skeleton-background, #f2f2f2);
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  height: var(--token-component-skeleton-title-height, 16px);
+  width: var(--token-component-skeleton-title-width, 38%);
+}
+
+.skeleton.active .title {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+/* Paragraph */
+.paragraph {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-semantic-gap-xs, 8px);
+}
+
+.paragraph li {
+  background: var(--token-component-skeleton-background, #f2f2f2);
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  height: var(--token-component-skeleton-paragraph-line-height, 16px);
   width: 100%;
-  height: var(--token-semantic-control-height-md);
-  background-color: var(--token-component-skeleton-rectangular-background);
-  border-radius: var(--token-semantic-radius-sm);
+}
+
+.paragraph li:last-child {
+  width: var(--token-component-skeleton-paragraph-last-width, 61%);
+}
+
+.skeleton.active .paragraph li {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background: var(--token-component-skeleton-background, #f2f2f2);
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  height: var(--token-component-skeleton-button-height-default, 32px);
+  width: var(--token-component-skeleton-button-width-default, 64px);
+}
+
+.button.active {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+.buttonBlock {
+  display: block;
+  width: 100%;
+}
+
+.buttonCircle {
+  border-radius: 50%;
+  width: var(--token-component-skeleton-button-height-default, 32px);
+  height: var(--token-component-skeleton-button-height-default, 32px);
+}
+
+.buttonRound {
+  border-radius: calc(var(--token-component-skeleton-button-height-default, 32px) * 0.5);
+}
+
+.buttonSquare {
+  border-radius: 0;
+}
+
+.buttonLarge {
+  height: var(--token-component-skeleton-button-height-large, 40px);
+  width: var(--token-component-skeleton-button-width-large, 80px);
+}
+
+.buttonSmall {
+  height: var(--token-component-skeleton-button-height-small, 24px);
+  width: var(--token-component-skeleton-button-width-small, 48px);
+}
+
+.buttonLarge.buttonCircle {
+  width: var(--token-component-skeleton-button-height-large, 40px);
+  height: var(--token-component-skeleton-button-height-large, 40px);
+}
+
+.buttonSmall.buttonCircle {
+  width: var(--token-component-skeleton-button-height-small, 24px);
+  height: var(--token-component-skeleton-button-height-small, 24px);
+}
+
+/* Image */
+.image {
+  background: var(--token-component-skeleton-background, #f2f2f2);
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image.active {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+.image::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: var(--token-component-skeleton-image-icon-background, rgba(0, 0, 0, 0.06));
+  border-radius: 50%;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+/* Input */
+.input {
+  display: inline-block;
+  background: var(--token-component-skeleton-background, #f2f2f2);
+  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  height: var(--token-component-skeleton-input-height-default, 32px);
+  width: var(--token-component-skeleton-input-width-default, 200px);
+}
+
+.input.active {
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+.inputBlock {
+  display: block;
+  width: 100%;
+}
+
+.inputLarge {
+  height: var(--token-component-skeleton-input-height-large, 40px);
+}
+
+.inputSmall {
+  height: var(--token-component-skeleton-input-height-small, 24px);
 }

@@ -1,0 +1,159 @@
+/* Notification component styles using design tokens */
+
+
+.notification {
+  display: flex;
+  gap: var(--token-semantic-gap-md, 16px);
+  padding: var(--token-component-notification-padding, 16px 24px);
+  background-color: var(--token-component-notification-background, #fff);
+  border-radius: calc(var(--token-component-notification-radius, 8px) * 1px);
+  box-shadow: var(--token-component-notification-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
+  min-width: var(--token-component-notification-min-width, 384px);
+  max-width: var(--token-component-notification-max-width, 384px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+.notification.closing {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.notification.clickable {
+  cursor: pointer;
+}
+
+.notification.clickable:hover {
+  box-shadow: var(--token-component-notification-shadow-hover, 0 8px 20px 0 rgba(0, 0, 0, 0.12), 0 4px 8px -4px rgba(0, 0, 0, 0.16), 0 12px 32px 12px rgba(0, 0, 0, 0.08));
+}
+
+/* Placement animations */
+.notification.topLeft {
+  transform: translateX(0);
+}
+
+.notification.topLeft.closing {
+  transform: translateX(-100%);
+}
+
+.notification.topRight {
+  transform: translateX(0);
+}
+
+.notification.topRight.closing {
+  transform: translateX(100%);
+}
+
+.notification.bottomLeft {
+  transform: translateX(0);
+}
+
+.notification.bottomLeft.closing {
+  transform: translateX(-100%);
+}
+
+.notification.bottomRight {
+  transform: translateX(0);
+}
+
+.notification.bottomRight.closing {
+  transform: translateX(100%);
+}
+
+/* Icon */
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: var(--token-component-notification-icon-size, 24px);
+  margin-top: var(--token-component-notification-icon-margin-top, 2px);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.message {
+  font-size: var(--token-component-notification-message-font-size, 16px);
+  font-weight: var(--token-component-notification-message-font-weight, 600);
+  line-height: var(--token-component-notification-message-line-height, 1.5);
+  color: var(--token-component-notification-message-color, rgba(0, 0, 0, 0.85));
+  margin: 0;
+  margin-bottom: var(--token-component-notification-description-margin-top, 8px);
+}
+
+.description {
+  font-size: var(--token-component-notification-description-font-size, 14px);
+  line-height: var(--token-component-notification-description-line-height, 1.5715);
+  color: var(--token-component-notification-description-color, rgba(0, 0, 0, 0.65));
+  margin: 0;
+  margin-top: var(--token-component-notification-description-margin-top, 8px);
+}
+
+.btn {
+  margin-top: var(--token-component-notification-btn-margin-top, 16px);
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: var(--token-component-notification-close-top, 16px);
+  right: var(--token-component-notification-close-right, 16px);
+  background: none;
+  border: none;
+  color: var(--token-component-notification-close-color, rgba(0, 0, 0, 0.45));
+  cursor: pointer;
+  font-size: var(--token-component-notification-close-size, 12px);
+  line-height: 1;
+  padding: 0;
+  width: var(--token-component-notification-close-width, 22px);
+  height: var(--token-component-notification-close-height, 22px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--token-component-notification-close-radius, 2px) * 1px);
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.close:hover {
+  background-color: var(--token-component-notification-close-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-notification-close-color-hover, rgba(0, 0, 0, 0.85));
+}
+
+.close:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Container */
+.container {
+  position: fixed;
+  z-index: 1010;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 384px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notification {
+    min-width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+  }
+  
+  .container {
+    max-width: calc(100vw - 48px);
+  }
+}

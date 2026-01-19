@@ -1,0 +1,57 @@
+{
+  "$name": "Semantic Tokens",
+  "background.active.accent.subtle.hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{blue-opacity.5}",
+    "$description": "Subtle hover state background using brand-700 (blue) at 5% opacity. Use for buttons on colored backgrounds where a subtle accent tint is preferred.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "primary-buttons",
+          "accent-interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.active.accent.subtle.pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{blue-opacity.8}",
+    "$description": "Subtle pressed state background using brand-700 (blue) at 8% opacity. Use for buttons on colored backgrounds where a subtle accent tint is preferred.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "primary-buttons",
+          "accent-interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

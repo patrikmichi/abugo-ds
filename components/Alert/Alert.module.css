@@ -1,45 +1,153 @@
 /* Alert component styles using design tokens */
+/* Based on Figma designs with filled and outlined variants */
 
 .alert {
-  padding: var(--token-component-padding-x-alert-lg);
-  border-radius: var(--token-semantic-radius-md);
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: var(--token-semantic-gap-xs);
+  align-items: center;
+  gap: var(--token-component-alert-gap, 12px);
+  min-height: var(--token-component-alert-min-height-small, 48px);
+  padding-left: var(--token-component-alert-padding-x-small, 16px);
+  padding-right: var(--token-component-alert-padding-x-small, 16px);
+  padding-top: calc(var(--token-component-alert-padding-y-small, 12px) + var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  padding-bottom: calc(var(--token-component-alert-padding-y-small, 12px) - var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  border: none;
+  border-radius: calc(var(--token-component-radius-alert-sm) * 1px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-alert-font-size-small, 14px);
+  transition: opacity var(--token-component-animation-alert-duration, 300ms) var(--token-component-animation-alert-easing, ease), transform var(--token-component-animation-alert-duration, 300ms) var(--token-component-animation-alert-easing, ease);
 }
 
-.success {
-  background-color: var(--token-component-alert-success-content-background);
-  color: var(--token-component-alert-success-content-content);
+.alert.closing {
+  opacity: 0;
+  transform: var(--token-component-animation-alert-transform-close, scale(0.95));
 }
 
-.success .icon {
-  color: var(--token-component-alert-icon);
+/* Size variants */
+.alert.small {
+  min-height: var(--token-component-alert-min-height-small, 48px);
+  padding-left: var(--token-component-alert-padding-x-small, 16px);
+  padding-right: var(--token-component-alert-padding-x-small, 16px);
+  padding-top: calc(var(--token-component-alert-padding-y-small, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-alert-padding-y-small, 12px) - 1px);
+  font-size: var(--token-component-alert-font-size-small, 14px);
+  border-radius: calc(var(--token-component-radius-alert-sm) * 1px);
 }
 
-.danger {
-  background-color: var(--token-component-alert-danger-content-background);
-  color: var(--token-component-alert-danger-content-content);
+.alert.large {
+  min-height: var(--token-component-alert-min-height-large, 64px);
+  padding-left: var(--token-component-alert-padding-x-large, 20px);
+  padding-right: var(--token-component-alert-padding-x-large, 20px);
+  padding-top: calc(var(--token-component-padding-y-field-lg, 16px) + var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  padding-bottom: calc(var(--token-component-padding-y-field-lg, 16px) - var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  font-size: var(--token-component-alert-font-size-large, 16px);
+  border-radius: calc(var(--token-component-radius-alert-lg) * 1px);
 }
 
-.danger .icon {
-  color: var(--token-component-alert-danger-icon);
+/* Success */
+.alert.success {
+  background-color: var(--token-semantic-background-passive-success-subtle, #eaf9e8);
+  color: var(--token-semantic-content-passive-neutral-default, rgba(0, 0, 0, 0.85));
 }
 
-.warning {
-  background-color: var(--token-component-alert-warning-content-background);
-  color: var(--token-component-alert-warning-content-content);
+.alert.success .icon {
+  color: var(--token-semantic-content-passive-success, #32c21a);
 }
 
-.info {
-  background-color: var(--token-component-alert-info-content-background);
-  color: var(--token-component-alert-info-content-content);
+/* Info */
+.alert.info {
+  background-color: var(--token-semantic-background-passive-info-subtle, #e6eaed);
+  color: var(--token-semantic-content-passive-neutral-default, rgba(0, 0, 0, 0.85));
 }
 
+.alert.info .icon {
+  color: var(--token-semantic-content-passive-info, #042a47);
+}
+
+/* Warning */
+.alert.warning {
+  background-color: var(--token-semantic-background-passive-warning-subtle, #fdf3e5);
+  color: var(--token-semantic-content-passive-neutral-default, rgba(0, 0, 0, 0.85));
+}
+
+.alert.warning .icon {
+  color: var(--token-semantic-content-passive-warning, #ed8400);
+}
+
+/* Error */
+.alert.error {
+  background-color: var(--token-semantic-background-passive-danger-subtle, #fff0f1);
+  color: var(--token-semantic-content-passive-neutral-default, rgba(0, 0, 0, 0.85));
+}
+
+.alert.error .icon {
+  color: var(--token-semantic-content-passive-danger, #ff434e);
+}
+
+/* Wrapper for icon and content to align them together */
+.iconAndContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-alert-gap, 12px);
+  min-width: 0;
+}
+
+
+
+/* Icon */
 .icon {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
 }
 
+.alert.small .icon .material-symbols-outlined,
+.alert.large .icon .material-symbols-outlined {
+  font-size: var(--token-component-icon-alert, 24px);
+  width: var(--token-component-icon-alert, 24px);
+  height: var(--token-component-icon-alert, 24px);
+}
+
+/* Content */
 .content {
   flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-alert-content-gap, 4px);
+}
+
+.message {
+  font-size: var(--token-component-font-size-alert-message, 16px);
+  line-height: var(--token-component-line-height-alert-message, 24px);
+  font-weight: var(--token-primitive-typography-font-weight-regular, 400);
+  color: inherit;
+}
+
+.alert.hasDescription .message {
+  font-weight: var(--token-primitive-typography-font-weight-semibold, 600);
+}
+
+.description {
+  font-size: var(--token-component-alert-description-font-size, 14px);
+  line-height: var(--token-component-alert-description-line-height, 20px);
+  font-weight: var(--token-primitive-typography-font-weight-regular, 400);
+  color: inherit;
+  opacity: var(--token-component-alert-description-opacity, 0.8);
+}
+
+/* Action */
+.action {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Close button - uses Button component with plain appearance */
+.close {
+  flex-shrink: 0;
+  align-self: center;
 }

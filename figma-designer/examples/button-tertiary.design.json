@@ -1,0 +1,2060 @@
+{
+  "meta": {
+    "name": "Button/Tertiary",
+    "reactComponent": "Button.tsx",
+    "version": "1.0.0",
+    "generatedAt": "2026-01-19T17:50:24.476Z"
+  },
+  "variables": {
+    "Components/Button/Tertiary": {
+      "modes": [
+        {
+          "id": "default",
+          "name": "Default"
+        }
+      ],
+      "variables": [
+        {
+          "cssVar": "--button-tertiary-plain-bg-default",
+          "figmaName": "button/tertiary/plain/background/default",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-content-default",
+          "figmaName": "button/tertiary/plain/content/default",
+          "type": "COLOR",
+          "value": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 0.12,
+            "a": 1
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-bg-hover",
+          "figmaName": "button/tertiary/plain/background/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 0.12,
+            "a": 0.08
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-content-hover",
+          "figmaName": "button/tertiary/plain/content/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 0.05,
+            "g": 0.05,
+            "b": 0.08,
+            "a": 1
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-bg-disabled",
+          "figmaName": "button/tertiary/plain/background/disabled",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-content-disabled",
+          "figmaName": "button/tertiary/plain/content/disabled",
+          "type": "COLOR",
+          "value": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 0.12,
+            "a": 0.4
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-bg-pressed",
+          "figmaName": "button/tertiary/plain/background/pressed",
+          "type": "COLOR",
+          "value": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 0.12,
+            "a": 0.12
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-content-pressed",
+          "figmaName": "button/tertiary/plain/content/pressed",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0.02,
+            "a": 1
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-bg-loading",
+          "figmaName": "button/tertiary/plain/background/loading",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-tertiary-plain-content-loading",
+          "figmaName": "button/tertiary/plain/content/loading",
+          "type": "COLOR",
+          "value": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 0.12,
+            "a": 1
+          },
+          "collection": "Components/Button/Tertiary"
+        },
+        {
+          "cssVar": "--button-height-sm",
+          "figmaName": "button/height/sm",
+          "type": "FLOAT",
+          "value": 32,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-padding-sm",
+          "figmaName": "button/padding/sm",
+          "type": "FLOAT",
+          "value": 12,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-gap-sm",
+          "figmaName": "button/gap/sm",
+          "type": "FLOAT",
+          "value": 6,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-radius-sm",
+          "figmaName": "button/radius/sm",
+          "type": "FLOAT",
+          "value": 6,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-height-md",
+          "figmaName": "button/height/md",
+          "type": "FLOAT",
+          "value": 40,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-padding-md",
+          "figmaName": "button/padding/md",
+          "type": "FLOAT",
+          "value": 16,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-gap-md",
+          "figmaName": "button/gap/md",
+          "type": "FLOAT",
+          "value": 8,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-radius-md",
+          "figmaName": "button/radius/md",
+          "type": "FLOAT",
+          "value": 8,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-height-lg",
+          "figmaName": "button/height/lg",
+          "type": "FLOAT",
+          "value": 48,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-padding-lg",
+          "figmaName": "button/padding/lg",
+          "type": "FLOAT",
+          "value": 20,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-gap-lg",
+          "figmaName": "button/gap/lg",
+          "type": "FLOAT",
+          "value": 10,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-radius-lg",
+          "figmaName": "button/radius/lg",
+          "type": "FLOAT",
+          "value": 10,
+          "collection": "Components/Button"
+        }
+      ]
+    }
+  },
+  "componentSet": {
+    "name": "Button/Tertiary",
+    "variantProperties": [
+      {
+        "name": "State",
+        "values": [
+          "default",
+          "hover",
+          "disabled",
+          "pressed",
+          "loading"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "default"
+      },
+      {
+        "name": "Icon",
+        "values": [
+          "none",
+          "left",
+          "right",
+          "only"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "none"
+      },
+      {
+        "name": "Size",
+        "values": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "md"
+      }
+    ],
+    "overridables": [
+      {
+        "name": "Text",
+        "type": "TEXT",
+        "target": "Label",
+        "defaultValue": "Button"
+      },
+      {
+        "name": "Icon",
+        "type": "INSTANCE_SWAP",
+        "target": "Icon"
+      }
+    ],
+    "validCombinations": {
+      "tertiary": [
+        "plain"
+      ]
+    },
+    "variants": [
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/default",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/hover",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/hover",
+            "fallback": {
+              "r": 0.05,
+              "g": 0.05,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/disabled",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/pressed",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/pressed",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0.02,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "sm"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "md"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "lg"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/tertiary/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/tertiary/plain/content/loading",
+            "fallback": {
+              "r": 0.1,
+              "g": 0.1,
+              "b": 0.12,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      }
+    ]
+  },
+  "layout": {
+    "mode": "HORIZONTAL",
+    "primaryAxisAlignItems": "CENTER",
+    "counterAxisAlignItems": "CENTER",
+    "itemSpacing": "gap/button/icon/md",
+    "padding": {
+      "top": 0,
+      "right": "padding/button/md",
+      "bottom": 0,
+      "left": "padding/button/md"
+    },
+    "children": [
+      {
+        "role": "startIcon",
+        "name": "Icon",
+        "order": "start",
+        "type": "FRAME",
+        "visible": false
+      },
+      {
+        "role": "label",
+        "name": "Label",
+        "order": "center",
+        "type": "TEXT",
+        "visible": true
+      },
+      {
+        "role": "endIcon",
+        "name": "Icon",
+        "order": "end",
+        "type": "FRAME",
+        "visible": false
+      },
+      {
+        "role": "loading",
+        "name": "Spinner",
+        "order": "center",
+        "type": "FRAME",
+        "visible": false
+      }
+    ],
+    "sizing": {
+      "width": "HUG",
+      "height": "FIXED"
+    }
+  },
+  "layoutVariants": {
+    "iconOnly": {
+      "children": [
+        {
+          "role": "icon",
+          "name": "Icon",
+          "order": "center",
+          "type": "FRAME",
+          "visible": true
+        }
+      ],
+      "sizing": {
+        "width": "FIXED",
+        "height": "FIXED"
+      }
+    },
+    "iconStart": {
+      "children": [
+        {
+          "role": "startIcon",
+          "name": "Icon",
+          "order": "start",
+          "type": "FRAME",
+          "visible": true
+        },
+        {
+          "role": "label",
+          "name": "Label",
+          "order": "center",
+          "type": "TEXT",
+          "visible": true
+        }
+      ]
+    },
+    "iconEnd": {
+      "children": [
+        {
+          "role": "label",
+          "name": "Label",
+          "order": "center",
+          "type": "TEXT",
+          "visible": true
+        },
+        {
+          "role": "endIcon",
+          "name": "Icon",
+          "order": "end",
+          "type": "FRAME",
+          "visible": true
+        }
+      ]
+    },
+    "loading": {
+      "children": [
+        {
+          "role": "loading",
+          "name": "Spinner",
+          "order": "center",
+          "type": "ELLIPSE",
+          "visible": true
+        }
+      ]
+    }
+  }
+}

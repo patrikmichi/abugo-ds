@@ -105,5 +105,135 @@
         "$value": "{content.passive.info}"
       }
     }
+  },
+  "content": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "description": {
+    "font": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    },
+    "line": {
+      "height": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "lineHeights",
+        "$value": "{typography.lineHeight.16}",
+        "$collectionName": "primitives"
+      }
+    },
+    "opacity": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "number",
+      "$value": 0.5,
+      "$collectionName": ""
+    }
+  },
+  "font": {
+    "size": {
+      "large": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      },
+      "small": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    }
+  },
+  "gap": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "spacing",
+    "$value": "{padding.s}",
+    "$collectionName": "semanticTokens"
+  },
+  "min": {
+    "height": {
+      "large": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "dimension",
+        "$value": 40,
+        "$collectionName": ""
+      },
+      "small": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "dimension",
+        "$value": 40,
+        "$collectionName": ""
+      }
+    }
+  },
+  "padding": {
+    "x": {
+      "large": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "small": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "y": {
+      "small": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    }
   }
 }

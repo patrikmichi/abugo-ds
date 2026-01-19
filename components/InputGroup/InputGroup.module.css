@@ -4,6 +4,8 @@
   display: flex;
   align-items: stretch;
   width: 100%;
+  /* Fixed height - set per size variant */
+  height: var(--token-component-height-field-md);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   background-color: var(--token-component-field-control-background-default);
@@ -97,6 +99,7 @@
 }
 
 .inputGroup.lg {
+  height: var(--token-component-height-field-lg);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
 }
 

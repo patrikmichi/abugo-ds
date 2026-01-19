@@ -54,5 +54,13 @@
       "width": "{border-width-2}",
       "style": "solid"
     }
+  },
+  "border-color-default": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "color",
+    "$value": "{grey.300}"
   }
 }

@@ -79,5 +79,359 @@
       "$collectionName": "semanticTokens",
       "$value": "{background.active.accent.default}"
     }
+  },
+  "add": {
+    "button": {
+      "background": {
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{background.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "border": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "color": {
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{background.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "padding": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "radius": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "borderRadius",
+        "$value": "{radius.sm}",
+        "$collectionName": "semanticTokens"
+      },
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "dimension",
+        "$value": 40,
+        "$collectionName": ""
+      }
+    }
+  },
+  "border": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "color",
+    "$value": "{border.active.neutral.control.field.default}",
+    "$collectionName": "semanticTokens"
+  },
+  "card": {
+    "background": {
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "border": {
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "color": {
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "spacing",
+      "$value": "{padding.s}",
+      "$collectionName": "semanticTokens"
+    },
+    "radius": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "borderRadius",
+      "$value": "{radius.sm}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "close": {
+    "background": {
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "margin": {
+      "left": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "size": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    }
+  },
+  "content": {
+    "min": {
+      "height": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{content.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "padding": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "icon": {
+    "font": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    }
+  },
+  "indicator": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{background.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    },
+    "height": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    }
+  },
+  "tab": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{background.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    },
+    "color": {
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "font": {
+      "size": {
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "fontSizes",
+          "$value": "{typography.fontSize.3}",
+          "$collectionName": "primitives"
+        },
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "fontSizes",
+          "$value": "{typography.fontSize.3}",
+          "$collectionName": "primitives"
+        }
+      },
+      "weight": {
+        "active": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "fontWeights",
+          "$value": 600,
+          "$collectionName": "primitives"
+        }
+      }
+    },
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "spacing",
+      "$value": "{padding.s}",
+      "$collectionName": "semanticTokens"
+    },
+    "inner": {
+      "gap": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "padding": {
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "transition": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "number",
+      "$value": 200,
+      "$collectionName": ""
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "string",
+      "$value": "ease-out",
+      "$collectionName": ""
+    }
   }
 }

@@ -261,40 +261,94 @@
         "$description": "Bold font weight. Use for maximum emphasis."
       }
     },
-    "optical": {
-      "alignment": {
-        "offset": {
-          "sm": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "spacing",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{spacing-1}",
-            "$description": "Optical alignment offset for small text (4px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields. Reduces padding-top and increases padding-bottom to compensate for visual space under text."
-          },
-          "md": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "spacing",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{spacing-1}",
-            "$description": "Optical alignment offset for medium text (4px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields."
-          },
-          "lg": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "spacing",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{spacing-2}",
-            "$description": "Optical alignment offset for large text (8px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields."
-          }
+    "visual": {
+      "compensation": {
+        "offset-1": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "1px",
+          "$description": "Level 1 visual compensation (1px shift). Use for fine-tuning vertical centering of text in containers."
+        },
+        "offset-2": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "2px",
+          "$description": "Level 2 visual compensation (2px shift). Use for fine-tuning vertical centering of text in containers."
+        },
+        "offset-3": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "3px",
+          "$description": "Level 3 visual compensation (3px shift). Use for fine-tuning vertical centering of text in containers."
         }
+      }
+    }
+  },
+  "color": {
+    "headline": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.strong}",
+      "$description": "Color for headline text. Use for all heading levels (h1-h6)."
+    },
+    "body": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Default color for body text. Use for standard paragraphs and body content."
+      },
+      "subtle": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.subtle}",
+        "$description": "Subtle color for secondary body text. Use for less prominent content, captions, or helper text."
+      }
+    },
+    "link": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}",
+        "$description": "Default color for link text. Use for standard links and interactive text."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.hover}",
+        "$description": "Hover color for link text. Use for link hover states."
       }
     }
   }

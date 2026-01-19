@@ -1,0 +1,119 @@
+/* Menu component styles using design tokens */
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: var(--token-component-menu-padding);
+  background-color: var(--token-component-menu-background-default);
+  border-radius: calc(var(--token-component-menu-radius) * 1px);
+  box-shadow: var(--token-component-menu-shadow);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  min-width: var(--token-component-menu-min-width);
+}
+
+/* Mode variants */
+.menu.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu.inline {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Theme variants */
+.menu.light {
+  background-color: var(--token-component-menu-background-light);
+}
+
+.menu.dark {
+  background-color: var(--token-component-menu-background-dark);
+  color: var(--token-component-menu-color-dark);
+}
+
+/* Menu item */
+.item {
+  display: flex;
+  align-items: center;
+  padding: var(--token-component-menu-item-padding);
+  font-size: var(--token-component-font-size-menu-item);
+  line-height: var(--token-semantic-typography-body-line-md);
+  color: var(--token-component-menu-item-color-default);
+  cursor: pointer;
+  transition: all var(--token-component-menu-transition-duration) var(--token-component-menu-transition-easing);
+  user-select: none;
+  list-style: none;
+}
+
+.item:hover:not(.disabled) {
+  background-color: var(--token-component-menu-item-background-hover);
+}
+
+.item.selected {
+  background-color: var(--token-component-menu-item-background-selected);
+  color: var(--token-component-menu-item-color-selected);
+  font-weight: var(--token-component-menu-item-font-weight-selected);
+}
+
+.item.disabled {
+  color: var(--token-component-menu-item-color-disabled);
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.item.disabled:hover {
+  background-color: transparent;
+}
+
+.item.danger {
+  color: var(--token-component-menu-item-color-danger);
+}
+
+.item.danger:hover:not(.disabled) {
+  background-color: var(--token-component-menu-item-background-danger-hover);
+}
+
+.item.danger.selected {
+  background-color: var(--token-component-menu-item-background-danger-selected);
+  color: var(--token-component-menu-item-color-danger-selected, var(--token-component-menu-item-color-danger));
+}
+
+/* Icon */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--token-component-menu-icon-margin-right);
+  font-size: var(--token-component-menu-icon-size);
+  width: var(--token-component-menu-icon-size);
+  height: var(--token-component-menu-icon-size);
+  flex-shrink: 0;
+}
+
+/* Content */
+.content {
+  flex: 1;
+}
+
+/* Dark theme adjustments */
+.menu.dark .item {
+  color: var(--token-component-menu-item-color-dark, var(--token-component-menu-color-dark));
+}
+
+.menu.dark .item:hover:not(.disabled) {
+  background-color: var(--token-component-menu-item-background-hover-dark, var(--token-component-menu-item-background-hover));
+}
+
+.menu.dark .item.selected {
+  background-color: var(--token-component-menu-item-background-selected-dark, var(--token-component-menu-item-background-selected));
+  color: var(--token-component-menu-item-color-selected-dark, var(--token-component-menu-item-color-selected));
+}
+
+.menu.dark .item.disabled {
+  color: var(--token-component-menu-item-color-disabled-dark, var(--token-component-menu-item-color-disabled));
+}

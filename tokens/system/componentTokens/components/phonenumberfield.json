@@ -1,0 +1,15 @@
+{
+  "$name": "Component Tokens",
+  "$description": "PhoneNumberField component tokens. Shares most tokens with field.json. Only includes country selector-specific tokens.",
+  "country-selector": {
+    "width": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{sizing.xl}"
+    }
+  }
+}

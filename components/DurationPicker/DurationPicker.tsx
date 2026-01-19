@@ -164,16 +164,15 @@ export function DurationPicker({
         aria-label={expanded ? 'Collapse duration picker' : 'Expand duration picker'}
         aria-expanded={expanded}
       >
-        <svg
-          width="12"
-          height="12"
-          viewBox="0 0 12 12"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={cn(styles.chevron, expanded && styles.chevronExpanded)}
-        >
-          <path d="M6 9L1 4h10z" fill="currentColor" />
-        </svg>
+        <span className="material-symbols-outlined" style={{ 
+          fontSize: 'var(--token-primitive-icon-size-icon-size-1)', 
+          display: 'inline-flex', 
+          alignItems: 'center',
+          transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
+          transition: 'transform 0.2s ease'
+        }}>
+          expand_more
+        </span>
       </button>
       </div>
     </div>

@@ -80,6 +80,14 @@ const config: StorybookConfig = {
       },
       // Ensure MDX files are handled correctly
       assetsInclude: ['**/*.mdx'],
+      // Serve token JSON files as static assets
+      publicDir: path.resolve(projectRoot, 'public'),
+      // Configure static asset serving for tokens
+      server: {
+        fs: {
+          allow: [projectRoot],
+        },
+      },
     });
   },
 };

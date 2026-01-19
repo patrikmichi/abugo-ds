@@ -19,6 +19,9 @@ const meta: Meta<typeof Button> = {
   component: Button,
   parameters: {
     layout: 'padded',
+    tokens: {
+      componentName: 'Button',
+    },
   },
   argTypes: {
     variant: {
@@ -532,40 +535,42 @@ export const AriaAttributes: Story = {
  */
 export const AllVariants: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-      <div>
-        <h4 style={{ marginBottom: '1rem' }}>Primary</h4>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="primary" appearance="filled">Filled</Button>
-          <Button variant="primary" appearance="plain">Plain</Button>
+    <>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <div>
+          <h4 style={{ marginBottom: '1rem' }}>Primary</h4>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="primary" appearance="filled">Filled</Button>
+            <Button variant="primary" appearance="plain">Plain</Button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ marginBottom: '1rem' }}>Secondary</h4>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="secondary" appearance="outline">Outline</Button>
+            <Button variant="secondary" appearance="plain">Plain</Button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ marginBottom: '1rem' }}>Tertiary</h4>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="tertiary" appearance="outline">Outline</Button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ marginBottom: '1rem' }}>Danger</h4>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="danger" appearance="filled">Filled</Button>
+            <Button variant="danger" appearance="plain">Plain</Button>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ marginBottom: '1rem' }}>Upgrade</h4>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="upgrade" appearance="filled">Filled</Button>
+          </div>
         </div>
       </div>
-      <div>
-        <h4 style={{ marginBottom: '1rem' }}>Secondary</h4>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="secondary" appearance="outline">Outline</Button>
-          <Button variant="secondary" appearance="plain">Plain</Button>
-        </div>
-      </div>
-      <div>
-        <h4 style={{ marginBottom: '1rem' }}>Tertiary</h4>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="tertiary" appearance="outline">Outline</Button>
-        </div>
-      </div>
-      <div>
-        <h4 style={{ marginBottom: '1rem' }}>Danger</h4>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="danger" appearance="filled">Filled</Button>
-          <Button variant="danger" appearance="plain">Plain</Button>
-        </div>
-      </div>
-      <div>
-        <h4 style={{ marginBottom: '1rem' }}>Upgrade</h4>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="upgrade" appearance="filled">Filled</Button>
-        </div>
-      </div>
-    </div>
+    </>
   ),
 };

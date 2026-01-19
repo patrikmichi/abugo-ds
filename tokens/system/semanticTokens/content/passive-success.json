@@ -27,5 +27,12 @@
         "replacedBy": null
       }
     }
+  },
+  "content.passive.success.default": {
+    "$scopes": ["SHAPE_FILL", "TEXT_FILL"],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}"
   }
 }

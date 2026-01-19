@@ -183,6 +183,15 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{content.passive.neutral.muted}"
+    },
+    "disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
     }
   },
   "control": {
@@ -251,6 +260,24 @@
         "$libraryName": "",
         "$collectionName": "semanticTokens",
         "$value": "{background.passive.neutral.elevated}"
+      },
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
       }
     }
   },

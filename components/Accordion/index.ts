@@ -1,1 +1,7 @@
-export { Accordion, type AccordionProps } from './Accordion';
+export {
+  Accordion,
+  type AccordionProps,
+  type AccordionPanelProps,
+  type AccordionSize,
+  type AccordionExpandIconPosition,
+} from './Accordion';

@@ -1,48 +1,194 @@
 /* Toast component styles using design tokens */
+/* Based on Figma designs with filled and outlined variants */
 
 .toast {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: var(--token-semantic-gap-sm);
-  padding: var(--token-component-padding-x-toast-md);
-  border-radius: var(--token-semantic-radius-md);
-  box-shadow: var(--token-semantic-shadow-lg);
-  min-width: 300px;
-  max-width: 500px;
+  align-items: stretch;
+  gap: var(--token-component-toast-gap, 12px);
+  min-height: var(--token-component-toast-min-height-small, 48px);
+  padding-left: var(--token-component-toast-padding-x-small, 16px);
+  padding-right: var(--token-component-toast-padding-x-small, 16px);
+  padding-top: calc(var(--token-component-toast-padding-y-small, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-toast-padding-y-small, 12px) - 1px);
+  border-radius: calc(var(--token-component-toast-radius, 8px) * 1px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-toast-small, 14px);
+  line-height: var(--token-component-line-height-toast-small, 1.5);
+  transition: opacity var(--token-component-animation-toast-duration, 300ms) var(--token-component-animation-toast-easing, ease), transform var(--token-component-animation-toast-duration, 300ms) var(--token-component-animation-toast-easing, ease);
+  box-shadow: var(--token-component-shadow-toast);
+  min-width: var(--token-component-toast-min-width, 300px);
+  max-width: var(--token-component-toast-max-width, 500px);
+  pointer-events: auto;
 }
 
-.info {
-  background-color: var(--token-component-toast-info-content-background);
-  color: var(--token-component-toast-info-content-content);
+.toast.closing {
+  opacity: 0;
+  transform: var(--token-component-animation-toast-transform-close, translateY(-10px));
 }
 
-.danger {
-  background-color: var(--token-component-toast-danger-content-background);
-  color: var(--token-component-toast-danger-content-content);
+/* Size variants */
+.toast.small {
+  min-height: var(--token-component-toast-min-height-small, 48px);
+  padding-left: var(--token-component-toast-padding-x-small, 16px);
+  padding-right: var(--token-component-toast-padding-x-small, 16px);
+  padding-top: calc(var(--token-component-toast-padding-y-small, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-toast-padding-y-small, 12px) - 1px);
+  font-size: var(--token-component-font-size-toast-small, 14px);
+  line-height: var(--token-component-line-height-toast-small, 1.5);
 }
 
+.toast.large {
+  min-height: var(--token-component-toast-min-height-large, 64px);
+  padding-left: var(--token-component-toast-padding-x-large, 20px);
+  padding-right: var(--token-component-toast-padding-x-large, 20px);
+  padding-top: calc(var(--token-component-toast-padding-y-large, 16px) + 1px);
+  padding-bottom: calc(var(--token-component-toast-padding-y-large, 16px) - 1px);
+  font-size: var(--token-component-font-size-toast-large, 16px);
+  line-height: var(--token-component-line-height-toast-large, 1.5);
+}
+
+/* Toast always uses filled (solid) variant */
+.toast {
+  border: none;
+}
+
+/* Success */
+.toast.success {
+  background-color: var(--token-semantic-background-passive-success-default, #32c21a);
+  color: var(--token-semantic-content-passive-on-success, #ffffff);
+}
+
+.toast.success .icon {
+  color: var(--token-semantic-content-passive-on-success, #ffffff);
+}
+
+.toast.success .close {
+  color: var(--token-semantic-content-passive-on-success, #ffffff);
+}
+
+/* Info */
+.toast.info {
+  background-color: var(--token-semantic-background-passive-info-default, #042a47);
+  color: var(--token-semantic-content-passive-on-info, #ffffff);
+}
+
+.toast.info .icon {
+  color: var(--token-semantic-content-passive-on-info, #ffffff);
+}
+
+.toast.info .close {
+  color: var(--token-semantic-content-passive-on-info, #ffffff);
+}
+
+/* Warning */
+.toast.warning {
+  background-color: var(--token-semantic-background-passive-warning-default, #ed8400);
+  color: var(--token-semantic-content-passive-on-warning, #ffffff);
+}
+
+.toast.warning .icon {
+  color: var(--token-semantic-content-passive-on-warning, #ffffff);
+}
+
+.toast.warning .close {
+  color: var(--token-semantic-content-passive-on-warning, #ffffff);
+}
+
+/* Error */
+.toast.error {
+  background-color: var(--token-semantic-background-passive-danger-default, #ff434e);
+  color: var(--token-semantic-content-passive-on-danger, #ffffff);
+}
+
+.toast.error .icon {
+  color: var(--token-semantic-content-passive-on-danger, #ffffff);
+}
+
+.toast.error .close {
+  color: var(--token-semantic-content-passive-on-danger, #ffffff);
+}
+
+/* Loading */
+.toast.loading {
+  background-color: var(--token-semantic-background-passive-info-default, #042a47);
+  color: var(--token-semantic-content-passive-on-info, #ffffff);
+}
+
+.toast.loading .icon {
+  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  animation: spin var(--token-component-animation-spinner-duration, 1000ms) var(--token-component-animation-spinner-easing, linear) infinite;
+}
+
+.toast.loading .close {
+  color: var(--token-semantic-content-passive-on-info, #ffffff);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icon */
 .icon {
   flex-shrink: 0;
-  color: var(--token-component-toast-icon);
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  /* Align icon with first line of content (heading) - accounts for padding compensation (+1px top) */
+  align-self: flex-start;
+  padding-top: calc(var(--token-component-toast-padding-y-small, 12px) + 1px);
 }
 
+.toast.large .icon {
+  padding-top: calc(var(--token-component-toast-padding-y-large, 16px) + 1px);
+}
+
+.toast.small .icon .material-symbols-outlined {
+  font-size: var(--token-component-icon-toast-small, 20px);
+  width: var(--token-component-icon-toast-small, 20px);
+  height: var(--token-component-icon-toast-small, 20px);
+}
+
+.toast.large .icon .material-symbols-outlined {
+  font-size: var(--token-component-icon-toast-large, 24px);
+  width: var(--token-component-icon-toast-large, 24px);
+  height: var(--token-component-icon-toast-large, 24px);
+}
+
+/* Content */
 .content {
   flex: 1;
-}
-
-.close {
-  background: none;
-  border: none;
+  min-width: 0;
+  word-wrap: break-word;
+  word-break: break-word;
   color: inherit;
-  cursor: pointer;
-  font-size: 20px;
-  line-height: 1;
-  padding: 0;
-  opacity: 0.7;
-  transition: opacity var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
 }
 
-.close:hover {
-  opacity: 1;
+/* Close button */
+.close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit !important;
+  align-self: center;
+}
+
+.toast.small .close .material-symbols-outlined {
+  font-size: var(--token-primitive-icon-size-icon-size-1, 16px);
+}
+
+.toast.large .close .material-symbols-outlined {
+  font-size: var(--token-primitive-icon-size-icon-size-2, 20px);
+}
+
+/* Ensure Button component inherits toast colors */
+.toast .close {
+  color: inherit !important;
 }

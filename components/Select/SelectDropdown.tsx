@@ -1,69 +1,189 @@
-import React, { useState, useRef, useEffect } from 'react';
-import styles from './SelectDropdown.module.css';
+import React, { useEffect, useRef, useState, useCallback, forwardRef, useImperativeHandle } from 'react';
+import { createPortal } from 'react-dom';
+import domAlign from 'dom-align';
 import { cn } from '@/lib/utils';
-
-export interface SelectOption {
-  value: string;
-  label: string;
-  disabled?: boolean;
-}
+import type { SelectOption } from './Select';
+import { SelectOption as SelectOptionComponent } from './SelectOption';
+import styles from './SelectDropdown.module.css';
 
 export interface SelectDropdownProps {
-  /** Whether the dropdown is open */
+  /** Whether dropdown is open */
   isOpen: boolean;
   /** Options to display */
   options: SelectOption[];
-  /** Selected value(s) - string for single select, string[] for multi-select */
+  /** Current value */
   value?: string | string[];
-  /** Callback when selection changes */
+  /** Callback when option is clicked */
   onChange?: (value: string | string[]) => void;
-  /** Callback when dropdown should close */
+  /** Callback when option is selected */
+  onSelect?: (value: string, option: SelectOption) => void;
+  /** Callback when dropdown closes */
   onClose?: () => void;
-  /** Whether to allow multiple selection */
-  multiple?: boolean;
-  /** Size variant */
+  /** Active index (controlled from parent) */
+  activeIndex?: number;
+  /** Callback when active index changes (from mouse hover) */
+  onActiveIndexChange?: (index: number) => void;
+  /** Size */
   size?: 'sm' | 'md' | 'lg';
-  /** Whether the field has a validation error */
+  /** Error state */
   error?: boolean;
-  /** Whether the field is disabled */
+  /** Disabled state */
   disabled?: boolean;
-  /** Placeholder text */
+  /** Placeholder */
   placeholder?: string;
-  /** Container ref for positioning */
+  /** Show search */
+  showSearch?: boolean;
+  /** Empty content (no results) */
+  emptyContent?: React.ReactNode;
+  /** Trigger ref for positioning */
   triggerRef?: React.RefObject<HTMLElement>;
+  /** Whether dropdown matches trigger width */
+  matchTriggerWidth?: boolean;
+  /** Custom class name */
+  dropdownClassName?: string;
+  /** Custom style */
+  dropdownStyle?: React.CSSProperties;
+  /** Get popup container */
+  getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement;
+  /** Whether to show checkboxes in options */
+  showCheckbox?: boolean;
 }
 
-export function SelectDropdown({
+export interface SelectDropdownRef {
+  scrollTo: (index: number) => void;
+}
+
+export const SelectDropdown = forwardRef<SelectDropdownRef, SelectDropdownProps>(({
   isOpen,
   options,
   value,
   onChange,
+  onSelect,
   onClose,
-  multiple = false,
+  activeIndex = -1,
+  onActiveIndexChange,
   size = 'md',
   error = false,
   disabled = false,
-  placeholder = 'Select...',
+  placeholder,
+  showSearch = false,
+  emptyContent = 'No data',
   triggerRef,
-}: SelectDropdownProps) {
-  const [pendingValue, setPendingValue] = useState<string | string[]>(value || (multiple ? [] : ''));
+  matchTriggerWidth = true,
+  dropdownClassName,
+  dropdownStyle,
+  getPopupContainer,
+  showCheckbox,
+}, ref) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownContentRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState<{ top: number; left: number; width?: number } | null>(null);
+  const optionRefs = useRef<Map<number, HTMLLIElement>>(new Map());
 
-  // Update pending value when value prop changes
+  const isMultiple = Array.isArray(value);
+
+  // Update position when dropdown opens
   useEffect(() => {
-    setPendingValue(value || (multiple ? [] : ''));
-  }, [value, multiple]);
+    if (!isOpen) {
+      setPosition(null);
+      return;
+    }
 
-  // Handle click outside
+    if (!triggerRef?.current) {
+      return;
+    }
+
+    const updatePosition = () => {
+      const trigger = triggerRef.current;
+      const dropdown = dropdownRef.current;
+      if (!trigger || !dropdown) return;
+
+      // Initially hide for measurement
+      dropdown.style.visibility = 'hidden';
+      dropdown.style.display = 'block';
+      dropdown.style.position = 'fixed';
+      dropdown.style.top = '-9999px';
+      dropdown.style.left = '-9999px';
+
+      const triggerRect = trigger.getBoundingClientRect();
+
+      // Calculate width
+      const width = matchTriggerWidth ? triggerRect.width : undefined;
+
+      // Get offset from CSS variable
+      const offsetVar = getComputedStyle(document.documentElement).getPropertyValue('--token-component-select-dropdown-offset') || '4px';
+      const offsetVal = parseInt(offsetVar, 10) || 4;
+
+      // Use dom-align for positioning
+      const alignConfig = {
+        points: ['tl', 'bl'] as [string, string],
+        offset: [0, offsetVal],
+        overflow: {
+          adjustX: true,
+          adjustY: true,
+          alwaysByViewport: true,
+        },
+        useCssTransform: false,
+        useCssRight: false,
+        useCssBottom: false,
+      };
+
+      domAlign(dropdown, trigger, alignConfig);
+
+      // Get final position
+      const computedStyle = window.getComputedStyle(dropdown);
+      const top = parseFloat(computedStyle.top) || triggerRect.bottom + offsetVal;
+      const left = parseFloat(computedStyle.left) || triggerRect.left;
+
+      setPosition({ top, left, width });
+      dropdown.style.visibility = 'visible';
+    };
+
+    // Use requestAnimationFrame to ensure DOM is ready
+    const rafId = requestAnimationFrame(() => {
+      updatePosition();
+      // Double-check after a microtask
+      setTimeout(updatePosition, 0);
+    });
+
+    const onScroll = (e: Event) => {
+      // Ignore scroll events from within the dropdown
+      if (dropdownRef.current && e.target instanceof Node && dropdownRef.current.contains(e.target)) {
+        return;
+      }
+      updatePosition();
+    };
+
+    window.addEventListener('resize', updatePosition);
+    window.addEventListener('scroll', onScroll, true);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('resize', updatePosition);
+      window.removeEventListener('scroll', onScroll, true);
+    };
+  }, [isOpen, triggerRef, matchTriggerWidth]);
+
+  // Expose scrollTo method via ref
+  useImperativeHandle(ref, () => ({
+    scrollTo: (index: number) => {
+      const optionElement = optionRefs.current.get(index);
+      if (optionElement && dropdownRef.current) {
+        optionElement.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    },
+  }));
+
+  // Click outside to close
   useEffect(() => {
     if (!isOpen) return;
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (e: MouseEvent) => {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node) &&
+        !dropdownRef.current.contains(e.target as Node) &&
         triggerRef?.current &&
-        !triggerRef.current.contains(event.target as Node)
+        !triggerRef.current.contains(e.target as Node)
       ) {
         onClose?.();
       }
@@ -73,122 +193,103 @@ export function SelectDropdown({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen, onClose, triggerRef]);
 
-  // Handle escape key
-  useEffect(() => {
-    if (!isOpen) return;
+  const handleOptionClick = useCallback(
+    (option: SelectOption) => {
+      if (option.disabled || disabled) return;
 
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose?.();
+      if (onSelect) {
+        onSelect(option.value, option);
+      } else if (onChange) {
+        if (isMultiple) {
+          const currentValues = Array.isArray(value) ? value : [];
+          if (currentValues.includes(option.value)) {
+            onChange(currentValues.filter((v) => v !== option.value));
+          } else {
+            onChange([...currentValues, option.value]);
+          }
+        } else {
+          onChange(option.value);
+          onClose?.();
+        }
       }
-    };
-
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, [isOpen, onClose]);
-
-  const handleItemClick = (optionValue: string) => {
-    if (multiple) {
-      const currentValues = Array.isArray(pendingValue) ? pendingValue : [];
-      const newValues = currentValues.includes(optionValue)
-        ? currentValues.filter(v => v !== optionValue)
-        : [...currentValues, optionValue];
-      setPendingValue(newValues);
-    } else {
-      setPendingValue(optionValue);
-    }
-  };
-
-  const handleSave = () => {
-    onChange?.(pendingValue);
-    onClose?.();
-  };
-
-  const handleCancel = () => {
-    setPendingValue(value || (multiple ? [] : ''));
-    onClose?.();
-  };
-
-  const isSelected = (optionValue: string) => {
-    if (multiple) {
-      return Array.isArray(pendingValue) && pendingValue.includes(optionValue);
-    }
-    return pendingValue === optionValue;
-  };
+    },
+    [disabled, isMultiple, value, onChange, onSelect, onClose]
+  );
 
   if (!isOpen) return null;
 
-  return (
+  const container = getPopupContainer && triggerRef?.current
+    ? getPopupContainer(triggerRef.current)
+    : document.body;
+
+  return createPortal(
     <div
       ref={dropdownRef}
-      className={cn(
-        styles.dropdown,
-        styles[size],
-        error && styles.error,
-        disabled && styles.disabled
-      )}
-      role="listbox"
-      aria-multiselectable={multiple}
+      className={cn(styles.dropdown, size && styles[size], dropdownClassName)}
+      style={{
+        ...dropdownStyle,
+        position: 'fixed',
+        top: position ? `${position.top}px` : '-9999px',
+        left: position ? `${position.left}px` : '-9999px',
+        width: position?.width ? `${position.width}px` : undefined,
+        visibility: position ? 'visible' : 'hidden',
+      }}
+      tabIndex={-1}
     >
-      <div className={styles.list}>
-        {options.map((option) => {
-          const selected = isSelected(option.value);
-          const isOptionDisabled = disabled || option.disabled;
+      <div
+        ref={dropdownContentRef}
+        className={styles.dropdownContent}
+        onWheel={(e) => {
+          // Allow wheel scrolling
+          e.stopPropagation();
+        }}
+        onTouchMove={(e) => {
+          // Allow touch scrolling
+          e.stopPropagation();
+        }}
+      >
+        {options.length === 0 ? (
+          <div className={styles.notFound}>{emptyContent}</div>
+        ) : (
+          <ul
+            className={styles.optionsList}
+            role="listbox"
+            id="select-dropdown-list"
+            aria-multiselectable={isMultiple}
+          >
+            {options.map((option, index) => {
+              const isSelected = isMultiple
+                ? Array.isArray(value) && value.includes(option.value)
+                : value === option.value;
+              const isActive = index === activeIndex;
 
-          return (
-            <div
-              key={option.value}
-              className={cn(
-                styles.item,
-                selected && styles.selected,
-                isOptionDisabled && styles.itemDisabled
-              )}
-              onClick={() => !isOptionDisabled && handleItemClick(option.value)}
-              role="option"
-              aria-selected={selected}
-              aria-disabled={isOptionDisabled}
-            >
-              <span className={styles.itemLabel}>{option.label}</span>
-              {selected && (
-                <svg
-                  className={styles.checkmark}
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <circle cx="8" cy="8" r="8" fill="currentColor" />
-                  <path
-                    d="M5 8L7 10L11 6"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              )}
-            </div>
-          );
-        })}
+              return (
+                <SelectOptionComponent
+                  key={option.value}
+                  ref={(el) => {
+                    if (el) {
+                      optionRefs.current.set(index, el);
+                    } else {
+                      optionRefs.current.delete(index);
+                    }
+                  }}
+                  option={option}
+                  isSelected={isSelected}
+                  isActive={isActive}
+                  disabled={disabled}
+                  size={size}
+                  showCheckbox={showCheckbox}
+                  onClick={handleOptionClick}
+                  onMouseEnter={() => onActiveIndexChange?.(index)}
+                />
+              );
+            })}
+          </ul>
+        )}
       </div>
-      <div className={styles.footer}>
-        <button
-          type="button"
-          className={styles.cancelButton}
-          onClick={handleCancel}
-        >
-          CANCEL
-        </button>
-        <button
-          type="button"
-          className={styles.saveButton}
-          onClick={handleSave}
-        >
-          Save
-        </button>
-      </div>
-    </div>
+    </div>,
+    container
   );
-}
+});
+
+SelectDropdown.displayName = 'SelectDropdown';

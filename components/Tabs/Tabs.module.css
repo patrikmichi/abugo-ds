@@ -1,48 +1,240 @@
 /* Tabs component styles using design tokens */
 
-.tabsContainer {
+
+.tabs {
   display: flex;
+  width: 100%;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+/* Position variants */
+.tabs.top {
   flex-direction: column;
 }
 
-.tabsList {
+.tabs.bottom {
+  flex-direction: column-reverse;
+}
+
+.tabs.left {
+  flex-direction: row;
+}
+
+.tabs.right {
+  flex-direction: row-reverse;
+}
+
+/* Tab list */
+.tabList {
   display: flex;
-  gap: var(--token-semantic-gap-xs);
-  border-bottom: var(--token-semantic-border-width-thin) solid var(--token-component-tabs-default-border-default);
   position: relative;
+  gap: var(--token-component-tabs-tab-gap);
 }
 
+.tabListTop {
+  border-bottom: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-border);
+  flex-direction: row;
+}
+
+.tabListBottom {
+  border-top: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-border);
+  flex-direction: row;
+}
+
+.tabListLeft {
+  border-right: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-border);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tabListRight {
+  border-left: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-border);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tab */
 .tab {
-  background-color: var(--token-component-tabs-default-background-default);
-  color: var(--token-component-tabs-default-content-default);
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-tabs-tab-inner-gap);
+  padding: var(--token-component-tabs-tab-padding);
+  background-color: var(--token-component-tabs-tab-background);
+  color: var(--token-component-tabs-tab-color));
   border: none;
-  padding: var(--token-semantic-padding-s) var(--token-semantic-padding-m);
   cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all var(--token-component-animation-tabs-duration) var(--token-component-animation-tabs-easing);
+  transition: all var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing);
   position: relative;
+  font-size: var(--token-component-tabs-tab-font-size);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  user-select: none;
 }
 
-.tab:hover {
-  background-color: var(--token-component-tabs-default-background-hover);
+.tab:hover:not(.disabled) {
+  color: var(--token-component-tabs-tab-color-hover);
 }
 
 .tab.active {
-  background-color: var(--token-component-tabs-default-background-active);
-  color: var(--token-component-tabs-default-content-active);
-  border-bottom-color: var(--token-component-tabs-default-indicator);
+  color: var(--token-component-tabs-tab-color-active);
+  font-weight: var(--token-component-tabs-tab-font-weight-active);
 }
 
+.tab.disabled {
+  color: var(--token-component-tabs-tab-color-disabled));
+  cursor: not-allowed;
+}
+
+/* Size variants */
+.tab.small {
+  padding: var(--token-component-tabs-tab-padding-sm);
+  font-size: var(--token-component-tabs-tab-font-size-sm);
+}
+
+.tab.large {
+  padding: var(--token-component-tabs-tab-padding-lg);
+  font-size: var(--token-component-tabs-tab-font-size-lg);
+}
+
+/* Card type */
+.tabList.cardTabList,
+.tabList.editableCardTabList {
+  gap: var(--token-component-tabs-card-gap);
+  border: none;
+}
+
+.tab.card,
+.tab.editableCard {
+  background-color: var(--token-component-tabs-card-background);
+  border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-card-border);
+  border-radius: calc(var(--token-component-tabs-card-radius) * 1px);
+  margin-bottom: calc(var(--token-primitive-border-width-1, 1px) * -1px);
+}
+
+.tab.card:hover:not(.disabled),
+.tab.editableCard:hover:not(.disabled) {
+  background-color: var(--token-component-tabs-card-background-hover);
+}
+
+.tab.card.active,
+.tab.editableCard.active {
+  background-color: var(--token-component-tabs-card-background-active);
+  border-bottom-color: var(--token-component-tabs-card-border-active);
+  color: var(--token-component-tabs-card-color-active);
+}
+
+/* Indicator (for line type) */
 .indicator {
   position: absolute;
-  bottom: -1px;
-  height: 2px;
-  background-color: var(--token-component-tabs-default-indicator);
-  transition: left var(--token-component-animation-tabs-duration) var(--token-component-animation-tabs-easing),
-              width var(--token-component-animation-tabs-duration) var(--token-component-animation-tabs-easing);
+  height: calc(var(--token-component-tabs-indicator-height) * 1px);
+  background-color: var(--token-component-tabs-indicator-color);
+  transition: left var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing),
+              width var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing),
+              top var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing),
+              height var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing);
+  z-index: 1;
 }
 
-.tabPanel {
-  padding: var(--token-semantic-padding-m);
-  min-height: 100px;
+.tabListTop .indicator {
+  bottom: -1px;
+}
+
+.tabListBottom .indicator {
+  top: -1px;
+}
+
+.tabListLeft .indicator {
+  right: -1px;
+  width: calc(var(--token-component-tabs-indicator-height) * 1px);
+  height: auto;
+}
+
+.tabListRight .indicator {
+  left: -1px;
+  width: calc(var(--token-component-tabs-indicator-height) * 1px);
+  height: auto;
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  align-items: center;
+  font-size: var(--token-component-tabs-icon-font-size);
+}
+
+/* Label */
+.label {
+  flex: 1;
+}
+
+/* Close button */
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-tabs-close-size);
+  height: var(--token-component-tabs-close-size);
+  border-radius: 50%;
+  transition: background-color var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing);
+  margin-left: var(--token-component-tabs-close-margin-left);
+}
+
+.close:hover {
+  background-color: var(--token-component-tabs-close-background-hover));
+}
+
+/* Add button */
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--token-component-tabs-add-button-size);
+  height: var(--token-component-tabs-add-button-size);
+  padding: var(--token-component-tabs-add-button-padding);
+  background-color: var(--token-component-tabs-add-button-background);
+  border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-add-button-border);
+  border-radius: calc(var(--token-component-tabs-add-button-radius) * 1px);
+  color: var(--token-component-tabs-add-button-color));
+  cursor: pointer;
+  transition: all var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing);
+}
+
+.addButton:hover {
+  background-color: var(--token-component-tabs-add-button-background-hover);
+  color: var(--token-component-tabs-add-button-color-hover);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: var(--token-component-tabs-content-padding);
+  min-height: var(--token-component-tabs-content-min-height);
+}
+
+/* Tab pane */
+.tabPane {
+  display: block;
+}
+
+.tabPane.hidden {
+  display: none;
+}
+
+.tabPane.active {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabs.left,
+  .tabs.right {
+    flex-direction: column;
+  }
+
+  .tabListLeft,
+  .tabListRight {
+    flex-direction: row;
+    border-right: none;
+    border-left: none;
+    border-bottom: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-border);
+  }
 }

@@ -1,0 +1,212 @@
+/* Image component styles using design tokens */
+
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: calc(var(--token-component-image-radius, 8px) * 1px);
+  background-color: var(--token-component-image-background, #f5f5f5);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.image.loading {
+  opacity: 0;
+}
+
+.image.error {
+  opacity: 0;
+}
+
+/* Placeholder */
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--token-component-image-placeholder-background, #f5f5f5);
+  color: var(--token-component-image-placeholder-color, rgba(0, 0, 0, 0.25));
+}
+
+/* Preview mask overlay (shown on hover) */
+.previewMaskOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--token-component-image-preview-mask-background, rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.imageWrapper:hover .previewMaskOverlay {
+  opacity: 1;
+}
+
+.previewable {
+  cursor: pointer;
+}
+
+/* Preview modal */
+.previewMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--token-component-image-preview-background, rgba(0, 0, 0, 0.75));
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.previewMaskHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.previewContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--token-primitive-color-white, #ffffff);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.previewClose:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.previewImageWrapper {
+  position: relative;
+  max-width: 100%;
+  max-height: calc(90vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.previewToolbar {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.previewTool {
+  background: none;
+  border: none;
+  color: var(--token-primitive-color-white, #ffffff);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.previewTool:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.previewTool:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Icon styles */
+.icon {
+  display: inline-block;
+}
+
+.iconSmall {
+  font-size: var(--token-component-image-preview-toolbar-icon-size);
+}
+
+.iconMedium {
+  font-size: var(--token-component-image-preview-toolbar-icon-size);
+}
+
+.iconLarge {
+  font-size: var(--token-component-image-placeholder-icon-size-large);
+}
+
+.iconWhite {
+  color: var(--token-component-image-preview-toolbar-icon-color-default);
+}
+
+.iconOpacity {
+  opacity: 0.3;
+}
+
+/* Preview image transform */
+.previewImageTransform {
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .previewImageWrapper {
+    max-height: calc(90vh - 80px);
+  }
+  
+  .previewToolbar {
+    bottom: -50px;
+  }
+}

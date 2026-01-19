@@ -1,0 +1,3978 @@
+{
+  "meta": {
+    "name": "Button/Upgrade",
+    "reactComponent": "Button.tsx",
+    "version": "1.0.0",
+    "generatedAt": "2026-01-19T17:50:24.477Z"
+  },
+  "variables": {
+    "Components/Button/Upgrade": {
+      "modes": [
+        {
+          "id": "default",
+          "name": "Default"
+        }
+      ],
+      "variables": [
+        {
+          "cssVar": "--button-upgrade-filled-bg-default",
+          "figmaName": "button/upgrade/filled/background/default",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-content-default",
+          "figmaName": "button/upgrade/filled/content/default",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-bg-hover",
+          "figmaName": "button/upgrade/filled/background/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 0.88,
+            "g": 0.58,
+            "b": 0.08,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-content-hover",
+          "figmaName": "button/upgrade/filled/content/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-bg-disabled",
+          "figmaName": "button/upgrade/filled/background/disabled",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 0.4
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-content-disabled",
+          "figmaName": "button/upgrade/filled/content/disabled",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.6
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-bg-pressed",
+          "figmaName": "button/upgrade/filled/background/pressed",
+          "type": "COLOR",
+          "value": {
+            "r": 0.78,
+            "g": 0.48,
+            "b": 0.03,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-content-pressed",
+          "figmaName": "button/upgrade/filled/content/pressed",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-bg-loading",
+          "figmaName": "button/upgrade/filled/background/loading",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-filled-content-loading",
+          "figmaName": "button/upgrade/filled/content/loading",
+          "type": "COLOR",
+          "value": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-bg-default",
+          "figmaName": "button/upgrade/plain/background/default",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-content-default",
+          "figmaName": "button/upgrade/plain/content/default",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-bg-hover",
+          "figmaName": "button/upgrade/plain/background/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 0.08
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-content-hover",
+          "figmaName": "button/upgrade/plain/content/hover",
+          "type": "COLOR",
+          "value": {
+            "r": 0.88,
+            "g": 0.58,
+            "b": 0.08,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-bg-disabled",
+          "figmaName": "button/upgrade/plain/background/disabled",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-content-disabled",
+          "figmaName": "button/upgrade/plain/content/disabled",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 0.4
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-bg-pressed",
+          "figmaName": "button/upgrade/plain/background/pressed",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 0.12
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-content-pressed",
+          "figmaName": "button/upgrade/plain/content/pressed",
+          "type": "COLOR",
+          "value": {
+            "r": 0.78,
+            "g": 0.48,
+            "b": 0.03,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-bg-loading",
+          "figmaName": "button/upgrade/plain/background/loading",
+          "type": "COLOR",
+          "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-upgrade-plain-content-loading",
+          "figmaName": "button/upgrade/plain/content/loading",
+          "type": "COLOR",
+          "value": {
+            "r": 0.93,
+            "g": 0.63,
+            "b": 0.13,
+            "a": 1
+          },
+          "collection": "Components/Button/Upgrade"
+        },
+        {
+          "cssVar": "--button-height-sm",
+          "figmaName": "button/height/sm",
+          "type": "FLOAT",
+          "value": 32,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-padding-sm",
+          "figmaName": "button/padding/sm",
+          "type": "FLOAT",
+          "value": 12,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-gap-sm",
+          "figmaName": "button/gap/sm",
+          "type": "FLOAT",
+          "value": 6,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-radius-sm",
+          "figmaName": "button/radius/sm",
+          "type": "FLOAT",
+          "value": 6,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-height-md",
+          "figmaName": "button/height/md",
+          "type": "FLOAT",
+          "value": 40,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-padding-md",
+          "figmaName": "button/padding/md",
+          "type": "FLOAT",
+          "value": 16,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-gap-md",
+          "figmaName": "button/gap/md",
+          "type": "FLOAT",
+          "value": 8,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-radius-md",
+          "figmaName": "button/radius/md",
+          "type": "FLOAT",
+          "value": 8,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-height-lg",
+          "figmaName": "button/height/lg",
+          "type": "FLOAT",
+          "value": 48,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-padding-lg",
+          "figmaName": "button/padding/lg",
+          "type": "FLOAT",
+          "value": 20,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-gap-lg",
+          "figmaName": "button/gap/lg",
+          "type": "FLOAT",
+          "value": 10,
+          "collection": "Components/Button"
+        },
+        {
+          "cssVar": "--button-radius-lg",
+          "figmaName": "button/radius/lg",
+          "type": "FLOAT",
+          "value": 10,
+          "collection": "Components/Button"
+        }
+      ]
+    }
+  },
+  "componentSet": {
+    "name": "Button/Upgrade",
+    "variantProperties": [
+      {
+        "name": "Appearance",
+        "values": [
+          "filled",
+          "plain"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "filled"
+      },
+      {
+        "name": "State",
+        "values": [
+          "default",
+          "hover",
+          "disabled",
+          "pressed",
+          "loading"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "default"
+      },
+      {
+        "name": "Icon",
+        "values": [
+          "none",
+          "left",
+          "right",
+          "only"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "none"
+      },
+      {
+        "name": "Size",
+        "values": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "type": "VARIANT",
+        "defaultValue": "md"
+      }
+    ],
+    "overridables": [
+      {
+        "name": "Text",
+        "type": "TEXT",
+        "target": "Label",
+        "defaultValue": "Button"
+      },
+      {
+        "name": "Icon",
+        "type": "INSTANCE_SWAP",
+        "target": "Icon"
+      }
+    ],
+    "validCombinations": {
+      "upgrade": [
+        "filled",
+        "plain"
+      ]
+    },
+    "variants": [
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/default",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/hover",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/disabled",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0.6
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/pressed",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "filled"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/filled/background/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/filled/content/loading",
+            "fallback": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "default",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/default",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/default",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "hover",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/hover",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.08
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/hover",
+            "fallback": {
+              "r": 0.88,
+              "g": 0.58,
+              "b": 0.08,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "disabled",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/disabled",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/disabled",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.4
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        }
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconStart"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconEnd"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "pressed",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/pressed",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 0.12
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/pressed",
+            "fallback": {
+              "r": 0.78,
+              "g": 0.48,
+              "b": 0.03,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "iconOnly"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "none",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "left",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "right",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "sm",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "md",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      },
+      {
+        "variant": {
+          "State": "loading",
+          "Icon": "only",
+          "Size": "lg",
+          "Appearance": "plain"
+        },
+        "style": {
+          "fill": {
+            "variable": "button/upgrade/plain/background/loading",
+            "fallback": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0
+            }
+          },
+          "contentColor": {
+            "variable": "button/upgrade/plain/content/loading",
+            "fallback": {
+              "r": 0.93,
+              "g": 0.63,
+              "b": 0.13,
+              "a": 1
+            }
+          }
+        },
+        "layoutKey": "loading"
+      }
+    ]
+  },
+  "layout": {
+    "mode": "HORIZONTAL",
+    "primaryAxisAlignItems": "CENTER",
+    "counterAxisAlignItems": "CENTER",
+    "itemSpacing": "gap/button/icon/md",
+    "padding": {
+      "top": 0,
+      "right": "padding/button/md",
+      "bottom": 0,
+      "left": "padding/button/md"
+    },
+    "children": [
+      {
+        "role": "startIcon",
+        "name": "Icon",
+        "order": "start",
+        "type": "FRAME",
+        "visible": false
+      },
+      {
+        "role": "label",
+        "name": "Label",
+        "order": "center",
+        "type": "TEXT",
+        "visible": true
+      },
+      {
+        "role": "endIcon",
+        "name": "Icon",
+        "order": "end",
+        "type": "FRAME",
+        "visible": false
+      },
+      {
+        "role": "loading",
+        "name": "Spinner",
+        "order": "center",
+        "type": "FRAME",
+        "visible": false
+      }
+    ],
+    "sizing": {
+      "width": "HUG",
+      "height": "FIXED"
+    }
+  },
+  "layoutVariants": {
+    "iconOnly": {
+      "children": [
+        {
+          "role": "icon",
+          "name": "Icon",
+          "order": "center",
+          "type": "FRAME",
+          "visible": true
+        }
+      ],
+      "sizing": {
+        "width": "FIXED",
+        "height": "FIXED"
+      }
+    },
+    "iconStart": {
+      "children": [
+        {
+          "role": "startIcon",
+          "name": "Icon",
+          "order": "start",
+          "type": "FRAME",
+          "visible": true
+        },
+        {
+          "role": "label",
+          "name": "Label",
+          "order": "center",
+          "type": "TEXT",
+          "visible": true
+        }
+      ]
+    },
+    "iconEnd": {
+      "children": [
+        {
+          "role": "label",
+          "name": "Label",
+          "order": "center",
+          "type": "TEXT",
+          "visible": true
+        },
+        {
+          "role": "endIcon",
+          "name": "Icon",
+          "order": "end",
+          "type": "FRAME",
+          "visible": true
+        }
+      ]
+    },
+    "loading": {
+      "children": [
+        {
+          "role": "loading",
+          "name": "Spinner",
+          "order": "center",
+          "type": "ELLIPSE",
+          "visible": true
+        }
+      ]
+    }
+  }
+}

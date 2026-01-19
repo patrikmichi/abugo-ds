@@ -1,38 +1,149 @@
 /* Badge component styles using design tokens */
 
+
+.badgeWrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Badge element (count or dot) */
 .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
-  padding: var(--token-semantic-padding-xxs) var(--token-semantic-padding-xs);
-  border-radius: var(--token-semantic-radius-full);
-  font-size: var(--token-semantic-typography-body-size-xs);
-  font-weight: 500;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--token-semantic-padding-xxxs);
+  font-size: var(--token-component-badge-font-size-default);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
   line-height: 1;
-  border: var(--token-semantic-border-width-thin) solid transparent;
-}
-
-.default {
-  background-color: var(--token-component-badge-default-background);
   color: var(--token-component-badge-default-content);
-  border-color: var(--token-component-badge-default-border);
+  background-color: var(--token-component-badge-default-background);
+  border: 2px solid var(--token-component-badge-default-border);
+  border-radius: 10px;
+  transform: translate(50%, -50%);
+  transform-origin: 100% 0%;
+  white-space: nowrap;
+  font-family: var(--token-primitive-typography-font-family-sans);
 }
 
-.success {
+/* Color variants */
+.badge.success {
   background-color: var(--token-component-badge-success-background);
   color: var(--token-component-badge-success-content);
 }
 
-.warning {
+.badge.warning {
   background-color: var(--token-component-badge-warning-background);
   color: var(--token-component-badge-warning-content);
 }
 
-.danger {
+.badge.danger {
   background-color: var(--token-component-badge-danger-background);
   color: var(--token-component-badge-danger-content);
 }
 
-.info {
-  background-color: var(--token-component-badge-info-background);
-  color: var(--token-component-badge-info-content);
+.badge.promo {
+  background-color: var(--token-component-badge-promo-background);
+  color: var(--token-component-badge-promo-content);
 }
+
+/* Count badge */
+.badge.count {
+  padding: 0 6px;
+}
+
+/* Dot badge */
+.badge.dot,
+.badge.dotOnly {
+  min-width: var(--token-component-badge-dot-size);
+  height: var(--token-component-badge-dot-size);
+  padding: 0;
+  border-radius: 50%;
+}
+
+.badge.dotOnly {
+  transform: translate(50%, -50%);
+}
+
+/* Small size */
+.badge.small {
+  min-width: var(--token-component-badge-size-small, 16px);
+  height: var(--token-component-badge-size-small, 16px);
+  font-size: var(--token-component-badge-font-size-small, 10px);
+  border-radius: calc(var(--token-component-badge-size-small, 16px) / 2);
+  padding: 0 3px;
+}
+
+.badge.small.dot,
+.badge.small.dotOnly {
+  min-width: var(--token-component-badge-dot-size-small, 6px);
+  height: var(--token-component-badge-dot-size-small, 6px);
+  padding: 0;
+}
+
+/* Status dot (for status mode) */
+.statusDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: var(--token-semantic-gap-xxs);
+  vertical-align: middle;
+}
+
+.statusDot.success {
+  background-color: var(--token-semantic-content-passive-success-default);
+}
+
+.statusDot.processing {
+  background-color: var(--token-semantic-content-passive-info-default);
+  position: relative;
+  animation: processing 1.4s ease-in-out infinite;
+}
+
+@keyframes processing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.statusDot.default {
+  background-color: var(--token-semantic-content-passive-neutral-default);
+}
+
+.statusDot.error {
+  background-color: var(--token-semantic-content-passive-danger-default);
+}
+
+.statusDot.warning {
+  background-color: var(--token-semantic-content-passive-warning-default);
+}
+
+/* Status text */
+.statusText {
+  display: inline-block;
+  font-size: var(--token-component-badge-status-text-size);
+  color: var(--token-component-badge-status-text-color);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  vertical-align: middle;
+  margin-right: var(--token-semantic-gap-xs);
+}
+
+/* Standalone badge (no children) - handled via inline styles in component */

@@ -1,0 +1,173 @@
+/* Segmented component styles using design tokens */
+
+.segmented {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: calc(var(--token-component-segmented-padding) * 1px);
+  background-color: var(--token-component-segmented-background);
+  border-radius: calc(var(--token-component-segmented-radius) * 1px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  box-sizing: border-box;
+}
+
+.segmented.block {
+  display: flex;
+  width: 100%;
+}
+
+/* Indicator (animated background) */
+.indicator {
+  position: absolute;
+  top: calc(var(--token-component-segmented-padding) * 1px);
+  left: calc(var(--token-component-segmented-padding) * 1px);
+  background-color: var(--token-component-segmented-indicator-background);
+  border-radius: calc(var(--token-component-segmented-indicator-radius) * 1px);
+  box-shadow: var(--token-component-segmented-indicator-shadow);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Segment button */
+.segment {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-component-segmented-gap);
+  padding: var(--token-component-segmented-padding-x);
+  background: transparent;
+  border: none;
+  border-radius: calc(var(--token-component-segmented-indicator-radius) * 1px);
+  color: var(--token-component-segmented-text-color-default);
+  font-size: var(--token-component-segmented-font-size);
+  line-height: var(--token-component-segmented-line-height);
+  font-weight: var(--token-component-segmented-font-weight);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  min-width: 0;
+  flex: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.segment:hover:not(.segmentDisabled):not(:disabled) {
+  color: var(--token-component-segmented-text-color-hover);
+}
+
+.segment.selected {
+  color: var(--token-component-segmented-text-color-selected);
+  font-weight: var(--token-component-segmented-font-weight-selected, 500);
+}
+
+.segment:focus-visible {
+  outline: 2px solid var(--token-semantic-border-active-neutral-control-field-focused, #538bff);
+  outline-offset: 2px;
+  border-radius: calc(var(--token-component-segmented-indicator-radius) * 1px);
+}
+
+.segmentDisabled,
+.segment:disabled {
+  color: var(--token-component-segmented-text-color-disabled);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--token-component-segmented-font-size);
+  flex-shrink: 0;
+}
+
+/* Label */
+.label {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Size variants */
+.segmented.small {
+  padding: calc(var(--token-component-segmented-padding) * 0.5px);
+}
+
+.segmented.small .indicator {
+  top: calc(var(--token-component-segmented-padding) * 0.5px);
+  left: calc(var(--token-component-segmented-padding) * 0.5px);
+  border-radius: calc(var(--token-component-segmented-indicator-radius) * 0.75px);
+}
+
+.segmented.small .segment {
+  padding: calc(var(--token-component-segmented-padding-x) * 0.67);
+  font-size: calc(var(--token-component-segmented-font-size) * 0.857);
+  line-height: 1.5;
+  min-height: 24px;
+}
+
+.segmented.small .icon {
+  font-size: calc(var(--token-component-segmented-font-size) * 0.857);
+}
+
+.segmented.default {
+  padding: calc(var(--token-component-segmented-padding) * 1px);
+}
+
+.segmented.default .indicator {
+  top: calc(var(--token-component-segmented-padding) * 1px);
+  left: calc(var(--token-component-segmented-padding) * 1px);
+  border-radius: calc(var(--token-component-segmented-indicator-radius) * 1px);
+}
+
+.segmented.default .segment {
+  padding: var(--token-component-segmented-padding-x);
+  font-size: var(--token-component-segmented-font-size);
+  line-height: var(--token-component-segmented-line-height);
+  min-height: 32px;
+}
+
+.segmented.large {
+  padding: calc(var(--token-component-segmented-padding) * 1.5px);
+}
+
+.segmented.large .indicator {
+  top: calc(var(--token-component-segmented-padding) * 1.5px);
+  left: calc(var(--token-component-segmented-padding) * 1.5px);
+  border-radius: calc(var(--token-component-segmented-indicator-radius) * 1.25px);
+}
+
+.segmented.large .segment {
+  padding: calc(var(--token-component-segmented-padding-x) * 1.33);
+  font-size: calc(var(--token-component-segmented-font-size) * 1.143);
+  line-height: 1.5;
+  min-height: 40px;
+}
+
+.segmented.large .icon {
+  font-size: calc(var(--token-component-segmented-font-size) * 1.143);
+}
+
+/* Disabled state */
+.segmented.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.segmented.disabled .segment {
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .segment {
+    padding: calc(var(--token-component-segmented-padding-x) * 0.67);
+  }
+}

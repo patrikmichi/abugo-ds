@@ -1,0 +1,92 @@
+/* Spinner component styles using design tokens */
+
+.spinner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-component-spinner-label-gap);
+  color: var(--token-component-spinner-content-inherit);
+}
+
+/* Material Icon spinner */
+.spinner .material-symbols-outlined {
+  display: block;
+  width: 100%;
+  height: 100%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Label */
+.label {
+  font-size: var(--token-component-spinner-label-font-size, 12px);
+  color: inherit;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Sizes */
+.spinner.xsmall {
+  width: var(--token-component-spinner-size-xsmall);
+  height: var(--token-component-spinner-size-xsmall);
+}
+
+.spinner.small {
+  width: var(--token-component-spinner-size-small);
+  height: var(--token-component-spinner-size-small);
+}
+
+.spinner.medium {
+  width: var(--token-component-spinner-size-medium);
+  height: var(--token-component-spinner-size-medium);
+}
+
+.spinner.large {
+  width: var(--token-component-spinner-size-large);
+  height: var(--token-component-spinner-size-large);
+}
+
+.spinner.xlarge {
+  width: var(--token-component-spinner-size-xlarge);
+  height: var(--token-component-spinner-size-xlarge);
+}
+
+/* Custom size (when size is a number) */
+.spinner.custom {
+  /* Size is set via inline style */
+}
+
+/* Appearance - Inherit (default) */
+.spinner.inherit {
+  color: var(--token-component-spinner-content-inherit);
+}
+
+.spinner.inherit .label {
+  color: var(--token-component-spinner-label-color-inherit);
+}
+
+/* Appearance - Invert (for dark backgrounds) */
+.spinner.invert {
+  color: var(--token-component-spinner-content-invert);
+}
+
+.spinner.invert .label {
+  color: var(--token-component-spinner-label-color-invert);
+}
+
+/* Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .spinner .material-symbols-outlined {
+    animation: none;
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$name": "Semantic Tokens",
+  "background.active.neutral.subtle.hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey-opacity.5}",
+    "$description": "Subtle hover state background using grey-700 at 5% opacity. Use for buttons on colored backgrounds where a subtle tint is preferred over a greyish overlay.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "hover",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "close-buttons",
+          "icon-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.active.neutral.subtle.pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey-opacity.8}",
+    "$description": "Subtle pressed state background using grey-700 at 8% opacity. Use for buttons on colored backgrounds where a subtle tint is preferred over a greyish overlay.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "pressed",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "close-buttons",
+          "icon-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+/* Flex component styles using design tokens */
+
+
+.flex {
+  display: flex;
+}
+
+/* Directions */
+.flex.direction-row {
+  flex-direction: row;
+}
+
+.flex.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex.direction-column {
+  flex-direction: column;
+}
+
+.flex.direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex.vertical {
+  flex-direction: column;
+}
+
+/* Wrap */
+.flex.wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.flex.wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flex.wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* Justify content */
+.flex.justify-start {
+  justify-content: flex-start;
+}
+
+.flex.justify-end {
+  justify-content: flex-end;
+}
+
+.flex.justify-center {
+  justify-content: center;
+}
+
+.flex.justify-space-between {
+  justify-content: space-between;
+}
+
+.flex.justify-space-around {
+  justify-content: space-around;
+}
+
+.flex.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* Align items */
+.flex.align-start {
+  align-items: flex-start;
+}
+
+.flex.align-end {
+  align-items: flex-end;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+.flex.align-baseline {
+  align-items: baseline;
+}
+
+.flex.align-stretch {
+  align-items: stretch;
+}

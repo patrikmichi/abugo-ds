@@ -131,7 +131,8 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.xxs}"
+        "$value": "{padding.xxs}",
+        "$description": "Chip extra-extra-small horizontal padding."
       },
       "xs": {
         "$scopes": [
@@ -140,7 +141,8 @@
         "$type": "spacing",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{padding.xs}"
+        "$value": "{padding.xs}",
+        "$description": "Chip extra-small horizontal padding."
       },
       "sm": {
         "$scopes": [
@@ -148,8 +150,61 @@
         ],
         "$type": "spacing",
         "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{padding.s}"
+        "$collectionName": "primitives",
+        "$value": "{spacing-2}",
+        "$description": "Chip small horizontal padding (8px)"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-3}",
+        "$description": "Chip medium horizontal padding (12px)"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-4}",
+        "$description": "Chip large horizontal padding (16px)"
+      },
+      "withIcon": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Chip small padding-inline-start when icon/avatar present (4px)"
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2}",
+          "$description": "Chip medium padding-inline-start when icon/avatar present (8px)"
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Chip large padding-inline-start when icon/avatar present (12px)"
+        }
       }
     },
     "alert": {

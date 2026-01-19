@@ -1,0 +1,27 @@
+{
+  "$name": "Semantic Tokens",
+  "typography.optical.alignment.offset.sm": {
+    "$scopes": ["ALL_SCOPES"],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": 2,
+    "$description": "Optical alignment offset for small typography (2px). Used in field padding-top/bottom calculations."
+  },
+  "typography.optical.alignment.offset.md": {
+    "$scopes": ["ALL_SCOPES"],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": 2,
+    "$description": "Optical alignment offset for medium typography (2px)."
+  },
+  "typography.optical.alignment.offset.lg": {
+    "$scopes": ["ALL_SCOPES"],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": 3,
+    "$description": "Optical alignment offset for large typography (3px)."
+  }
+}

@@ -1,23 +1,203 @@
 /* Card component styles using design tokens */
 
+
 .card {
-  background-color: var(--token-component-card-background);
-  color: var(--token-component-card-content-default);
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-card-border-default);
-  padding: var(--token-component-padding-x-card-md);
-  border-radius: var(--token-semantic-radius-md);
-  box-shadow: var(--token-semantic-shadow-sm);
-  transition: border-color var(--token-semantic-animation-duration-fast) var(--token-semantic-animation-easing-ease-out);
+  background-color: var(--token-component-card-background, #fff);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-card-font-size, 14px);
+  line-height: var(--token-component-card-line-height, 1.5715);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover {
-  border-color: var(--token-component-card-border-hover);
+/* Hoverable effect */
+.card.hoverable {
+  cursor: pointer;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card.selected {
-  border-color: var(--token-component-card-border-selected);
+.card.hoverable:hover {
+  box-shadow: var(--token-component-card-shadow-hover, 0 4px 12px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
 }
 
-.strong {
-  color: var(--token-component-card-content-strong);
+/* No border */
+.card.noBorder {
+  border: none;
+}
+
+/* Inner type */
+.card.inner {
+  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+}
+
+/* Size variants */
+.card.small .head {
+  min-height: var(--token-component-card-head-height-small, 36px);
+  padding: var(--token-component-card-head-padding-small, 8px 16px);
+  font-size: var(--token-component-card-head-font-size-small, 14px);
+}
+
+.card.small .body {
+  padding: var(--token-component-card-body-padding-small, 12px 16px);
+}
+
+.card.small .actions {
+  padding: var(--token-component-card-actions-padding-small, 8px 16px);
+}
+
+/* Cover */
+.cover {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-top-right-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+.cover:first-child {
+  border-top-left-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-top-right-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+}
+
+/* Head (title and extra) */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--token-component-card-head-height, 48px);
+  padding: var(--token-component-card-head-padding, 16px 24px);
+  border-bottom: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  font-size: var(--token-component-card-head-font-size, 16px);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+}
+
+.title {
+  flex: 1;
+  color: var(--token-component-card-head-title-color, rgba(0, 0, 0, 0.85));
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+}
+
+.extra {
+  color: var(--token-component-card-head-extra-color, rgba(0, 0, 0, 0.45));
+  font-size: var(--token-component-card-head-extra-font-size, 14px);
+  font-weight: var(--token-primitive-typography-font-weight-normal);
+}
+
+/* Body */
+.body {
+  padding: var(--token-component-card-body-padding, 24px);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-semantic-gap-xxs, 8px);
+  padding: var(--token-semantic-padding-lg, 24px);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.45));
+  font-size: var(--token-component-card-font-size, 14px);
+}
+
+.loading .material-symbols-outlined {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: var(--token-component-card-actions-padding, 12px 24px);
+  list-style: none;
+  border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  background-color: var(--token-component-card-actions-background, rgba(0, 0, 0, 0.02));
+}
+
+.action {
+  flex: 1;
+  text-align: center;
+  padding: var(--token-semantic-padding-xxxs, 4px) 0;
+}
+
+.action:not(:last-child) {
+  border-right: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+}
+
+.action > * {
+  color: var(--token-component-card-actions-color, rgba(0, 0, 0, 0.45));
+  transition: color 0.3s ease;
+}
+
+.action:hover > * {
+  color: var(--token-component-card-actions-color-hover, rgba(0, 0, 0, 0.85));
+}
+
+/* Card.Grid */
+.grid {
+  padding: var(--token-component-card-grid-padding, 24px);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  transition: all 0.3s ease;
+}
+
+.gridHoverable {
+  cursor: pointer;
+}
+
+.gridHoverable:hover {
+  box-shadow: var(--token-component-card-shadow-hover, 0 4px 12px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
+}
+
+/* Card.Meta */
+.meta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--token-semantic-gap-m, 16px);
+}
+
+.metaAvatar {
+  flex-shrink: 0;
+}
+
+.metaContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.metaTitle {
+  font-size: var(--token-component-card-meta-title-size, 16px);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
+  margin-bottom: var(--token-semantic-gap-xxxs, 4px);
+  line-height: 1.5;
+}
+
+.metaDescription {
+  font-size: var(--token-component-card-meta-description-size, 14px);
+  color: var(--token-component-card-content-secondary, rgba(0, 0, 0, 0.45));
+  line-height: 1.5;
 }

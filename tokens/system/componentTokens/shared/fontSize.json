@@ -149,21 +149,67 @@
     }
   },
   "alert": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "fontSizes",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{typography.body-size.md}"
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.fontSize.3}",
+      "$description": "Alert message heading font size (16px)"
+    },
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.fontSize.2}",
+      "$description": "Alert description font size (14px)"
+    }
   },
   "toast": {
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.fontSize.2}",
+      "$description": "Toast font size for small size (14px)"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.fontSize.3}",
+      "$description": "Toast font size for large size (16px)"
+    }
+  },
+  "anchor": {
     "$scopes": [
       "ALL_SCOPES"
     ],
     "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography.body-size.md}"
+    "$value": "{typography.fontSize.sm}"
+  },
+  "menu": {
+    "item": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.fontSize.sm}"
+    }
   }
 }

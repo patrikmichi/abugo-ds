@@ -165,13 +165,41 @@ const fieldStatus = disabled ? 'disabled' : (error ? 'error' : 'enabled');
 4. **Accessibility**: Field handles all ARIA attributes
 5. **Maintainability**: Status tokens override base tokens automatically
 
+## Prop Architecture
+
+### Field Component (Primary Interface)
+
+Field manages all form-related concerns:
+- ✅ `error` - Error message (string) - automatically passes `error={true}` to child
+- ✅ `disabled` - Disabled state - automatically passes to child
+- ✅ `size` - Size variant - automatically passes to child if not set
+- ✅ `maxWidth` - Layout control
+- ✅ `label`, `required`, `helperText` - Form concerns
+- ✅ ARIA attributes - Automatically managed
+
+### Control Components (Input, Select, Textarea)
+
+Controls are first-class components that can be used standalone or within Field:
+- ✅ Core input props: `value`, `onChange`, `placeholder`, `type`, etc.
+- ✅ `size` - The size of the input box (`'sm' | 'md' | 'lg'`)
+- ✅ `error` - Set validation status (boolean)
+- ✅ `disabled` - Whether the input is disabled (boolean)
+- ✅ Component-specific props (e.g., `leadingAdornment`, `trailingAdornment` for Input)
+
+**Key Principle:** 
+- **Field is the recommended interface** for form fields - provides labels, error messages, ARIA
+- **Controls are first-class components** - can be used standalone (like Ant Design's Input)
+- Field automatically passes `error` and `disabled` to child controls via `cloneElement`
+- Controls accept these props directly for flexibility (standalone usage, compound components)
+
 ## Implementation Checklist
 
 For any new form control component:
 
 - [ ] Use `field-control-border-*` and `field-control-background-*` for base styling
-- [ ] Support `status` prop: `'enabled' | 'disabled' | 'error'`
-- [ ] Apply `field-status-error-*` tokens when `status === 'error'`
-- [ ] Apply `field-status-disabled-*` tokens when `status === 'disabled'`
+- [ ] Support `error` and `disabled` props (boolean)
+- [ ] Apply `field-status-error-*` tokens when `error === true`
+- [ ] Apply `field-status-disabled-*` tokens when `disabled === true`
 - [ ] Use `field-control-*` tokens for hover/focus states when enabled
 - [ ] Work seamlessly with Field wrapper component
+- [ ] Document that Field is the primary interface for form fields

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './InputGroup.module.css';
 import { cn } from '@/lib/utils';
 import { Input } from '@/components/Input';
-import { Select } from '@/components/Select';
+import { Select } from '@/components/Select/Select';
 
 export interface InputGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Field size */
@@ -94,7 +94,10 @@ export function InputGroup({
       
       <Select
         value={selectValue}
-        onChange={(e) => onSelectChange?.(e.target.value)}
+        onChange={(e) => {
+          const target = e.target as HTMLSelectElement;
+          onSelectChange?.(target.value);
+        }}
         onFocus={handleFocus}
         onBlur={handleBlur}
         disabled={disabled}

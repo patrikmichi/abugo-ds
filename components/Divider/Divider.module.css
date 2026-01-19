@@ -1,24 +1,111 @@
 /* Divider component styles using design tokens */
 
+
 .divider {
-  border: none;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-divider-font-size, 14px);
 }
 
+/* Horizontal divider */
 .horizontal {
+  display: flex;
+  clear: both;
   width: 100%;
-  height: 1px;
-  background-color: var(--token-component-divider-horizontal-border);
-  border: none;
+  min-width: 100%;
+  margin: var(--token-component-divider-horizontal-margin, 16px 0);
+  border-top: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-divider-border-color, rgba(0, 0, 0, 0.06));
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
 
+/* Dashed style */
+.horizontal.dashed {
+  border-top-style: dashed;
+}
+
+/* With text */
+.horizontal.withText {
+  display: flex;
+  align-items: center;
+  border-top: none;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.horizontal.withText::before,
+.horizontal.withText::after {
+  content: '';
+  flex: 1;
+  border-top: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-divider-border-color, rgba(0, 0, 0, 0.06));
+}
+
+.horizontal.withText.dashed::before,
+.horizontal.withText.dashed::after {
+  border-top-style: dashed;
+}
+
+/* Text */
+.text {
+  display: inline-block;
+  padding: 0 var(--token-component-divider-text-padding, 1em);
+  color: var(--token-component-divider-text-color, rgba(0, 0, 0, 0.85));
+  font-weight: var(--token-component-divider-text-font-weight, 500);
+  font-size: var(--token-component-divider-text-font-size, 14px);
+}
+
+.plainText {
+  font-weight: var(--token-component-divider-plain-text-font-weight, normal);
+  font-size: var(--token-component-divider-plain-text-font-size, 14px);
+  color: var(--token-component-divider-plain-text-color, rgba(0, 0, 0, 0.45));
+}
+
+/* Orientation */
+.horizontal.withText.orientationLeft::before {
+  flex: 0 0 5%;
+}
+
+.horizontal.withText.orientationLeft::after {
+  flex: 1;
+}
+
+.horizontal.withText.orientationRight::before {
+  flex: 1;
+}
+
+.horizontal.withText.orientationRight::after {
+  flex: 0 0 5%;
+}
+
+.horizontal.withText.orientationCenter::before,
+.horizontal.withText.orientationCenter::after {
+  flex: 1;
+}
+
+/* Vertical divider */
 .vertical {
-  width: 1px;
-  height: 100%;
-  background-color: var(--token-component-divider-vertical-border);
-  border: none;
+  position: relative;
+  top: -0.06em;
+  display: inline-block;
+  height: 0.9em;
+  margin: 0 var(--token-component-divider-vertical-margin, 8px);
+  vertical-align: middle;
+  border-top: 0;
+  border-left: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-divider-border-color, rgba(0, 0, 0, 0.06));
+  border-bottom: 0;
+  border-right: 0;
 }
 
-.border {
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-divider-horizontal-border);
+/* Responsive */
+@media (max-width: 768px) {
+  .horizontal {
+    margin: var(--token-component-divider-horizontal-margin-mobile, 12px 0);
+  }
+
+  .vertical {
+    margin: 0 var(--token-component-divider-vertical-margin-mobile, 4px);
+  }
 }

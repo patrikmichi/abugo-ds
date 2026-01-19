@@ -1,26 +1,64 @@
 /* Breadcrumbs component styles using design tokens */
 
+
 .breadcrumbs {
-  padding: var(--token-semantic-padding-xs) 0;
+  padding: var(--token-component-breadcrumb-padding, 8px 0);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-breadcrumb-font-size, 14px);
 }
 
-.link {
-  color: var(--token-component-link-default-content-default);
-  text-decoration: none;
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--token-component-breadcrumb-gap, 4px);
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Item (current/last) */
+.item {
+  color: var(--token-component-breadcrumb-item-color, rgba(0, 0, 0, 0.85));
+  font-weight: var(--token-component-breadcrumb-item-font-weight, 500);
+}
+
+.itemWithDropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--token-component-link-secondary-content-default);
   transition: color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
 }
 
-.link:hover {
-  color: var(--token-component-link-default-content-hover);
-  text-decoration: underline;
+.itemWithDropdown:hover {
+  color: var(--token-component-link-secondary-content-hover);
 }
 
-.current {
-  color: var(--token-semantic-content-passive-neutral-default);
-  font-weight: 500;
-}
-
+/* Separator */
 .separator {
-  color: var(--token-semantic-content-passive-neutral-muted);
-  margin: 0 var(--token-semantic-gap-xs);
+  color: var(--token-component-breadcrumb-separator-color, rgba(0, 0, 0, 0.45));
+  margin: 0 var(--token-component-breadcrumb-separator-margin, 8px);
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    font-size: var(--token-component-breadcrumb-font-size-mobile, 12px);
+  }
+
+  .list {
+    gap: var(--token-component-breadcrumb-gap-mobile, 2px);
+  }
+
+  .separator {
+    margin: 0 var(--token-component-breadcrumb-separator-margin-mobile, 4px);
+  }
 }

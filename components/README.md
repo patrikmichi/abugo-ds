@@ -15,7 +15,7 @@ All 35 components have been generated from your design tokens:
 - **Radio** - Radio button input
 - **Toggle** - Toggle switch
 - **File** - File upload input
-- **Combobox** - Autocomplete input
+
 - **Datepicker** - Date selection
 - **Timepicker** - Time selection
 
@@ -50,7 +50,6 @@ All 35 components have been generated from your design tokens:
 - **Avatar** - Avatar component
 - **Rating** - Rating component
 - **Slider** - Range slider
-- **Calendar** - Calendar component
 - **Accordion** - Accordion/collapsible
 
 ## Usage

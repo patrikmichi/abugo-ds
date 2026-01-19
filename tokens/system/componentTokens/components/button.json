@@ -68,7 +68,8 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background.active.accent.subtle}"
+          "$value": "{background.active.accent.subtle.hover}",
+          "$description": "Subtle hover using brand-700 (accent color) with 5% opacity - applied via CSS color-mix or rgba for better color matching on colored backgrounds"
         },
         "pressed": {
           "$scopes": [
@@ -76,8 +77,9 @@
           ],
           "$type": "color",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{universal.transparent}"
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.accent.subtle.pressed}",
+          "$description": "Subtle pressed using brand-700 (accent color) with 8% opacity - applied via CSS color-mix or rgba"
         },
         "disabled": {
           "$scopes": [
@@ -156,6 +158,17 @@
           "$value": "{height.button.plain.lg}"
         }
       }
+    },
+    "background": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
     }
   },
   "secondary": {
@@ -168,7 +181,8 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background.active.accent.subtle}"
+          "$value": "{background.active.accent.subtle.hover}",
+          "$description": "Subtle hover using brand-700 (accent color) with 5% opacity - applied via CSS color-mix or rgba for better color matching on colored backgrounds"
         }
       },
       "border": {
@@ -266,7 +280,8 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background.active.neutral.hover}"
+          "$value": "{background.active.neutral.subtle.hover}",
+          "$description": "Subtle hover using grey-700 with 5% opacity - applied via CSS color-mix or rgba for better color matching on colored backgrounds"
         },
         "pressed": {
           "$scopes": [
@@ -274,8 +289,9 @@
           ],
           "$type": "color",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{universal.transparent}"
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.pressed}",
+          "$description": "Subtle pressed using grey-700 with 8% opacity - applied via CSS color-mix or rgba"
         },
         "disabled": {
           "$scopes": [
@@ -434,6 +450,15 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{content.active.danger.pressed}"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{content.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
         }
       }
     }
@@ -546,7 +571,8 @@
           "$type": "color",
           "$libraryName": "",
           "$collectionName": "semanticTokens",
-          "$value": "{background.active.neutral.hover}"
+          "$value": "{background.active.neutral.subtle.hover}",
+          "$description": "Subtle hover using grey-700 with 5% opacity - applied via CSS color-mix or rgba for better color matching on colored backgrounds"
         },
         "pressed": {
           "$scopes": [
@@ -554,8 +580,9 @@
           ],
           "$type": "color",
           "$libraryName": "",
-          "$collectionName": "primitives",
-          "$value": "{universal.transparent}"
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.pressed}",
+          "$description": "Subtle pressed using grey-700 with 8% opacity - applied via CSS color-mix or rgba"
         },
         "disabled": {
           "$scopes": [
@@ -714,6 +741,15 @@
           "$libraryName": "",
           "$collectionName": "semanticTokens",
           "$value": "{content.active.upgrade.pressed}"
+        },
+        "disabled": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{content.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
         }
       }
     }

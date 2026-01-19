@@ -1,0 +1,37 @@
+{
+  "$name": "Component Tokens",
+  "$description": "InputNumber component tokens. Shares most tokens with field.json. Only includes stepper-specific tokens.",
+  "stepper": {
+    "button": {
+      "width": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.sm}"
+      },
+      "height": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.sm}"
+      },
+      "icon": {
+        "size": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "dimension",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{icon.xxs}"
+        }
+      }
+    }
+  }
+}

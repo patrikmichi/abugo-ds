@@ -117,5 +117,151 @@
         "$value": "{content.active.neutral.disabled}"
       }
     }
+  },
+  "lineHeight": {
+    "content": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": "24px",
+      "$description": "Line height for select text content and tags (24px)"
+    }
+  },
+  "tag": {
+    "height": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": "24px",
+      "$description": "Height of tags in select component (24px)"
+    },
+    "maxWidth": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": "200px",
+      "$description": "Maximum width for tag text before truncation (200px)"
+    },
+    "gap": {
+      "chevron": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": "16px",
+        "$description": "Gap between tags wrapper and expand/collapse icon (16px)"
+      },
+      "clearIcon": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "",
+          "$value": "8px",
+          "$description": "Gap between clear icon and expand/collapse icon for small size (8px)"
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "",
+          "$value": "12px",
+          "$description": "Gap between clear icon and expand/collapse icon for medium size (12px)"
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "",
+          "$value": "12px",
+          "$description": "Gap between clear icon and expand/collapse icon for large size (12px)"
+        }
+      }
+    }
+  },
+  "zIndex": {
+    "chevron": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 1,
+      "$description": "Z-index for chevron icon (1)"
+    },
+    "clearIcon": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 2,
+      "$description": "Z-index for clear icon (2)"
+    }
+  },
+  "opacity": {
+    "hover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 0.8,
+      "$description": "Opacity for hover and active states (0.8)"
+    }
+  },
+  "dropdown": {
+    "maxHeight": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": "248px",
+      "$description": "Maximum height for dropdown (6 options × 40px + 8px padding = 248px)"
+    },
+    "offset": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{spacing-1}",
+      "$description": "Vertical offset between select trigger and dropdown (4px)"
+    }
+  },
+  "option": {
+    "minHeight": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": "40px",
+      "$description": "Minimum height for dropdown options (40px)"
+    }
   }
 }

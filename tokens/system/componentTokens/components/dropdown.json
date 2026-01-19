@@ -1,0 +1,108 @@
+{
+  "$name": "Component Tokens",
+  "panel": {
+    "margin-top": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{spacing.xxs}"
+    },
+    "margin-bottom": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{spacing.xxs}"
+    },
+    "z-index": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "other",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{zIndex.dropdown}"
+    }
+  },
+  "background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{background.passive.neutral.elevated}"
+  },
+  "color": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{content.passive.neutral.default}"
+  },
+  "shadow": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow.lg}"
+  },
+  "min-width": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{sizing.xl}"
+  },
+  "max-width": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "400px"
+  },
+  "padding": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "spacing",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxs} 0"
+  },
+  "mobile": {
+    "margin": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-8}"
+    }
+  },
+  "arrow": {
+    "size": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "6px"
+    }
+  }
+}

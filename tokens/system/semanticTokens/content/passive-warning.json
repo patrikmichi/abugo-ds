@@ -27,5 +27,12 @@
         "replacedBy": null
       }
     }
+  },
+  "content.passive.warning.default": {
+    "$scopes": ["SHAPE_FILL", "TEXT_FILL"],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}"
   }
 }

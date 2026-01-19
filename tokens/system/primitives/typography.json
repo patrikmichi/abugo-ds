@@ -419,6 +419,22 @@
     "$type": "lineHeights",
     "$value": "2rem"
   },
+  "typography-lineHeight-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "lineHeights",
+    "$value": "1.5rem"
+  },
+  "typography-lineHeight-4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "lineHeights",
+    "$value": "2rem"
+  },
   "typography-fontWeight-medium": {
     "$scopes": [
       "ALL_SCOPES"
@@ -442,6 +458,22 @@
     "$hiddenFromPublishing": true,
     "$type": "fontWeights",
     "$value": 400
+  },
+  "typography-fontWeight-normal": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "fontWeights",
+    "$value": 400
+  },
+  "typography-fontWeight-semibold": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "fontWeights",
+    "$value": 600
   },
   "typography-fontFamily-sans": {
     "$scopes": [

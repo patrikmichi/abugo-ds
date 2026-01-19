@@ -104,6 +104,14 @@
       }
     }
   },
+  "content.passive.on.accent.disabled": {
+    "$scopes": ["SHAPE_FILL", "TEXT_FILL"],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Content on accent when disabled."
+  },
   "content.passive.on.accent.inverse": {
     "$scopes": [
       "SHAPE_FILL",
@@ -254,6 +262,33 @@
           "text",
           "headings",
           "labels"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "content.passive.on.promo": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in promo state. Use for text on promo backgrounds.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "promo",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "badges"
         ],
         "deprecated": false,
         "replacedBy": null

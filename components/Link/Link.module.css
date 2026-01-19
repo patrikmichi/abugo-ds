@@ -1,28 +1,88 @@
 /* Link component styles using design tokens */
+/* Based on Atlassian Design System Link patterns */
 
 .link {
   color: var(--token-component-link-default-content-default);
   text-decoration: none;
   cursor: pointer;
-  transition: color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  transition: 
+    color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    text-decoration var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  display: inline;
+  position: relative;
 }
 
-.link:hover {
+.link:hover:not(.disabled) {
   color: var(--token-component-link-default-content-hover);
   text-decoration: underline;
 }
 
-.link:active {
+.link:active:not(.disabled) {
   color: var(--token-component-link-default-content-active);
+  text-decoration: underline;
 }
 
-.link:visited {
+.link:visited:not(.disabled) {
   color: var(--token-component-link-default-content-visited);
 }
 
-.link:disabled,
+/* Secondary variant - grey links */
+.link.secondary {
+  color: var(--token-component-link-secondary-content-default);
+}
+
+.link.secondary:hover:not(.disabled) {
+  color: var(--token-component-link-secondary-content-hover);
+  text-decoration: underline;
+}
+
+.link.secondary:active:not(.disabled) {
+  color: var(--token-component-link-secondary-content-active);
+  text-decoration: underline;
+}
+
+.link.secondary:visited:not(.disabled) {
+  color: var(--token-component-link-secondary-content-visited);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #5690f5);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Disabled state */
+.link.disabled,
 .link[aria-disabled="true"] {
   color: var(--token-component-link-default-content-disabled);
   cursor: not-allowed;
   opacity: 0.6;
+  pointer-events: none;
+}
+
+.link.secondary.disabled,
+.link.secondary[aria-disabled="true"] {
+  color: var(--token-component-link-secondary-content-disabled);
+}
+
+.link.disabled:hover,
+.link[aria-disabled="true"]:hover {
+  text-decoration: none;
+}
+
+/* Focus styles for keyboard navigation */
+.link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
 }

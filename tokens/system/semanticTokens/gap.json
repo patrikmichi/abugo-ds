@@ -1,6 +1,14 @@
 {
   "$name": "Semantic Tokens",
   "gap": {
+    "xxxs": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Extra extra extra small gap (4px)."
+    },
     "xxs": {
       "$scopes": [
         "ALL_SCOPES"
@@ -31,6 +39,14 @@
       "$value": "{spacing-3}",
       "$description": "Small gap (12px). Use for standard spacing between related elements."
     },
+    "sm": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Small gap alias (12px)."
+    },
     "m": {
       "$scopes": [
         "ALL_SCOPES"
@@ -40,6 +56,14 @@
       "$collectionName": "primitives",
       "$value": "{spacing-4}",
       "$description": "Medium gap (16px). Use for comfortable spacing in standard layouts."
+    },
+    "md": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Medium gap alias (16px)."
     },
     "l": {
       "$scopes": [

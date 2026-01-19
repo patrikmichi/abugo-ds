@@ -4,6 +4,8 @@
   display: flex;
   align-items: stretch;
   width: 100%;
+  /* Fixed height - set per size variant */
+  height: var(--token-component-height-field-md);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   background-color: var(--token-component-field-control-background-default);
@@ -19,7 +21,7 @@
   display: flex;
   align-items: center;
   gap: var(--token-component-gap-field-selector);
-  padding: 0 var(--token-component-padding-x-field-selector-md);
+  padding: 0 var(--token-component-padding-x-field-md);
   background-color: var(--token-component-field-selector-background);
   border-right: calc(var(--token-component-field-separator-width) * 1px) solid var(--token-component-field-separator-color-default);
   flex-shrink: 0;
@@ -62,9 +64,10 @@
   flex-shrink: 0;
 }
 
-.chevron svg {
-  width: var(--token-component-field-selector-chevron-size);
-  height: var(--token-component-field-selector-chevron-size);
+.chevron .material-symbols-outlined {
+  font-size: var(--token-component-field-selector-chevron-size);
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Separator */
@@ -110,11 +113,12 @@
 
 /* Size variants */
 .phoneNumberField.sm {
+  height: var(--token-component-height-field-sm);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
 }
 
 .phoneNumberField.sm .countryCodeWrapper {
-  padding: 0 var(--token-component-padding-x-field-selector-sm);
+  padding: 0 var(--token-component-padding-x-field-sm);
 }
 
 .phoneNumberField.sm .countryCodeSelect {
@@ -122,11 +126,12 @@
 }
 
 .phoneNumberField.lg {
+  height: var(--token-component-height-field-lg);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
 }
 
 .phoneNumberField.lg .countryCodeWrapper {
-  padding: 0 var(--token-component-padding-x-field-selector-lg);
+  padding: 0 var(--token-component-padding-x-field-lg);
 }
 
 .phoneNumberField.lg .countryCodeSelect {

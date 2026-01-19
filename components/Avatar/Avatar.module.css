@@ -1,32 +1,267 @@
 /* Avatar component styles using design tokens */
 
+
 .avatar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--token-semantic-icon-md);
-  height: var(--token-semantic-icon-md);
-  border-radius: var(--token-semantic-radius-full);
-  background-color: var(--token-component-avatar-default-background);
-  color: var(--token-component-avatar-default-content);
-  font-size: var(--token-semantic-typography-body-size-sm);
-  font-weight: 500;
+  flex-shrink: 0;
+  background-color: var(--token-component-avatar-default-background, #f0f0f0);
+  color: var(--token-component-avatar-default-content, #666);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
   overflow: hidden;
+  user-select: none;
+  vertical-align: middle;
 }
 
-.default {
-  background-color: var(--token-component-avatar-default-background);
-  color: var(--token-component-avatar-default-content);
+/* Shapes */
+.avatar.circle {
+  border-radius: 50%;
 }
 
-.background {
-  background-color: var(--token-component-avatar-default-background);
+.avatar.rounded {
+  /* Border radius calculated dynamically as 0.4 * height via inline styles */
+  /* Default fallback for when size is not a number */
+  border-radius: calc(var(--token-component-avatar-size-md) * 0.4);
 }
 
-.content {
-  color: var(--token-component-avatar-default-content);
+.avatar.rounded.xs {
+  border-radius: calc(var(--token-component-avatar-size-xs) * 0.4);
 }
 
-.border {
-  border: var(--token-semantic-border-width-thin) solid var(--token-component-avatar-default-border);
+.avatar.rounded.sm {
+  border-radius: calc(var(--token-component-avatar-size-sm) * 0.4);
+}
+
+.avatar.rounded.md {
+  border-radius: calc(var(--token-component-avatar-size-md) * 0.4);
+}
+
+.avatar.rounded.lg {
+  border-radius: calc(var(--token-component-avatar-size-lg) * 0.4);
+}
+
+.avatar.rounded.xl {
+  border-radius: calc(var(--token-component-avatar-size-xl) * 0.4);
+}
+
+/* Size variants */
+.avatar.xs {
+  width: var(--token-component-avatar-size-xs);
+  height: var(--token-component-avatar-size-xs);
+  font-size: var(--token-component-avatar-fontSize-xs);
+  line-height: var(--token-component-avatar-size-xs);
+}
+
+.avatar.sm {
+  width: var(--token-component-avatar-size-sm);
+  height: var(--token-component-avatar-size-sm);
+  font-size: var(--token-component-avatar-fontSize-sm);
+  line-height: var(--token-component-avatar-size-sm);
+}
+
+.avatar.md {
+  width: var(--token-component-avatar-size-md);
+  height: var(--token-component-avatar-size-md);
+  font-size: var(--token-component-avatar-fontSize-md);
+  line-height: var(--token-component-avatar-size-md);
+}
+
+.avatar.lg {
+  width: var(--token-component-avatar-size-lg);
+  height: var(--token-component-avatar-size-lg);
+  font-size: var(--token-component-avatar-fontSize-lg);
+  line-height: var(--token-component-avatar-size-lg);
+}
+
+.avatar.xl {
+  width: var(--token-component-avatar-size-xl);
+  height: var(--token-component-avatar-size-xl);
+  font-size: var(--token-component-avatar-fontSize-xl);
+  line-height: var(--token-component-avatar-size-xl);
+}
+
+.avatar.custom {
+  /* Custom size handled via inline styles */
+}
+
+/* Image avatar */
+.avatar.hasImage {
+  background-color: transparent;
+}
+
+.avatar .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Icon avatar */
+.avatar.hasIcon {
+  background-color: var(--token-component-avatar-icon-background, #f0f0f0);
+}
+
+.avatar .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+}
+
+.avatar.xs .icon {
+  font-size: calc(var(--token-component-avatar-size-xs) * 0.5);
+}
+
+.avatar.sm .icon {
+  font-size: calc(var(--token-component-avatar-size-sm) * 0.5);
+}
+
+.avatar.md .icon {
+  font-size: calc(var(--token-component-avatar-size-md) * 0.5);
+}
+
+.avatar.lg .icon {
+  font-size: calc(var(--token-component-avatar-size-lg) * 0.5);
+}
+
+.avatar.xl .icon {
+  font-size: calc(var(--token-component-avatar-size-xl) * 0.5);
+}
+
+/* Text/Letter avatar */
+.avatar.hasText {
+  background-color: var(--token-component-avatar-text-background, #538bff);
+  color: var(--token-component-avatar-text-content, var(--token-primitive-color-white, #ffffff));
+  white-space: nowrap;
+}
+
+.avatar .text {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Border and Ring */
+.avatar.border {
+  border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid var(--token-primitive-color-white, #ffffff);
+  box-sizing: border-box;
+}
+
+.avatar.border.xs,
+.avatar.border.sm,
+.avatar.border.md {
+  border-width: calc(var(--token-primitive-border-width-1, 1) * 1px);
+}
+
+.avatar.border.lg,
+.avatar.border.xl {
+  border-width: calc(var(--token-primitive-border-width-2, 2) * 1px);
+}
+
+.avatar.ring {
+  position: relative;
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-semantic-background-active-accent-default, #5690f5);
+  box-sizing: border-box;
+}
+
+.avatar.ring.xs,
+.avatar.ring.sm,
+.avatar.ring.md {
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-semantic-background-active-accent-default, #5690f5);
+}
+
+.avatar.ring.lg,
+.avatar.ring.xl {
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-2, 2) * 1px) var(--token-semantic-background-active-accent-default, #5690f5);
+}
+
+/* When both border and ring are present, ring appears outside the border */
+.avatar.border.ring {
+  border-width: calc(var(--token-primitive-border-width-1, 1) * 1px);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-primitive-color-white, #ffffff),
+              0 0 0 calc(var(--token-primitive-border-width-1, 1) * 3px) var(--token-semantic-background-active-accent-default, #5690f5);
+}
+
+.avatar.border.ring.xs,
+.avatar.border.ring.sm,
+.avatar.border.ring.md {
+  border-width: calc(var(--token-primitive-border-width-1, 1) * 1px);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-primitive-color-white, #ffffff),
+              0 0 0 calc(var(--token-primitive-border-width-1, 1) * 3px) var(--token-semantic-background-active-accent-default, #5690f5);
+}
+
+.avatar.border.ring.lg,
+.avatar.border.ring.xl {
+  border-width: calc(var(--token-primitive-border-width-2, 2) * 1px);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-2, 2) * 1px) var(--token-primitive-color-white, #ffffff),
+              0 0 0 calc(var(--token-primitive-border-width-2, 2) * 3px) var(--token-semantic-background-active-accent-default, #5690f5);
+}
+
+/* Avatar Group */
+.group {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--token-component-avatar-group-gap, -8px) * 1px);
+}
+
+.groupAvatar {
+  border: 2px solid var(--token-component-avatar-group-border, #fff);
+  margin-left: calc(var(--token-component-avatar-group-gap, -8px) * 1px);
+}
+
+.groupAvatar:first-child {
+  margin-left: 0;
+}
+
+/* Excess indicator */
+.excess {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-avatar-size-md);
+  height: var(--token-component-avatar-size-md);
+  border-radius: 50%;
+  background-color: var(--token-component-avatar-excess-background, #f0f0f0);
+  color: var(--token-component-avatar-excess-content, #666);
+  font-size: var(--token-component-avatar-fontSize-md);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+  border: 2px solid var(--token-component-avatar-group-border, #fff);
+  margin-left: calc(var(--token-component-avatar-group-gap, -8px) * 1px);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.excess:hover {
+  background-color: var(--token-component-avatar-excess-background-hover, #e0e0e0);
+}
+
+.excess:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Size variants for excess */
+.group .excess {
+  width: inherit;
+  height: inherit;
+  font-size: inherit;
+}
+
+/* Popover trigger styles */
+.excess-hover {
+  cursor: pointer;
+}
+
+.excess-focus {
+  cursor: pointer;
+}
+
+.excess-click {
+  cursor: pointer;
 }

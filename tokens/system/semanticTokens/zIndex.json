@@ -80,6 +80,14 @@
       "$collectionName": "primitives",
       "$value": "{z-index.z-tooltip}",
       "$description": "Tooltip z-index layer"
+    },
+    "drawer": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": 1045,
+      "$description": "Drawer z-index layer (between modal-backdrop and modal)"
     }
   }
 }

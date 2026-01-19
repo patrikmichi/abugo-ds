@@ -49,7 +49,6 @@ Only these **base components** from the repository:
 - `badge` - Badge components
 - `breadcrumbs` - Breadcrumb navigation
 - `button` - All button variants
-- `calendar` - Calendar components
 - `card` - Cards
 - `checkbox` - Checkboxes
 - `chip` - Chips/tags

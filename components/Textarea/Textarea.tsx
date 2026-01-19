@@ -3,9 +3,12 @@ import styles from './Textarea.module.css';
 import { cn } from '@/lib/utils';
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  /** The size of the textarea */
   size?: 'sm' | 'md' | 'lg';
-  /** Whether the field has a validation error */
+  /** Set validation status. When used with Field wrapper, Field manages this automatically. */
   error?: boolean;
+  /** Whether the textarea is disabled */
+  disabled?: boolean;
 }
 
 export function Textarea({

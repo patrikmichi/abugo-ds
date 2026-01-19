@@ -1,0 +1,301 @@
+/* InputNumber component styles using design tokens */
+/* Based on Input component with additional step controls */
+
+.inputNumberWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* Height set per size variant */
+}
+
+.inputNumberWrapper.sm {
+  height: var(--token-component-height-field-sm);
+}
+
+.inputNumberWrapper.md {
+  height: var(--token-component-height-field-md);
+}
+
+.inputNumberWrapper.lg {
+  height: var(--token-component-height-field-lg);
+}
+
+.inputNumber {
+  /* Base styles - use field control tokens, match Input component */
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--token-component-field-control-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
+  /* Equal padding with visual centering adjustment */
+  padding-top: calc(var(--token-component-padding-y-field-md) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-md) - 1px);
+  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  font-size: var(--token-component-font-size-field-sm);
+  /* Line-height matches content area (height - padding-top - padding-bottom) for vertical centering */
+  line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  transition: 
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-sizing: border-box;
+  outline: none;
+  
+  /* Remove number input spinners */
+  -moz-appearance: textfield;
+}
+
+.inputNumber::-webkit-outer-spin-button,
+.inputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Adjust padding when controls are present */
+.inputNumberWrapper.hasControls .inputNumber {
+  padding-inline-end: calc(var(--token-component-padding-x-field-md) + 22px);
+}
+
+/* Adjust padding when prefix/suffix are present */
+.inputNumberWrapper.hasPrefix .inputNumber {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-md));
+}
+
+.inputNumberWrapper.hasSuffix .inputNumber {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-md));
+}
+
+.inputNumberWrapper.hasControls.hasSuffix .inputNumber {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-md) + 22px);
+}
+
+/* Prefix and suffix */
+.prefix {
+  position: absolute;
+  left: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-content-value);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inputNumberWrapper.hasPrefix .prefix {
+  left: var(--token-component-padding-adornment-field-leading-md);
+}
+
+.suffix {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-content-value);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inputNumberWrapper.hasControls.hasSuffix .suffix {
+  right: calc(22px + var(--token-component-padding-adornment-field-trailing-md));
+}
+
+.inputNumberWrapper:not(.hasControls).hasSuffix .suffix {
+  right: var(--token-component-padding-x-field-md);
+}
+
+.inputNumber::placeholder {
+  color: var(--token-component-field-content-placeholder);
+}
+
+/* Step controls (spinner buttons) */
+.controls {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  border-left: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  border-top-right-radius: calc(var(--token-component-radius-field-md) * 1px);
+  border-bottom-right-radius: calc(var(--token-component-radius-field-md) * 1px);
+  overflow: hidden;
+  background-color: var(--token-component-field-control-background-default);
+}
+
+.controlButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--token-component-field-control-background-default);
+  border: none;
+  border-bottom: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
+  cursor: pointer;
+  padding: 0;
+  transition: 
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  user-select: none;
+}
+
+.controlButton:last-child {
+  border-bottom: none;
+}
+
+.controlButton:hover:not(:disabled) {
+  background-color: var(--token-component-field-control-background-hover);
+  color: var(--token-component-field-content-value);
+}
+
+.controlButton:active:not(:disabled) {
+  background-color: var(--token-component-field-control-background-active);
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controlButton svg,
+.controlButton .material-symbols-outlined {
+  width: 16px;
+  height: 16px;
+  font-size: var(--token-primitive-icon-size-icon-size-1);
+  display: block;
+}
+
+/* Enabled state (default) */
+.inputNumber:not(.error):not(.disabled):hover:not(:disabled) {
+  background-color: var(--token-component-field-control-background-hover);
+  border-color: var(--token-component-field-control-border-hover);
+}
+
+.inputNumber:not(.error):not(.disabled):focus:not(:disabled),
+.inputNumber:not(.error):not(.disabled):focus-visible:not(:disabled) {
+  background-color: var(--token-component-field-control-background-focused);
+  border-color: var(--token-component-field-control-border-focused);
+  /* Show soft glowing focus ring on focus */
+  outline: none;
+  box-shadow: 
+    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+}
+
+.inputNumber:not(.error):not(.disabled):active:not(:disabled) {
+  border-color: var(--token-component-field-control-border-active);
+}
+
+/* Error state */
+.inputNumber.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  color: var(--token-component-field-content-value);
+}
+
+.inputNumber.error:hover:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+}
+
+.inputNumber.error:focus:not(:disabled),
+.inputNumber.error:focus-visible:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  outline: none;
+  box-shadow: none;
+}
+
+.inputNumber.error ~ .controls {
+  border-left-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+.inputNumber.error ~ .controls .controlButton {
+  background-color: var(--token-component-field-status-error-background);
+  border-color: var(--token-component-field-status-error-border);
+}
+
+/* Disabled state */
+.inputNumber.disabled,
+.inputNumber:disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  color: var(--token-component-field-status-disabled-content);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.inputNumber.disabled ~ .controls,
+.inputNumber:disabled ~ .controls {
+  border-left-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+}
+
+.inputNumber.disabled ~ .controls .controlButton,
+.inputNumber:disabled ~ .controls .controlButton {
+  background-color: var(--token-component-field-status-disabled-background);
+  border-color: var(--token-component-field-status-disabled-border);
+  cursor: not-allowed;
+}
+
+/* ReadOnly state */
+.inputNumber.readOnly {
+  background-color: var(--token-component-field-control-background-default);
+  cursor: default;
+}
+
+/* Size variants */
+.inputNumberWrapper.sm .inputNumber {
+  height: var(--token-component-height-field-sm);
+  padding-inline-start: var(--token-component-padding-x-field-sm);
+  padding-inline-end: var(--token-component-padding-x-field-sm);
+  /* Equal padding with visual centering adjustment */
+  padding-top: calc(var(--token-component-padding-y-field-sm) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-sm) - 1px);
+  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+  font-size: var(--token-component-font-size-field-sm);
+  /* Line-height matches content area */
+  line-height: calc(var(--token-component-height-field-sm) - var(--token-component-padding-y-field-sm) * 2);
+}
+
+.inputNumberWrapper.sm.hasControls .inputNumber {
+  padding-inline-end: calc(var(--token-component-padding-x-field-sm) + 22px);
+}
+
+.inputNumberWrapper.sm .controls {
+  width: 22px;
+}
+
+.inputNumberWrapper.md .inputNumber {
+  /* Default styles already set above */
+}
+
+.inputNumberWrapper.lg .inputNumber {
+  height: var(--token-component-height-field-lg);
+  padding-inline-start: var(--token-component-padding-x-field-lg);
+  padding-inline-end: var(--token-component-padding-x-field-lg);
+  /* Equal padding with visual centering adjustment */
+  padding-top: calc(var(--token-component-padding-y-field-lg) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-lg) - 1px);
+  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+  font-size: var(--token-component-font-size-field-lg);
+  /* Line-height matches content area */
+  line-height: calc(var(--token-component-height-field-lg) - var(--token-component-padding-y-field-lg) * 2);
+}
+
+.inputNumberWrapper.lg.hasControls .inputNumber {
+  padding-inline-end: calc(var(--token-component-padding-x-field-lg) + 22px);
+}
+
+.inputNumberWrapper.lg .controls {
+  width: 22px;
+}

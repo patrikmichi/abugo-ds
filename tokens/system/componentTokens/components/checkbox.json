@@ -2,13 +2,15 @@
   "$name": "Component Tokens",
   "background": {
     "unchecked": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "color",
-      "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{universal.transparent}"
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
     },
     "checked": {
       "default": {
@@ -72,12 +74,102 @@
     }
   },
   "content": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "color",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{content.passive.on.accent}"
+    "disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "disabled": {
+    "opacity": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "number",
+      "$value": 0.5,
+      "$collectionName": ""
+    }
+  },
+  "focus": {
+    "outline": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "group": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "spacing",
+      "$value": "{padding.s}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "label": {
+    "color": {
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "size": {
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    }
+  },
+  "transition": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "number",
+      "$value": 200,
+      "$collectionName": ""
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "string",
+      "$value": "ease-out",
+      "$collectionName": ""
+    }
   }
 }

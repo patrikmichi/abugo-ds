@@ -1,4 +1,12 @@
 {
+  "color-white": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "color",
+    "$value": "#ffffff"
+  },
   "universal": {
     "transparent": {
       "$scopes": [

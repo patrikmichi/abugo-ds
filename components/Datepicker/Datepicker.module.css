@@ -1,93 +1,225 @@
-/* Datepicker component styles using design tokens */
-/* Unified structure for all field controls */
+/* DatePicker component styles using design tokens */
+
 
 .datepickerWrapper {
   position: relative;
   width: 100%;
-  height: var(--token-component-height-field-md);
 }
 
-.datepicker {
+/* Match Select padding-right for calendar icon - override Input's suffix padding */
+.datepickerInput :global(.input) {
+  padding-inline-end: var(--token-component-padding-right-field-select-md) !important;
+}
+
+.datepickerWrapper :global(.inputWrapper.sm.hasSuffix .input) {
+  padding-inline-end: var(--token-component-padding-right-field-select-sm) !important;
+}
+
+.datepickerWrapper :global(.inputWrapper.lg.hasSuffix .input) {
+  padding-inline-end: var(--token-component-padding-right-field-select-lg) !important;
+}
+
+.rangePickerWrapper {
+  position: relative;
   width: 100%;
-  height: 100%;
-  background-color: var(--token-component-field-control-background-default);
-  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
-  color: var(--token-component-field-content-value);
-  padding-inline-start: var(--token-component-padding-x-field-md);
-  padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
-  padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  font-size: var(--token-component-font-size-field-sm);
-  line-height: var(--token-component-line-height-field-value);
+}
+
+/* Calendar Panel */
+.panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: var(--token-semantic-z-index-dropdown, 1000);
+  width: 280px;
+  background-color: var(--token-primitive-color-white, #ffffff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-semantic-border-passive-neutral-default, #e0e0e0);
+  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: var(--token-semantic-padding-md, 16px);
   font-family: var(--token-primitive-typography-font-family-sans);
-  transition: 
-    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
-    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  box-sizing: border-box;
-  cursor: pointer;
+}
+
+.panel.positioned {
+  position: fixed;
+  margin-top: 0;
+}
+
+/* Header */
+.header {
   display: flex;
   align-items: center;
-  
-  /* Font descender spacing fix - trim font metrics (modern browsers) */
-  text-box-trim: both;
-  text-box-edge: cap alphabetic;
+  justify-content: space-between;
+  margin-bottom: var(--token-semantic-padding-md, 16px);
+  padding-bottom: var(--token-semantic-padding-xs, 12px);
+  border-bottom: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-semantic-border-passive-neutral-default, #e0e0e0);
 }
 
-.datepicker:not(.error):not(.disabled):hover:not(:disabled) {
-  background-color: var(--token-component-field-control-background-hover);
-  border-color: var(--token-component-field-control-border-hover);
+.navButton {
+  background: none;
+  border: none;
+  color: var(--token-semantic-content-passive-neutral-default, #464646);
+  cursor: pointer;
+  padding: var(--token-semantic-padding-xxxs, 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 24px;
+  height: 24px;
 }
 
-.datepicker:not(.error):not(.disabled):focus:not(:disabled),
-.datepicker:not(.error):not(.disabled):focus-within:not(:disabled) {
-  background-color: var(--token-component-field-control-background-focused);
-  border-color: var(--token-component-field-control-border-focused);
-  /* Show soft glowing focus ring on focus */
-  outline: none;
-  box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+.navButton:hover:not(:disabled) {
+  background-color: var(--token-semantic-background-active-neutral-subtle-hover, rgba(70, 70, 70, 0.05));
+  color: var(--token-semantic-content-active-neutral-hover, #161616);
 }
 
-.datepicker:not(.error):not(.disabled):active:not(:disabled) {
-  border-color: var(--token-component-field-control-border-active);
+.monthYear {
+  flex: 1;
+  text-align: center;
+  font-size: var(--token-primitive-typography-font-size-4, 16px);
+  font-weight: var(--token-primitive-typography-font-weight-bold, 700);
+  line-height: var(--token-primitive-typography-line-height-4, 24px);
+  color: var(--token-semantic-content-passive-neutral-strong, #161616);
+  padding: 0 var(--token-semantic-padding-xs, 12px);
 }
 
-/* Error state - use status.error tokens */
-.datepicker.error {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-  color: var(--token-component-field-content-value);
+/* Week days */
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  margin-bottom: var(--token-semantic-padding-xs, 12px);
 }
 
-.datepicker.error:hover:not(:disabled) {
-  border-color: var(--token-component-field-status-error-border);
+.weekDay {
+  text-align: center;
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  color: var(--token-semantic-content-passive-neutral-subtle, #737373);
+  padding: var(--token-semantic-padding-xxxs, 4px);
 }
 
-.datepicker.error:focus:not(:disabled),
-.datepicker.error:focus-within:not(:disabled) {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-  /* No focus ring on error state - keep red border */
-  outline: none;
-  box-shadow: none;
+/* Calendar grid */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
 }
 
-/* Disabled state - use status.disabled tokens */
-.datepicker.disabled,
-.datepicker:disabled {
-  border-color: var(--token-component-field-status-disabled-border);
-  background-color: var(--token-component-field-status-disabled-background);
-  color: var(--token-component-field-status-disabled-content);
+/* Day */
+.day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  color: var(--token-component-calendar-day-content-default, #464646);
+  background-color: var(--token-component-calendar-day-background-default, #ffffff);
+  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  min-height: 32px;
+  margin: 2px;
+}
+
+.day:hover:not(.disabled):not(.selected) {
+  background-color: var(--token-component-calendar-day-background-hover, #efefef);
+  color: var(--token-semantic-content-active-accent-default, #5690f5);
+}
+
+.day.today:not(.selected) {
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+  color: var(--token-component-calendar-day-content-today, #5690f5);
+  background-color: var(--token-component-calendar-day-background-today, #ffffff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-semantic-border-passive-neutral-default, #e0e0e0);
+  border-radius: 50%;
+}
+
+.day.selected {
+  background-color: var(--token-component-calendar-day-background-selected, #5690f5);
+  color: var(--token-component-calendar-day-content-selected, #ffffff);
+  font-weight: var(--token-primitive-typography-font-weight-bold, 700);
+  border-radius: 50%;
+}
+
+.day.selected:hover {
+  background-color: var(--token-semantic-background-active-accent-hover, #4a7fd4);
+}
+
+.day.otherMonth {
+  color: var(--token-semantic-content-passive-neutral-muted, #a2a2a2);
+}
+
+.day.disabled {
+  color: var(--token-component-calendar-day-content-disabled, #a2a2a2);
   cursor: not-allowed;
-  opacity: 1; /* Don't use opacity, use actual disabled colors */
+  background-color: transparent;
 }
 
-.value {
-  color: var(--token-component-field-content-value);
+.day.disabled:hover {
+  background-color: transparent;
+  color: var(--token-component-calendar-day-content-disabled, #a2a2a2);
 }
 
-.placeholder {
-  color: var(--token-component-field-content-placeholder);
+/* Footer */
+.footer {
+  margin-top: var(--token-semantic-padding-md, 16px);
+  padding-top: var(--token-semantic-padding-xs, 12px);
+  border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-semantic-border-passive-neutral-default, #e0e0e0);
+  display: flex;
+  justify-content: center;
+}
+
+.todayButton {
+  background: none;
+  border: none;
+  color: var(--token-semantic-content-active-accent-default, #5690f5);
+  cursor: pointer;
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  padding: var(--token-semantic-padding-xxxs, 4px) var(--token-semantic-padding-xs, 12px);
+  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  transition: background-color 0.2s ease;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+.todayButton:hover {
+  background-color: var(--token-semantic-background-active-neutral-subtle-hover, rgba(70, 70, 70, 0.05));
+}
+
+.extraFooter {
+  margin-top: var(--token-semantic-padding-md, 16px);
+  padding-top: var(--token-semantic-padding-xs, 12px);
+  border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-semantic-border-passive-neutral-default, #e0e0e0);
+}
+
+/* Icon styles */
+.icon {
+  display: inline-block;
+}
+
+.iconDefault {
+  font-size: var(--token-primitive-icon-size-icon-size-2, 20px);
+  width: 1em;
+  height: 1em;
+}
+
+.iconMarginRight {
+  margin-right: var(--token-semantic-gap-xs);
+}
+
+.iconCursor {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .panel {
+    width: calc(100vw - 32px);
+    max-width: 280px;
+  }
 }

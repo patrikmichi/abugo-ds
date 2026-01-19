@@ -1,6 +1,14 @@
 {
   "$name": "Semantic Tokens",
   "opacity": {
+    "disabled": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 0.5,
+      "$description": "Opacity for disabled UI elements (50%)."
+    },
     "overlay": {
       "$scopes": [
         "ALL_SCOPES"

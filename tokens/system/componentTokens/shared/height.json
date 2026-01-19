@@ -116,7 +116,25 @@
       "$type": "sizing",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{control.height.sm}"
+      "$value": "{control.height.xxs}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.md}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.lg}"
     }
   },
   "pagination": {

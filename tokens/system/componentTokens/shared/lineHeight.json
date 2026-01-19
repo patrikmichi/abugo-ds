@@ -140,21 +140,47 @@
     }
   },
   "alert": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "lineHeights",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{typography.body-line.md}"
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.16}",
+      "$description": "Alert message heading line height (24px)"
+    },
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.14}",
+      "$description": "Alert description line height (20px)"
+    }
   },
   "toast": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "lineHeights",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{typography.body-line.md}"
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Toast line height for small size"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Toast line height for large size"
+    }
   }
 }

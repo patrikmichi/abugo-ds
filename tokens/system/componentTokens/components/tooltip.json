@@ -39,5 +39,16 @@
       "$collectionName": "semanticTokens",
       "$value": "{background.passive.info.default}"
     }
+  },
+  "max": {
+    "width": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    }
   }
 }

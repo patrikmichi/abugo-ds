@@ -1,252 +1,308 @@
-/* Select component styles using design tokens */
-/* Following Material UI, Chakra UI, and Ant Design patterns */
+/* Select trigger styles */
 
 .selectWrapper {
   position: relative;
+  display: inline-block;
   width: 100%;
-  /* Height set per size variant */
-  /* Ensure dropdown is not clipped */
-  overflow: visible;
-}
-
-.selectWrapper.sm {
-  height: var(--token-component-height-field-sm);
-}
-
-.selectWrapper.md {
-  height: var(--token-component-height-field-md);
-}
-
-.selectWrapper.lg {
-  height: var(--token-component-height-field-lg);
 }
 
 .select {
-  /* Base styles - use field control tokens */
   position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: var(--token-component-field-control-background-default);
-  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
-  color: var(--token-component-field-content-value);
-  padding-inline-start: var(--token-component-padding-x-field-md);
-  padding-inline-end: var(--token-component-padding-right-field-select-md);
-  /* Equal padding (text-box-trim handles font metric trimming) */
-  padding-top: var(--token-component-padding-top-field-md);
-  padding-bottom: var(--token-component-padding-bottom-field-md);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  font-size: var(--token-component-font-size-field-sm);
-  line-height: var(--token-component-line-height-field-value);
-  font-family: var(--token-primitive-typography-font-family-sans);
-  cursor: pointer;
-  transition: 
-    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
-    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  box-sizing: border-box;
   display: flex;
   align-items: center;
-  
-  /* Font descender spacing fix - trim font metrics (modern browsers) */
-  text-box-trim: both;
-  text-box-edge: cap alphabetic;
-  
-  /* Fallback for browsers without text-box-trim: optical alignment offset */
-  @supports not (text-box-trim: both) {
-    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
-    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
-  }
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: var(--token-component-field-content-value, var(--token-semantic-content-passive-neutral-default, rgba(0, 0, 0, 0.88)));
+  font-size: var(--token-component-font-size-field-sm, var(--token-semantic-typography-body-size-sm, 14px));
+  font-family: var(--token-primitive-typography-font-family-sans);
+  height: var(--token-component-height-field-md, 48px);
+  min-height: var(--token-component-height-field-md, 48px);
+  background-color: var(--token-component-field-control-background-default, var(--token-semantic-surface-elevated, #fff));
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default, var(--token-semantic-border-default, #efefef));
+  border-radius: calc(var(--token-component-radius-field-md, var(--token-primitive-radius-1, 4)) * 1px);
+  cursor: pointer;
+  transition: all var(--token-component-animation-field-duration, 200ms) var(--token-component-animation-field-easing, ease-out);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.select:hover:not(.disabled) {
+  border-color: var(--token-component-field-control-border-hover, var(--token-semantic-border-active-neutral-control-field-hover, #4096ff));
+}
+
+.select.open:not(.disabled) {
+  border-color: var(--token-component-field-control-border-focused, var(--token-semantic-border-focus, #93b8f9));
+  box-shadow:
+    0 0 0 var(--token-component-field-focus-outline-offset, 0) transparent,
+    0 0 var(--token-component-field-focus-outline-blur, 4px) calc(var(--token-component-field-focus-outline-offset, 0) + calc(var(--token-component-field-focus-outline-width, 2) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color, #5690f5) calc(var(--token-component-field-focus-outline-opacity, 0.2) * 100%), transparent);
+}
+
+.select.error {
+  border-color: var(--token-component-field-status-error-border, var(--token-semantic-border-active-danger-default, #ff434e));
+}
+
+.select.error.open {
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-2) * 1px) var(--token-semantic-background-active-danger-subtle, rgba(255, 67, 78, 0.1));
+}
+
+.select.disabled {
+  background-color: var(--token-component-field-control-background-disabled, var(--token-primitive-grey-opacity-4, rgba(0, 0, 0, 0.04)));
+  color: var(--token-component-field-content-disabled, var(--token-semantic-text-disabled, rgba(0, 0, 0, 0.25)));
+  cursor: not-allowed;
+  opacity: var(--token-primitive-opacity-100, 1);
 }
 
 .selectValue {
   flex: 1;
-  display: block;
-  text-align: left;
+  min-width: 0;
+  padding-inline-start: var(--token-component-padding-x-field-md, 16px);
+  padding-inline-end: var(--token-component-padding-x-field-md, 16px);
+  /* Equal padding with visual centering adjustment (same as Input) */
+  padding-top: calc(var(--token-component-padding-y-field-md, 16px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-md, 16px) - 1px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  min-width: 0;
-  
-  /* Font descender spacing fix - trim font metrics (modern browsers) */
-  text-box-trim: both;
-  text-box-edge: cap alphabetic;
+  /* Line-height matches content area for vertical centering */
+  line-height: calc(var(--token-component-height-field-md, 48px) - var(--token-component-padding-y-field-md, 16px) * 2);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.selectValue.placeholder {
-  color: var(--token-component-field-content-placeholder);
+input.selectValue {
+  display: block;
+  margin: 0;
 }
+
+.selectValue.placeholder,
+.selectValue::placeholder {
+  color: var(--token-component-field-content-placeholder, var(--token-semantic-text-muted, rgba(0, 0, 0, 0.25)));
+}
+
+.selectValue.multipleValue {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--token-semantic-padding-xxxs, 4px);
+  padding-inline-start: var(--token-component-padding-x-field-md, 16px);
+  /* Padding-right: chevron icon size (24px for md) + gap */
+  padding-inline-end: calc(var(--token-semantic-icon-sm, 24px) + var(--token-component-select-tag-gap-chevron, 16px));
+  /* Equal padding with visual centering adjustment (same as Input) */
+  padding-top: calc(var(--token-component-padding-y-field-md, 16px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-md, 16px) - 1px);
+  white-space: normal;
+  overflow: visible;
+  /* Line-height matches content area for vertical centering */
+  line-height: calc(var(--token-component-height-field-md, 48px) - var(--token-component-padding-y-field-md, 16px) * 2);
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+
+.tagCount {
+  display: inline-flex;
+  align-items: center;
+  height: var(--token-component-select-tag-height, 24px);
+  margin: 0;
+  padding: 0 var(--token-semantic-padding-xxxs, 4px);
+  color: var(--token-semantic-text-secondary, rgba(0, 0, 0, 0.45));
+  font-size: var(--token-component-font-size-field-md, var(--token-semantic-typography-body-size-md, 14px));
+  line-height: var(--token-component-select-line-height-content, 24px);
+}
+
+.clearIcon {
+  position: absolute;
+  right: calc(var(--token-semantic-padding-xs, 12px) + var(--token-component-select-tag-gap-clear-icon-md, 12px) + var(--token-semantic-icon-sm, 24px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-semantic-icon-sm, 24px);
+  height: var(--token-semantic-icon-sm, 24px);
+  color: var(--token-component-select-icon-default, #464646);
+  font-size: var(--token-semantic-icon-sm, 24px);
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+  cursor: pointer;
+  opacity: var(--token-primitive-opacity-100, 1);
+  transition: all var(--token-primitive-animation-duration-base, 200ms) var(--token-primitive-animation-easing-ease-out, ease-out);
+  z-index: var(--token-component-select-z-index-clear-icon, 2);
+}
+
+.clearIcon:hover {
+  color: var(--token-component-select-icon-hover, #161616);
+}
+
+.loadingIcon {
+  position: absolute;
+  right: var(--token-semantic-padding-xs, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-semantic-text-muted, rgba(0, 0, 0, 0.25));
+  font-size: var(--token-primitive-icon-size-icon-size-1, 16px);
+  line-height: 1;
+  text-align: center;
+  z-index: var(--token-component-select-z-index-chevron, 1);
+}
+
 
 .chevron {
   position: absolute;
-  right: var(--token-component-padding-x-field-md);
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: var(--token-component-select-arrow-default);
-  transition: color 0.15s ease;
-  font-size: 20px;
-  width: 1em;
-  height: 1em;
-  display: inline-flex;
+  right: var(--token-semantic-padding-xs, 12px);
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  color: var(--token-component-select-arrow-default, #464646);
+  font-size: var(--token-semantic-icon-sm, 24px);
+  line-height: 1;
+  text-align: center;
+  transition: transform var(--token-primitive-animation-duration-base, 200ms) var(--token-primitive-animation-easing-ease-out, ease-out);
+  z-index: var(--token-component-select-z-index-chevron, 1);
 }
 
-.select:hover:not(.disabled) .chevron {
-  color: var(--token-component-select-arrow-hover);
-}
-
-.hiddenSelect {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-/* Enabled state (default) */
-.select:not(.error):not(.disabled):hover:not(:disabled) {
-  background-color: var(--token-component-field-control-background-hover);
-  border-color: var(--token-component-field-control-border-hover);
-}
-
-.select:not(.error):not(.disabled):focus:not(:disabled),
-.select:not(.error):not(.disabled):focus-visible:not(:disabled) {
-  background-color: var(--token-component-field-control-background-focused);
-  border-color: var(--token-component-field-control-border-focused);
-  /* Show soft glowing focus ring on focus */
-  outline: none;
-  box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
-}
-
-.select:not(.error):not(.disabled):active:not(:disabled) {
-  border-color: var(--token-component-field-control-border-active);
+.select:hover .chevron {
+  color: var(--token-component-select-arrow-hover, #161616);
 }
 
 
-.select.open:not(.error):not(.disabled) {
-  background-color: var(--token-component-field-control-background-focused);
-  border-color: var(--token-component-field-control-border-focused);
-  /* Show soft glowing focus ring when dropdown is open */
-  outline: none;
-  box-shadow: 
-    0 0 0 calc(var(--token-component-field-focus-outline-offset)) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px))) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+.select.loading .chevron {
+  display: none;
 }
 
-/* Focus-visible: Only show focus ring when keyboard navigating (exclude error states) */
-.select:not(.error):not(.disabled):focus-visible:not(:disabled) {
-  outline: none;
-  box-shadow: 
-    0 0 0 calc(var(--token-component-field-focus-outline-offset)) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px))) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
-}
-
-/* Fallback for browsers that don't support :focus-visible */
-.select:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Error state - use status.error tokens */
-.select.error {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-  /* Keep default text color, only border should be red */
-  color: var(--token-component-field-content-value);
-}
-
-.select.error:hover:not(:disabled) {
-  border-color: var(--token-component-field-status-error-border);
-}
-
-.select.error:focus:not(:disabled),
-.select.error:focus-visible:not(:disabled) {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-  /* No focus ring on error state - keep red border */
-  outline: none;
-  box-shadow: none;
-}
-
-/* Disabled state - use status.disabled tokens */
-.select.disabled,
-.select:disabled {
-  border-color: var(--token-component-field-status-disabled-border);
-  background-color: var(--token-component-field-status-disabled-background);
-  color: var(--token-component-field-status-disabled-content);
-  cursor: not-allowed;
-  opacity: 1; /* Don't use opacity, use actual disabled colors */
-}
-
-.sm {
-  padding-inline-start: var(--token-component-padding-x-field-sm);
-  padding-inline-end: var(--token-component-padding-right-field-select-sm);
-  /* Equal padding (text-box-trim handles font metric trimming) */
-  padding-top: var(--token-component-padding-top-field-sm);
-  padding-bottom: var(--token-component-padding-bottom-field-sm);
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-  
-  /* Fallback for browsers without text-box-trim: optical alignment offset */
-  @supports not (text-box-trim: both) {
-    padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
-    padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
-  }
-}
-
+/* Sizes */
+.select.sm,
 .selectWrapper.sm {
-  height: var(--token-component-height-field-sm);
+  font-size: var(--token-component-font-size-field-sm, 12px);
 }
 
-.sm .chevron {
-  right: var(--token-component-padding-x-field-sm);
+.select.sm {
+  height: var(--token-component-height-field-sm, 40px);
+  min-height: var(--token-component-height-field-sm, 40px);
 }
 
-.md {
-  padding-inline-start: var(--token-component-padding-x-field-md);
-  padding-inline-end: var(--token-component-padding-right-field-select-md);
-  /* Equal padding (text-box-trim handles font metric trimming) */
-  padding-top: var(--token-component-padding-top-field-md);
-  padding-bottom: var(--token-component-padding-bottom-field-md);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  
-  /* Fallback for browsers without text-box-trim: optical alignment offset */
-  @supports not (text-box-trim: both) {
-    padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
-    padding-bottom: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md));
-  }
+.select.sm .selectValue {
+  padding-inline-start: var(--token-component-padding-x-field-sm, 12px);
+  padding-inline-end: var(--token-component-padding-x-field-sm, 12px);
+  /* Equal padding with visual centering adjustment (same as Input) */
+  padding-top: calc(var(--token-component-padding-y-field-sm, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-sm, 12px) - 1px);
+  /* Line-height matches content area for vertical centering */
+  line-height: calc(var(--token-component-height-field-sm, 40px) - var(--token-component-padding-y-field-sm, 12px) * 2);
 }
 
+.select.sm .selectValue.multipleValue {
+  padding-inline-start: var(--token-component-padding-x-field-sm, 12px);
+  /* Padding-right: chevron icon size (20px for sm) + gap */
+  padding-inline-end: calc(var(--token-semantic-icon-xs, 20px) + var(--token-component-select-tag-gap-chevron, 16px));
+  padding-top: calc(var(--token-component-padding-y-field-sm, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-sm, 12px) - 1px);
+  line-height: calc(var(--token-component-height-field-sm, 40px) - var(--token-component-padding-y-field-sm, 12px) * 2);
+}
+
+.select.sm .tag,
+.select.sm .tagCount {
+  height: var(--token-component-select-tag-height, 24px);
+  line-height: var(--token-component-select-line-height-content, 24px);
+  font-size: var(--token-component-font-size-field-sm, var(--token-semantic-typography-body-size-sm, 12px));
+}
+
+.select.sm .chevron {
+  font-size: var(--token-semantic-icon-xs, 20px);
+}
+
+.select.sm .clearIcon {
+  right: calc(var(--token-semantic-padding-xs, 12px) + var(--token-component-select-tag-gap-clear-icon-sm, 8px) + var(--token-semantic-icon-xs, 20px));
+  width: var(--token-semantic-icon-xs, 20px);
+  height: var(--token-semantic-icon-xs, 20px);
+  font-size: var(--token-semantic-icon-xs, 20px);
+}
+
+.select.md,
 .selectWrapper.md {
-  height: var(--token-component-height-field-md);
+  font-size: var(--token-component-font-size-field-sm, 14px);
 }
 
-.md .chevron {
-  right: var(--token-component-padding-x-field-md);
+.select.md {
+  height: var(--token-component-height-field-md, 48px);
+  min-height: var(--token-component-height-field-md, 48px);
 }
 
-.lg {
-  padding-inline-start: var(--token-component-padding-x-field-lg);
-  padding-inline-end: var(--token-component-padding-right-field-select-lg);
-  /* Equal padding (text-box-trim handles font metric trimming) */
-  padding-top: var(--token-component-padding-top-field-lg);
-  padding-bottom: var(--token-component-padding-bottom-field-lg);
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
-  
-  /* Fallback for browsers without text-box-trim: optical alignment offset */
-  @supports not (text-box-trim: both) {
-    padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
-    padding-bottom: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg));
+.select.md .chevron {
+  font-size: var(--token-semantic-icon-sm, 24px);
+}
+
+.select.md .clearIcon {
+  right: calc(var(--token-semantic-padding-xs, 12px) + var(--token-component-select-tag-gap-clear-icon-md, 12px) + var(--token-semantic-icon-sm, 24px));
+  width: var(--token-semantic-icon-sm, 24px);
+  height: var(--token-semantic-icon-sm, 24px);
+  font-size: var(--token-semantic-icon-sm, 24px);
+}
+
+.select.lg,
+.selectWrapper.lg {
+  font-size: var(--token-component-font-size-field-lg, 16px);
+}
+
+.select.lg {
+  height: var(--token-component-height-field-lg, 56px);
+  min-height: var(--token-component-height-field-lg, 56px);
+}
+
+.select.lg .selectValue {
+  padding-inline-start: var(--token-component-padding-x-field-lg, 20px);
+  padding-inline-end: var(--token-component-padding-x-field-lg, 20px);
+  /* Equal padding with visual centering adjustment (same as Input) */
+  padding-top: calc(var(--token-component-padding-y-field-lg, 20px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-lg, 20px) - 1px);
+  /* Line-height matches content area for vertical centering */
+  line-height: calc(var(--token-component-height-field-lg, 56px) - var(--token-component-padding-y-field-lg, 20px) * 2);
+}
+
+.select.lg .selectValue.multipleValue {
+  padding-inline-start: var(--token-component-padding-x-field-lg, 20px);
+  /* Padding-right: chevron icon size (24px for lg) + gap */
+  padding-inline-end: calc(var(--token-semantic-icon-sm, 24px) + var(--token-component-select-tag-gap-chevron, 16px));
+  padding-top: calc(var(--token-component-padding-y-field-lg, 20px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-y-field-lg, 20px) - 1px);
+  line-height: calc(var(--token-component-height-field-lg, 56px) - var(--token-component-padding-y-field-lg, 20px) * 2);
+}
+
+.select.lg .tag,
+.select.lg .tagCount {
+  height: var(--token-component-select-tag-height, 24px);
+  line-height: var(--token-component-select-line-height-content, 24px);
+  font-size: var(--token-component-font-size-field-lg, var(--token-semantic-typography-body-size-lg, 16px));
+}
+
+.select.lg .chevron {
+  font-size: var(--token-semantic-icon-sm, 24px);
+}
+
+.select.lg .clearIcon {
+  right: calc(var(--token-semantic-padding-xs, 12px) + var(--token-component-select-tag-gap-clear-icon-md, 12px) + var(--token-semantic-icon-sm, 24px));
+  width: var(--token-semantic-icon-sm, 24px);
+  height: var(--token-semantic-icon-sm, 24px);
+  font-size: var(--token-semantic-icon-sm, 24px);
+}
+
+.loadingIconSpinner {
+  animation: spin var(--token-primitive-animation-duration-slower, 500ms) var(--token-primitive-animation-easing-linear, linear) infinite;
+}
+
+/* Spin animation for loading icon */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
-
-.selectWrapper.lg {
-  height: var(--token-component-height-field-lg);
-}
-
-.lg .chevron {
-  right: var(--token-component-padding-x-field-lg);
-}
-

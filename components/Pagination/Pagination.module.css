@@ -3,44 +3,118 @@
 .pagination {
   display: flex;
   align-items: center;
-  gap: var(--token-component-gap-pagination);
+  user-select: none;
 }
 
-.item {
-  display: inline-flex;
+.pages {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: var(--token-component-height-pagination-l);
-  height: var(--token-component-height-pagination-l);
-  padding: 0 var(--token-component-padding-x-pagination-l);
-  border-radius: var(--token-component-radius-pagination);
-  background-color: var(--token-component-pagination-item-background-default);
-  color: var(--token-component-pagination-item-content-default);
-  font-size: var(--token-semantic-typography-body-size-sm);
-  cursor: pointer;
-  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  border: none;
+  gap: var(--token-component-gap-pagination, 8px);
 }
 
-.item:hover:not(:disabled) {
-  color: var(--token-component-pagination-item-content-hover);
+.pageButton,
+.navButton,
+.jumpButton {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
 }
 
-.item.selected {
-  background-color: var(--token-component-pagination-item-background-selected);
-  color: var(--token-component-pagination-item-content-selected);
+/* Sizing overrides to ensure perfect squares */
+.lg .pageButton,
+.lg .navButton,
+.lg .jumpButton {
+  min-width: var(--token-component-height-button-plain-md, 40px) !important;
+  width: var(--token-component-height-button-plain-md, 40px) !important;
+  height: var(--token-component-height-button-plain-md, 40px) !important;
+  border-radius: calc(var(--token-component-radius-button-md, 8) * 1px) !important;
 }
 
-.item:disabled {
-  color: var(--token-component-pagination-item-content-disabled);
-  cursor: not-allowed;
-  opacity: 0.6;
+.sm .pageButton,
+.sm .navButton,
+.sm .jumpButton {
+  min-width: var(--token-component-height-button-plain-sm, 32px) !important;
+  width: var(--token-component-height-button-plain-sm, 32px) !important;
+  height: var(--token-component-height-button-plain-sm, 32px) !important;
+  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px) !important;
 }
 
-.background {
-  background-color: var(--token-component-pagination-item-background-default);
+/* Align Input radius and width */
+.lg .pageInput .input {
+  border-radius: calc(var(--token-component-radius-button-md, 8) * 1px) !important;
 }
 
-.content {
-  color: var(--token-component-pagination-item-content-default);
+.sm .pageInput .input {
+  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px) !important;
+}
+
+/* Active state for page buttons */
+.pageButton.active {
+  font-weight: var(--token-primitive-typography-font-weight-bold);
+  background-color: var(--token-component-button-primary-filled-background-default) !important;
+  color: var(--token-component-button-primary-filled-content) !important;
+}
+
+/* Input variant container */
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--token-semantic-padding-xxs, 8px);
+}
+
+/* Center the text inside the input and force width via wrapper */
+.pageInputWrapper {
+  width: 56px !important;
+  min-width: 56px !important;
+  max-width: 56px !important;
+  flex: 0 0 56px !important;
+  display: block !important;
+}
+
+/* Double-lock: force the input component inner wrapper as well */
+.innerInputWrapper {
+  width: 56px !important;
+  min-width: 56px !important;
+  max-width: 56px !important;
+  flex: 0 0 56px !important;
+}
+
+.pageInputWrapper :global(input) {
+  text-align: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  /* Visual compensation matching Input.tsx but using tokens */
+  padding-top: var(--token-semantic-typography-visual-compensation-offset-1, 1px) !important;
+}
+
+/* Visual compensation for cell numbers */
+.pageButton {
+  padding-top: var(--token-semantic-typography-visual-compensation-offset-1, 1px) !important;
+}
+
+/* Specific radius alignment */
+.lg .pageInputWrapper :global(div[class*="inputWrapper"]),
+.lg .pageInputWrapper :global(input) {
+  border-radius: 8px !important;
+}
+
+.sm .pageInputWrapper :global(div[class*="inputWrapper"]),
+.sm .pageInputWrapper :global(input) {
+  border-radius: 4px !important;
+}
+
+.totalText {
+  font-size: var(--token-semantic-typography-body-size-sm, 14px);
+  color: var(--token-semantic-text-primary, #464646);
+  white-space: nowrap;
+}
+
+.sm .totalText {
+  font-size: var(--token-semantic-typography-body-size-xs, 12px);
 }

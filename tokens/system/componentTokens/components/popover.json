@@ -17,5 +17,14 @@
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{border.passive.neutral.default}"
+  },
+  "shadow": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "boxShadow",
+    "$value": "{shadow.md}",
+    "$collectionName": "semanticTokens"
   }
 }

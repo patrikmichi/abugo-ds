@@ -340,6 +340,60 @@
       }
     }
   },
+  "background.active.accent.subtle.hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{blue-opacity.5}",
+    "$description": "Subtle hover state background using brand-700 (blue) at 5% opacity. Use for buttons on colored backgrounds where a subtle accent tint is preferred.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "hover",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "primary-buttons",
+          "accent-interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.active.accent.subtle.pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{blue-opacity.8}",
+    "$description": "Subtle pressed state background using brand-700 (blue) at 8% opacity. Use for buttons on colored backgrounds where a subtle accent tint is preferred.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "accent",
+        "state": "pressed",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "primary-buttons",
+          "accent-interactive-elements"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
   "background.active.accent.default": {
     "$scopes": [
       "ALL_FILLS",
@@ -754,6 +808,60 @@
           "interactive-elements",
           "error-states",
           "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.active.neutral.subtle.hover": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey-opacity.5}",
+    "$description": "Subtle hover state background using grey-700 at 5% opacity. Use for buttons on colored backgrounds where a subtle tint is preferred over a greyish overlay.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "hover",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "close-buttons",
+          "icon-buttons"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.active.neutral.subtle.pressed": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey-opacity.8}",
+    "$description": "Subtle pressed state background using grey-700 at 8% opacity. Use for buttons on colored backgrounds where a subtle tint is preferred over a greyish overlay.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "active",
+        "intent": "neutral",
+        "state": "pressed",
+        "variant": "subtle",
+        "usage": [
+          "buttons-on-colored-backgrounds",
+          "close-buttons",
+          "icon-buttons"
         ],
         "deprecated": false,
         "replacedBy": null
@@ -1370,6 +1478,58 @@
           "cards",
           "containers",
           "surfaces"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.passive.promo.default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{purple.700}",
+    "$description": "Default promo background for passive elements. Use for promotional badges, special offers, or premium content indicators.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "promo",
+        "state": "default",
+        "usage": [
+          "badges",
+          "promotional-content",
+          "special-offers"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.passive.promo.subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{purple.100}",
+    "$description": "Subtle promo background for passive elements. Use for promo message backgrounds or promotional indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "promo",
+        "state": "subtle",
+        "usage": [
+          "badges",
+          "promotional-content",
+          "special-offers"
         ],
         "deprecated": false,
         "replacedBy": null
@@ -2748,6 +2908,34 @@
       }
     }
   },
+  "content.passive.danger.default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{negative.700}",
+    "$description": "Passive token for danger intent.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "danger",
+        "state": "default",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "error-states",
+          "destructive-actions"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
   "content.passive.info": {
     "$scopes": [
       "SHAPE_FILL",
@@ -2773,6 +2961,16 @@
         "replacedBy": null
       }
     }
+  },
+  "content.passive.info.default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{upgrade.700}"
   },
   "content.passive.neutral.strong": {
     "$scopes": [
@@ -2982,6 +3180,17 @@
       }
     }
   },
+  "content.passive.on.accent.disabled": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.400}",
+    "$description": "Content on accent when disabled."
+  },
   "content.passive.on.accent.inverse": {
     "$scopes": [
       "SHAPE_FILL",
@@ -3138,6 +3347,33 @@
       }
     }
   },
+  "content.passive.on.promo": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{grey.50}",
+    "$description": "Passive token for on intent in promo state. Use for text on promo backgrounds.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "content",
+        "participation": "passive",
+        "intent": "on",
+        "state": "promo",
+        "usage": [
+          "text",
+          "headings",
+          "labels",
+          "badges"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
   "content.passive.success": {
     "$scopes": [
       "SHAPE_FILL",
@@ -3165,6 +3401,16 @@
         "replacedBy": null
       }
     }
+  },
+  "content.passive.success.default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{success.700}"
   },
   "content.passive.upgrade": {
     "$scopes": [
@@ -3219,6 +3465,16 @@
         "replacedBy": null
       }
     }
+  },
+  "content.passive.warning.default": {
+    "$scopes": [
+      "SHAPE_FILL",
+      "TEXT_FILL"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{warning.700}"
   },
   "control": {
     "height": {
@@ -3369,6 +3625,16 @@
     }
   },
   "gap": {
+    "xxxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Extra extra extra small gap (4px)."
+    },
     "xxs": {
       "$scopes": [
         "ALL_SCOPES"
@@ -3399,6 +3665,16 @@
       "$value": "{spacing-3}",
       "$description": "Small gap (12px). Use for standard spacing between related elements."
     },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Small gap alias (12px)."
+    },
     "m": {
       "$scopes": [
         "ALL_SCOPES"
@@ -3408,6 +3684,16 @@
       "$collectionName": "primitives",
       "$value": "{spacing-4}",
       "$description": "Medium gap (16px). Use for comfortable spacing in standard layouts."
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Medium gap alias (16px)."
     },
     "l": {
       "$scopes": [
@@ -3523,6 +3809,16 @@
     }
   },
   "opacity": {
+    "disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 0.5,
+      "$description": "Opacity for disabled UI elements (50%)."
+    },
     "overlay": {
       "$scopes": [
         "ALL_SCOPES"
@@ -3585,6 +3881,16 @@
       "$value": "{spacing-5}",
       "$description": "Medium padding (20px). Use for comfortable internal spacing in cards."
     },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Medium padding alias (20px)."
+    },
     "l": {
       "$scopes": [
         "ALL_SCOPES"
@@ -3594,6 +3900,16 @@
       "$collectionName": "primitives",
       "$value": "{spacing-6}",
       "$description": "Large padding (24px). Use for increased internal spacing in larger containers."
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Large padding alias (24px)."
     },
     "xl": {
       "$scopes": [
@@ -3806,6 +4122,36 @@
       "$value": "{size-1}",
       "$description": "Size for tooltip arrow indicator. Use for pointing elements in tooltips."
     }
+  },
+  "typography.optical.alignment.offset.sm": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": 2,
+    "$description": "Optical alignment offset for small typography (2px). Used in field padding-top/bottom calculations."
+  },
+  "typography.optical.alignment.offset.md": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": 2,
+    "$description": "Optical alignment offset for medium typography (2px)."
+  },
+  "typography.optical.alignment.offset.lg": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": 3,
+    "$description": "Optical alignment offset for large typography (3px)."
   },
   "typography": {
     "headline.size": {
@@ -4068,40 +4414,94 @@
         "$description": "Bold font weight. Use for maximum emphasis."
       }
     },
-    "optical": {
-      "alignment": {
-        "offset": {
-          "sm": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "spacing",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{spacing-1}",
-            "$description": "Optical alignment offset for small text (4px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields. Reduces padding-top and increases padding-bottom to compensate for visual space under text."
-          },
-          "md": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "spacing",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{spacing-1}",
-            "$description": "Optical alignment offset for medium text (4px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields."
-          },
-          "lg": {
-            "$scopes": [
-              "ALL_SCOPES"
-            ],
-            "$type": "spacing",
-            "$libraryName": "",
-            "$collectionName": "primitives",
-            "$value": "{spacing-2}",
-            "$description": "Optical alignment offset for large text (8px). Use with calc() to adjust padding-top and padding-bottom for inputs/text fields."
-          }
+    "visual": {
+      "compensation": {
+        "offset-1": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "1px",
+          "$description": "Level 1 visual compensation (1px shift). Use for fine-tuning vertical centering of text in containers."
+        },
+        "offset-2": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "2px",
+          "$description": "Level 2 visual compensation (2px shift). Use for fine-tuning vertical centering of text in containers."
+        },
+        "offset-3": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "3px",
+          "$description": "Level 3 visual compensation (3px shift). Use for fine-tuning vertical centering of text in containers."
         }
+      }
+    }
+  },
+  "color": {
+    "headline": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.strong}",
+      "$description": "Color for headline text. Use for all heading levels (h1-h6)."
+    },
+    "body": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Default color for body text. Use for standard paragraphs and body content."
+      },
+      "subtle": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.subtle}",
+        "$description": "Subtle color for secondary body text. Use for less prominent content, captions, or helper text."
+      }
+    },
+    "link": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}",
+        "$description": "Default color for link text. Use for standard links and interactive text."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.hover}",
+        "$description": "Hover color for link text. Use for link hover states."
       }
     }
   },
@@ -4185,6 +4585,16 @@
       "$collectionName": "primitives",
       "$value": "{z-index.z-tooltip}",
       "$description": "Tooltip z-index layer"
+    },
+    "drawer": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": 1045,
+      "$description": "Drawer z-index layer (between modal-backdrop and modal)"
     }
   }
 }

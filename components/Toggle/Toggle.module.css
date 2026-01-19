@@ -1,78 +1,199 @@
-/* Toggle component styles using design tokens */
+/* Toggle (Switch) component styles using design tokens */
 
-.toggleWrapper {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--token-semantic-gap-xs);
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 44px;
+  height: 22px;
+  line-height: 22px;
+  vertical-align: middle;
+  background-color: var(--token-component-toggle-background-off-default);
+  border: none;
+  border-radius: calc(var(--token-component-radius-toggle) * 1px);
   cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  touch-action: manipulation;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.toggleWrapper.disabled {
+.toggle:focus-visible {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #5690f5);
+  outline-offset: 2px;
+}
+
+/* Handle (thumb) */
+.handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--token-component-toggle-content-off-default);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner content (checkedChildren/unCheckedChildren) */
+.inner {
+  display: block;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: var(--token-primitive-typography-font-size-1);
+  transition: all 0.3s ease;
+  padding: 0 7px 0 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle.checked .inner {
+  padding: 0 25px 0 7px;
+  color: #fff;
+}
+
+/* Unchecked state */
+.toggle.unchecked {
+  background-color: var(--token-component-toggle-background-off-default);
+}
+
+.toggle.unchecked .handle {
+  background-color: var(--token-component-toggle-content-off-default);
+  transform: translateX(0);
+}
+
+/* Checked state */
+.toggle.checked {
+  background-color: var(--token-component-toggle-background-on-default);
+}
+
+.toggle.checked .handle {
+  background-color: var(--token-component-toggle-content-on-default);
+  transform: translateX(calc(44px - 18px - 4px)); /* width - handle width - 2 * margin */
+}
+
+.toggle.checked .inner {
+  color: #fff;
+}
+
+/* Small size */
+.toggle.small {
+  width: 28px;
+  min-width: 28px;
+  max-width: 28px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.toggle.small .handle {
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  left: 2px;
+}
+
+.toggle.small.checked .handle {
+  transform: translateX(calc(28px - 12px - 4px)); /* width - handle width - 2 * margin */
+}
+
+.toggle.small .inner {
+  font-size: 11px;
+  padding: 0 5px 0 17px;
+}
+
+.toggle.small.checked .inner {
+  padding: 0 17px 0 5px;
+}
+
+/* Hover states */
+.toggle:not(.disabled):not(.loading):hover {
+  background-color: var(--token-component-toggle-background-off-hover, rgba(0, 0, 0, 0.06));
+}
+
+.toggle.checked:not(.disabled):not(.loading):hover {
+  background-color: var(--token-component-toggle-background-on-hover, #28a015);
+}
+
+/* Active states */
+.toggle:not(.disabled):not(.loading):active .handle {
+  width: 22px;
+}
+
+.toggle.small:not(.disabled):not(.loading):active .handle {
+  width: 16px;
+}
+
+/* Disabled state */
+.toggle.disabled {
   cursor: not-allowed;
   opacity: 0.6;
 }
 
-.toggle {
-  width: 44px;
-  height: 24px;
-  margin: 0;
-  cursor: pointer;
-  appearance: none;
-  border: none;
-  border-radius: 12px;
-  background-color: var(--token-component-toggle-background-off-default);
-  transition: all var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  position: relative;
-  outline: none;
-}
-
-.toggle::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--token-component-toggle-content-off-default);
-  top: 2px;
-  left: 2px;
-  transition: transform var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  box-shadow: var(--token-semantic-shadow-sm);
-}
-
-.toggle.off {
-  background-color: var(--token-component-toggle-background-off-default);
-}
-
-.toggle.on {
-  background-color: var(--token-component-toggle-background-on-default);
-}
-
-.toggle.on::before {
-  transform: translateX(20px);
-  background-color: var(--token-component-toggle-content-on-default);
-}
-
-.toggle:disabled {
-  cursor: not-allowed;
-}
-
-.toggle.off:disabled {
+.toggle.disabled.unchecked {
   background-color: var(--token-component-toggle-background-off-disabled);
 }
 
-.toggle.off:disabled::before {
+.toggle.disabled.unchecked .handle {
   background-color: var(--token-component-toggle-content-off-disabled);
 }
 
-.toggle.on:disabled {
+.toggle.disabled.checked {
   background-color: var(--token-component-toggle-background-on-disabled);
 }
 
-.toggle.on:disabled::before {
+.toggle.disabled.checked .handle {
   background-color: var(--token-component-toggle-content-on-disabled);
 }
 
-.label {
-  color: var(--token-semantic-content-passive-neutral-default);
-  user-select: none;
+/* Loading state */
+.toggle.loading {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.loadingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.25);
+  animation: spin 1s linear infinite;
+}
+
+.toggle.checked .loadingIcon {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.toggle.small .loadingIcon {
+  font-size: var(--token-primitive-typography-font-size-1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Material Icons in loading state */
+.loadingIcon .material-symbols-outlined {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }

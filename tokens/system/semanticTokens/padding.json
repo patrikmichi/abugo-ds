@@ -51,6 +51,14 @@
       "$value": "{spacing-5}",
       "$description": "Medium padding (20px). Use for comfortable internal spacing in cards."
     },
+    "md": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Medium padding alias (20px)."
+    },
     "l": {
       "$scopes": [
         "ALL_SCOPES"
@@ -60,6 +68,14 @@
       "$collectionName": "primitives",
       "$value": "{spacing-6}",
       "$description": "Large padding (24px). Use for increased internal spacing in larger containers."
+    },
+    "lg": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Large padding alias (24px)."
     },
     "xl": {
       "$scopes": [

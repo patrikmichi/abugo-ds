@@ -12,7 +12,7 @@
   gap: var(--token-component-gap-button-icon-md);
   box-sizing: border-box;
   vertical-align: middle;
-  
+
   /* Typography - default to medium size */
   font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-button-md);
@@ -20,8 +20,9 @@
   line-height: 1;
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
   text-transform: var(--token-component-text-transform-button);
-  text-decoration: none; /* For link buttons */
-  
+  text-decoration: none;
+  /* For link buttons */
+
   /* Spacing & Sizing - default to medium size */
   padding-left: var(--token-component-padding-left-button-md);
   padding-right: var(--token-component-padding-right-button-md);
@@ -29,21 +30,21 @@
   padding-bottom: 0;
   height: var(--token-component-height-button-md);
   min-width: auto;
-  
+
   /* Border & Radius */
   border: 0;
   border-radius: calc(var(--token-component-radius-button-md) * 1px);
-  
+
   /* Interactions */
   cursor: pointer;
-  
+
   /* Transitions */
-  transition: 
+  transition:
     background-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
     color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
     border-color var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing),
     outline var(--token-component-animation-field-duration)ms var(--token-component-animation-field-easing);
-  
+
   /* Remove default focus outline - we'll use focus-visible */
   outline: none;
 }
@@ -81,7 +82,7 @@
   display: inline-flex;
 }
 
-.button.iconOnly > * {
+.button.iconOnly>* {
   width: var(--token-component-icon-button-md);
   height: var(--token-component-icon-button-md);
   font-size: var(--token-component-icon-button-md);
@@ -96,7 +97,7 @@
   min-width: var(--token-component-height-button-sm);
 }
 
-.button.iconOnly.sm > * {
+.button.iconOnly.sm>* {
   width: var(--token-component-icon-button-sm);
   height: var(--token-component-icon-button-sm);
   font-size: var(--token-component-icon-button-sm);
@@ -107,7 +108,7 @@
   min-width: var(--token-component-height-button-lg);
 }
 
-.button.iconOnly.lg > * {
+.button.iconOnly.lg>* {
   width: var(--token-component-icon-button-lg);
   height: var(--token-component-icon-button-lg);
   font-size: var(--token-component-icon-button-lg);
@@ -187,7 +188,7 @@
   margin: 0;
   padding: 0;
   /* Optical adjustment for perfect centering */
-  transform: translateY(1px);
+  transform: translateY(var(--token-semantic-typography-visual-compensation-offset-1, 1px));
 }
 
 /* ==========================================================================
@@ -341,39 +342,22 @@
   height: var(--token-component-icon-button-md);
 }
 
-.spinner {
+.loadingSpinner .material-symbols-outlined {
   width: 100%;
   height: 100%;
-  animation: rotate var(--token-component-animation-field-duration)ms linear infinite;
+  animation: spin var(--token-component-animation-field-duration)ms linear infinite;
 }
 
-.spinnerCircle {
-  animation: dash var(--token-component-animation-field-duration)ms ease-in-out infinite;
-}
-
-@keyframes rotate {
-  0% {
+@keyframes spin {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+
+  to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes dash {
-  0% {
-    stroke-dasharray: 1, 150;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -124;
-  }
-}
 
 .button.loading {
   pointer-events: none;
@@ -422,13 +406,13 @@
 
 .primary.plain:hover:not(:disabled),
 .primaryPlain:hover:not(:disabled) {
-  background-color: var(--token-component-button-primary-plain-background-hover);
+  background-color: var(--token-semantic-background-active-accent-subtle-hover);
   color: var(--token-component-button-primary-plain-content-hover);
 }
 
 .primary.plain:active:not(:disabled),
 .primaryPlain:active:not(:disabled) {
-  background-color: var(--token-component-button-primary-plain-background-pressed);
+  background-color: var(--token-semantic-background-active-accent-subtle-pressed);
   color: var(--token-component-button-primary-plain-content-pressed);
 }
 
@@ -453,13 +437,14 @@
 
 .secondary.outline:hover:not(:disabled),
 .secondaryOutline:hover:not(:disabled) {
-  background-color: var(--token-component-button-secondary-outline-background-hover);
+  background-color: var(--token-semantic-background-active-accent-subtle-hover);
   color: var(--token-component-button-secondary-outline-content-hover);
   border-color: var(--token-component-button-secondary-outline-border-hover);
 }
 
 .secondary.outline:active:not(:disabled),
 .secondaryOutline:active:not(:disabled) {
+  background-color: var(--token-semantic-background-active-accent-subtle-pressed);
   border-color: var(--token-component-button-secondary-outline-border-pressed);
   color: var(--token-component-button-secondary-outline-content-pressed);
 }
@@ -478,12 +463,13 @@
 
 .secondary.plain:hover:not(:disabled),
 .secondaryPlain:hover:not(:disabled) {
-  background-color: var(--token-component-button-secondary-plain-background-hover);
+  background-color: var(--token-semantic-background-active-neutral-subtle-hover);
   color: var(--token-component-button-secondary-plain-content-hover);
 }
 
 .secondary.plain:active:not(:disabled),
 .secondaryPlain:active:not(:disabled) {
+  background-color: var(--token-semantic-background-active-neutral-subtle-pressed);
   color: var(--token-component-button-secondary-plain-content-pressed);
 }
 
@@ -575,12 +561,13 @@
 
 .tertiary.plain:hover:not(:disabled),
 .tertiaryPlain:hover:not(:disabled) {
-  background-color: var(--token-component-button-tertiary-plain-background-hover);
+  background-color: var(--token-semantic-background-active-neutral-subtle-hover);
   color: var(--token-component-button-tertiary-plain-content-hover);
 }
 
 .tertiary.plain:active:not(:disabled),
 .tertiaryPlain:active:not(:disabled) {
+  background-color: var(--token-semantic-background-active-neutral-subtle-pressed);
   color: var(--token-component-button-tertiary-plain-content-pressed);
 }
 

@@ -3,30 +3,70 @@
 .rating {
   display: inline-flex;
   align-items: center;
-  gap: var(--token-semantic-gap-xs);
+  gap: var(--token-component-rating-gap, 8px);
+  font-family: var(--token-primitive-typography-font-family-sans);
 }
 
-.ratingItem {
-  width: var(--token-semantic-icon-sm);
-  height: var(--token-semantic-icon-sm);
-  background-color: var(--token-component-rating-default-background-default);
-  border-radius: var(--token-semantic-radius-xs);
-  cursor: pointer;
-  transition: background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-component-rating-star-gap, 2px);
 }
 
-.ratingItem:hover {
-  background-color: var(--token-component-rating-default-background-hover);
+.star {
+  display: inline-flex;
+  align-items: center;
+  color: var(--token-component-rating-star-color-empty, #e0e0e0);
+  line-height: 1;
 }
 
-.ratingItem.filled {
-  background-color: var(--token-component-rating-default-background-filled);
+.star.filled {
+  color: var(--token-component-rating-star-color-filled, #fadb14);
 }
 
-.default {
-  background-color: var(--token-component-rating-default-background-default);
+.star.empty {
+  color: var(--token-component-rating-star-color-empty, #e0e0e0);
 }
 
-.background {
-  background-color: var(--token-component-rating-default-background-default);
+.star.partial {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.starContainer {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.starFilled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  color: var(--token-component-rating-star-color-filled, #fadb14);
+}
+
+.starEmpty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--token-component-rating-star-color-empty, #e0e0e0);
+}
+
+.text {
+  font-size: var(--token-component-rating-text-font-size, 14px);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  line-height: var(--token-component-rating-text-line-height, 1.5);
+  color: var(--token-component-rating-text-color, rgba(0, 0, 0, 0.85));
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+.count {
+  color: var(--token-component-rating-count-color, rgba(0, 0, 0, 0.65));
 }
