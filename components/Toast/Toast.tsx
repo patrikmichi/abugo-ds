@@ -15,14 +15,30 @@ export interface ToastProps {
   variant?: ToastVariant;
   /** Size of toast */
   size?: ToastSize;
-  /** Toast content */
-  content: React.ReactNode;
+  /** Main message content */
+  message?: React.ReactNode;
+  /** Additional description content */
+  description?: React.ReactNode;
+  /** Toast content (alternative to message/description) */
+  content?: React.ReactNode;
   /** Duration in seconds (0 = no auto-dismiss) */
   duration?: number;
   /** Callback when toast is closed */
   onClose?: () => void;
+  /** Whether to show icon */
+  showIcon?: boolean;
   /** Custom icon */
   icon?: React.ReactNode;
+  /** Custom action button */
+  action?: React.ReactNode;
+  /** Button variant for action button */
+  actionButtonVariant?: ButtonProps['variant'];
+  /** Button appearance for action button */
+  actionButtonAppearance?: ButtonProps['appearance'];
+  /** Action button label */
+  actionLabel?: string;
+  /** Action button onClick handler */
+  onAction?: () => void;
   /** Button variant for close button */
   closeButtonVariant?: ButtonProps['variant'];
   /** Button appearance for close button */
@@ -53,10 +69,18 @@ export interface ToastProps {
 export function Toast({
   type = 'info',
   size = 'small',
+  message,
+  description,
   content,
   duration = 3,
   onClose,
+  showIcon = true,
   icon,
+  action,
+  actionButtonVariant = 'secondary',
+  actionButtonAppearance = 'plain',
+  actionLabel,
+  onAction,
   closeButtonVariant = 'tertiary',
   closeButtonAppearance = 'plain',
   className,
@@ -73,7 +97,7 @@ export function Toast({
     }
   }, [duration]);
 
-  const handleClose = useCallback((e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+  const handleClose = useCallback((e?: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     setClosing(true);
     setTimeout(() => {
       onClose?.();
@@ -83,52 +107,86 @@ export function Toast({
   // Get default icon based on type
   const getDefaultIcon = () => {
     if (icon) return icon;
-    
-    const iconName = 
+
+    const iconName =
       type === 'success' ? 'check_circle' :
-      type === 'error' ? 'error' :
-      type === 'warning' ? 'warning' :
-      type === 'loading' ? 'progress_activity' :
-      'info';
-    
-    const iconSize = size === 'large' 
-      ? 'var(--token-primitive-icon-size-icon-size-3)' 
-      : 'var(--token-primitive-icon-size-icon-size-2)';
-    
+        type === 'error' ? 'error' :
+          type === 'warning' ? 'warning' :
+            type === 'loading' ? 'progress_activity' :
+              'info';
+
     return (
-      <span className="material-symbols-outlined" style={{ fontSize: iconSize }}>
+      <span className="material-symbols-outlined">
         {iconName}
       </span>
     );
   };
+
+  // Check if toast has interactive elements that affect height
+  const hasInteractiveElements = action || (actionLabel && onAction);
+
+  // Use message/description if provided, otherwise fall back to content
+  const displayMessage = message || content;
 
   return (
     <div
       className={cn(
         styles.toast,
         styles[type],
-        styles.filled,
         styles[size],
         closing && styles.closing,
+        !!(description && typeof description !== 'boolean') && styles.hasDescription,
+        hasInteractiveElements ? styles.hasInteractiveElements : undefined,
         className
       )}
       style={style}
       role="alert"
     >
-      <span className={styles.icon}>
-        {getDefaultIcon()}
-      </span>
-      <div className={styles.content}>{content}</div>
-      <button
-        type="button"
-        className={styles.close}
+      <div className={styles.iconAndContent}>
+        {showIcon && (
+          <span className={styles.icon}>
+            {getDefaultIcon()}
+          </span>
+        )}
+
+        <div className={styles.content}>
+          <div className={styles.message}>
+            {displayMessage}
+          </div>
+          {description && typeof description !== 'boolean' && (
+            <div className={styles.description}>
+              {description}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {(action || (actionLabel && onAction)) && (
+        <div className={styles.action}>
+          {action || (
+            <Button
+              variant={actionButtonVariant}
+              appearance={actionButtonAppearance}
+              size={size === 'large' ? 'md' : 'sm'}
+              onClick={onAction}
+            >
+              {actionLabel}
+            </Button>
+          )}
+        </div>
+      )}
+
+      <Button
+        variant={closeButtonVariant}
+        appearance={closeButtonAppearance}
+        size={size === 'large' ? 'lg' : 'sm'}
         onClick={handleClose}
         aria-label="Close"
+        iconOnly
+        className={styles.close}
       >
-        <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)' }}>
-          close
-        </span>
-      </button>
+        <span className="material-symbols-outlined">close</span>
+      </Button>
     </div>
   );
 }
@@ -138,10 +196,18 @@ interface ToastInstance {
   key: string;
   type: ToastType;
   size?: ToastSize;
-  content: React.ReactNode;
+  message?: React.ReactNode;
+  description?: React.ReactNode;
+  content?: React.ReactNode;
   duration?: number;
   onClose?: () => void;
+  showIcon?: boolean;
   icon?: React.ReactNode;
+  action?: React.ReactNode;
+  actionButtonVariant?: ButtonProps['variant'];
+  actionButtonAppearance?: ButtonProps['appearance'];
+  actionLabel?: string;
+  onAction?: () => void;
   closeButtonVariant?: ButtonProps['variant'];
   closeButtonAppearance?: ButtonProps['appearance'];
 }

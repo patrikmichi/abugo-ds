@@ -4,10 +4,10 @@
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "borderWidth",
+    "$type": "dimension",
     "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{border-width-2}"
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxxs}"
   },
   "background": {
     "$scopes": [
@@ -16,16 +16,16 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{background.passive.neutral.subtle}"
+    "$value": "{background.passive.neutral.elevated}"
   },
-  "radius": {
+  "border-color": {
     "$scopes": [
       "ALL_SCOPES"
     ],
-    "$type": "borderRadius",
+    "$type": "color",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{radius.xs}"
+    "$value": "{border.active.neutral.control.field.default}"
   },
   "indicator": {
     "background": {
@@ -35,53 +35,17 @@
       "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{background.passive.neutral.elevated}"
+      "$value": "{background.active.accent.default}"
     },
-    "radius": {
+    "background-hover": {
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "borderRadius",
+      "$type": "color",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{radius.xs}"
-    },
-    "shadow": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "boxShadow",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{shadow.sm}"
+      "$value": "{background.active.accent.hover}"
     }
-  },
-  "gap": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "spacing",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{gap.xs}"
-  },
-  "padding-y": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "spacing",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{padding.xxs}"
-  },
-  "padding-x": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "spacing",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{padding.sm}"
   },
   "text": {
     "color": {
@@ -110,7 +74,7 @@
         "$type": "color",
         "$libraryName": "",
         "$collectionName": "semanticTokens",
-        "$value": "{content.active.accent.default}"
+        "$value": "{content.passive.on.neutral.strong}"
       },
       "disabled": {
         "$scopes": [
@@ -148,19 +112,31 @@
     "$type": "fontWeight",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography.fontWeight.regular}"
+    "$value": "{typography.fontWeight.medium}"
   },
-  "font": {
-    "weight": {
-      "selected": {
+  "focus": {
+    "outline": {
+      "color": {
         "$scopes": [
           "ALL_SCOPES"
         ],
+        "$type": "color",
         "$libraryName": "",
-        "$type": "fontWeights",
-        "$value": 600,
-        "$collectionName": "primitives"
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}"
       }
+    }
+  },
+  "segment": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xs}",
+      "$description": "Gap between icon and text in segmented control"
     }
   }
 }

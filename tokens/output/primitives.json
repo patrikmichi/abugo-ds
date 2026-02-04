@@ -1842,6 +1842,14 @@
     "$type": "spacing",
     "$value": 10
   },
+  "spacing-11": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "spacing",
+    "$value": 44
+  },
   "typography-composite": {
     "typography-body": {
       "$scopes": [

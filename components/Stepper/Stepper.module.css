@@ -17,7 +17,7 @@
 
 /* Size variants */
 .stepper.small .step {
-  font-size: var(--token-component-stepper-font-size-sm);
+  font-size: var(--token-component-font-size-stepper-font-size-sm);
 }
 
 /* Step */
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding-bottom: var(--token-component-stepper-vertical-step-padding-bottom);
+  padding-bottom: var(--token-component-padding-block-stepper-vertical-step-bottom);
 }
 
 .stepClickable {
@@ -73,11 +73,11 @@
 }
 
 .stepHorizontal .stepIconWrapper {
-  margin-bottom: var(--token-component-stepper-icon-margin-bottom);
+  margin-bottom: var(--token-component-gap-stepper-icon-margin-bottom);
 }
 
 .stepVertical .stepIconWrapper {
-  margin-right: var(--token-component-stepper-icon-margin-right);
+  margin-right: var(--token-component-gap-stepper-icon-margin-right);
 }
 
 /* Icon - Step Indicator Dot */
@@ -92,7 +92,7 @@
   border: none;
   color: var(--token-component-stepper-icon-color-wait);
   font-size: var(--token-component-stepper-icon-font-size);
-  font-weight: var(--token-component-stepper-icon-font-weight);
+  font-weight: var(--token-component-font-weight-stepper-icon);
   transition: all var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
   z-index: 1;
   position: relative;
@@ -101,7 +101,7 @@
 .stepper.small .icon {
   width: var(--token-component-stepper-icon-size-sm);
   height: var(--token-component-stepper-icon-size-sm);
-  font-size: var(--token-component-stepper-icon-font-size-sm);
+  font-size: var(--token-component-font-size-stepper-icon-sm);
 }
 
 /* Dot (progress dot style) */
@@ -176,25 +176,25 @@
   font-size: var(--token-component-stepper-title-font-size);
   font-weight: var(--token-component-stepper-title-font-weight);
   color: var(--token-component-stepper-title-color-wait));
-  line-height: var(--token-component-stepper-title-line-height);
-  margin-bottom: var(--token-component-stepper-title-margin-bottom);
+  line-height: var(--token-component-line-height-stepper-title);
+  margin-bottom: var(--token-component-gap-stepper-title-margin-bottom);
   transition: color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
 }
 
 .stepper.small .stepTitle {
-  font-size: var(--token-component-stepper-title-font-size-sm);
+  font-size: var(--token-component-font-size-stepper-title-sm);
 }
 
 /* Step description */
 .stepDescription {
   font-size: var(--token-component-stepper-description-font-size);
   color: var(--token-component-stepper-description-color-wait));
-  line-height: var(--token-component-stepper-description-line-height);
+  line-height: var(--token-component-line-height-stepper-description);
   transition: color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
 }
 
 .stepper.small .stepDescription {
-  font-size: var(--token-component-stepper-description-font-size-sm);
+  font-size: var(--token-component-font-size-stepper-description-sm);
 }
 
 /* Status: Wait */
@@ -230,7 +230,7 @@
 
 .stepProcess .stepTitle {
   color: var(--token-component-stepper-title-color-process));
-  font-weight: var(--token-component-stepper-title-font-weight-process);
+  font-weight: var(--token-component-font-weight-stepper-title-process);
 }
 
 .stepProcess .stepDescription {
@@ -300,11 +300,11 @@
 
 .stepper.progressDot .stepHorizontal .stepIconWrapper {
   margin-bottom: 0;
-  margin-right: var(--token-component-stepper-progress-dot-margin-right);
+  margin-right: var(--token-component-gap-stepper-progress-dot-margin-right);
 }
 
 .stepper.progressDot .stepVertical .stepIconWrapper {
-  margin-right: var(--token-component-stepper-progress-dot-margin-right);
+  margin-right: var(--token-component-gap-stepper-progress-dot-margin-right);
 }
 
 /* Responsive */
@@ -320,7 +320,7 @@
 
   .stepHorizontal .stepIconWrapper {
     margin-bottom: 0;
-    margin-right: var(--token-component-stepper-icon-margin-right);
+    margin-right: var(--token-component-gap-stepper-icon-margin-right);
   }
 
   .stepHorizontal .stepText {

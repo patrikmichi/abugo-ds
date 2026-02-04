@@ -4,7 +4,7 @@
 .uploadWrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--token-component-upload-gap, 8px);
+  gap: var(--token-component-gap-upload, 8px);
 }
 
 .upload {
@@ -23,7 +23,7 @@
   width: 100%;
   padding: var(--token-component-upload-drag-padding, 64px);
   border: calc(var(--token-primitive-border-width-1, 2px) * 1px) dashed var(--token-component-upload-drag-border, #d9d9d9);
-  border-radius: calc(var(--token-component-upload-drag-radius, 8px) * 1px);
+  border-radius: calc(var(--token-component-radius-upload-drag, 8px) * 1px);
   background-color: var(--token-component-upload-drag-background, #fafafa);
   text-align: center;
   transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -69,7 +69,7 @@
   width: var(--token-component-upload-image-upload-size, 104px);
   height: var(--token-component-upload-image-upload-size, 104px);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) dashed var(--token-component-upload-border, #d9d9d9);
-  border-radius: calc(var(--token-component-upload-radius, 8px) * 1px);
+  border-radius: calc(var(--token-component-radius-upload-default, 8px) * 1px);
   background-color: var(--token-component-upload-background, #fafafa);
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--token-component-upload-file-list-gap, 8px);
+  gap: var(--token-component-gap-upload-file-list, 8px);
 }
 
 .fileList.picture,
@@ -102,12 +102,12 @@
 .fileItem {
   display: flex;
   align-items: center;
-  gap: var(--token-component-upload-file-item-gap, 8px);
-  padding: var(--token-component-upload-file-item-padding, 8px);
+  gap: var(--token-component-gap-upload-file-item, 8px);
+  padding: var(--token-component-padding-block-upload-file-item, 8px);
   background-color: var(--token-component-upload-file-item-background, #fafafa);
-  border-radius: calc(var(--token-component-upload-file-item-radius, 4px) * 1px);
-  font-size: var(--token-component-upload-file-item-font-size, 14px);
-  line-height: var(--token-component-upload-file-item-line-height, 1.5715);
+  border-radius: calc(var(--token-component-radius-upload-file-item, 4px) * 1px);
+  font-size: var(--token-component-font-size-upload-file-item, 14px);
+  line-height: var(--token-component-line-height-upload-file-item, 1.5715);
   color: var(--token-component-upload-file-item-color, rgba(0, 0, 0, 0.85));
 }
 
@@ -121,9 +121,9 @@
   position: relative;
   width: var(--token-component-upload-image-upload-size, 104px);
   height: var(--token-component-upload-image-upload-size, 104px);
-  padding: var(--token-component-upload-image-upload-padding, 8px);
+  padding: var(--token-component-padding-block-upload-image-upload, 8px);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-upload-image-upload-border, #d9d9d9);
-  border-radius: calc(var(--token-component-upload-image-upload-radius, 8px) * 1px);
+  border-radius: calc(var(--token-component-radius-upload-image-upload, 8px) * 1px);
   overflow: hidden;
 }
 
@@ -132,7 +132,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: var(--token-semantic-background-passive-neutral-default, #efefef);
+  background-color: var(--token-component-upload-background-placeholder, #efefef);
   border: none;
 }
 
@@ -149,7 +149,7 @@
 
 .fileItem.imageUpload.uploadTrigger {
   border: none;
-  background-color: var(--token-semantic-background-passive-neutral-default, #efefef);
+  background-color: var(--token-component-upload-background-placeholder, #efefef);
 }
 
 .fileName {
@@ -176,15 +176,15 @@
 }
 
 .fileItem.imageUpload .preview {
-  background-color: var(--token-semantic-background-passive-neutral-default, #efefef);
-  border-radius: calc(var(--token-component-upload-image-upload-radius, 8px) * 1px);
+  background-color: var(--token-component-upload-background-placeholder, #efefef);
+  border-radius: calc(var(--token-component-radius-upload-image-upload, 8px) * 1px);
 }
 
 .preview img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: calc(var(--token-component-upload-image-upload-radius, 8px) * 1px);
+  border-radius: calc(var(--token-component-radius-upload-image-upload, 8px) * 1px);
 }
 
 /* Progress */
@@ -193,7 +193,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--token-component-upload-progress-padding, 4px);
+  padding: var(--token-component-padding-block-upload-progress, 4px);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
@@ -201,7 +201,7 @@
 /* Actions */
 .actions {
   display: flex;
-  gap: var(--token-component-upload-actions-gap, 4px);
+  gap: var(--token-component-gap-upload-actions, 4px);
   flex-shrink: 0;
 }
 
@@ -210,11 +210,11 @@
   border: none;
   color: var(--token-component-upload-action-color, rgba(0, 0, 0, 0.45));
   cursor: pointer;
-  padding: var(--token-component-upload-action-padding, 4px);
+  padding: var(--token-component-padding-block-upload-action, 4px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: calc(var(--token-component-upload-action-radius, 2px) * 1px);
+  border-radius: calc(var(--token-component-radius-upload-action, 2px) * 1px);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -232,8 +232,8 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: calc(var(--token-component-upload-action-radius, 2px) * 1px);
-  padding: var(--token-component-upload-action-padding, 4px);
+  border-radius: calc(var(--token-component-radius-upload-action, 2px) * 1px);
+  padding: var(--token-component-padding-block-upload-action, 4px);
 }
 
 .fileItem.picture:hover .actions,
@@ -283,35 +283,35 @@
 
 /* Spacing utilities */
 .iconMarginRight {
-  margin-right: var(--token-semantic-gap-xs);
+  margin-right: var(--token-component-upload-file-gap);
 }
 
 .iconMarginBottom {
-  margin-bottom: var(--token-component-upload-drag-hint-margin-top);
+  margin-bottom: var(--token-component-gap-upload-drag-hint-margin-top);
 }
 
 /* Progress margin */
 .progressMargin {
   flex: 1;
-  margin: var(--token-component-upload-file-item-progress-margin);
+  margin: var(--token-component-gap-upload-file-item-progress-margin);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .upload.drag {
-    padding: var(--token-component-upload-drag-padding-mobile, 32px 16px);
+    padding: var(--token-component-padding-block-upload-drag-mobile, 32px 16px);
   }
   
   .fileList.picture,
   .fileList.imageUpload {
-    gap: var(--token-component-upload-picture-gap-mobile, 4px);
+    gap: var(--token-component-gap-upload-picture-mobile, 4px);
   }
 }
 
 /* Image upload specific styles */
 .placeholderIcon {
   font-size: var(--token-primitive-icon-size-icon-size-6, 48px);
-  color: var(--token-semantic-content-passive-neutral-subtle, #737373);
+  color: var(--token-component-upload-content-hint, #737373);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,7 +324,7 @@
   width: var(--token-component-upload-camera-badge-size, 32px);
   height: var(--token-component-upload-camera-badge-size, 32px);
   border-radius: 50%;
-  background-color: var(--token-semantic-background-active-accent-subtle, #e4edfd);
+  background-color: var(--token-component-upload-drag-background, #e4edfd);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,7 +334,7 @@
 
 .cameraIcon {
   font-size: var(--token-primitive-icon-size-icon-size-2, 20px);
-  color: var(--token-semantic-background-active-accent-default, #5690f5);
+  color: var(--token-component-upload-drag-icon-color, #5690f5);
 }
 
 /* Remove button for image upload */

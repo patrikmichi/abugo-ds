@@ -115,8 +115,8 @@ export function Segmented({
       const containerRect = container.getBoundingClientRect();
       const segmentRect = selectedSegment.getBoundingClientRect();
       
-      // Calculate position relative to container
-      const left = segmentRect.left - containerRect.left;
+      // Calculate position relative to container (subtract border width)
+      const left = segmentRect.left - containerRect.left - container.clientLeft;
       const width = segmentRect.width;
       const height = segmentRect.height;
       
@@ -251,6 +251,7 @@ export function Segmented({
       {normalizedOptions.map((option, index) => {
         const isSelected = value === option.value;
         const isDisabled = disabled || option.disabled;
+        const isIconOnly = option.icon && (!option.label || option.label === '');
 
         return (
           <button
@@ -265,13 +266,14 @@ export function Segmented({
               styles.segment,
               isSelected && styles.selected,
               isDisabled && styles.segmentDisabled,
+              isIconOnly && styles.iconOnly,
               option.className
             )}
             onClick={() => handleClick(option.value, option.disabled)}
             onKeyDown={(e) => handleKeyDown(e, option.value)}
           >
             {option.icon && <span className={styles.icon}>{option.icon}</span>}
-            <span className={styles.label}>{option.label}</span>
+            {!isIconOnly && <span className={styles.label}>{option.label}</span>}
           </button>
         );
       })}

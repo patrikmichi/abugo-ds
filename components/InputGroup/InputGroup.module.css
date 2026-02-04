@@ -60,7 +60,7 @@
 /* Select section - override wrapper and select styles for nested usage */
 .select {
   flex-shrink: 0;
-  min-width: var(--token-component-field-select-min-width-md);
+  min-width: var(--token-component-height-field-select-min-width-md);
   height: 100%;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .inputGroup.sm .select {
-  min-width: var(--token-component-field-select-min-width-sm);
+  min-width: var(--token-component-height-field-select-min-width-sm);
 }
 
 .inputGroup.lg {
@@ -104,7 +104,7 @@
 }
 
 .inputGroup.lg .select {
-  min-width: var(--token-component-field-select-min-width-lg);
+  min-width: var(--token-component-height-field-select-min-width-lg);
 }
 
 /* Enabled state (default) - hover and focus */
@@ -124,8 +124,8 @@
   /* Show soft glowing focus ring on focus */
   outline: none;
   box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
 }
 
 .inputGroup:not(.error):not(.disabled).focused .separator {

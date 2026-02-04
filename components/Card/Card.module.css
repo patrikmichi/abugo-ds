@@ -7,8 +7,8 @@
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
   border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
   font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-card-font-size, 14px);
-  line-height: var(--token-component-card-line-height, 1.5715);
+  font-size: var(--token-component-font-size-card, 14px);
+  line-height: var(--token-component-line-height-card, 1.5715);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -38,16 +38,16 @@
 /* Size variants */
 .card.small .head {
   min-height: var(--token-component-card-head-height-small, 36px);
-  padding: var(--token-component-card-head-padding-small, 8px 16px);
-  font-size: var(--token-component-card-head-font-size-small, 14px);
+  padding: var(--token-component-padding-block-card-head-small, 8px 16px);
+  font-size: var(--token-component-font-size-card-head-small, 14px);
 }
 
 .card.small .body {
-  padding: var(--token-component-card-body-padding-small, 12px 16px);
+  padding: var(--token-component-padding-block-card-body-small, 12px 16px);
 }
 
 .card.small .actions {
-  padding: var(--token-component-card-actions-padding-small, 8px 16px);
+  padding: var(--token-component-padding-block-card-actions-small, 8px 16px);
 }
 
 /* Cover */
@@ -84,13 +84,13 @@
 
 .title {
   flex: 1;
-  color: var(--token-component-card-head-title-color, rgba(0, 0, 0, 0.85));
+  color: var(--token-component-card-head-title-color, #161616);
   font-weight: var(--token-primitive-typography-font-weight-medium);
 }
 
 .extra {
   color: var(--token-component-card-head-extra-color, rgba(0, 0, 0, 0.45));
-  font-size: var(--token-component-card-head-extra-font-size, 14px);
+  font-size: var(--token-component-font-size-card-head-extra, 14px);
   font-weight: var(--token-primitive-typography-font-weight-normal);
 }
 
@@ -105,10 +105,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--token-semantic-gap-xxs, 8px);
-  padding: var(--token-semantic-padding-lg, 24px);
+  gap: var(--token-component-card-loading-gap, 8px);
+  padding: var(--token-component-card-loading-padding, 24px);
   color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.45));
-  font-size: var(--token-component-card-font-size, 14px);
+  font-size: var(--token-component-font-size-card, 14px);
 }
 
 .loading .material-symbols-outlined {
@@ -139,7 +139,7 @@
 .action {
   flex: 1;
   text-align: center;
-  padding: var(--token-semantic-padding-xxxs, 4px) 0;
+  padding: var(--token-component-card-action-padding-y, 4px) 0;
 }
 
 .action:not(:last-child) {
@@ -157,7 +157,7 @@
 
 /* Card.Grid */
 .grid {
-  padding: var(--token-component-card-grid-padding, 24px);
+  padding: var(--token-component-padding-block-card-grid, 24px);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
   border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
   transition: all 0.3s ease;
@@ -176,7 +176,7 @@
 .meta {
   display: flex;
   align-items: flex-start;
-  gap: var(--token-semantic-gap-m, 16px);
+  gap: var(--token-component-card-meta-gap, 16px);
 }
 
 .metaAvatar {
@@ -192,7 +192,7 @@
   font-size: var(--token-component-card-meta-title-size, 16px);
   font-weight: var(--token-primitive-typography-font-weight-medium);
   color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
-  margin-bottom: var(--token-semantic-gap-xxxs, 4px);
+  margin-bottom: var(--token-component-card-meta-title-margin-bottom, 4px);
   line-height: 1.5;
 }
 

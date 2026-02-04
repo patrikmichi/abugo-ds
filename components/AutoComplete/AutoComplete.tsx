@@ -29,10 +29,6 @@ export interface AutoCompleteProps extends Omit<React.InputHTMLAttributes<HTMLIn
   dataSource?: AutoCompleteDataSource;
   /** Filter options */
   filterOption?: boolean | ((inputValue: string, option: AutoCompleteOption) => boolean);
-  /** Callback when searching */
-  onSearch?: (searchText: string) => void;
-  /** Callback when option is selected */
-  onSelect?: (value: string, option: AutoCompleteOption) => void;
   /** Placeholder */
   placeholder?: string;
   /** Size */
@@ -43,10 +39,6 @@ export interface AutoCompleteProps extends Omit<React.InputHTMLAttributes<HTMLIn
   disabled?: boolean;
   /** Allow clear */
   allowClear?: boolean;
-  /** Default active first option */
-  defaultActiveFirstOption?: boolean;
-  /** Backfill selected item into input when using keyboard */
-  backfill?: boolean;
   /** Custom class name */
   className?: string;
   /** Custom style */
@@ -75,8 +67,7 @@ export interface AutoCompleteProps extends Omit<React.InputHTMLAttributes<HTMLIn
  *     { label: 'Option 1', value: 'option1' },
  *     { label: 'Option 2', value: 'option2' },
  *   ]}
- *   onSearch={(text) => console.log(text)}
- *   onSelect={(value) => console.log(value)}
+ *   onChange={(value) => console.log(value)}
  * />
  * ```
  */
@@ -87,15 +78,11 @@ export function AutoComplete({
   options: propOptions,
   dataSource,
   filterOption = true,
-  onSearch,
-  onSelect,
   placeholder,
   size = 'md',
   error = false,
   disabled = false,
   allowClear = false,
-  defaultActiveFirstOption = false,
-  backfill = false,
   className,
   style,
   getPopupContainer,
@@ -165,9 +152,8 @@ export function AutoComplete({
       onChange?.(newValue);
       setSearchValue(newValue);
       setOpen(true);
-      onSearch?.(newValue);
     },
-    [isControlled, onChange, onSearch]
+    [isControlled, onChange]
   );
 
   const handleSelect = useCallback(
@@ -178,13 +164,8 @@ export function AutoComplete({
       onChange?.(selectedValue);
       setSearchValue('');
       setOpen(false);
-      onSelect?.(selectedValue, {
-        value: option.value,
-        label: option.label,
-        disabled: option.disabled,
-      });
     },
-    [isControlled, onChange, onSelect]
+    [isControlled, onChange]
   );
 
   const handleClose = useCallback(() => {
@@ -249,14 +230,14 @@ export function AutoComplete({
         error={error}
         disabled={disabled}
         suffix={
-          allowClear && value ? (
+          allowClear && value && !disabled ? (
             <span
               className="material-symbols-outlined"
-              style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)', cursor: 'pointer' }}
+              style={{ fontSize: size === 'sm' ? 'var(--token-component-icon-field-sm, 20px)' : 'var(--token-component-icon-field-md, 24px)', cursor: 'pointer' }}
               onClick={handleClear}
               onMouseDown={(e) => e.preventDefault()} // Prevent input blur
             >
-              close
+              cancel
             </span>
           ) : undefined
         }
@@ -278,13 +259,12 @@ export function AutoComplete({
         disabled={disabled}
         placeholder={placeholder}
         showSearch={false}
-        notFoundContent={notFoundContent}
+        emptyContent={notFoundContent}
         triggerRef={containerRef}
-        dropdownMatchSelectWidth={dropdownMatchSelectWidth}
+        matchTriggerWidth={dropdownMatchSelectWidth}
         dropdownClassName={popupClassName}
         dropdownStyle={popupStyle}
         getPopupContainer={getPopupContainer}
-        defaultActiveFirstOption={defaultActiveFirstOption}
       />
     </div>
   );

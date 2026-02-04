@@ -3,9 +3,9 @@
 .menu {
   list-style: none;
   margin: 0;
-  padding: var(--token-component-menu-padding);
+  padding: var(--token-component-padding-block-menu);
   background-color: var(--token-component-menu-background-default);
-  border-radius: calc(var(--token-component-menu-radius) * 1px);
+  border-radius: calc(var(--token-component-radius-menu) * 1px);
   box-shadow: var(--token-component-menu-shadow);
   font-family: var(--token-primitive-typography-font-family-sans);
   min-width: var(--token-component-menu-min-width);
@@ -41,9 +41,9 @@
 .item {
   display: flex;
   align-items: center;
-  padding: var(--token-component-menu-item-padding);
+  padding: var(--token-component-padding-block-menu-item);
   font-size: var(--token-component-font-size-menu-item);
-  line-height: var(--token-semantic-typography-body-line-md);
+  line-height: var(--token-component-menu-line-height);
   color: var(--token-component-menu-item-color-default);
   cursor: pointer;
   transition: all var(--token-component-menu-transition-duration) var(--token-component-menu-transition-easing);
@@ -88,7 +88,7 @@
 .icon {
   display: inline-flex;
   align-items: center;
-  margin-right: var(--token-component-menu-icon-margin-right);
+  margin-right: var(--token-component-gap-menu-icon-margin-right);
   font-size: var(--token-component-menu-icon-size);
   width: var(--token-component-menu-icon-size);
   height: var(--token-component-menu-icon-size);

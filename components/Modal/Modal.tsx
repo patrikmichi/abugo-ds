@@ -3,81 +3,13 @@ import { createPortal } from 'react-dom';
 import styles from './Modal.module.css';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/Button';
-
-export interface ModalProps {
-  /** Whether the modal is open */
-  open?: boolean;
-  /** Whether the modal is open by default */
-  defaultOpen?: boolean;
-  /** Callback when modal is closed */
-  onCancel?: (e: React.MouseEvent | React.KeyboardEvent) => void;
-  /** Callback when OK button is clicked */
-  onOk?: (e: React.MouseEvent) => void;
-  /** Modal title */
-  title?: React.ReactNode;
-  /** Modal content */
-  children?: React.ReactNode;
-  /** Whether to show close button */
-  closable?: boolean;
-  /** Custom close icon */
-  closeIcon?: React.ReactNode;
-  /** Whether to show mask */
-  mask?: boolean;
-  /** Whether to close modal when mask is clicked */
-  maskClosable?: boolean;
-  /** Whether to close modal when Esc is pressed */
-  keyboard?: boolean;
-  /** Custom footer. Set to null to remove footer */
-  footer?: React.ReactNode | null;
-  /** Text of OK button */
-  okText?: React.ReactNode;
-  /** Text of Cancel button */
-  cancelText?: React.ReactNode;
-  /** Props for OK button */
-  okButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
-  /** Props for Cancel button */
-  cancelButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
-  /** Type of OK button */
-  okType?: 'default' | 'primary' | 'dashed' | 'link' | 'text';
-  /** Whether OK button is loading */
-  confirmLoading?: boolean;
-  /** Whether to destroy child components when closed */
-  destroyOnClose?: boolean;
-  /** Callback after open/close animation completes */
-  afterOpenChange?: (open: boolean) => void;
-  /** Width of modal */
-  width?: string | number;
-  /** Whether to center modal vertically */
-  centered?: boolean;
-  /** Z-index of modal */
-  zIndex?: number;
-  /** Container to render modal in */
-  getContainer?: HTMLElement | (() => HTMLElement) | string | false;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-  /** Custom class name for mask */
-  maskClassName?: string;
-  /** Custom style for mask */
-  maskStyle?: React.CSSProperties;
-  /** Custom class name for wrapper */
-  wrapClassName?: string;
-  /** Custom style for body */
-  bodyStyle?: React.CSSProperties;
-  /** Custom class name for body */
-  bodyClassName?: string;
-  /** Force render even when closed */
-  forceRender?: boolean;
-  /** Focus trigger element after close */
-  focusTriggerAfterClose?: boolean;
-}
+import type { ModalProps } from './types';
 
 /**
  * Modal Component
- * 
- * Modal dialog component matching 
- * 
+ *
+ * Modal dialog component matching
+ *
  * @example
  * ```tsx
  * <Modal
@@ -96,7 +28,9 @@ export function Modal({
   defaultOpen = false,
   onCancel,
   onOk,
+  onBack,
   title,
+  titleAlign = 'left',
   children,
   closable = true,
   closeIcon,
@@ -104,6 +38,7 @@ export function Modal({
   maskClosable = true,
   keyboard = true,
   footer,
+  footerAlign = 'right',
   okText = 'OK',
   cancelText = 'Cancel',
   okButtonProps,
@@ -176,18 +111,9 @@ export function Modal({
     }
   }, [open, afterOpenChange, isClosing]);
 
-  // Focus management
+  // Focus management — return focus to trigger element after close
   useEffect(() => {
-    if (open && modalRef.current) {
-      // Focus first focusable element in modal
-      const focusableElements = modalRef.current.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      if (focusableElements.length > 0) {
-        (focusableElements[0] as HTMLElement).focus();
-      }
-    } else if (!open && focusTriggerAfterClose && triggerRef.current) {
-      // Return focus to trigger element
+    if (!open && focusTriggerAfterClose && triggerRef.current) {
       triggerRef.current.focus();
     }
   }, [open, focusTriggerAfterClose]);
@@ -245,11 +171,12 @@ export function Modal({
   // Default footer
   const defaultFooter = (
     <>
-      <Button onClick={handleCancel} {...cancelButtonProps}>
+      <Button variant="secondary" appearance="plain" onClick={handleCancel} {...cancelButtonProps}>
         {cancelText}
       </Button>
       <Button
         variant={okType === 'primary' ? 'primary' : 'secondary'}
+        appearance="boxed"
         onClick={handleOk}
         loading={confirmLoading}
         {...okButtonProps}
@@ -292,32 +219,61 @@ export function Modal({
         onClick={(e) => e.stopPropagation()}
         {...props}
       >
-        {closable && (
+        {title ? (
+          <div className={cn(styles.header, titleAlign === 'center' && styles.titleCenter)}>
+            {onBack ? (
+              <button
+                type="button"
+                className={styles.back}
+                onClick={onBack}
+                aria-label="Back"
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
+                  arrow_back
+                </span>
+              </button>
+            ) : titleAlign === 'center' && closable ? (
+              <div className={styles.spacer} aria-hidden="true" />
+            ) : null}
+            <div className={styles.titleWrap}>
+              <div id="modal-title" className={styles.title}>
+                {title}
+              </div>
+            </div>
+            {closable && (
+              <button
+                type="button"
+                className={styles.close}
+                onClick={handleCancel}
+                aria-label="Close"
+              >
+                {closeIcon || (
+                  <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
+                    close
+                  </span>
+                )}
+              </button>
+            )}
+          </div>
+        ) : closable ? (
           <button
             type="button"
-            className={styles.close}
+            className={styles.closeAbsolute}
             onClick={handleCancel}
             aria-label="Close"
           >
             {closeIcon || (
-              <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)' }}>
+              <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
                 close
               </span>
             )}
           </button>
-        )}
-        {title && (
-          <div className={styles.header}>
-            <div id="modal-title" className={styles.title}>
-              {title}
-            </div>
-          </div>
-        )}
+        ) : null}
         <div className={cn(styles.body, bodyClassName)} style={bodyStyle}>
           {shouldShow || !destroyOnClose ? children : null}
         </div>
         {footer !== null && (
-          <div className={styles.footer}>
+          <div className={cn(styles.footer, footerAlign === 'right' && styles.footerRight)}>
             {footer !== undefined ? footer : defaultFooter}
           </div>
         )}
@@ -336,168 +292,3 @@ export function Modal({
   }
   return modalContent;
 }
-
-// Modal Manager for static methods
-interface ModalConfig {
-  rootPrefixCls?: string;
-  getContainer?: HTMLElement | (() => HTMLElement) | string | false;
-}
-
-interface ConfirmOptions {
-  title?: React.ReactNode;
-  content?: React.ReactNode;
-  icon?: React.ReactNode;
-  okText?: React.ReactNode;
-  okType?: 'default' | 'primary' | 'dashed' | 'link' | 'text';
-  cancelText?: React.ReactNode;
-  onOk?: () => void | Promise<void>;
-  onCancel?: () => void;
-  width?: string | number;
-  zIndex?: number;
-  centered?: boolean;
-  maskClosable?: boolean;
-  closable?: boolean;
-  autoFocusButton?: 'ok' | 'cancel' | null;
-  keyboard?: boolean;
-  okButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
-  cancelButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
-}
-
-class ModalManager {
-  private modals: Map<number, { destroy: () => void }> = new Map();
-  private modalConfig: ModalConfig = {};
-
-  config(options: ModalConfig) {
-    this.modalConfig = { ...this.modalConfig, ...options };
-  }
-
-  private confirm(options: ConfirmOptions, type?: 'info' | 'success' | 'error' | 'warning'): number {
-    const id = Date.now();
-    const container = document.createElement('div');
-    document.body.appendChild(container);
-
-    const destroy = () => {
-      const modal = this.modals.get(id);
-      if (modal) {
-        modal.destroy();
-        this.modals.delete(id);
-      }
-      if (container.parentNode) {
-        container.parentNode.removeChild(container);
-      }
-    };
-
-    const handleOk = async () => {
-      if (options.onOk) {
-        try {
-          await options.onOk();
-          destroy();
-        } catch (e) {
-          // Error handling - don't close on error
-        }
-      } else {
-        destroy();
-      }
-    };
-
-    const handleCancel = () => {
-      if (options.onCancel) {
-        options.onCancel();
-      }
-      destroy();
-    };
-
-    // Render modal using React
-    const React = require('react');
-    const { createRoot } = require('react-dom/client');
-    const root = createRoot(container);
-
-    const iconMap = {
-      info: 'info',
-      success: 'check_circle',
-      error: 'error',
-      warning: 'warning',
-    };
-
-    const icon = options.icon || (type ? (
-      <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-3)', color: type === 'info' ? 'var(--token-primitive-brand-500)' : type === 'success' ? 'var(--token-primitive-success-500)' : type === 'error' ? 'var(--token-primitive-negative-500)' : 'var(--token-primitive-warning-500)' }}>
-        {iconMap[type]}
-      </span>
-    ) : null);
-
-    root.render(
-      React.createElement(Modal, {
-        open: true,
-        onCancel: handleCancel,
-        onOk: handleOk,
-        title: options.title,
-        width: options.width || 416,
-        zIndex: options.zIndex || 1000,
-        centered: options.centered,
-        maskClosable: options.maskClosable !== false,
-        closable: options.closable !== false,
-        keyboard: options.keyboard !== false,
-        okText: options.okText || 'OK',
-        cancelText: options.cancelText || 'Cancel',
-        okType: options.okType || 'primary',
-        okButtonProps: options.okButtonProps,
-        cancelButtonProps: options.cancelButtonProps,
-        getContainer: this.config.getContainer,
-        children: React.createElement('div', { style: { display: 'flex', gap: '16px' } },
-          icon && React.createElement('div', { style: { flexShrink: 0 } }, icon),
-          React.createElement('div', { style: { flex: 1 } }, options.content)
-        ),
-      })
-    );
-
-    this.modals.set(id, { destroy });
-    return id;
-  }
-
-  info(options: ConfirmOptions): number {
-    return this.confirm(options, 'info');
-  }
-
-  success(options: ConfirmOptions): number {
-    return this.confirm(options, 'success');
-  }
-
-  error(options: ConfirmOptions): number {
-    return this.confirm(options, 'error');
-  }
-
-  warning(options: ConfirmOptions): number {
-    return this.confirm(options, 'warning');
-  }
-
-  confirm(options: ConfirmOptions): number {
-    return this.confirm(options);
-  }
-
-  destroyAll() {
-    this.modals.forEach((modal) => modal.destroy());
-    this.modals.clear();
-  }
-}
-
-const modalManager = new ModalManager();
-
-// Static methods
-export const ModalStatic = {
-  info: (options: ConfirmOptions) => modalManager.info(options),
-  success: (options: ConfirmOptions) => modalManager.success(options),
-  error: (options: ConfirmOptions) => modalManager.error(options),
-  warning: (options: ConfirmOptions) => modalManager.warning(options),
-  confirm: (options: ConfirmOptions) => modalManager.confirm(options),
-  destroyAll: () => modalManager.destroyAll(),
-  config: (options: ModalConfig) => modalManager.config(options),
-};
-
-// Attach static methods
-(Modal as any).info = ModalStatic.info;
-(Modal as any).success = ModalStatic.success;
-(Modal as any).error = ModalStatic.error;
-(Modal as any).warning = ModalStatic.warning;
-(Modal as any).confirm = ModalStatic.confirm;
-(Modal as any).destroyAll = ModalStatic.destroyAll;
-(Modal as any).config = ModalStatic.config;

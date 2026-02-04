@@ -37,7 +37,7 @@ export const Controlled: Story = {
   render: () => {
     const [value, setValue] = useState('Option 1');
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
         <Segmented
           options={['Option 1', 'Option 2', 'Option 3']}
           value={value}
@@ -51,7 +51,7 @@ export const Controlled: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
       <div>
         <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>Small</p>
         <Segmented options={['Small 1', 'Small 2', 'Small 3']} size="small" defaultValue="Small 1" />
@@ -70,7 +70,7 @@ export const Sizes: Story = {
 
 export const Block: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
       <Segmented
         options={['Option 1', 'Option 2', 'Option 3']}
         defaultValue="Option 1"
@@ -87,35 +87,23 @@ export const Block: Story = {
 
 export const WithIcons: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start', alignItems: 'flex-start' }}>
       <Segmented
         options={[
           {
             label: 'List',
             value: 'list',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                list
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">list</span>,
           },
           {
             label: 'Grid',
             value: 'grid',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                grid_view
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">grid_view</span>,
           },
           {
             label: 'Map',
             value: 'map',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                map
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">map</span>,
           },
         ]}
         defaultValue="list"
@@ -125,29 +113,17 @@ export const WithIcons: Story = {
           {
             label: 'Day',
             value: 'day',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                wb_sunny
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">wb_sunny</span>,
           },
           {
             label: 'Week',
             value: 'week',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                calendar_view_week
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">calendar_view_week</span>,
           },
           {
             label: 'Month',
             value: 'month',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                calendar_view_month
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">calendar_view_month</span>,
           },
         ]}
         defaultValue="day"
@@ -158,35 +134,23 @@ export const WithIcons: Story = {
 
 export const IconOnly: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start', alignItems: 'flex-start' }}>
       <Segmented
         options={[
           {
             label: '',
             value: 'list',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                list
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">list</span>,
           },
           {
             label: '',
             value: 'grid',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                grid_view
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">grid_view</span>,
           },
           {
             label: '',
             value: 'map',
-            icon: (
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-                map
-              </span>
-            ),
+            icon: <span className="material-symbols-outlined">map</span>,
           },
         ]}
         defaultValue="list"
@@ -197,7 +161,7 @@ export const IconOnly: Story = {
 
 export const Disabled: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
       <div>
         <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>All Disabled</p>
         <Segmented
@@ -223,7 +187,7 @@ export const Disabled: Story = {
 
 export const WithNumbers: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
       <Segmented
         options={[1, 2, 3, 4, 5]}
         defaultValue={1}
@@ -234,7 +198,7 @@ export const WithNumbers: Story = {
 
 export const ManyOptions: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px', alignItems: 'flex-start' }}>
       <Segmented
         options={['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5', 'Option 6']}
         defaultValue="Option 1"
@@ -247,7 +211,7 @@ export const ManyOptions: Story = {
 
 export const AllVariants: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '600px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '600px', alignItems: 'flex-start' }}>
       <div>
         <h3 style={{ marginBottom: '1rem' }}>Basic</h3>
         <Segmented options={['Option 1', 'Option 2', 'Option 3']} defaultValue="Option 1" />
@@ -256,9 +220,21 @@ export const AllVariants: Story = {
         <h3 style={{ marginBottom: '1rem' }}>With Icons</h3>
         <Segmented
           options={[
-            { label: 'List', value: 'list', icon: <span>📋</span> },
-            { label: 'Grid', value: 'grid', icon: <span>⊞</span> },
-            { label: 'Map', value: 'map', icon: <span>🗺️</span> },
+            {
+              label: 'List',
+              value: 'list',
+              icon: <span className="material-symbols-outlined">list</span>,
+            },
+            {
+              label: 'Grid',
+              value: 'grid',
+              icon: <span className="material-symbols-outlined">grid_view</span>,
+            },
+            {
+              label: 'Map',
+              value: 'map',
+              icon: <span className="material-symbols-outlined">map</span>,
+            },
           ]}
           defaultValue="list"
         />

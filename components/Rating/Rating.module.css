@@ -10,7 +10,7 @@
 .stars {
   display: inline-flex;
   align-items: center;
-  gap: var(--token-component-rating-star-gap, 2px);
+  gap: var(--token-component-gap-rating-star, 2px);
 }
 
 .star {
@@ -60,9 +60,9 @@
 }
 
 .text {
-  font-size: var(--token-component-rating-text-font-size, 14px);
+  font-size: var(--token-component-font-size-rating-text, 14px);
   font-weight: var(--token-primitive-typography-font-weight-regular);
-  line-height: var(--token-component-rating-text-line-height, 1.5);
+  line-height: var(--token-component-line-height-rating-text, 1.5);
   color: var(--token-component-rating-text-color, rgba(0, 0, 0, 0.85));
   font-family: var(--token-primitive-typography-font-family-sans);
 }

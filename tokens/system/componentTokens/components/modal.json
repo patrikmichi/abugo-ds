@@ -25,8 +25,8 @@
       ],
       "$type": "color",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{background.passive.neutral.default}"
+      "$collectionName": "primitives",
+      "$value": "{grey.900}"
     },
     "border": {
       "$scopes": [
@@ -53,7 +53,7 @@
     ],
     "$libraryName": "",
     "$type": "color",
-    "$value": "{background.passive.neutral.default}",
+    "$value": "{background.passive.neutral.elevated}",
     "$collectionName": "semanticTokens"
   },
   "body": {
@@ -63,38 +63,7 @@
       ],
       "$libraryName": "",
       "$type": "color",
-      "$value": "{background.passive.neutral.default}",
-      "$collectionName": "semanticTokens"
-    },
-    "font": {
-      "size": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      }
-    },
-    "line": {
-      "height": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "lineHeights",
-        "$value": "{typography.lineHeight.16}",
-        "$collectionName": "primitives"
-      }
-    },
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{padding.s}",
+      "$value": "{content.passive.neutral.default}",
       "$collectionName": "semanticTokens"
     }
   },
@@ -117,7 +86,7 @@
         ],
         "$libraryName": "",
         "$type": "color",
-        "$value": "{background.passive.neutral.default}",
+        "$value": "{background.active.neutral.hover}",
         "$collectionName": "semanticTokens"
       }
     },
@@ -128,7 +97,7 @@
         ],
         "$libraryName": "",
         "$type": "color",
-        "$value": "{background.passive.neutral.default}",
+        "$value": "{content.active.neutral.hover}",
         "$collectionName": "semanticTokens"
       }
     },
@@ -141,24 +110,6 @@
       "$value": 40,
       "$collectionName": ""
     },
-    "radius": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "borderRadius",
-      "$value": "{radius.sm}",
-      "$collectionName": "semanticTokens"
-    },
-    "right": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{spacing-2}",
-      "$collectionName": "primitives"
-    },
     "size": {
       "$scopes": [
         "ALL_SCOPES"
@@ -167,15 +118,6 @@
       "$type": "dimension",
       "$value": 40,
       "$collectionName": ""
-    },
-    "top": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{spacing-2}",
-      "$collectionName": "primitives"
     },
     "width": {
       "$scopes": [
@@ -196,28 +138,6 @@
     "$value": "{content.passive.neutral.default}",
     "$collectionName": "semanticTokens"
   },
-  "footer": {
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{padding.s}",
-      "$collectionName": "semanticTokens"
-    }
-  },
-  "header": {
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{padding.s}",
-      "$collectionName": "semanticTokens"
-    }
-  },
   "overlay": {
     "background": {
       "$scopes": [
@@ -225,18 +145,9 @@
       ],
       "$libraryName": "",
       "$type": "color",
-      "$value": "{background.passive.neutral.default}",
-      "$collectionName": "semanticTokens"
+      "$value": "{grey.900}",
+      "$collectionName": "primitives"
     }
-  },
-  "radius": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$libraryName": "",
-    "$type": "borderRadius",
-    "$value": "{radius.sm}",
-    "$collectionName": "semanticTokens"
   },
   "shadow": {
     "$scopes": [
@@ -254,39 +165,8 @@
       ],
       "$libraryName": "",
       "$type": "color",
-      "$value": "{background.passive.neutral.default}",
+      "$value": "{content.passive.neutral.default}",
       "$collectionName": "semanticTokens"
-    },
-    "font": {
-      "size": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      },
-      "weight": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontWeights",
-        "$value": 600,
-        "$collectionName": "primitives"
-      }
-    },
-    "line": {
-      "height": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "lineHeights",
-        "$value": "{typography.lineHeight.16}",
-        "$collectionName": "primitives"
-      }
     }
   },
   "width": {
@@ -298,6 +178,26 @@
       "$type": "dimension",
       "$value": 40,
       "$collectionName": ""
+    }
+  },
+  "z-index": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": 1000
+  },
+  "footer": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.sm}"
     }
   }
 }

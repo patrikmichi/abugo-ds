@@ -3,13 +3,15 @@
 
 .notification {
   display: flex;
-  gap: var(--token-semantic-gap-md, 16px);
-  padding: var(--token-component-notification-padding, 16px 24px);
+  flex-direction: column;
+  gap: var(--token-component-notification-gap, 8px);
+  padding: var(--token-component-notification-padding, 20px);
   background-color: var(--token-component-notification-background, #fff);
-  border-radius: calc(var(--token-component-notification-radius, 8px) * 1px);
-  box-shadow: var(--token-component-notification-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
-  min-width: var(--token-component-notification-min-width, 384px);
-  max-width: var(--token-component-notification-max-width, 384px);
+  border-radius: calc(var(--token-component-radius-notification, 8) * 1px);
+  /* shadow.lg — token var not usable (boxShadow type doesn't resolve in CSS generator) */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  min-width: 384px;
+  max-width: 384px;
   font-family: var(--token-primitive-typography-font-family-sans);
   pointer-events: auto;
   transition: all 0.3s ease;
@@ -28,7 +30,8 @@
 }
 
 .notification.clickable:hover {
-  box-shadow: var(--token-component-notification-shadow-hover, 0 8px 20px 0 rgba(0, 0, 0, 0.12), 0 4px 8px -4px rgba(0, 0, 0, 0.16), 0 12px 32px 12px rgba(0, 0, 0, 0.08));
+  /* shadow.xl */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 /* Placement animations */
@@ -64,70 +67,85 @@
   transform: translateX(100%);
 }
 
+/* Header — icon + title in a row */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-notification-header-gap, 12px);
+  padding-right: 32px;
+}
+
 /* Icon */
 .icon {
   flex-shrink: 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   font-size: var(--token-component-notification-icon-size, 24px);
-  margin-top: var(--token-component-notification-icon-margin-top, 2px);
+  width: 24px;
+  height: 24px;
+  line-height: 1;
 }
 
-/* Content */
-.content {
-  flex: 1;
-  min-width: 0;
+.icon .material-symbols-outlined {
+  font-size: inherit;
 }
 
+/* Message (title) — +1px top compensation for optical centering with icon */
 .message {
-  font-size: var(--token-component-notification-message-font-size, 16px);
-  font-weight: var(--token-component-notification-message-font-weight, 600);
-  line-height: var(--token-component-notification-message-line-height, 1.5);
-  color: var(--token-component-notification-message-color, rgba(0, 0, 0, 0.85));
+  font-size: var(--token-component-font-size-notification-message, 16px);
+  font-weight: var(--token-component-font-weight-notification-message, 600);
+  line-height: var(--token-component-line-height-notification-message, 1.5);
+  color: var(--token-component-notification-message-color, #161616);
   margin: 0;
-  margin-bottom: var(--token-component-notification-description-margin-top, 8px);
+  padding-top: 1px;
 }
 
+/* Description — indented to align with title text */
 .description {
-  font-size: var(--token-component-notification-description-font-size, 14px);
-  line-height: var(--token-component-notification-description-line-height, 1.5715);
-  color: var(--token-component-notification-description-color, rgba(0, 0, 0, 0.65));
+  padding-left: 36px;
+  font-size: var(--token-component-font-size-notification-description, 14px);
+  line-height: var(--token-component-line-height-notification-description, 1.5715);
+  color: var(--token-component-notification-description-color, #464646);
   margin: 0;
-  margin-top: var(--token-component-notification-description-margin-top, 8px);
 }
 
-.btn {
-  margin-top: var(--token-component-notification-btn-margin-top, 16px);
+/* Action buttons — indented to align with title text */
+.actions {
+  padding-left: 36px;
+  display: flex;
+  gap: 8px;
 }
 
-/* Close button */
+/* Close button (plain button style) */
 .close {
   position: absolute;
-  top: var(--token-component-notification-close-top, 16px);
-  right: var(--token-component-notification-close-right, 16px);
-  background: none;
-  border: none;
-  color: var(--token-component-notification-close-color, rgba(0, 0, 0, 0.45));
-  cursor: pointer;
-  font-size: var(--token-component-notification-close-size, 12px);
-  line-height: 1;
+  top: 12px;
+  right: 12px;
   padding: 0;
-  width: var(--token-component-notification-close-width, 22px);
-  height: var(--token-component-notification-close-height, 22px);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-notification-close-color-default, #737373);
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: calc(var(--token-component-notification-close-radius, 2px) * 1px);
-  transition: 
-    background-color 0.3s ease,
-    color 0.3s ease;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
   flex-shrink: 0;
 }
 
 .close:hover {
-  background-color: var(--token-component-notification-close-background-hover, rgba(0, 0, 0, 0.06));
-  color: var(--token-component-notification-close-color-hover, rgba(0, 0, 0, 0.85));
+  background-color: var(--token-component-notification-close-background-hover, rgba(70, 70, 70, 0.05));
+  color: var(--token-component-notification-close-color-hover, #464646);
+}
+
+.close:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(70, 70, 70, 0.08));
+  color: var(--token-component-notification-close-color-hover, #464646);
 }
 
 .close:focus {
@@ -152,7 +170,7 @@
     min-width: calc(100vw - 48px);
     max-width: calc(100vw - 48px);
   }
-  
+
   .container {
     max-width: calc(100vw - 48px);
   }

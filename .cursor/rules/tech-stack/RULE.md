@@ -1,3 +1,11 @@
+---
+description: "Technology stack: React, Next.js, TypeScript, Storybook, Vite. Use latest stable versions."
+alwaysApply: false
+globs:
+  - "package.json"
+  - "*.config.{ts,js,mjs}"
+---
+
 # Technology Stack Rule
 
 ## Always Use Latest Versions

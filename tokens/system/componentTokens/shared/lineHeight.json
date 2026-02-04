@@ -108,7 +108,25 @@
     "$type": "lineHeights",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography.body-line.md}"
+    "$value": "{typography.body-line.md}",
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
   },
   "chip": {
     "sm": {
@@ -154,11 +172,10 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "lineHeights",
       "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{typography.lineHeight.14}",
-      "$description": "Alert description line height (20px)"
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
     }
   },
   "toast": {
@@ -181,6 +198,139 @@
       "$collectionName": "semanticTokens",
       "$value": "{typography.body-line.md}",
       "$description": "Toast line height for large size"
+    }
+  },
+  "accordion": {
+    "header": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "card": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "lineHeights",
+    "$value": "{typography.lineHeight.16}",
+    "$collectionName": "primitives"
+  },
+  "drawer": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "lineHeights",
+    "$value": "{typography.lineHeight.16}",
+    "$collectionName": "primitives",
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "modal": {
+    "body": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "notification": {
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "rating": {
+    "text": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "skeleton": {
+    "paragraph": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "stepper": {
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "upload": {
+    "file": {
+      "item": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "lineHeights",
+        "$value": "{typography.lineHeight.16}",
+        "$collectionName": "primitives"
+      }
     }
   }
 }

@@ -365,7 +365,7 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{grey.200}",
+    "$value": "{brand.400}",
     "$description": "Active border color for accent intent (disabled). Use for accent-colored interactive elements.",
     "$extensions": {
       "design-tokens": {

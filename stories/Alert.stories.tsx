@@ -24,9 +24,6 @@ const meta: Meta<typeof Alert> = {
     showIcon: {
       control: 'boolean',
     },
-    description: {
-      control: 'boolean',
-    },
   },
 };
 
@@ -42,7 +39,14 @@ export const Default: Story = {
 
 export const Types: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Alert message="Success message" type="success" />
       <Alert message="Info message" type="info" />
       <Alert message="Warning message" type="warning" />
@@ -53,7 +57,14 @@ export const Types: Story = {
 
 export const WithDescription: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Alert
         message="Success Tips"
         description="Detailed description and advice about successful copywriting."
@@ -78,51 +89,54 @@ export const WithDescription: Story = {
   ),
 };
 
-export const Closable: Story = {
+export const Sizes: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
+      <Alert message="Small alert (12px padding)" type="info" size="small" />
+      <Alert message="Large alert (20px padding)" type="info" size="large" />
       <Alert
-        message="Closable Alert"
-        description
-        type="info"
-        closable
+        message="Small with description"
+        description="Description text below the headline."
+        type="success"
+        size="small"
       />
       <Alert
-        message="Success Closable"
-        description
+        message="Large with description"
+        description="Description text below the headline."
         type="success"
-        closable
+        size="large"
       />
     </div>
   ),
 };
 
-export const WithIcon: Story = {
+export const Closable: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Alert
-        message="Success Tips"
-        description
-        type="success"
-        showIcon
-      />
-      <Alert
-        message="Informational Notes"
-        description
+        message="Closable alert without description"
         type="info"
-        showIcon
+        closable
       />
       <Alert
-        message="Warning"
-        description
-        type="warning"
-        showIcon
-      />
-      <Alert
-        message="Error"
-        description
-        type="error"
-        showIcon
+        message="Closable alert with description"
+        description="The close button is top-aligned when description is present."
+        type="success"
+        closable
       />
     </div>
   ),
@@ -130,14 +144,23 @@ export const WithIcon: Story = {
 
 export const CustomIcon: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Alert
         message="Custom Icon"
         description="Alert with a custom icon."
         type="info"
-        showIcon
         icon={
-          <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>
+          <span
+            className="material-symbols-outlined"
+            style={{ fontSize: '24px' }}
+          >
             star
           </span>
         }
@@ -146,9 +169,11 @@ export const CustomIcon: Story = {
         message="Another Custom Icon"
         description="Alert with another custom icon."
         type="success"
-        showIcon
         icon={
-          <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>
+          <span
+            className="material-symbols-outlined"
+            style={{ fontSize: '24px' }}
+          >
             favorite
           </span>
         }
@@ -157,21 +182,40 @@ export const CustomIcon: Story = {
   ),
 };
 
+export const WithActions: Story = {
+  args: {
+    size: 'large',
+  },
 
-export const WithAction: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Alert
         message="Alert with Action"
-        description
+        description="This alert includes an action button."
         type="info"
-        action={<Button size="sm">Action</Button>}
+        size="large"
+        actions={{
+          label: 'View Details',
+          variant: 'primary',
+          onClick: () => alert('Clicked!'),
+        }}
       />
       <Alert
-        message="Warning with Action"
-        description
+        message="Multiple Actions"
+        description="This alert includes multiple action buttons."
         type="warning"
-        action={<Button size="sm">Learn More</Button>}
+        size="large"
+        actions={[
+          { label: 'Take Action', variant: 'primary' },
+          { label: 'Dismiss', variant: 'secondary', appearance: 'plain' },
+        ]}
         closable
       />
     </div>
@@ -181,13 +225,11 @@ export const WithAction: Story = {
 export const ControlledClose: Story = {
   render: () => {
     const [visible, setVisible] = useState(true);
-    
+
     if (!visible) {
-      return (
-        <Button onClick={() => setVisible(true)}>Show Alert</Button>
-      );
+      return <Button onClick={() => setVisible(true)}>Show Alert</Button>;
     }
-    
+
     return (
       <Alert
         message="Controlled Alert"
@@ -208,15 +250,24 @@ export const ControlledClose: Story = {
 
 export const AllFeatures: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Alert
         message="Complete Alert Example"
-        description
+        description="Alert with all features enabled."
         type="success"
         size="large"
-        showIcon
-        actionLabel="Action"
-        onAction={() => console.log('Action clicked')}
+        actions={{
+          label: 'Action',
+          variant: 'primary',
+          onClick: () => console.log('Action clicked'),
+        }}
         closable
         onClose={() => console.log('Closed')}
       />

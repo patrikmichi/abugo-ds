@@ -3,7 +3,7 @@ import styles from './Badge.module.css';
 import { cn } from '@/lib/utils';
 
 export type BadgeStatus = 'success' | 'processing' | 'default' | 'error' | 'warning';
-export type BadgeVariant = 'success' | 'warning' | 'danger' | 'promo';
+export type BadgeVariant = 'success' | 'warning' | 'error' | 'upgrade';
 export type BadgeSize = 'default' | 'small';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
@@ -58,8 +58,8 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
  * // Color variants
  * <Badge count={5} variant="success" />
  * <Badge count={3} variant="warning" />
- * <Badge count={1} variant="danger" />
- * <Badge count={10} variant="promo" />
+ * <Badge count={1} variant="error" />
+ * <Badge count={10} variant="upgrade" />
  * ```
  */
 export function Badge({

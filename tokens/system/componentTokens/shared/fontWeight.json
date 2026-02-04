@@ -6,8 +6,8 @@
     ],
     "$type": "fontWeights",
     "$libraryName": "",
-    "$collectionName": "primitives",
-    "$value": "{typography-fontWeight-bold}"
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.fontWeight.bold}"
   },
   "anchor": {
     "link": {
@@ -15,10 +15,102 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$type": "fontWeights",
         "$libraryName": "",
+        "$type": "fontWeights",
+        "$value": "{typography.fontWeight.semibold}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "accordion": {
+    "header": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontWeights",
+      "$value": "{typography.fontWeight.semibold}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "divider": {
+    "plain": {
+      "text": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontWeights",
+        "$value": "{typography.fontWeight.regular}",
         "$collectionName": "semanticTokens",
-        "$value": "{typography.fontWeight.medium}"
+        "$description": "Plain divider text font weight (400/regular)."
+      }
+    },
+    "text": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontWeights",
+      "$value": "{typography.fontWeight.regular}",
+      "$collectionName": "semanticTokens",
+      "$description": "Divider text font weight (400/regular)."
+    }
+  },
+  "modal": {
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontWeights",
+      "$value": "{typography.fontWeight.semibold}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "notification": {
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontWeights",
+      "$value": "{typography.fontWeight.semibold}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "stepper": {
+    "icon": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontWeights",
+      "$value": "{typography.fontWeight.semibold}",
+      "$collectionName": "semanticTokens"
+    },
+    "title": {
+      "process": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontWeights",
+        "$value": "{typography.fontWeight.semibold}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "tabs": {
+    "tab": {
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontWeights",
+        "$value": "{typography.fontWeight.semibold}",
+        "$collectionName": "semanticTokens"
       }
     }
   }

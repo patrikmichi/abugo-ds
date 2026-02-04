@@ -5,7 +5,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--token-component-gap-chip-icon, 4px);
   border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid;
   outline: none;
   font-family: var(--token-primitive-typography-font-family-sans);
@@ -38,10 +37,11 @@
   height: var(--token-component-height-chip-sm, 24px);
   padding-inline-start: var(--token-component-padding-x-chip-sm, 8px);
   padding-inline-end: var(--token-component-padding-x-chip-sm, 8px);
+  gap: var(--token-component-gap-chip-icon-sm, 4px);
 }
 
-.chip.sm:has(.avatar),
-.chip.sm:has(.icon) {
+/* Adjust padding when leading icon is present (-4px from base) */
+.chip.sm.hasLeadingIcon {
   padding-inline-start: var(--token-component-padding-x-chip-with-icon-sm, 4px);
 }
 
@@ -49,10 +49,10 @@
   height: var(--token-component-height-chip-md, 32px);
   padding-inline-start: var(--token-component-padding-x-chip-md, 12px);
   padding-inline-end: var(--token-component-padding-x-chip-md, 12px);
+  gap: var(--token-component-gap-chip-icon-md, 4px);
 }
 
-.chip.md:has(.avatar),
-.chip.md:has(.icon) {
+.chip.md.hasLeadingIcon {
   padding-inline-start: var(--token-component-padding-x-chip-with-icon-md, 8px);
 }
 
@@ -60,10 +60,10 @@
   height: var(--token-component-height-chip-lg, 40px);
   padding-inline-start: var(--token-component-padding-x-chip-lg, 16px);
   padding-inline-end: var(--token-component-padding-x-chip-lg, 16px);
+  gap: var(--token-component-gap-chip-icon-lg, 8px);
 }
 
-.chip.lg:has(.avatar),
-.chip.lg:has(.icon) {
+.chip.lg.hasLeadingIcon {
   padding-inline-start: var(--token-component-padding-x-chip-with-icon-lg, 12px);
 }
 
@@ -71,32 +71,38 @@
 .chip {
   background-color: var(--token-component-chip-background-unselected-default, #ffffff);
   color: var(--token-component-chip-content-unselected-default, #464646);
+  border-color: var(--token-component-chip-border-unselected-default, #e0e0e0);
 }
 
 .chip:not(.disabled):not(.selected):hover {
   background-color: var(--token-component-chip-background-unselected-hover, #efefef);
   color: var(--token-component-chip-content-unselected-hover, #161616);
+  border-color: var(--token-component-chip-border-unselected-hover, #c9c9c9);
 }
 
 .chip:not(.disabled):not(.selected):active {
   background-color: var(--token-component-chip-background-unselected-pressed, #f7f7f7);
   color: var(--token-component-chip-content-unselected-pressed, #737373);
+  border-color: var(--token-component-chip-border-unselected-pressed, #e0e0e0);
 }
 
 /* Selected state */
 .chip.selected {
   background-color: var(--token-component-chip-background-selected-default, #5690f5);
   color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
 }
 
 .chip.selected:not(.disabled):hover {
   background-color: var(--token-component-chip-background-selected-hover, #4573c4);
   color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
 }
 
 .chip.selected:not(.disabled):active {
   background-color: var(--token-component-chip-background-selected-pressed, #78a6f7);
   color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
 }
 
 /* Clickable */
@@ -105,17 +111,13 @@
 }
 
 .chip.clickable:not(.disabled):focus-visible {
-  outline: 2px solid var(--token-semantic-border-active-neutral-control-field-focused);
+  outline: 2px solid var(--token-component-chip-focus-outline-color);
   outline-offset: 2px;
 }
 
 /* Disabled state */
 .chip.disabled {
   cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.chip.disabled {
   background-color: var(--token-component-chip-background-unselected-disabled, #efefef);
   color: var(--token-component-chip-content-unselected-disabled, #a2a2a2);
   border-color: var(--token-component-chip-border-unselected-disabled, #efefef);
@@ -123,8 +125,8 @@
 
 .chip.disabled.selected {
   background-color: var(--token-component-chip-background-selected-disabled, #93b8f9);
-  color: var(--token-component-chip-content-unselected-disabled, #a2a2a2);
-  border-color: var(--token-component-chip-background-selected-disabled, #93b8f9);
+  color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
 }
 
 /* Content elements */
@@ -134,61 +136,95 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: inherit;
+}
+
+.avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  line-height: 1;
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+  text-transform: uppercase;
+  padding-top: var(--token-component-chip-visual-compensation-offset, 1px);
 }
 
 .chip.sm .avatar,
 .chip.sm .icon {
   width: var(--token-component-icon-chip-sm, 16px);
+  min-width: var(--token-component-icon-chip-sm, 16px);
   height: var(--token-component-icon-chip-sm, 16px);
-  margin-inline-start: calc(var(--token-component-padding-x-chip-sm, 8px) * -0.5);
+}
+
+.chip.sm .avatar {
+  font-size: calc(var(--token-component-icon-chip-sm, 16px) * 0.6);
 }
 
 .chip.md .avatar,
 .chip.md .icon {
   width: var(--token-component-icon-chip-md, 20px);
+  min-width: var(--token-component-icon-chip-md, 20px);
   height: var(--token-component-icon-chip-md, 20px);
-  margin-inline-start: calc(var(--token-component-padding-x-chip-md, 12px) * -0.666666667);
+}
+
+.chip.md .avatar {
+  font-size: calc(var(--token-component-icon-chip-md, 20px) * 0.6);
 }
 
 .chip.lg .avatar,
 .chip.lg .icon {
   width: var(--token-component-icon-chip-lg, 20px);
+  min-width: var(--token-component-icon-chip-lg, 20px);
   height: var(--token-component-icon-chip-lg, 20px);
-  margin-inline-start: calc(var(--token-component-padding-x-chip-lg, 16px) * -0.75);
 }
 
-.avatar {
-  margin-inline-end: calc(var(--token-component-gap-chip-icon, 4px) * -1);
-}
-
-.icon {
-  margin-inline-end: calc(var(--token-component-gap-chip-icon, 4px) * -1);
+.chip.lg .avatar {
+  font-size: calc(var(--token-component-icon-chip-lg, 20px) * 0.6);
 }
 
 /* Material Icons in chip */
-.icon .material-symbols-outlined,
-.trailingIcon .material-symbols-outlined {
-  font-size: inherit;
-  width: 1em;
-  height: 1em;
+.icon :global(.material-symbols-outlined) {
   display: block;
   line-height: 1;
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-.chip.sm .icon .material-symbols-outlined,
-.chip.sm .trailingIcon .material-symbols-outlined {
+.chip.sm .icon :global(.material-symbols-outlined) {
+  font-size: var(--token-component-icon-chip-sm, 16px);
+  width: var(--token-component-icon-chip-sm, 16px);
+  height: var(--token-component-icon-chip-sm, 16px);
+}
+
+.chip.md .icon :global(.material-symbols-outlined) {
+  font-size: var(--token-component-icon-chip-md, 20px);
+  width: var(--token-component-icon-chip-md, 20px);
+  height: var(--token-component-icon-chip-md, 20px);
+}
+
+.chip.lg .icon :global(.material-symbols-outlined) {
+  font-size: var(--token-component-icon-chip-lg, 20px);
+  width: var(--token-component-icon-chip-lg, 20px);
+  height: var(--token-component-icon-chip-lg, 20px);
+}
+
+.chip.sm .trailingIcon {
   font-size: var(--token-component-icon-chip-sm, 16px);
 }
 
-.chip.md .icon .material-symbols-outlined,
-.chip.md .trailingIcon .material-symbols-outlined {
+.chip.md .trailingIcon {
   font-size: var(--token-component-icon-chip-md, 20px);
 }
 
-.chip.lg .icon .material-symbols-outlined,
-.chip.lg .trailingIcon .material-symbols-outlined {
+.chip.lg .trailingIcon {
   font-size: var(--token-component-icon-chip-lg, 20px);
+}
+
+.trailingIcon :global(.material-symbols-outlined) {
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
 }
 
 .label {
@@ -196,6 +232,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transform: translateY(var(--token-component-chip-visual-compensation-offset, 1px));
 }
 
 /* Trailing icon (delete or expand) */
@@ -205,13 +242,10 @@
   justify-content: center;
   flex-shrink: 0;
   cursor: pointer;
-  margin-inline-start: var(--token-component-gap-chip-icon, 4px);
   margin-inline-end: 0;
-  padding: var(--token-component-chip-delete-icon-padding, 4px);
   border-radius: 50%;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-  color: inherit;
-  opacity: var(--token-component-chip-delete-icon-opacity-default, 0.6);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--token-component-chip-delete-icon-color, #464646);
 }
 
 .trailingIconSymbol {
@@ -222,52 +256,48 @@
   line-height: 1;
 }
 
-/* Trailing icon hover - using opacity hovers like plain buttons */
+/* Trailing icon in selected chip */
+.chip.selected .trailingIcon {
+  color: var(--token-component-chip-delete-icon-color-selected, #ffffff);
+}
+
+/* Trailing icon hover */
 .trailingIcon:hover:not(.disabled) {
-  opacity: var(--token-component-chip-delete-icon-opacity-hover, 1);
-  /* Use grey-700 with 5% opacity for hover - matches plain button approach */
-  /* Fallback for browsers without color-mix support */
-  background-color: rgba(70, 70, 70, 0.05);
-  background-color: color-mix(in srgb, var(--token-semantic-background-active-neutral-subtle-hover, var(--token-primitive-grey-700, #464646)) 5%, transparent);
+  color: var(--token-component-chip-delete-icon-color-hover, #161616);
 }
 
 .chip.selected .trailingIcon:hover:not(.disabled) {
-  /* Use white with 20% opacity for hover on selected chips */
-  /* Fallback for browsers without color-mix support */
-  background-color: rgba(255, 255, 255, 0.2);
-  background-color: color-mix(in srgb, var(--token-primitive-color-white, #ffffff) 20%, transparent);
+  color: var(--token-component-chip-delete-icon-color-hover-selected, #ffffff);
 }
 
 .trailingIcon:active:not(.disabled) {
-  /* Slightly more opacity on active */
-  background-color: rgba(70, 70, 70, 0.08);
-  background-color: color-mix(in srgb, var(--token-semantic-background-active-neutral-subtle-pressed, var(--token-primitive-grey-700, #464646)) 8%, transparent);
+  color: var(--token-component-chip-delete-icon-color-active, #737373);
 }
 
 .chip.selected .trailingIcon:active:not(.disabled) {
-  /* Use white with 30% opacity for active on selected chips */
-  background-color: rgba(255, 255, 255, 0.3);
-  background-color: color-mix(in srgb, var(--token-primitive-color-white, #ffffff) 30%, transparent);
+  color: var(--token-component-chip-delete-icon-color-active-selected, #ffffff);
 }
 
 .chip.disabled .trailingIcon {
   cursor: not-allowed;
-  opacity: var(--token-component-chip-delete-icon-opacity-disabled, 0.4);
+  color: var(--token-component-chip-delete-icon-color-disabled, #efefef);
 }
 
-/* Adjust padding when trailing icon is present */
-.chip.hasTrailingIcon {
-  padding-inline-end: var(--token-component-chip-delete-icon-padding, 4px);
+/* Adjust padding when trailing icon is present (-4px from base) */
+.chip.sm.hasTrailingIcon {
+  padding-inline-end: var(--token-component-padding-x-chip-with-icon-sm, 4px);
 }
 
-/* Adjust spacing when avatar or icon is present */
-.chip:has(.avatar) .label,
-.chip:has(.icon) .label {
-  margin-inline-start: 0;
+.chip.md.hasTrailingIcon {
+  padding-inline-end: var(--token-component-padding-x-chip-with-icon-md, 8px);
+}
+
+.chip.lg.hasTrailingIcon {
+  padding-inline-end: var(--token-component-padding-x-chip-with-icon-lg, 12px);
 }
 
 /* Focus styles */
 .chip:focus-visible {
-  outline: 2px solid var(--token-semantic-border-active-neutral-control-field-focused);
+  outline: 2px solid var(--token-component-chip-focus-outline-color);
   outline-offset: 2px;
 }

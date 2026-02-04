@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { AutoComplete } from '@/components/AutoComplete';
+import { Button } from '@/components/Button';
 import { Field } from '@/components/Field';
 
 const meta: Meta<typeof AutoComplete> = {
@@ -72,8 +73,8 @@ export const Controlled: Story = {
           options={simpleOptions}
         />
         <div style={{ marginTop: '1rem', display: 'flex', gap: '0.5rem' }}>
-          <button onClick={() => setValue('banana')}>Set Banana</button>
-          <button onClick={() => setValue('')}>Clear</button>
+          <Button variant="primary" appearance="plain" size="sm" onClick={() => setValue('banana')}>Set Banana</Button>
+          <Button variant="secondary" appearance="plain" size="sm" onClick={() => setValue('')}>Clear</Button>
         </div>
         <p style={{ marginTop: '0.5rem', fontSize: '14px' }}>
           Value: {value || 'empty'}
@@ -158,56 +159,6 @@ export const NoFilter: Story = {
   },
 };
 
-export const WithOnSearch: Story = {
-  render: () => {
-    const [value, setValue] = useState('');
-    const [searchText, setSearchText] = useState('');
-    return (
-      <div style={{ maxWidth: '400px' }}>
-        <AutoComplete
-          value={value}
-          onChange={setValue}
-          options={simpleOptions}
-          onSearch={(text) => {
-            setSearchText(text);
-            console.log('Searching for:', text);
-          }}
-          placeholder="Type to search..."
-        />
-        <p style={{ marginTop: '1rem', fontSize: '14px' }}>
-          Search text: {searchText || 'None'}
-        </p>
-      </div>
-    );
-  },
-};
-
-export const WithOnSelect: Story = {
-  render: () => {
-    const [value, setValue] = useState('');
-    const [selected, setSelected] = useState<{ value: string; label: React.ReactNode } | null>(null);
-    return (
-      <div style={{ maxWidth: '400px' }}>
-        <AutoComplete
-          value={value}
-          onChange={setValue}
-          options={simpleOptions}
-          onSelect={(val, option) => {
-            setSelected({ value: val, label: option.label });
-            console.log('Selected:', val, option);
-          }}
-          placeholder="Type to search..."
-        />
-        {selected && (
-          <p style={{ marginTop: '1rem', fontSize: '14px' }}>
-            Last selected: {String(selected.label)} ({selected.value})
-          </p>
-        )}
-      </div>
-    );
-  },
-};
-
 export const WithDisabledOptions: Story = {
   render: () => {
     const [value, setValue] = useState('');
@@ -239,43 +190,6 @@ export const WithAllowClear: Story = {
           options={simpleOptions}
           allowClear
         />
-      </div>
-    );
-  },
-};
-
-export const DefaultActiveFirst: Story = {
-  render: () => {
-    const [value, setValue] = useState('');
-    return (
-      <div style={{ maxWidth: '400px' }}>
-        <AutoComplete
-          value={value}
-          onChange={setValue}
-          options={simpleOptions}
-          defaultActiveFirstOption
-          placeholder="First option active by default..."
-        />
-      </div>
-    );
-  },
-};
-
-export const WithBackfill: Story = {
-  render: () => {
-    const [value, setValue] = useState('');
-    return (
-      <div style={{ maxWidth: '400px' }}>
-        <AutoComplete
-          value={value}
-          onChange={setValue}
-          options={simpleOptions}
-          backfill
-          placeholder="Use arrow keys to navigate..."
-        />
-        <p style={{ marginTop: '1rem', fontSize: '12px', color: '#666' }}>
-          Use arrow keys to navigate - input will be backfilled with selected option
-        </p>
       </div>
     );
   },
@@ -324,11 +238,7 @@ export const AllFeatures: Story = {
           onChange={setValue}
           options={simpleOptions}
           filterOption={true}
-          onSearch={(text) => console.log('Search:', text)}
-          onSelect={(val, option) => console.log('Select:', val, option)}
           allowClear
-          defaultActiveFirstOption
-          backfill
           placeholder="Type to search..."
         />
       </div>

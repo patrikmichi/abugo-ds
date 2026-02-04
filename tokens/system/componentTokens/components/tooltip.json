@@ -6,8 +6,9 @@
     ],
     "$type": "dimension",
     "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{sizing.tooltip-arrow}"
+    "$collectionName": "componentTokens",
+    "$value": "6px",
+    "$description": "Tooltip arrow width (6px)."
   },
   "container": {
     "background": {
@@ -50,5 +51,71 @@
       "$value": 40,
       "$collectionName": ""
     }
+  },
+  "z-index": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": 1060
+  },
+  "padding-y": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxxs}"
+  },
+  "padding-x": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxs}"
+  },
+  "radius": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.xs}"
+  },
+  "font-size": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.fontSize.2}",
+    "$description": "Tooltip font size (12px)."
+  },
+  "line-height": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.lineHeight.14}",
+    "$description": "Tooltip line height (1.4)."
+  },
+  "shadow": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{shadow-sm}",
+    "$description": "Tooltip shadow (small elevation)."
   }
 }

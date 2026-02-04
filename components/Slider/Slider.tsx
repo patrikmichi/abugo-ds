@@ -20,6 +20,8 @@ export interface SliderTooltipProps {
   getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement;
 }
 
+export type SliderSize = 'sm' | 'md' | 'lg';
+
 export interface SliderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
   /** Current value (controlled) */
   value?: SliderValue;
@@ -49,6 +51,8 @@ export interface SliderProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 
   included?: boolean;
   /** Marks on slider */
   marks?: SliderMarks;
+  /** Rail/track thickness: sm (4px), md (8px), lg (12px) */
+  size?: SliderSize;
   /** Tooltip configuration */
   tooltip?: SliderTooltipProps | boolean;
   /** Custom track style */
@@ -93,6 +97,7 @@ export function Slider({
   dots = false,
   included = true,
   marks,
+  size = 'sm',
   tooltip = true,
   trackStyle,
   handleStyle,
@@ -480,6 +485,7 @@ export function Slider({
       ref={sliderRef}
       className={cn(
         styles.slider,
+        styles[size],
         vertical && styles.vertical,
         disabled && styles.disabled,
         className

@@ -19,11 +19,7 @@ const meta: Meta<typeof Field> = {
     },
     validateStatus: {
       control: 'select',
-      options: ['error', 'warning', 'success', 'validating'],
-    },
-    labelAlign: {
-      control: 'select',
-      options: ['left', 'right'],
+      options: ['error', 'validating'],
     },
     maxWidth: {
       control: 'text',
@@ -96,19 +92,6 @@ export const WithExtra: Story = {
   ),
 };
 
-export const LabelAlignment: Story = {
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
-      <Field label="Left aligned" labelAlign="left">
-        <Input placeholder="Label on the left" />
-      </Field>
-      <Field label="Right aligned (default)" labelAlign="right">
-        <Input placeholder="Label on the right" />
-      </Field>
-    </div>
-  ),
-};
-
 export const WithColon: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
@@ -155,20 +138,6 @@ export const ValidationStatus: Story = {
           <Input value={value} onChange={(e) => setValue(e.target.value)} placeholder="Error state" />
         </Field>
         <Field
-          label="Warning status"
-          validateStatus="warning"
-          hasFeedback
-        >
-          <Input placeholder="Warning state" />
-        </Field>
-        <Field
-          label="Success status"
-          validateStatus="success"
-          hasFeedback
-        >
-          <Input placeholder="Success state" />
-        </Field>
-        <Field
           label="Validating status"
           validateStatus="validating"
           hasFeedback
@@ -183,13 +152,6 @@ export const ValidationStatus: Story = {
 export const WithFeedback: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
-      <Field
-        label="Email"
-        validateStatus="success"
-        hasFeedback
-      >
-        <Input type="email" placeholder="Valid email" />
-      </Field>
       <Field
         label="Password"
         validateStatus="error"
@@ -289,22 +251,6 @@ export const NoStyle: Story = {
   ),
 };
 
-export const Hidden: Story = {
-  render: () => (
-    <div style={{ maxWidth: '500px' }}>
-      <Field label="Visible field">
-        <Input placeholder="This field is visible" />
-      </Field>
-      <Field label="Hidden field" hidden>
-        <Input placeholder="This field is hidden" />
-      </Field>
-      <Field label="Another visible field">
-        <Input placeholder="This field is visible" />
-      </Field>
-    </div>
-  ),
-};
-
 export const FormExample: Story = {
   render: () => (
     <form style={{ maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -337,10 +283,8 @@ export const FormExample: Story = {
       >
         <Textarea placeholder="Enter your message..." rows={4} />
       </Field>
-      <Field 
-        label="Age" 
-        validateStatus="success"
-        hasFeedback
+      <Field
+        label="Age"
       >
         <InputNumber min={0} max={120} placeholder="Enter age" />
       </Field>
@@ -364,46 +308,46 @@ export const ComplexExample: Story = {
           label="Email"
           required
           error={emailError}
-          validateStatus={emailError ? 'error' : email ? 'success' : undefined}
+          validateStatus={emailError ? 'error' : undefined}
           hasFeedback
           tooltip="Enter a valid email address"
         >
-          <Input 
-            type="email" 
+          <Input
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="john@example.com" 
+            placeholder="john@example.com"
           />
         </Field>
-        
+
         <Field
           label="Password"
           required
           error={passwordError}
-          validateStatus={passwordError ? 'error' : password && password.length >= 8 ? 'success' : undefined}
+          validateStatus={passwordError ? 'error' : undefined}
           hasFeedback
           helperText="Must be at least 8 characters"
         >
-          <Input 
-            type="password" 
+          <Input
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password" 
+            placeholder="Enter password"
           />
         </Field>
-        
+
         <Field
           label="Confirm Password"
           required
           error={confirmError}
-          validateStatus={confirmError ? 'error' : confirmPassword && password === confirmPassword ? 'success' : undefined}
+          validateStatus={confirmError ? 'error' : undefined}
           hasFeedback
         >
-          <Input 
-            type="password" 
+          <Input
+            type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Confirm password" 
+            placeholder="Confirm password"
           />
         </Field>
       </form>

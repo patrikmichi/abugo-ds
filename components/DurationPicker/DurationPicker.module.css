@@ -1,187 +1,137 @@
 /* DurationPicker component styles using design tokens */
-/* Unified structure for all field controls */
 
 .durationPickerWrapper {
   position: relative;
   width: 100%;
-  height: var(--token-component-height-field-md);
 }
 
-.durationPickerWrapper.sm {
-  height: var(--token-component-height-field-sm);
-}
-
-.durationPickerWrapper.lg {
-  height: var(--token-component-height-field-lg);
-}
-
-.durationPicker {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  background-color: var(--token-component-field-control-background-default);
-  padding-inline-start: var(--token-component-padding-x-field-md);
-  padding-inline-end: var(--token-component-padding-x-field-md);
-  /* Equal padding for vertical centering */
-  padding-top: var(--token-component-padding-y-field-md);
-  padding-bottom: var(--token-component-padding-y-field-md);
-  transition: 
-    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
-    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-  gap: var(--token-component-gap-field-picker);
-  box-sizing: border-box;
-}
-
-/* Inputs container */
-.inputs {
-  display: flex;
-  align-items: center;
-  gap: var(--token-component-gap-field-picker-input);
-  flex: 1;
-}
-
-/* Hours and minutes inputs */
-.hoursInput,
-.minutesInput {
-  border: none;
-  background: transparent;
-  padding: 0;
-  width: var(--token-component-field-picker-input-width);
-  text-align: center;
+/* Panel - Dropdown */
+.panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: var(--token-component-timepicker-panel-z-index, 1000);
+  width: 320px;
+  background-color: var(--token-primitive-color-white, #ffffff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-timepicker-panel-border);
+  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-md);
-  font-weight: var(--token-primitive-typography-font-weight-regular);
-  color: var(--token-component-field-content-value);
-  outline: none;
+  overflow: clip;
 }
 
-.hoursInput:focus,
-.minutesInput:focus {
-  outline: none;
+.panel.positioned {
+  position: fixed;
+  margin-top: 0;
 }
 
-/* Focused segment highlight */
-.focusedSegment {
-  background-color: var(--token-component-field-picker-segment-background-focus);
-  border-radius: calc(var(--token-component-field-picker-segment-radius) * 1px);
+/* Content area inside panel */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
 }
 
-/* Labels (h, min) */
-.label {
-  font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-md);
-  font-weight: var(--token-primitive-typography-font-weight-medium);
-  color: var(--token-component-field-content-value);
-  margin: 0 var(--token-component-field-picker-label-margin);
+/* Row - cells across columns */
+.row {
+  display: flex;
+  gap: 16px;
 }
 
-/* Expand button */
-.expandButton {
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
+/* Arrow row */
+.arrowRow {
+  display: flex;
+  gap: 16px;
+}
+
+/* Individual cell */
+.cell {
+  flex: 1 0 0;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--token-component-field-content-value);
-  flex-shrink: 0;
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  color: var(--token-component-timepicker-cell-content-default, #464646);
+  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.expandButton:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
+.cell:hover:not(.cellSelected) {
+  background-color: var(--token-component-timepicker-cell-background-hover, rgba(70, 70, 70, 0.05));
 }
 
-.expandButton:focus-visible {
-  /* Show soft glowing focus ring on focus */
-  outline: none;
-  box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
-  border-radius: 2px;
+/* Selected cell */
+.cellSelected {
+  background-color: var(--token-component-timepicker-cell-background-selected, #e4edfd);
+  color: var(--token-component-timepicker-cell-content-selected, #5690f5);
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
 }
 
-/* Chevron icon */
-.chevron {
-  display: inline-flex;
+/* Subtle cell (±2 positions from selected) */
+.cellSubtle {
+  color: var(--token-component-timepicker-column-label-color, #737373);
+}
+
+/* Arrow cell (button) */
+.arrowCell {
+  flex: 1 0 0;
+  height: 40px;
+  display: flex;
   align-items: center;
-  transition: transform var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  justify-content: center;
+  cursor: pointer;
+  color: var(--token-component-timepicker-cell-content-default, #464646);
+  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.chevron .material-symbols-outlined {
-  font-size: var(--token-component-field-picker-chevron-size);
+.arrowCell:hover {
+  background-color: var(--token-component-timepicker-cell-background-hover, rgba(70, 70, 70, 0.05));
 }
 
-.chevronExpanded {
-  transform: rotate(180deg);
+.arrowCell .material-symbols-outlined {
+  font-size: 24px;
 }
 
-/* Size variants */
-.sm {
-  padding-inline-start: var(--token-component-padding-x-field-picker-sm);
-  padding-inline-end: var(--token-component-padding-x-field-picker-sm);
-  /* Adjust padding for optical alignment (works with or without text-box-trim) */
-  padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
-  padding-bottom: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm));
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+/* Icon styles */
+.clearIcon,
+.suffixIcon {
+  font-size: var(--token-component-icon-field-sm);
+  width: 1em;
+  height: 1em;
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-.lg {
-  padding-inline-start: var(--token-component-padding-x-field-lg);
-  padding-inline-end: var(--token-component-padding-x-field-lg);
-  /* Equal padding for vertical centering */
-  padding-top: var(--token-component-padding-y-field-lg);
-  padding-bottom: var(--token-component-padding-y-field-lg);
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+.clearIcon {
+  cursor: pointer;
+  color: var(--token-component-timepicker-icon-default);
+  transition: color 0.2s ease;
 }
 
-/* Enabled state (default) - hover and focus */
-.durationPicker:not(.error):not(.disabled):hover {
-  border-color: var(--token-component-field-control-border-hover);
-  background-color: var(--token-component-field-control-background-hover);
+.clearIcon:hover {
+  color: var(--token-component-timepicker-icon-hover);
 }
 
-.durationPicker:not(.error):not(.disabled).focused {
-  border-color: var(--token-component-field-control-border-focused);
-  background-color: var(--token-component-field-control-background-focused);
-  /* Show focus ring on focus */
-  /* Show soft glowing focus ring on focus */
-  outline: none;
-  box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
-}
-
-.durationPicker:not(.error):not(.disabled):active {
-  border-color: var(--token-component-field-control-border-active);
-}
-
-/* Error state - use status.error tokens */
-.durationPicker.error {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-}
-
-.durationPicker.error:hover:not(.disabled) {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-}
-
-.durationPicker.error.focused:not(.disabled) {
-  border-color: var(--token-component-field-status-error-border);
-  background-color: var(--token-component-field-status-error-background);
-}
-
-/* Disabled state - use status.disabled tokens */
-.durationPicker.disabled {
-  border-color: var(--token-component-field-status-disabled-border);
-  background-color: var(--token-component-field-status-disabled-background);
-  cursor: not-allowed;
+.suffixIcon {
+  color: var(--token-component-timepicker-icon-default);
   pointer-events: none;
-  opacity: 1; /* Don't use opacity, use actual disabled colors */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .panel {
+    width: calc(100vw - 32px);
+    max-width: 320px;
+  }
 }

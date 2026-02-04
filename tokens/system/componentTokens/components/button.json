@@ -128,35 +128,6 @@
           "$collectionName": "semanticTokens",
           "$value": "{content.active.accent.disabled}"
         }
-      },
-      "height": {
-        "sm": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "sizing",
-          "$libraryName": "",
-          "$collectionName": "componentTokens",
-          "$value": "{height.button.plain.sm}"
-        },
-        "md": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "sizing",
-          "$libraryName": "",
-          "$collectionName": "componentTokens",
-          "$value": "{height.button.plain.md}"
-        },
-        "lg": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "sizing",
-          "$libraryName": "",
-          "$collectionName": "componentTokens",
-          "$value": "{height.button.plain.lg}"
-        }
       }
     },
     "background": {
@@ -754,37 +725,6 @@
       }
     }
   },
-  "iconOnly": {
-    "width": {
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "sizing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{control.height.sm}"
-      },
-      "md": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "sizing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{control.height.md}"
-      },
-      "lg": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "sizing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{control.height.lg}"
-      }
-    }
-  },
   "focus": {
     "outline": {
       "color": {
@@ -806,17 +746,84 @@
         "$collectionName": "primitives",
         "$value": "{border-width-2}",
         "$description": "Focus ring width for buttons (2px)."
-      },
-      "offset": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$libraryName": "",
-        "$collectionName": "primitives",
-        "$value": "{spacing-1}",
-        "$description": "Focus ring offset from button edge (4px)."
       }
+    }
+  },
+  "visual-compensation-offset": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": 1
+  },
+  "opacity": {
+    "disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 0.6
+    }
+  },
+  "plain": {
+    "accent": {
+      "background": {
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.accent.subtle.hover}"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.accent.subtle.pressed}"
+        }
+      }
+    },
+    "neutral": {
+      "background": {
+        "hover": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.hover}"
+        },
+        "pressed": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.pressed}"
+        }
+      }
+    }
+  },
+  "outlined": {
+    "border-width": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.width.thin}"
     }
   }
 }

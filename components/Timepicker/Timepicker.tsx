@@ -9,20 +9,20 @@ export type TimePickerValue = Date | null;
 // Time utility functions
 const formatTime = (date: Date | null, format: string, use12Hours: boolean): string => {
   if (!date) return '';
-  
+
   let hours = date.getHours();
   const minutes = date.getMinutes();
   let ampm = '';
-  
+
   if (use12Hours) {
     ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12 || 12;
   }
-  
+
   const hh = String(hours).padStart(2, '0');
   const mm = String(minutes).padStart(2, '0');
   const h = String(hours);
-  
+
   return format
     .replace('HH', hh)
     .replace('H', h)
@@ -34,33 +34,22 @@ const formatTime = (date: Date | null, format: string, use12Hours: boolean): str
     .replace('a', ampm.toLowerCase());
 };
 
-const parseTime = (timeString: string, format: string, use12Hours: boolean): Date | null => {
-  if (!timeString) return null;
-  
-  const now = new Date();
-  let hours = 0;
-  let minutes = 0;
-  
-  // Simple parser - can be enhanced
-  const parts = timeString.split(/[: ]/);
-  if (parts.length >= 2) {
-    hours = parseInt(parts[0], 10);
-    minutes = parseInt(parts[1], 10);
-    
-    // Handle 12-hour format
-    if (use12Hours && parts.length > 2) {
-      const ampm = parts[parts.length - 1].toUpperCase();
-      if (ampm === 'PM' && hours !== 12) {
-        hours += 12;
-      } else if (ampm === 'AM' && hours === 12) {
-        hours = 0;
-      }
-    }
-  }
-  
-  const date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, minutes, 0);
-  return date;
-};
+/** Get 5 visible items centered on selectedIdx with circular wrapping */
+function getVisibleItems<T>(options: T[], selectedIdx: number): (T | null)[] {
+  const len = options.length;
+  if (len === 0) return [null, null, null, null, null];
+  const safeIdx = ((selectedIdx % len) + len) % len;
+  return [-2, -1, 0, 1, 2].map(offset => {
+    const idx = ((safeIdx + offset) % len + len) % len;
+    return options[idx];
+  });
+}
+
+/** Get AM/PM visible items (only 2 values, centered without circular wrapping) */
+function getAmPmVisibleItems(selected: 'AM' | 'PM'): (string | null)[] {
+  if (selected === 'AM') return [null, null, 'AM', 'PM', null];
+  return [null, 'AM', 'PM', null, null];
+}
 
 export interface TimePickerProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value' | 'defaultValue' | 'size'> {
   /** Current value (controlled) */
@@ -113,9 +102,9 @@ export interface TimePickerProps extends Omit<React.InputHTMLAttributes<HTMLInpu
 
 /**
  * TimePicker Component
- * 
- * Time picker component. 
- * 
+ *
+ * Drum-roller style time picker with 5 visible rows and arrow navigation.
+ *
  * @example
  * ```tsx
  * <TimePicker
@@ -153,21 +142,9 @@ export function TimePicker({
 }: TimePickerProps) {
   const [internalValue, setInternalValue] = useState<TimePickerValue>(defaultValue || null);
   const [internalOpen, setInternalOpen] = useState(defaultOpen);
-  const [position, setPosition] = useState<{ top: number; left: number; width: number } | null>(null);
-  const [canScrollUp, setCanScrollUp] = useState<{ hour: boolean; minute: boolean }>({
-    hour: false,
-    minute: false,
-  });
-  const [canScrollDown, setCanScrollDown] = useState<{ hour: boolean; minute: boolean }>({
-    hour: false,
-    minute: false,
-  });
+  const [position, setPosition] = useState<{ top: number; left: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
-  const hourColumnRef = useRef<HTMLDivElement>(null);
-  const minuteColumnRef = useRef<HTMLDivElement>(null);
-  const hourOptionsRef = useRef<HTMLDivElement>(null);
-  const minuteOptionsRef = useRef<HTMLDivElement>(null);
 
   const isControlled = controlledValue !== undefined;
   const value = isControlled ? controlledValue : internalValue;
@@ -216,7 +193,7 @@ export function TimePicker({
 
   // Generate time options with disabled filtering
   const hourOptions = useMemo(() => {
-    const maxHour = use12Hours ? 12 : 24;
+    const maxHour = use12Hours ? 13 : 24;
     const hours: number[] = [];
     for (let i = use12Hours ? 1 : 0; i < maxHour; i += hourStep) {
       hours.push(i);
@@ -231,22 +208,22 @@ export function TimePicker({
       minutes.push(i);
     }
     const currentHour = value?.getHours() || 0;
-    const displayHour = use12Hours
-      ? currentHour === 0
-        ? 12
-        : currentHour > 12
-        ? currentHour - 12
-        : currentHour
-      : currentHour;
     const disabled = disabledMinutes?.(currentHour) || [];
     return minutes.filter((m) => !disabled.includes(m));
-  }, [minuteStep, disabledMinutes, value, use12Hours]);
+  }, [minuteStep, disabledMinutes, value]);
 
   const handleHourSelect = useCallback(
     (hour: number) => {
       const now = value || new Date();
       const newDate = new Date(now);
-      newDate.setHours(use12Hours ? (hour === 12 ? 12 : hour % 12) : hour);
+      if (use12Hours) {
+        const isPM = now.getHours() >= 12;
+        let h24 = hour % 12;
+        if (isPM) h24 += 12;
+        newDate.setHours(h24);
+      } else {
+        newDate.setHours(hour);
+      }
       handleChange(newDate);
     },
     [value, use12Hours, handleChange]
@@ -274,11 +251,10 @@ export function TimePicker({
       const container = getPopupContainer ? getPopupContainer(trigger) : document.body;
       const containerRect = container.getBoundingClientRect();
 
-      const width = 280; // Fixed width from tokens
       const top = rect.bottom - containerRect.top + 4;
       const left = rect.left - containerRect.left;
 
-      setPosition({ top, left, width });
+      setPosition({ top, left });
     };
 
     updatePosition();
@@ -290,25 +266,6 @@ export function TimePicker({
       window.removeEventListener('scroll', updatePosition, true);
     };
   }, [open, getPopupContainer]);
-
-  // Scroll to selected values
-  useEffect(() => {
-    if (!open || !value) return;
-
-    const scrollToValue = (optionsRef: React.RefObject<HTMLDivElement>, value: number) => {
-      if (!optionsRef.current) return;
-      const option = optionsRef.current.querySelector(`[data-value="${value}"]`) as HTMLElement;
-      if (option) {
-        option.scrollIntoView({ block: 'center', behavior: 'smooth' });
-      }
-    };
-
-    const hour = value.getHours();
-    const displayHour = use12Hours ? (hour === 0 ? 12 : hour > 12 ? hour - 12 : hour) : hour;
-    scrollToValue(hourOptionsRef, displayHour);
-    
-    scrollToValue(minuteOptionsRef, value.getMinutes());
-  }, [open, value, use12Hours]);
 
   // Click outside to close
   useEffect(() => {
@@ -336,96 +293,59 @@ export function TimePicker({
     return document.body;
   };
 
-  const checkScrollability = useCallback((ref: React.RefObject<HTMLDivElement>, key: 'hour' | 'minute') => {
-    if (!ref.current) return;
-    const { scrollTop, scrollHeight, clientHeight } = ref.current;
-    setCanScrollUp((prev) => ({ ...prev, [key]: scrollTop > 0 }));
-    setCanScrollDown((prev) => ({ ...prev, [key]: scrollTop < scrollHeight - clientHeight - 1 }));
-  }, []);
-
-  useEffect(() => {
-    if (!open) return;
-    const checkAll = () => {
-      checkScrollability(hourOptionsRef, 'hour');
-      checkScrollability(minuteOptionsRef, 'minute');
-    };
-    checkAll();
-    const interval = setInterval(checkAll, 100);
-    return () => clearInterval(interval);
-  }, [open, checkScrollability]);
-
   const renderPanel = () => {
     if (!open || !containerRef.current) return null;
 
     const currentHour = value?.getHours() || 0;
     const currentMinute = value?.getMinutes() || 0;
-    
+
     const displayHour = use12Hours
-      ? currentHour === 0
-        ? 12
-        : currentHour > 12
-        ? currentHour - 12
-        : currentHour
+      ? currentHour === 0 ? 12 : currentHour > 12 ? currentHour - 12 : currentHour
       : currentHour;
 
-    const isDisabled = (option: number, disabledList: number[]) => disabledList.includes(option);
+    const selectedHourIdx = hourOptions.indexOf(displayHour);
+    const selectedMinuteIdx = minuteOptions.indexOf(currentMinute);
 
-    const renderColumn = (
-      options: number[],
-      selected: number,
-      onSelect: (value: number) => void,
-      label: string,
-      columnRef: React.RefObject<HTMLDivElement>,
-      optionsRef: React.RefObject<HTMLDivElement>,
-      scrollKey: 'hour' | 'minute',
-      disabledList: number[] = []
-    ) => {
-      const handleScroll = () => {
-        checkScrollability(optionsRef, scrollKey);
-      };
+    const hourVisible = getVisibleItems(hourOptions, selectedHourIdx >= 0 ? selectedHourIdx : 0);
+    const minuteVisible = getVisibleItems(minuteOptions, selectedMinuteIdx >= 0 ? selectedMinuteIdx : 0);
 
-      return (
-        <div className={styles.column} ref={columnRef}>
-          <div className={styles.columnLabel}>{label}</div>
-          {canScrollUp[scrollKey] && (
-            <div className={styles.scrollIndicatorTop}>
-              <span className="material-symbols-outlined">expand_less</span>
-            </div>
-          )}
-          <div 
-            className={styles.options} 
-            ref={optionsRef}
-            onScroll={handleScroll}
-          >
-            {options.map((option) => {
-              const disabled = isDisabled(option, disabledList);
-              return (
-                <div
-                  key={option}
-                  data-value={option}
-                  className={cn(
-                    styles.option,
-                    selected === option && styles.selected,
-                    disabled && styles.disabled
-                  )}
-                  onClick={() => !disabled && onSelect(option)}
-                >
-                  {String(option).padStart(2, '0')}
-                </div>
-              );
-            })}
-          </div>
-          {canScrollDown[scrollKey] && (
-            <div className={styles.scrollIndicatorBottom}>
-              <span className="material-symbols-outlined">expand_more</span>
-            </div>
-          )}
-        </div>
-      );
+    const amPmSelected: 'AM' | 'PM' = currentHour >= 12 ? 'PM' : 'AM';
+    const amPmVisible = use12Hours ? getAmPmVisibleItems(amPmSelected) : null;
+
+    const stepHour = (direction: 1 | -1) => {
+      const idx = selectedHourIdx >= 0 ? selectedHourIdx : 0;
+      const newIdx = ((idx + direction) % hourOptions.length + hourOptions.length) % hourOptions.length;
+      handleHourSelect(hourOptions[newIdx]);
     };
 
-    const disabledHoursList = disabledHours?.() || [];
-    const disabledMinutesList = disabledMinutes?.(currentHour) || [];
+    const stepMinute = (direction: 1 | -1) => {
+      const idx = selectedMinuteIdx >= 0 ? selectedMinuteIdx : 0;
+      const newIdx = ((idx + direction) % minuteOptions.length + minuteOptions.length) % minuteOptions.length;
+      handleMinuteSelect(minuteOptions[newIdx]);
+    };
+
+    const toggleAmPm = () => {
+      const now = value || new Date();
+      const newDate = new Date(now);
+      if (currentHour >= 12) {
+        newDate.setHours(newDate.getHours() - 12);
+      } else {
+        newDate.setHours(newDate.getHours() + 12);
+      }
+      handleChange(newDate);
+    };
+
+    const handleAmPmClick = (clicked: string) => {
+      if (clicked === 'AM' && currentHour >= 12) {
+        const newDate = new Date(value || new Date());
+        newDate.setHours(newDate.getHours() - 12);
+        handleChange(newDate);
+      } else if (clicked === 'PM' && currentHour < 12) {
+        const newDate = new Date(value || new Date());
+        newDate.setHours(newDate.getHours() + 12);
+        handleChange(newDate);
+      }
+    };
 
     const isPositioned = position !== null;
 
@@ -437,75 +357,104 @@ export function TimePicker({
           ...popupStyle,
           ...(isPositioned
             ? {
-                position: 'fixed',
+                position: 'fixed' as const,
                 top: `${position.top}px`,
                 left: `${position.left}px`,
-                width: `${position.width}px`,
               }
             : {}),
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className={styles.columns}>
-          {renderColumn(
-            hourOptions,
-            displayHour,
-            handleHourSelect,
-            'Hour',
-            hourColumnRef,
-            hourOptionsRef,
-            'hour',
-            disabledHoursList
-          )}
-          {renderColumn(
-            minuteOptions,
-            currentMinute,
-            handleMinuteSelect,
-            'Min',
-            minuteColumnRef,
-            minuteOptionsRef,
-            'minute',
-            disabledMinutesList
-          )}
-          {use12Hours && (
-            <div className={styles.column}>
-              <div className={styles.columnLabel}>AM/PM</div>
-              <div className={styles.options}>
-                <div
-                  className={cn(
-                    styles.option,
-                    currentHour < 12 && styles.selected
-                  )}
-                  onClick={() => {
-                    const now = value || new Date();
-                    const newDate = new Date(now);
-                    if (currentHour >= 12) {
-                      newDate.setHours(newDate.getHours() - 12);
-                    }
-                    handleChange(newDate);
-                  }}
-                >
-                  AM
-                </div>
-                <div
-                  className={cn(
-                    styles.option,
-                    currentHour >= 12 && styles.selected
-                  )}
-                  onClick={() => {
-                    const now = value || new Date();
-                    const newDate = new Date(now);
-                    if (currentHour < 12) {
-                      newDate.setHours(newDate.getHours() + 12);
-                    }
-                    handleChange(newDate);
-                  }}
-                >
-                  PM
-                </div>
+        <div className={styles.content}>
+          {/* Up arrows */}
+          <div className={styles.arrowRow}>
+            <button type="button" className={styles.arrowCell} onClick={() => stepHour(-1)} aria-label="Previous hour">
+              <span className="material-symbols-outlined">keyboard_arrow_up</span>
+            </button>
+            <button type="button" className={styles.arrowCell} onClick={() => stepMinute(-1)} aria-label="Previous minute">
+              <span className="material-symbols-outlined">keyboard_arrow_up</span>
+            </button>
+            {use12Hours && (
+              <button type="button" className={styles.arrowCell} onClick={toggleAmPm} aria-label="Toggle AM/PM">
+                <span className="material-symbols-outlined">keyboard_arrow_up</span>
+              </button>
+            )}
+          </div>
+
+          {/* 5 value rows */}
+          {[0, 1, 2, 3, 4].map((rowIdx) => {
+            const isCenter = rowIdx === 2;
+            const isSubtle = rowIdx === 0 || rowIdx === 4;
+
+            return (
+              <div key={rowIdx} className={styles.row}>
+                {/* Hour cell */}
+                {hourVisible[rowIdx] != null ? (
+                  <div
+                    className={cn(
+                      styles.cell,
+                      isCenter && styles.cellSelected,
+                      isSubtle && !isCenter && styles.cellSubtle,
+                    )}
+                    onClick={() => handleHourSelect(hourVisible[rowIdx] as number)}
+                  >
+                    {String(hourVisible[rowIdx]).padStart(2, '0')}
+                  </div>
+                ) : (
+                  <div className={styles.cell} style={{ visibility: 'hidden' }} />
+                )}
+
+                {/* Minute cell */}
+                {minuteVisible[rowIdx] != null ? (
+                  <div
+                    className={cn(
+                      styles.cell,
+                      isCenter && styles.cellSelected,
+                      isSubtle && !isCenter && styles.cellSubtle,
+                    )}
+                    onClick={() => handleMinuteSelect(minuteVisible[rowIdx] as number)}
+                  >
+                    {String(minuteVisible[rowIdx]).padStart(2, '0')}
+                  </div>
+                ) : (
+                  <div className={styles.cell} style={{ visibility: 'hidden' }} />
+                )}
+
+                {/* AM/PM cell */}
+                {use12Hours && (
+                  amPmVisible![rowIdx] != null ? (
+                    <div
+                      className={cn(
+                        styles.cell,
+                        amPmVisible![rowIdx] === amPmSelected && isCenter && styles.cellSelected,
+                        isSubtle && styles.cellSubtle,
+                      )}
+                      onClick={() => handleAmPmClick(amPmVisible![rowIdx]!)}
+                    >
+                      {amPmVisible![rowIdx]}
+                    </div>
+                  ) : (
+                    <div className={styles.cell} style={{ visibility: 'hidden' }} />
+                  )
+                )}
               </div>
-            </div>
-          )}
+            );
+          })}
+
+          {/* Down arrows */}
+          <div className={styles.arrowRow}>
+            <button type="button" className={styles.arrowCell} onClick={() => stepHour(1)} aria-label="Next hour">
+              <span className="material-symbols-outlined">keyboard_arrow_down</span>
+            </button>
+            <button type="button" className={styles.arrowCell} onClick={() => stepMinute(1)} aria-label="Next minute">
+              <span className="material-symbols-outlined">keyboard_arrow_down</span>
+            </button>
+            {use12Hours && (
+              <button type="button" className={styles.arrowCell} onClick={toggleAmPm} aria-label="Toggle AM/PM">
+                <span className="material-symbols-outlined">keyboard_arrow_down</span>
+              </button>
+            )}
+          </div>
         </div>
       </div>,
       getContainerElement()
@@ -524,12 +473,12 @@ export function TimePicker({
         onClick={handleOpen}
         suffix={
           <>
-            {allowClear && value && (
+            {allowClear && value && !disabled && (
               <span
                 className={cn('material-symbols-outlined', styles.clearIcon)}
                 onClick={handleClear}
               >
-                close
+                cancel
               </span>
             )}
             {suffixIcon || (

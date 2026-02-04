@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import styles from './Alert.module.css';
 import { cn } from '@/lib/utils';
-import { Button, type ButtonProps } from '@/components/Button';
+import { Button } from '@/components/Button';
 
 export type AlertType = 'success' | 'info' | 'warning' | 'error';
 export type AlertSize = 'small' | 'large';
+
+export interface AlertAction {
+  /** Button label */
+  label: React.ReactNode;
+  /** Click handler */
+  onClick?: () => void;
+  /** Button variant (default: secondary) */
+  variant?: 'primary' | 'secondary' | 'danger' | 'tertiary' | 'upgrade';
+  /** Button appearance (default: filled) */
+  appearance?: 'filled' | 'plain' | 'outline';
+}
 
 export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   /** Type of alert */
@@ -17,10 +28,6 @@ export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, '
   description?: React.ReactNode;
   /** Whether to show close button */
   closable?: boolean;
-  /** Button variant for close button */
-  closeButtonVariant?: ButtonProps['variant'];
-  /** Button appearance for close button */
-  closeButtonAppearance?: ButtonProps['appearance'];
   /** Callback when alert is closed */
   onClose?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   /** Callback after close animation finishes */
@@ -29,47 +36,26 @@ export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, '
   showIcon?: boolean;
   /** Custom icon */
   icon?: React.ReactNode;
-  /** Custom action button */
+  /** Action buttons — rendered as Button size="sm" */
+  actions?: AlertAction | AlertAction[];
+  /** @deprecated Use actions instead */
   action?: React.ReactNode;
-  /** Button variant for action button */
-  actionButtonVariant?: ButtonProps['variant'];
-  /** Button appearance for action button */
-  actionButtonAppearance?: ButtonProps['appearance'];
-  /** Action button label */
-  actionLabel?: string;
-  /** Action button onClick handler */
-  onAction?: () => void;
   /** Children - alternative to message/description */
   children?: React.ReactNode;
 }
 
 /**
- * Alert component - Display important messages or notifications
- * 
- * Alert component with support for:
- * - Multiple types (success, info, warning, error)
- * - Two sizes (small: 48px, large: 64px min-height)
- * - Message with optional description
- * - Closable alerts with Button component
- * - Action buttons with configurable variant
- * - Material Symbols icons (show/hide with showIcon prop)
- * 
- * @example
- * ```tsx
- * // Basic alert
- * <Alert message="Success message" type="success" />
- * 
- * // With description and action
- * <Alert
- *   message="Alert title"
- *   description
- *   type="warning"
- *   size="large"
- *   actionLabel="Action"
- *   onAction={() => console.log('Action clicked')}
- *   closable
- * />
- * ```
+ * Alert component — display important messages or notifications
+ *
+ * Layout matches Notification pattern:
+ * - Header row: icon + message text
+ * - Description below, indented to align with text
+ * - Close button absolutely positioned
+ *
+ * Without description: message uses regular weight, close is vertically centered
+ * With description: message becomes bold headline, close is top-aligned
+ *
+ * Size only affects padding (small: 12px, large: 20px)
  */
 export function Alert({
   type = 'info',
@@ -77,17 +63,12 @@ export function Alert({
   message,
   description,
   closable = false,
-  closeButtonVariant = 'secondary',
-  closeButtonAppearance = 'plain',
   onClose,
   afterClose,
   showIcon = true,
   icon,
+  actions,
   action,
-  actionButtonVariant = 'secondary',
-  actionButtonAppearance = 'plain',
-  actionLabel,
-  onAction,
   className,
   children,
   ...props
@@ -95,15 +76,16 @@ export function Alert({
   const [closed, setClosed] = useState(false);
   const [closing, setClosing] = useState(false);
 
-  // Get default icon based on type
+  const hasDescription = !!(description && typeof description !== 'boolean');
+
   const getDefaultIcon = () => {
     if (icon) return icon;
 
     const iconName =
       type === 'success' ? 'check_circle' :
-        type === 'error' ? 'error' :
-          type === 'warning' ? 'warning' :
-            'info';
+      type === 'error' ? 'error' :
+      type === 'warning' ? 'warning' :
+      'info';
 
     return (
       <span className="material-symbols-outlined">
@@ -112,21 +94,22 @@ export function Alert({
     );
   };
 
-  const handleClose = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+  const handleClose = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setClosing(true);
-    onClose?.(e as React.MouseEvent<HTMLButtonElement>);
+    onClose?.(e);
 
-    // Trigger afterClose after animation
     setTimeout(() => {
       setClosed(true);
       afterClose?.();
     }, 300);
   };
 
-  // Early return check must come AFTER all hooks
-  if (closed) {
-    return null;
-  }
+  if (closed) return null;
+
+  const actionList = actions
+    ? Array.isArray(actions) ? actions : [actions]
+    : null;
 
   return (
     <div
@@ -135,58 +118,56 @@ export function Alert({
         styles[type],
         styles[size],
         closing && styles.closing,
-        !!(description && typeof description !== 'boolean') && styles.hasDescription,
+        hasDescription && styles.hasDescription,
+        closable && styles.closable,
+        !showIcon && styles.noIcon,
         className
       )}
       role="alert"
       {...props}
     >
-      <div className={styles.iconAndContent}>
-        {showIcon && (
-          <span className={styles.icon}>
-            {getDefaultIcon()}
-          </span>
+      <div className={styles.wrapper}>
+        <div className={styles.header}>
+          {showIcon && (
+            <span className={styles.icon}>
+              {getDefaultIcon()}
+            </span>
+          )}
+          <div className={styles.message}>{message}</div>
+        </div>
+        {hasDescription && (
+          <div className={styles.description}>{description}</div>
         )}
-
-        <div className={styles.content}>
-          <div className={styles.message}>
-            {message}
+        {actionList && (
+          <div className={styles.actions}>
+            {actionList.map((a, i) => (
+              <Button
+                key={i}
+                size="sm"
+                variant={a.variant ?? 'secondary'}
+                appearance={a.appearance}
+                onClick={a.onClick}
+              >
+                {a.label}
+              </Button>
+            ))}
           </div>
-          {description && typeof description !== 'boolean' && (
-            <div className={styles.description}>
-              {description}
-            </div>
-          )}
-        </div>
+        )}
+        {!actionList && action && (
+          <div className={styles.actions}>{action}</div>
+        )}
       </div>
-
-      {(action || (actionLabel && onAction)) && (
-        <div className={styles.action}>
-          {action || (
-            <Button
-              variant={actionButtonVariant}
-              appearance={actionButtonAppearance}
-              size={size === 'large' ? 'md' : 'sm'}
-              onClick={onAction}
-            >
-              {actionLabel}
-            </Button>
-          )}
-        </div>
-      )}
-
       {closable && (
-        <Button
-          variant={closeButtonVariant}
-          appearance={closeButtonAppearance}
-          size={size === 'large' ? 'lg' : 'sm'}
+        <button
+          type="button"
+          className={styles.close}
           onClick={handleClose}
           aria-label="Close"
-          iconOnly
-          className={styles.close}
         >
-          <span className="material-symbols-outlined">close</span>
-        </Button>
+          <span className="material-symbols-outlined">
+            close
+          </span>
+        </button>
       )}
     </div>
   );

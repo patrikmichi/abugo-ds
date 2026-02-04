@@ -117,7 +117,25 @@
     "$type": "fontSizes",
     "$libraryName": "",
     "$collectionName": "semanticTokens",
-    "$value": "{typography.body-size.md}"
+    "$value": "{typography.body-size.md}",
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    }
   },
   "chip": {
     "sm": {
@@ -163,11 +181,28 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "fontSizes",
       "$libraryName": "",
-      "$collectionName": "primitives",
-      "$value": "{typography.fontSize.2}",
-      "$description": "Alert description font size (14px)"
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
     }
   },
   "toast": {
@@ -210,6 +245,329 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{typography.fontSize.sm}"
+    }
+  },
+  "accordion": {
+    "default": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body.size.sm}",
+      "$description": "Accordion default (middle) font size (14px)."
+    },
+    "lg": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body.size.md}",
+      "$description": "Accordion content font size large (16px)."
+    },
+    "sm": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body.size.xs}",
+      "$description": "Accordion content font size small (12px)."
+    }
+  },
+  "avatar": {
+    "fontSize": {
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.body-size.xs}"
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.body-size.sm}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.body-size.md}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.body-size.lg}"
+      },
+      "xl": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.body-size.lg}"
+      }
+    }
+  },
+  "card": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "fontSizes",
+    "$value": "{typography.fontSize.3}",
+    "$collectionName": "primitives",
+    "head": {
+      "extra": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      },
+      "small": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    }
+  },
+  "colorpicker": {
+    "preset": {
+      "label": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    }
+  },
+  "divider": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "fontSizes",
+    "$value": "{typography.fontSize.3}",
+    "$collectionName": "primitives",
+    "plain": {
+      "text": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    },
+    "text": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    }
+  },
+  "drawer": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "fontSizes",
+    "$value": "{typography.fontSize.3}",
+    "$collectionName": "primitives"
+  },
+  "modal": {
+    "body": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    }
+  },
+  "notification": {
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    }
+  },
+  "rating": {
+    "mobile": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "text": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    }
+  },
+  "slider": {
+    "mark": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    }
+  },
+  "stepper": {
+    "fontSize": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-size.sm}"
+    },
+    "icon": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    },
+    "description": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "title": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    }
+  },
+  "tabs": {
+    "icon": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontSizes",
+      "$value": "{typography.fontSize.3}",
+      "$collectionName": "primitives"
+    },
+    "tab": {
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
+    }
+  },
+  "upload": {
+    "file": {
+      "item": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontSizes",
+        "$value": "{typography.fontSize.3}",
+        "$collectionName": "primitives"
+      }
     }
   }
 }

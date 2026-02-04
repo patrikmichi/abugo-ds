@@ -236,6 +236,64 @@ Animation tokens reference flattened primitives:
 
 **Note**: Easing tokens use empty `$collectionName` because they directly reference flattened primitive easing tokens.
 
+## CSS Output Hierarchy (`tokens.css`)
+
+The generated CSS output must maintain the same reference chain using `var()`:
+
+### Layer Rules
+
+| Layer | CSS Variable Prefix | Value Format |
+|-------|-------------------|--------------|
+| Primitive | `--token-primitive-*` | Hardcoded values (`1rem`, `#5690f5`, `24px`) |
+| Semantic | `--token-semantic-*` | `var(--token-primitive-*)` |
+| Component | `--token-component-*` | `var(--token-semantic-*)` |
+
+### Correct Examples
+
+```css
+/* Primitives: hardcoded values */
+--token-primitive-typography-font-size-3: 1rem;
+--token-primitive-typography-line-height-3: 1.5rem;
+--token-primitive-color-blue-500: #5690f5;
+
+/* Semantics: reference primitives */
+--token-semantic-typography-body-size-md: var(--token-primitive-typography-font-size-3);
+--token-semantic-typography-body-line-md: var(--token-primitive-typography-line-height-3);
+--token-semantic-background-active-accent-default: var(--token-primitive-color-blue-500);
+
+/* Components: reference semantics */
+--token-component-font-size-radio: var(--token-semantic-typography-body-size-md);
+--token-component-line-height-radio: var(--token-semantic-typography-body-line-md);
+--token-component-radio-border-unselected-default: var(--token-semantic-background-active-accent-default);
+```
+
+### Incorrect Examples
+
+```css
+/* ❌ Component token with hardcoded value */
+--token-component-font-size-radio: 16px;
+--token-component-radio-border-unselected-default: #5690f5;
+
+/* ❌ Semantic token with hardcoded value */
+--token-semantic-typography-body-size-md: 1rem;
+
+/* ❌ Unresolved reference */
+--token-component-font-size-button-sm: {typography.fontSize.2};
+```
+
+### Component CSS Files (`.module.css`)
+
+Component styles reference component tokens with fallbacks:
+
+```css
+.radioWrapper {
+  font-size: var(--token-component-font-size-radio, 16px);
+  line-height: var(--token-component-line-height-radio, 24px);
+}
+```
+
+The fallback value should match the final resolved primitive value, ensuring the component still renders correctly if the token variable is missing.
+
 ## Common Reference Mistakes
 
 ### ❌ Wrong: Component token referencing primitive
@@ -328,3 +386,6 @@ When adding or modifying tokens:
 5. **Update all references** when renaming tokens
 6. **Test resolution** in Tokens Studio
 7. **Document complex references** in token descriptions
+8. **In CSS output**: component tokens use `var(--token-semantic-*)`, semantic tokens use `var(--token-primitive-*)`
+9. **In `.module.css` files**: always use `var(--token-component-*, <fallback>)` with the resolved primitive value as fallback
+10. **Never hardcode** hex colors, px values, or rem values in component or semantic token CSS variables

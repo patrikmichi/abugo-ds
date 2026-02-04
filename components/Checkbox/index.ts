@@ -5,5 +5,4 @@ export {
   type CheckboxGroupProps,
   type CheckboxChangeEvent,
   type CheckboxOption,
-  type CheckboxSize,
 } from './Checkbox';

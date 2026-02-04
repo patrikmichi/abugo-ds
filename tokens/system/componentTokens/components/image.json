@@ -1,14 +1,5 @@
 {
   "$name": "Component Tokens",
-  "radius": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "borderRadius",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{radius.sm}"
-  },
   "background": {
     "$scopes": [
       "ALL_SCOPES"
@@ -130,24 +121,6 @@
           "$collectionName": "semanticTokens",
           "$value": "{icon.md}"
         }
-      },
-      "gap": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{gap.md}"
-      },
-      "padding": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{padding.md}"
       }
     }
   }

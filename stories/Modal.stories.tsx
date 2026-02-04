@@ -4,32 +4,14 @@ import { Modal } from '@/components/Modal';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { Field } from '@/components/Field';
+import modalStyles from '@/components/Modal/Modal.module.css';
+import { cn } from '@/lib/utils';
 
 const meta: Meta<typeof Modal> = {
   title: 'Components/Modal',
   component: Modal,
   parameters: {
     layout: 'padded',
-  },
-  argTypes: {
-    open: {
-      control: 'boolean',
-    },
-    closable: {
-      control: 'boolean',
-    },
-    mask: {
-      control: 'boolean',
-    },
-    maskClosable: {
-      control: 'boolean',
-    },
-    keyboard: {
-      control: 'boolean',
-    },
-    centered: {
-      control: 'boolean',
-    },
   },
 };
 
@@ -45,72 +27,10 @@ export const Default: Story = {
         <Modal
           open={open}
           onCancel={() => setOpen(false)}
+          onOk={() => setOpen(false)}
           title="Modal Title"
         >
           <p>This is modal content. Click outside, close button, or press Esc to dismiss.</p>
-        </Modal>
-      </>
-    );
-  },
-};
-
-export const Controlled: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          onOk={() => {
-            alert('OK clicked');
-            setOpen(false);
-          }}
-          title="Controlled Modal"
-        >
-          <p>This modal is controlled by the open prop.</p>
-        </Modal>
-      </>
-    );
-  },
-};
-
-export const Uncontrolled: Story = {
-  render: () => {
-    return (
-      <>
-        <Modal
-          defaultOpen={false}
-          onCancel={() => console.log('Canceled')}
-          onOk={() => console.log('OK')}
-          title="Uncontrolled Modal"
-        >
-          <p>This modal uses defaultOpen for uncontrolled state.</p>
-        </Modal>
-      </>
-    );
-  },
-};
-
-export const WithFooter: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          onOk={() => {
-            alert('OK clicked');
-            setOpen(false);
-          }}
-          title="Modal with Footer"
-          okText="Confirm"
-          cancelText="Cancel"
-        >
-          <p>This modal has default footer with OK and Cancel buttons.</p>
         </Modal>
       </>
     );
@@ -129,10 +49,10 @@ export const CustomFooter: Story = {
           title="Custom Footer"
           footer={
             <>
-              <Button variant="text" onClick={() => setOpen(false)}>
+              <Button variant="tertiary" appearance="outline" onClick={() => setOpen(false)}>
                 Skip
               </Button>
-              <Button variant="primary" onClick={() => setOpen(false)}>
+              <Button variant="primary" appearance="filled" onClick={() => setOpen(false)}>
                 Save
               </Button>
             </>
@@ -164,87 +84,6 @@ export const NoFooter: Story = {
   },
 };
 
-export const NotClosable: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          title="Not Closable"
-          closable={false}
-          maskClosable={false}
-          keyboard={false}
-        >
-          <p>This modal cannot be closed by clicking the X, mask, or pressing Esc.</p>
-          <div style={{ marginTop: '1rem' }}>
-            <Button onClick={() => setOpen(false)}>Close via Button</Button>
-          </div>
-        </Modal>
-      </>
-    );
-  },
-};
-
-export const NoMask: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          title="No Mask"
-          mask={false}
-        >
-          <p>This modal has no mask/overlay.</p>
-        </Modal>
-      </>
-    );
-  },
-};
-
-export const Centered: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Centered Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          title="Centered Modal"
-          centered
-        >
-          <p>This modal is vertically centered.</p>
-        </Modal>
-      </>
-    );
-  },
-};
-
-export const CustomWidth: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Wide Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          title="Wide Modal"
-          width={800}
-        >
-          <p>This modal has a custom width of 800px.</p>
-        </Modal>
-      </>
-    );
-  },
-};
-
 export const ConfirmLoading: Story = {
   render: () => {
     const [open, setOpen] = useState(false);
@@ -252,11 +91,9 @@ export const ConfirmLoading: Story = {
 
     const handleOk = async () => {
       setLoading(true);
-      // Simulate async operation
       await new Promise((resolve) => setTimeout(resolve, 2000));
       setLoading(false);
       setOpen(false);
-      alert('Operation completed!');
     };
 
     return (
@@ -276,34 +113,6 @@ export const ConfirmLoading: Story = {
   },
 };
 
-export const DestroyOnClose: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    const [count, setCount] = useState(0);
-
-    return (
-      <>
-        <Button onClick={() => setOpen(true)}>Open Modal</Button>
-        <Modal
-          open={open}
-          onCancel={() => setOpen(false)}
-          title="Destroy On Close"
-          destroyOnClose
-        >
-          <div>
-            <p>This modal destroys its content when closed.</p>
-            <p>Counter: {count}</p>
-            <Button onClick={() => setCount(count + 1)}>Increment</Button>
-            <p style={{ marginTop: '1rem', fontSize: '12px', color: '#666' }}>
-              Close and reopen to see the counter reset.
-            </p>
-          </div>
-        </Modal>
-      </>
-    );
-  },
-};
-
 export const WithForm: Story = {
   render: () => {
     const [open, setOpen] = useState(false);
@@ -315,10 +124,7 @@ export const WithForm: Story = {
         <Modal
           open={open}
           onCancel={() => setOpen(false)}
-          onOk={() => {
-            alert(`Form submitted: ${JSON.stringify(formData)}`);
-            setOpen(false);
-          }}
+          onOk={() => setOpen(false)}
           title="Form Modal"
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -366,154 +172,168 @@ export const LongContent: Story = {
   },
 };
 
-export const StaticConfirm: Story = {
-  render: () => {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
-        <Button
-          onClick={() => {
-            Modal.confirm({
-              title: 'Confirm Action',
-              content: 'Are you sure you want to perform this action?',
-              onOk: () => {
-                console.log('Confirmed');
-                alert('Action confirmed!');
-              },
-              onCancel: () => {
-                console.log('Cancelled');
-              },
-            });
-          }}
-        >
-          Show Confirm
-        </Button>
-        <Button
-          onClick={() => {
-            Modal.info({
-              title: 'Information',
-              content: 'This is an informational message.',
-            });
-          }}
-        >
-          Show Info
-        </Button>
-        <Button
-          onClick={() => {
-            Modal.success({
-              title: 'Success',
-              content: 'Operation completed successfully!',
-            });
-          }}
-        >
-          Show Success
-        </Button>
-        <Button
-          onClick={() => {
-            Modal.error({
-              title: 'Error',
-              content: 'An error occurred. Please try again.',
-            });
-          }}
-        >
-          Show Error
-        </Button>
-        <Button
-          onClick={() => {
-            Modal.warning({
-              title: 'Warning',
-              content: 'This action may have unintended consequences.',
-            });
-          }}
-        >
-          Show Warning
-        </Button>
-      </div>
-    );
-  },
-};
+/* ==========================================================================
+   Dialogs
+   ========================================================================== */
 
-export const StaticConfirmWithPromise: Story = {
-  render: () => {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
-        <Button
-          onClick={() => {
-            Modal.confirm({
-              title: 'Delete Item',
-              content: 'Are you sure you want to delete this item? This action cannot be undone.',
-              okText: 'Delete',
-              okType: 'primary',
-              cancelText: 'Cancel',
-              onOk: async () => {
-                // Simulate async operation
-                await new Promise((resolve) => setTimeout(resolve, 1000));
-                alert('Item deleted!');
-              },
-            });
-          }}
-        >
-          Delete with Promise
-        </Button>
-      </div>
-    );
-  },
-};
-
-export const CustomCloseIcon: Story = {
+export const DangerDialog: Story = {
   render: () => {
     const [open, setOpen] = useState(false);
     return (
       <>
-        <Button onClick={() => setOpen(true)}>Open Modal</Button>
+        <Button onClick={() => setOpen(true)}>Danger Action</Button>
         <Modal
           open={open}
           onCancel={() => setOpen(false)}
-          title="Custom Close Icon"
-          closeIcon={<span style={{ fontSize: '20px' }}>✕</span>}
+          closable={false}
+          footer={null}
+          width={400}
+          centered
         >
-          <p>This modal has a custom close icon.</p>
+          <div className={modalStyles.dialogBody}>
+            <div className={cn(modalStyles.dialogIcon, modalStyles.dialogIconDanger)}>
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>error</span>
+            </div>
+            <h3 className={modalStyles.dialogTitle}>Delete item</h3>
+            <p className={modalStyles.dialogDescription}>
+              Are you sure that you want to delete this item? This action cannot be reversed.
+            </p>
+            <div className={modalStyles.dialogButtons}>
+              <Button variant="danger" appearance="filled" fullWidth onClick={() => setOpen(false)}>Delete</Button>
+              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Keep</Button>
+            </div>
+          </div>
         </Modal>
       </>
     );
   },
 };
 
-export const AllFeatures: Story = {
+export const WarningDialog: Story = {
   render: () => {
     const [open, setOpen] = useState(false);
     return (
       <>
-        <Button onClick={() => setOpen(true)}>Open Full Featured Modal</Button>
+        <Button onClick={() => setOpen(true)}>Warning Action</Button>
         <Modal
           open={open}
           onCancel={() => setOpen(false)}
-          onOk={() => {
-            alert('OK clicked');
-            setOpen(false);
-          }}
-          title="Full Featured Modal"
-          width={600}
+          closable={false}
+          footer={null}
+          width={400}
           centered
-          okText="Save"
-          cancelText="Discard"
-          okType="primary"
-          maskClosable
-          keyboard
-          closable
-          afterOpenChange={(open) => {
-            console.log('Modal open state changed:', open);
-          }}
         >
-          <div>
-            <h3 style={{ marginTop: 0 }}>Features Demonstrated:</h3>
-            <ul>
-              <li>Custom width (600px)</li>
-              <li>Centered vertically</li>
-              <li>Custom OK/Cancel text</li>
-              <li>Mask closable</li>
-              <li>Keyboard (Esc) support</li>
-              <li>After open change callback</li>
-            </ul>
+          <div className={modalStyles.dialogBody}>
+            <div className={cn(modalStyles.dialogIcon, modalStyles.dialogIconWarning)}>
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>warning</span>
+            </div>
+            <h3 className={modalStyles.dialogTitle}>Discard unsaved changes</h3>
+            <p className={modalStyles.dialogDescription}>
+              Are you sure that you want to discard changes? This action cannot be reversed.
+            </p>
+            <div className={modalStyles.dialogButtons}>
+              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Keep changes</Button>
+              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Discard</Button>
+            </div>
+          </div>
+        </Modal>
+      </>
+    );
+  },
+};
+
+export const InfoDialog: Story = {
+  render: () => {
+    const [open, setOpen] = useState(false);
+    return (
+      <>
+        <Button onClick={() => setOpen(true)}>Info Action</Button>
+        <Modal
+          open={open}
+          onCancel={() => setOpen(false)}
+          closable={false}
+          footer={null}
+          width={400}
+          centered
+        >
+          <div className={modalStyles.dialogBody}>
+            <div className={cn(modalStyles.dialogIcon, modalStyles.dialogIconInfo)}>
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
+            </div>
+            <h3 className={modalStyles.dialogTitle}>Info message</h3>
+            <p className={modalStyles.dialogDescription}>
+              Lorem ipsum dolor sit amet consectetur. Leo sollicitudin quam pellentesque gravida accumsan pellentesque aliquam pellentesque.
+            </p>
+            <div className={modalStyles.dialogButtons}>
+              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Upgrade</Button>
+              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>No, thanks</Button>
+            </div>
+          </div>
+        </Modal>
+      </>
+    );
+  },
+};
+
+export const SuccessDialog: Story = {
+  render: () => {
+    const [open, setOpen] = useState(false);
+    return (
+      <>
+        <Button onClick={() => setOpen(true)}>Success Action</Button>
+        <Modal
+          open={open}
+          onCancel={() => setOpen(false)}
+          closable={false}
+          footer={null}
+          width={400}
+          centered
+        >
+          <div className={modalStyles.dialogBody}>
+            <div className={cn(modalStyles.dialogIcon, modalStyles.dialogIconSuccess)}>
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+            </div>
+            <h3 className={modalStyles.dialogTitle}>Action completed</h3>
+            <p className={modalStyles.dialogDescription}>
+              Your changes have been saved successfully.
+            </p>
+            <div className={modalStyles.dialogButtons}>
+              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Continue</Button>
+              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Go back</Button>
+            </div>
+          </div>
+        </Modal>
+      </>
+    );
+  },
+};
+
+export const ConfirmDialog: Story = {
+  render: () => {
+    const [open, setOpen] = useState(false);
+    return (
+      <>
+        <Button onClick={() => setOpen(true)}>Confirm Action</Button>
+        <Modal
+          open={open}
+          onCancel={() => setOpen(false)}
+          closable={false}
+          footer={null}
+          width={400}
+          centered
+        >
+          <div className={modalStyles.dialogBody}>
+            <div className={cn(modalStyles.dialogIcon, modalStyles.dialogIconConfirm)}>
+              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>help</span>
+            </div>
+            <h3 className={modalStyles.dialogTitle}>Confirm action</h3>
+            <p className={modalStyles.dialogDescription}>
+              Are you sure you want to proceed with this action?
+            </p>
+            <div className={modalStyles.dialogButtons}>
+              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Confirm</Button>
+              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Cancel</Button>
+            </div>
           </div>
         </Modal>
       </>

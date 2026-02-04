@@ -72,25 +72,31 @@ export function Spinner({
         styles[appearance],
         className
       )}
-      style={{
-        ...(customSize && {
-          width: `${customSize}px`,
-          height: `${customSize}px`,
-        }),
-        ...style,
-      }}
+      style={style}
       role="status"
       aria-label={label}
       aria-live="polite"
       {...props}
     >
-      <span className="material-symbols-outlined" style={{ 
-        fontSize: typeof size === 'number' ? `${size}px` : undefined,
-        animation: 'spin 1s linear infinite',
-        display: 'inline-block'
-      }} aria-hidden="true">
-        progress_activity
-      </span>
+      <div
+        className={styles.iconContainer}
+        style={customSize ? {
+          width: `${customSize}px`,
+          height: `${customSize}px`,
+        } : undefined}
+      >
+        <span
+          className="material-symbols-outlined"
+          style={customSize ? {
+            fontSize: `${customSize}px`,
+            width: `${customSize}px`,
+            height: `${customSize}px`,
+          } : undefined}
+          aria-hidden="true"
+        >
+          progress_activity
+        </span>
+      </div>
       {label && (
         <span className={styles.label} aria-hidden="true">
           {label}

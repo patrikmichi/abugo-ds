@@ -116,6 +116,88 @@
       "$collectionName": "primitives",
       "$value": "{spacing-30}",
       "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
+    },
+    "field": {
+      "selector": {
+        "sm": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Selector horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Selector horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Selector horizontal padding for large fields (12px)."
+        }
+      },
+      "picker": {
+        "sm": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Picker horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Picker horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Picker horizontal padding for large fields (12px)."
+        }
+      },
+      "select": {
+        "right": {
+          "sm": {
+            "$scopes": ["ALL_SCOPES"],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-9}",
+            "$description": "Right padding for select small (accounts for chevron, 36px)."
+          },
+          "md": {
+            "$scopes": ["ALL_SCOPES"],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-10}",
+            "$description": "Right padding for select medium (accounts for chevron, 40px)."
+          },
+          "lg": {
+            "$scopes": ["ALL_SCOPES"],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-11}",
+            "$description": "Right padding for select large (accounts for chevron, 44px)."
+          }
+        }
+      }
     }
   }
 }

@@ -28,7 +28,7 @@
 .tabList {
   display: flex;
   position: relative;
-  gap: var(--token-component-tabs-tab-gap);
+  gap: var(--token-component-gap-tabs-tab);
 }
 
 .tabListTop {
@@ -57,7 +57,7 @@
 .tab {
   display: flex;
   align-items: center;
-  gap: var(--token-component-tabs-tab-inner-gap);
+  gap: var(--token-component-gap-tabs-tab-inner);
   padding: var(--token-component-tabs-tab-padding);
   background-color: var(--token-component-tabs-tab-background);
   color: var(--token-component-tabs-tab-color));
@@ -76,7 +76,7 @@
 
 .tab.active {
   color: var(--token-component-tabs-tab-color-active);
-  font-weight: var(--token-component-tabs-tab-font-weight-active);
+  font-weight: var(--token-component-font-weight-tabs-tab-active);
 }
 
 .tab.disabled {
@@ -86,19 +86,19 @@
 
 /* Size variants */
 .tab.small {
-  padding: var(--token-component-tabs-tab-padding-sm);
-  font-size: var(--token-component-tabs-tab-font-size-sm);
+  padding: var(--token-component-padding-block-tabs-tab-sm);
+  font-size: var(--token-component-font-size-tabs-tab-sm);
 }
 
 .tab.large {
-  padding: var(--token-component-tabs-tab-padding-lg);
-  font-size: var(--token-component-tabs-tab-font-size-lg);
+  padding: var(--token-component-padding-block-tabs-tab-lg);
+  font-size: var(--token-component-font-size-tabs-tab-lg);
 }
 
 /* Card type */
 .tabList.cardTabList,
 .tabList.editableCardTabList {
-  gap: var(--token-component-tabs-card-gap);
+  gap: var(--token-component-gap-tabs-card);
   border: none;
 }
 
@@ -106,7 +106,7 @@
 .tab.editableCard {
   background-color: var(--token-component-tabs-card-background);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-card-border);
-  border-radius: calc(var(--token-component-tabs-card-radius) * 1px);
+  border-radius: calc(var(--token-component-radius-tabs-card) * 1px);
   margin-bottom: calc(var(--token-primitive-border-width-1, 1px) * -1px);
 }
 
@@ -158,7 +158,7 @@
 .icon {
   display: flex;
   align-items: center;
-  font-size: var(--token-component-tabs-icon-font-size);
+  font-size: var(--token-component-font-size-tabs-icon);
 }
 
 /* Label */
@@ -175,7 +175,7 @@
   height: var(--token-component-tabs-close-size);
   border-radius: 50%;
   transition: background-color var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing);
-  margin-left: var(--token-component-tabs-close-margin-left);
+  margin-left: var(--token-component-gap-tabs-close-margin-left);
 }
 
 .close:hover {
@@ -189,10 +189,10 @@
   justify-content: center;
   min-width: var(--token-component-tabs-add-button-size);
   height: var(--token-component-tabs-add-button-size);
-  padding: var(--token-component-tabs-add-button-padding);
+  padding: var(--token-component-padding-block-tabs-add-button);
   background-color: var(--token-component-tabs-add-button-background);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-tabs-add-button-border);
-  border-radius: calc(var(--token-component-tabs-add-button-radius) * 1px);
+  border-radius: calc(var(--token-component-radius-tabs-add-button) * 1px);
   color: var(--token-component-tabs-add-button-color));
   cursor: pointer;
   transition: all var(--token-component-tabs-transition-duration) var(--token-component-tabs-transition-easing);

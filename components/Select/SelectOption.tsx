@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 import type { SelectOption as SelectOptionType } from './Select';
+import { Checkbox } from '@/components/Checkbox';
 import styles from './SelectOption.module.css';
 
 export interface SelectOptionProps {
@@ -43,12 +44,13 @@ export const SelectOption = forwardRef<HTMLLIElement, SelectOptionProps>(
       >
         <span className={styles.optionLabel}>{option.label}</span>
         {showCheckbox && (
-          <span
-            className={cn('material-symbols-outlined', styles.checkbox, isSelected && styles.checked)}
+          <Checkbox
+            checked={isSelected}
+            disabled={option.disabled || disabled}
+            className={styles.checkbox}
             aria-hidden="true"
-          >
-            {isSelected ? 'check_box' : 'check_box_outline_blank'}
-          </span>
+            tabIndex={-1}
+          />
         )}
         {!showCheckbox && isSelected && (
           <span className={cn('material-symbols-outlined', styles.checkmark)} aria-hidden="true">

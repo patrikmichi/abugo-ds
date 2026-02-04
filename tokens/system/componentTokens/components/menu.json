@@ -1,14 +1,5 @@
 {
   "$name": "Component Tokens",
-  "padding": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "spacing",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{padding.xxs} 0"
-  },
   "background": {
     "default": {
       "$scopes": [
@@ -49,15 +40,6 @@
       "$value": "{content.passive.on.default}"
     }
   },
-  "radius": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "borderRadius",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{radius.sm}"
-  },
   "shadow": {
     "$scopes": [
       "ALL_SCOPES"
@@ -77,15 +59,6 @@
     "$value": "{sizing.xl}"
   },
   "item": {
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{padding.xxs} {padding.sm}"
-    },
     "color": {
       "default": {
         "$scopes": [
@@ -196,15 +169,6 @@
     }
   },
   "icon": {
-    "margin-right": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{spacing.xs}"
-    },
     "size": {
       "$scopes": [
         "ALL_SCOPES"
@@ -213,17 +177,6 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{icon.sm}"
-    }
-  },
-  "divider": {
-    "margin": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{spacing.xs} 0"
     }
   },
   "submenu": {
@@ -258,5 +211,14 @@
       "$collectionName": "semanticTokens",
       "$value": "{animation.easing.standard}"
     }
+  },
+  "line-height": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body.line.md}"
   }
 }

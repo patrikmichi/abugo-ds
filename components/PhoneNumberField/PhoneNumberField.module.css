@@ -40,7 +40,7 @@
   border: none;
   background: transparent;
   padding: 0;
-  min-width: var(--token-component-field-selector-min-width-md);
+  min-width: var(--token-component-height-field-selector-min-width-md);
   appearance: none;
   background-image: none; /* Override default select arrow */
   
@@ -122,7 +122,7 @@
 }
 
 .phoneNumberField.sm .countryCodeSelect {
-  min-width: var(--token-component-field-selector-min-width-sm);
+  min-width: var(--token-component-height-field-selector-min-width-sm);
 }
 
 .phoneNumberField.lg {
@@ -135,7 +135,7 @@
 }
 
 .phoneNumberField.lg .countryCodeSelect {
-  min-width: var(--token-component-field-selector-min-width-lg);
+  min-width: var(--token-component-height-field-selector-min-width-lg);
 }
 
 /* Enabled state (default) - hover and focus */
@@ -155,8 +155,8 @@
   /* Show soft glowing focus ring on focus */
   outline: none;
   box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
 }
 
 .phoneNumberField:not(.error):not(.disabled).focused .separator {

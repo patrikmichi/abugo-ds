@@ -40,6 +40,15 @@
       "$collectionName": "semanticTokens",
       "$value": "{icon.xs}"
     },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    },
     "lg": {
       "$scopes": [
         "ALL_SCOPES"
@@ -67,7 +76,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{icon.xs}"
+      "$value": "{icon.xxs}"
     },
     "md": {
       "$scopes": [
@@ -76,7 +85,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{icon.sm}"
+      "$value": "{icon.xs}"
     },
     "lg": {
       "$scopes": [
@@ -85,7 +94,7 @@
       "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{icon.sm}"
+      "$value": "{icon.xs}"
     }
   },
   "alert": {

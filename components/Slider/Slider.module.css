@@ -4,11 +4,15 @@
 .slider {
   position: relative;
   width: 100%;
-  height: 12px;
   padding: 4px 0;
   cursor: pointer;
   touch-action: none;
 }
+
+/* Size variants — sets the rail thickness via custom property */
+.sm { --slider-rail-h: 4px; }
+.md { --slider-rail-h: 8px; }
+.lg { --slider-rail-h: 12px; }
 
 .slider.vertical {
   width: 12px;
@@ -25,14 +29,14 @@
 .rail {
   position: absolute;
   width: 100%;
-  height: 4px;
+  height: var(--slider-rail-h, 4px);
   background-color: var(--token-component-slider-rail-background, #f5f5f5);
-  border-radius: calc(var(--token-component-slider-rail-radius, 2px) * 1px);
+  border-radius: calc(var(--slider-rail-h, 4px) / 2);
   transition: background-color 0.3s ease;
 }
 
 .slider.vertical .rail {
-  width: 4px;
+  width: var(--slider-rail-h, 4px);
   height: 100%;
   top: 0;
   left: 50%;
@@ -46,14 +50,14 @@
 /* Track (filled portion) */
 .track {
   position: absolute;
-  height: 4px;
+  height: var(--slider-rail-h, 4px);
   background-color: var(--token-component-slider-track-background, #538bff);
-  border-radius: calc(var(--token-component-slider-track-radius, 2px) * 1px);
+  border-radius: calc(var(--slider-rail-h, 4px) / 2);
   transition: background-color 0.3s ease;
 }
 
 .slider.vertical .track {
-  width: 4px;
+  width: var(--slider-rail-h, 4px);
   height: auto;
   bottom: 0;
   left: 50%;
@@ -69,7 +73,7 @@
   position: absolute;
   width: var(--token-component-slider-handle-size, 14px);
   height: var(--token-component-slider-handle-size, 14px);
-  margin-top: calc((4px - var(--token-component-slider-handle-size, 14px)) / 2);
+  margin-top: calc((var(--slider-rail-h, 4px) - var(--token-component-slider-handle-size, 14px)) / 2);
   margin-left: calc(var(--token-component-slider-handle-size, 14px) / -2);
   background-color: var(--token-component-slider-handle-background, #fff);
   border: calc(var(--token-primitive-border-width-1, 2px) * 1px) solid var(--token-component-slider-handle-border, #538bff);
@@ -83,7 +87,7 @@
 
 .slider.vertical .handle {
   margin-top: calc(var(--token-component-slider-handle-size, 14px) / -2);
-  margin-left: calc((4px - var(--token-component-slider-handle-size, 14px)) / 2);
+  margin-left: calc((var(--slider-rail-h, 4px) - var(--token-component-slider-handle-size, 14px)) / 2);
   top: auto;
   bottom: 0;
 }
@@ -117,7 +121,7 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: var(--token-component-slider-mark-font-size, 12px);
+  font-size: var(--token-component-font-size-slider-mark, 12px);
   color: var(--token-component-slider-mark-color, rgba(0, 0, 0, 0.45));
   white-space: nowrap;
   z-index: 0;
@@ -134,8 +138,8 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: var(--token-component-slider-dot-size, 2px);
-  height: var(--token-component-slider-dot-size, 2px);
+  width: var(--token-component-slider-dot-size, 4px);
+  height: var(--token-component-slider-dot-size, 4px);
   background-color: var(--token-component-slider-dot-background, rgba(0, 0, 0, 0.25));
   border-radius: 50%;
   z-index: 0;

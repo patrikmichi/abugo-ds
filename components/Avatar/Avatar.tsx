@@ -72,6 +72,8 @@ export function Avatar({
   icon,
   shape = 'circle',
   size = 'md',
+  border = false,
+  ring = false,
   gap = 4,
   draggable,
   crossOrigin,

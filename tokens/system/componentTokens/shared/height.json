@@ -125,7 +125,7 @@
       "$type": "sizing",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{control.height.md}"
+      "$value": "{control.height.xs}"
     },
     "lg": {
       "$scopes": [
@@ -134,7 +134,7 @@
       "$type": "sizing",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{control.height.lg}"
+      "$value": "{control.height.sm}"
     }
   },
   "pagination": {

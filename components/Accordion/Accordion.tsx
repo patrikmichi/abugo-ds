@@ -14,10 +14,6 @@ export interface AccordionPanelProps {
   children?: React.ReactNode;
   /** Whether the panel is disabled */
   disabled?: boolean;
-  /** Custom expand icon */
-  expandIcon?: (props: { isActive: boolean }) => React.ReactNode;
-  /** Extra content in header */
-  extra?: React.ReactNode;
   /** Custom class name */
   className?: string;
   /** Custom style */
@@ -37,8 +33,6 @@ export interface AccordionProps extends Omit<React.HTMLAttributes<HTMLDivElement
   panel?: boolean;
   /** Size of accordion */
   size?: AccordionSize;
-  /** Custom expand icon */
-  expandIcon?: (props: { isActive: boolean }) => React.ReactNode;
   /** Position of expand icon */
   expandIconPosition?: AccordionExpandIconPosition;
   /** Whether panels can be collapsed */
@@ -55,15 +49,13 @@ export interface AccordionProps extends Omit<React.HTMLAttributes<HTMLDivElement
 
 /**
  * Accordion Panel Component
- * 
+ *
  * Individual panel within an Accordion.
  */
 function AccordionPanel({
   header,
   children,
   disabled = false,
-  expandIcon,
-  extra,
   className,
   style,
 }: AccordionPanelProps) {
@@ -90,68 +82,62 @@ function PanelContent({
   const innerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number>(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [shouldRender, setShouldRender] = useState(isActive);
 
+  // Mount content when becoming active
   useEffect(() => {
-    // Don't run animation logic if panel is destroyed when inactive
-    if (destroyInactivePanel && !isActive) {
-      return;
+    if (isActive) {
+      setShouldRender(true);
     }
+  }, [isActive]);
 
-    if (!innerRef.current || !contentRef.current) return;
+  // Handle animation after content is mounted
+  useEffect(() => {
+    if (!shouldRender || !innerRef.current || !contentRef.current) return;
 
     if (isActive) {
-      // Expand: measure the actual content height including padding
-      // First, temporarily set height to auto to measure
-      const currentHeight = contentRef.current.scrollHeight;
-      contentRef.current.style.height = 'auto';
-      const contentHeight = contentRef.current.scrollHeight;
-      contentRef.current.style.height = `${currentHeight}px`;
-      
-      // Force reflow, then animate to full height
+      const contentHeight = innerRef.current.offsetHeight;
+      setIsAnimating(true);
+
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           setHeight(contentHeight);
-          setIsAnimating(true);
         });
       });
-      
-      // Reset animating state after animation completes
+
       const timer = setTimeout(() => {
         setIsAnimating(false);
-      }, 300); // Match CSS transition duration
-      
+      }, 300);
+
       return () => clearTimeout(timer);
     } else {
-      // Collapse: get current height, then animate to 0
-      const currentHeight = contentRef.current.scrollHeight;
+      const currentHeight = innerRef.current.offsetHeight;
       setHeight(currentHeight);
       setIsAnimating(true);
-      
-      // Force reflow, then animate to 0
+
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           setHeight(0);
         });
       });
-      
+
       const timer = setTimeout(() => {
         setIsAnimating(false);
+        if (destroyInactivePanel) {
+          setShouldRender(false);
+        }
       }, 300);
-      
+
       return () => clearTimeout(timer);
     }
-  }, [isActive, destroyInactivePanel]);
+  }, [isActive, shouldRender, destroyInactivePanel]);
 
-  // Don't render content if destroyInactivePanel and not active
-  // This check comes AFTER hooks to ensure hooks are always called
-  if (destroyInactivePanel && !isActive) {
-    return null;
-  }
+  if (!shouldRender) return null;
 
   return (
     <div
       ref={contentRef}
-      className={cn(styles.content, isActive && styles.contentActive, isAnimating && styles.animating, className)}
+      className={cn(styles.content, isAnimating && styles.animating, className)}
       style={{
         height: `${height}px`,
         overflow: 'hidden',
@@ -167,9 +153,9 @@ function PanelContent({
 
 /**
  * Accordion Component
- * 
- * Collapsible content panels. 
- * 
+ *
+ * Collapsible content panels.
+ *
  * @example
  * ```tsx
  * <Accordion defaultActiveKey="1" accordion>
@@ -188,7 +174,6 @@ export function Accordion({
   accordion = false,
   panel = false,
   size = 'middle',
-  expandIcon,
   expandIconPosition = 'end',
   collapsible = true,
   destroyInactivePanel = false,
@@ -201,7 +186,7 @@ export function Accordion({
     if (defaultActiveKey !== undefined) {
       return Array.isArray(defaultActiveKey) ? defaultActiveKey.map(String) : [String(defaultActiveKey)];
     }
-    return accordion ? [] : [];
+    return [];
   });
 
   // Parse children to extract panels
@@ -216,13 +201,11 @@ export function Accordion({
           header: panel.props.header,
           children: panel.props.children,
           disabled: panel.props.disabled || false,
-          expandIcon: panel.props.expandIcon || expandIcon,
-          extra: panel.props.extra,
           className: panel.props.className,
           style: panel.props.style,
         };
       });
-  }, [children, expandIcon]);
+  }, [children]);
 
   const handlePanelClick = useCallback(
     (panelKey: string) => {
@@ -231,20 +214,15 @@ export function Accordion({
       let newActiveKey: string[];
 
       if (accordion) {
-        // Accordion mode: only one panel can be open
         const isActive = activeKey.includes(panelKey);
         if (collapsible === false && !isActive) {
-          // If not collapsible and panel is not active, open it
           newActiveKey = [panelKey];
         } else if (collapsible === false && isActive) {
-          // If not collapsible and panel is active, do nothing
           return;
         } else {
-          // Toggle: if active, close it; if not active, open it
           newActiveKey = isActive ? [] : [panelKey];
         }
       } else {
-        // Multiple panels can be open
         const activeKeyArray = Array.isArray(activeKey) ? activeKey : [activeKey];
         const isActive = activeKeyArray.includes(panelKey);
         if (collapsible === false && !isActive) {
@@ -262,7 +240,7 @@ export function Accordion({
     [activeKey, accordion, collapsible, onChange, panels]
   );
 
-  const defaultExpandIcon = (isActive: boolean) => (
+  const expandIcon = (isActive: boolean) => (
     <span
       className="material-symbols-outlined"
       style={{
@@ -338,11 +316,10 @@ export function Accordion({
                     }
                   }}
                 >
-                  {panel.expandIcon ? panel.expandIcon({ isActive }) : defaultExpandIcon(isActive)}
+                  {expandIcon(isActive)}
                 </span>
               )}
               <span className={styles.headerText}>{panel.header}</span>
-              {panel.extra && <span className={styles.extra}>{panel.extra}</span>}
               {expandIconPosition === 'end' && (
                 <span
                   className={cn(styles.icon, styles.iconEnd)}
@@ -353,7 +330,7 @@ export function Accordion({
                     }
                   }}
                 >
-                  {panel.expandIcon ? panel.expandIcon({ isActive }) : defaultExpandIcon(isActive)}
+                  {expandIcon(isActive)}
                 </span>
               )}
             </div>

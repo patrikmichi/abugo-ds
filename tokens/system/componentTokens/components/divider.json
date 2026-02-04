@@ -9,17 +9,6 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{border.passive.neutral.default}"
-    },
-    "margin": {
-      "mobile": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      }
     }
   },
   "vertical": {
@@ -31,17 +20,6 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{border.passive.neutral.default}"
-    },
-    "margin": {
-      "mobile": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      }
     }
   },
   "border": {
@@ -55,17 +33,6 @@
       "$collectionName": "semanticTokens"
     }
   },
-  "font": {
-    "size": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "fontSizes",
-      "$value": "{typography.fontSize.3}",
-      "$collectionName": "primitives"
-    }
-  },
   "plain": {
     "text": {
       "color": {
@@ -74,28 +41,19 @@
         ],
         "$libraryName": "",
         "$type": "color",
-        "$value": "{background.passive.neutral.default}",
-        "$collectionName": "semanticTokens"
+        "$value": "{content.passive.neutral.default}",
+        "$collectionName": "semanticTokens",
+        "$description": "Plain divider text color (#464646)."
       },
-      "font": {
-        "size": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontSizes",
-          "$value": "{typography.fontSize.3}",
-          "$collectionName": "primitives"
-        },
-        "weight": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontWeights",
-          "$value": 600,
-          "$collectionName": "primitives"
-        }
+      "font-weight": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontWeight",
+        "$value": "{typography.fontWeight.regular}",
+        "$collectionName": "semanticTokens",
+        "$description": "Plain divider text font weight (400/regular)."
       }
     }
   },
@@ -106,37 +64,19 @@
       ],
       "$libraryName": "",
       "$type": "color",
-      "$value": "{background.passive.neutral.default}",
-      "$collectionName": "semanticTokens"
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens",
+      "$description": "Divider text color (#464646)."
     },
-    "font": {
-      "size": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      },
-      "weight": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontWeights",
-        "$value": 600,
-        "$collectionName": "primitives"
-      }
-    },
-    "padding": {
+    "font-weight": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{padding.s}",
-      "$collectionName": "semanticTokens"
+      "$type": "fontWeight",
+      "$value": "{typography.fontWeight.regular}",
+      "$collectionName": "semanticTokens",
+      "$description": "Divider text font weight (400/regular)."
     }
   }
 }

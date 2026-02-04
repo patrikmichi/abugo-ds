@@ -18,6 +18,35 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{content.active.neutral.hover}"
+    },
+    "size": {
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": 24
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": 20
+      }
+    },
+    "offset": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xs}"
     }
   },
   "arrow": {
@@ -152,48 +181,13 @@
       "$description": "Maximum width for tag text before truncation (200px)"
     },
     "gap": {
-      "chevron": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$libraryName": "",
-        "$collectionName": "",
-        "$value": "16px",
-        "$description": "Gap between tags wrapper and expand/collapse icon (16px)"
-      },
-      "clearIcon": {
-        "sm": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "spacing",
-          "$libraryName": "",
-          "$collectionName": "",
-          "$value": "8px",
-          "$description": "Gap between clear icon and expand/collapse icon for small size (8px)"
-        },
-        "md": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "spacing",
-          "$libraryName": "",
-          "$collectionName": "",
-          "$value": "12px",
-          "$description": "Gap between clear icon and expand/collapse icon for medium size (12px)"
-        },
-        "lg": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$type": "spacing",
-          "$libraryName": "",
-          "$collectionName": "",
-          "$value": "12px",
-          "$description": "Gap between clear icon and expand/collapse icon for large size (12px)"
-        }
-      }
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xxxs}"
     }
   },
   "zIndex": {
@@ -239,17 +233,45 @@
       "$libraryName": "",
       "$collectionName": "",
       "$value": "248px",
-      "$description": "Maximum height for dropdown (6 options × 40px + 8px padding = 248px)"
+      "$description": "Maximum height for dropdown (6 options \u00d7 40px + 8px padding = 248px)"
     },
-    "offset": {
+    "z-index": {
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "spacing",
+      "$type": "number",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 1050
+    },
+    "padding-y": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{spacing-1}",
-      "$description": "Vertical offset between select trigger and dropdown (4px)"
+      "$value": "{padding.xxxs}"
+    },
+    "empty": {
+      "padding-y": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "padding-x": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      }
     }
   },
   "option": {
@@ -262,6 +284,72 @@
       "$collectionName": "",
       "$value": "40px",
       "$description": "Minimum height for dropdown options (40px)"
+    },
+    "padding-y": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xxxs}"
+    },
+    "checkmark": {
+      "margin": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      }
+    },
+    "remove": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{text.muted}"
+      }
+    }
+  },
+  "status": {
+    "error": {
+      "shadow-color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.danger.subtle}"
+      }
+    }
+  },
+  "max-tag": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{text.secondary}"
+    }
+  },
+  "chevron": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{text.muted}"
     }
   }
 }

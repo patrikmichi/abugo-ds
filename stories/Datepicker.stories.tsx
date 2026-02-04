@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { DatePicker } from '@/components/Datepicker';
+import { DatePicker, type DatePickerPreset } from '@/components/Datepicker';
 import { Field } from '@/components/Field';
+import { Button } from '@/components/Button';
 
 const meta: Meta<typeof DatePicker> = {
   title: 'Components/DatePicker',
@@ -54,8 +55,12 @@ export const Controlled: Story = {
           onChange={(date) => setValue(date)}
         />
         <div style={{ marginTop: '1rem', display: 'flex', gap: '0.5rem' }}>
-          <button onClick={() => setValue(new Date())}>Today</button>
-          <button onClick={() => setValue(null)}>Clear</button>
+          <Button variant="primary" appearance="plain" size="sm" onClick={() => setValue(new Date())}>
+            Today
+          </Button>
+          <Button variant="secondary" appearance="plain" size="sm" onClick={() => setValue(null)}>
+            Clear
+          </Button>
         </div>
         <p style={{ marginTop: '0.5rem', fontSize: '14px' }}>
           Value: {value ? value.toLocaleDateString() : 'null'}
@@ -92,6 +97,10 @@ export const CustomFormat: Story = {
     const [value, setValue] = useState<Date | null>(null);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+        <div>
+          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>Default (ddd, MMM D)</p>
+          <DatePicker value={value} onChange={setValue} />
+        </div>
         <div>
           <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>YYYY-MM-DD</p>
           <DatePicker format="YYYY-MM-DD" value={value} onChange={setValue} />
@@ -153,51 +162,6 @@ export const DisabledPastDates: Story = {
   },
 };
 
-export const WithExtraFooter: Story = {
-  render: () => {
-    const [value, setValue] = useState<Date | null>(null);
-    return (
-      <div style={{ maxWidth: '400px' }}>
-        <DatePicker
-          value={value}
-          onChange={setValue}
-          renderExtraFooter={(mode) => (
-            <div style={{ textAlign: 'center', padding: '8px' }}>
-              <button
-                onClick={() => {
-                  const nextWeek = new Date();
-                  nextWeek.setDate(nextWeek.getDate() + 7);
-                  setValue(nextWeek);
-                }}
-                style={{
-                  padding: '4px 8px',
-                  border: '1px solid #d9d9d9',
-                  borderRadius: '4px',
-                  background: '#fff',
-                  cursor: 'pointer',
-                }}
-              >
-                Next Week
-              </button>
-            </div>
-          )}
-        />
-      </div>
-    );
-  },
-};
-
-export const NoTodayButton: Story = {
-  render: () => {
-    const [value, setValue] = useState<Date | null>(null);
-    return (
-      <div style={{ maxWidth: '400px' }}>
-        <DatePicker value={value} onChange={setValue} showToday={false} />
-      </div>
-    );
-  },
-};
-
 export const NoClear: Story = {
   render: () => {
     const [value, setValue] = useState<Date | null>(new Date());
@@ -240,7 +204,32 @@ export const RangePicker: Story = {
   render: () => {
     const [value, setValue] = useState<[Date | null, Date | null] | null>(null);
     return (
-      <div style={{ maxWidth: '400px' }}>
+      <div style={{ maxWidth: '600px' }}>
+        <DatePicker.RangePicker
+          value={value}
+          onChange={(dates) => {
+            setValue(dates);
+            console.log('Range:', dates);
+          }}
+        />
+        <p style={{ marginTop: '1rem', fontSize: '14px' }}>
+          Range: {value && value[0] && value[1]
+            ? `${value[0].toLocaleDateString()} ~ ${value[1].toLocaleDateString()}`
+            : 'Not selected'}
+        </p>
+      </div>
+    );
+  },
+};
+
+export const RangePickerPreSelected: Story = {
+  render: () => {
+    const start = new Date();
+    const end = new Date();
+    end.setDate(end.getDate() + 14);
+    const [value, setValue] = useState<[Date | null, Date | null] | null>([start, end]);
+    return (
+      <div style={{ maxWidth: '600px' }}>
         <DatePicker.RangePicker
           value={value}
           onChange={(dates) => {
@@ -266,21 +255,133 @@ export const AllFeatures: Story = {
         <DatePicker
           value={value}
           onChange={setValue}
-          format="YYYY-MM-DD"
           placeholder="Select a date"
           allowClear
-          showToday
           disabledDate={(date) => {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             return date < today;
           }}
-          renderExtraFooter={(mode) => (
-            <div style={{ textAlign: 'center', fontSize: '12px', color: '#666' }}>
-              Custom footer for {mode} picker
-            </div>
-          )}
         />
+      </div>
+    );
+  },
+};
+
+const getNextThursday = (): Date => {
+  const today = new Date();
+  const dayOfWeek = today.getDay();
+  const daysUntilThursday = (4 - dayOfWeek + 7) % 7 || 7;
+  const nextThursday = new Date(today);
+  nextThursday.setDate(today.getDate() + daysUntilThursday);
+  return nextThursday;
+};
+
+const defaultPresets: DatePickerPreset[] = [
+  { label: 'Today', value: () => new Date() },
+  {
+    label: 'Tomorrow',
+    value: () => {
+      const d = new Date();
+      d.setDate(d.getDate() + 1);
+      return d;
+    },
+  },
+  { label: 'Next Thursday', value: getNextThursday },
+  {
+    label: 'Next Week',
+    value: () => {
+      const d = new Date();
+      d.setDate(d.getDate() + 7);
+      return d;
+    },
+  },
+  {
+    label: 'Next Month',
+    value: () => {
+      const d = new Date();
+      d.setMonth(d.getMonth() + 1);
+      return d;
+    },
+  },
+];
+
+export const WithPresets: Story = {
+  render: () => {
+    const [value, setValue] = useState<Date | null>(null);
+    return (
+      <div style={{ maxWidth: '500px' }}>
+        <DatePicker
+          value={value}
+          onChange={(date) => setValue(date)}
+          presets={defaultPresets}
+          onSave={(date, dateString) => console.log('Saved:', date, dateString)}
+          onCancel={() => console.log('Cancelled')}
+        />
+        <p style={{ marginTop: '1rem', fontSize: '14px' }}>
+          Selected: {value ? value.toLocaleDateString() : 'None'}
+        </p>
+      </div>
+    );
+  },
+};
+
+export const PresetsWithCustomLabels: Story = {
+  render: () => {
+    const [value, setValue] = useState<Date | null>(null);
+    return (
+      <div style={{ maxWidth: '500px' }}>
+        <DatePicker
+          value={value}
+          onChange={(date) => setValue(date)}
+          presets={defaultPresets}
+          cancelText="Discard"
+          saveText="Apply"
+          onSave={(date, dateString) => console.log('Applied:', dateString)}
+          onCancel={() => console.log('Discarded')}
+        />
+      </div>
+    );
+  },
+};
+
+export const PresetsSizes: Story = {
+  render: () => {
+    const [valueSm, setValueSm] = useState<Date | null>(null);
+    const [valueMd, setValueMd] = useState<Date | null>(null);
+    const [valueLg, setValueLg] = useState<Date | null>(null);
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
+        <div>
+          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>Small (chevrons 20px)</p>
+          <DatePicker
+            size="sm"
+            value={valueSm}
+            onChange={(date) => setValueSm(date)}
+            presets={defaultPresets}
+
+          />
+        </div>
+        <div>
+          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>Medium (chevrons 24px)</p>
+          <DatePicker
+            size="md"
+            value={valueMd}
+            onChange={(date) => setValueMd(date)}
+            presets={defaultPresets}
+
+          />
+        </div>
+        <div>
+          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>Large (chevrons 24px)</p>
+          <DatePicker
+            size="lg"
+            value={valueLg}
+            onChange={(date) => setValueLg(date)}
+            presets={defaultPresets}
+
+          />
+        </div>
       </div>
     );
   },

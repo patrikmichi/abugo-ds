@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-divider-font-size, 14px);
+  font-size: var(--token-component-font-size-divider, 14px);
 }
 
 /* Horizontal divider */
@@ -51,15 +51,15 @@
 /* Text */
 .text {
   display: inline-block;
-  padding: 0 var(--token-component-divider-text-padding, 1em);
+  padding: 1px var(--token-component-padding-block-divider-text, 1em) 0;
   color: var(--token-component-divider-text-color, rgba(0, 0, 0, 0.85));
-  font-weight: var(--token-component-divider-text-font-weight, 500);
-  font-size: var(--token-component-divider-text-font-size, 14px);
+  font-weight: var(--token-component-font-weight-divider-text, 500);
+  font-size: var(--token-component-font-size-divider-text, 14px);
 }
 
 .plainText {
-  font-weight: var(--token-component-divider-plain-text-font-weight, normal);
-  font-size: var(--token-component-divider-plain-text-font-size, 14px);
+  font-weight: var(--token-component-font-weight-divider-plain-text, normal);
+  font-size: var(--token-component-font-size-divider-plain-text, 14px);
   color: var(--token-component-divider-plain-text-color, rgba(0, 0, 0, 0.45));
 }
 
@@ -102,10 +102,10 @@
 /* Responsive */
 @media (max-width: 768px) {
   .horizontal {
-    margin: var(--token-component-divider-horizontal-margin-mobile, 12px 0);
+    margin: var(--token-component-gap-divider-horizontal-margin-mobile, 12px 0);
   }
 
   .vertical {
-    margin: 0 var(--token-component-divider-vertical-margin-mobile, 4px);
+    margin: 0 var(--token-component-gap-divider-vertical-margin-mobile, 4px);
   }
 }

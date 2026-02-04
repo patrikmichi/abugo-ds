@@ -88,7 +88,7 @@ export const InputNumber = forwardRef<InputNumberRef, InputNumberProps>(({
   stringMode = false,
   formatter,
   parser,
-  controls = true,
+  controls = false,
   decimalSeparator,
   changeOnBlur = true,
   changeOnWheel = false,

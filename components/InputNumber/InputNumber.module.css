@@ -31,12 +31,10 @@
   color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-md) + 1px);
-  padding-bottom: calc(var(--token-component-padding-y-field-md) - 1px);
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   font-size: var(--token-component-font-size-field-sm);
-  /* Line-height matches content area (height - padding-top - padding-bottom) for vertical centering */
   line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
   font-family: var(--token-primitive-typography-font-family-sans);
   transition: 
@@ -187,8 +185,8 @@
   /* Show soft glowing focus ring on focus */
   outline: none;
   box-shadow: 
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
 }
 
 .inputNumber:not(.error):not(.disabled):active:not(:disabled) {
@@ -258,12 +256,10 @@
   height: var(--token-component-height-field-sm);
   padding-inline-start: var(--token-component-padding-x-field-sm);
   padding-inline-end: var(--token-component-padding-x-field-sm);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-sm) + 1px);
-  padding-bottom: calc(var(--token-component-padding-y-field-sm) - 1px);
+  padding-top: var(--token-component-padding-y-field-sm);
+  padding-bottom: var(--token-component-padding-y-field-sm);
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   font-size: var(--token-component-font-size-field-sm);
-  /* Line-height matches content area */
   line-height: calc(var(--token-component-height-field-sm) - var(--token-component-padding-y-field-sm) * 2);
 }
 
@@ -283,12 +279,10 @@
   height: var(--token-component-height-field-lg);
   padding-inline-start: var(--token-component-padding-x-field-lg);
   padding-inline-end: var(--token-component-padding-x-field-lg);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-lg) + 1px);
-  padding-bottom: calc(var(--token-component-padding-y-field-lg) - 1px);
+  padding-top: var(--token-component-padding-y-field-lg);
+  padding-bottom: var(--token-component-padding-y-field-lg);
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   font-size: var(--token-component-font-size-field-lg);
-  /* Line-height matches content area */
   line-height: calc(var(--token-component-height-field-lg) - var(--token-component-padding-y-field-lg) * 2);
 }
 

@@ -23,7 +23,6 @@ import comboboxTokens from '../tokens/system/componentTokens/components/combobox
 import datepickerTokens from '../tokens/system/componentTokens/components/datepicker.json';
 import dividerTokens from '../tokens/system/componentTokens/components/divider.json';
 import drawerTokens from '../tokens/system/componentTokens/components/drawer.json';
-import dropdownTokens from '../tokens/system/componentTokens/components/dropdown.json';
 import durationpickerTokens from '../tokens/system/componentTokens/components/durationpicker.json';
 import fieldTokens from '../tokens/system/componentTokens/components/field.json';
 import fileTokens from '../tokens/system/componentTokens/components/file.json';
@@ -33,7 +32,6 @@ import imageTokens from '../tokens/system/componentTokens/components/image.json'
 import inputTokens from '../tokens/system/componentTokens/components/input.json';
 import inputnumberTokens from '../tokens/system/componentTokens/components/inputnumber.json';
 import linkTokens from '../tokens/system/componentTokens/components/link.json';
-import loadingTokens from '../tokens/system/componentTokens/components/loading.json';
 import menuTokens from '../tokens/system/componentTokens/components/menu.json';
 import modalTokens from '../tokens/system/componentTokens/components/modal.json';
 import notificationTokens from '../tokens/system/componentTokens/components/notification.json';
@@ -76,7 +74,6 @@ const tokenRegistry: Record<string, any> = {
   datepicker: datepickerTokens,
   divider: dividerTokens,
   drawer: drawerTokens,
-  dropdown: dropdownTokens,
   durationpicker: durationpickerTokens,
   field: fieldTokens,
   file: fileTokens,
@@ -86,7 +83,6 @@ const tokenRegistry: Record<string, any> = {
   input: inputTokens,
   inputnumber: inputnumberTokens,
   link: linkTokens,
-  loading: loadingTokens,
   menu: menuTokens,
   modal: modalTokens,
   notification: notificationTokens,

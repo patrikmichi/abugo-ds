@@ -3,7 +3,7 @@
 
 .skeleton {
   display: flex;
-  gap: var(--token-semantic-gap-md, 16px);
+  gap: var(--token-component-skeleton-gap-container, 16px);
   width: 100%;
 }
 
@@ -65,7 +65,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--token-semantic-gap-xs, 8px);
+  gap: var(--token-component-skeleton-gap-item, 8px);
 }
 
 /* Title */
@@ -87,13 +87,13 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--token-semantic-gap-xs, 8px);
+  gap: var(--token-component-skeleton-gap-item, 8px);
 }
 
 .paragraph li {
   background: var(--token-component-skeleton-background, #f2f2f2);
   border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
-  height: var(--token-component-skeleton-paragraph-line-height, 16px);
+  height: var(--token-component-line-height-skeleton-paragraph, 16px);
   width: 100%;
 }
 

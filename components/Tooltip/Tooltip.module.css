@@ -2,7 +2,7 @@
 
 .tooltip {
   position: fixed;
-  z-index: var(--token-semantic-z-index-tooltip, 1060);
+  z-index: var(--token-component-tooltip-z-index, 1060);
   pointer-events: none;
   max-width: var(--token-component-tooltip-max-width, 250px);
   word-wrap: break-word;
@@ -17,12 +17,12 @@
 .content {
   background-color: var(--token-component-tooltip-container-background);
   color: var(--token-component-tooltip-container-content);
-  padding: var(--token-semantic-padding-xxxs, 4px) var(--token-semantic-padding-xxs, 8px);
-  border-radius: calc(var(--token-semantic-radius-xs, 4px) * 1px);
-  font-size: var(--token-semantic-typography-body-size-xs, 12px);
-  line-height: var(--token-semantic-typography-body-line-xs, 1.5);
+  padding: var(--token-component-tooltip-padding-y, 4px) var(--token-component-tooltip-padding-x, 8px);
+  border-radius: calc(var(--token-component-tooltip-radius, 4px) * 1px);
+  font-size: var(--token-component-tooltip-font-size, 12px);
+  line-height: var(--token-component-tooltip-line-height, 1.5);
   font-family: var(--token-primitive-typography-font-family-sans);
-  box-shadow: var(--token-semantic-shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.15));
+  box-shadow: var(--token-component-tooltip-shadow, 0 2px 8px rgba(0, 0, 0, 0.15));
   position: relative;
   white-space: normal;
   word-break: break-word;

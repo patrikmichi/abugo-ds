@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { Menu } from '@/components/Menu';
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Components/Breadcrumbs',
@@ -35,30 +34,6 @@ export const WithHomeIcon: Story = {
         <Breadcrumbs.Item>Current Page</Breadcrumbs.Item>
       </Breadcrumbs>
     );
-  },
-};
-
-export const WithRoutes: Story = {
-  render: () => {
-    const routes = [
-      { path: '/', breadcrumbName: 'Home' },
-      { path: '/category', breadcrumbName: 'Category' },
-      { path: '/category/product', breadcrumbName: 'Product' },
-    ];
-
-    return <Breadcrumbs routes={routes} />;
-  },
-};
-
-export const WithRoutesAndHomeIcon: Story = {
-  render: () => {
-    const routes = [
-      { path: '/', breadcrumbName: 'Home' },
-      { path: '/category', breadcrumbName: 'Category' },
-      { path: '/category/product', breadcrumbName: 'Product' },
-    ];
-
-    return <Breadcrumbs routes={routes} homeIcon />;
   },
 };
 
@@ -129,13 +104,12 @@ export const WithDropdown: Story = {
       <Breadcrumbs>
         <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
         <Breadcrumbs.Item
-          menu={
-            <Menu>
-              <Menu.Item key="1">Option 1</Menu.Item>
-              <Menu.Item key="2">Option 2</Menu.Item>
-              <Menu.Item key="3">Option 3</Menu.Item>
-            </Menu>
-          }
+          menuItems={[
+            { key: '1', label: 'Option 1' },
+            { key: '2', label: 'Option 2' },
+            { key: '3', label: 'Option 3' },
+          ]}
+          onMenuItemClick={(key) => console.log('Selected:', key)}
         >
           Category
         </Breadcrumbs.Item>
@@ -151,13 +125,12 @@ export const AllFeatures: Story = {
       <Breadcrumbs separator=" / ">
         <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
         <Breadcrumbs.Item
-          menu={
-            <Menu>
-              <Menu.Item key="1">Electronics</Menu.Item>
-              <Menu.Item key="2">Clothing</Menu.Item>
-              <Menu.Item key="3">Books</Menu.Item>
-            </Menu>
-          }
+          menuItems={[
+            { key: '1', label: 'Electronics' },
+            { key: '2', label: 'Clothing' },
+            { key: '3', label: 'Books' },
+          ]}
+          onMenuItemClick={(key) => console.log('Selected category:', key)}
         >
           Products
         </Breadcrumbs.Item>

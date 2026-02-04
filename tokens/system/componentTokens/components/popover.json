@@ -26,5 +26,14 @@
     "$type": "boxShadow",
     "$value": "{shadow.md}",
     "$collectionName": "semanticTokens"
+  },
+  "padding": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.m}"
   }
 }

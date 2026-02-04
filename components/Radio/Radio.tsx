@@ -1,9 +1,6 @@
-import React, { useState, useCallback, useContext, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import styles from './Radio.module.css';
 import { cn } from '@/lib/utils';
-
-export type RadioSize = 'small' | 'middle' | 'large';
-export type RadioButtonStyle = 'outline' | 'solid';
 
 export interface RadioChangeEvent {
   target: {
@@ -24,12 +21,8 @@ export interface RadioProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
   value?: any;
   /** Whether radio is disabled */
   disabled?: boolean;
-  /** Auto focus */
-  autoFocus?: boolean;
   /** Callback when radio state changes */
   onChange?: (e: RadioChangeEvent) => void;
-  /** Size of radio */
-  size?: RadioSize;
   /** Custom class name */
   className?: string;
   /** Custom style */
@@ -44,34 +37,25 @@ interface RadioGroupContextType {
   onChange?: (e: RadioChangeEvent) => void;
   disabled?: boolean;
   name?: string;
-  size?: RadioSize;
-  buttonStyle?: RadioButtonStyle;
 }
 
 const RadioGroupContext = React.createContext<RadioGroupContextType | null>(null);
 
 /**
  * Radio Component
- * 
+ *
  * Radio button component for single selection within a group.
- * Supports single selection within a group.
- * 
+ *
  * @example
  * ```tsx
  * // Basic usage
  * <Radio value="option1">Option 1</Radio>
  * <Radio value="option2">Option 2</Radio>
- * 
+ *
  * // With Radio.Group
  * <Radio.Group value={value} onChange={(e) => setValue(e.target.value)}>
  *   <Radio value="apple">Apple</Radio>
  *   <Radio value="orange">Orange</Radio>
- * </Radio.Group>
- * 
- * // Radio buttons (button style)
- * <Radio.Group buttonStyle="outline" defaultValue="a">
- *   <Radio.Button value="a">Hangzhou</Radio.Button>
- *   <Radio.Button value="b">Shanghai</Radio.Button>
  * </Radio.Group>
  * ```
  */
@@ -80,9 +64,7 @@ export function Radio({
   defaultChecked = false,
   value,
   disabled: propDisabled,
-  autoFocus = false,
   onChange,
-  size: propSize,
   className,
   style,
   children,
@@ -91,7 +73,6 @@ export function Radio({
 }: RadioProps) {
   const groupContext = useContext(RadioGroupContext);
   const [internalChecked, setInternalChecked] = useState(defaultChecked);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const isControlled = controlledChecked !== undefined;
   const checked = isControlled
@@ -101,14 +82,7 @@ export function Radio({
       : internalChecked;
 
   const disabled = propDisabled ?? groupContext?.disabled ?? false;
-  const size = propSize ?? groupContext?.size ?? 'middle';
   const name = propName ?? groupContext?.name;
-
-  useEffect(() => {
-    if (autoFocus && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [autoFocus]);
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -143,13 +117,11 @@ export function Radio({
         styles.radioWrapper,
         checked && styles.checked,
         disabled && styles.disabled,
-        styles[size],
         className
       )}
       style={style}
     >
       <input
-        ref={inputRef}
         type="radio"
         name={name}
         value={value}
@@ -180,10 +152,6 @@ export interface RadioGroupProps extends Omit<React.HTMLAttributes<HTMLDivElemen
   onChange?: (e: RadioChangeEvent) => void;
   /** Options array */
   options?: (string | RadioOption)[];
-  /** Size of radio buttons */
-  size?: RadioSize;
-  /** Button style */
-  buttonStyle?: RadioButtonStyle;
   /** Disable all radios */
   disabled?: boolean;
   /** Name attribute */
@@ -198,10 +166,10 @@ export interface RadioGroupProps extends Omit<React.HTMLAttributes<HTMLDivElemen
 
 /**
  * Radio Group Component
- * 
+ *
  * Group of radio buttons. Only one radio can be selected at a time.
  * Supports both children and options prop.
- * 
+ *
  * @example
  * ```tsx
  * // Using children
@@ -209,7 +177,7 @@ export interface RadioGroupProps extends Omit<React.HTMLAttributes<HTMLDivElemen
  *   <Radio value="option1">Option 1</Radio>
  *   <Radio value="option2">Option 2</Radio>
  * </Radio.Group>
- * 
+ *
  * // Using options prop
  * <Radio.Group
  *   options={[
@@ -225,8 +193,6 @@ export function RadioGroup({
   defaultValue,
   onChange,
   options,
-  size = 'middle',
-  buttonStyle,
   disabled = false,
   name,
   className,
@@ -253,20 +219,13 @@ export function RadioGroup({
     onChange: handleChange,
     disabled,
     name,
-    size,
-    buttonStyle,
   };
 
   if (options) {
     return (
       <RadioGroupContext.Provider value={contextValue}>
         <div
-          className={cn(
-            styles.radioGroup,
-            buttonStyle && styles[buttonStyle],
-            styles[size],
-            className
-          )}
+          className={cn(styles.radioGroup, className)}
           style={style}
           role="radiogroup"
           {...props}
@@ -281,7 +240,6 @@ export function RadioGroup({
                 key={typeof optionValue === 'string' || typeof optionValue === 'number' ? optionValue : index}
                 value={optionValue}
                 disabled={optionDisabled || disabled}
-                size={size}
               >
                 {optionLabel}
               </Radio>
@@ -306,42 +264,9 @@ export function RadioGroup({
   );
 }
 
-export interface RadioButtonProps extends RadioProps {
-  /** Button style */
-  buttonStyle?: RadioButtonStyle;
-}
-
-/**
- * Radio Button Component
- * 
- * Radio styled as a button. Used within Radio.Group with buttonStyle prop.
- * Supports 'outline' and 'solid' styles.
- * 
- * @example
- * ```tsx
- * <Radio.Group buttonStyle="outline" defaultValue="a">
- *   <Radio.Button value="a">Hangzhou</Radio.Button>
- *   <Radio.Button value="b">Shanghai</Radio.Button>
- *   <Radio.Button value="c">Beijing</Radio.Button>
- * </Radio.Group>
- * ```
- */
-export function RadioButton({
-  buttonStyle = 'outline',
-  className,
-  ...props
-}: RadioButtonProps) {
-  const groupContext = useContext(RadioGroupContext);
-  const finalButtonStyle = buttonStyle || groupContext?.buttonStyle || 'outline';
-
-  return (
-    <Radio
-      {...props}
-      className={cn(styles.radioButton, styles[finalButtonStyle], className)}
-    />
-  );
-}
-
 // Attach sub-components
-(Radio as any).Group = RadioGroup;
-(Radio as any).Button = RadioButton;
+Radio.Group = RadioGroup;
+
+export namespace Radio {
+  export type Group = typeof RadioGroup;
+}

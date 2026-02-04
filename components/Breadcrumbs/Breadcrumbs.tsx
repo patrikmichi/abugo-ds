@@ -1,28 +1,12 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import styles from './Breadcrumbs.module.css';
 import { cn } from '@/lib/utils';
 import { Link } from '@/components/Link';
-import { Dropdown } from '@/components/Dropdown';
-import { Menu } from '@/components/Menu';
-
-export interface BreadcrumbRoute {
-  path: string;
-  breadcrumbName: string;
-  children?: BreadcrumbRoute[];
-}
+import { ActionMenu, type ActionMenuItem } from '@/components/ActionMenu';
 
 export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
   /** Custom separator */
   separator?: React.ReactNode;
-  /** Routes array */
-  routes?: BreadcrumbRoute[];
-  /** Custom item renderer */
-  itemRender?: (
-    route: BreadcrumbRoute,
-    params: any,
-    routes: BreadcrumbRoute[],
-    paths: string[]
-  ) => React.ReactNode;
   /** Whether to show home as icon instead of link */
   homeIcon?: boolean;
   /** Custom class name */
@@ -47,94 +31,41 @@ export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
  */
 export function Breadcrumbs({
   separator = '/',
-  routes,
-  itemRender,
   homeIcon = false,
   className,
   children,
   ...props
 }: BreadcrumbsProps) {
-  // Render from routes if provided
-  const renderFromRoutes = useMemo(() => {
-    if (!routes || routes.length === 0) return null;
+  const childrenArray = React.Children.toArray(children);
 
-    const paths: string[] = [];
-    const params: any = {};
-
-    return routes.map((route, index) => {
-      paths.push(route.path);
-      const isLast = index === routes.length - 1;
-      const isFirst = index === 0;
-
-      let content: React.ReactNode;
-      if (itemRender) {
-        content = itemRender(route, params, routes, paths);
-      } else if (isFirst && homeIcon) {
-        content = (
-          <Link href={paths.join('/')} className={styles.link}>
-            <span className="material-symbols-outlined" style={{ fontSize: '20px', width: '20px', height: '20px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-              home
-            </span>
-          </Link>
-        );
-      } else {
-        content = isLast ? (
-          <span className={styles.item}>{route.breadcrumbName}</span>
-        ) : (
-          <Link href={paths.join('/')} className={styles.link}>
-            {route.breadcrumbName}
-          </Link>
-        );
-      }
-
-      return (
-        <React.Fragment key={route.path || index}>
-          {index > 0 && <span className={styles.separator}>{separator}</span>}
-          {content}
-        </React.Fragment>
-      );
-    });
-  }, [routes, itemRender, separator]);
-
-  // Render from children if provided
-  if (children) {
-    const childrenArray = React.Children.toArray(children);
-    return (
-      <nav className={cn(styles.breadcrumbs, className)} aria-label="Breadcrumb" {...props}>
-        <ol className={styles.list}>
-          {childrenArray.map((child, index) => {
-            const isFirst = index === 0;
-            // If homeIcon is true and this is the first child, render icon instead
-            if (isFirst && homeIcon && React.isValidElement(child)) {
-              const childProps = child.props as BreadcrumbItemProps;
-              return (
-                <React.Fragment key={index}>
-                  <li className={cn(styles.breadcrumbItem, childProps.className)}>
-                    <Link href={childProps.href || '#'} variant="secondary" onClick={childProps.onClick}>
-                      <span className="material-symbols-outlined" style={{ fontSize: '20px', width: '20px', height: '20px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-                        home
-                      </span>
-                    </Link>
-                  </li>
-                </React.Fragment>
-              );
-            }
-            return (
-              <React.Fragment key={index}>
-                {index > 0 && <span className={styles.separator}>{separator}</span>}
-                {child}
-              </React.Fragment>
-            );
-          })}
-        </ol>
-      </nav>
-    );
-  }
-
-  // Render from routes
   return (
     <nav className={cn(styles.breadcrumbs, className)} aria-label="Breadcrumb" {...props}>
-      <ol className={styles.list}>{renderFromRoutes}</ol>
+      <ol className={styles.list}>
+        {childrenArray.map((child, index) => {
+          const isFirst = index === 0;
+          // If homeIcon is true and this is the first child, render icon instead
+          if (isFirst && homeIcon && React.isValidElement(child)) {
+            const childProps = child.props as BreadcrumbItemProps;
+            return (
+              <React.Fragment key={index}>
+                <li className={cn(styles.breadcrumbItem, childProps.className)}>
+                  <Link href={childProps.href || '#'} variant="secondary" onClick={childProps.onClick}>
+                    <span className="material-symbols-outlined" style={{ fontSize: '20px', width: '20px', height: '20px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: 'var(--token-component-breadcrumbs-link-icon-color, #464646)' }}>
+                      home
+                    </span>
+                  </Link>
+                </li>
+              </React.Fragment>
+            );
+          }
+          return (
+            <React.Fragment key={index}>
+              {index > 0 && <span className={styles.separator}>{separator}</span>}
+              {child}
+            </React.Fragment>
+          );
+        })}
+      </ol>
     </nav>
   );
 }
@@ -144,10 +75,10 @@ export interface BreadcrumbItemProps extends React.LiHTMLAttributes<HTMLLIElemen
   href?: string;
   /** Click handler */
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  /** Dropdown menu */
-  menu?: React.ReactNode;
-  /** Dropdown props */
-  dropdownProps?: any;
+  /** Dropdown menu items */
+  menuItems?: ActionMenuItem[];
+  /** Callback when a menu item is clicked */
+  onMenuItemClick?: (key: string) => void;
   /** Custom class name */
   className?: string;
   /** Children */
@@ -162,8 +93,8 @@ export interface BreadcrumbItemProps extends React.LiHTMLAttributes<HTMLLIElemen
 export function BreadcrumbItem({
   href,
   onClick,
-  menu,
-  dropdownProps,
+  menuItems,
+  onMenuItemClick,
   className,
   children,
   ...props
@@ -178,21 +109,17 @@ export function BreadcrumbItem({
     </span>
   );
 
-  if (menu) {
+  if (menuItems && menuItems.length > 0) {
     return (
       <li className={cn(styles.breadcrumbItem, className)} {...props}>
-        <Dropdown
-          overlay={menu}
-          trigger="click"
-          {...dropdownProps}
-        >
+        <ActionMenu items={menuItems} placement="bottomLeft" onItemClick={onMenuItemClick}>
           <span className={styles.itemWithDropdown}>
             {content}
-            <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)', marginLeft: 'var(--token-primitive-spacing-1)' }}>
+            <span className="material-symbols-outlined" style={{ fontSize: '20px', marginLeft: '4px' }}>
               expand_more
             </span>
           </span>
-        </Dropdown>
+        </ActionMenu>
       </li>
     );
   }

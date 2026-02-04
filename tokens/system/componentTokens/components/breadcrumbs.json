@@ -35,5 +35,53 @@
     "$libraryName": "",
     "$collectionName": "semanticTokens",
     "$value": "{background.passive.neutral.elevated}"
+  },
+  "item": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}",
+      "$description": "Text color for current/last breadcrumb item (#464646)"
+    }
+  },
+  "separator": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}",
+      "$description": "Color for breadcrumb separator (#464646)"
+    }
+  },
+  "link": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}",
+      "$description": "Color for breadcrumb link text (#464646)"
+    },
+    "icon": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Color for breadcrumb icons (#464646)"
+      }
+    }
   }
 }

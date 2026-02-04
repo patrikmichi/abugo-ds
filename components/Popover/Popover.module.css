@@ -11,7 +11,7 @@
   border: var(--token-component-border-width-popover) solid var(--token-component-popover-border);
   border-radius: calc(var(--token-component-radius-popover) * 1px);
   box-shadow: var(--token-component-shadow-popover);
-  padding: var(--token-semantic-padding-m);
+  padding: var(--token-component-popover-padding);
   z-index: var(--token-component-z-index-popover);
   min-width: 200px;
   max-width: 400px;

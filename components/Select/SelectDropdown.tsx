@@ -107,11 +107,14 @@ export const SelectDropdown = forwardRef<SelectDropdownRef, SelectDropdownProps>
 
       const triggerRect = trigger.getBoundingClientRect();
 
-      // Calculate width
+      // Calculate width and set it before domAlign so overflow adjustments are accurate
       const width = matchTriggerWidth ? triggerRect.width : undefined;
+      if (width) {
+        dropdown.style.width = `${width}px`;
+      }
 
       // Get offset from CSS variable
-      const offsetVar = getComputedStyle(document.documentElement).getPropertyValue('--token-component-select-dropdown-offset') || '4px';
+      const offsetVar = getComputedStyle(document.documentElement).getPropertyValue('--token-component-gap-select-dropdown-offset') || '4px';
       const offsetVal = parseInt(offsetVar, 10) || 4;
 
       // Use dom-align for positioning
@@ -232,6 +235,7 @@ export const SelectDropdown = forwardRef<SelectDropdownRef, SelectDropdownProps>
         top: position ? `${position.top}px` : '-9999px',
         left: position ? `${position.left}px` : '-9999px',
         width: position?.width ? `${position.width}px` : undefined,
+        minWidth: position?.width ? `${position.width}px` : undefined,
         visibility: position ? 'visible' : 'hidden',
       }}
       tabIndex={-1}

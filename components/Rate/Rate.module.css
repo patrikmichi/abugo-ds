@@ -79,7 +79,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .rating {
-    font-size: var(--token-component-rating-font-size-mobile, 18px);
-    gap: var(--token-component-rating-gap-mobile, 2px);
+    font-size: var(--token-component-font-size-rating-mobile, 18px);
+    gap: var(--token-component-gap-rating-mobile, 2px);
   }
 }

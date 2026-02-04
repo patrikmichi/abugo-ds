@@ -1,22 +1,35 @@
 ---
-description: "Rules for creating and managing helper scripts in the tokens/scripts folder"
+description: "Rules for creating and managing token and build scripts"
 alwaysApply: true
 globs:
   - "tokens/scripts/**/*.{js,ts,mjs}"
+  - "scripts/**/*.{js,ts,mjs}"
 ---
 
 # Script Management Rules
 
 ## Long-Term Scripts
 
-These scripts are part of the permanent build and development workflow:
+### tokens/scripts/ (build and tokens)
 
-- `merge-tokens.ts` - Merges token subfolders into main JSON files for Tokens Studio
-- `split-tokens.js` - Splits main JSON files into organized subfolders
-- `generate-docs.js` - Generates documentation from token files
-- `load-tokens.ts` - Loads tokens from subfolders for Storybook
+- `merge-tokens.ts` - Merges `tokens/system/*` into `tokens/output/*.json`. Run first (`npm run build:tokens`) before `build:css-variables`.
+- `generate-css-variables.ts` - Generates `styles/tokens.css`. Prefers `tokens/output/*.json` when present; otherwise uses `load-tokens.ts`. Run `npm run build:css-variables`.
+- `load-tokens.ts` - Loads tokens from `tokens/system/` for programmatic use (e.g. generator fallback, tooling).
+- `split-tokens.js` - Splits main JSON files into organized subfolders.
+- `generate-docs.js` - Generates documentation from token files.
+- `validate-tokens.ts`, `validateFigmaTokens.ts` - Token validation.
+- `generate-components.ts`, `generate-token-types.ts` - Codegen for components and types.
 
-**Never delete these scripts** unless they are replaced by improved versions.
+**Never delete these** unless replaced by improved versions.
+
+### scripts/ (repo root, analysis and migrations)
+
+- `analyze-component-tokens.js` - Counts leaf tokens, unique CSS vars, duplicates, value reuse. Run on `tokens/output/componentTokens.json`. `node scripts/analyze-component-tokens.js`
+- `diagnose-missing-component-vars.mjs` - Diffs `tokens/output/componentTokens.json` vs `styles/tokens.css` to find missing or duplicate `--token-component-*`. `node scripts/diagnose-missing-component-vars.mjs`. Prereq: `build:tokens` and `build:css-variables`.
+- `move-to-shared-tokens.js` - Moves typography, padding, gap, radius, height from `tokens/system/componentTokens/components/*.json` into `tokens/system/componentTokens/shared/*.json` and writes `token-component-var-map.json` (old → new `--token-component-*`). `node scripts/move-to-shared-tokens.js`
+- `apply-token-var-map.js` - Applies renames from `token-component-var-map.json` to `components/**` and `styles/**` (.css, .ts, .tsx). Run after `move-to-shared-tokens.js`. `node scripts/apply-token-var-map.js`
+
+**Build order:** `npm run build:tokens` → `npm run build:css-variables`. The generator uses `tokens/output/` when it exists so counts stay in sync with `merge-tokens` and `analyze-component-tokens`.
 
 ## Helper Scripts
 
@@ -60,10 +73,10 @@ Scripts used for one-time migrations (e.g., color scale migration) should be:
 
 ## Script Organization
 
-- All scripts should be in `tokens/scripts/`
-- Use TypeScript (`.ts`) for new scripts when possible
-- Use JavaScript (`.js`) for scripts that need to run in older Node.js environments
-- Use ES modules (`.mjs`) when needed for compatibility with specific tools
+- **tokens/scripts/** – Token build, merge, load, validate, codegen.
+- **scripts/** – Analysis, migrations, var-map; run from repo root.
+- Use TypeScript (`.ts`) for new scripts when possible.
+- Use JavaScript (`.js`) or `.mjs` when needed for Node/tooling.
 
 ## Best Practices
 
@@ -72,3 +85,14 @@ Scripts used for one-time migrations (e.g., color scale migration) should be:
 3. **Use descriptive console output** to show progress
 4. **Test scripts** on a small subset before running on all files
 5. **Delete temporary scripts** immediately after use
+
+## Quick Command Reference
+
+| Goal | Command |
+|------|---------|
+| Rebuild tokens + CSS | `npm run build:tokens && npm run build:css-variables` |
+| Rebuild + check component vars | `npm run build:tokens && npm run build:css-variables && node scripts/diagnose-missing-component-vars.mjs` |
+| Move to shared | `node scripts/move-to-shared-tokens.js` then `node scripts/apply-token-var-map.js` |
+| Validate tokens | `npm run validate:tokens` |
+| Lint unresolved refs | `npm run lint:unresolved-tokens` |
+| Analyze component tokens | `node scripts/analyze-component-tokens.js` (after `build:tokens`) |

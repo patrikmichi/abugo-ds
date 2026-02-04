@@ -12,13 +12,13 @@
 .field.hasWrapperCol {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: var(--token-semantic-gap-m, 16px);
+  gap: var(--token-component-field-gap-md, 16px);
   align-items: start;
 }
 
 .field.hasLabelCol .label {
   grid-column: 1;
-  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md));
+  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-component-field-optical-alignment-md));
 }
 
 .field.hasLabelCol .controlWrapper {
@@ -31,11 +31,11 @@
 }
 
 .field.sm.hasLabelCol {
-  gap: var(--token-semantic-gap-s, 12px);
+  gap: var(--token-component-field-gap-sm, 12px);
 }
 
 .field.sm.hasLabelCol .label {
-  padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm));
+  padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-component-field-optical-alignment-sm));
 }
 
 .field.md {
@@ -47,23 +47,23 @@
 }
 
 .field.lg.hasLabelCol {
-  gap: var(--token-semantic-gap-l, 20px);
+  gap: var(--token-component-field-gap-lg, 20px);
 }
 
 .field.lg.hasLabelCol .label {
-  padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg));
+  padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-component-field-optical-alignment-lg));
 }
 
 /* Label styles */
 .label {
   font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-field-label-md);
-  font-weight: var(--token-primitive-typography-font-weight-medium);
+  font-weight: var(--token-primitive-typography-font-weight-bold);
   line-height: var(--token-component-line-height-field-label-md);
   color: var(--token-component-field-content-label-default);
   display: flex;
   align-items: center;
-  gap: var(--token-semantic-gap-xxs, 8px);
+  gap: var(--token-component-field-gap-xxs, 8px);
   margin: 0;
 }
 
@@ -102,24 +102,33 @@
 }
 
 
-/* Tooltip */
-.tooltip {
+/* Tooltip icon */
+.tooltipIcon {
   display: inline-flex;
   align-items: center;
-  color: var(--token-component-field-content-help);
+  justify-content: center;
+  color: var(--token-component-field-tooltip-icon-color, #464646);
   cursor: help;
   margin-left: 4px;
+  width: 20px;
+  height: 20px;
 }
 
-.tooltip:hover {
-  color: var(--token-component-field-content-label-default);
+.tooltipIcon .material-symbols-outlined {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.tooltipIcon:hover {
+  color: var(--token-component-field-tooltip-icon-color-hover, #464646);
 }
 
 /* Control wrapper */
 .controlWrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--token-semantic-gap-xxxs, 4px);
+  gap: var(--token-component-field-gap-control, 8px);
   width: 100%;
 }
 
@@ -128,8 +137,6 @@
   /* Ensure dropdowns are not clipped */
   overflow: visible;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 /* Feedback icon */
@@ -143,18 +150,21 @@
   justify-content: center;
   pointer-events: none;
   z-index: 1;
+  font-size: var(--token-component-field-feedback-icon-md);
+}
+
+.field.sm .feedbackIcon {
+  right: var(--token-component-padding-x-field-sm);
+  font-size: var(--token-component-field-feedback-icon-sm);
+}
+
+.field.lg .feedbackIcon {
+  right: var(--token-component-padding-x-field-lg);
+  font-size: var(--token-component-field-feedback-icon-lg);
 }
 
 .feedbackIcon.error {
   color: var(--token-component-field-content-error);
-}
-
-.feedbackIcon.warning {
-  color: var(--token-semantic-content-passive-warning-default, #faad14);
-}
-
-.feedbackIcon.success {
-  color: var(--token-semantic-content-passive-success-default, #52c41a);
 }
 
 .feedbackIcon.validating {
@@ -196,33 +206,6 @@
   line-height: var(--token-component-line-height-field-helper);
   color: var(--token-component-field-content-help);
   display: block;
-}
-
-/* Error state */
-.field.error .label {
-  color: var(--token-component-field-content-label-error);
-}
-
-.field.error .labelContent {
-  color: var(--token-component-field-content-label-error);
-}
-
-/* Warning state */
-.field.warning .label {
-  color: var(--token-semantic-content-passive-warning-default, #faad14);
-}
-
-.field.warning .labelContent {
-  color: var(--token-semantic-content-passive-warning-default, #faad14);
-}
-
-/* Success state */
-.field.success .label {
-  color: var(--token-semantic-content-passive-success-default, #52c41a);
-}
-
-.field.success .labelContent {
-  color: var(--token-semantic-content-passive-success-default, #52c41a);
 }
 
 /* Validating state */

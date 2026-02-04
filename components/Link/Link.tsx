@@ -39,6 +39,7 @@ export interface LinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorEle
  */
 export function Link({
   href,
+  variant = 'default',
   openNewTab = false,
   disabled = false,
   onClick,

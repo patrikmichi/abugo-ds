@@ -78,7 +78,7 @@
       "$type": "number",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{z-index.z-tooltip}",
+      "$value": "{z-tooltip}",
       "$description": "Tooltip z-index layer"
     },
     "drawer": {

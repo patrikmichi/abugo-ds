@@ -10,7 +10,13 @@ export {
   type AccordionSize,
   type AccordionExpandIconPosition,
 } from './Accordion';
-export { Alert, type AlertProps, type AlertType } from './Alert';
+export {
+  ActionMenu,
+  type ActionMenuProps,
+  type ActionMenuItem,
+  type ActionMenuPlacement,
+} from './ActionMenu';
+export { Alert, type AlertProps, type AlertType, type AlertSize, type AlertAction } from './Alert';
 export {
   Anchor,
   AnchorLink,
@@ -32,7 +38,6 @@ export {
   BreadcrumbItem,
   type BreadcrumbsProps,
   type BreadcrumbItemProps,
-  type BreadcrumbRoute,
 } from './Breadcrumbs';
 export { Button, type ButtonProps } from './Button';
 export { Card, CardGrid, CardMeta, type CardProps, type CardGridProps, type CardMetaProps, type CardSize, type CardType } from './Card';
@@ -43,7 +48,6 @@ export {
   type CheckboxGroupProps,
   type CheckboxChangeEvent,
   type CheckboxOption,
-  type CheckboxSize,
 } from './Checkbox';
 export { Chip, type ChipProps, type ChipSize } from './Chip';
 export {
@@ -99,7 +103,6 @@ export {
   type TimePickerValue,
 } from './Timepicker';
 export { Link, type LinkProps } from './Link';
-export { Loading, type LoadingProps } from './Loading';
 export {
   Menu,
   MenuItem,

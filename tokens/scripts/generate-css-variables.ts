@@ -60,6 +60,11 @@ function resolveTokenValue(
     return value;
   }
 
+  // Handle composite objects (border, typography, etc.) that can't be a single CSS value
+  if (typeof value === 'object' && value !== null) {
+    return '';
+  }
+
   if (typeof value === 'string') {
     // Check if it's a reference
     if (value.startsWith('{') && value.endsWith('}')) {
@@ -349,10 +354,33 @@ function collectDeprecatedTokens(
 }
 
 /**
+ * Load from merge-tokens output when available so component counts match
+ * merge-tokens and analyze. Fall back to loadTokens() otherwise.
+ */
+function loadTokenData(): {
+  primitives: Primitives;
+  semanticTokens: SemanticTokens;
+  componentTokens: ComponentTokens;
+} {
+  const outputDir = path.join(__dirname, '../output');
+  const outComp = path.join(outputDir, 'componentTokens.json');
+  const outPrim = path.join(outputDir, 'primitives.json');
+  const outSem = path.join(outputDir, 'semanticTokens.json');
+  if (fs.existsSync(outComp) && fs.existsSync(outPrim) && fs.existsSync(outSem)) {
+    return {
+      primitives: JSON.parse(fs.readFileSync(outPrim, 'utf8')) as Primitives,
+      semanticTokens: JSON.parse(fs.readFileSync(outSem, 'utf8')) as SemanticTokens,
+      componentTokens: JSON.parse(fs.readFileSync(outComp, 'utf8')) as ComponentTokens,
+    };
+  }
+  return loadTokens();
+}
+
+/**
  * Main function to generate CSS variables file
  */
 export function generateCssVariables(): void {
-  const { primitives, semanticTokens, componentTokens } = loadTokens();
+  const { primitives, semanticTokens, componentTokens } = loadTokenData();
 
   const primitiveVars = generatePrimitiveVariables(primitives);
   const semanticVars = generateSemanticVariables(semanticTokens, primitives);

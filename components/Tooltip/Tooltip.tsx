@@ -107,95 +107,30 @@ export function Tooltip({
   const triggers = Array.isArray(trigger) ? trigger : [trigger];
 
   // Calculate placement points for dom-align
+  // points: [sourcePoint (tooltip), targetPoint (trigger)]
   const getPlacementPoints = (placement: TooltipPlacement): [string, string] => {
     const basePlacement = placement.replace(/Left|Right|Top|Bottom/g, '') as 'top' | 'bottom' | 'left' | 'right';
-    
+
     if (basePlacement === 'top') {
-      if (placement.includes('Left')) return ['tl', 'bl'];
-      if (placement.includes('Right')) return ['tr', 'br'];
-      return ['tc', 'bc'];
-    }
-    if (basePlacement === 'bottom') {
       if (placement.includes('Left')) return ['bl', 'tl'];
       if (placement.includes('Right')) return ['br', 'tr'];
       return ['bc', 'tc'];
     }
+    if (basePlacement === 'bottom') {
+      if (placement.includes('Left')) return ['tl', 'bl'];
+      if (placement.includes('Right')) return ['tr', 'br'];
+      return ['tc', 'bc'];
+    }
     if (basePlacement === 'left') {
-      if (placement.includes('Top')) return ['tl', 'tr'];
-      if (placement.includes('Bottom')) return ['bl', 'br'];
-      return ['cl', 'cr'];
+      if (placement.includes('Top')) return ['tr', 'tl'];
+      if (placement.includes('Bottom')) return ['br', 'bl'];
+      return ['cr', 'cl'];
     }
     // right
-    if (placement.includes('Top')) return ['tr', 'tl'];
-    if (placement.includes('Bottom')) return ['br', 'bl'];
-    return ['cr', 'cl'];
+    if (placement.includes('Top')) return ['tl', 'tr'];
+    if (placement.includes('Bottom')) return ['bl', 'br'];
+    return ['cl', 'cr'];
   };
-
-  // Update position when tooltip opens
-  useEffect(() => {
-    if (!open || !triggerRef.current || !tooltipRef.current) {
-      setPosition(null);
-      return;
-    }
-
-    const updatePosition = () => {
-      const trigger = triggerRef.current;
-      const tooltip = tooltipRef.current;
-      if (!trigger || !tooltip) return;
-
-      // Ensure tooltip is visible for measurement
-      tooltip.style.visibility = 'hidden';
-      tooltip.style.display = 'block';
-
-      const [sourcePoint, targetPoint] = getPlacementPoints(placement);
-      const gap = 8;
-
-      const alignConfig = {
-        points: [sourcePoint, targetPoint],
-        offset: [0, gap],
-        overflow: {
-          adjustX: autoAdjustOverflow,
-          adjustY: autoAdjustOverflow,
-          alwaysByViewport: true,
-        },
-        useCssTransform: false,
-        useCssRight: false,
-        useCssBottom: false,
-      };
-
-      // Perform alignment
-      domAlign(tooltip, trigger, alignConfig);
-
-      // Get final position
-      const computedStyle = window.getComputedStyle(tooltip);
-      const top = parseFloat(computedStyle.top) || 0;
-      const left = parseFloat(computedStyle.left) || 0;
-
-      setPosition({ top, left });
-      tooltip.style.visibility = 'visible';
-    };
-
-    // Small delay to ensure tooltip is rendered
-    const timer = setTimeout(updatePosition, 0);
-    window.addEventListener('resize', updatePosition);
-    window.addEventListener('scroll', updatePosition, true);
-
-    // Handle hover on tooltip itself when hover trigger is used
-    if (tooltip && triggers.includes('hover')) {
-      tooltip.addEventListener('mouseenter', handleOpen);
-      tooltip.addEventListener('mouseleave', handleClose);
-    }
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', updatePosition);
-      window.removeEventListener('scroll', updatePosition, true);
-      if (tooltip && triggers.includes('hover')) {
-        tooltip.removeEventListener('mouseenter', handleOpen);
-        tooltip.removeEventListener('mouseleave', handleClose);
-      }
-    };
-  }, [open, placement, autoAdjustOverflow, triggers, handleOpen, handleClose]);
 
   const handleOpen = useCallback(() => {
     if (leaveTimerRef.current) {
@@ -232,6 +167,79 @@ export function Tooltip({
       onOpenChange?.(false);
     }, mouseLeaveDelay * 1000);
   }, [isControlled, onOpenChange, mouseLeaveDelay]);
+
+  // Update position when tooltip opens
+  useEffect(() => {
+    if (!open || !triggerRef.current || !tooltipRef.current) {
+      setPosition(null);
+      return;
+    }
+
+    const updatePosition = () => {
+      const trigger = triggerRef.current;
+      const tooltip = tooltipRef.current;
+      if (!trigger || !tooltip) return;
+
+      // Ensure tooltip is visible for measurement
+      tooltip.style.visibility = 'hidden';
+      tooltip.style.display = 'block';
+
+      const [sourcePoint, targetPoint] = getPlacementPoints(placement);
+      const gap = 8;
+      const basePlc = placement.replace(/Left|Right|Top|Bottom/g, '') as 'top' | 'bottom' | 'left' | 'right';
+      const offset: [number, number] =
+        basePlc === 'top' ? [0, -gap] :
+        basePlc === 'bottom' ? [0, gap] :
+        basePlc === 'left' ? [-gap, 0] :
+        [gap, 0];
+
+      const alignConfig = {
+        points: [sourcePoint, targetPoint],
+        offset,
+        overflow: {
+          adjustX: autoAdjustOverflow,
+          adjustY: autoAdjustOverflow,
+          alwaysByViewport: true,
+        },
+        useCssTransform: false,
+        useCssRight: false,
+        useCssBottom: false,
+      };
+
+      // Perform alignment
+      domAlign(tooltip, trigger, alignConfig);
+
+      // Get final position
+      const computedStyle = window.getComputedStyle(tooltip);
+      const top = parseFloat(computedStyle.top) || 0;
+      const left = parseFloat(computedStyle.left) || 0;
+
+      setPosition({ top, left });
+      tooltip.style.visibility = 'visible';
+    };
+
+    // Small delay to ensure tooltip is rendered
+    const timer = setTimeout(updatePosition, 0);
+    window.addEventListener('resize', updatePosition);
+    window.addEventListener('scroll', updatePosition, true);
+
+    // Handle hover on tooltip itself when hover trigger is used
+    const tooltipElement = tooltipRef.current;
+    if (tooltipElement && triggers.includes('hover')) {
+      tooltipElement.addEventListener('mouseenter', handleOpen);
+      tooltipElement.addEventListener('mouseleave', handleClose);
+    }
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', updatePosition);
+      window.removeEventListener('scroll', updatePosition, true);
+      if (tooltipElement && triggers.includes('hover')) {
+        tooltipElement.removeEventListener('mouseenter', handleOpen);
+        tooltipElement.removeEventListener('mouseleave', handleClose);
+      }
+    };
+  }, [open, placement, autoAdjustOverflow, triggers, handleOpen, handleClose]);
 
   // Setup event handlers
   useEffect(() => {

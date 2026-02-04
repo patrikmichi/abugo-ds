@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Accordion } from '@/components/Accordion';
-import { Button } from '@/components/Button';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Components/Accordion',
@@ -16,15 +15,16 @@ const meta: Meta<typeof Accordion> = {
     accordion: {
       control: 'boolean',
     },
-    ghost: {
-      control: 'boolean',
-    },
-    bordered: {
+    panel: {
       control: 'boolean',
     },
     size: {
       control: 'select',
       options: ['small', 'middle', 'large'],
+    },
+    expandIconPosition: {
+      control: 'select',
+      options: ['start', 'end'],
     },
   },
 };
@@ -123,29 +123,6 @@ export const Sizes: Story = {
   ),
 };
 
-export const WithExtra: Story = {
-  render: () => (
-    <div style={{ maxWidth: '600px' }}>
-      <Accordion defaultActiveKey="1">
-        <Accordion.Panel
-          key="1"
-          header="Panel with Extra"
-          extra={<span style={{ fontSize: '12px' }}>Extra content</span>}
-        >
-          <p>This panel has extra content in the header.</p>
-        </Accordion.Panel>
-        <Accordion.Panel
-          key="2"
-          header="Panel with Button"
-          extra={<Button size="sm" variant="text">Action</Button>}
-        >
-          <p>This panel has a button in the header.</p>
-        </Accordion.Panel>
-      </Accordion>
-    </div>
-  ),
-};
-
 export const Disabled: Story = {
   render: () => (
     <div style={{ maxWidth: '600px' }}>
@@ -158,35 +135,6 @@ export const Disabled: Story = {
         </Accordion.Panel>
         <Accordion.Panel key="3" header="Another Enabled Panel">
           <p>This panel is also enabled.</p>
-        </Accordion.Panel>
-      </Accordion>
-    </div>
-  ),
-};
-
-export const CustomIcon: Story = {
-  render: () => (
-    <div style={{ maxWidth: '600px' }}>
-      <Accordion
-        defaultActiveKey="1"
-        expandIcon={({ isActive }) => (
-          <span
-            className="material-symbols-outlined"
-            style={{
-              fontSize: '16px',
-              transform: isActive ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.3s ease',
-            }}
-          >
-            expand_more
-          </span>
-        )}
-      >
-        <Accordion.Panel key="1" header="Custom Icon Panel">
-          <p>This panel uses a custom expand icon.</p>
-        </Accordion.Panel>
-        <Accordion.Panel key="2" header="Another Panel">
-          <p>This panel also uses the custom icon.</p>
         </Accordion.Panel>
       </Accordion>
     </div>
@@ -295,11 +243,7 @@ export const AllFeatures: Story = {
         size="middle"
         expandIconPosition="end"
       >
-        <Accordion.Panel
-          key="1"
-          header="Feature-Rich Panel"
-          extra={<span style={{ fontSize: '12px', color: '#666' }}>Extra</span>}
-        >
+        <Accordion.Panel key="1" header="Feature-Rich Panel">
           <p>This panel demonstrates all features working together.</p>
         </Accordion.Panel>
         <Accordion.Panel key="2" header="Another Panel">

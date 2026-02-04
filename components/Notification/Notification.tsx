@@ -2,13 +2,24 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './Notification.module.css';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/Button';
 
 export type NotificationType = 'success' | 'error' | 'info' | 'warning';
 export type NotificationPlacement = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
 
-export interface NotificationProps {
-  /** Type of notification */
-  type?: NotificationType;
+export interface NotificationAction {
+  /** Button label */
+  label: React.ReactNode;
+  /** Click handler */
+  onClick?: () => void;
+  /** Button variant (default: secondary) */
+  variant?: 'primary' | 'secondary' | 'danger' | 'tertiary' | 'upgrade';
+  /** Button appearance (default: filled) */
+  appearance?: 'filled' | 'plain' | 'outline';
+}
+
+/** Shared config for opening notifications via static methods */
+export interface NotificationOpenConfig {
   /** Title of notification */
   message: React.ReactNode;
   /** Description/content of notification */
@@ -23,7 +34,9 @@ export interface NotificationProps {
   icon?: React.ReactNode;
   /** Custom close icon */
   closeIcon?: React.ReactNode;
-  /** Custom button */
+  /** Action buttons — rendered as Button size="sm" */
+  actions?: NotificationAction | NotificationAction[];
+  /** @deprecated Use actions instead */
   btn?: React.ReactNode;
   /** Unique key for notification */
   key?: string;
@@ -35,9 +48,16 @@ export interface NotificationProps {
   style?: React.CSSProperties;
 }
 
+export interface NotificationProps extends Omit<NotificationOpenConfig, 'key'> {
+  /** Type of notification */
+  type?: NotificationType;
+  /** Unique key for notification */
+  key?: string;
+}
+
 /**
  * Notification Component
- * 
+ *
  * Individual notification item. Used internally by NotificationManager.
  * Typically accessed via static methods:
  * - Notification.open()
@@ -55,6 +75,7 @@ export function Notification({
   onClick,
   icon,
   closeIcon,
+  actions,
   btn,
   placement = 'topRight',
   className,
@@ -81,15 +102,15 @@ export function Notification({
   // Get default icon based on type
   const getDefaultIcon = () => {
     if (icon) return icon;
-    
-    const iconName = 
+
+    const iconName =
       type === 'success' ? 'check_circle' :
       type === 'error' ? 'error' :
       type === 'warning' ? 'warning' :
       'info';
-    
+
     return (
-      <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-3)' }}>
+      <span className="material-symbols-outlined">
         {iconName}
       </span>
     );
@@ -98,15 +119,19 @@ export function Notification({
   const getIconColor = () => {
     switch (type) {
       case 'success':
-        return 'var(--token-component-notification-icon-success, #52c41a)';
+        return 'var(--token-component-notification-icon-color-success, #32c21a)';
       case 'error':
-        return 'var(--token-component-notification-icon-error, #ff4d4f)';
+        return 'var(--token-component-notification-icon-color-error, #ff434e)';
       case 'warning':
-        return 'var(--token-component-notification-icon-warning, #faad14)';
+        return 'var(--token-component-notification-icon-color-warning, #ed8400)';
       default:
-        return 'var(--token-component-notification-icon-info, #538bff)';
+        return 'var(--token-component-notification-icon-color-info, #5690f5)';
     }
   };
+
+  const actionList = actions
+    ? Array.isArray(actions) ? actions : [actions]
+    : null;
 
   return (
     <div
@@ -122,14 +147,29 @@ export function Notification({
       role="alert"
       onClick={onClick}
     >
-      <div className={styles.icon} style={{ color: getIconColor() }}>
-        {getDefaultIcon()}
-      </div>
-      <div className={styles.content}>
+      <div className={styles.header}>
+        <div className={styles.icon} style={{ color: getIconColor() }}>
+          {getDefaultIcon()}
+        </div>
         <div className={styles.message}>{message}</div>
-        {description && <div className={styles.description}>{description}</div>}
-        {btn && <div className={styles.btn}>{btn}</div>}
       </div>
+      {description && <div className={styles.description}>{description}</div>}
+      {actionList && (
+        <div className={styles.actions}>
+          {actionList.map((action, i) => (
+            <Button
+              key={i}
+              size="sm"
+              variant={action.variant ?? 'secondary'}
+              appearance={action.appearance}
+              onClick={action.onClick}
+            >
+              {action.label}
+            </Button>
+          ))}
+        </div>
+      )}
+      {!actionList && btn && <div className={styles.actions}>{btn}</div>}
       <button
         type="button"
         className={styles.close}
@@ -140,7 +180,7 @@ export function Notification({
         aria-label="Close"
       >
         {closeIcon || (
-          <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)' }}>
+          <span className="material-symbols-outlined">
             close
           </span>
         )}
@@ -159,20 +199,9 @@ interface NotificationConfig {
   getContainer?: HTMLElement | (() => HTMLElement) | string | false;
 }
 
-interface NotificationInstance {
+interface NotificationInstance extends Omit<NotificationOpenConfig, 'key'> {
   key: string;
   type: NotificationType;
-  message: React.ReactNode;
-  description?: React.ReactNode;
-  duration?: number | null;
-  onClose?: () => void;
-  onClick?: () => void;
-  icon?: React.ReactNode;
-  closeIcon?: React.ReactNode;
-  btn?: React.ReactNode;
-  placement?: NotificationPlacement;
-  className?: string;
-  style?: React.CSSProperties;
 }
 
 // Notification Container Component
@@ -226,6 +255,7 @@ const NotificationContainer: React.FC<{
           duration={notification.duration}
           icon={notification.icon}
           closeIcon={notification.closeIcon}
+          actions={notification.actions}
           btn={notification.btn}
           placement={notification.placement}
           className={notification.className}
@@ -263,23 +293,7 @@ class NotificationManager {
     }
   }
 
-  private add(
-    type: NotificationType,
-    config: {
-      message: React.ReactNode;
-      description?: React.ReactNode;
-      duration?: number | null;
-      onClose?: () => void;
-      onClick?: () => void;
-      icon?: React.ReactNode;
-      closeIcon?: React.ReactNode;
-      btn?: React.ReactNode;
-      key?: string;
-      placement?: NotificationPlacement;
-      className?: string;
-      style?: React.CSSProperties;
-    }
-  ): string {
+  private add(type: NotificationType, config: NotificationOpenConfig): string {
     const key = config.key || `notification-${Date.now()}-${Math.random()}`;
     const notification: NotificationInstance = {
       key,
@@ -291,6 +305,7 @@ class NotificationManager {
       onClick: config.onClick,
       icon: config.icon,
       closeIcon: config.closeIcon,
+      actions: config.actions,
       btn: config.btn,
       placement: config.placement ?? this.notificationConfig.placement,
       className: config.className,
@@ -311,88 +326,23 @@ class NotificationManager {
     return this.notifications;
   }
 
-  open(config: {
-    message: React.ReactNode;
-    description?: React.ReactNode;
-    duration?: number | null;
-    onClose?: () => void;
-    onClick?: () => void;
-    icon?: React.ReactNode;
-    closeIcon?: React.ReactNode;
-    btn?: React.ReactNode;
-    key?: string;
-    placement?: NotificationPlacement;
-    className?: string;
-    style?: React.CSSProperties;
-  }): string {
+  open(config: NotificationOpenConfig): string {
     return this.add('info', config);
   }
 
-  success(config: {
-    message: React.ReactNode;
-    description?: React.ReactNode;
-    duration?: number | null;
-    onClose?: () => void;
-    onClick?: () => void;
-    icon?: React.ReactNode;
-    closeIcon?: React.ReactNode;
-    btn?: React.ReactNode;
-    key?: string;
-    placement?: NotificationPlacement;
-    className?: string;
-    style?: React.CSSProperties;
-  }): string {
+  success(config: NotificationOpenConfig): string {
     return this.add('success', config);
   }
 
-  error(config: {
-    message: React.ReactNode;
-    description?: React.ReactNode;
-    duration?: number | null;
-    onClose?: () => void;
-    onClick?: () => void;
-    icon?: React.ReactNode;
-    closeIcon?: React.ReactNode;
-    btn?: React.ReactNode;
-    key?: string;
-    placement?: NotificationPlacement;
-    className?: string;
-    style?: React.CSSProperties;
-  }): string {
+  error(config: NotificationOpenConfig): string {
     return this.add('error', config);
   }
 
-  info(config: {
-    message: React.ReactNode;
-    description?: React.ReactNode;
-    duration?: number | null;
-    onClose?: () => void;
-    onClick?: () => void;
-    icon?: React.ReactNode;
-    closeIcon?: React.ReactNode;
-    btn?: React.ReactNode;
-    key?: string;
-    placement?: NotificationPlacement;
-    className?: string;
-    style?: React.CSSProperties;
-  }): string {
+  info(config: NotificationOpenConfig): string {
     return this.add('info', config);
   }
 
-  warning(config: {
-    message: React.ReactNode;
-    description?: React.ReactNode;
-    duration?: number | null;
-    onClose?: () => void;
-    onClick?: () => void;
-    icon?: React.ReactNode;
-    closeIcon?: React.ReactNode;
-    btn?: React.ReactNode;
-    key?: string;
-    placement?: NotificationPlacement;
-    className?: string;
-    style?: React.CSSProperties;
-  }): string {
+  warning(config: NotificationOpenConfig): string {
     return this.add('warning', config);
   }
 
@@ -428,12 +378,12 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
       setNotifications([...notificationManager.getNotifications()]);
       setConfig(notificationManager.getConfig());
     };
-    
+
     notificationManager.setUpdateCallback(update);
-    
+
     // Initial render
     update();
-    
+
     return () => {
       notificationManager.setUpdateCallback(() => {});
     };
@@ -460,11 +410,11 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
 // Export Notification component and static methods
 export const NotificationStatic = {
-  open: (config: Parameters<NotificationManager['open']>[0]) => notificationManager.open(config),
-  success: (config: Parameters<NotificationManager['success']>[0]) => notificationManager.success(config),
-  error: (config: Parameters<NotificationManager['error']>[0]) => notificationManager.error(config),
-  info: (config: Parameters<NotificationManager['info']>[0]) => notificationManager.info(config),
-  warning: (config: Parameters<NotificationManager['warning']>[0]) => notificationManager.warning(config),
+  open: (config: NotificationOpenConfig) => notificationManager.open(config),
+  success: (config: NotificationOpenConfig) => notificationManager.success(config),
+  error: (config: NotificationOpenConfig) => notificationManager.error(config),
+  info: (config: NotificationOpenConfig) => notificationManager.info(config),
+  warning: (config: NotificationOpenConfig) => notificationManager.warning(config),
   close: (key: string) => notificationManager.close(key),
   destroy: () => notificationManager.destroy(),
   config: (options: NotificationConfig) => notificationManager.config(options),

@@ -9,44 +9,6 @@
     "$collectionName": "semanticTokens",
     "$value": "{icon.md}"
   },
-  "radius": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "borderRadius",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{radius.full}"
-  },
-  "gap": {
-    "step": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.m}"
-    },
-    "label": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.xs}"
-    }
-  },
-  "fontSize": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "fontSizes",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{typography.body-size.sm}"
-  },
   "icon": {
     "completed": {
       "$scopes": [
@@ -132,48 +94,6 @@
         "$libraryName": "",
         "$type": "color",
         "$value": "{background.passive.neutral.default}",
-        "$collectionName": "semanticTokens"
-      }
-    },
-    "font": {
-      "size": {
-        "sm": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontSizes",
-          "$value": "{typography.fontSize.3}",
-          "$collectionName": "primitives"
-        }
-      },
-      "weight": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontWeights",
-        "$value": 600,
-        "$collectionName": "primitives"
-      }
-    },
-    "margin": {
-      "bottom": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      },
-      "right": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
         "$collectionName": "semanticTokens"
       }
     },
@@ -379,30 +299,6 @@
         "$value": "{background.passive.neutral.default}",
         "$collectionName": "semanticTokens"
       }
-    },
-    "font": {
-      "size": {
-        "sm": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontSizes",
-          "$value": "{typography.fontSize.3}",
-          "$collectionName": "primitives"
-        }
-      }
-    },
-    "line": {
-      "height": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "lineHeights",
-        "$value": "{typography.lineHeight.16}",
-        "$collectionName": "primitives"
-      }
     }
   },
   "disabled": {
@@ -464,34 +360,6 @@
         "$type": "dimension",
         "$value": 40,
         "$collectionName": ""
-      }
-    }
-  },
-  "font": {
-    "size": {
-      "sm": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      }
-    }
-  },
-  "progress": {
-    "dot": {
-      "margin": {
-        "right": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "spacing",
-          "$value": "{padding.s}",
-          "$collectionName": "semanticTokens"
-        }
       }
     }
   },
@@ -564,52 +432,6 @@
         "$value": "{background.passive.neutral.default}",
         "$collectionName": "semanticTokens"
       }
-    },
-    "font": {
-      "size": {
-        "sm": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontSizes",
-          "$value": "{typography.fontSize.3}",
-          "$collectionName": "primitives"
-        }
-      },
-      "weight": {
-        "process": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontWeights",
-          "$value": 600,
-          "$collectionName": "primitives"
-        }
-      }
-    },
-    "line": {
-      "height": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "lineHeights",
-        "$value": "{typography.lineHeight.16}",
-        "$collectionName": "primitives"
-      }
-    },
-    "margin": {
-      "bottom": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      }
     }
   },
   "transition": {
@@ -630,21 +452,6 @@
       "$type": "string",
       "$value": "ease-out",
       "$collectionName": ""
-    }
-  },
-  "vertical": {
-    "step": {
-      "padding": {
-        "bottom": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "spacing",
-          "$value": "{padding.s}",
-          "$collectionName": "semanticTokens"
-        }
-      }
     }
   }
 }

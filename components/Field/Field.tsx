@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './Field.module.css';
 import { cn } from '@/lib/utils';
+import { Tooltip } from '@/components/Tooltip';
 
-export type ValidateStatus = 'error' | 'warning' | 'success' | 'validating';
+export type ValidateStatus = 'error' | 'validating';
 
 export interface ColProps {
   span?: number;
@@ -82,8 +83,6 @@ export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {
   validateStatus?: ValidateStatus;
   /** Whether to show feedback icon */
   hasFeedback?: boolean;
-  /** Whether to hide the field */
-  hidden?: boolean;
   /** Whether the field should have no styles (noStyle mode) */
   noStyle?: boolean;
   /** Transform value before passing to form component */
@@ -130,7 +129,7 @@ export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {
  * </Field>
  * 
  * // With validation status
- * <Field label="Email" validateStatus="success" hasFeedback>
+ * <Field label="Email" validateStatus="error" hasFeedback>
  *   <Input type="email" />
  * </Field>
  * ```
@@ -152,13 +151,12 @@ export function Field({
   maxWidth,
   id,
   htmlFor,
-  colon = true,
+  colon = false,
   labelCol,
   wrapperCol,
   tooltip,
   validateStatus,
   hasFeedback = false,
-  hidden = false,
   noStyle = false,
   normalize,
   getValueFromEvent,
@@ -294,21 +292,19 @@ export function Field({
   const getFeedbackIcon = () => {
     if (!hasFeedback || !finalValidateStatus) return null;
     
-    const iconName = 
+    const iconName =
       finalValidateStatus === 'error' ? 'error' :
-      finalValidateStatus === 'warning' ? 'warning' :
-      finalValidateStatus === 'success' ? 'check_circle' :
       finalValidateStatus === 'validating' ? 'progress_activity' :
       null;
     
     if (!iconName) return null;
     
     return (
-      <span 
+      <span
         className={cn(styles.feedbackIcon, styles[finalValidateStatus])}
         aria-hidden="true"
       >
-        <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
+        <span className="material-symbols-outlined">
           {iconName}
         </span>
       </span>
@@ -319,11 +315,6 @@ export function Field({
   // NoStyle mode - just return children with minimal wrapper
   if (noStyle) {
     return <>{enhancedChildren}</>;
-  }
-
-  // Hidden mode
-  if (hidden) {
-    return null;
   }
 
   return (
@@ -365,11 +356,13 @@ export function Field({
             {colon && <span className={styles.colon}>:</span>}
           </span>
           {tooltip && (
-            <span className={styles.tooltip} title={typeof tooltip === 'string' ? tooltip : undefined}>
-              <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-1)' }}>
-                info
+            <Tooltip title={tooltip} placement="top">
+              <span className={styles.tooltipIcon}>
+                <span className="material-symbols-outlined">
+                  info
+                </span>
               </span>
-            </span>
+            </Tooltip>
           )}
         </label>
       )}

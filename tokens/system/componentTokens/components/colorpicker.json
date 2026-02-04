@@ -1,33 +1,6 @@
 {
   "$name": "Component Tokens",
   "trigger": {
-    "gap": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.xs}"
-    },
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{padding.xxs}"
-    },
-    "radius": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.xs}"
-    },
     "background": {
       "hover": {
         "$scopes": [
@@ -58,15 +31,6 @@
       "$libraryName": "",
       "$collectionName": "semanticTokens",
       "$value": "{sizing.md}"
-    },
-    "radius": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.xs}"
     },
     "shadow": {
       "$scopes": [
@@ -105,8 +69,8 @@
       ],
       "$type": "dimension",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{sizing.xxxxl}"
+      "$collectionName": "",
+      "$value": 280
     },
     "background": {
       "$scopes": [
@@ -126,15 +90,6 @@
       "$collectionName": "semanticTokens",
       "$value": "{border.passive.neutral.default}"
     },
-    "radius": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "borderRadius",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{radius.sm}"
-    },
     "shadow": {
       "$scopes": [
         "ALL_SCOPES"
@@ -144,52 +99,14 @@
       "$collectionName": "semanticTokens",
       "$value": "{shadow.lg}"
     },
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{padding.sm}"
-    },
-    "top-offset": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{spacing.xxs}"
-    },
     "z-index": {
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "other",
+      "$type": "number",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{zIndex.dropdown}"
-    }
-  },
-  "picker": {
-    "gap": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.sm}"
-    },
-    "margin-bottom": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{spacing.sm}"
+      "$collectionName": "",
+      "$value": 1050
     }
   },
   "saturation": {
@@ -199,29 +116,64 @@
       ],
       "$type": "dimension",
       "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{sizing.xxxxl}"
-    },
-    "radius": {
+      "$collectionName": "",
+      "$value": 160
+    }
+  },
+  "pointer": {
+    "size": {
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$type": "borderRadius",
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 12
+    },
+    "shadow": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "boxShadow",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{radius.xs}"
+      "$value": "{shadow.md}"
+    }
+  },
+  "hue": {
+    "height": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": 10
+    }
+  },
+  "slider": {
+    "thumb": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": 14
+      },
+      "shadow": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "boxShadow",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{shadow.md}"
+      }
     }
   },
   "preset": {
-    "gap": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.xs}"
-    },
     "swatch": {
       "size": {
         "$scopes": [
@@ -229,26 +181,8 @@
         ],
         "$type": "dimension",
         "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{sizing.sm}"
-      },
-      "radius": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "borderRadius",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{radius.xxs}"
-      },
-      "gap": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "spacing",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{gap.xxs}"
+        "$collectionName": "",
+        "$value": 20
       },
       "border": {
         "$scopes": [
@@ -266,80 +200,29 @@
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$libraryName": "",
           "$type": "color",
-          "$value": "{border.active.neutral.control.field.default}",
-          "$collectionName": "semanticTokens"
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.neutral.control.field.focused}"
         },
         "selected": {
           "$scopes": [
             "ALL_SCOPES"
           ],
-          "$libraryName": "",
           "$type": "color",
-          "$value": "{border.active.neutral.control.field.default}",
-          "$collectionName": "semanticTokens"
-        },
-        "width": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
           "$libraryName": "",
-          "$type": "color",
-          "$value": "{border.active.neutral.control.field.default}",
-          "$collectionName": "semanticTokens"
+          "$collectionName": "semanticTokens",
+          "$value": "{border.active.accent.selected}"
         }
       },
       "gap": {
         "$scopes": [
           "ALL_SCOPES"
         ],
+        "$type": "dimension",
         "$libraryName": "",
-        "$type": "color",
-        "$value": "{background.passive.neutral.default}",
-        "$collectionName": "semanticTokens"
-      },
-      "radius": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "color",
-        "$value": "{background.passive.neutral.default}",
-        "$collectionName": "semanticTokens"
-      },
-      "shadow": {
-        "selected": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "color",
-          "$value": "{background.passive.neutral.default}",
-          "$collectionName": "semanticTokens"
-        }
-      },
-      "size": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "color",
-        "$value": "{background.passive.neutral.default}",
-        "$collectionName": "semanticTokens"
-      }
-    },
-    "group": {
-      "margin": {
-        "bottom": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "spacing",
-          "$value": "{padding.s}",
-          "$collectionName": "semanticTokens"
-        }
+        "$collectionName": "semanticTokens",
+        "$value": "{gap.xxs}"
       }
     },
     "label": {
@@ -347,106 +230,11 @@
         "$scopes": [
           "ALL_SCOPES"
         ],
-        "$libraryName": "",
         "$type": "color",
-        "$value": "{background.passive.neutral.default}",
-        "$collectionName": "semanticTokens"
-      },
-      "font": {
-        "size": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "fontSizes",
-          "$value": "{typography.fontSize.3}",
-          "$collectionName": "primitives"
-        }
-      },
-      "margin": {
-        "bottom": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "spacing",
-          "$value": "{padding.s}",
-          "$collectionName": "semanticTokens"
-        }
-      }
-    }
-  },
-  "hue": {
-    "height": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "dimension",
-      "$value": 40,
-      "$collectionName": ""
-    },
-    "radius": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "borderRadius",
-      "$value": "{radius.sm}",
-      "$collectionName": "semanticTokens"
-    }
-  },
-  "inputs": {
-    "gap": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "spacing",
-      "$value": "{padding.s}",
-      "$collectionName": "semanticTokens"
-    },
-    "margin": {
-      "bottom": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
         "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
       }
-    }
-  },
-  "pointer": {
-    "border": {
-      "width": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "dimension",
-        "$value": 40,
-        "$collectionName": ""
-      }
-    },
-    "shadow": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "boxShadow",
-      "$value": "{shadow.md}",
-      "$collectionName": "semanticTokens"
-    },
-    "size": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "dimension",
-      "$value": 40,
-      "$collectionName": ""
     }
   },
   "presets": {
@@ -454,54 +242,21 @@
       "$scopes": [
         "ALL_SCOPES"
       ],
-      "$libraryName": "",
       "$type": "color",
-      "$value": "{border.active.neutral.control.field.default}",
-      "$collectionName": "semanticTokens"
-    },
-    "padding": {
-      "top": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      }
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.passive.neutral.default}"
     }
   },
-  "slider": {
-    "thumb": {
-      "border": {
-        "width": {
-          "$scopes": [
-            "ALL_SCOPES"
-          ],
-          "$libraryName": "",
-          "$type": "dimension",
-          "$value": 40,
-          "$collectionName": ""
-        }
-      },
-      "shadow": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "boxShadow",
-        "$value": "{shadow.md}",
-        "$collectionName": "semanticTokens"
-      },
-      "size": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "dimension",
-        "$value": 40,
-        "$collectionName": ""
-      }
+  "icon": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xs}"
     }
   }
 }

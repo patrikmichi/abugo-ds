@@ -10,15 +10,14 @@
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  z-index: var(--token-component-timepicker-panel-z-index);
-  width: var(--token-component-timepicker-panel-width);
-  background-color: var(--token-component-timepicker-panel-background);
-  border: var(--token-primitive-border-width-1) solid var(--token-component-timepicker-panel-border);
-  border-radius: calc(var(--token-component-timepicker-panel-radius) * 1px);
-  box-shadow: var(--token-component-timepicker-panel-shadow);
-  padding: var(--token-component-timepicker-panel-padding);
+  z-index: var(--token-component-timepicker-panel-z-index, 1000);
+  width: 320px;
+  background-color: var(--token-primitive-color-white, #ffffff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-timepicker-panel-border);
+  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   font-family: var(--token-primitive-typography-font-family-sans);
-  overflow: hidden;
+  overflow: clip;
 }
 
 .panel.positioned {
@@ -26,133 +25,81 @@
   margin-top: 0;
 }
 
-/* Columns container */
-.columns {
-  display: flex;
-  gap: 0;
-  align-items: stretch;
-}
-
-/* Column */
-.column {
-  flex: 1;
+/* Content area inside panel */
+.content {
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  position: relative;
+  gap: 4px;
+  padding: 8px 16px;
 }
 
-.columnLabel {
-  text-align: center;
-  font-size: var(--token-component-timepicker-column-label-font-size);
-  font-weight: var(--token-component-timepicker-column-label-font-weight);
-  color: var(--token-component-timepicker-column-label-color);
-  padding: var(--token-component-timepicker-column-label-padding);
-  margin-bottom: var(--token-component-timepicker-column-label-margin-bottom);
-  flex-shrink: 0;
+/* Row - cells across columns */
+.row {
+  display: flex;
+  gap: 16px;
 }
 
-/* Scroll indicators */
-.scrollIndicatorTop,
-.scrollIndicatorBottom {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  pointer-events: none;
+/* Arrow row */
+.arrowRow {
+  display: flex;
+  gap: 16px;
+}
+
+/* Individual cell */
+.cell {
+  flex: 1 0 0;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--token-component-timepicker-scroll-indicator-color);
-}
-
-.scrollIndicatorTop {
-  top: var(--token-component-timepicker-column-label-padding);
-}
-
-.scrollIndicatorBottom {
-  bottom: var(--token-component-timepicker-column-label-padding);
-}
-
-.scrollIndicatorTop .material-symbols-outlined,
-.scrollIndicatorBottom .material-symbols-outlined {
-  font-size: var(--token-component-timepicker-scroll-indicator-size);
-  width: 1em;
-  height: 1em;
-  display: block;
-  line-height: 1;
-}
-
-/* Options container */
-.options {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: var(--token-component-timepicker-column-max-height);
-  scrollbar-width: thin;
-  scrollbar-color: var(--token-component-timepicker-scrollbar-color) transparent;
-  padding: var(--token-component-timepicker-column-label-padding) 0;
-}
-
-.options::-webkit-scrollbar {
-  width: var(--token-component-timepicker-scrollbar-width);
-}
-
-.options::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.options::-webkit-scrollbar-thumb {
-  background-color: var(--token-component-timepicker-scrollbar-color);
-  border-radius: calc(var(--token-component-timepicker-scrollbar-radius) * 1px);
-}
-
-.options::-webkit-scrollbar-thumb:hover {
-  background-color: var(--token-component-timepicker-scrollbar-color-hover);
-}
-
-/* Option */
-.option {
-  text-align: center;
-  font-size: var(--token-component-timepicker-option-font-size);
-  line-height: var(--token-component-timepicker-option-line-height);
-  color: var(--token-component-timepicker-option-content-default);
-  padding: var(--token-component-timepicker-option-padding);
-  margin: 0 2px;
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  color: var(--token-component-timepicker-cell-content-default, #464646);
+  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
   cursor: pointer;
-  border-radius: calc(var(--token-component-timepicker-option-radius) * 1px);
-  transition: background-color 0.2s ease, color 0.2s ease;
   user-select: none;
-  min-height: var(--token-component-timepicker-option-min-height);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cell:hover:not(.cellSelected) {
+  background-color: var(--token-component-timepicker-cell-background-hover, rgba(70, 70, 70, 0.05));
+}
+
+/* Selected cell */
+.cellSelected {
+  background-color: var(--token-component-timepicker-cell-background-selected, #e4edfd);
+  color: var(--token-component-timepicker-cell-content-selected, #5690f5);
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+}
+
+/* Subtle cell (±2 positions from selected) */
+.cellSubtle {
+  color: var(--token-component-timepicker-column-label-color, #737373);
+}
+
+/* Arrow cell (button) */
+.arrowCell {
+  flex: 1 0 0;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  color: var(--token-component-timepicker-cell-content-default, #464646);
+  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.option:hover:not(.disabled) {
-  background-color: var(--token-component-timepicker-option-background-hover);
-  color: var(--token-component-timepicker-option-content-hover);
+.arrowCell:hover {
+  background-color: var(--token-component-timepicker-cell-background-hover, rgba(70, 70, 70, 0.05));
 }
 
-.option.selected {
-  background-color: var(--token-component-timepicker-option-background-selected);
-  color: var(--token-component-timepicker-option-content-selected);
-  font-weight: var(--token-primitive-typography-font-weight-medium);
-}
-
-.option.selected:hover:not(.disabled) {
-  background-color: var(--token-component-timepicker-option-background-selected);
-  color: var(--token-component-timepicker-option-content-selected);
-}
-
-.option.disabled {
-  color: var(--token-component-timepicker-option-content-disabled);
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.option.disabled:hover {
-  background-color: transparent;
+.arrowCell .material-symbols-outlined {
+  font-size: 24px;
 }
 
 /* Icon styles */
@@ -168,7 +115,7 @@
 
 .clearIcon {
   cursor: pointer;
-  margin-right: var(--token-semantic-gap-xxs);
+  margin-right: var(--token-component-timepicker-clear-icon-gap);
   color: var(--token-component-timepicker-icon-default);
   transition: color 0.2s ease;
 }
@@ -186,6 +133,6 @@
 @media (max-width: 768px) {
   .panel {
     width: calc(100vw - 32px);
-    max-width: var(--token-component-timepicker-panel-width);
+    max-width: 320px;
   }
 }

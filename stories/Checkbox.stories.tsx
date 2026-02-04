@@ -9,12 +9,6 @@ const meta: Meta<typeof Checkbox> = {
   parameters: {
     layout: 'padded',
   },
-  argTypes: {
-    size: {
-      control: 'select',
-      options: ['small', 'middle', 'large'],
-    },
-  },
 };
 
 export default meta;
@@ -34,57 +28,17 @@ export const Default: Story = {
   },
 };
 
-export const Controlled: Story = {
-  render: () => {
-    const [checked, setChecked] = useState(false);
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox checked={checked} onChange={(e) => setChecked(e.target.checked)}>
-          Controlled Checkbox
-        </Checkbox>
-        <p style={{ fontSize: '14px' }}>Checked: {checked ? 'true' : 'false'}</p>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <button onClick={() => setChecked(true)}>Check</button>
-          <button onClick={() => setChecked(false)}>Uncheck</button>
-        </div>
-      </div>
-    );
-  },
-};
-
-export const Uncontrolled: Story = {
-  render: () => {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox defaultChecked={false}>Unchecked by default</Checkbox>
-        <Checkbox defaultChecked>Checked by default</Checkbox>
-      </div>
-    );
-  },
-};
-
-export const Sizes: Story = {
-  render: () => {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox size="small">Small</Checkbox>
-        <Checkbox size="middle">Middle (Default)</Checkbox>
-        <Checkbox size="large">Large</Checkbox>
-      </div>
-    );
-  },
-};
-
 export const States: Story = {
   render: () => {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <Checkbox>Unchecked</Checkbox>
         <Checkbox defaultChecked>Checked</Checkbox>
+        <Checkbox indeterminate>Indeterminate</Checkbox>
         <Checkbox disabled>Disabled unchecked</Checkbox>
-        <Checkbox checked disabled>
-          Disabled checked
-        </Checkbox>
+        <Checkbox checked disabled>Disabled checked</Checkbox>
+        <Checkbox error>Error unchecked</Checkbox>
+        <Checkbox error defaultChecked>Error checked</Checkbox>
       </div>
     );
   },
@@ -92,29 +46,35 @@ export const States: Story = {
 
 export const Indeterminate: Story = {
   render: () => {
-    const [checked, setChecked] = useState(false);
-    const [indeterminate, setIndeterminate] = useState(true);
+    const [checkedList, setCheckedList] = useState<string[]>(['apple']);
+    const allOptions = ['apple', 'banana', 'orange'];
+    const allChecked = checkedList.length === allOptions.length;
+    const indeterminate = checkedList.length > 0 && checkedList.length < allOptions.length;
+
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox indeterminate={indeterminate} checked={checked}>
-          Indeterminate Checkbox
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        <Checkbox
+          indeterminate={indeterminate}
+          checked={allChecked}
+          onChange={(e) => setCheckedList(e.target.checked ? allOptions : [])}
+        >
+          Check all
         </Checkbox>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <button onClick={() => setIndeterminate(!indeterminate)}>
-            Toggle Indeterminate
-          </button>
-          <button onClick={() => setChecked(!checked)}>Toggle Checked</button>
-        </div>
+        <Checkbox.Group value={checkedList} onChange={setCheckedList}>
+          <Checkbox value="apple">Apple</Checkbox>
+          <Checkbox value="banana">Banana</Checkbox>
+          <Checkbox value="orange">Orange</Checkbox>
+        </Checkbox.Group>
       </div>
     );
   },
 };
 
-export const CheckboxGroup: Story = {
+export const GroupVertical: Story = {
   render: () => {
     const [value, setValue] = useState<string[]>(['apple']);
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <Checkbox.Group value={value} onChange={setValue}>
           <Checkbox value="apple">Apple</Checkbox>
           <Checkbox value="banana">Banana</Checkbox>
@@ -126,27 +86,27 @@ export const CheckboxGroup: Story = {
   },
 };
 
-export const CheckboxGroupWithOptions: Story = {
+export const GroupHorizontal: Story = {
   render: () => {
-    const [value, setValue] = useState<string[]>(['option1']);
+    const [value, setValue] = useState<string[]>([]);
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox.Group
-          value={value}
-          onChange={setValue}
-          options={['Option 1', 'Option 2', 'Option 3']}
-        />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <Checkbox.Group value={value} onChange={setValue} direction="horizontal">
+          <Checkbox value="a">Option A</Checkbox>
+          <Checkbox value="b">Option B</Checkbox>
+          <Checkbox value="c">Option C</Checkbox>
+        </Checkbox.Group>
         <p style={{ fontSize: '14px' }}>Selected: {value.join(', ') || 'None'}</p>
       </div>
     );
   },
 };
 
-export const CheckboxGroupWithOptionObjects: Story = {
+export const GroupWithOptions: Story = {
   render: () => {
     const [value, setValue] = useState<string[]>(['option1']);
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <Checkbox.Group
           value={value}
           onChange={setValue}
@@ -162,36 +122,14 @@ export const CheckboxGroupWithOptionObjects: Story = {
   },
 };
 
-export const CheckboxGroupHorizontal: Story = {
-  render: () => {
-    const [value, setValue] = useState<string[]>([]);
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox.Group
-          value={value}
-          onChange={setValue}
-          style={{ flexDirection: 'row' }}
-        >
-          <Checkbox value="a">Option A</Checkbox>
-          <Checkbox value="b">Option B</Checkbox>
-          <Checkbox value="c">Option C</Checkbox>
-        </Checkbox.Group>
-        <p style={{ fontSize: '14px' }}>Selected: {value.join(', ') || 'None'}</p>
-      </div>
-    );
-  },
-};
-
-export const CheckboxGroupDisabled: Story = {
+export const GroupDisabled: Story = {
   render: () => {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox.Group disabled defaultValue={['option1']}>
-          <Checkbox value="option1">Option 1</Checkbox>
-          <Checkbox value="option2">Option 2</Checkbox>
-          <Checkbox value="option3">Option 3</Checkbox>
-        </Checkbox.Group>
-      </div>
+      <Checkbox.Group disabled defaultValue={['option1']}>
+        <Checkbox value="option1">Option 1</Checkbox>
+        <Checkbox value="option2">Option 2</Checkbox>
+        <Checkbox value="option3">Option 3</Checkbox>
+      </Checkbox.Group>
     );
   },
 };
@@ -210,51 +148,3 @@ export const WithField: Story = {
     );
   },
 };
-
-export const AutoFocus: Story = {
-  render: () => {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Checkbox autoFocus>Auto-focused checkbox</Checkbox>
-        <Checkbox>Regular checkbox</Checkbox>
-      </div>
-    );
-  },
-};
-
-export const AllFeatures: Story = {
-  render: () => {
-    const [checked, setChecked] = useState(false);
-    const [groupValue, setGroupValue] = useState<string[]>(['option1']);
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '600px' }}>
-        <div>
-          <h3 style={{ marginBottom: '1rem' }}>Individual Checkbox</h3>
-          <Checkbox
-            checked={checked}
-            onChange={(e) => setChecked(e.target.checked)}
-            size="middle"
-          >
-            Feature checkbox
-          </Checkbox>
-        </div>
-        <div>
-          <h3 style={{ marginBottom: '1rem' }}>Checkbox Group</h3>
-          <Checkbox.Group
-            value={groupValue}
-            onChange={setGroupValue}
-            options={[
-              { label: 'Feature 1', value: 'option1' },
-              { label: 'Feature 2', value: 'option2' },
-              { label: 'Feature 3', value: 'option3' },
-            ]}
-          />
-          <p style={{ marginTop: '0.5rem', fontSize: '14px' }}>
-            Selected: {groupValue.join(', ') || 'None'}
-          </p>
-        </div>
-      </div>
-    );
-  },
-};
-

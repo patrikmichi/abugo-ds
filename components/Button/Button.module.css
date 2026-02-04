@@ -56,7 +56,7 @@
 /* Focus-visible: Only show focus ring when keyboard navigating (not mouse clicks) */
 .button:focus-visible {
   outline: calc(var(--token-component-button-focus-outline-width) * 1px) solid var(--token-component-button-focus-outline-color);
-  outline-offset: calc(var(--token-component-button-focus-outline-offset) * 1px);
+  outline-offset: calc(var(--token-component-gap-button-focus-outline-offset) * 1px);
 }
 
 /* Fallback for browsers that don't support :focus-visible */
@@ -188,7 +188,7 @@
   margin: 0;
   padding: 0;
   /* Optical adjustment for perfect centering */
-  transform: translateY(var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  transform: translateY(var(--token-component-button-visual-compensation-offset, 1px));
 }
 
 /* ==========================================================================
@@ -370,7 +370,7 @@
 .disabled,
 .button:disabled {
   cursor: not-allowed;
-  opacity: var(--token-semantic-opacity-disabled, 0.6);
+  opacity: var(--token-component-button-opacity-disabled, 0.6);
 }
 
 /* ==========================================================================
@@ -406,13 +406,13 @@
 
 .primary.plain:hover:not(:disabled),
 .primaryPlain:hover:not(:disabled) {
-  background-color: var(--token-semantic-background-active-accent-subtle-hover);
+  background-color: var(--token-component-button-plain-accent-background-hover);
   color: var(--token-component-button-primary-plain-content-hover);
 }
 
 .primary.plain:active:not(:disabled),
 .primaryPlain:active:not(:disabled) {
-  background-color: var(--token-semantic-background-active-accent-subtle-pressed);
+  background-color: var(--token-component-button-plain-accent-background-pressed);
   color: var(--token-component-button-primary-plain-content-pressed);
 }
 
@@ -430,21 +430,21 @@
 .secondaryOutline {
   background-color: transparent;
   color: var(--token-component-button-secondary-outline-content-default);
-  border-width: calc(var(--token-semantic-border-width-thin) * 1px);
+  border-width: calc(var(--token-component-button-outlined-border-width) * 1px);
   border-style: solid;
   border-color: var(--token-component-button-secondary-outline-border-default);
 }
 
 .secondary.outline:hover:not(:disabled),
 .secondaryOutline:hover:not(:disabled) {
-  background-color: var(--token-semantic-background-active-accent-subtle-hover);
+  background-color: var(--token-component-button-plain-accent-background-hover);
   color: var(--token-component-button-secondary-outline-content-hover);
   border-color: var(--token-component-button-secondary-outline-border-hover);
 }
 
 .secondary.outline:active:not(:disabled),
 .secondaryOutline:active:not(:disabled) {
-  background-color: var(--token-semantic-background-active-accent-subtle-pressed);
+  background-color: var(--token-component-button-plain-accent-background-pressed);
   border-color: var(--token-component-button-secondary-outline-border-pressed);
   color: var(--token-component-button-secondary-outline-content-pressed);
 }
@@ -463,13 +463,13 @@
 
 .secondary.plain:hover:not(:disabled),
 .secondaryPlain:hover:not(:disabled) {
-  background-color: var(--token-semantic-background-active-neutral-subtle-hover);
+  background-color: var(--token-component-button-plain-neutral-background-hover);
   color: var(--token-component-button-secondary-plain-content-hover);
 }
 
 .secondary.plain:active:not(:disabled),
 .secondaryPlain:active:not(:disabled) {
-  background-color: var(--token-semantic-background-active-neutral-subtle-pressed);
+  background-color: var(--token-component-button-plain-neutral-background-pressed);
   color: var(--token-component-button-secondary-plain-content-pressed);
 }
 
@@ -529,7 +529,7 @@
 .tertiaryOutline {
   background-color: transparent;
   color: var(--token-component-button-tertiary-outline-content-default);
-  border-width: calc(var(--token-semantic-border-width-thin) * 1px);
+  border-width: calc(var(--token-component-button-outlined-border-width) * 1px);
   border-style: solid;
   border-color: var(--token-component-button-tertiary-outline-border-default);
 }
@@ -561,13 +561,13 @@
 
 .tertiary.plain:hover:not(:disabled),
 .tertiaryPlain:hover:not(:disabled) {
-  background-color: var(--token-semantic-background-active-neutral-subtle-hover);
+  background-color: var(--token-component-button-plain-neutral-background-hover);
   color: var(--token-component-button-tertiary-plain-content-hover);
 }
 
 .tertiary.plain:active:not(:disabled),
 .tertiaryPlain:active:not(:disabled) {
-  background-color: var(--token-semantic-background-active-neutral-subtle-pressed);
+  background-color: var(--token-component-button-plain-neutral-background-pressed);
   color: var(--token-component-button-tertiary-plain-content-pressed);
 }
 

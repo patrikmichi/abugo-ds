@@ -4,17 +4,17 @@
 .toast {
   position: relative;
   display: flex;
-  align-items: stretch;
-  gap: var(--token-component-toast-gap, 12px);
+  align-items: center;
+  gap: var(--token-component-gap-toast, 12px);
   min-height: var(--token-component-toast-min-height-small, 48px);
-  padding-left: var(--token-component-toast-padding-x-small, 16px);
-  padding-right: var(--token-component-toast-padding-x-small, 16px);
-  padding-top: calc(var(--token-component-toast-padding-y-small, 12px) + 1px);
-  padding-bottom: calc(var(--token-component-toast-padding-y-small, 12px) - 1px);
-  border-radius: calc(var(--token-component-toast-radius, 8px) * 1px);
+  padding-left: var(--token-component-padding-block-toast-x-small, 16px);
+  padding-right: var(--token-component-padding-block-toast-x-small, 16px);
+  padding-top: calc(var(--token-component-padding-block-toast-y-small, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-block-toast-y-small, 12px) - 1px);
+  border: none;
+  border-radius: calc(var(--token-component-radius-toast, 8px) * 1px);
   font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-toast-small, 14px);
-  line-height: var(--token-component-line-height-toast-small, 1.5);
   transition: opacity var(--token-component-animation-toast-duration, 300ms) var(--token-component-animation-toast-easing, ease), transform var(--token-component-animation-toast-duration, 300ms) var(--token-component-animation-toast-easing, ease);
   box-shadow: var(--token-component-shadow-toast);
   min-width: var(--token-component-toast-min-width, 300px);
@@ -30,98 +30,94 @@
 /* Size variants */
 .toast.small {
   min-height: var(--token-component-toast-min-height-small, 48px);
-  padding-left: var(--token-component-toast-padding-x-small, 16px);
-  padding-right: var(--token-component-toast-padding-x-small, 16px);
-  padding-top: calc(var(--token-component-toast-padding-y-small, 12px) + 1px);
-  padding-bottom: calc(var(--token-component-toast-padding-y-small, 12px) - 1px);
+  padding-left: var(--token-component-padding-block-toast-x-small, 16px);
+  padding-right: var(--token-component-padding-block-toast-x-small, 16px);
+  padding-top: calc(var(--token-component-padding-block-toast-y-small, 12px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-block-toast-y-small, 12px) - 1px);
   font-size: var(--token-component-font-size-toast-small, 14px);
   line-height: var(--token-component-line-height-toast-small, 1.5);
 }
 
 .toast.large {
   min-height: var(--token-component-toast-min-height-large, 64px);
-  padding-left: var(--token-component-toast-padding-x-large, 20px);
-  padding-right: var(--token-component-toast-padding-x-large, 20px);
-  padding-top: calc(var(--token-component-toast-padding-y-large, 16px) + 1px);
-  padding-bottom: calc(var(--token-component-toast-padding-y-large, 16px) - 1px);
+  padding-left: var(--token-component-padding-block-toast-x-large, 20px);
+  padding-right: var(--token-component-padding-block-toast-x-large, 20px);
+  padding-top: calc(var(--token-component-padding-block-toast-y-large, 16px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-block-toast-y-large, 16px) - 1px);
   font-size: var(--token-component-font-size-toast-large, 16px);
   line-height: var(--token-component-line-height-toast-large, 1.5);
 }
 
-/* Toast always uses filled (solid) variant */
-.toast {
-  border: none;
-}
 
 /* Success */
 .toast.success {
-  background-color: var(--token-semantic-background-passive-success-default, #32c21a);
-  color: var(--token-semantic-content-passive-on-success, #ffffff);
+  background-color: var(--token-component-toast-success-background, #32c21a);
+  color: var(--token-component-toast-success-content, #ffffff);
 }
 
 .toast.success .icon {
-  color: var(--token-semantic-content-passive-on-success, #ffffff);
+  color: var(--token-component-toast-success-content, #ffffff);
 }
 
 .toast.success .close {
-  color: var(--token-semantic-content-passive-on-success, #ffffff);
+  color: var(--token-component-toast-success-content, #ffffff);
 }
 
 /* Info */
 .toast.info {
-  background-color: var(--token-semantic-background-passive-info-default, #042a47);
-  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  background-color: var(--token-component-toast-info-background, #042a47);
+  color: var(--token-component-toast-info-content, #ffffff);
 }
 
 .toast.info .icon {
-  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  color: var(--token-component-toast-info-content, #ffffff);
 }
 
 .toast.info .close {
-  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  color: var(--token-component-toast-info-content, #ffffff);
 }
 
 /* Warning */
 .toast.warning {
-  background-color: var(--token-semantic-background-passive-warning-default, #ed8400);
-  color: var(--token-semantic-content-passive-on-warning, #ffffff);
+  background-color: var(--token-component-toast-warning-background, #ed8400);
+  color: var(--token-component-toast-warning-content, #ffffff);
 }
 
 .toast.warning .icon {
-  color: var(--token-semantic-content-passive-on-warning, #ffffff);
+  color: var(--token-component-toast-warning-content, #ffffff);
 }
 
 .toast.warning .close {
-  color: var(--token-semantic-content-passive-on-warning, #ffffff);
+  color: var(--token-component-toast-warning-content, #ffffff);
 }
 
 /* Error */
 .toast.error {
-  background-color: var(--token-semantic-background-passive-danger-default, #ff434e);
-  color: var(--token-semantic-content-passive-on-danger, #ffffff);
+  background-color: var(--token-component-toast-danger-background, #ff434e);
+  color: var(--token-component-toast-danger-content, #ffffff);
 }
 
 .toast.error .icon {
-  color: var(--token-semantic-content-passive-on-danger, #ffffff);
+  color: var(--token-component-toast-danger-content, #ffffff);
 }
 
 .toast.error .close {
-  color: var(--token-semantic-content-passive-on-danger, #ffffff);
+  color: var(--token-component-toast-danger-content, #ffffff);
 }
 
 /* Loading */
 .toast.loading {
-  background-color: var(--token-semantic-background-passive-info-default, #042a47);
-  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  background-color: var(--token-component-toast-info-background, #042a47);
+  color: var(--token-component-toast-info-content, #ffffff);
 }
 
 .toast.loading .icon {
-  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  color: var(--token-component-toast-info-content, #ffffff);
   animation: spin var(--token-component-animation-spinner-duration, 1000ms) var(--token-component-animation-spinner-easing, linear) infinite;
 }
 
 .toast.loading .close {
-  color: var(--token-semantic-content-passive-on-info, #ffffff);
+  color: var(--token-component-toast-info-content, #ffffff);
 }
 
 @keyframes spin {
@@ -133,62 +129,85 @@
   }
 }
 
+/* Wrapper for icon and content to align them together */
+.iconAndContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-gap-toast, 12px);
+  min-width: 0;
+}
+
 /* Icon */
 .icon {
   flex-shrink: 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: var(--token-component-icon-toast, 24px);
+  height: var(--token-component-icon-toast, 24px);
   color: inherit;
-  /* Align icon with first line of content (heading) - accounts for padding compensation (+1px top) */
-  align-self: flex-start;
-  padding-top: calc(var(--token-component-toast-padding-y-small, 12px) + 1px);
 }
 
-.toast.large .icon {
-  padding-top: calc(var(--token-component-toast-padding-y-large, 16px) + 1px);
-}
-
-.toast.small .icon .material-symbols-outlined {
-  font-size: var(--token-component-icon-toast-small, 20px);
-  width: var(--token-component-icon-toast-small, 20px);
-  height: var(--token-component-icon-toast-small, 20px);
-}
-
-.toast.large .icon .material-symbols-outlined {
-  font-size: var(--token-component-icon-toast-large, 24px);
-  width: var(--token-component-icon-toast-large, 24px);
-  height: var(--token-component-icon-toast-large, 24px);
+.icon .material-symbols-outlined {
+  font-size: var(--token-component-icon-toast, 24px);
+  width: var(--token-component-icon-toast, 24px);
+  height: var(--token-component-icon-toast, 24px);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Content */
 .content {
   flex: 1;
   min-width: 0;
-  word-wrap: break-word;
-  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-toast-content-gap, 8px);
+}
+
+.message {
+  font-size: var(--token-component-font-size-toast-message, 16px);
+  line-height: var(--token-component-line-height-toast-message, 24px);
+  font-weight: var(--token-primitive-typography-font-weight-regular, 400);
   color: inherit;
 }
 
-/* Close button */
-.close {
+.toast.hasDescription .message {
+  font-weight: var(--token-primitive-typography-font-weight-bold, 700);
+}
+
+.description {
+  font-size: var(--token-component-font-size-toast-description, 14px);
+  line-height: var(--token-component-line-height-toast-description, 20px);
+  font-weight: var(--token-primitive-typography-font-weight-regular, 400);
+  color: inherit;
+}
+
+/* Action */
+.action {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: inherit !important;
+}
+
+/* Close button - uses Button component with plain appearance */
+.close {
+  flex-shrink: 0;
   align-self: center;
 }
 
-.toast.small .close .material-symbols-outlined {
-  font-size: var(--token-primitive-icon-size-icon-size-1, 16px);
+/* Reduced padding when interactive elements (buttons) are present */
+/* Small toast with buttons: reduce padding to compensate for button height */
+.toast.small.hasInteractiveElements {
+  padding-top: calc(var(--token-component-padding-block-toast-y-interactive-small, 8px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-block-toast-y-interactive-small, 8px) - 1px);
 }
 
-.toast.large .close .material-symbols-outlined {
-  font-size: var(--token-primitive-icon-size-icon-size-2, 20px);
-}
-
-/* Ensure Button component inherits toast colors */
-.toast .close {
-  color: inherit !important;
+/* Large toast with buttons: reduce padding to compensate for button height */
+.toast.large.hasInteractiveElements {
+  padding-top: calc(var(--token-component-padding-block-toast-y-interactive-large, 8px) + 1px);
+  padding-bottom: calc(var(--token-component-padding-block-toast-y-interactive-large, 8px) - 1px);
 }

@@ -14,9 +14,9 @@ This rule defines the structure, naming conventions, and best practices for desi
 
 Design tokens follow a three-layer architecture:
 
-1. **Primitives** (`tokens/primitives.json`) - Raw values (colors, sizes, spacing, etc.)
-2. **Semantic Tokens** (`tokens/semanticTokens.json`) - Primitives paired with semantic meaning
-3. **Component Tokens** (`tokens/componentTokens.json`) - Semantic tokens applied to specific components
+1. **Primitives** – Raw values. Source: `tokens/system/primitives/**`. Output: `tokens/output/primitives.json`.
+2. **Semantic Tokens** – Primitives paired with semantic meaning. Source: `tokens/system/semanticTokens/**`. Output: `tokens/output/semanticTokens.json`.
+3. **Component Tokens** – Semantic tokens applied to components. Source: `tokens/system/componentTokens/{shared,components}/**`. Output: `tokens/output/componentTokens.json`.
 
 ### Layering Rules
 
@@ -128,55 +128,9 @@ Border tokens use nested structure:
 
 ## Component Tokens Structure
 
-### Nested Component Structure
+Component tokens use nested structures (`{component}.{variant}.{property}.{state}`). Typography, padding, gap, radius, icon sizes, and height live in **shared** files (property-first); colors, shadows, and component-only spacing live in **component** files. Icon tokens: sizes at root (e.g. `icon.button.sm`), gaps/colors/padding at component level.
 
-Component tokens use nested structures: `{component}.{variant}.{property}.{state}`
-
-Example:
-```json
-{
-  "button": {
-    "primary": {
-      "boxed": {
-        "background": {
-          "default": {
-            "$type": "color",
-            "$collectionName": "semanticTokens",
-            "$value": "{background-active-accent-default}"
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-### Icon Token Structure
-
-Icon tokens follow a **consistent structure** across all components:
-
-1. **Icon Sizes** (dimension type) - Top-level:
-   - `icon.button.{sm, md, lg}`
-   - `icon.field.{sm, lg}`
-   - `icon.checkbox.default`
-   - `icon.chip.{sm, md, lg}`
-
-2. **Icon Gaps** (spacing type) - Component-level:
-   - `button.gap.icon.{sm, md, lg}`
-   - `chip.gap.icon.{sm, md, lg}`
-   - `alert.gap.icon`
-   - `toast.gap.icon`
-
-3. **Icon Colors** (color type) - Component-level:
-   - `alert.icon.default`
-   - `alert.danger.icon.default`
-   - `toast.icon.default`
-   - `toast.danger.icon.default`
-
-4. **Icon Padding** (spacing type) - Component-level:
-   - `button.icon.only.padding.{x, y}.{sm, md, lg}`
-
-**Rule**: Icon sizes are grouped at root level for discoverability, while gaps, colors, and padding remain component-specific.
+**For where to put each property, shared file layout, migration, and no-hardcoded-CSS rules, see token-structure/component-tokens.**
 
 ## Token Properties
 
@@ -243,11 +197,13 @@ Both themes use the same token structure, with brand-specific values handled at 
 
 ## File Organization
 
-- `tokens/$metadata.json` - Token set order
-- `tokens/$themes.json` - Theme configuration
-- `tokens/primitives.json` - Base tokens
-- `tokens/semanticTokens.json` - Semantic tokens
-- `tokens/componentTokens.json` - Component tokens
+- `tokens/system/primitives/**` - Source primitives
+- `tokens/system/semanticTokens/**` - Source semantic tokens
+- `tokens/system/componentTokens/shared/**` - Shared component props (fontSize, gap, padding, radius, height, etc.)
+- `tokens/system/componentTokens/components/**` - Component-specific tokens (colors, shadows, etc.)
+- `tokens/output/*.json` - Merged output from `merge-tokens`; used by `generate-css-variables` and `analyze-component-tokens` when present
+
+**Build:** `npm run build:tokens` (merge) → `npm run build:css-variables` (generates `styles/tokens.css`). The CSS generator prefers `tokens/output/` so it stays in sync with the merge and analysis scripts.
 
 ## Best Practices
 
@@ -263,6 +219,12 @@ Both themes use the same token structure, with brand-specific values handled at 
 10. **Document changes** in commit messages
 11. **Delete helper scripts** after implementation (see Script Management Rules)
 
+## Token Paths and CSS Variable Generation
+
+- CSS var names are derived from the **full path** with segments joined by `-` and normalized to kebab-case: e.g. `upload.file-item.background.error` → `--token-component-upload-file-item-background-error`.
+- **Path collision:** `component.a.b` and `component.a-b` can both produce the same prefix `component-a-b`. The generator traverses each key once; if one path is never visited (e.g. `component.a` is only under another structure), those leaves will not appear in `tokens.css`. Prefer a **single consistent structure** for the same logical slot (e.g. use `file-item` only, not both `file.item` and `file-item` for the same component).
+- Run `scripts/diagnose-missing-component-vars.mjs` after builds to compare `tokens/output/componentTokens.json` with `styles/tokens.css` and find missing or duplicate `--token-component-*` variables.
+
 ## Common Mistakes to Avoid
 
 - ❌ Referencing primitives directly from component tokens
@@ -272,3 +234,4 @@ Both themes use the same token structure, with brand-specific values handled at 
 - ❌ Incorrect `$type` values
 - ❌ Missing `$description` fields
 - ❌ Breaking icon token structure consistency
+- ❌ Two token paths that flatten to the same `--token-component-*` prefix with only one actually traversed (causes “missing” vars in `tokens.css`)

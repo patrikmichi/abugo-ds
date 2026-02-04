@@ -2091,7 +2091,7 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{grey.200}",
+    "$value": "{brand.400}",
     "$description": "Active border color for accent intent (disabled). Use for accent-colored interactive elements.",
     "$extensions": {
       "design-tokens": {
@@ -3724,6 +3724,102 @@
       "$collectionName": "primitives",
       "$value": "{spacing-8}",
       "$description": "Extra extra large gap (32px). Use for maximum spacing between distinct sections."
+    },
+    "field": {
+      "label": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1p5}",
+          "$description": "Gap between label and control for small fields (6px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2}",
+          "$description": "Gap between label and control for medium fields (8px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Gap between label and control for large fields (10px)."
+        }
+      },
+      "error": {
+        "message": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Gap between control and error message (4px)."
+        }
+      },
+      "helper": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between control and helper text (4px)."
+      },
+      "internal": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between compound field parts e.g. input+select (4px)."
+      },
+      "selector": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-2}",
+        "$description": "Gap between flag, code, and chevron in selector (8px)."
+      },
+      "picker": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-2}",
+        "$description": "Gap between inputs and expand button in picker (8px)."
+      },
+      "pickerInput": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between inputs and labels/separators in picker (4px)."
+      }
     }
   },
   "icon": {
@@ -3950,6 +4046,106 @@
       "$collectionName": "primitives",
       "$value": "{spacing-30}",
       "$description": "Extra extra extra extra large padding (120px). Use for maximum spacing in hero sections."
+    },
+    "field": {
+      "selector": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Selector horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Selector horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Selector horizontal padding for large fields (12px)."
+        }
+      },
+      "picker": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Picker horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Picker horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-3}",
+          "$description": "Picker horizontal padding for large fields (12px)."
+        }
+      },
+      "select": {
+        "right": {
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-9}",
+            "$description": "Right padding for select small (accounts for chevron, 36px)."
+          },
+          "md": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-10}",
+            "$description": "Right padding for select medium (accounts for chevron, 40px)."
+          },
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$type": "spacing",
+            "$libraryName": "",
+            "$collectionName": "primitives",
+            "$value": "{spacing-11}",
+            "$description": "Right padding for select large (accounts for chevron, 44px)."
+          }
+        }
+      }
     }
   },
   "radius": {
@@ -4154,6 +4350,232 @@
     "$description": "Optical alignment offset for large typography (3px)."
   },
   "typography": {
+    "fontWeight": {
+      "regular": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-regular}",
+        "$description": "Regular font weight (400). Standard weight for body text."
+      },
+      "medium": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-medium}",
+        "$description": "Medium font weight (500). Moderate emphasis."
+      },
+      "semibold": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-semibold}",
+        "$description": "Semibold font weight (600). Strong emphasis."
+      },
+      "bold": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-bold}",
+        "$description": "Bold font weight (700). Maximum emphasis."
+      }
+    },
+    "fontSize": {
+      "1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-1}",
+        "$description": "Font size 1 (12px). Extra small text."
+      },
+      "2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-2}",
+        "$description": "Font size 2 (14px). Small text."
+      },
+      "3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-3}",
+        "$description": "Font size 3 (16px). Base text."
+      },
+      "4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-4}",
+        "$description": "Font size 4 (18px). Large text."
+      },
+      "5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-5}",
+        "$description": "Font size 5 (20px). Extra large text."
+      },
+      "6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-6}",
+        "$description": "Font size 6 (24px). Display text."
+      },
+      "7": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-7}",
+        "$description": "Font size 7 (28px). Large display text."
+      },
+      "8": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-8}",
+        "$description": "Font size 8 (32px). Extra large display text."
+      },
+      "9": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-9}",
+        "$description": "Font size 9 (36px). Huge display text."
+      }
+    },
+    "lineHeight": {
+      "3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-3}",
+        "$description": "Line height 3 (20px). For size 3 typography."
+      },
+      "12": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-12}",
+        "$description": "Line height 12px. Tight spacing."
+      },
+      "14": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-14}",
+        "$description": "Line height 14px. Compact spacing."
+      },
+      "16": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-16}",
+        "$description": "Line height 16px. Comfortable spacing."
+      },
+      "18": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-18}",
+        "$description": "Line height 18px."
+      },
+      "20": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-20}",
+        "$description": "Line height 20px. Standard spacing."
+      },
+      "24": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-24}",
+        "$description": "Line height 24px. Relaxed spacing."
+      },
+      "28": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-28}",
+        "$description": "Line height 28px. Loose spacing."
+      },
+      "32": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-32}",
+        "$description": "Line height 32px."
+      }
+    },
     "headline.size": {
       "h1": {
         "$scopes": [
@@ -4161,7 +4583,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.9}",
         "$description": "Font size for H1 headline. Use for page titles and major headings."
       },
@@ -4171,7 +4593,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.8}",
         "$description": "Font size for H2 headline. Use for page titles and major headings."
       },
@@ -4181,7 +4603,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.7}",
         "$description": "Font size for H3 headline. Use for page titles and major headings."
       },
@@ -4191,7 +4613,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.6}",
         "$description": "Font size for H4 headline. Use for page titles and major headings."
       },
@@ -4201,7 +4623,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.5}",
         "$description": "Font size for H5 headline. Use for page titles and major headings."
       },
@@ -4211,7 +4633,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.4}",
         "$description": "Font size for H6 headline. Use for page titles and major headings."
       }
@@ -4223,7 +4645,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H1 headline. Ensures proper vertical rhythm."
       },
@@ -4233,7 +4655,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H2 headline. Ensures proper vertical rhythm."
       },
@@ -4243,7 +4665,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H3 headline. Ensures proper vertical rhythm."
       },
@@ -4253,7 +4675,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H4 headline. Ensures proper vertical rhythm."
       },
@@ -4263,7 +4685,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H5 headline. Ensures proper vertical rhythm."
       },
@@ -4273,7 +4695,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for H6 headline. Ensures proper vertical rhythm."
       }
@@ -4285,7 +4707,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.4}",
         "$description": "Large body text size. Use for prominent body content and lead paragraphs."
       },
@@ -4295,7 +4717,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.3}",
         "$description": "Medium body text size. Use for standard body content and paragraphs."
       },
@@ -4305,7 +4727,7 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.2}",
         "$description": "Small body text size. Use for secondary text and captions."
       },
@@ -4315,19 +4737,59 @@
         ],
         "$type": "fontSizes",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontSize.1}",
         "$description": "Extra small body text size. Use for fine print and disclaimers."
       }
     },
     "body.line": {
+      "compact": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.3}",
+        "$description": "Compact line height for labels and helper text. Use for field labels, errors, helpers."
+      },
+      "tight": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.12}",
+        "$description": "Tight line height for compact UI (e.g. buttons)."
+      },
+      "relaxed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.14}",
+        "$description": "Relaxed line height for descriptions and longer text."
+      },
+      "loose": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.16}",
+        "$description": "Loose line height for body and modal/drawer content."
+      },
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text lg variant. Ensures readable line spacing."
       },
@@ -4337,7 +4799,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text md variant. Ensures readable line spacing."
       },
@@ -4347,7 +4809,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text sm variant. Ensures readable line spacing."
       },
@@ -4357,7 +4819,7 @@
         ],
         "$type": "lineHeights",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.lineHeight.base}",
         "$description": "Line height for body text xs variant. Ensures readable line spacing."
       }
@@ -4369,7 +4831,7 @@
         ],
         "$type": "number",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontWeight.regular}",
         "$description": "Light font weight. Use for subtle emphasis."
       },
@@ -4379,7 +4841,7 @@
         ],
         "$type": "number",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontWeight.regular}",
         "$description": "Normal font weight. Use for standard body text."
       },
@@ -4389,7 +4851,7 @@
         ],
         "$type": "number",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontWeight.medium}",
         "$description": "Medium font weight. Use for moderate emphasis."
       },
@@ -4399,7 +4861,7 @@
         ],
         "$type": "number",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontWeight.bold}",
         "$description": "Semibold font weight. Use for strong emphasis in body text."
       },
@@ -4409,7 +4871,7 @@
         ],
         "$type": "number",
         "$libraryName": "",
-        "$collectionName": "primitives",
+        "$collectionName": "semanticTokens",
         "$value": "{typography.fontWeight.bold}",
         "$description": "Bold font weight. Use for maximum emphasis."
       }
@@ -4583,7 +5045,7 @@
       "$type": "number",
       "$libraryName": "",
       "$collectionName": "primitives",
-      "$value": "{z-index.z-tooltip}",
+      "$value": "{z-tooltip}",
       "$description": "Tooltip z-index layer"
     },
     "drawer": {

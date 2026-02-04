@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect, useCallback, useContext, createCont
 import styles from './Checkbox.module.css';
 import { cn } from '@/lib/utils';
 
-export type CheckboxSize = 'small' | 'middle' | 'large';
-
 export interface CheckboxChangeEvent {
   target: {
     checked: boolean;
@@ -13,19 +11,19 @@ export interface CheckboxChangeEvent {
   nativeEvent: React.ChangeEvent<HTMLInputElement>['nativeEvent'];
 }
 
-export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size'> {
+export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   /** Whether the checkbox is checked (controlled) */
   checked?: boolean;
   /** Whether the checkbox is checked by default (uncontrolled) */
   defaultChecked?: boolean;
   /** Whether the checkbox is disabled */
   disabled?: boolean;
+  /** Whether the checkbox has error state */
+  error?: boolean;
   /** Set indeterminate state */
   indeterminate?: boolean;
   /** Callback when state changes */
   onChange?: (e: CheckboxChangeEvent) => void;
-  /** Size */
-  size?: CheckboxSize;
   /** Auto focus */
   autoFocus?: boolean;
   /** Custom class name */
@@ -41,33 +39,17 @@ interface CheckboxGroupContextValue {
   onChange?: (checkedValue: string[]) => void;
   registerValue: (value: string) => void;
   cancelValue: (value: string) => void;
-  size?: CheckboxSize;
 }
 
 const CheckboxGroupContext = createContext<CheckboxGroupContextValue | null>(null);
 
-/**
- * Checkbox Component
- * 
- * Checkbox component following standard patterns.
- * 
- * @example
- * ```tsx
- * <Checkbox
- *   checked={checked}
- *   onChange={(e) => setChecked(e.target.checked)}
- * >
- *   Option
- * </Checkbox>
- * ```
- */
 export function Checkbox({
   checked: controlledChecked,
   defaultChecked = false,
   disabled: propDisabled = false,
+  error = false,
   indeterminate = false,
   onChange,
-  size: propSize = 'middle',
   autoFocus = false,
   className,
   children,
@@ -82,11 +64,9 @@ export function Checkbox({
   const isControlled = controlledChecked !== undefined;
   const checked = isControlled ? controlledChecked : internalChecked;
 
-  // Handle group context
   const inGroup = groupContext !== null;
   const groupDisabled = groupContext?.disabled || false;
   const disabled = propDisabled || groupDisabled;
-  const size = propSize || groupContext?.size || 'middle';
 
   const groupChecked = useMemo(() => {
     if (!inGroup || !value) return false;
@@ -95,7 +75,6 @@ export function Checkbox({
 
   const finalChecked = inGroup && value !== undefined ? groupChecked : checked;
 
-  // Register with group
   useEffect(() => {
     if (inGroup && value !== undefined) {
       groupContext?.registerValue(String(value));
@@ -105,14 +84,12 @@ export function Checkbox({
     }
   }, [inGroup, value, groupContext]);
 
-  // Set indeterminate state
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.indeterminate = indeterminate;
     }
   }, [indeterminate]);
 
-  // Auto focus
   useEffect(() => {
     if (autoFocus && inputRef.current) {
       inputRef.current.focus();
@@ -138,9 +115,7 @@ export function Checkbox({
         groupContext.onChange?.(newValue);
       } else {
         const event: CheckboxChangeEvent = {
-          target: {
-            checked: newChecked,
-          },
+          target: { checked: newChecked },
           stopPropagation: () => e.stopPropagation(),
           preventDefault: () => e.preventDefault(),
           nativeEvent: e.nativeEvent,
@@ -158,9 +133,7 @@ export function Checkbox({
       className={cn(
         styles.checkboxWrapper,
         disabled && styles.disabled,
-        size === 'small' && styles.small,
-        size === 'middle' && styles.middle,
-        size === 'large' && styles.large,
+        error && styles.error,
         finalChecked && styles.checked,
         indeterminate && styles.indeterminate,
         className
@@ -180,9 +153,9 @@ export function Checkbox({
         />
         <span className={styles.checkboxInner}>
           {indeterminate ? (
-            <span className={styles.indeterminateMark} />
+            <span className={cn('material-symbols-outlined', styles.icon)}>remove</span>
           ) : finalChecked ? (
-            <span className={styles.checkmark} />
+            <span className={cn('material-symbols-outlined', styles.icon)}>check_small</span>
           ) : null}
         </span>
       </span>
@@ -210,28 +183,14 @@ export interface CheckboxGroupProps extends Omit<React.HTMLAttributes<HTMLDivEle
   name?: string;
   /** Options */
   options?: string[] | CheckboxOption[];
-  /** Size */
-  size?: CheckboxSize;
+  /** Layout direction */
+  direction?: 'vertical' | 'horizontal';
   /** Custom class name */
   className?: string;
   /** Children */
   children?: React.ReactNode;
 }
 
-/**
- * Checkbox.Group Component
- * 
- * Group of checkboxes. Group API.
- * 
- * @example
- * ```tsx
- * <Checkbox.Group
- *   value={selected}
- *   onChange={(values) => setSelected(values)}
- *   options={['Option 1', 'Option 2', 'Option 3']}
- * />
- * ```
- */
 export function CheckboxGroup({
   value: controlledValue,
   defaultValue = [],
@@ -239,7 +198,7 @@ export function CheckboxGroup({
   disabled = false,
   name,
   options,
-  size = 'middle',
+  direction = 'vertical',
   className,
   children,
   style,
@@ -276,22 +235,20 @@ export function CheckboxGroup({
     onChange: handleChange,
     registerValue,
     cancelValue,
-    size,
   };
 
   const renderOptions = () => {
     if (!options) return null;
-
     return options.map((option, index) => {
       if (typeof option === 'string') {
         return (
-          <Checkbox key={index} value={option} size={size}>
+          <Checkbox key={index} value={option}>
             {option}
           </Checkbox>
         );
       } else {
         return (
-          <Checkbox key={option.value} value={option.value} disabled={option.disabled} size={size}>
+          <Checkbox key={option.value} value={option.value} disabled={option.disabled}>
             {option.label}
           </Checkbox>
         );
@@ -301,12 +258,15 @@ export function CheckboxGroup({
 
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
-      <div className={cn(styles.group, className)} style={style} {...props}>
+      <div
+        className={cn(styles.group, direction === 'horizontal' && styles.groupHorizontal, className)}
+        style={style}
+        {...props}
+      >
         {options ? renderOptions() : children}
       </div>
     </CheckboxGroupContext.Provider>
   );
 }
 
-// Attach Group to Checkbox
 (Checkbox as any).Group = CheckboxGroup;

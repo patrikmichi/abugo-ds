@@ -1,239 +1,152 @@
 {
   "$name": "Component Tokens",
-  "success": {
-    "content": {
-      "background": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background.passive.success.subtle}"
-      },
-      "content": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content.passive.neutral.default}"
-      }
-    }
-  },
-  "icon": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
-    "$type": "color",
-    "$libraryName": "",
-    "$collectionName": "semanticTokens",
-    "$value": "{content.passive.info}"
-  },
-  "danger": {
-    "content": {
-      "background": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background.passive.danger.subtle}"
-      },
-      "content": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content.passive.neutral.default}"
-      }
-    },
-    "icon": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "color",
+  "padding": {
+    "small": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
       "$libraryName": "",
       "$collectionName": "semanticTokens",
-      "$value": "{content.passive.danger}"
-    }
-  },
-  "warning": {
-    "content": {
-      "background": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background.passive.warning.subtle}"
-      },
-      "content": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content.passive.neutral.default}"
-      }
-    }
-  },
-  "info": {
-    "content": {
-      "background": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{background.passive.info.subtle}"
-      },
-      "content": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$type": "color",
-        "$libraryName": "",
-        "$collectionName": "semanticTokens",
-        "$value": "{content.passive.info}"
-      }
-    }
-  },
-  "content": {
-    "gap": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$libraryName": "",
-      "$type": "color",
-      "$value": "{content.passive.neutral.default}",
-      "$collectionName": "semanticTokens"
-    }
-  },
-  "description": {
-    "font": {
-      "size": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      }
+      "$value": "{padding.xs}"
     },
-    "line": {
-      "height": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "lineHeights",
-        "$value": "{typography.lineHeight.16}",
-        "$collectionName": "primitives"
-      }
-    },
-    "opacity": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
+    "large": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
       "$libraryName": "",
-      "$type": "number",
-      "$value": 0.5,
-      "$collectionName": ""
-    }
-  },
-  "font": {
-    "size": {
-      "large": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      },
-      "small": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "fontSizes",
-        "$value": "{typography.fontSize.3}",
-        "$collectionName": "primitives"
-      }
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.m}"
     }
   },
   "gap": {
-    "$scopes": [
-      "ALL_SCOPES"
-    ],
+    "$scopes": ["ALL_SCOPES"],
+    "$type": "dimension",
     "$libraryName": "",
-    "$type": "spacing",
-    "$value": "{padding.s}",
-    "$collectionName": "semanticTokens"
+    "$collectionName": "semanticTokens",
+    "$value": "{gap.xs}"
   },
-  "min": {
-    "height": {
-      "large": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
+  "header": {
+    "gap": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.sm}"
+    }
+  },
+  "icon": {
+    "size": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    }
+  },
+  "message": {
+    "color": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.strong}"
+    }
+  },
+  "description": {
+    "color": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}"
+    }
+  },
+  "close": {
+    "color": {
+      "default": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "color",
         "$libraryName": "",
-        "$type": "dimension",
-        "$value": 40,
-        "$collectionName": ""
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.subtle}"
       },
-      "small": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
+      "hover": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "color",
         "$libraryName": "",
-        "$type": "dimension",
-        "$value": 40,
-        "$collectionName": ""
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
       }
     }
   },
-  "padding": {
-    "x": {
-      "large": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      },
-      "small": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      }
+  "success": {
+    "background": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.success.subtle}"
     },
-    "y": {
-      "small": {
-        "$scopes": [
-          "ALL_SCOPES"
-        ],
-        "$libraryName": "",
-        "$type": "spacing",
-        "$value": "{padding.s}",
-        "$collectionName": "semanticTokens"
-      }
+    "icon": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.success.default}"
     }
+  },
+  "info": {
+    "background": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.info.subtle}"
+    },
+    "icon": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.info.default}"
+    }
+  },
+  "warning": {
+    "background": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.warning.subtle}"
+    },
+    "icon": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.warning.default}"
+    }
+  },
+  "danger": {
+    "background": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.danger.subtle}"
+    },
+    "icon": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.danger.default}"
+    }
+  },
+  "visual-compensation-offset": {
+    "$scopes": ["ALL_SCOPES"],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": 1,
+    "$description": "Optical alignment offset for text"
   }
 }

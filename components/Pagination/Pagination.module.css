@@ -54,13 +54,14 @@
   font-weight: var(--token-primitive-typography-font-weight-bold);
   background-color: var(--token-component-button-primary-filled-background-default) !important;
   color: var(--token-component-button-primary-filled-content) !important;
+  outline: none !important;
 }
 
 /* Input variant container */
 .inputContainer {
   display: flex;
   align-items: center;
-  gap: var(--token-semantic-padding-xxs, 8px);
+  gap: var(--token-component-pagination-gap, 8px);
 }
 
 /* Center the text inside the input and force width via wrapper */
@@ -90,12 +91,12 @@
   min-width: 100% !important;
   max-width: 100% !important;
   /* Visual compensation matching Input.tsx but using tokens */
-  padding-top: var(--token-semantic-typography-visual-compensation-offset-1, 1px) !important;
+  padding-top: var(--token-component-pagination-visual-compensation-offset, 1px) !important;
 }
 
 /* Visual compensation for cell numbers */
 .pageButton {
-  padding-top: var(--token-semantic-typography-visual-compensation-offset-1, 1px) !important;
+  padding-top: var(--token-component-pagination-visual-compensation-offset, 1px) !important;
 }
 
 /* Specific radius alignment */
@@ -110,11 +111,11 @@
 }
 
 .totalText {
-  font-size: var(--token-semantic-typography-body-size-sm, 14px);
-  color: var(--token-semantic-text-primary, #464646);
+  font-size: var(--token-component-pagination-font-size-default, 14px);
+  color: var(--token-component-pagination-content-color, #464646);
   white-space: nowrap;
 }
 
 .sm .totalText {
-  font-size: var(--token-semantic-typography-body-size-xs, 12px);
+  font-size: var(--token-component-pagination-font-size-small, 12px);
 }

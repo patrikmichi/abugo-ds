@@ -6,25 +6,28 @@
   width: 100%;
   display: flex;
   align-items: center;
-  /* Height set per size variant */
+  padding: 0;
 }
 
 .inputWrapper.sm {
   height: var(--token-component-height-field-sm);
   min-height: var(--token-component-height-field-sm);
   max-height: var(--token-component-height-field-sm);
+  padding: 0;
 }
 
 .inputWrapper.md {
   height: var(--token-component-height-field-md);
   min-height: var(--token-component-height-field-md);
   max-height: var(--token-component-height-field-md);
+  padding: 0;
 }
 
 .inputWrapper.lg {
   height: var(--token-component-height-field-lg);
   min-height: var(--token-component-height-field-lg);
   max-height: var(--token-component-height-field-lg);
+  padding: 0;
 }
 
 .input {
@@ -38,12 +41,10 @@
   color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-md) + 1px);
-  padding-bottom: calc(var(--token-component-padding-y-field-md) - 1px);
+  padding-top: calc(var(--token-component-padding-y-field-md) + var(--token-semantic-typography-optical-alignment-offset-md, 2px));
+  padding-bottom: calc(var(--token-component-padding-y-field-md) - var(--token-semantic-typography-optical-alignment-offset-md, 2px));
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
   font-size: var(--token-component-font-size-field-sm);
-  /* Line-height matches content area (height - padding-top - padding-bottom) for vertical centering */
   line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
   font-family: var(--token-primitive-typography-font-family-sans);
   transition:
@@ -163,8 +164,8 @@
   /* Show soft glowing focus ring on focus */
   outline: none;
   box-shadow:
-    0 0 0 var(--token-component-field-focus-outline-offset) transparent,
-    0 0 var(--token-component-field-focus-outline-blur) calc(var(--token-component-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
 }
 
 .input:not(.error):not(.disabled):active:not(:disabled) {
@@ -209,12 +210,10 @@
   max-height: var(--token-component-height-field-sm);
   padding-inline-start: var(--token-component-padding-x-field-sm);
   padding-inline-end: var(--token-component-padding-x-field-sm);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-sm) + var(--token-semantic-typography-visual-compensation-offset-1, 1px));
-  padding-bottom: calc(var(--token-component-padding-y-field-sm) - var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  padding-top: calc(var(--token-component-padding-y-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm, 2px));
+  padding-bottom: calc(var(--token-component-padding-y-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm, 2px));
   border-radius: calc(var(--token-component-radius-field-sm) * 1px);
   font-size: var(--token-component-font-size-field-sm);
-  /* Line-height matches content area (height - padding-top - padding-bottom) for vertical centering */
   line-height: calc(var(--token-component-height-field-sm) - var(--token-component-padding-y-field-sm) * 2);
 }
 
@@ -240,11 +239,9 @@
   max-height: var(--token-component-height-field-md);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-md) + 1px);
-  padding-bottom: calc(var(--token-component-padding-y-field-md) - 1px);
+  padding-top: calc(var(--token-component-padding-y-field-md) + var(--token-semantic-typography-optical-alignment-offset-md, 2px));
+  padding-bottom: calc(var(--token-component-padding-y-field-md) - var(--token-semantic-typography-optical-alignment-offset-md, 2px));
   border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  /* Line-height matches content area (height - padding-top - padding-bottom) for vertical centering */
   line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
 }
 
@@ -254,12 +251,10 @@
   max-height: var(--token-component-height-field-lg);
   padding-inline-start: var(--token-component-padding-x-field-lg);
   padding-inline-end: var(--token-component-padding-x-field-lg);
-  /* Equal padding with visual centering adjustment */
-  padding-top: calc(var(--token-component-padding-y-field-lg) + var(--token-semantic-typography-visual-compensation-offset-1, 1px));
-  padding-bottom: calc(var(--token-component-padding-y-field-lg) - var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  padding-top: calc(var(--token-component-padding-y-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg, 3px));
+  padding-bottom: calc(var(--token-component-padding-y-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg, 3px));
   border-radius: calc(var(--token-component-radius-field-lg) * 1px);
   font-size: var(--token-component-font-size-field-lg);
-  /* Line-height matches content area (height - padding-top - padding-bottom) for vertical centering */
   line-height: calc(var(--token-component-height-field-lg) - var(--token-component-padding-y-field-lg) * 2);
 }
 
@@ -301,8 +296,8 @@
   align-items: center;
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-top: calc(var(--token-component-padding-y-field-md) + 1px);
-  padding-bottom: calc(var(--token-component-padding-y-field-md) - 1px);
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
   background-color: var(--token-component-field-control-background-default);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   color: var(--token-component-field-content-value);
@@ -340,8 +335,8 @@
 .addonWrapper.sm .addonAfter {
   padding-inline-start: var(--token-component-padding-x-field-sm);
   padding-inline-end: var(--token-component-padding-x-field-sm);
-  padding-top: calc(var(--token-component-padding-y-field-sm) + var(--token-semantic-typography-visual-compensation-offset-1, 1px));
-  padding-bottom: calc(var(--token-component-padding-y-field-sm) - var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  padding-top: var(--token-component-padding-y-field-sm);
+  padding-bottom: var(--token-component-padding-y-field-sm);
   font-size: var(--token-component-font-size-field-sm);
   line-height: calc(var(--token-component-height-field-sm) - var(--token-component-padding-y-field-sm) * 2);
 }
@@ -358,8 +353,8 @@
 .addonWrapper.lg .addonAfter {
   padding-inline-start: var(--token-component-padding-x-field-lg);
   padding-inline-end: var(--token-component-padding-x-field-lg);
-  padding-top: calc(var(--token-component-padding-y-field-lg) + var(--token-semantic-typography-visual-compensation-offset-1, 1px));
-  padding-bottom: calc(var(--token-component-padding-y-field-lg) - var(--token-semantic-typography-visual-compensation-offset-1, 1px));
+  padding-top: var(--token-component-padding-y-field-lg);
+  padding-bottom: var(--token-component-padding-y-field-lg);
   font-size: var(--token-component-font-size-field-lg);
   line-height: calc(var(--token-component-height-field-lg) - var(--token-component-padding-y-field-lg) * 2);
 }

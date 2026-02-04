@@ -1,15 +1,6 @@
 {
   "$name": "Component Tokens",
   "label": {
-    "gap": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{gap.xs}"
-    },
     "font-size": {
       "$scopes": [
         "ALL_SCOPES"

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './Drawer.module.css';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/Button';
 
 export type DrawerPlacement = 'top' | 'right' | 'bottom' | 'left';
 
@@ -12,6 +13,10 @@ export interface DrawerProps {
   defaultOpen?: boolean;
   /** Callback when open state changes */
   onClose?: (e: React.MouseEvent | React.KeyboardEvent) => void;
+  /** Callback when OK/Save button is clicked */
+  onOk?: (e: React.MouseEvent) => void;
+  /** Callback when back button is clicked. Shows back arrow in header when provided */
+  onBack?: (e: React.MouseEvent) => void;
   /** Callback after open/close animation finishes */
   afterOpenChange?: (open: boolean) => void;
   /** Placement of drawer */
@@ -34,8 +39,16 @@ export interface DrawerProps {
   getContainer?: HTMLElement | (() => HTMLElement) | string | false;
   /** Title of drawer */
   title?: React.ReactNode;
-  /** Footer of drawer */
-  footer?: React.ReactNode;
+  /** Title alignment */
+  titleAlign?: 'left' | 'center';
+  /** Whether to show footer with Save/Cancel buttons */
+  footer?: boolean;
+  /** Footer alignment */
+  footerAlign?: 'left' | 'right';
+  /** Save button text */
+  okText?: React.ReactNode;
+  /** Cancel button text */
+  cancelText?: React.ReactNode;
   /** Custom class name for drawer */
   className?: string;
   /** Custom style for drawer */
@@ -93,6 +106,8 @@ export function Drawer({
   open: controlledOpen,
   defaultOpen = false,
   onClose,
+  onOk,
+  onBack,
   afterOpenChange,
   placement = 'right',
   width = 378,
@@ -103,7 +118,11 @@ export function Drawer({
   keyboard = true,
   getContainer,
   title,
-  footer,
+  titleAlign = 'left',
+  footer = false,
+  footerAlign = 'left',
+  okText = 'Save',
+  cancelText = 'Cancel',
   className,
   style,
   maskClassName,
@@ -235,10 +254,44 @@ export function Drawer({
         aria-modal="true"
         aria-labelledby={title ? 'drawer-title' : undefined}
       >
-        {closable && (
+        {title ? (
+          <div className={cn(styles.header, titleAlign === 'center' && styles.titleCenter)}>
+            {onBack ? (
+              <button
+                type="button"
+                className={styles.back}
+                onClick={onBack}
+                aria-label="Back"
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
+                  arrow_back
+                </span>
+              </button>
+            ) : titleAlign === 'center' && closable ? (
+              <div className={styles.spacer} aria-hidden="true" />
+            ) : null}
+            <div className={styles.titleWrap}>
+              <div id="drawer-title" className={styles.title}>
+                {title}
+              </div>
+            </div>
+            {closable && (
+              <button
+                type="button"
+                className={styles.close}
+                onClick={handleClose}
+                aria-label="Close"
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
+                  close
+                </span>
+              </button>
+            )}
+          </div>
+        ) : closable ? (
           <button
             type="button"
-            className={styles.close}
+            className={styles.closeAbsolute}
             onClick={handleClose}
             aria-label="Close"
           >
@@ -246,23 +299,16 @@ export function Drawer({
               close
             </span>
           </button>
-        )}
-        
-        {title && (
-          <div className={styles.header}>
-            <div id="drawer-title" className={styles.title}>
-              {title}
-            </div>
-          </div>
-        )}
-        
+        ) : null}
+
         <div className={styles.body} style={bodyStyle}>
           {children}
         </div>
-        
+
         {footer && (
-          <div className={styles.footer}>
-            {footer}
+          <div className={cn(styles.footer, footerAlign === 'right' && styles.footerRight)}>
+            <Button variant="primary" appearance="filled" onClick={onOk}>{okText}</Button>
+            <Button variant="secondary" appearance="plain" onClick={handleClose}>{cancelText}</Button>
           </div>
         )}
       </div>

@@ -231,49 +231,37 @@ export const WithCallback: Story = {
   ),
 };
 
-export const WithButton: Story = {
+export const WithActions: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
       <Button
         onClick={() =>
           Notification.info({
-            message: 'Notification with Button',
-            description: 'This notification includes a custom action button.',
-            btn: (
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={() => {
-                  alert('Button clicked!');
-                }}
-              >
-                View Details
-              </Button>
-            ),
+            message: 'Notification with Action',
+            description: 'This notification includes an action button.',
+            actions: {
+              label: 'View Details',
+              variant: 'primary',
+              onClick: () => alert('Button clicked!'),
+            },
           })
         }
       >
-        With Button
+        Single Action
       </Button>
       <Button
         onClick={() =>
           Notification.warning({
             message: 'Action Required',
             description: 'Please review and take action.',
-            btn: (
-              <div style={{ display: 'flex', gap: '8px' }}>
-                <Button variant="text" size="sm">
-                  Dismiss
-                </Button>
-                <Button variant="primary" size="sm">
-                  Take Action
-                </Button>
-              </div>
-            ),
+            actions: [
+              { label: 'Dismiss', variant: 'secondary', appearance: 'plain' },
+              { label: 'Take Action', variant: 'primary' },
+            ],
           })
         }
       >
-        With Multiple Buttons
+        Multiple Actions
       </Button>
     </div>
   ),

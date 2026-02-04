@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { createPortal } from 'react-dom';
 import styles from './ColorPicker.module.css';
 import { cn } from '@/lib/utils';
-import { Input } from '@/components/Input';
 
 export type ColorPickerFormat = 'hex' | 'rgb' | 'hsb';
 export type ColorPickerValue = string | null;
@@ -10,106 +9,108 @@ export type ColorPickerValue = string | null;
 export interface ColorPreset {
   label: string;
   colors: string[];
+  defaultOpen?: boolean;
 }
 
-// Color conversion utilities
+// ─── Color conversion utilities ──────────────────────────────────────────────
+
 const hexToRgb = (hex: string): { r: number; g: number; b: number } | null => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const clean = hex.replace('#', '');
+  if (clean.length !== 6) return null;
+  const result = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(clean);
   return result
-    ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
+    ? { r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16) }
     : null;
 };
 
 const rgbToHex = (r: number, g: number, b: number): string => {
-  return '#' + [r, g, b].map((x) => x.toString(16).padStart(2, '0')).join('');
+  return '#' + [r, g, b].map((x) => Math.max(0, Math.min(255, Math.round(x))).toString(16).padStart(2, '0')).join('');
 };
 
 const rgbToHsb = (r: number, g: number, b: number): { h: number; s: number; b: number } => {
-  r /= 255;
-  g /= 255;
-  b /= 255;
-
+  r /= 255; g /= 255; b /= 255;
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
   const delta = max - min;
-
   let h = 0;
   if (delta !== 0) {
-    if (max === r) {
-      h = ((g - b) / delta) % 6;
-    } else if (max === g) {
-      h = (b - r) / delta + 2;
-    } else {
-      h = (r - g) / delta + 4;
-    }
+    if (max === r) h = ((g - b) / delta) % 6;
+    else if (max === g) h = (b - r) / delta + 2;
+    else h = (r - g) / delta + 4;
   }
   h = Math.round(h * 60);
   if (h < 0) h += 360;
-
   const s = max === 0 ? 0 : delta / max;
-  const bValue = max;
-
-  return { h, s: Math.round(s * 100), b: Math.round(bValue * 100) };
+  return { h, s: Math.round(s * 100), b: Math.round(max * 100) };
 };
 
 const hsbToRgb = (h: number, s: number, b: number): { r: number; g: number; b: number } => {
-  s /= 100;
-  b /= 100;
-
+  s /= 100; b /= 100;
   const c = b * s;
   const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
   const m = b - c;
-
-  let r = 0;
-  let g = 0;
-  let blue = 0;
-
-  if (h >= 0 && h < 60) {
-    r = c;
-    g = x;
-    blue = 0;
-  } else if (h >= 60 && h < 120) {
-    r = x;
-    g = c;
-    blue = 0;
-  } else if (h >= 120 && h < 180) {
-    r = 0;
-    g = c;
-    blue = x;
-  } else if (h >= 180 && h < 240) {
-    r = 0;
-    g = x;
-    blue = c;
-  } else if (h >= 240 && h < 300) {
-    r = x;
-    g = 0;
-    blue = c;
-  } else if (h >= 300 && h < 360) {
-    r = c;
-    g = 0;
-    blue = x;
-  }
-
-  r = Math.round((r + m) * 255);
-  g = Math.round((g + m) * 255);
-  blue = Math.round((blue + m) * 255);
-
-  return { r, g, b: blue };
+  let r = 0, g = 0, bl = 0;
+  if (h >= 0 && h < 60) { r = c; g = x; }
+  else if (h >= 60 && h < 120) { r = x; g = c; }
+  else if (h >= 120 && h < 180) { g = c; bl = x; }
+  else if (h >= 180 && h < 240) { g = x; bl = c; }
+  else if (h >= 240 && h < 300) { r = x; bl = c; }
+  else { r = c; bl = x; }
+  return { r: Math.round((r + m) * 255), g: Math.round((g + m) * 255), b: Math.round((bl + m) * 255) };
 };
 
-const formatColor = (hex: string, format: ColorPickerFormat): string => {
+const hexToHsba = (hex: string, alpha: number = 100): { h: number; s: number; b: number; a: number } => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return { h: 0, s: 0, b: 0, a: alpha };
+  const hsb = rgbToHsb(rgb.r, rgb.g, rgb.b);
+  return { ...hsb, a: alpha };
+};
+
+const parseColor = (color: string): { hex: string; alpha: number } | null => {
+  if (!color) return null;
+  // Hex format
+  if (color.startsWith('#')) {
+    if (color.length === 7) return { hex: color, alpha: 100 };
+    if (color.length === 9) {
+      const alphaHex = color.slice(7, 9);
+      return { hex: color.slice(0, 7), alpha: Math.round((parseInt(alphaHex, 16) / 255) * 100) };
+    }
+    return null;
+  }
+  // RGBA format
+  const rgbaMatch = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+  if (rgbaMatch) {
+    const r = parseInt(rgbaMatch[1], 10);
+    const g = parseInt(rgbaMatch[2], 10);
+    const b = parseInt(rgbaMatch[3], 10);
+    const a = rgbaMatch[4] ? Math.round(parseFloat(rgbaMatch[4]) * 100) : 100;
+    return { hex: rgbToHex(r, g, b), alpha: a };
+  }
+  // HSB format
+  const hsbMatch = color.match(/hsb\((\d+),\s*(\d+)%?,\s*(\d+)%?\)/);
+  if (hsbMatch) {
+    const h = parseInt(hsbMatch[1], 10);
+    const s = parseInt(hsbMatch[2], 10);
+    const bv = parseInt(hsbMatch[3], 10);
+    const rgb = hsbToRgb(h, s, bv);
+    return { hex: rgbToHex(rgb.r, rgb.g, rgb.b), alpha: 100 };
+  }
+  return null;
+};
+
+const formatColorDisplay = (hex: string, alpha: number, format: ColorPickerFormat): string => {
   if (!hex) return '';
   const rgb = hexToRgb(hex);
   if (!rgb) return hex;
-
   switch (format) {
     case 'hex':
+      if (alpha < 100) {
+        const alphaHex = Math.round((alpha / 100) * 255).toString(16).padStart(2, '0');
+        return (hex + alphaHex).toUpperCase();
+      }
       return hex.toUpperCase();
     case 'rgb':
+      if (alpha < 100) return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${(alpha / 100).toFixed(2)})`;
       return `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
     case 'hsb': {
       const hsb = rgbToHsb(rgb.r, rgb.g, rgb.b);
@@ -120,95 +121,42 @@ const formatColor = (hex: string, format: ColorPickerFormat): string => {
   }
 };
 
-const parseColor = (color: string): string | null => {
-  if (!color) return null;
-
-  // Hex format
-  if (color.startsWith('#')) {
-    return color.length === 7 ? color : null;
-  }
-
-  // RGB format
-  const rgbMatch = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-  if (rgbMatch) {
-    const r = parseInt(rgbMatch[1], 10);
-    const g = parseInt(rgbMatch[2], 10);
-    const b = parseInt(rgbMatch[3], 10);
-    return rgbToHex(r, g, b);
-  }
-
-  // HSB format
-  const hsbMatch = color.match(/hsb\((\d+),\s*(\d+)%,\s*(\d+)%\)/);
-  if (hsbMatch) {
-    const h = parseInt(hsbMatch[1], 10);
-    const s = parseInt(hsbMatch[2], 10);
-    const b = parseInt(hsbMatch[3], 10);
-    const rgb = hsbToRgb(h, s, b);
-    return rgbToHex(rgb.r, rgb.g, rgb.b);
-  }
-
-  return null;
-};
+// ─── Props ───────────────────────────────────────────────────────────────────
 
 export interface ColorPickerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange' | 'defaultValue'> {
-  /** Current value (controlled) */
   value?: ColorPickerValue;
-  /** Default value (uncontrolled) */
   defaultValue?: ColorPickerValue;
-  /** Callback when value changes */
   onChange?: (value: ColorPickerValue, hex: string) => void;
-  /** Color format */
   format?: ColorPickerFormat;
-  /** Show color text */
+  onFormatChange?: (format: ColorPickerFormat) => void;
   showText?: boolean | ((color: ColorPickerValue) => React.ReactNode);
-  /** Allow clear */
   allowClear?: boolean;
-  /** Disabled state */
   disabled?: boolean;
-  /** Preset colors */
+  disabledAlpha?: boolean;
   presets?: ColorPreset[];
-  /** Size */
   size?: 'sm' | 'md' | 'lg';
-  /** Custom class name */
   className?: string;
-  /** Custom style */
   style?: React.CSSProperties;
-  /** Get popup container */
   getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement;
-  /** Open state (controlled) */
   open?: boolean;
-  /** Default open state */
   defaultOpen?: boolean;
-  /** Callback when open state changes */
   onOpenChange?: (open: boolean) => void;
-  /** Custom class name for popup */
   popupClassName?: string;
-  /** Custom style for popup */
   popupStyle?: React.CSSProperties;
 }
 
-/**
- * ColorPicker Component
- * 
- * Color picker component with support for hex, RGB, and HSB formats.
- * 
- * @example
- * ```tsx
- * <ColorPicker
- *   value="#538bff"
- *   onChange={(value, hex) => console.log(value, hex)}
- *   format="hex"
- * />
- * ```
- */
+// ─── Component ───────────────────────────────────────────────────────────────
+
 export function ColorPicker({
   value: controlledValue,
-  defaultValue,
+  defaultValue = '#1677ff',
   onChange,
-  format = 'hex',
+  format: controlledFormat,
+  onFormatChange,
   showText = false,
   allowClear = false,
   disabled = false,
+  disabledAlpha = true,
   presets,
   size = 'md',
   className,
@@ -221,256 +169,500 @@ export function ColorPicker({
   popupStyle,
   ...props
 }: ColorPickerProps) {
-  const [internalValue, setInternalValue] = useState<ColorPickerValue>(defaultValue || null);
+  const [internalValue, setInternalValue] = useState<ColorPickerValue>(defaultValue);
   const [internalOpen, setInternalOpen] = useState(defaultOpen);
-  const [hsb, setHsb] = useState<{ h: number; s: number; b: number }>({ h: 214, s: 100, b: 100 });
+  const [internalFormat, setInternalFormat] = useState<ColorPickerFormat>('hex');
+  const [hsba, setHsba] = useState<{ h: number; s: number; b: number; a: number }>({ h: 214, s: 78, b: 100, a: 100 });
+  const [panelPosition, setPanelPosition] = useState<{ top: number; left: number } | null>(null);
+  const [presetOpenState, setPresetOpenState] = useState<Record<number, boolean>>({});
+
   const containerRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const saturationRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
+  const hueRef = useRef<HTMLDivElement>(null);
+  const alphaRef = useRef<HTMLDivElement>(null);
+  const isDraggingSaturation = useRef(false);
+  const isDraggingHue = useRef(false);
+  const isDraggingAlpha = useRef(false);
 
   const isControlled = controlledValue !== undefined;
   const value = isControlled ? controlledValue : internalValue;
-
   const isOpenControlled = controlledOpen !== undefined;
   const open = isOpenControlled ? controlledOpen : internalOpen;
+  const format = controlledFormat ?? internalFormat;
 
-  // Convert value to hex and update HSB
+  // Parse initial value into HSBA
   useEffect(() => {
     if (value) {
-      const hex = parseColor(value) || value;
-      const rgb = hexToRgb(hex);
-      if (rgb) {
-        setHsb(rgbToHsb(rgb.r, rgb.g, rgb.b));
+      const parsed = parseColor(value);
+      if (parsed) {
+        const hsb = hexToHsba(parsed.hex, parsed.alpha);
+        setHsba(hsb);
       }
     }
   }, [value]);
 
   const currentHex = useMemo(() => {
-    if (!value) return null;
-    const hex = parseColor(value) || value;
-    return hex.startsWith('#') ? hex : `#${hex}`;
-  }, [value]);
+    const rgb = hsbToRgb(hsba.h, hsba.s, hsba.b);
+    return rgbToHex(rgb.r, rgb.g, rgb.b);
+  }, [hsba.h, hsba.s, hsba.b]);
 
   const displayValue = useMemo(() => {
-    if (!currentHex) return '';
-    return formatColor(currentHex, format);
-  }, [currentHex, format]);
+    return formatColorDisplay(currentHex, hsba.a, format);
+  }, [currentHex, hsba.a, format]);
+
+  const currentRgb = useMemo(() => {
+    return hexToRgb(currentHex) || { r: 0, g: 0, b: 0 };
+  }, [currentHex]);
+
+  // ─── Handlers ────────────────────────────────────────────────────────────
 
   const handleOpen = useCallback(() => {
     if (disabled) return;
-    if (!isOpenControlled) {
-      setInternalOpen(true);
-    }
+    if (!isOpenControlled) setInternalOpen(true);
     onOpenChange?.(true);
   }, [disabled, isOpenControlled, onOpenChange]);
 
   const handleClose = useCallback(() => {
-    if (!isOpenControlled) {
-      setInternalOpen(false);
-    }
+    if (!isOpenControlled) setInternalOpen(false);
     onOpenChange?.(false);
   }, [isOpenControlled, onOpenChange]);
 
-  const handleChange = useCallback(
-    (newValue: string | null) => {
-      if (!isControlled) {
-        setInternalValue(newValue);
+  const emitChange = useCallback((hex: string, alpha: number) => {
+    const newValue = formatColorDisplay(hex, alpha, format);
+    if (!isControlled) setInternalValue(newValue);
+    onChange?.(newValue, hex);
+  }, [isControlled, format, onChange]);
+
+  const handleClear = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!isControlled) setInternalValue(null);
+    onChange?.(null, '');
+  }, [isControlled, onChange]);
+
+  const updateFromHsba = useCallback((newHsba: { h: number; s: number; b: number; a: number }) => {
+    setHsba(newHsba);
+    const rgb = hsbToRgb(newHsba.h, newHsba.s, newHsba.b);
+    const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
+    emitChange(hex, newHsba.a);
+  }, [emitChange]);
+
+  // ─── Saturation drag ─────────────────────────────────────────────────────
+
+  const updateSaturation = useCallback((clientX: number, clientY: number) => {
+    if (!saturationRef.current) return;
+    const rect = saturationRef.current.getBoundingClientRect();
+    const s = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    const b = Math.max(0, Math.min(100, 100 - ((clientY - rect.top) / rect.height) * 100));
+    updateFromHsba({ ...hsba, s, b });
+  }, [hsba, updateFromHsba]);
+
+  const handleSaturationMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDraggingSaturation.current = true;
+    updateSaturation(e.clientX, e.clientY);
+  }, [updateSaturation]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isDraggingSaturation.current) updateSaturation(e.clientX, e.clientY);
+      if (isDraggingHue.current) updateHueFromClient(e.clientX);
+      if (isDraggingAlpha.current) updateAlphaFromClient(e.clientX);
+    };
+    const handleMouseUp = () => {
+      isDraggingSaturation.current = false;
+      isDraggingHue.current = false;
+      isDraggingAlpha.current = false;
+    };
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  });
+
+  // ─── Hue slider drag ─────────────────────────────────────────────────────
+
+  const updateHueFromClient = useCallback((clientX: number) => {
+    if (!hueRef.current) return;
+    const rect = hueRef.current.getBoundingClientRect();
+    const h = Math.max(0, Math.min(360, ((clientX - rect.left) / rect.width) * 360));
+    updateFromHsba({ ...hsba, h });
+  }, [hsba, updateFromHsba]);
+
+  const handleHueMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDraggingHue.current = true;
+    updateHueFromClient(e.clientX);
+  }, [updateHueFromClient]);
+
+  // ─── Alpha slider drag ────────────────────────────────────────────────────
+
+  const updateAlphaFromClient = useCallback((clientX: number) => {
+    if (!alphaRef.current) return;
+    const rect = alphaRef.current.getBoundingClientRect();
+    const a = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    updateFromHsba({ ...hsba, a });
+  }, [hsba, updateFromHsba]);
+
+  const handleAlphaMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    isDraggingAlpha.current = true;
+    updateAlphaFromClient(e.clientX);
+  }, [updateAlphaFromClient]);
+
+  // ─── Format switching ─────────────────────────────────────────────────────
+
+  const handleFormatChange = useCallback((newFormat: ColorPickerFormat) => {
+    if (!controlledFormat) setInternalFormat(newFormat);
+    onFormatChange?.(newFormat);
+  }, [controlledFormat, onFormatChange]);
+
+  const cycleFormat = useCallback(() => {
+    const formats: ColorPickerFormat[] = ['hex', 'rgb', 'hsb'];
+    const idx = formats.indexOf(format);
+    const next = formats[(idx + 1) % formats.length];
+    handleFormatChange(next);
+  }, [format, handleFormatChange]);
+
+  // ─── Input handlers ───────────────────────────────────────────────────────
+
+  const handleHexInput = useCallback((val: string) => {
+    let clean = val.replace(/[^a-fA-F0-9]/g, '').slice(0, 6);
+    if (clean.length === 6) {
+      const hex = '#' + clean;
+      const rgb = hexToRgb(hex);
+      if (rgb) {
+        const newHsb = rgbToHsb(rgb.r, rgb.g, rgb.b);
+        updateFromHsba({ ...newHsb, a: hsba.a });
       }
-      const hex = newValue ? (parseColor(newValue) || newValue) : null;
-      onChange?.(newValue, hex || '');
-    },
-    [isControlled, onChange]
-  );
+    }
+  }, [hsba.a, updateFromHsba]);
 
-  const handleClear = useCallback(
-    (e: React.MouseEvent) => {
-      e.stopPropagation();
-      handleChange(null);
-    },
-    [handleChange]
-  );
+  const handleRgbInput = useCallback((channel: 'r' | 'g' | 'b', val: string) => {
+    const num = Math.max(0, Math.min(255, parseInt(val, 10) || 0));
+    const newRgb = { ...currentRgb, [channel]: num };
+    const newHsb = rgbToHsb(newRgb.r, newRgb.g, newRgb.b);
+    updateFromHsba({ ...newHsb, a: hsba.a });
+  }, [currentRgb, hsba.a, updateFromHsba]);
 
-  const updateColorFromHsb = useCallback(
-    (newHsb: { h: number; s: number; b: number }) => {
-      setHsb(newHsb);
-      const rgb = hsbToRgb(newHsb.h, newHsb.s, newHsb.b);
-      const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
-      handleChange(hex);
-    },
-    [handleChange]
-  );
+  const handleHsbInput = useCallback((channel: 'h' | 's' | 'b', val: string) => {
+    const max = channel === 'h' ? 360 : 100;
+    const num = Math.max(0, Math.min(max, parseInt(val, 10) || 0));
+    updateFromHsba({ ...hsba, [channel]: num });
+  }, [hsba, updateFromHsba]);
 
-  const handleSaturationClick = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!saturationRef.current) return;
-      const rect = saturationRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const s = Math.max(0, Math.min(100, (x / rect.width) * 100));
-      const b = Math.max(0, Math.min(100, 100 - (y / rect.height) * 100));
-      updateColorFromHsb({ ...hsb, s, b });
-    },
-    [hsb, updateColorFromHsb]
-  );
+  const handleAlphaInput = useCallback((val: string) => {
+    const num = Math.max(0, Math.min(100, parseInt(val, 10) || 0));
+    updateFromHsba({ ...hsba, a: num });
+  }, [hsba, updateFromHsba]);
 
-  const handleHueChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const h = parseInt(e.target.value, 10);
-      updateColorFromHsb({ ...hsb, h });
-    },
-    [hsb, updateColorFromHsb]
-  );
+  // ─── Click outside ────────────────────────────────────────────────────────
 
-  const handlePresetClick = useCallback(
-    (color: string) => {
-      handleChange(color);
-    },
-    [handleChange]
-  );
-
-  // Click outside to close
   useEffect(() => {
     if (!open) return;
-
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        containerRef.current &&
-        !containerRef.current.contains(e.target as Node) &&
-        panelRef.current &&
-        !panelRef.current.contains(e.target as Node)
+        containerRef.current && !containerRef.current.contains(e.target as Node) &&
+        panelRef.current && !panelRef.current.contains(e.target as Node)
       ) {
         handleClose();
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [open, handleClose]);
 
-  const getContainerElement = (): HTMLElement => {
-    if (getPopupContainer && containerRef.current) {
-      return getPopupContainer(containerRef.current);
+  // ─── Panel positioning ────────────────────────────────────────────────────
+
+  useEffect(() => {
+    if (!open || !containerRef.current) {
+      setPanelPosition(null);
+      return;
     }
-    return document.body;
+    const updatePosition = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const top = rect.bottom + 4;
+      const left = rect.left;
+      setPanelPosition({ top, left });
+    };
+    updatePosition();
+    window.addEventListener('scroll', updatePosition, true);
+    window.addEventListener('resize', updatePosition);
+    return () => {
+      window.removeEventListener('scroll', updatePosition, true);
+      window.removeEventListener('resize', updatePosition);
+    };
+  }, [open]);
+
+  // ─── Preset toggle ────────────────────────────────────────────────────────
+
+  const togglePresetGroup = useCallback((index: number) => {
+    setPresetOpenState((prev) => ({ ...prev, [index]: !prev[index] }));
+  }, []);
+
+  // Initialize preset open states
+  useEffect(() => {
+    if (presets) {
+      const initial: Record<number, boolean> = {};
+      presets.forEach((p, i) => { initial[i] = p.defaultOpen !== false; });
+      setPresetOpenState(initial);
+    }
+  }, [presets]);
+
+  // ─── Render helpers ───────────────────────────────────────────────────────
+
+  const renderFormatInputs = () => {
+    switch (format) {
+      case 'hex':
+        return (
+          <div className={styles.inputGroup}>
+            <div className={styles.inputWrapper}>
+              <input
+                className={styles.input}
+                value={currentHex.replace('#', '').toUpperCase()}
+                onChange={(e) => handleHexInput(e.target.value)}
+                maxLength={6}
+                spellCheck={false}
+              />
+              <span className={styles.inputLabel}>HEX</span>
+            </div>
+            {!disabledAlpha && (
+              <div className={cn(styles.inputWrapper, styles.inputSmall)}>
+                <input
+                  className={styles.input}
+                  type="number"
+                  value={hsba.a}
+                  onChange={(e) => handleAlphaInput(e.target.value)}
+                  min={0}
+                  max={100}
+                />
+                <span className={styles.inputLabel}>A%</span>
+              </div>
+            )}
+          </div>
+        );
+      case 'rgb':
+        return (
+          <div className={styles.inputGroup}>
+            <div className={styles.inputWrapper}>
+              <input className={styles.input} type="number" value={currentRgb.r} onChange={(e) => handleRgbInput('r', e.target.value)} min={0} max={255} />
+              <span className={styles.inputLabel}>R</span>
+            </div>
+            <div className={styles.inputWrapper}>
+              <input className={styles.input} type="number" value={currentRgb.g} onChange={(e) => handleRgbInput('g', e.target.value)} min={0} max={255} />
+              <span className={styles.inputLabel}>G</span>
+            </div>
+            <div className={styles.inputWrapper}>
+              <input className={styles.input} type="number" value={currentRgb.b} onChange={(e) => handleRgbInput('b', e.target.value)} min={0} max={255} />
+              <span className={styles.inputLabel}>B</span>
+            </div>
+            {!disabledAlpha && (
+              <div className={styles.inputWrapper}>
+                <input className={styles.input} type="number" value={hsba.a} onChange={(e) => handleAlphaInput(e.target.value)} min={0} max={100} />
+                <span className={styles.inputLabel}>A%</span>
+              </div>
+            )}
+          </div>
+        );
+      case 'hsb':
+        return (
+          <div className={styles.inputGroup}>
+            <div className={styles.inputWrapper}>
+              <input className={styles.input} type="number" value={hsba.h} onChange={(e) => handleHsbInput('h', e.target.value)} min={0} max={360} />
+              <span className={styles.inputLabel}>H</span>
+            </div>
+            <div className={styles.inputWrapper}>
+              <input className={styles.input} type="number" value={hsba.s} onChange={(e) => handleHsbInput('s', e.target.value)} min={0} max={100} />
+              <span className={styles.inputLabel}>S%</span>
+            </div>
+            <div className={styles.inputWrapper}>
+              <input className={styles.input} type="number" value={hsba.b} onChange={(e) => handleHsbInput('b', e.target.value)} min={0} max={100} />
+              <span className={styles.inputLabel}>B%</span>
+            </div>
+            {!disabledAlpha && (
+              <div className={styles.inputWrapper}>
+                <input className={styles.input} type="number" value={hsba.a} onChange={(e) => handleAlphaInput(e.target.value)} min={0} max={100} />
+                <span className={styles.inputLabel}>A%</span>
+              </div>
+            )}
+          </div>
+        );
+    }
   };
 
   const renderPanel = () => {
     if (!open) return null;
-    
-    // Ensure container ref is available before rendering portal
     if (!containerRef.current) return null;
 
-    const hueColor = hsbToRgb(hsb.h, 100, 100);
+    const hueColor = hsbToRgb(hsba.h, 100, 100);
     const hueHex = rgbToHex(hueColor.r, hueColor.g, hueColor.b);
-    const saturationBg = `linear-gradient(to right, var(--token-primitive-color-white, #ffffff), ${hueHex})`;
-    const brightnessBg = `linear-gradient(to bottom, transparent, #000)`;
 
-    return createPortal(
+    const panel = (
       <div
         ref={panelRef}
         className={cn(styles.panel, popupClassName)}
-        style={popupStyle}
+        style={{
+          ...(panelPosition ? { position: 'fixed', top: panelPosition.top, left: panelPosition.left } : { display: 'none' }),
+          ...popupStyle,
+        }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className={styles.picker}>
+        {/* Saturation panel */}
+        <div
+          ref={saturationRef}
+          className={styles.saturation}
+          style={{ backgroundColor: hueHex }}
+          onMouseDown={handleSaturationMouseDown}
+        >
+          <div className={styles.saturationWhite} />
+          <div className={styles.saturationBlack} />
           <div
-            ref={saturationRef}
-            className={styles.saturation}
-            style={{
-              background: saturationBg,
-            }}
-            onClick={handleSaturationClick}
-          >
-            <div
-              className={styles.saturationPointer}
-              style={{
-                left: `${hsb.s}%`,
-                top: `${100 - hsb.b}%`,
-              }}
-            />
-          </div>
-          <div className={styles.hue}>
-            <input
-              type="range"
-              min="0"
-              max="360"
-              value={hsb.h}
-              onChange={handleHueChange}
-              className={styles.hueSlider}
-              style={{
-                background: `linear-gradient(to right, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%)`,
-              }}
-            />
-          </div>
-        </div>
-        <div className={styles.inputs}>
-          <Input
-            value={displayValue}
-            onChange={(e) => {
-              const newValue = e.target.value;
-              const parsed = parseColor(newValue);
-              if (parsed) {
-                handleChange(parsed);
-              }
-            }}
-            placeholder={format}
-            size="sm"
-            style={{ width: '100px' }}
+            className={styles.saturationPointer}
+            style={{ left: `${hsba.s}%`, top: `${100 - hsba.b}%` }}
           />
         </div>
+
+        {/* Sliders */}
+        <div className={styles.sliders}>
+          <div className={styles.sliderPreview}>
+            <div
+              className={styles.sliderPreviewColor}
+              style={{
+                backgroundColor: currentHex,
+                opacity: hsba.a / 100,
+              }}
+            />
+          </div>
+          <div className={styles.sliderGroup}>
+            {/* Hue slider */}
+            <div
+              ref={hueRef}
+              className={styles.hueSlider}
+              onMouseDown={handleHueMouseDown}
+            >
+              <div
+                className={styles.sliderHandle}
+                style={{ left: `${(hsba.h / 360) * 100}%`, backgroundColor: hueHex }}
+              />
+            </div>
+            {/* Alpha slider */}
+            {!disabledAlpha && (
+              <div
+                ref={alphaRef}
+                className={styles.alphaSlider}
+                onMouseDown={handleAlphaMouseDown}
+              >
+                <div
+                  className={styles.alphaSliderGradient}
+                  style={{
+                    background: `linear-gradient(to right, transparent, ${currentHex})`,
+                  }}
+                />
+                <div
+                  className={styles.sliderHandle}
+                  style={{ left: `${hsba.a}%`, backgroundColor: currentHex }}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Color inputs */}
+        <div className={styles.colorInputs}>
+          <button className={styles.formatSwitch} onClick={cycleFormat} type="button" title="Switch format">
+            <span className="material-symbols-outlined">swap_vert</span>
+          </button>
+          {renderFormatInputs()}
+        </div>
+
+        {/* Presets */}
         {presets && presets.length > 0 && (
           <div className={styles.presets}>
             {presets.map((preset, index) => (
               <div key={index} className={styles.presetGroup}>
-                <div className={styles.presetLabel}>{preset.label}</div>
-                <div className={styles.presetColors}>
-                  {preset.colors.map((color, colorIndex) => (
-                    <div
-                      key={colorIndex}
-                      className={cn(
-                        styles.presetColor,
-                        currentHex === color && styles.presetColorSelected
-                      )}
-                      style={{ backgroundColor: color }}
-                      onClick={() => handlePresetClick(color)}
-                    />
-                  ))}
+                <div className={styles.presetHeader} onClick={() => togglePresetGroup(index)}>
+                  <span className={styles.presetLabel}>{preset.label}</span>
+                  <span className={cn('material-symbols-outlined', styles.presetChevron, presetOpenState[index] && styles.presetChevronOpen)}>
+                    expand_more
+                  </span>
                 </div>
+                {presetOpenState[index] && (
+                  <div className={styles.presetColors}>
+                    {preset.colors.map((color, colorIndex) => (
+                      <div
+                        key={colorIndex}
+                        className={cn(styles.presetColor, currentHex === color && styles.presetColorSelected)}
+                        style={{ backgroundColor: color }}
+                        onClick={() => {
+                          const parsed = parseColor(color);
+                          if (parsed) {
+                            const newHsb = hexToHsba(parsed.hex, parsed.alpha);
+                            updateFromHsba(newHsb);
+                          }
+                        }}
+                        title={color}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
         )}
-      </div>,
-      getContainerElement()
+
+        {/* Clear button */}
+        {allowClear && value && !disabled && (
+          <div className={styles.clearWrapper}>
+            <button className={styles.clearBtn} onClick={handleClear} type="button">
+              <span className="material-symbols-outlined">delete</span>
+              Clear
+            </button>
+          </div>
+        )}
+      </div>
     );
+
+    const container = getPopupContainer && containerRef.current
+      ? getPopupContainer(containerRef.current)
+      : document.body;
+
+    return createPortal(panel, container);
   };
 
   const renderText = () => {
     if (!showText) return null;
-    if (typeof showText === 'function') {
-      return showText(value);
-    }
+    if (typeof showText === 'function') return showText(value);
     return <span className={styles.text}>{displayValue}</span>;
   };
 
+  // ─── Trigger ──────────────────────────────────────────────────────────────
+
   return (
     <div ref={containerRef} className={cn(styles.colorPickerWrapper, className)} style={style} {...props}>
-      <div className={styles.trigger} onClick={handleOpen}>
-        <div
-          className={styles.colorBlock}
-          style={{
-            backgroundColor: currentHex || 'var(--token-primitive-color-white, #ffffff)',
-            border: currentHex ? 'none' : `1px solid var(--token-primitive-border-color-default, #d9d9d9)`,
-          }}
-        />
+      <div
+        className={cn(styles.trigger, styles[size], disabled && styles.disabled, open && styles.triggerActive)}
+        onClick={handleOpen}
+      >
+        <div className={styles.colorBlock}>
+          <div
+            className={styles.colorBlockInner}
+            style={{
+              backgroundColor: value ? currentHex : undefined,
+              opacity: value ? hsba.a / 100 : undefined,
+            }}
+          />
+          {!value && <span className={cn('material-symbols-outlined', styles.emptyIcon)}>palette</span>}
+        </div>
         {renderText()}
-        {allowClear && currentHex && (
+        {allowClear && value && !disabled && (
           <span
-            className={cn('material-symbols-outlined', styles.icon, styles.iconDefault, styles.iconCursor, styles.iconMarginLeft)}
+            className={cn('material-symbols-outlined', styles.clearIcon)}
             onClick={handleClear}
           >
-            close
+            cancel
           </span>
         )}
       </div>

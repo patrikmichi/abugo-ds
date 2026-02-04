@@ -50,35 +50,35 @@
 .avatar.xs {
   width: var(--token-component-avatar-size-xs);
   height: var(--token-component-avatar-size-xs);
-  font-size: var(--token-component-avatar-fontSize-xs);
+  font-size: var(--token-component-avatar-font-size-xs);
   line-height: var(--token-component-avatar-size-xs);
 }
 
 .avatar.sm {
   width: var(--token-component-avatar-size-sm);
   height: var(--token-component-avatar-size-sm);
-  font-size: var(--token-component-avatar-fontSize-sm);
+  font-size: var(--token-component-avatar-font-size-sm);
   line-height: var(--token-component-avatar-size-sm);
 }
 
 .avatar.md {
   width: var(--token-component-avatar-size-md);
   height: var(--token-component-avatar-size-md);
-  font-size: var(--token-component-avatar-fontSize-md);
+  font-size: var(--token-component-avatar-font-size-md);
   line-height: var(--token-component-avatar-size-md);
 }
 
 .avatar.lg {
   width: var(--token-component-avatar-size-lg);
   height: var(--token-component-avatar-size-lg);
-  font-size: var(--token-component-avatar-fontSize-lg);
+  font-size: var(--token-component-avatar-font-size-lg);
   line-height: var(--token-component-avatar-size-lg);
 }
 
 .avatar.xl {
   width: var(--token-component-avatar-size-xl);
   height: var(--token-component-avatar-size-xl);
-  font-size: var(--token-component-avatar-fontSize-xl);
+  font-size: var(--token-component-avatar-font-size-xl);
   line-height: var(--token-component-avatar-size-xl);
 }
 
@@ -166,26 +166,26 @@
 
 .avatar.ring {
   position: relative;
-  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-semantic-background-active-accent-default, #5690f5);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-component-avatar-ring-color, #5690f5);
   box-sizing: border-box;
 }
 
 .avatar.ring.xs,
 .avatar.ring.sm,
 .avatar.ring.md {
-  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-semantic-background-active-accent-default, #5690f5);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-component-avatar-ring-color, #5690f5);
 }
 
 .avatar.ring.lg,
 .avatar.ring.xl {
-  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-2, 2) * 1px) var(--token-semantic-background-active-accent-default, #5690f5);
+  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-2, 2) * 1px) var(--token-component-avatar-ring-color, #5690f5);
 }
 
 /* When both border and ring are present, ring appears outside the border */
 .avatar.border.ring {
   border-width: calc(var(--token-primitive-border-width-1, 1) * 1px);
   box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-primitive-color-white, #ffffff),
-              0 0 0 calc(var(--token-primitive-border-width-1, 1) * 3px) var(--token-semantic-background-active-accent-default, #5690f5);
+              0 0 0 calc(var(--token-primitive-border-width-1, 1) * 3px) var(--token-component-avatar-ring-color, #5690f5);
 }
 
 .avatar.border.ring.xs,
@@ -193,26 +193,26 @@
 .avatar.border.ring.md {
   border-width: calc(var(--token-primitive-border-width-1, 1) * 1px);
   box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1, 1) * 1px) var(--token-primitive-color-white, #ffffff),
-              0 0 0 calc(var(--token-primitive-border-width-1, 1) * 3px) var(--token-semantic-background-active-accent-default, #5690f5);
+              0 0 0 calc(var(--token-primitive-border-width-1, 1) * 3px) var(--token-component-avatar-ring-color, #5690f5);
 }
 
 .avatar.border.ring.lg,
 .avatar.border.ring.xl {
   border-width: calc(var(--token-primitive-border-width-2, 2) * 1px);
   box-shadow: 0 0 0 calc(var(--token-primitive-border-width-2, 2) * 1px) var(--token-primitive-color-white, #ffffff),
-              0 0 0 calc(var(--token-primitive-border-width-2, 2) * 3px) var(--token-semantic-background-active-accent-default, #5690f5);
+              0 0 0 calc(var(--token-primitive-border-width-2, 2) * 3px) var(--token-component-avatar-ring-color, #5690f5);
 }
 
 /* Avatar Group */
 .group {
   display: inline-flex;
   align-items: center;
-  gap: calc(var(--token-component-avatar-group-gap, -8px) * 1px);
+  gap: calc(var(--token-component-gap-avatar-group, -8px) * 1px);
 }
 
 .groupAvatar {
   border: 2px solid var(--token-component-avatar-group-border, #fff);
-  margin-left: calc(var(--token-component-avatar-group-gap, -8px) * 1px);
+  margin-left: calc(var(--token-component-gap-avatar-group, -8px) * 1px);
 }
 
 .groupAvatar:first-child {
@@ -229,10 +229,10 @@
   border-radius: 50%;
   background-color: var(--token-component-avatar-excess-background, #f0f0f0);
   color: var(--token-component-avatar-excess-content, #666);
-  font-size: var(--token-component-avatar-fontSize-md);
+  font-size: var(--token-component-avatar-font-size-md);
   font-weight: var(--token-primitive-typography-font-weight-medium);
   border: 2px solid var(--token-component-avatar-group-border, #fff);
-  margin-left: calc(var(--token-component-avatar-group-gap, -8px) * 1px);
+  margin-left: calc(var(--token-component-gap-avatar-group, -8px) * 1px);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }

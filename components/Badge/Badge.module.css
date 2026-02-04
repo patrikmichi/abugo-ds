@@ -16,53 +16,50 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 var(--token-semantic-padding-xxxs);
-  font-size: var(--token-component-badge-font-size-default);
-  font-weight: var(--token-primitive-typography-font-weight-medium);
+  min-width: var(--token-component-badge-size-default, 20px);
+  height: var(--token-component-badge-size-default, 20px);
+  padding: 0 var(--token-component-badge-padding-x, 6px);
+  font-size: var(--token-component-badge-font-size-default, 10px);
+  font-weight: var(--token-component-badge-font-weight, 500);
   line-height: 1;
-  color: var(--token-component-badge-default-content);
-  background-color: var(--token-component-badge-default-background);
-  border: 2px solid var(--token-component-badge-default-border);
-  border-radius: 10px;
+  color: var(--token-component-badge-default-content, #ffffff);
+  background-color: var(--token-component-badge-default-background, #ff434e);
+  border: var(--token-component-badge-border-width, 2px) solid var(--token-component-badge-default-border, #ffffff);
+  border-radius: var(--token-component-badge-border-radius, 100px);
   transform: translate(50%, -50%);
   transform-origin: 100% 0%;
   white-space: nowrap;
   font-family: var(--token-primitive-typography-font-family-sans);
+  box-sizing: content-box;
 }
 
 /* Color variants */
 .badge.success {
-  background-color: var(--token-component-badge-success-background);
-  color: var(--token-component-badge-success-content);
+  background-color: var(--token-component-badge-success-background, #32c21a);
+  color: var(--token-component-badge-success-content, #ffffff);
 }
 
 .badge.warning {
-  background-color: var(--token-component-badge-warning-background);
-  color: var(--token-component-badge-warning-content);
+  background-color: var(--token-component-badge-warning-background, #ed8400);
+  color: var(--token-component-badge-warning-content, #ffffff);
 }
 
-.badge.danger {
-  background-color: var(--token-component-badge-danger-background);
-  color: var(--token-component-badge-danger-content);
+.badge.error {
+  background-color: var(--token-component-badge-error-background, #ff434e);
+  color: var(--token-component-badge-error-content, #ffffff);
 }
 
-.badge.promo {
-  background-color: var(--token-component-badge-promo-background);
-  color: var(--token-component-badge-promo-content);
-}
-
-/* Count badge */
-.badge.count {
-  padding: 0 6px;
+.badge.upgrade {
+  background-color: var(--token-component-badge-upgrade-background, #042a47);
+  color: var(--token-component-badge-upgrade-content, #ffffff);
 }
 
 /* Dot badge */
 .badge.dot,
 .badge.dotOnly {
-  min-width: var(--token-component-badge-dot-size);
-  height: var(--token-component-badge-dot-size);
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
   padding: 0;
   border-radius: 50%;
 }
@@ -76,8 +73,8 @@
   min-width: var(--token-component-badge-size-small, 16px);
   height: var(--token-component-badge-size-small, 16px);
   font-size: var(--token-component-badge-font-size-small, 10px);
-  border-radius: calc(var(--token-component-badge-size-small, 16px) / 2);
-  padding: 0 3px;
+  border-radius: var(--token-component-badge-border-radius, 100px);
+  padding: 0 var(--token-component-badge-padding-x-small, 3px);
 }
 
 .badge.small.dot,
@@ -90,19 +87,19 @@
 /* Status dot (for status mode) */
 .statusDot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: var(--token-component-badge-status-dot-size, 8px);
+  height: var(--token-component-badge-status-dot-size, 8px);
   border-radius: 50%;
-  margin-right: var(--token-semantic-gap-xxs);
+  margin-right: var(--token-component-badge-status-dot-gap, 8px);
   vertical-align: middle;
 }
 
 .statusDot.success {
-  background-color: var(--token-semantic-content-passive-success-default);
+  background-color: var(--token-component-badge-dot-color-success, #32c21a);
 }
 
 .statusDot.processing {
-  background-color: var(--token-semantic-content-passive-info-default);
+  background-color: var(--token-component-badge-dot-color-upgrade, #042a47);
   position: relative;
   animation: processing 1.4s ease-in-out infinite;
 }
@@ -125,25 +122,28 @@
 }
 
 .statusDot.default {
-  background-color: var(--token-semantic-content-passive-neutral-default);
+  background-color: var(--token-component-badge-dot-color-neutral, #464646);
 }
 
 .statusDot.error {
-  background-color: var(--token-semantic-content-passive-danger-default);
+  background-color: var(--token-component-badge-dot-color-error, #ff434e);
 }
 
 .statusDot.warning {
-  background-color: var(--token-semantic-content-passive-warning-default);
+  background-color: var(--token-component-badge-dot-color-warning, #ed8400);
 }
 
 /* Status text */
 .statusText {
   display: inline-block;
-  font-size: var(--token-component-badge-status-text-size);
-  color: var(--token-component-badge-status-text-color);
+  font-size: var(--token-component-badge-status-text-size, 14px);
+  color: var(--token-component-badge-status-text-color, #464646);
   font-family: var(--token-primitive-typography-font-family-sans);
   vertical-align: middle;
-  margin-right: var(--token-semantic-gap-xs);
 }
 
-/* Standalone badge (no children) - handled via inline styles in component */
+/* Focus styles */
+.badge:focus-visible {
+  outline: 2px solid var(--token-component-badge-focus-outline-color, #93b8f9);
+  outline-offset: 2px;
+}

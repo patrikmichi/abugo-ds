@@ -5,16 +5,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--token-component-spinner-label-gap);
+  gap: var(--token-component-gap-spinner-label);
   color: var(--token-component-spinner-content-inherit);
 }
 
-/* Material Icon spinner */
-.spinner .material-symbols-outlined {
+/* Icon container - applies size and rotation */
+.iconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Material Icon spinner - only rotate the icon, not the label */
+.iconContainer :global(.material-symbols-outlined) {
   display: block;
-  width: 100%;
-  height: 100%;
-  animation: spin 0.6s linear infinite;
+  animation: spinnerRotate 0.6s linear infinite;
 }
 
 /* Label */
@@ -25,35 +31,65 @@
   text-align: center;
 }
 
-/* Sizes */
-.spinner.xsmall {
+/* Sizes - apply to icon container */
+.spinner.xsmall .iconContainer {
   width: var(--token-component-spinner-size-xsmall);
   height: var(--token-component-spinner-size-xsmall);
 }
 
-.spinner.small {
+.spinner.xsmall :global(.material-symbols-outlined) {
+  font-size: var(--token-component-spinner-size-xsmall);
+  width: var(--token-component-spinner-size-xsmall);
+  height: var(--token-component-spinner-size-xsmall);
+}
+
+.spinner.small .iconContainer {
   width: var(--token-component-spinner-size-small);
   height: var(--token-component-spinner-size-small);
 }
 
-.spinner.medium {
+.spinner.small :global(.material-symbols-outlined) {
+  font-size: var(--token-component-spinner-size-small);
+  width: var(--token-component-spinner-size-small);
+  height: var(--token-component-spinner-size-small);
+}
+
+.spinner.medium .iconContainer {
   width: var(--token-component-spinner-size-medium);
   height: var(--token-component-spinner-size-medium);
 }
 
-.spinner.large {
+.spinner.medium :global(.material-symbols-outlined) {
+  font-size: var(--token-component-spinner-size-medium);
+  width: var(--token-component-spinner-size-medium);
+  height: var(--token-component-spinner-size-medium);
+}
+
+.spinner.large .iconContainer {
   width: var(--token-component-spinner-size-large);
   height: var(--token-component-spinner-size-large);
 }
 
-.spinner.xlarge {
+.spinner.large :global(.material-symbols-outlined) {
+  font-size: var(--token-component-spinner-size-large);
+  width: var(--token-component-spinner-size-large);
+  height: var(--token-component-spinner-size-large);
+}
+
+.spinner.xlarge .iconContainer {
+  width: var(--token-component-spinner-size-xlarge);
+  height: var(--token-component-spinner-size-xlarge);
+}
+
+.spinner.xlarge :global(.material-symbols-outlined) {
+  font-size: var(--token-component-spinner-size-xlarge);
   width: var(--token-component-spinner-size-xlarge);
   height: var(--token-component-spinner-size-xlarge);
 }
 
 /* Custom size (when size is a number) */
 .spinner.custom {
-  /* Size is set via inline style */
+  /* Size is set via inline style on iconContainer and icon */
 }
 
 /* Appearance - Inherit (default) */
@@ -75,7 +111,7 @@
 }
 
 /* Animation */
-@keyframes spin {
+@keyframes spinnerRotate {
   from {
     transform: rotate(0deg);
   }
@@ -86,7 +122,7 @@
 
 /* Responsive adjustments */
 @media (prefers-reduced-motion: reduce) {
-  .spinner .material-symbols-outlined {
+  .iconContainer :global(.material-symbols-outlined) {
     animation: none;
   }
 }

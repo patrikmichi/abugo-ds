@@ -2,9 +2,9 @@
 
 .dropdown {
   position: fixed;
-  z-index: var(--token-semantic-z-index-dropdown, 1050);
-  background-color: var(--token-component-popover-background, var(--token-semantic-surface-elevated, #fff));
-  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-popover-border, var(--token-semantic-border-default, #efefef));
+  z-index: var(--token-component-select-dropdown-z-index, 1050);
+  background-color: var(--token-component-popover-background, #fff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-popover-border, #efefef);
   border-radius: calc(var(--token-component-radius-popover, var(--token-primitive-radius-1, 4)) * 1px);
   box-shadow: var(--token-component-popover-shadow, var(--token-primitive-shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)));
   font-family: var(--token-primitive-typography-font-family-sans);
@@ -20,7 +20,7 @@
   max-height: var(--token-component-select-dropdown-max-height, 248px);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: var(--token-semantic-padding-xxxs, 4px) 0;
+  padding: var(--token-component-select-dropdown-padding-y, 4px) 0;
   /* Ensure scrolling works */
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
@@ -40,8 +40,8 @@
 }
 
 .notFound {
-  padding: var(--token-semantic-padding-xxs, 8px) var(--token-semantic-padding-xs, 12px);
+  padding: var(--token-component-select-dropdown-empty-padding-y, 8px) var(--token-component-select-dropdown-empty-padding-x, 12px);
   text-align: center;
-  color: var(--token-component-select-row-content-disabled, var(--token-semantic-text-disabled, rgba(0, 0, 0, 0.25)));
-  font-size: var(--token-component-font-size-field-sm, var(--token-semantic-typography-body-size-sm, 14px));
+  color: var(--token-component-select-row-content-disabled, rgba(0, 0, 0, 0.25));
+  font-size: var(--token-component-font-size-field-sm, 14px);
 }

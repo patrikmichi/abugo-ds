@@ -1,3 +1,13 @@
 {
-  "$name": "Component Tokens"
+  "$name": "Component Tokens",
+  "visual-compensation-offset": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": 1,
+    "$description": "Optical alignment offset for text"
+  }
 }

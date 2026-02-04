@@ -1,5 +1,14 @@
 {
   "$name": "Component Tokens",
+  "visual-compensation-offset": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": "1px"
+  },
   "background": {
     "unselected": {
       "default": {
@@ -288,6 +297,76 @@
         "$description": "Disabled opacity for delete icon (40%)"
       }
     },
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.neutral.default}",
+      "$description": "Default delete/expand icon color"
+    },
+    "color-selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}",
+      "$description": "Delete/expand icon color in selected chip"
+    },
+    "color-hover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.neutral.hover}",
+      "$description": "Delete/expand icon color on hover"
+    },
+    "color-hover-selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}",
+      "$description": "Delete/expand icon color on hover in selected chip"
+    },
+    "color-active": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.neutral.pressed}",
+      "$description": "Delete/expand icon color on active/pressed"
+    },
+    "color-active-selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}",
+      "$description": "Delete/expand icon color on active/pressed in selected chip"
+    },
+    "color-disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.active.neutral.disabled}",
+      "$description": "Delete/expand icon color when disabled (matches disabled background for near-invisible effect)"
+    },
     "background": {
       "hover": {
         "default": {
@@ -333,15 +412,19 @@
           "$description": "Delete icon active background for colored chips (rgba with 30% opacity)"
         }
       }
-    },
-    "padding": {
-      "$scopes": [
-        "ALL_SCOPES"
-      ],
-      "$type": "spacing",
-      "$libraryName": "",
-      "$collectionName": "semanticTokens",
-      "$value": "{padding.xxxs}"
+    }
+  },
+  "focus": {
+    "outline": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}"
+      }
     }
   }
 }

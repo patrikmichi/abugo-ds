@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import styles from './Chip.module.css';
 import { cn } from '@/lib/utils';
-import { Avatar } from '@/components/Avatar';
 
 export type ChipSize = 'small' | 'medium' | 'large';
 
@@ -136,7 +135,7 @@ export function Chip({
   // Default delete icon
   const defaultDeleteIcon = (
     <span className={cn('material-symbols-outlined', styles.trailingIconSymbol)}>
-      close
+      cancel
     </span>
   );
 
@@ -161,6 +160,7 @@ export function Chip({
         selected && styles.selected,
         isClickable && styles.clickable,
         disabled && styles.disabled,
+        (icon || avatar) && styles.hasLeadingIcon,
         (hasDelete || hasExpand) && styles.hasTrailingIcon,
         className
       )}

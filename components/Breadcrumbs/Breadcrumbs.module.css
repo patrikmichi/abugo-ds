@@ -25,25 +25,19 @@
 
 /* Item (current/last) */
 .item {
-  color: var(--token-component-breadcrumb-item-color, rgba(0, 0, 0, 0.85));
+  color: var(--token-component-breadcrumbs-item-color, #464646);
   font-weight: var(--token-component-breadcrumb-item-font-weight, 500);
 }
 
 .itemWithDropdown {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
-  color: var(--token-component-link-secondary-content-default);
-  transition: color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
-}
-
-.itemWithDropdown:hover {
-  color: var(--token-component-link-secondary-content-hover);
 }
 
 /* Separator */
 .separator {
-  color: var(--token-component-breadcrumb-separator-color, rgba(0, 0, 0, 0.45));
+  color: var(--token-component-breadcrumbs-separator-color, #464646);
   margin: 0 var(--token-component-breadcrumb-separator-margin, 8px);
   user-select: none;
 }

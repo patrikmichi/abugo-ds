@@ -5,7 +5,7 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border-radius: calc(var(--token-component-image-radius, 8px) * 1px);
+  border-radius: calc(var(--token-component-radius-image, 8px) * 1px);
   background-color: var(--token-component-image-background, #f5f5f5);
 }
 
