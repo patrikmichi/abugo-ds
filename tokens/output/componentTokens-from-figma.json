@@ -101,27 +101,27 @@
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.fontSize.2}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "md": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.fontSize.2}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.fontSize.2}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       }
     },
     "field": {
@@ -130,18 +130,18 @@
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-size.md}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-size.lg}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       }
     },
     "checkbox": {
@@ -149,18 +149,18 @@
         "ALL_SCOPES"
       ],
       "$type": "fontSizes",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.body-size.md}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "radio": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "fontSizes",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.body-size.md}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "chip": {
       "sm": {
@@ -168,27 +168,27 @@
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-size.sm}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "md": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-size.md}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "fontSizes",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-size.md}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       }
     },
     "alert": {
@@ -196,18 +196,18 @@
         "ALL_SCOPES"
       ],
       "$type": "fontSizes",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.fontSize.3}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "toast": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "fontSizes",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.fontSize.2}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     }
   },
   "gap": {
@@ -835,27 +835,27 @@
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.lineHeight.12}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "md": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.lineHeight.12}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.lineHeight.12}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       }
     },
     "field": {
@@ -864,18 +864,18 @@
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-line.md}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "label": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       }
     },
     "checkbox": {
@@ -883,18 +883,18 @@
         "ALL_SCOPES"
       ],
       "$type": "lineHeights",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.body-line.md}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "radio": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "lineHeights",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.body-line.md}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "chip": {
       "sm": {
@@ -902,27 +902,27 @@
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-line.sm}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "md": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-line.md}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       },
       "lg": {
         "$scopes": [
           "ALL_SCOPES"
         ],
         "$type": "lineHeights",
-        "$value": null,
-        "$description": "References external library variable",
-        "$collectionName": ""
+        "$value": "{typography.body-line.md}",
+        "$description": "Resolved from source tokens",
+        "$collectionName": "componentTokens"
       }
     },
     "alert": {
@@ -930,18 +930,18 @@
         "ALL_SCOPES"
       ],
       "$type": "lineHeights",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.lineHeight.16}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "toast": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "lineHeights",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{typography.body-line.md}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     }
   },
   "radius": {
@@ -1104,45 +1104,45 @@
         "ALL_SCOPES"
       ],
       "$type": "number",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{z.index.modal}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "popover": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{z.index.popover}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "tooltip": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{z.index.tooltip}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "modal": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{z.index.modal}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "drawer": {
       "$scopes": [
         "ALL_SCOPES"
       ],
       "$type": "number",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{z.index.modal}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     }
   },
   "accordion": {
@@ -3431,9 +3431,9 @@
         "ALL_SCOPES"
       ],
       "$type": "dimension",
-      "$value": null,
-      "$description": "References external library variable",
-      "$collectionName": ""
+      "$value": "{sizing.max-width.tooltip}",
+      "$description": "Resolved from source tokens",
+      "$collectionName": "componentTokens"
     },
     "container": {
       "background": {
