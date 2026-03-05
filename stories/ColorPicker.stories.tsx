@@ -12,7 +12,7 @@ const meta: Meta<typeof ColorPicker> = {
   argTypes: {
     format: {
       control: 'select',
-      options: ['hex', 'rgb', 'hsb'],
+      options: ['hex', 'rgb', 'hsl'],
     },
   },
 };
@@ -106,7 +106,7 @@ export const Formats: Story = {
         </div>
         <div>
           <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>HSB Format</p>
-          <ColorPicker format="hsb" value={value} onChange={setValue} showText />
+          <ColorPicker format="hsl" value={value} onChange={setValue} showText />
         </div>
       </div>
     );

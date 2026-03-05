@@ -1,6 +1,6 @@
-export {
-  ActionMenu,
-  type ActionMenuProps,
-  type ActionMenuItem,
-  type ActionMenuPlacement,
-} from './ActionMenu';
+export { default as ActionMenu } from './ActionMenu';
+export type {
+  IProps as ActionMenuProps,
+  ActionMenuItem,
+  ActionMenuPlacement,
+} from './types';

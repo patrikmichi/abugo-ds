@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Chip } from '@/components/Chip';
-import { Avatar } from '@/components/Avatar';
+import Avatar from '@/components/Avatar';
 
 const meta: Meta<typeof Chip> = {
   title: 'Components/Chip',
@@ -33,8 +33,17 @@ export default meta;
 type Story = StoryObj<typeof Chip>;
 
 export const Basic: Story = {
-  args: {
-    label: 'Chip',
+  render: () => {
+    const [selected, setSelected] = useState(false);
+
+    return (
+      <Chip
+        label="Chip"
+        clickable
+        selected={selected}
+        onClick={() => setSelected(!selected)}
+      />
+    );
   },
 };
 

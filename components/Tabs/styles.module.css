@@ -1,0 +1,108 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tabList {
+  display: flex;
+  position: relative;
+  gap: var(--token-component-tabs-gap, 24px);
+  border-bottom: none;
+}
+
+.tabList.centered {
+  justify-content: center;
+}
+
+.tabList.cardTabList {
+  gap: var(--token-component-tabs-card-gap, 4px);
+  border-bottom: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-component-tabs-tab-gap, 8px);
+  height: var(--token-component-tabs-tab-height, 56px);
+  padding: 0;
+  background: var(--token-component-tabs-default-background-default, transparent);
+  border: none;
+  color: var(--token-component-tabs-default-content-default, #464646);
+  font-size: var(--token-component-tabs-tab-font-size, 14px);
+  font-weight: var(--token-component-tabs-tab-font-weight, 700);
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: var(--token-component-tabs-tab-letter-spacing, 0.28px);
+  line-height: var(--token-component-tabs-tab-line-height, 24px);
+  cursor: pointer;
+  transition: color var(--token-component-tabs-transition-duration, 200ms) var(--token-component-tabs-transition-easing, ease-out);
+  position: relative;
+}
+
+.tab:hover:not(:disabled) {
+  color: var(--token-component-tabs-default-content-active, #5690f5);
+}
+
+.tab.active {
+  color: var(--token-component-tabs-default-content-active, #5690f5);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--token-component-tabs-indicator-height, 2px);
+  background: var(--token-component-tabs-default-indicator, #5690f5);
+}
+
+.tab:disabled {
+  color: var(--token-component-tabs-default-content-disabled, #a6a6a6);
+  cursor: not-allowed;
+}
+
+.tab.card {
+  padding: var(--token-component-tabs-card-padding, 8px 16px);
+  background: var(--token-component-tabs-card-background-default, #ffffff);
+  border: 1px solid var(--token-component-tabs-default-border-default, #e0e0e0);
+  border-radius: var(--token-component-tabs-card-radius, 4px);
+  height: auto;
+}
+
+.tab.card:hover:not(:disabled) {
+  background: var(--token-component-tabs-card-background-hover, #f5f5f5);
+}
+
+.tab.card.active {
+  background: var(--token-component-tabs-card-background-active, #e4edfd);
+  border-color: var(--token-component-tabs-card-border-active, #5690f5);
+}
+
+.tab.card.active::after {
+  display: none;
+}
+
+.indicator {
+  display: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  font-size: var(--token-component-tabs-icon-size, 16px);
+}
+
+.label {
+  display: inline;
+}
+
+.content {
+  padding: var(--token-component-tabs-content-padding, 16px 0);
+}
+
+.tabPane {
+  display: block;
+}

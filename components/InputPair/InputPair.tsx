@@ -1,47 +1,12 @@
-import React, { useState } from 'react';
-import styles from './InputPair.module.css';
+import { useState } from 'react';
+
 import { cn } from '@/lib/utils';
 import { Input } from '@/components/Input';
 
-export interface InputPairProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Field size */
-  size?: 'sm' | 'md' | 'lg';
-  /** Whether the field has a validation error */
-  error?: boolean;
-  /** Whether the field is disabled */
-  disabled?: boolean;
-  /** First input value */
-  firstValue?: string;
-  /** Second input value */
-  secondValue?: string;
-  /** First input change handler */
-  onFirstChange?: (value: string) => void;
-  /** Second input change handler */
-  onSecondChange?: (value: string) => void;
-  /** First input placeholder */
-  firstPlaceholder?: string;
-  /** Second input placeholder */
-  secondPlaceholder?: string;
-  /** ARIA label for the first input */
-  firstAriaLabel?: string;
-  /** ARIA label for the second input */
-  secondAriaLabel?: string;
-}
+import styles from './InputPair.module.css';
+import type { IProps } from './types';
 
-/**
- * InputPair component - Compound field with two inputs side by side
- * 
- * @example
- * ```tsx
- * <InputPair
- *   firstValue={firstValue}
- *   secondValue={secondValue}
- *   onFirstChange={setFirstValue}
- *   onSecondChange={setSecondValue}
- * />
- * ```
- */
-export function InputPair({
+const InputPair = ({
   size = 'md',
   error = false,
   disabled = false,
@@ -55,17 +20,17 @@ export function InputPair({
   secondAriaLabel = 'Second input',
   className,
   ...props
-}: InputPairProps) {
+}: IProps) => {
   const [isFocused, setIsFocused] = useState(false);
-  
+
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
-  
+
   return (
     <div
       className={cn(
         styles.inputPair,
-        size && styles[size],
+        styles[size],
         error && styles.error,
         disabled && styles.disabled,
         isFocused && styles.focused,
@@ -87,9 +52,9 @@ export function InputPair({
         className={styles.firstInput}
         aria-label={firstAriaLabel}
       />
-      
+
       <div className={styles.separator} />
-      
+
       <Input
         type="text"
         value={secondValue}
@@ -105,4 +70,6 @@ export function InputPair({
       />
     </div>
   );
-}
+};
+
+export default InputPair;

@@ -7,7 +7,7 @@
 
 /* Panel */
 .panel {
-  position: fixed;
+  position: absolute;
   z-index: var(--token-component-actionmenu-z-index, 1050);
   min-width: var(--token-component-actionmenu-min-width, 120px);
   max-width: var(--token-component-actionmenu-max-width, 280px);
@@ -18,6 +18,39 @@
   font-family: var(--token-primitive-typography-font-family-sans);
   box-sizing: border-box;
   pointer-events: auto;
+}
+
+/* Placement variants — CSS-only positioning */
+.bottomLeft {
+  top: calc(100% + 4px);
+  left: 0;
+}
+
+.bottomCenter {
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottomRight {
+  top: calc(100% + 4px);
+  right: 0;
+}
+
+.topLeft {
+  bottom: calc(100% + 4px);
+  left: 0;
+}
+
+.topCenter {
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topRight {
+  bottom: calc(100% + 4px);
+  right: 0;
 }
 
 /* Panel content (scrollable area) */

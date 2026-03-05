@@ -1,177 +1,89 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import styles from './Drawer.module.css';
+
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/Button';
 
-export type DrawerPlacement = 'top' | 'right' | 'bottom' | 'left';
+import styles from './Drawer.module.css';
+import type { DrawerProps } from './types';
 
-export interface DrawerProps {
-  /** Whether drawer is open */
-  open?: boolean;
-  /** Default open state */
-  defaultOpen?: boolean;
-  /** Callback when open state changes */
-  onClose?: (e: React.MouseEvent | React.KeyboardEvent) => void;
-  /** Callback when OK/Save button is clicked */
-  onOk?: (e: React.MouseEvent) => void;
-  /** Callback when back button is clicked. Shows back arrow in header when provided */
-  onBack?: (e: React.MouseEvent) => void;
-  /** Callback after open/close animation finishes */
-  afterOpenChange?: (open: boolean) => void;
-  /** Placement of drawer */
-  placement?: DrawerPlacement;
-  /** Width of drawer (for left/right placement) */
-  width?: string | number;
-  /** Height of drawer (for top/bottom placement) */
-  height?: string | number;
-  /** Whether to show close button */
-  closable?: boolean;
-  /** Whether to show mask */
-  mask?: boolean;
-  /** Whether clicking mask closes drawer */
-  maskClosable?: boolean;
-  /** Whether pressing Esc closes drawer */
-  keyboard?: boolean;
-  /** Whether to destroy drawer content on close */
-  destroyOnClose?: boolean;
-  /** Get container for drawer */
-  getContainer?: HTMLElement | (() => HTMLElement) | string | false;
-  /** Title of drawer */
-  title?: React.ReactNode;
-  /** Title alignment */
-  titleAlign?: 'left' | 'center';
-  /** Whether to show footer with Save/Cancel buttons */
-  footer?: boolean;
-  /** Footer alignment */
-  footerAlign?: 'left' | 'right';
-  /** Save button text */
-  okText?: React.ReactNode;
-  /** Cancel button text */
-  cancelText?: React.ReactNode;
-  /** Custom class name for drawer */
-  className?: string;
-  /** Custom style for drawer */
-  style?: React.CSSProperties;
-  /** Custom class name for mask */
-  maskClassName?: string;
-  /** Custom style for mask */
-  maskStyle?: React.CSSProperties;
-  /** Custom class name for drawer body */
-  bodyStyle?: React.CSSProperties;
-  /** Children - drawer content */
-  children?: React.ReactNode;
-}
+export type { DrawerProps, DrawerPlacement } from './types';
 
-/**
- * Drawer component - Slide-in panel from edge of screen
- * 
- * Drawer component with support for:
- * - Multiple placements (top, right, bottom, left)
- * - Custom width/height
- * - Mask and mask closability
- * - Keyboard support (Esc key)
- * - Title and footer
- * - Portal rendering
- * 
- * @example
- * ```tsx
- * // Basic drawer
- * <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
- *   <p>Drawer content</p>
- * </Drawer>
- * 
- * // With title and footer
- * <Drawer
- *   open={isOpen}
- *   onClose={() => setIsOpen(false)}
- *   title="Drawer Title"
- *   footer={<Button>Save</Button>}
- * >
- *   <p>Drawer content</p>
- * </Drawer>
- * 
- * // Left placement
- * <Drawer
- *   open={isOpen}
- *   onClose={() => setIsOpen(false)}
- *   placement="left"
- *   width={400}
- * >
- *   <p>Drawer from left</p>
- * </Drawer>
- * ```
- */
 export function Drawer({
-  open: controlledOpen,
-  defaultOpen = false,
+  open = false,
   onClose,
   onOk,
   onBack,
-  afterOpenChange,
   placement = 'right',
   width = 378,
   height = 378,
   closable = true,
-  mask = true,
   maskClosable = true,
-  keyboard = true,
-  getContainer,
   title,
-  titleAlign = 'left',
   footer = false,
-  footerAlign = 'left',
   okText = 'Save',
   cancelText = 'Cancel',
   className,
-  style,
-  maskClassName,
-  maskStyle,
-  bodyStyle,
   children,
 }: DrawerProps) {
-  const [internalOpen, setInternalOpen] = React.useState(defaultOpen);
-  const [isAnimating, setIsAnimating] = React.useState(false);
-  const drawerRef = useRef<HTMLDivElement>(null);
   const maskRef = useRef<HTMLDivElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const isControlled = controlledOpen !== undefined;
-  const open = isControlled ? controlledOpen : internalOpen;
-
-  // Handle open state changes
+  // Handle visibility - show immediately when open, hide after animation ends
   useEffect(() => {
     if (open) {
-      setIsAnimating(true);
-      // Trigger afterOpenChange after animation
-      setTimeout(() => {
-        setIsAnimating(false);
-        afterOpenChange?.(true);
-      }, 300);
-    } else {
-      setIsAnimating(true);
-      // Trigger afterOpenChange after animation
-      setTimeout(() => {
-        setIsAnimating(false);
-        afterOpenChange?.(false);
-      }, 300);
+      setIsVisible(true);
     }
-  }, [open, afterOpenChange]);
+  }, [open]);
 
-  // Handle keyboard (Esc key)
+  // Handle animation - trigger after component is visible and rendered
   useEffect(() => {
-    if (!open || !keyboard) return;
+    if (isVisible && open) {
+      // Use setTimeout to ensure the DOM has rendered with initial off-screen position
+      const timer = setTimeout(() => {
+        setIsAnimating(true);
+      }, 10);
+      return () => clearTimeout(timer);
+    } else if (!open) {
+      setIsAnimating(false);
+    }
+  }, [isVisible, open]);
+
+  // Handle transition end to remove from DOM after close animation
+  const handleTransitionEnd = useCallback((e: React.TransitionEvent) => {
+    if (e.target === drawerRef.current && !open) {
+      setIsVisible(false);
+    }
+  }, [open]);
+
+  const handleClose = useCallback(
+    (e: React.MouseEvent | React.KeyboardEvent) => {
+      onClose?.(e);
+    },
+    [onClose]
+  );
+
+  const handleMaskClick = (e: React.MouseEvent) => {
+    if (maskClosable && e.target === maskRef.current) {
+      handleClose(e);
+    }
+  };
+
+  useEffect(() => {
+    if (!open) return;
 
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        handleClose(e as any);
+        handleClose(e as unknown as React.KeyboardEvent);
       }
     };
 
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
-  }, [open, keyboard]);
+  }, [open, handleClose]);
 
-  // Prevent body scroll when drawer is open
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
@@ -183,142 +95,70 @@ export function Drawer({
     };
   }, [open]);
 
-  const handleClose = (e: React.MouseEvent | React.KeyboardEvent) => {
-    if (!isControlled) {
-      setInternalOpen(false);
+  const isHorizontal = placement === 'left' || placement === 'right';
+  const sizeStyle: React.CSSProperties = isHorizontal
+    ? { width: typeof width === 'number' ? `${width}px` : width }
+    : { height: typeof height === 'number' ? `${height}px` : height };
+
+  const renderHeader = () => {
+    if (!title && !closable) return null;
+
+    if (!title && closable) {
+      return (
+        <button type="button" className={styles.closeAbsolute} onClick={handleClose} aria-label="Close">
+          <span className="material-symbols-outlined">close</span>
+        </button>
+      );
     }
-    onClose?.(e);
+
+    return (
+      <div className={styles.header}>
+        {onBack && (
+          <button type="button" className={styles.back} onClick={onBack} aria-label="Back">
+            <span className="material-symbols-outlined">arrow_back</span>
+          </button>
+        )}
+        <div className={styles.titleWrap}>
+          <div id="drawer-title" className={styles.title}>{title}</div>
+        </div>
+        {closable && (
+          <button type="button" className={styles.close} onClick={handleClose} aria-label="Close">
+            <span className="material-symbols-outlined">close</span>
+          </button>
+        )}
+      </div>
+    );
   };
 
-  const handleMaskClick = (e: React.MouseEvent) => {
-    if (maskClosable && e.target === maskRef.current) {
-      handleClose(e);
-    }
-  };
-
-  // Calculate size based on placement
-  const sizeStyle: React.CSSProperties = {};
-  if (placement === 'left' || placement === 'right') {
-    sizeStyle.width = typeof width === 'number' ? `${width}px` : width;
-  } else {
-    sizeStyle.height = typeof height === 'number' ? `${height}px` : height;
-  }
-
-  // Get container
-  const getContainerElement = (): HTMLElement => {
-    if (getContainer === false) {
-      return document.body;
-    }
-    if (typeof getContainer === 'string') {
-      const element = document.querySelector(getContainer);
-      return (element as HTMLElement) || document.body;
-    }
-    if (typeof getContainer === 'function') {
-      return getContainer();
-    }
-    if (getContainer instanceof HTMLElement) {
-      return getContainer;
-    }
-    return document.body;
-  };
-
-  const container = getContainerElement();
+  if (!isVisible) return null;
 
   const drawerContent = (
     <>
-      {mask && (
-        <div
-          ref={maskRef}
-          className={cn(
-            styles.mask,
-            open && styles.maskOpen,
-            maskClassName
-          )}
-          style={maskStyle}
-          onClick={handleMaskClick}
-        />
-      )}
+      <div
+        ref={maskRef}
+        className={cn(styles.mask, isAnimating && styles.maskOpen)}
+        onClick={handleMaskClick}
+      />
       <div
         ref={drawerRef}
-        className={cn(
-          styles.drawer,
-          styles[placement],
-          open && styles.open,
-          className
-        )}
-        style={{
-          ...sizeStyle,
-          ...style,
-        }}
+        className={cn(styles.drawer, styles[placement], isAnimating && styles.open, className)}
+        style={sizeStyle}
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? 'drawer-title' : undefined}
+        onTransitionEnd={handleTransitionEnd}
       >
-        {title ? (
-          <div className={cn(styles.header, titleAlign === 'center' && styles.titleCenter)}>
-            {onBack ? (
-              <button
-                type="button"
-                className={styles.back}
-                onClick={onBack}
-                aria-label="Back"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
-                  arrow_back
-                </span>
-              </button>
-            ) : titleAlign === 'center' && closable ? (
-              <div className={styles.spacer} aria-hidden="true" />
-            ) : null}
-            <div className={styles.titleWrap}>
-              <div id="drawer-title" className={styles.title}>
-                {title}
-              </div>
-            </div>
-            {closable && (
-              <button
-                type="button"
-                className={styles.close}
-                onClick={handleClose}
-                aria-label="Close"
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
-                  close
-                </span>
-              </button>
-            )}
-          </div>
-        ) : closable ? (
-          <button
-            type="button"
-            className={styles.closeAbsolute}
-            onClick={handleClose}
-            aria-label="Close"
-          >
-            <span className="material-symbols-outlined" style={{ fontSize: 'var(--token-primitive-icon-size-icon-size-2)' }}>
-              close
-            </span>
-          </button>
-        ) : null}
-
-        <div className={styles.body} style={bodyStyle}>
-          {children}
-        </div>
-
+        {renderHeader()}
+        <div className={styles.body}>{children}</div>
         {footer && (
-          <div className={cn(styles.footer, footerAlign === 'right' && styles.footerRight)}>
-            <Button variant="primary" appearance="filled" onClick={onOk}>{okText}</Button>
-            <Button variant="secondary" appearance="plain" onClick={handleClose}>{cancelText}</Button>
+          <div className={styles.footer}>
+            <Button variant="primary" appearance="filled" size="sm" onClick={onOk}>{okText}</Button>
+            <Button variant="secondary" appearance="outline" size="sm" onClick={handleClose}>{cancelText}</Button>
           </div>
         )}
       </div>
     </>
   );
 
-  // Render in portal if getContainer is provided
-  if (getContainer !== false) {
-    return createPortal(drawerContent, container);
-  }
-
-  return drawerContent;
+  return createPortal(drawerContent, document.body);
 }

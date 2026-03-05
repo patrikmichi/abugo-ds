@@ -5,7 +5,7 @@
   align-items: stretch;
   width: 100%;
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  border-radius: var(--token-component-radius-field-md, 8px);
   background-color: var(--token-component-field-control-background-default);
   overflow: hidden;
   transition: 
@@ -61,11 +61,11 @@
 
 /* Size variants */
 .inputPair.sm {
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+  border-radius: var(--token-component-radius-field-sm, 4px);
 }
 
 .inputPair.lg {
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+  border-radius: var(--token-component-radius-field-lg, 8px);
 }
 
 /* Enabled state (default) - hover and focus */

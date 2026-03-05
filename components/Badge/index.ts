@@ -1,1 +1,2 @@
-export { Badge, type BadgeProps, type BadgeStatus, type BadgeSize } from './Badge';
+export { default as Badge } from './Badge';
+export type { IProps as BadgeProps, BadgeStatus, BadgeVariant, BadgeSize } from './types';

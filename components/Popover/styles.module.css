@@ -1,0 +1,140 @@
+/* Popover component styles using design tokens */
+
+.popover {
+  position: fixed;
+  z-index: var(--token-component-popover-z-index, 1030);
+  max-width: var(--token-component-popover-max-width, 320px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-popover-font-size, 14px);
+  line-height: var(--token-component-popover-line-height, 1.5);
+
+  /* Animation */
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: center;
+  transition:
+    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popover.open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Transform origins based on placement */
+.popover.top {
+  transform-origin: bottom center;
+}
+
+.popover.bottom {
+  transform-origin: top center;
+}
+
+.popover.left {
+  transform-origin: right center;
+}
+
+.popover.right {
+  transform-origin: left center;
+}
+
+/* Inner container with background and shadow */
+.inner {
+  background-color: var(--token-component-popover-background, #fff);
+  border-radius: var(--token-component-popover-border-radius, 8px);
+  box-shadow: var(--token-component-popover-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
+}
+
+/* Title */
+.title {
+  padding: var(--token-component-popover-title-padding, 12px 16px);
+  font-weight: var(--token-component-popover-title-font-weight, 600);
+  color: var(--token-component-popover-title-color, #1f1f1f);
+  border-bottom: 1px solid var(--token-component-popover-divider-color, #f0f0f0);
+  min-width: var(--token-component-popover-min-width, 180px);
+}
+
+/* Content */
+.content {
+  padding: var(--token-component-popover-content-padding, 12px 16px);
+  color: var(--token-component-popover-content-color, #1f1f1f);
+}
+
+/* Title only (no content) */
+.title:only-child {
+  border-bottom: none;
+}
+
+/* Content only (no title) */
+.content:only-child {
+  padding: var(--token-component-popover-content-padding, 12px 16px);
+}
+
+/* Arrow base */
+.arrow {
+  position: absolute;
+  width: var(--token-component-popover-arrow-size, 16px);
+  height: var(--token-component-popover-arrow-size, 16px);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--token-component-popover-background, #fff);
+  box-shadow: var(--token-component-popover-arrow-shadow, 2px 2px 5px rgba(0, 0, 0, 0.05));
+  transform: rotate(45deg);
+}
+
+/* Arrow positions */
+.arrowTop {
+  bottom: calc(var(--token-component-popover-arrow-size, 16px) / -2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrowTop::before {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 var(--token-component-popover-arrow-radius, 2px) 0;
+}
+
+.arrowBottom {
+  top: calc(var(--token-component-popover-arrow-size, 16px) / -2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrowBottom::before {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 var(--token-component-popover-arrow-radius, 2px) 0 0;
+}
+
+.arrowLeft {
+  right: calc(var(--token-component-popover-arrow-size, 16px) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrowLeft::before {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 var(--token-component-popover-arrow-radius, 2px);
+}
+
+.arrowRight {
+  left: calc(var(--token-component-popover-arrow-size, 16px) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrowRight::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 0 var(--token-component-popover-arrow-radius, 2px) 0;
+}

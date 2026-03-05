@@ -7,7 +7,7 @@
   gap: var(--token-component-notification-gap, 8px);
   padding: var(--token-component-notification-padding, 20px);
   background-color: var(--token-component-notification-background, #fff);
-  border-radius: calc(var(--token-component-radius-notification, 8) * 1px);
+  border-radius: var(--token-component-radius-notification, 8px);
   /* shadow.lg — token var not usable (boxShadow type doesn't resolve in CSS generator) */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   min-width: 384px;
@@ -134,7 +134,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 

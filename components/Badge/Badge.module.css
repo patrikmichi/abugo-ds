@@ -16,21 +16,27 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: var(--token-component-badge-size-default, 20px);
-  height: var(--token-component-badge-size-default, 20px);
-  padding: 0 var(--token-component-badge-padding-x, 6px);
-  font-size: var(--token-component-badge-font-size-default, 10px);
-  font-weight: var(--token-component-badge-font-weight, 500);
+  min-width: var(--token-component-badge-size-default);
+  height: var(--token-component-badge-size-default);
+  padding: 0 var(--token-component-badge-padding-x);
+  font-size: var(--token-component-badge-font-size-default);
+  font-weight: var(--token-component-badge-font-weight);
   line-height: 1;
-  color: var(--token-component-badge-default-content, #ffffff);
-  background-color: var(--token-component-badge-default-background, #ff434e);
-  border: var(--token-component-badge-border-width, 2px) solid var(--token-component-badge-default-border, #ffffff);
-  border-radius: var(--token-component-badge-border-radius, 100px);
+  color: var(--token-component-badge-default-content);
+  background-color: var(--token-component-badge-default-background);
+  border: var(--token-component-badge-border-width) solid var(--token-component-badge-default-border);
+  border-radius: var(--token-component-badge-border-radius);
   transform: translate(50%, -50%);
   transform-origin: 100% 0%;
   white-space: nowrap;
   font-family: var(--token-primitive-typography-font-family-sans);
   box-sizing: content-box;
+}
+
+/* Single digit - perfect circle */
+.badge.singleDigit {
+  padding: 0;
+  width: var(--token-component-badge-size-default);
 }
 
 /* Color variants */
@@ -70,11 +76,17 @@
 
 /* Small size */
 .badge.small {
-  min-width: var(--token-component-badge-size-small, 16px);
-  height: var(--token-component-badge-size-small, 16px);
-  font-size: var(--token-component-badge-font-size-small, 10px);
-  border-radius: var(--token-component-badge-border-radius, 100px);
-  padding: 0 var(--token-component-badge-padding-x-small, 3px);
+  min-width: var(--token-component-badge-size-small);
+  height: var(--token-component-badge-size-small);
+  font-size: var(--token-component-badge-font-size-small);
+  border-radius: var(--token-component-badge-border-radius);
+  padding: 0 var(--token-component-badge-padding-x-small);
+}
+
+/* Small single digit - perfect circle */
+.badge.small.singleDigit {
+  padding: 0;
+  width: var(--token-component-badge-size-small);
 }
 
 .badge.small.dot,

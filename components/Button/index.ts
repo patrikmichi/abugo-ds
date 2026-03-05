@@ -1,13 +1,22 @@
-export { Button, ButtonIcon, type ButtonProps, type ButtonIconProps } from './Button';
+export { Button, ButtonIcon } from './Button';
+export type {
+  ButtonProps,
+  ButtonIconProps,
+  ButtonVariant,
+  ButtonAppearance,
+  ButtonSize,
+  BaseButtonProps,
+} from './types';
 
-// Convenience wrapper components for common patterns
 export {
   PrimaryButton,
+  PrimaryOutlineButton,
   PrimaryPlainButton,
   SecondaryButton,
+  SecondaryOutlineButton,
   SecondaryPlainButton,
-  TertiaryButton,
   DangerButton,
+  DangerOutlineButton,
   DangerPlainButton,
   UpgradeButton,
 } from './ButtonWrappers';

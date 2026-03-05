@@ -1,7 +1,7 @@
-export {
-  AutoComplete,
-  type AutoCompleteProps,
-  type AutoCompleteValue,
-  type AutoCompleteOption,
-  type AutoCompleteDataSource,
-} from './AutoComplete';
+export { default as AutoComplete } from './AutoComplete';
+export type {
+  IProps as AutoCompleteProps,
+  AutoCompleteValue,
+  AutoCompleteOption,
+  AutoCompleteDataSource,
+} from './types';

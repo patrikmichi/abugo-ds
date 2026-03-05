@@ -16,7 +16,7 @@
   /* Typography - default to medium size */
   font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-button-md);
-  font-weight: var(--token-component-font-weight-button);
+  font-weight: var(--token-component-font-weight-button, 600);
   line-height: 1;
   letter-spacing: var(--token-primitive-typography-letter-spacing-button);
   text-transform: var(--token-component-text-transform-button);
@@ -33,7 +33,7 @@
 
   /* Border & Radius */
   border: 0;
-  border-radius: calc(var(--token-component-radius-button-md) * 1px);
+  border-radius: var(--token-component-radius-button-md);
 
   /* Interactions */
   cursor: pointer;
@@ -118,9 +118,7 @@
 .button.iconOnly.plain.sm,
 .button.iconOnly.primaryPlain.sm,
 .button.iconOnly.secondaryPlain.sm,
-.button.iconOnly.dangerPlain.sm,
-.button.iconOnly.tertiaryPlain.sm,
-.button.iconOnly.upgradePlain.sm {
+.button.iconOnly.dangerPlain.sm {
   width: var(--token-component-height-button-plain-sm);
   min-width: var(--token-component-height-button-plain-sm);
   height: var(--token-component-height-button-plain-sm);
@@ -129,9 +127,7 @@
 .button.iconOnly.plain.md,
 .button.iconOnly.primaryPlain.md,
 .button.iconOnly.secondaryPlain.md,
-.button.iconOnly.dangerPlain.md,
-.button.iconOnly.tertiaryPlain.md,
-.button.iconOnly.upgradePlain.md {
+.button.iconOnly.dangerPlain.md {
   width: var(--token-component-height-button-plain-md);
   min-width: var(--token-component-height-button-plain-md);
   height: var(--token-component-height-button-plain-md);
@@ -140,9 +136,7 @@
 .button.iconOnly.plain.lg,
 .button.iconOnly.primaryPlain.lg,
 .button.iconOnly.secondaryPlain.lg,
-.button.iconOnly.dangerPlain.lg,
-.button.iconOnly.tertiaryPlain.lg,
-.button.iconOnly.upgradePlain.lg {
+.button.iconOnly.dangerPlain.lg {
   width: var(--token-component-height-button-plain-lg);
   min-width: var(--token-component-height-button-plain-lg);
   height: var(--token-component-height-button-plain-lg);
@@ -187,8 +181,8 @@
   line-height: 1;
   margin: 0;
   padding: 0;
-  /* Optical adjustment for perfect centering */
-  transform: translateY(var(--token-component-button-visual-compensation-offset, 1px));
+  /* Optical adjustment for perfect centering - negative value pushes text up */
+  transform: translateY(calc(-1 * var(--token-component-button-visual-compensation-offset, 1px)));
 }
 
 /* ==========================================================================
@@ -216,7 +210,7 @@
   padding-bottom: 0;
   height: var(--token-component-height-button-sm);
   min-width: auto;
-  border-radius: calc(var(--token-component-radius-button-sm) * 1px);
+  border-radius: var(--token-component-radius-button-sm);
   font-size: var(--token-component-font-size-button-sm);
   line-height: 1;
   gap: var(--token-component-gap-button-icon-sm);
@@ -227,9 +221,7 @@
 .plain,
 .primaryPlain,
 .secondaryPlain,
-.dangerPlain,
-.tertiaryPlain,
-.upgradePlain {
+.dangerPlain {
   /* Default to medium height for plain buttons */
   height: var(--token-component-height-button-plain-md);
 }
@@ -237,9 +229,7 @@
 .plain.sm,
 .primaryPlain.sm,
 .secondaryPlain.sm,
-.dangerPlain.sm,
-.tertiaryPlain.sm,
-.upgradePlain.sm {
+.dangerPlain.sm {
   height: var(--token-component-height-button-plain-sm);
 }
 
@@ -270,7 +260,7 @@
   padding-bottom: 0;
   height: var(--token-component-height-button-md);
   min-width: auto;
-  border-radius: calc(var(--token-component-radius-button-md) * 1px);
+  border-radius: var(--token-component-radius-button-md);
   font-size: var(--token-component-font-size-button-md);
   line-height: 1;
   gap: var(--token-component-gap-button-icon-md);
@@ -280,9 +270,7 @@
 .plain.md,
 .primaryPlain.md,
 .secondaryPlain.md,
-.dangerPlain.md,
-.tertiaryPlain.md,
-.upgradePlain.md {
+.dangerPlain.md {
   height: var(--token-component-height-button-plain-md);
 }
 
@@ -293,7 +281,7 @@
   padding-bottom: 0;
   height: var(--token-component-height-button-lg);
   min-width: auto;
-  border-radius: calc(var(--token-component-radius-button-lg) * 1px);
+  border-radius: var(--token-component-radius-button-lg);
   font-size: var(--token-component-font-size-button-lg);
   line-height: 1;
   gap: var(--token-component-gap-button-icon-lg);
@@ -304,9 +292,7 @@
 .plain.lg,
 .primaryPlain.lg,
 .secondaryPlain.lg,
-.dangerPlain.lg,
-.tertiaryPlain.lg,
-.upgradePlain.lg {
+.dangerPlain.lg {
   height: var(--token-component-height-button-plain-lg);
 }
 
@@ -345,7 +331,7 @@
 .loadingSpinner .material-symbols-outlined {
   width: 100%;
   height: 100%;
-  animation: spin var(--token-component-animation-field-duration)ms linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -422,37 +408,90 @@
   color: var(--token-component-button-primary-plain-content-disabled);
 }
 
+.primary.outline,
+.primaryOutline {
+  background-color: transparent;
+  color: var(--token-component-button-primary-outline-content-default);
+  border-width: calc(var(--token-component-button-outlined-border-width) * 1px);
+  border-style: solid;
+  border-color: var(--token-component-button-primary-outline-border-default);
+}
+
+.primary.outline:hover:not(:disabled),
+.primaryOutline:hover:not(:disabled) {
+  background-color: var(--token-component-button-primary-outline-background-hover);
+  color: var(--token-component-button-primary-outline-content-hover);
+  border-color: var(--token-component-button-primary-outline-border-hover);
+}
+
+.primary.outline:active:not(:disabled),
+.primaryOutline:active:not(:disabled) {
+  background-color: var(--token-component-button-plain-accent-background-pressed);
+  border-color: var(--token-component-button-primary-outline-border-pressed);
+  color: var(--token-component-button-primary-outline-content-pressed);
+}
+
+.primary.outline:disabled,
+.primaryOutline:disabled {
+  border-color: var(--token-component-button-primary-outline-border-disabled);
+  color: var(--token-component-button-primary-outline-content-disabled);
+}
+
 /* ==========================================================================
    Variant Styles - Secondary
    ========================================================================== */
 
+.secondary.filled,
+.secondaryFilled {
+  background-color: var(--token-component-button-secondary-filled-background-default);
+  color: var(--token-component-button-secondary-filled-content-default);
+}
+
+.secondary.filled:hover:not(:disabled),
+.secondaryFilled:hover:not(:disabled) {
+  background-color: var(--token-component-button-secondary-filled-background-hover);
+  color: var(--token-component-button-secondary-filled-content-hover);
+}
+
+.secondary.filled:active:not(:disabled),
+.secondaryFilled:active:not(:disabled) {
+  background-color: var(--token-component-button-secondary-filled-background-pressed);
+  color: var(--token-component-button-secondary-filled-content-pressed);
+}
+
+.secondary.filled:disabled,
+.secondaryFilled:disabled {
+  background-color: var(--token-component-button-secondary-filled-background-disabled);
+  color: var(--token-component-button-secondary-filled-content-disabled);
+}
+
 .secondary.outline,
 .secondaryOutline {
   background-color: transparent;
-  color: var(--token-component-button-secondary-outline-content-default);
+  color: var(--token-component-button-tertiary-outline-content-default);
   border-width: calc(var(--token-component-button-outlined-border-width) * 1px);
   border-style: solid;
-  border-color: var(--token-component-button-secondary-outline-border-default);
+  border-color: var(--token-component-button-tertiary-outline-border-default);
 }
 
 .secondary.outline:hover:not(:disabled),
 .secondaryOutline:hover:not(:disabled) {
-  background-color: var(--token-component-button-plain-accent-background-hover);
-  color: var(--token-component-button-secondary-outline-content-hover);
-  border-color: var(--token-component-button-secondary-outline-border-hover);
+  background-color: var(--token-component-button-tertiary-outline-background-hover);
+  color: var(--token-component-button-tertiary-outline-content-hover);
+  border-color: var(--token-component-button-tertiary-outline-border-hover);
 }
 
 .secondary.outline:active:not(:disabled),
 .secondaryOutline:active:not(:disabled) {
-  background-color: var(--token-component-button-plain-accent-background-pressed);
-  border-color: var(--token-component-button-secondary-outline-border-pressed);
-  color: var(--token-component-button-secondary-outline-content-pressed);
+  background-color: var(--token-component-button-plain-neutral-background-pressed);
+  border-color: var(--token-component-button-tertiary-outline-border-pressed);
+  color: var(--token-component-button-tertiary-outline-content-pressed);
 }
 
 .secondary.outline:disabled,
 .secondaryOutline:disabled {
-  border-color: var(--token-component-button-secondary-outline-border-disabled);
-  color: var(--token-component-button-secondary-outline-content-disabled);
+  border-color: var(--token-component-button-tertiary-outline-border-disabled);
+  color: var(--token-component-button-tertiary-outline-content-disabled);
 }
 
 .secondary.plain,
@@ -498,6 +537,34 @@
   background-color: var(--token-component-button-danger-filled-background-pressed);
 }
 
+.danger.outline,
+.dangerOutline {
+  background-color: transparent;
+  color: var(--token-component-button-danger-plain-content-default);
+  border-width: calc(var(--token-component-button-outlined-border-width) * 1px);
+  border-style: solid;
+  border-color: var(--token-component-button-danger-filled-background-default);
+}
+
+.danger.outline:hover:not(:disabled),
+.dangerOutline:hover:not(:disabled) {
+  background-color: var(--token-component-button-danger-plain-background-hover);
+  color: var(--token-component-button-danger-plain-content-hover);
+  border-color: var(--token-component-button-danger-filled-background-hover);
+}
+
+.danger.outline:active:not(:disabled),
+.dangerOutline:active:not(:disabled) {
+  border-color: var(--token-component-button-danger-filled-background-pressed);
+  color: var(--token-component-button-danger-plain-content-pressed);
+}
+
+.danger.outline:disabled,
+.dangerOutline:disabled {
+  border-color: var(--token-component-button-danger-plain-content-disabled);
+  color: var(--token-component-button-danger-plain-content-disabled);
+}
+
 .danger.plain,
 .dangerPlain {
   background-color: var(--token-component-button-danger-plain-background-default);
@@ -522,62 +589,6 @@
 }
 
 /* ==========================================================================
-   Variant Styles - Tertiary
-   ========================================================================== */
-
-.tertiary.outline,
-.tertiaryOutline {
-  background-color: transparent;
-  color: var(--token-component-button-tertiary-outline-content-default);
-  border-width: calc(var(--token-component-button-outlined-border-width) * 1px);
-  border-style: solid;
-  border-color: var(--token-component-button-tertiary-outline-border-default);
-}
-
-.tertiary.outline:hover:not(:disabled),
-.tertiaryOutline:hover:not(:disabled) {
-  background-color: var(--token-component-button-tertiary-outline-background-hover);
-  color: var(--token-component-button-tertiary-outline-content-hover);
-  border-color: var(--token-component-button-tertiary-outline-border-hover);
-}
-
-.tertiary.outline:active:not(:disabled),
-.tertiaryOutline:active:not(:disabled) {
-  border-color: var(--token-component-button-tertiary-outline-border-pressed);
-  color: var(--token-component-button-tertiary-outline-content-pressed);
-}
-
-.tertiary.outline:disabled,
-.tertiaryOutline:disabled {
-  border-color: var(--token-component-button-tertiary-outline-border-disabled);
-  color: var(--token-component-button-tertiary-outline-content-disabled);
-}
-
-.tertiary.plain,
-.tertiaryPlain {
-  background-color: var(--token-component-button-tertiary-plain-background-default);
-  color: var(--token-component-button-tertiary-plain-content-default);
-}
-
-.tertiary.plain:hover:not(:disabled),
-.tertiaryPlain:hover:not(:disabled) {
-  background-color: var(--token-component-button-plain-neutral-background-hover);
-  color: var(--token-component-button-tertiary-plain-content-hover);
-}
-
-.tertiary.plain:active:not(:disabled),
-.tertiaryPlain:active:not(:disabled) {
-  background-color: var(--token-component-button-plain-neutral-background-pressed);
-  color: var(--token-component-button-tertiary-plain-content-pressed);
-}
-
-.tertiary.plain:disabled,
-.tertiaryPlain:disabled {
-  background-color: var(--token-component-button-tertiary-plain-background-disabled);
-  color: var(--token-component-button-tertiary-plain-content-disabled);
-}
-
-/* ==========================================================================
    Variant Styles - Upgrade
    ========================================================================== */
 
@@ -597,25 +608,25 @@
   background-color: var(--token-component-button-upgrade-filled-background-pressed);
 }
 
-.upgrade.plain,
-.upgradePlain {
-  background-color: var(--token-component-button-upgrade-plain-background-default);
-  color: var(--token-component-button-upgrade-plain-content-default);
+/* ==========================================================================
+   Inverted (for use on dark backgrounds)
+   ========================================================================== */
+
+.inverted.plain {
+  color: #ffffff;
 }
 
-.upgrade.plain:hover:not(:disabled),
-.upgradePlain:hover:not(:disabled) {
-  background-color: var(--token-component-button-upgrade-plain-background-hover);
-  color: var(--token-component-button-upgrade-plain-content-hover);
+.inverted.plain:hover:not(:disabled) {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.upgrade.plain:active:not(:disabled),
-.upgradePlain:active:not(:disabled) {
-  color: var(--token-component-button-upgrade-plain-content-pressed);
+.inverted.plain:active:not(:disabled) {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
-.upgrade.plain:disabled,
-.upgradePlain:disabled {
-  background-color: var(--token-component-button-upgrade-plain-background-disabled);
-  color: var(--token-component-button-upgrade-plain-content-disabled);
+.inverted .loadingSpinner,
+.inverted .loadingSpinner .material-symbols-outlined {
+  color: #ffffff;
 }

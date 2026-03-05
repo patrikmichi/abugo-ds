@@ -1,27 +1,8 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
-import type { SelectOption as SelectOptionType } from './Select';
 import { Checkbox } from '@/components/Checkbox';
 import styles from './SelectOption.module.css';
-
-export interface SelectOptionProps {
-  /** The option data */
-  option: SelectOptionType;
-  /** Whether this option is selected */
-  isSelected: boolean;
-  /** Whether this option is active (hovered/keyboard focused) */
-  isActive: boolean;
-  /** Whether the select is disabled */
-  disabled?: boolean;
-  /** Size variant */
-  size?: 'sm' | 'md' | 'lg';
-  /** Whether to show a checkbox on the right side */
-  showCheckbox?: boolean;
-  /** Callback when option is clicked */
-  onClick: (option: SelectOptionType) => void;
-  /** Callback when mouse enters the option */
-  onMouseEnter: () => void;
-}
+import type { SelectOptionProps } from './types';
 
 export const SelectOption = forwardRef<HTMLLIElement, SelectOptionProps>(
   ({ option, isSelected, isActive, disabled, size = 'md', showCheckbox, onClick, onMouseEnter }, ref) => {

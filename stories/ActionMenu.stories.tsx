@@ -82,7 +82,7 @@ export const WithDividerAndDanger: Story = {
           items={[
             { key: 'edit', label: 'Edit', icon: <span className="material-symbols-outlined">edit</span> },
             { key: 'duplicate', label: 'Duplicate', icon: <span className="material-symbols-outlined">content_copy</span> },
-            { key: 'divider', divider: true },
+            { key: 'divider', label: '', divider: true },
             { key: 'delete', label: 'Delete', icon: <span className="material-symbols-outlined">delete</span>, danger: true },
           ]}
           onItemClick={(key) => setSelected(key)}
@@ -177,7 +177,7 @@ export const AllFeatures: Story = {
             { key: 'edit', label: 'Edit', icon: <span className="material-symbols-outlined">edit</span> },
             { key: 'copy', label: 'Copy', icon: <span className="material-symbols-outlined">content_copy</span> },
             { key: 'disabled', label: 'Disabled Option', disabled: true },
-            { key: 'divider', divider: true },
+            { key: 'divider', label: '', divider: true },
             { key: 'delete', label: 'Delete', icon: <span className="material-symbols-outlined">delete</span>, danger: true },
           ]}
           placement="bottomLeft"

@@ -1,1 +1,10 @@
-export { Card, CardGrid, CardMeta, type CardProps, type CardGridProps, type CardMetaProps, type CardSize, type CardType } from './Card';
+export { default as Card } from './Card';
+export { default as CardGrid } from './CardGrid';
+export { default as CardMeta } from './CardMeta';
+export type {
+  IProps as CardProps,
+  CardGridProps,
+  CardMetaProps,
+  CardSize,
+  CardType,
+} from './types';

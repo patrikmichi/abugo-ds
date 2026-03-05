@@ -1,9 +1,9 @@
-export {
-  Flex,
-  type FlexProps,
-  type FlexDirection,
-  type FlexWrap,
-  type FlexJustify,
-  type FlexAlign,
-  type FlexGap,
-} from './Flex';
+export { default as Flex } from './Flex';
+export type {
+  IProps as FlexProps,
+  FlexDirection,
+  FlexWrap,
+  FlexJustify,
+  FlexAlign,
+  FlexGap,
+} from './types';

@@ -23,7 +23,7 @@
   width: 312px;
   background-color: var(--token-primitive-color-white, #ffffff);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-datepicker-border-color, #e0e0e0);
-  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-sm);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   padding: 0;
   overflow: clip;
@@ -58,7 +58,7 @@
   border: none;
   text-align: left;
   padding: calc(var(--token-component-datepicker-padding-xxxs, 4px) + 1px) var(--token-component-datepicker-padding-md, 16px) calc(var(--token-component-datepicker-padding-xxxs, 4px) - 1px);
-  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  font-size: var(--token-component-font-size-field-md, 16px);
   line-height: var(--token-primitive-typography-line-height-3, 20px);
   color: var(--token-component-datepicker-content-default, #464646);
   cursor: pointer;
@@ -92,10 +92,6 @@
   border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-datepicker-border-color, #e0e0e0);
 }
 
-.panel.positioned {
-  position: fixed;
-  margin-top: 0;
-}
 
 /* Header – full-width edge-to-edge */
 .header {
@@ -115,7 +111,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  border-radius: var(--token-component-radius-button-md);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -160,7 +156,7 @@
 
 .weekDay {
   text-align: center;
-  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  font-size: var(--token-component-font-size-field-md, 16px);
   font-weight: var(--token-primitive-typography-font-weight-bold, 700);
   line-height: var(--token-primitive-typography-line-height-3, 20px);
   color: var(--token-component-datepicker-content-default, #464646);
@@ -181,11 +177,11 @@
   align-items: center;
   justify-content: center;
   height: 40px;
-  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  font-size: var(--token-component-font-size-field-md, 16px);
   line-height: var(--token-primitive-typography-line-height-3, 20px);
   color: var(--token-component-calendar-day-content-default, #464646);
   background-color: var(--token-component-calendar-day-background-default, #ffffff);
-  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-sm);
   cursor: pointer;
   transition: all 0.2s ease;
   user-select: none;
@@ -251,7 +247,7 @@
   z-index: var(--token-component-datepicker-z-index, 1000);
   background-color: var(--token-primitive-color-white, #ffffff);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-datepicker-border-color, #e0e0e0);
-  border-radius: calc(var(--token-component-radius-field-sm, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-sm);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   font-family: var(--token-primitive-typography-font-family-sans);
   display: flex;
@@ -259,10 +255,6 @@
   overflow: clip;
 }
 
-.rangePanel.positioned {
-  position: fixed;
-  margin-top: 0;
-}
 
 .rangeCalendarLeft,
 .rangeCalendarRight {

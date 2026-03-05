@@ -184,8 +184,8 @@
 /* Error message */
 .errorMessage {
   font-family: var(--token-primitive-typography-font-family-sans);
-  font-size: var(--token-component-font-size-field-error);
-  line-height: var(--token-component-line-height-field-error);
+  font-size: var(--token-primitive-typography-font-size-3, 16px);
+  line-height: var(--token-primitive-typography-line-height-16, 24px);
   color: var(--token-component-field-content-error);
   display: block;
 }

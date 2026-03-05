@@ -104,7 +104,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 
@@ -141,7 +141,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
 }
 
 .closeAbsolute:hover {
@@ -180,7 +180,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 
@@ -229,7 +229,7 @@
   font-size: var(--token-component-drawer-title-size, 20px);
   font-weight: var(--token-primitive-typography-font-weight-bold, 700);
   line-height: 28px;
-  color: var(--token-component-drawer-title-color, rgba(0, 0, 0, 0.85));
+  color: var(--token-component-drawer-title-color, #161616);
   margin: 0;
   padding-top: 1px;
   min-width: 0;

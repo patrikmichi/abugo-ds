@@ -49,10 +49,10 @@ export const CustomFooter: Story = {
           title="Custom Footer"
           footer={
             <>
-              <Button variant="tertiary" appearance="outline" onClick={() => setOpen(false)}>
+              <Button variant="secondary" appearance="outline" size="sm" onClick={() => setOpen(false)}>
                 Skip
               </Button>
-              <Button variant="primary" appearance="filled" onClick={() => setOpen(false)}>
+              <Button variant="primary" appearance="filled" size="sm" onClick={() => setOpen(false)}>
                 Save
               </Button>
             </>
@@ -104,7 +104,7 @@ export const ConfirmLoading: Story = {
           onCancel={() => setOpen(false)}
           onOk={handleOk}
           title="Confirm Loading"
-          confirmLoading={loading}
+          loading={loading}
         >
           <p>Click OK to see the loading state on the button.</p>
         </Modal>
@@ -199,8 +199,8 @@ export const DangerDialog: Story = {
               Are you sure that you want to delete this item? This action cannot be reversed.
             </p>
             <div className={modalStyles.dialogButtons}>
-              <Button variant="danger" appearance="filled" fullWidth onClick={() => setOpen(false)}>Delete</Button>
-              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Keep</Button>
+              <Button variant="danger" appearance="filled" size="sm" fullWidth onClick={() => setOpen(false)}>Delete</Button>
+              <Button variant="secondary" appearance="outline" size="sm" fullWidth onClick={() => setOpen(false)}>Keep</Button>
             </div>
           </div>
         </Modal>
@@ -232,8 +232,8 @@ export const WarningDialog: Story = {
               Are you sure that you want to discard changes? This action cannot be reversed.
             </p>
             <div className={modalStyles.dialogButtons}>
-              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Keep changes</Button>
-              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Discard</Button>
+              <Button variant="primary" appearance="filled" size="sm" fullWidth onClick={() => setOpen(false)}>Keep changes</Button>
+              <Button variant="secondary" appearance="outline" size="sm" fullWidth onClick={() => setOpen(false)}>Discard</Button>
             </div>
           </div>
         </Modal>
@@ -265,8 +265,8 @@ export const InfoDialog: Story = {
               Lorem ipsum dolor sit amet consectetur. Leo sollicitudin quam pellentesque gravida accumsan pellentesque aliquam pellentesque.
             </p>
             <div className={modalStyles.dialogButtons}>
-              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Upgrade</Button>
-              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>No, thanks</Button>
+              <Button variant="primary" appearance="filled" size="sm" fullWidth onClick={() => setOpen(false)}>Upgrade</Button>
+              <Button variant="secondary" appearance="outline" size="sm" fullWidth onClick={() => setOpen(false)}>No, thanks</Button>
             </div>
           </div>
         </Modal>
@@ -298,8 +298,8 @@ export const SuccessDialog: Story = {
               Your changes have been saved successfully.
             </p>
             <div className={modalStyles.dialogButtons}>
-              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Continue</Button>
-              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Go back</Button>
+              <Button variant="primary" appearance="filled" size="sm" fullWidth onClick={() => setOpen(false)}>Continue</Button>
+              <Button variant="secondary" appearance="outline" size="sm" fullWidth onClick={() => setOpen(false)}>Go back</Button>
             </div>
           </div>
         </Modal>
@@ -331,8 +331,8 @@ export const ConfirmDialog: Story = {
               Are you sure you want to proceed with this action?
             </p>
             <div className={modalStyles.dialogButtons}>
-              <Button variant="primary" appearance="filled" fullWidth onClick={() => setOpen(false)}>Confirm</Button>
-              <Button variant="tertiary" appearance="outline" fullWidth onClick={() => setOpen(false)}>Cancel</Button>
+              <Button variant="primary" appearance="filled" size="sm" fullWidth onClick={() => setOpen(false)}>Confirm</Button>
+              <Button variant="secondary" appearance="outline" size="sm" fullWidth onClick={() => setOpen(false)}>Cancel</Button>
             </div>
           </div>
         </Modal>

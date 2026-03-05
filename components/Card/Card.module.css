@@ -5,7 +5,7 @@
   background-color: var(--token-component-card-background, #fff);
   color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
-  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-radius: var(--token-component-radius-card, 8px);
   font-family: var(--token-primitive-typography-font-family-sans);
   font-size: var(--token-component-font-size-card, 14px);
   line-height: var(--token-component-line-height-card, 1.5715);
@@ -32,7 +32,7 @@
 
 /* Inner type */
 .card.inner {
-  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-radius: var(--token-component-radius-card, 8px);
 }
 
 /* Size variants */
@@ -54,8 +54,8 @@
 .cover {
   width: 100%;
   overflow: hidden;
-  border-top-left-radius: calc(var(--token-component-radius-card, 8px) * 1px);
-  border-top-right-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-top-left-radius: var(--token-component-radius-card, 8px);
+  border-top-right-radius: var(--token-component-radius-card, 8px);
 }
 
 .cover img {
@@ -66,8 +66,8 @@
 }
 
 .cover:first-child {
-  border-top-left-radius: calc(var(--token-component-radius-card, 8px) * 1px);
-  border-top-right-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-top-left-radius: var(--token-component-radius-card, 8px);
+  border-top-right-radius: var(--token-component-radius-card, 8px);
 }
 
 /* Head (title and extra) */
@@ -159,7 +159,7 @@
 .grid {
   padding: var(--token-component-padding-block-card-grid, 24px);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
-  border-radius: calc(var(--token-component-radius-card, 8px) * 1px);
+  border-radius: var(--token-component-radius-card, 8px);
   transition: all 0.3s ease;
 }
 

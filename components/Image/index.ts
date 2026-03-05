@@ -1,7 +1,2 @@
-export {
-  Image,
-  ImagePreviewGroup,
-  type ImageProps,
-  type ImagePreviewProps,
-  type ImagePreviewGroupProps,
-} from './Image';
+export { Image, ImagePreviewGroup } from './Image';
+export type { ImageProps, ImagePreviewProps, ImagePreviewGroupProps } from './types';

@@ -1,14 +1,16 @@
-export {
-  Skeleton,
-  type SkeletonProps,
-  type SkeletonAvatarProps,
-  type SkeletonTitleProps,
-  type SkeletonParagraphProps,
-  type SkeletonButtonProps,
-  type SkeletonImageProps,
-  type SkeletonInputProps,
-  type SkeletonAvatarShape,
-  type SkeletonAvatarSize,
-  type SkeletonButtonShape,
-  type SkeletonButtonSize,
-} from './Skeleton';
+export { default as Skeleton } from './Skeleton';
+export type {
+  SkeletonProps,
+  SkeletonAvatarProps,
+  SkeletonTitleProps,
+  SkeletonParagraphProps,
+  SkeletonButtonProps,
+  SkeletonImageProps,
+  SkeletonInputProps,
+  SkeletonAvatarShape,
+  SkeletonAvatarSize,
+  SkeletonButtonShape,
+  SkeletonButtonSize,
+  SkeletonInputSize,
+  SkeletonComponent,
+} from './types';

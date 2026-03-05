@@ -30,6 +30,8 @@
   position: absolute;
   width: 100%;
   height: var(--slider-rail-h, 4px);
+  top: 50%;
+  transform: translateY(-50%);
   background-color: var(--token-component-slider-rail-background, #f5f5f5);
   border-radius: calc(var(--slider-rail-h, 4px) / 2);
   transition: background-color 0.3s ease;
@@ -51,6 +53,8 @@
 .track {
   position: absolute;
   height: var(--slider-rail-h, 4px);
+  top: 50%;
+  transform: translateY(-50%);
   background-color: var(--token-component-slider-track-background, #538bff);
   border-radius: calc(var(--slider-rail-h, 4px) / 2);
   transition: background-color 0.3s ease;
@@ -59,6 +63,7 @@
 .slider.vertical .track {
   width: var(--slider-rail-h, 4px);
   height: auto;
+  top: auto;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -71,37 +76,38 @@
 /* Handle (thumb) */
 .handle {
   position: absolute;
-  width: var(--token-component-slider-handle-size, 14px);
-  height: var(--token-component-slider-handle-size, 14px);
-  margin-top: calc((var(--slider-rail-h, 4px) - var(--token-component-slider-handle-size, 14px)) / 2);
-  margin-left: calc(var(--token-component-slider-handle-size, 14px) / -2);
+  width: var(--token-component-slider-handle-size, 16px);
+  height: var(--token-component-slider-handle-size, 16px);
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--token-component-slider-handle-background, #fff);
-  border: calc(var(--token-primitive-border-width-1, 2px) * 1px) solid var(--token-component-slider-handle-border, #538bff);
+  border: 2px solid var(--token-component-slider-handle-border, #538bff);
   border-radius: 50%;
   box-shadow: var(--token-component-slider-handle-shadow, 0 2px 4px rgba(0, 0, 0, 0.12));
   cursor: grab;
-  transition: transform 0.2s ease, border-color 0.3s ease;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   z-index: 1;
   outline: none;
 }
 
 .slider.vertical .handle {
-  margin-top: calc(var(--token-component-slider-handle-size, 14px) / -2);
-  margin-left: calc((var(--slider-rail-h, 4px) - var(--token-component-slider-handle-size, 14px)) / 2);
   top: auto;
-  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .handle:hover:not(.disabled) {
+  width: var(--token-component-slider-handle-size-hover, 20px);
+  height: var(--token-component-slider-handle-size-hover, 20px);
   border-color: var(--token-component-slider-handle-border-hover, #40a9ff);
-  transform: scale(1.1);
 }
 
 .handle:active:not(.disabled),
 .handle.active:not(.disabled) {
+  width: var(--token-component-slider-handle-size-hover, 20px);
+  height: var(--token-component-slider-handle-size-hover, 20px);
   cursor: grabbing;
   border-color: var(--token-component-slider-handle-border-active, #096dd9);
-  transform: scale(1.2);
   box-shadow: var(--token-component-slider-handle-shadow-active, 0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
@@ -154,7 +160,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .handle {
-    width: var(--token-component-slider-handle-size-mobile, 18px);
-    height: var(--token-component-slider-handle-size-mobile, 18px);
+    width: var(--token-component-slider-handle-size-mobile, 20px);
+    height: var(--token-component-slider-handle-size-mobile, 20px);
   }
 }

@@ -28,7 +28,7 @@
   min-width: var(--token-component-height-button-plain-md, 40px) !important;
   width: var(--token-component-height-button-plain-md, 40px) !important;
   height: var(--token-component-height-button-plain-md, 40px) !important;
-  border-radius: calc(var(--token-component-radius-button-md, 8) * 1px) !important;
+  border-radius: var(--token-component-radius-button-md, 8px) !important;
 }
 
 .sm .pageButton,
@@ -37,16 +37,16 @@
   min-width: var(--token-component-height-button-plain-sm, 32px) !important;
   width: var(--token-component-height-button-plain-sm, 32px) !important;
   height: var(--token-component-height-button-plain-sm, 32px) !important;
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px) !important;
+  border-radius: var(--token-component-radius-button-sm, 4px) !important;
 }
 
 /* Align Input radius and width */
 .lg .pageInput .input {
-  border-radius: calc(var(--token-component-radius-button-md, 8) * 1px) !important;
+  border-radius: var(--token-component-radius-button-md, 8px) !important;
 }
 
 .sm .pageInput .input {
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px) !important;
+  border-radius: var(--token-component-radius-button-sm, 4px) !important;
 }
 
 /* Active state for page buttons */
@@ -90,8 +90,6 @@
   width: 100% !important;
   min-width: 100% !important;
   max-width: 100% !important;
-  /* Visual compensation matching Input.tsx but using tokens */
-  padding-top: var(--token-component-pagination-visual-compensation-offset, 1px) !important;
 }
 
 /* Visual compensation for cell numbers */

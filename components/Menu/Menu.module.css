@@ -5,7 +5,7 @@
   margin: 0;
   padding: var(--token-component-padding-block-menu);
   background-color: var(--token-component-menu-background-default);
-  border-radius: calc(var(--token-component-radius-menu) * 1px);
+  border-radius: var(--token-component-radius-menu, 8px);
   box-shadow: var(--token-component-menu-shadow);
   font-family: var(--token-primitive-typography-font-family-sans);
   min-width: var(--token-component-menu-min-width);

@@ -1,37 +1,13 @@
-import React from 'react';
 import styles from './Divider.module.css';
 import { cn } from '@/lib/utils';
+import type { DividerProps } from './types';
 
-export type DividerType = 'horizontal' | 'vertical';
-export type DividerOrientation = 'left' | 'right' | 'center';
+const orientationClasses = {
+  left: styles.orientationLeft,
+  right: styles.orientationRight,
+  center: styles.orientationCenter,
+} as const;
 
-export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Divider type */
-  type?: DividerType;
-  /** Dashed style */
-  dashed?: boolean;
-  /** Text orientation */
-  orientation?: DividerOrientation;
-  /** Plain text style */
-  plain?: boolean;
-  /** Custom class name */
-  className?: string;
-  /** Children (text content) */
-  children?: React.ReactNode;
-}
-
-/**
- * Divider Component
- * 
- * Divider component. 
- * 
- * @example
- * ```tsx
- * <Divider />
- * <Divider type="vertical" />
- * <Divider dashed>Text</Divider>
- * ```
- */
 export function Divider({
   type = 'horizontal',
   dashed = false,
@@ -46,11 +22,7 @@ export function Divider({
   if (type === 'vertical') {
     return (
       <span
-        className={cn(
-          styles.divider,
-          styles.vertical,
-          className
-        )}
+        className={cn(styles.divider, styles.vertical, className)}
         role="separator"
         aria-orientation="vertical"
         {...props}
@@ -65,7 +37,7 @@ export function Divider({
         styles.horizontal,
         dashed && styles.dashed,
         hasText && styles.withText,
-        hasText && styles[`orientation${orientation.charAt(0).toUpperCase() + orientation.slice(1)}`],
+        hasText && orientationClasses[orientation],
         plain && styles.plain,
         className
       )}

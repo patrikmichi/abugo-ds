@@ -5,7 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--token-component-select-option-padding-y, 4px) var(--token-component-padding-x-field-md, 16px);
+  padding-top: var(--token-component-select-option-padding-y, 4px);
+  padding-bottom: var(--token-component-select-option-padding-y, 4px);
+  padding-left: var(--token-component-padding-x-field-md, 16px);
+  padding-right: var(--token-component-padding-x-field-md, 16px);
   font-size: var(--token-component-font-size-field-sm, 14px);
   line-height: var(--token-component-line-height-field-md, 22px);
   color: var(--token-component-select-row-content-default, rgba(0, 0, 0, 0.88));
@@ -59,7 +62,10 @@
 /* Size variants */
 .option.sm {
   min-height: var(--token-component-select-option-min-height, 40px);
-  padding: var(--token-component-select-option-padding-y, 4px) var(--token-component-padding-x-field-sm, 12px);
+  padding-top: var(--token-component-select-option-padding-y, 4px);
+  padding-bottom: var(--token-component-select-option-padding-y, 4px);
+  padding-left: var(--token-component-padding-x-field-sm, 12px);
+  padding-right: var(--token-component-padding-x-field-sm, 12px);
   font-size: var(--token-component-font-size-field-sm, 12px);
   line-height: calc(var(--token-component-select-option-min-height, 40px) - var(--token-component-select-option-padding-y, 4px) * 2);
 }
@@ -70,7 +76,10 @@
 
 .option.md {
   min-height: var(--token-component-select-option-min-height, 40px);
-  padding: var(--token-component-select-option-padding-y, 4px) var(--token-component-padding-x-field-md, 16px);
+  padding-top: var(--token-component-select-option-padding-y, 4px);
+  padding-bottom: var(--token-component-select-option-padding-y, 4px);
+  padding-left: var(--token-component-padding-x-field-md, 16px);
+  padding-right: var(--token-component-padding-x-field-md, 16px);
   font-size: var(--token-component-font-size-field-sm, 14px);
   line-height: calc(var(--token-component-select-option-min-height, 40px) - var(--token-component-select-option-padding-y, 4px) * 2);
 }
@@ -81,7 +90,10 @@
 
 .option.lg {
   min-height: var(--token-component-select-option-min-height, 40px);
-  padding: var(--token-component-select-option-padding-y, 4px) var(--token-component-padding-x-field-lg, 20px);
+  padding-top: var(--token-component-select-option-padding-y, 4px);
+  padding-bottom: var(--token-component-select-option-padding-y, 4px);
+  padding-left: var(--token-component-padding-x-field-lg, 20px);
+  padding-right: var(--token-component-padding-x-field-lg, 20px);
   font-size: var(--token-component-font-size-field-lg, 16px);
   line-height: calc(var(--token-component-select-option-min-height, 40px) - var(--token-component-select-option-padding-y, 4px) * 2);
 }

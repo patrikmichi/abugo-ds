@@ -1,63 +1,19 @@
-import React, { useState } from 'react';
-import styles from './Alert.module.css';
+import { useState } from 'react';
+
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/Button';
 
-export type AlertType = 'success' | 'info' | 'warning' | 'error';
-export type AlertSize = 'small' | 'large';
+import styles from './Alert.module.css';
+import type { IProps, AlertType } from './types';
 
-export interface AlertAction {
-  /** Button label */
-  label: React.ReactNode;
-  /** Click handler */
-  onClick?: () => void;
-  /** Button variant (default: secondary) */
-  variant?: 'primary' | 'secondary' | 'danger' | 'tertiary' | 'upgrade';
-  /** Button appearance (default: filled) */
-  appearance?: 'filled' | 'plain' | 'outline';
-}
+const ICON_MAP: Record<AlertType, string> = {
+  success: 'check_circle',
+  error: 'error',
+  warning: 'warning',
+  info: 'info',
+};
 
-export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
-  /** Type of alert */
-  type?: AlertType;
-  /** Size of alert */
-  size?: AlertSize;
-  /** Main message content */
-  message?: React.ReactNode;
-  /** Additional description content */
-  description?: React.ReactNode;
-  /** Whether to show close button */
-  closable?: boolean;
-  /** Callback when alert is closed */
-  onClose?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  /** Callback after close animation finishes */
-  afterClose?: () => void;
-  /** Whether to show icon */
-  showIcon?: boolean;
-  /** Custom icon */
-  icon?: React.ReactNode;
-  /** Action buttons — rendered as Button size="sm" */
-  actions?: AlertAction | AlertAction[];
-  /** @deprecated Use actions instead */
-  action?: React.ReactNode;
-  /** Children - alternative to message/description */
-  children?: React.ReactNode;
-}
-
-/**
- * Alert component — display important messages or notifications
- *
- * Layout matches Notification pattern:
- * - Header row: icon + message text
- * - Description below, indented to align with text
- * - Close button absolutely positioned
- *
- * Without description: message uses regular weight, close is vertically centered
- * With description: message becomes bold headline, close is top-aligned
- *
- * Size only affects padding (small: 12px, large: 20px)
- */
-export function Alert({
+const Alert = ({
   type = 'info',
   size = 'small',
   message,
@@ -72,7 +28,7 @@ export function Alert({
   className,
   children,
   ...props
-}: AlertProps) {
+}: IProps) => {
   const [closed, setClosed] = useState(false);
   const [closing, setClosing] = useState(false);
 
@@ -81,17 +37,7 @@ export function Alert({
   const getDefaultIcon = () => {
     if (icon) return icon;
 
-    const iconName =
-      type === 'success' ? 'check_circle' :
-      type === 'error' ? 'error' :
-      type === 'warning' ? 'warning' :
-      'info';
-
-    return (
-      <span className="material-symbols-outlined">
-        {iconName}
-      </span>
-    );
+    return <span className="material-symbols-outlined">{ICON_MAP[type]}</span>;
   };
 
   const handleClose = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -107,9 +53,7 @@ export function Alert({
 
   if (closed) return null;
 
-  const actionList = actions
-    ? Array.isArray(actions) ? actions : [actions]
-    : null;
+  const actionList = actions ? (Array.isArray(actions) ? actions : [actions]) : null;
 
   return (
     <div
@@ -128,16 +72,10 @@ export function Alert({
     >
       <div className={styles.wrapper}>
         <div className={styles.header}>
-          {showIcon && (
-            <span className={styles.icon}>
-              {getDefaultIcon()}
-            </span>
-          )}
+          {showIcon && <span className={styles.icon}>{getDefaultIcon()}</span>}
           <div className={styles.message}>{message}</div>
         </div>
-        {hasDescription && (
-          <div className={styles.description}>{description}</div>
-        )}
+        {hasDescription && <div className={styles.description}>{description}</div>}
         {actionList && (
           <div className={styles.actions}>
             {actionList.map((a, i) => (
@@ -153,22 +91,15 @@ export function Alert({
             ))}
           </div>
         )}
-        {!actionList && action && (
-          <div className={styles.actions}>{action}</div>
-        )}
+        {!actionList && action && <div className={styles.actions}>{action}</div>}
       </div>
       {closable && (
-        <button
-          type="button"
-          className={styles.close}
-          onClick={handleClose}
-          aria-label="Close"
-        >
-          <span className="material-symbols-outlined">
-            close
-          </span>
+        <button type="button" className={styles.close} onClick={handleClose} aria-label="Close">
+          <span className="material-symbols-outlined">close</span>
         </button>
       )}
     </div>
   );
-}
+};
+
+export default Alert;

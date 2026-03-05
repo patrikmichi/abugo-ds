@@ -1,118 +1,38 @@
 ---
 name: token-structure
-description: Design token structure, naming conventions, and architecture guidelines. Three-layer architecture (primitives, semantic, component), naming patterns, file organization.
+description: Design token architecture, naming, and reference rules. Three-layer architecture (primitives, semantic, component).
 user-invocable: false
 ---
 
-# Design Token Structure and Naming Conventions
+# Design Token Architecture
 
-## Token Architecture
+**Related skills:**
+- **component-tokens** — property-first paths and shared vs component-only rules
+- **icon-tokens** — icon-specific naming patterns
 
-Design tokens follow a three-layer architecture:
+## Three-Layer System
+1. **Primitives**: Raw hex/spacing values. `tokens/system/primitives/**`.
+2. **Semantic Tokens**: Contextual meaning. `tokens/system/semanticTokens/**`.
+3. **Component Tokens**: Component-specific values. `tokens/system/componentTokens/**`.
 
-1. **Primitives** - Raw values. Source: `tokens/system/primitives/**`. Output: `tokens/output/primitives.json`.
-2. **Semantic Tokens** - Primitives paired with semantic meaning. Source: `tokens/system/semanticTokens/**`. Output: `tokens/output/semanticTokens.json`.
-3. **Component Tokens** - Semantic tokens applied to components. Source: `tokens/system/componentTokens/{shared,components}/**`. Output: `tokens/output/componentTokens.json`.
+## Layering & Reference Rules
+- **References**: Use `{token.path}` syntax.
+- **Hierarchy**: Component -> Semantic -> Primitive. (Component tokens should never reference primitives directly, except for `universal.transparent`).
+- **Collection Name**: Use `$collectionName` ("primitives" or "semanticTokens") to indicate the source of the reference.
 
-### Layering Rules
-
-- Component tokens **MUST** reference semantic tokens (except `universal.transparent`)
-- Semantic tokens **MUST** reference primitives
-- Never reference primitives directly from component tokens
-- Never create circular references
-
-## Naming Conventions
-
-### Token Names
-
-- Use **kebab-case** for all token names (W3C DTCG compliance)
-- Typography properties use **camelCase** (W3C DTCG standard)
-- Examples: `content-passive-neutral-default`, `typography-fontSize-1`
-
-### Size Abbreviations
-
-- `xs`, `sm`, `md`, `lg`, `xl`, `xxl`
-
-### Semantic Token Pattern
-
-`[property]-[participation]-[intent]-[state]`
-
-- **Property**: `content`, `background`, `border`
-- **Participation**: `passive`, `active`
-- **Intent**: `neutral`, `accent`, `danger`, `success`, `warning`, `info`, `upgrade`
-- **State**: `default`, `hover`, `pressed`, `disabled`, `selected`
-
-## Primitives Structure
-
-All primitive categories are **flattened** (no category wrappers):
-
-- Colors: `yellow.100`, `grey.000`, `brand.500`
-- Spacing: `spacing-1`, `spacing-2`
-- Border Radius: `radius-0`, `radius-1`
-- Border Width: `border-width-0`, `border-width-1`
-- Shadows: `shadow-xs`, `shadow-sm`
-- Animation: `duration-fast`, `easing-ease-out`
-- Sizing: `size-1`, `size-2`
-
-## Semantic Tokens Structure
-
-Nested categories:
-- `radius.{none, xs, sm, md, lg, xl, xxl, full}`
-- `icon.{xxs, xs, sm, md, lg, xl, xxl, huge}`
-- `gap.{xxs, xs, s, m, l, xl, xxl}`
-- `padding.{xxxs, xxs, xs, s, m, l, xl, xxl, xxxl, xxxxl}`
-- `control.height.{xxxs, xxs, xs, sm, md, lg}`
-- `typography.headline-size.{h1-h6}`, `typography.body-size.{xs, sm, md, lg}`
-
-Color tokens use flat structure: `content-passive-neutral-default`
-
-## Component Tokens Structure
-
-Component tokens use nested structures (`{component}.{variant}.{property}.{state}`). Typography, padding, gap, radius, icon sizes, and height live in **shared** files (property-first); colors, shadows, and component-only spacing live in **component** files.
-
-**For detailed component token rules, see the component-tokens skill.**
-
-## Token Properties
-
-### Required Properties
-
-- `$type` - Token type (color, dimension, spacing, etc.)
-- `$collectionName` - Source collection ("primitives" or "semanticTokens")
-- `$value` - Token value or reference
-- `$description` - Clear description of token purpose
-
-### $type Values
-
-- Colors: `color`
-- Spacing: `spacing`
-- Border Radius: `borderRadius`
-- Border Width: `borderWidth`
-- Font Sizes: `fontSizes`
-- Line Heights: `lineHeights`
-- Shadows: `boxShadow`
-- Dimensions: `dimension`
-- Sizing: `sizing`
-- Numbers: `number`
-- Strings: `string`
+## CSS Generation (pnpm)
+- `pnpm build:tokens` — Merges all source files into unified JSON outputs in `tokens/output/`.
+- `pnpm build:css-variables` — Generates `styles/tokens.css` with tiered variables:
+  - `--token-primitive-*`
+  - `--token-semantic-*` -> references primitive variable.
+  - `--token-component-*` -> references semantic variable.
 
 ## File Organization
+- `tokens/system/primitives/**` - Source primitives.
+- `tokens/system/semanticTokens/**` - Source semantic tokens.
+- `tokens/system/componentTokens/shared/**` - Shared component properties (property-first paths).
+- `tokens/system/componentTokens/components/**` - Component-specific tokens.
 
-- `tokens/system/primitives/**` - Source primitives
-- `tokens/system/semanticTokens/**` - Source semantic tokens
-- `tokens/system/componentTokens/shared/**` - Shared component props
-- `tokens/system/componentTokens/components/**` - Component-specific tokens
-- `tokens/output/*.json` - Merged output
-
-**Build:** `npm run build:tokens` (merge) -> `npm run build:css-variables` (generates `styles/tokens.css`).
-
-## CSS Variable Generation
-
-- CSS var names: full path with segments joined by `-` and normalized to kebab-case
-- Example: `upload.file-item.background.error` -> `--token-component-upload-file-item-background-error`
-- Run `scripts/diagnose-missing-component-vars.mjs` after builds to verify
-
-## Themes
-
-- **Reservio** - Baseline theme
-- **Survio** - Extended theme
-- Both use the same token structure, brand-specific values handled at primitive level
+## Rules
+- All design tokens must be in **kebab-case** (except typography properties which use **camelCase** for W3C compliance).
+- Every user-facing CSS selection must use a token; no hardcoded values in `*.module.css` files.

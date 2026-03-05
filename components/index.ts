@@ -17,14 +17,9 @@ export {
   type ActionMenuPlacement,
 } from './ActionMenu';
 export { Alert, type AlertProps, type AlertType, type AlertSize, type AlertAction } from './Alert';
-export {
-  Anchor,
-  AnchorLink,
-  type AnchorProps,
-  type AnchorLinkProps,
-  type AnchorLinkItem,
-} from './Anchor';
+export { Anchor, type AnchorProps, type AnchorLinkItem } from './Anchor';
 export { Avatar, AvatarGroup, type AvatarProps, type AvatarGroupProps, type AvatarSize, type AvatarShape } from './Avatar';
+export { AvatarUpload, type AvatarUploadProps } from './AvatarUpload';
 export { Badge, type BadgeProps, type BadgeStatus, type BadgeSize } from './Badge';
 export {
   AutoComplete,
@@ -34,7 +29,7 @@ export {
   type AutoCompleteDataSource,
 } from './AutoComplete';
 export {
-  Breadcrumbs,
+  default as Breadcrumbs,
   BreadcrumbItem,
   type BreadcrumbsProps,
   type BreadcrumbItemProps,
@@ -97,10 +92,9 @@ export { PhoneNumberField, type PhoneNumberFieldProps, type CountryCode } from '
 export { DurationPicker, type DurationPickerProps } from './DurationPicker';
 export {
   TimePicker,
-  Timepicker, // Legacy export
   type TimePickerProps,
-  type TimepickerProps, // Legacy export
   type TimePickerValue,
+  type TimePickerSize,
 } from './Timepicker';
 export { Link, type LinkProps } from './Link';
 export {
@@ -129,18 +123,14 @@ export { Progress, type ProgressProps } from './Progress';
 export {
   Radio,
   RadioGroup,
-  RadioButton,
   type RadioProps,
   type RadioGroupProps,
-  type RadioButtonProps,
   type RadioChangeEvent,
   type RadioOption,
-  type RadioSize,
-  type RadioButtonStyle,
 } from './Radio';
 export { Rate, type RateProps } from './Rate';
 export { Rating, type RatingProps } from './Rating';
-export { Select, type SelectProps, type SelectMode, type SelectOption } from './Select/Select';
+export { Select, type SelectProps, type SelectMode, type SelectOptionType as SelectOption } from './Select';
 export {
   Segmented,
   type SegmentedProps,
@@ -171,22 +161,25 @@ export {
 } from './Slider';
 export {
   Stepper,
-  StepperStep,
+  Step,
+  StepperStep, // Backwards-compatible alias
   type StepperProps,
-  type StepperStepProps,
+  type StepProps,
+  type StepItem,
   type StepperDirection,
   type StepperSize,
   type StepperStatus,
+  type StepperLabelPlacement,
+  type ProgressDotRender,
+  // Backwards-compatible type alias
+  type StepperStepProps,
 } from './Stepper';
 export {
   Tabs,
   TabPane,
   type TabsProps,
   type TabPaneProps,
-  type TabsType,
-  type TabsSize,
-  type TabsPosition,
-  type TabsItem,
+  type TabItem,
 } from './Tabs';
 export { Textarea, type TextareaProps } from './Textarea';
 export { Toast, ToastProvider, type ToastProps, type ToastType } from './Toast';
@@ -194,9 +187,9 @@ export { Toggle, type ToggleProps } from './Toggle';
 export { Tooltip, type TooltipProps, type TooltipPlacement, type TooltipTrigger } from './Tooltip';
 export {
   Upload,
-  UploadDragger,
   type UploadProps,
   type UploadFile,
   type UploadFileStatus,
   type UploadListType,
+  type UploadListConfig,
 } from './Upload';

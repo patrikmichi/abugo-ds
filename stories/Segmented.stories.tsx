@@ -35,7 +35,7 @@ export const Default: Story = {
 
 export const Controlled: Story = {
   render: () => {
-    const [value, setValue] = useState('Option 1');
+    const [value, setValue] = useState<string | number>('Option 1');
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
         <Segmented
@@ -87,7 +87,7 @@ export const Block: Story = {
 
 export const WithIcons: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start', alignItems: 'flex-start' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
       <Segmented
         options={[
           {
@@ -134,7 +134,7 @@ export const WithIcons: Story = {
 
 export const IconOnly: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start', alignItems: 'flex-start' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', alignItems: 'flex-start' }}>
       <Segmented
         options={[
           {

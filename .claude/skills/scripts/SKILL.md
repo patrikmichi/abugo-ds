@@ -1,33 +1,27 @@
 ---
 name: scripts
-description: Rules for creating and managing token and build scripts. Covers long-term scripts, helper scripts, build order, and script organization.
+description: Rules for managing token and build scripts. Standardized on pnpm.
 user-invocable: false
 ---
 
 # Script Management Rules
 
-## Long-Term Scripts
+## Build Scripts
 
-### tokens/scripts/ (build and tokens)
+Use **pnpm** for all script execution.
 
-- `merge-tokens.ts` - Merges `tokens/system/*` into `tokens/output/*.json`. Run first (`npm run build:tokens`) before `build:css-variables`.
-- `generate-css-variables.ts` - Generates `styles/tokens.css`. Prefers `tokens/output/*.json` when present; otherwise uses `load-tokens.ts`. Run `npm run build:css-variables`.
-- `load-tokens.ts` - Loads tokens from `tokens/system/` for programmatic use (e.g. generator fallback, tooling).
-- `split-tokens.js` - Splits main JSON files into organized subfolders.
-- `generate-docs.js` - Generates documentation from token files.
-- `validate-tokens.ts`, `validateFigmaTokens.ts` - Token validation.
-- `generate-components.ts`, `generate-token-types.ts` - Codegen for components and types.
+- `pnpm build:tokens` - Merges tokens from `tokens/system/*` into `tokens/output/*.json`.
+- `pnpm build:css-variables` - Generates CSS variables from merged outputs.
 
-**Never delete these** unless replaced by improved versions.
+## Cleanup and Diagnostics
 
-### scripts/ (repo root, analysis and migrations)
+- `pnpm run diagnose` - Verify token consistency.
+- `pnpm run cleanup` - Remove orphaned/deprecated files.
 
 - `analyze-component-tokens.js` - Counts leaf tokens, unique CSS vars, duplicates, value reuse. Run on `tokens/output/componentTokens.json`. `node scripts/analyze-component-tokens.js`
 - `diagnose-missing-component-vars.mjs` - Diffs `tokens/output/componentTokens.json` vs `styles/tokens.css` to find missing or duplicate `--token-component-*`. `node scripts/diagnose-missing-component-vars.mjs`. Prereq: `build:tokens` and `build:css-variables`.
 - `move-to-shared-tokens.js` - Moves typography, padding, gap, radius, height from `tokens/system/componentTokens/components/*.json` into `tokens/system/componentTokens/shared/*.json` and writes `token-component-var-map.json` (old -> new `--token-component-*`). `node scripts/move-to-shared-tokens.js`
-- `apply-token-var-map.js` - Applies renames from `token-component-var-map.json` to `components/**` and `styles/**` (.css, .ts, .tsx). Run after `move-to-shared-tokens.js`. `node scripts/apply-token-var-map.js`
-
-**Build order:** `npm run build:tokens` -> `npm run build:css-variables`. The generator uses `tokens/output/` when it exists so counts stay in sync with `merge-tokens` and `analyze-component-tokens`.
+**Build order:** `pnpm build:tokens` -> `pnpm build:css-variables`. The generator uses `tokens/output/` when it exists so counts stay in sync with `merge-tokens` and `analyze-component-tokens`.
 
 ## Helper Scripts
 

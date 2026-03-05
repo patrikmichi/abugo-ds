@@ -1,7 +1,7 @@
-export {
-  Segmented,
-  type SegmentedProps,
-  type SegmentedSize,
-  type SegmentedOption,
-  type SegmentedOptionType,
-} from './Segmented';
+export { default as Segmented } from './Segmented';
+export type {
+  IProps as SegmentedProps,
+  SegmentedSize,
+  SegmentedOption,
+  SegmentedOptionType,
+} from './types';

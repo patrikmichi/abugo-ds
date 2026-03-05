@@ -1,42 +1,11 @@
 import React, { useCallback } from 'react';
-import styles from './ChipCard.module.css';
+
 import { cn } from '@/lib/utils';
 
-export interface ChipCardProps extends Omit<React.HTMLAttributes<HTMLElement>, 'children'> {
-  /** The headline text */
-  headline: React.ReactNode;
-  /** Optional subtext displayed below the headline */
-  subtext?: React.ReactNode;
-  /** If true, the chip card is in selected state */
-  selected?: boolean;
-  /** If true, the component is disabled */
-  disabled?: boolean;
-  /** The component used for the root node */
-  component?: React.ElementType;
-}
+import styles from './ChipCard.module.css';
+import type { IProps } from './types';
 
-/**
- * ChipCard Component
- *
- * A selectable card-like chip with a headline and optional subtext.
- * Supports default, hover, selected, and disabled states.
- *
- * @example
- * ```tsx
- * // Basic chip card
- * <ChipCard headline="Option A" />
- *
- * // With subtext
- * <ChipCard headline="Option A" subtext="Description text" />
- *
- * // Selected state
- * <ChipCard headline="Option A" subtext="Description" selected />
- *
- * // Disabled state
- * <ChipCard headline="Option A" subtext="Description" disabled />
- * ```
- */
-export function ChipCard({
+const ChipCard = ({
   headline,
   subtext,
   selected = false,
@@ -46,14 +15,13 @@ export function ChipCard({
   onClick,
   onKeyDown,
   ...props
-}: ChipCardProps) {
+}: IProps) => {
   const RootComponent = component || 'button';
 
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
-      if (!disabled && onClick) {
-        onClick(e);
-      }
+      if (disabled || !onClick) return;
+      onClick(e);
     },
     [disabled, onClick]
   );
@@ -62,7 +30,7 @@ export function ChipCard({
     (e: React.KeyboardEvent<HTMLElement>) => {
       if ((e.key === 'Enter' || e.key === ' ') && !disabled) {
         e.preventDefault();
-        onClick?.(e as any);
+        onClick?.(e as unknown as React.MouseEvent<HTMLElement>);
         return;
       }
       onKeyDown?.(e);
@@ -92,4 +60,6 @@ export function ChipCard({
       {subtext && <span className={styles.subtext}>{subtext}</span>}
     </RootComponent>
   );
-}
+};
+
+export default ChipCard;

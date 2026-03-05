@@ -1,38 +1,45 @@
 /* ColorPicker component styles using design tokens */
 
-.colorPickerWrapper {
+/* ==========================================================================
+   Container
+   ========================================================================== */
+
+.colorPicker {
   position: relative;
   display: inline-flex;
   align-items: center;
   font-family: var(--token-primitive-typography-font-family-sans);
 }
 
-/* ─── Trigger ─────────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Trigger
+   ========================================================================== */
 
 .trigger {
   display: inline-flex;
   align-items: center;
-  gap: var(--token-component-colorpicker-icon-gap, 8px);
+  gap: var(--token-component-colorpicker-icon-gap);
   cursor: pointer;
-  padding: var(--token-component-padding-block-colorpicker-trigger, 4px);
-  border-radius: calc(var(--token-component-radius-colorpicker-trigger, 6) * 1px);
-  border: 1px solid var(--token-component-colorpicker-panel-border, #d9d9d9);
-  background: var(--token-component-colorpicker-panel-background, #fff);
+  padding: 4px;
+  border-radius: var(--token-component-radius-colorpicker-trigger);
+  border: 1px solid var(--token-component-colorpicker-trigger-border);
+  background: var(--token-component-colorpicker-trigger-background);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .trigger:hover {
-  border-color: var(--token-component-colorpicker-preset-color-border-hover, #4096ff);
+  border-color: var(--token-component-colorpicker-trigger-border-hover);
 }
 
-.trigger.triggerActive {
-  border-color: var(--token-component-colorpicker-preset-color-border-hover, #4096ff);
-  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+.trigger.active {
+  border-color: var(--token-component-colorpicker-trigger-border-active);
+  box-shadow: 0 0 0 2px var(--token-primitive-blue-opacity-10, rgba(86, 144, 245, 0.1));
 }
 
 .trigger.disabled {
   cursor: not-allowed;
   opacity: 0.5;
+  pointer-events: none;
 }
 
 /* Size variants */
@@ -50,7 +57,7 @@
 }
 
 .trigger.lg {
-  padding: 5px;
+  padding: 6px;
 }
 
 .trigger.lg .colorBlock {
@@ -58,23 +65,25 @@
   height: 28px;
 }
 
-/* ─── Color block (trigger swatch) ────────────────────────────────────────── */
+/* ==========================================================================
+   Color Block (trigger swatch)
+   ========================================================================== */
 
 .colorBlock {
-  width: var(--token-component-colorpicker-block-width, 24px);
-  height: var(--token-component-colorpicker-block-height, 24px);
-  border-radius: calc(var(--token-component-radius-colorpicker-block, 4) * 1px);
+  width: var(--token-component-colorpicker-block-width);
+  height: var(--token-component-colorpicker-block-height);
+  border-radius: var(--token-component-colorpicker-block-radius);
   position: relative;
   overflow: hidden;
-  /* Checkerboard pattern for alpha */
+  flex-shrink: 0;
+  /* Checkerboard pattern for alpha transparency */
   background-image:
-    linear-gradient(45deg, #eee 25%, transparent 25%),
-    linear-gradient(-45deg, #eee 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #eee 75%),
-    linear-gradient(-45deg, transparent 75%, #eee 75%);
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
   background-size: 8px 8px;
   background-position: 0 0, 0 4px, 4px -4px, -4px 0;
-  flex-shrink: 0;
 }
 
 .colorBlockInner {
@@ -83,55 +92,43 @@
   border-radius: inherit;
 }
 
-.emptyIcon {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: var(--token-component-colorpicker-text-color, #8c8c8c);
-}
+/* ==========================================================================
+   Color Text
+   ========================================================================== */
 
-/* ─── Text ────────────────────────────────────────────────────────────────── */
-
-.text {
-  font-size: var(--token-component-colorpicker-text-font-size, 14px);
-  color: var(--token-component-colorpicker-text-color, #262626);
+.colorText {
+  font-size: var(--token-component-colorpicker-text-font-size);
+  color: var(--token-component-colorpicker-text-color);
   font-family: var(--token-primitive-typography-font-family-sans);
   white-space: nowrap;
 }
 
-.clearIcon {
-  font-size: 14px;
-  color: var(--token-component-colorpicker-text-color, #8c8c8c);
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.clearIcon:hover {
-  color: var(--token-component-colorpicker-preset-color-border-hover, #4096ff);
-}
-
-/* ─── Panel ───────────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Panel (dropdown)
+   ========================================================================== */
 
 .panel {
-  z-index: var(--token-component-colorpicker-panel-z-index, 1050);
-  width: var(--token-component-colorpicker-panel-width, 280px);
-  background-color: var(--token-component-colorpicker-panel-background, #fff);
-  border-radius: calc(var(--token-component-radius-colorpicker-panel, 8) * 1px);
-  box-shadow: var(--token-component-colorpicker-panel-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
-  padding: var(--token-component-padding-block-colorpicker-panel, 12px);
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: var(--token-component-colorpicker-panel-z-index);
+  width: var(--token-component-colorpicker-panel-width);
+  background-color: var(--token-component-colorpicker-panel-background);
+  border-radius: var(--token-component-radius-colorpicker-panel);
+  box-shadow: var(--token-primitive-shadow-3-down, 0 8px 16px 0 rgba(0, 0, 0, 0.12));
+  padding: 12px;
   font-family: var(--token-primitive-typography-font-family-sans);
 }
 
-/* ─── Saturation panel ────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Saturation Panel
+   ========================================================================== */
 
 .saturation {
   position: relative;
   width: 100%;
-  height: var(--token-component-colorpicker-saturation-height, 160px);
-  border-radius: calc(var(--token-component-radius-colorpicker-saturation, 4) * 1px);
+  height: 160px;
+  border-radius: calc(var(--token-primitive-radius-1, 4) * 1px);
   cursor: crosshair;
   overflow: hidden;
   margin-bottom: 12px;
@@ -141,20 +138,20 @@
 .saturationWhite {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, #fff, transparent);
+  background: linear-gradient(to right, #ffffff, transparent);
 }
 
 .saturationBlack {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent, #000);
+  background: linear-gradient(to bottom, transparent, #000000);
 }
 
 .saturationPointer {
   position: absolute;
-  width: var(--token-component-colorpicker-pointer-size, 12px);
-  height: var(--token-component-colorpicker-pointer-size, 12px);
-  border: 2px solid #fff;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 1px 1px rgba(0, 0, 0, 0.3);
   transform: translate(-50%, -50%);
@@ -162,7 +159,9 @@
   z-index: 1;
 }
 
-/* ─── Sliders section ─────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Sliders Section
+   ========================================================================== */
 
 .sliders {
   display: flex;
@@ -171,7 +170,7 @@
   margin-bottom: 12px;
 }
 
-.sliderPreview {
+.colorPreview {
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -180,15 +179,15 @@
   position: relative;
   /* Checkerboard for alpha */
   background-image:
-    linear-gradient(45deg, #eee 25%, transparent 25%),
-    linear-gradient(-45deg, #eee 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #eee 75%),
-    linear-gradient(-45deg, transparent 75%, #eee 75%);
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
   background-size: 8px 8px;
   background-position: 0 0, 0 4px, 4px -4px, -4px 0;
 }
 
-.sliderPreviewColor {
+.colorPreviewInner {
   position: absolute;
   inset: 0;
   border-radius: inherit;
@@ -201,12 +200,14 @@
   gap: 8px;
 }
 
-/* ─── Hue slider ──────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Hue Slider
+   ========================================================================== */
 
 .hueSlider {
   position: relative;
   width: 100%;
-  height: var(--token-component-colorpicker-hue-height, 10px);
+  height: 10px;
   border-radius: 5px;
   background: linear-gradient(to right,
     #ff0000 0%,
@@ -221,78 +222,99 @@
   user-select: none;
 }
 
-/* ─── Alpha slider ────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Alpha Slider
+   ========================================================================== */
 
 .alphaSlider {
   position: relative;
   width: 100%;
-  height: var(--token-component-colorpicker-hue-height, 10px);
+  height: 10px;
   border-radius: 5px;
   cursor: pointer;
   user-select: none;
   /* Checkerboard background */
   background-image:
-    linear-gradient(45deg, #eee 25%, transparent 25%),
-    linear-gradient(-45deg, #eee 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #eee 75%),
-    linear-gradient(-45deg, transparent 75%, #eee 75%);
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
   background-size: 8px 8px;
   background-position: 0 0, 0 4px, 4px -4px, -4px 0;
 }
 
-.alphaSliderGradient {
+.alphaGradient {
   position: absolute;
   inset: 0;
   border-radius: inherit;
 }
 
-/* ─── Slider handle ───────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Slider Handle
+   ========================================================================== */
 
 .sliderHandle {
   position: absolute;
   top: 50%;
-  width: var(--token-component-colorpicker-slider-thumb-size, 14px);
-  height: var(--token-component-colorpicker-slider-thumb-size, 14px);
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
 
-/* ─── Color inputs section ────────────────────────────────────────────────── */
+/* ==========================================================================
+   Color Inputs
+   ========================================================================== */
 
-.colorInputs {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+.inputs {
   margin-bottom: 12px;
+  overflow: visible;
+  position: relative;
 }
 
-.formatSwitch {
+.inputRow {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  margin-top: 2px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: var(--token-component-colorpicker-text-color, #8c8c8c);
-  border-radius: 4px;
-  transition: color 0.2s, background-color 0.2s;
+  gap: 8px;
+}
+
+.formatSelect {
   flex-shrink: 0;
+  width: 72px;
+  position: relative;
 }
 
-.formatSwitch:hover {
-  color: var(--token-component-colorpicker-preset-color-border-hover, #4096ff);
-  background-color: var(--token-component-colorpicker-trigger-background-hover, rgba(0, 0, 0, 0.04));
+.nativeSelect {
+  appearance: none;
+  width: 100%;
+  height: var(--token-component-height-field-sm);
+  padding: 0 24px 0 8px;
+  border: 1px solid var(--token-component-field-control-border-default);
+  border-radius: var(--token-component-radius-field-sm);
+  font-size: var(--token-component-font-size-field-sm, 14px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  color: var(--token-component-field-content-value);
+  background: var(--token-component-field-control-background-default);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
-.formatSwitch .material-symbols-outlined {
+.nativeSelect:focus {
+  border-color: var(--token-primitive-brand-700);
+}
+
+.selectIcon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 18px;
+  color: var(--token-primitive-grey-500);
+  pointer-events: none;
 }
 
 .inputGroup {
@@ -311,46 +333,33 @@
 
 .inputWrapper.inputSmall {
   flex: 0 0 48px;
+  max-width: 48px;
 }
 
-.input {
+.inputWrapper.inputAlpha {
+  flex: 0 0 72px;
+  min-width: 72px;
+}
+
+.colorInput {
   width: 100%;
-  height: 24px;
-  padding: 0 4px;
-  border: 1px solid var(--token-component-colorpicker-panel-border, #d9d9d9);
-  border-radius: 4px;
-  font-size: 12px;
-  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+.colorInput input {
   text-align: center;
-  color: var(--token-component-colorpicker-text-color, #262626);
-  background: var(--token-component-colorpicker-panel-background, #fff);
-  outline: none;
-  transition: border-color 0.2s;
-  box-sizing: border-box;
-  -moz-appearance: textfield;
 }
 
-.input::-webkit-inner-spin-button,
-.input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Reduce suffix padding for compact layout */
+.inputAlpha .colorInput input {
+  padding-inline-end: 24px;
 }
 
-.input:focus {
-  border-color: var(--token-component-colorpicker-preset-color-border-hover, #4096ff);
-}
-
-.inputLabel {
-  font-size: 11px;
-  color: var(--token-component-colorpicker-text-color, #8c8c8c);
-  margin-top: 2px;
-  user-select: none;
-}
-
-/* ─── Presets ─────────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Presets
+   ========================================================================== */
 
 .presets {
-  border-top: 1px solid var(--token-component-colorpicker-presets-border, #f0f0f0);
+  border-top: 1px solid var(--token-component-colorpicker-presets-border);
   padding-top: 12px;
 }
 
@@ -368,20 +377,20 @@
   justify-content: space-between;
   cursor: pointer;
   padding: 2px 0;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   user-select: none;
 }
 
 .presetLabel {
-  font-size: 12px;
-  color: var(--token-component-colorpicker-preset-label-color, #8c8c8c);
+  font-size: var(--token-primitive-typography-font-size-1);
+  color: var(--token-component-colorpicker-preset-label-color);
   font-family: var(--token-primitive-typography-font-family-sans);
 }
 
 .presetChevron {
   font-size: 16px;
-  color: var(--token-component-colorpicker-preset-label-color, #8c8c8c);
-  transition: transform 0.2s;
+  color: var(--token-component-colorpicker-preset-label-color);
+  transition: transform 0.2s ease;
   transform: rotate(-90deg);
 }
 
@@ -392,68 +401,39 @@
 .presetColors {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--token-component-colorpicker-preset-color-gap, 6px);
+  gap: var(--token-component-colorpicker-preset-color-gap);
 }
 
 .presetColor {
-  width: var(--token-component-colorpicker-preset-swatch-size, 20px);
-  height: var(--token-component-colorpicker-preset-swatch-size, 20px);
-  border-radius: 4px;
+  width: var(--token-component-colorpicker-preset-swatch-size);
+  height: var(--token-component-colorpicker-preset-swatch-size);
+  border-radius: var(--token-component-radius-colorpicker-preset-swatch);
   cursor: pointer;
-  border: 1px solid var(--token-component-colorpicker-preset-swatch-border, rgba(0, 0, 0, 0.06));
+  border: 1px solid rgba(0, 0, 0, 0.06);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-sizing: border-box;
 }
 
 .presetColor:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-hover, rgba(0, 0, 0, 0.15));
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
-.presetColorSelected {
-  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-selected, #4096ff);
+.presetColorActive {
+  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-selected);
 }
 
-.presetColorSelected:hover {
-  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-selected, #4096ff);
+.presetColorActive:hover {
+  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-selected);
 }
 
-/* ─── Clear button ────────────────────────────────────────────────────────── */
-
-.clearWrapper {
-  border-top: 1px solid var(--token-component-colorpicker-presets-border, #f0f0f0);
-  padding-top: 8px;
-}
-
-.clearBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 8px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 12px;
-  font-family: var(--token-primitive-typography-font-family-sans);
-  color: var(--token-component-colorpicker-text-color, #8c8c8c);
-  border-radius: 4px;
-  transition: color 0.2s, background-color 0.2s;
-}
-
-.clearBtn:hover {
-  color: #ff4d4f;
-  background-color: rgba(255, 77, 79, 0.06);
-}
-
-.clearBtn .material-symbols-outlined {
-  font-size: 16px;
-}
-
-/* ─── Responsive ──────────────────────────────────────────────────────────── */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
 
 @media (max-width: 768px) {
   .panel {
     width: calc(100vw - 32px);
-    max-width: var(--token-component-colorpicker-panel-width, 280px);
+    max-width: 280px;
   }
 }

@@ -1733,7 +1733,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border.width.1}",
+    "$value": "{border-width-1}",
     "$description": "Width token for thin intent.",
     "$extensions": {
       "design-tokens": {
@@ -1758,7 +1758,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border.width.2}",
+    "$value": "{border-width-2}",
     "$description": "Width token for thicker intent.",
     "$extensions": {
       "design-tokens": {
@@ -1783,7 +1783,7 @@
     "$type": "borderWidth",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{border.width.3}",
+    "$value": "{border-width-3}",
     "$description": "Width token for thick intent.",
     "$extensions": {
       "design-tokens": {
@@ -2016,7 +2016,7 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{brand.500}",
+    "$value": "{brand.700}",
     "$description": "Active border color for accent intent (default). Use for accent-colored interactive elements.",
     "$extensions": {
       "design-tokens": {
@@ -2041,7 +2041,7 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{brand.600}",
+    "$value": "{brand.800}",
     "$description": "Active border color for accent intent (hover). Use for accent-colored interactive elements.",
     "$extensions": {
       "design-tokens": {
@@ -2066,7 +2066,7 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{brand.700}",
+    "$value": "{brand.600}",
     "$description": "Active border color for accent intent (pressed). Use for accent-colored interactive elements.",
     "$extensions": {
       "design-tokens": {
@@ -2116,7 +2116,7 @@
     "$type": "color",
     "$libraryName": "",
     "$collectionName": "primitives",
-    "$value": "{brand.500}",
+    "$value": "{brand.700}",
     "$description": "Active border color for accent intent (selected). Use for accent-colored interactive elements.",
     "$extensions": {
       "design-tokens": {

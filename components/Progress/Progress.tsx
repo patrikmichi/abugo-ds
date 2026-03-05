@@ -1,13 +1,6 @@
-import React from 'react';
 import styles from './Progress.module.css';
 import { cn } from '@/lib/utils';
-
-export interface ProgressProps {
-  value: number;
-  max?: number;
-  variant?: 'default' | 'success' | 'error';
-  className?: string;
-}
+import type { ProgressProps } from './types';
 
 export function Progress({
   value,
@@ -18,14 +11,15 @@ export function Progress({
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
 
   return (
-    <div className={cn(styles.progress, className)} role="progressbar" aria-valuenow={value} aria-valuemin={0} aria-valuemax={max}>
+    <div
+      className={cn(styles.progress, className)}
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={max}
+    >
       <div
-        className={cn(
-          styles.fill,
-          variant === 'default' && styles.default,
-          variant === 'success' && styles.success,
-          variant === 'error' && styles.error
-        )}
+        className={cn(styles.fill, styles[variant])}
         style={{ width: `${percentage}%` }}
       />
     </div>

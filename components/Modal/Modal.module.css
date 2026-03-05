@@ -40,7 +40,7 @@
   transform: translate(-50%, -50%);
   background-color: var(--token-component-modal-background, #fff);
   color: var(--token-component-modal-content, rgba(0, 0, 0, 0.85));
-  border-radius: calc(var(--token-component-radius-modal-default, 8px) * 1px);
+  border-radius: var(--token-component-radius-modal-default, 8px);
   box-shadow: var(--token-component-modal-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
   max-width: calc(100vw - 32px);
   max-height: calc(100vh - 32px);
@@ -103,7 +103,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 
@@ -140,7 +140,7 @@
   font-size: var(--token-component-font-size-modal-title, 20px);
   font-weight: var(--token-component-font-weight-modal-title, 700);
   line-height: 28px;
-  color: var(--token-component-modal-title-color, rgba(0, 0, 0, 0.85));
+  color: var(--token-component-modal-title-color, #161616);
   padding-top: 1px;
   min-width: 0;
   white-space: nowrap;
@@ -160,7 +160,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 
@@ -197,7 +197,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 
@@ -252,9 +252,9 @@
 }
 
 .dialogIcon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  border-radius: 29px;
   display: flex;
   align-items: center;
   justify-content: center;

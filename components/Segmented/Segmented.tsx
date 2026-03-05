@@ -1,65 +1,44 @@
-import React, { useState, useCallback, useRef, useEffect, useMemo } from 'react';
-import styles from './Segmented.module.css';
+import React, { useState, useCallback, useRef, useMemo } from 'react';
+
 import { cn } from '@/lib/utils';
 
-export type SegmentedSize = 'small' | 'default' | 'large';
+import styles from './Segmented.module.css';
+import type { IProps, SegmentedOption, SegmentedSize } from './types';
 
-export interface SegmentedOption {
-  label: React.ReactNode;
-  value: string | number;
-  icon?: React.ReactNode;
-  disabled?: boolean;
-  className?: string;
-}
+const findNextEnabledIndex = (
+  options: SegmentedOption[],
+  currentIndex: number,
+  direction: 'forward' | 'backward'
+): number => {
+  const step = direction === 'forward' ? 1 : -1;
+  const length = options.length;
 
-export type SegmentedOptionType = string | number | SegmentedOption;
+  for (let i = 1; i <= length; i++) {
+    const nextIndex = (currentIndex + i * step + length) % length;
+    if (!options[nextIndex].disabled) {
+      return nextIndex;
+    }
+  }
 
-export interface SegmentedProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'> {
-  /** Array of segment options */
-  options: SegmentedOptionType[];
-  /** Current selected value (controlled) */
-  value?: string | number;
-  /** Default selected value (uncontrolled) */
-  defaultValue?: string | number;
-  /** Callback when selection changes */
-  onChange?: (value: string | number) => void;
-  /** Whether to stretch to fit parent width */
-  block?: boolean;
-  /** Size of segmented control */
-  size?: SegmentedSize;
-  /** Whether all segments are disabled */
-  disabled?: boolean;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
+  return currentIndex;
+};
 
-/**
- * Segmented Component
- * 
- * Compact control for selecting a single option from multiple choices.
- * Compact control for selecting a single option from multiple choices.
- * 
- * @example
- * ```tsx
- * <Segmented
- *   options={['Option 1', 'Option 2', 'Option 3']}
- *   defaultValue="Option 1"
- *   onChange={(value) => console.log(value)}
- * />
- * 
- * <Segmented
- *   options={[
- *     { label: 'List', value: 'list', icon: <ListIcon /> },
- *     { label: 'Grid', value: 'grid', icon: <GridIcon /> },
- *   ]}
- *   size="large"
- *   block
- * />
- * ```
- */
-export function Segmented({
+const findEdgeEnabledIndex = (
+  options: SegmentedOption[],
+  edge: 'first' | 'last'
+): number => {
+  if (edge === 'first') {
+    return options.findIndex((opt) => !opt.disabled);
+  }
+
+  for (let i = options.length - 1; i >= 0; i--) {
+    if (!options[i].disabled) return i;
+  }
+
+  return -1;
+};
+
+const Segmented = ({
   options,
   value: controlledValue,
   defaultValue,
@@ -68,69 +47,33 @@ export function Segmented({
   size = 'default',
   disabled = false,
   className,
-  style,
   ...props
-}: SegmentedProps) {
+}: IProps) => {
   const [internalValue, setInternalValue] = useState<string | number | undefined>(defaultValue);
   const containerRef = useRef<HTMLDivElement>(null);
-  const indicatorRef = useRef<HTMLDivElement>(null);
 
   const isControlled = controlledValue !== undefined;
   const value = isControlled ? controlledValue : internalValue;
 
-  // Normalize options - memoized to prevent unnecessary recalculations
-  const normalizedOptions = useMemo<SegmentedOption[]>(() => {
-    return options.map((option) => {
-      if (typeof option === 'string' || typeof option === 'number') {
-        return { label: option, value: option };
-      }
-      return option;
-    });
-  }, [options]);
+  const normalizedOptions = useMemo<SegmentedOption[]>(
+    () =>
+      options.map((option) =>
+        typeof option === 'string' || typeof option === 'number'
+          ? { label: option, value: option }
+          : option
+      ),
+    [options]
+  );
 
-  // Update indicator position when value or options change
-  useEffect(() => {
-    if (!indicatorRef.current || !containerRef.current || value === undefined) {
-      // Hide indicator if no value selected
-      if (indicatorRef.current) {
-        indicatorRef.current.style.opacity = '0';
-      }
-      return;
-    }
+  const selectedIndex = useMemo(
+    () => normalizedOptions.findIndex((opt) => opt.value === value),
+    [normalizedOptions, value]
+  );
 
-    const selectedIndex = normalizedOptions.findIndex((opt) => opt.value === value);
-    if (selectedIndex === -1) {
-      if (indicatorRef.current) {
-        indicatorRef.current.style.opacity = '0';
-      }
-      return;
-    }
+  const optionCount = normalizedOptions.length;
 
-    const container = containerRef.current;
-    const indicator = indicatorRef.current;
-    const segments = container.querySelectorAll<HTMLElement>(`.${styles.segment}`);
-    
-    if (segments[selectedIndex]) {
-      const selectedSegment = segments[selectedIndex];
-      const containerRect = container.getBoundingClientRect();
-      const segmentRect = selectedSegment.getBoundingClientRect();
-      
-      // Calculate position relative to container (subtract border width)
-      const left = segmentRect.left - containerRect.left - container.clientLeft;
-      const width = segmentRect.width;
-      const height = segmentRect.height;
-      
-      // Update indicator position and size
-      indicator.style.width = `${width}px`;
-      indicator.style.height = `${height}px`;
-      indicator.style.transform = `translateX(${left}px)`;
-      indicator.style.opacity = '1';
-    }
-  }, [value, normalizedOptions]);
-
-  // Handle keyboard navigation
   const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent<HTMLButtonElement>, optionValue: string | number) => {
+    (e: React.KeyboardEvent<HTMLButtonElement>) => {
       if (disabled) return;
 
       const currentIndex = normalizedOptions.findIndex((opt) => opt.value === value);
@@ -142,62 +85,20 @@ export function Segmented({
         case 'ArrowLeft':
         case 'ArrowUp':
           e.preventDefault();
-          // Find previous enabled option
-          for (let i = currentIndex - 1; i >= 0; i--) {
-            if (!normalizedOptions[i].disabled) {
-              nextIndex = i;
-              break;
-            }
-          }
-          // Wrap to end if at beginning
-          if (nextIndex === currentIndex) {
-            for (let i = normalizedOptions.length - 1; i > currentIndex; i--) {
-              if (!normalizedOptions[i].disabled) {
-                nextIndex = i;
-                break;
-              }
-            }
-          }
+          nextIndex = findNextEnabledIndex(normalizedOptions, currentIndex, 'backward');
           break;
         case 'ArrowRight':
         case 'ArrowDown':
           e.preventDefault();
-          // Find next enabled option
-          for (let i = currentIndex + 1; i < normalizedOptions.length; i++) {
-            if (!normalizedOptions[i].disabled) {
-              nextIndex = i;
-              break;
-            }
-          }
-          // Wrap to beginning if at end
-          if (nextIndex === currentIndex) {
-            for (let i = 0; i < currentIndex; i++) {
-              if (!normalizedOptions[i].disabled) {
-                nextIndex = i;
-                break;
-              }
-            }
-          }
+          nextIndex = findNextEnabledIndex(normalizedOptions, currentIndex, 'forward');
           break;
         case 'Home':
           e.preventDefault();
-          // Find first enabled option
-          for (let i = 0; i < normalizedOptions.length; i++) {
-            if (!normalizedOptions[i].disabled) {
-              nextIndex = i;
-              break;
-            }
-          }
+          nextIndex = findEdgeEnabledIndex(normalizedOptions, 'first');
           break;
         case 'End':
           e.preventDefault();
-          // Find last enabled option
-          for (let i = normalizedOptions.length - 1; i >= 0; i--) {
-            if (!normalizedOptions[i].disabled) {
-              nextIndex = i;
-              break;
-            }
-          }
+          nextIndex = findEdgeEnabledIndex(normalizedOptions, 'last');
           break;
         default:
           return;
@@ -209,11 +110,11 @@ export function Segmented({
           setInternalValue(nextOption.value);
         }
         onChange?.(nextOption.value);
-        // Focus the next segment
-        const segments = containerRef.current?.querySelectorAll<HTMLButtonElement>(`.${styles.segment}`);
-        if (segments && segments[nextIndex]) {
-          segments[nextIndex].focus();
-        }
+
+        const segments = containerRef.current?.querySelectorAll<HTMLButtonElement>(
+          `.${styles.segment}`
+        );
+        segments?.[nextIndex]?.focus();
       }
     },
     [disabled, value, normalizedOptions, isControlled, onChange]
@@ -221,8 +122,7 @@ export function Segmented({
 
   const handleClick = useCallback(
     (optionValue: string | number, optionDisabled?: boolean) => {
-      if (disabled || optionDisabled) return;
-      if (value === optionValue) return;
+      if (disabled || optionDisabled || value === optionValue) return;
 
       if (!isControlled) {
         setInternalValue(optionValue);
@@ -242,20 +142,24 @@ export function Segmented({
         disabled && styles.disabled,
         className
       )}
-      style={style}
       role="tablist"
       aria-orientation="horizontal"
+      style={{ '--segment-count': optionCount } as React.CSSProperties}
       {...props}
     >
-      <div ref={indicatorRef} className={styles.indicator} aria-hidden="true" />
+      <div
+        className={cn(styles.indicator, selectedIndex >= 0 && styles.visible)}
+        style={{ '--selected-index': selectedIndex } as React.CSSProperties}
+        aria-hidden="true"
+      />
       {normalizedOptions.map((option, index) => {
         const isSelected = value === option.value;
         const isDisabled = disabled || option.disabled;
-        const isIconOnly = option.icon && (!option.label || option.label === '');
+        const isIconOnly = !!(option.icon && (!option.label || option.label === ''));
 
         return (
           <button
-            key={typeof option.value === 'string' || typeof option.value === 'number' ? option.value : index}
+            key={option.value}
             type="button"
             role="tab"
             aria-selected={isSelected}
@@ -270,7 +174,7 @@ export function Segmented({
               option.className
             )}
             onClick={() => handleClick(option.value, option.disabled)}
-            onKeyDown={(e) => handleKeyDown(e, option.value)}
+            onKeyDown={handleKeyDown}
           >
             {option.icon && <span className={styles.icon}>{option.icon}</span>}
             {!isIconOnly && <span className={styles.label}>{option.label}</span>}
@@ -279,4 +183,6 @@ export function Segmented({
       })}
     </div>
   );
-}
+};
+
+export default Segmented;

@@ -6,7 +6,7 @@
   flex-direction: column;
   background-color: var(--token-component-accordion-background, white);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-accordion-border-color, #e0e0e0);
-  border-radius: calc(var(--token-component-radius-accordion, 8px) * 1px);
+  border-radius: var(--token-component-radius-accordion, 8px);
   overflow: hidden;
 }
 
@@ -17,8 +17,28 @@
 
 .accordion.panel {
   background-color: transparent;
-  border: none;
-  border-radius: calc(var(--token-component-radius-accordion, 8px) * 1px);
+  border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-accordion-border-color, #e0e0e0);
+  border-radius: var(--token-component-radius-accordion, 8px);
+  overflow: hidden;
+}
+
+/* Item (each accordion section) */
+.item {
+  border-bottom: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-accordion-border-color, #e0e0e0);
+  background-color: var(--token-component-accordion-panel-background, white);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item.active {
+  background-color: var(--token-component-accordion-panel-background-active, white);
+}
+
+.item.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* Size variants */
@@ -34,41 +54,6 @@
   font-size: var(--token-component-font-size-accordion-lg, 16px);
 }
 
-/* Panel */
-.panel {
-  border-bottom: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-accordion-border-color, #e0e0e0);
-  background-color: var(--token-component-accordion-panel-background, white);
-}
-
-.panel:last-child {
-  border-bottom: none;
-}
-
-.panel.active {
-  background-color: var(--token-component-accordion-panel-background-active, white);
-}
-
-.panel.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.accordion.panel .panel {
-  background-color: white;
-  border-bottom: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-accordion-border-color-panel, #e0e0e0);
-  border-radius: 0;
-}
-
-.accordion.panel .panel:first-child {
-  border-top-left-radius: calc(var(--token-component-radius-card) * 1px);
-  border-top-right-radius: calc(var(--token-component-radius-card) * 1px);
-}
-
-.accordion.panel .panel:last-child {
-  border-bottom: none;
-  border-bottom-left-radius: calc(var(--token-component-radius-card) * 1px);
-  border-bottom-right-radius: calc(var(--token-component-radius-card) * 1px);
-}
 
 /* Header */
 .header {
@@ -79,8 +64,8 @@
   padding: 20px;
   background-color: var(--token-component-accordion-header-background, white);
   color: var(--token-component-accordion-header-color, #161616);
-  font-size: inherit;
-  font-weight: var(--token-component-font-weight-accordion-header, 700);
+  font-size: var(--token-component-font-size-accordion-header, 18px);
+  font-weight: var(--token-component-font-weight-accordion-header, 600);
   line-height: var(--token-component-line-height-accordion-header, 1.333);
   position: relative;
 }
@@ -133,15 +118,7 @@
   order: 1;
 }
 
-.panel.active .icon {
-  color: var(--token-component-accordion-icon-color-active, #161616);
-}
-
-.accordion.panel .icon {
-  color: var(--token-component-accordion-icon-color, #464646);
-}
-
-.accordion.panel .panel.active .icon {
+.item.active .icon {
   color: var(--token-component-accordion-icon-color-active, #161616);
 }
 

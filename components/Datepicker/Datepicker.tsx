@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { createPortal } from 'react-dom';
 import styles from './Datepicker.module.css';
 import { cn } from '@/lib/utils';
 import { Input } from '@/components/Input';
@@ -63,10 +62,8 @@ export function DatePicker({
   const [open, setOpen] = useState(false);
   const [viewDate, setViewDate] = useState<Date>(() => controlledValue || defaultValue || new Date());
   const [hoverDate, setHoverDate] = useState<Date | null>(null);
-  const [position, setPosition] = useState<{ top: number; left: number; width: number } | null>(null);
   const [pendingValue, setPendingValue] = useState<DatePickerValue>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
 
   const isControlled = controlledValue !== undefined;
   const value = isControlled ? controlledValue : internalValue;
@@ -165,49 +162,12 @@ export function DatePicker({
     handleClose();
   }, [onCancel, handleClose]);
 
-  // Update position when dropdown opens
-  useEffect(() => {
-    if (!open || !containerRef.current) {
-      setPosition(null);
-      return;
-    }
-
-    const updatePosition = () => {
-      const trigger = containerRef.current;
-      if (!trigger) return;
-
-      const rect = trigger.getBoundingClientRect();
-      const container = getPopupContainer ? getPopupContainer(trigger) : document.body;
-      const containerRect = container.getBoundingClientRect();
-
-      const width = rect.width;
-      const top = rect.bottom - containerRect.top + 4;
-      const left = rect.left - containerRect.left;
-
-      setPosition({ top, left, width });
-    };
-
-    updatePosition();
-    window.addEventListener('resize', updatePosition);
-    window.addEventListener('scroll', updatePosition, true);
-
-    return () => {
-      window.removeEventListener('resize', updatePosition);
-      window.removeEventListener('scroll', updatePosition, true);
-    };
-  }, [open, getPopupContainer]);
-
   // Click outside to close
   useEffect(() => {
     if (!open) return;
 
     const handleClickOutside = (e: MouseEvent) => {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(e.target as Node) &&
-        panelRef.current &&
-        !panelRef.current.contains(e.target as Node)
-      ) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         handleClose();
       }
     };
@@ -239,13 +199,6 @@ export function DatePicker({
 
     return days;
   }, [viewDate]);
-
-  const getContainerElement = (): HTMLElement => {
-    if (getPopupContainer && containerRef.current) {
-      return getPopupContainer(containerRef.current);
-    }
-    return document.body;
-  };
 
   const sizeClass = size === 'sm' ? styles.sizeSm : size === 'lg' ? styles.sizeLg : styles.sizeMd;
 
@@ -316,67 +269,57 @@ export function DatePicker({
   };
 
   const renderCalendar = () => {
-    if (!open || !containerRef.current) return null;
+    if (!open) return null;
 
-    const panelContent = hasPresets ? (
-      <div
-        ref={panelRef}
-        className={cn(styles.panel, styles.panelWithPresets, sizeClass, popupClassName)}
-        style={{
-          ...popupStyle,
-          position: 'absolute',
-          top: position ? `${position.top}px` : undefined,
-          left: position ? `${position.left}px` : undefined,
-        }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className={styles.panelBody}>
-          <div className={styles.sidebar}>
-            {presets!.map((preset, index) => {
-              const presetDate = typeof preset.value === 'function' ? preset.value() : preset.value;
-              const isActive = pendingValue && isSameDay(pendingValue, presetDate);
-              return (
-                <button
-                  key={index}
-                  type="button"
-                  className={cn(styles.sidebarButton, isActive && styles.sidebarButtonActive)}
-                  onClick={() => handlePresetClick(preset)}
-                >
-                  {preset.label}
-                </button>
-              );
-            })}
+    if (hasPresets) {
+      return (
+        <div
+          className={cn(styles.panel, styles.panelWithPresets, sizeClass, popupClassName)}
+          style={popupStyle}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className={styles.panelBody}>
+            <div className={styles.sidebar}>
+              {presets!.map((preset, index) => {
+                const presetDate = typeof preset.value === 'function' ? preset.value() : preset.value;
+                const isActive = pendingValue && isSameDay(pendingValue, presetDate);
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    className={cn(styles.sidebarButton, isActive && styles.sidebarButtonActive)}
+                    onClick={() => handlePresetClick(preset)}
+                  >
+                    {preset.label}
+                  </button>
+                );
+              })}
+            </div>
+            <div className={styles.calendarArea}>
+              {renderCalendarContent()}
+            </div>
           </div>
-          <div className={styles.calendarArea}>
-            {renderCalendarContent()}
+          <div className={styles.panelFooter}>
+            <Button variant="secondary" appearance="plain" size="sm" onClick={handleCancelClick}>
+              {cancelText}
+            </Button>
+            <Button variant="primary" size="sm" onClick={handleSave}>
+              {saveText}
+            </Button>
           </div>
         </div>
-        <div className={styles.panelFooter}>
-          <Button variant="secondary" appearance="plain" size="sm" onClick={handleCancelClick}>
-            {cancelText}
-          </Button>
-          <Button variant="primary" size="sm" onClick={handleSave}>
-            {saveText}
-          </Button>
-        </div>
-      </div>
-    ) : (
+      );
+    }
+
+    return (
       <div
-        ref={panelRef}
         className={cn(styles.panel, sizeClass, popupClassName)}
-        style={{
-          ...popupStyle,
-          position: 'absolute',
-          top: position ? `${position.top}px` : undefined,
-          left: position ? `${position.left}px` : undefined,
-        }}
+        style={popupStyle}
         onClick={(e) => e.stopPropagation()}
       >
         {renderCalendarContent()}
       </div>
     );
-
-    return createPortal(panelContent, getContainerElement());
   };
 
   const iconSize = size === 'sm' ? 'var(--token-component-icon-field-sm, 20px)' : 'var(--token-component-icon-field-md, 24px)';

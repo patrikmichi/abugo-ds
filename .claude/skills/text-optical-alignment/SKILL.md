@@ -6,6 +6,9 @@ user-invocable: false
 
 # Text Optical Alignment
 
+**Related skills:**
+- **component-tokens** — property-first variables used for padding (`--token-component-padding-x-*`)
+
 ## Overview
 This defines the standard pattern for aligning text and icons in components to achieve proper optical centering, compensating for font descender spacing.
 

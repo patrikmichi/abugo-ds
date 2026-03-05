@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Slider } from '@/components/Slider';
+import { Slider, type SliderValue } from '@/components/Slider';
 
 const meta: Meta<typeof Slider> = {
   title: 'Components/Slider',
@@ -18,9 +18,6 @@ const meta: Meta<typeof Slider> = {
     vertical: {
       control: 'boolean',
     },
-    reverse: {
-      control: 'boolean',
-    },
     dots: {
       control: 'boolean',
     },
@@ -35,7 +32,7 @@ export const Default: Story = {
     const [value, setValue] = useState(30);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} />
+        <Slider value={value} onChange={(val) => setValue(val as number)} />
         <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value}</p>
       </div>
     );
@@ -47,7 +44,7 @@ export const Controlled: Story = {
     const [value, setValue] = useState(50);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} min={0} max={100} />
+        <Slider value={value} onChange={(val) => setValue(val as number)} min={0} max={100} />
         <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
           <button onClick={() => setValue(0)}>Min</button>
           <span>Value: {value}</span>
@@ -63,7 +60,7 @@ export const Range: Story = {
     const [value, setValue] = useState<[number, number]>([20, 80]);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider range value={value} onChange={setValue} />
+        <Slider range value={value} onChange={(val) => setValue(val as [number, number])} />
         <p style={{ marginTop: '1rem', fontSize: '14px' }}>
           Range: [{value[0]}, {value[1]}]
         </p>
@@ -79,7 +76,7 @@ export const WithMarks: Story = {
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
         <Slider
           value={value}
-          onChange={setValue}
+          onChange={(val) => setValue(val as number)}
           marks={{
             0: '0°C',
             26: '26°C',
@@ -101,7 +98,7 @@ export const WithStep: Story = {
     const [value, setValue] = useState(30);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} step={10} />
+        <Slider value={value} onChange={(val) => setValue(val as number)} step={10} />
         <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value} (step: 10)</p>
       </div>
     );
@@ -113,7 +110,7 @@ export const WithDots: Story = {
     const [value, setValue] = useState(30);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} step={10} dots />
+        <Slider value={value} onChange={(val) => setValue(val as number)} step={10} dots />
         <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value}</p>
       </div>
     );
@@ -127,23 +124,11 @@ export const Vertical: Story = {
       <div style={{ display: 'flex', gap: '2rem', padding: '2rem', height: '300px' }}>
         <div>
           <p style={{ marginBottom: '0.5rem', fontSize: '14px' }}>Vertical</p>
-          <Slider vertical value={value} onChange={setValue} />
+          <Slider vertical value={value} onChange={(val) => setValue(val as number)} />
         </div>
         <div>
           <p style={{ marginBottom: '0.5rem', fontSize: '14px' }}>Value: {value}</p>
         </div>
-      </div>
-    );
-  },
-};
-
-export const Reverse: Story = {
-  render: () => {
-    const [value, setValue] = useState(30);
-    return (
-      <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} reverse />
-        <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value} (reversed)</p>
       </div>
     );
   },
@@ -167,7 +152,7 @@ export const CustomTooltip: Story = {
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
         <Slider
           value={value}
-          onChange={setValue}
+          onChange={(val) => setValue(val as number)}
           tooltip={{
             formatter: (val) => `${val}%`,
             placement: 'bottom',
@@ -184,7 +169,7 @@ export const NoTooltip: Story = {
     const [value, setValue] = useState(30);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} tooltip={false} />
+        <Slider value={value} onChange={(val) => setValue(val as number)} tooltip={false} />
         <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value} (no tooltip)</p>
       </div>
     );
@@ -196,7 +181,7 @@ export const CustomMinMax: Story = {
     const [value, setValue] = useState(50);
     return (
       <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} min={-100} max={100} step={10} />
+        <Slider value={value} onChange={(val) => setValue(val as number)} min={-100} max={100} step={10} />
         <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value} (range: -100 to 100)</p>
       </div>
     );
@@ -211,7 +196,7 @@ export const RangeWithMarks: Story = {
         <Slider
           range
           value={value}
-          onChange={setValue}
+          onChange={(val) => setValue(val as [number, number])}
           marks={{
             0: '0',
             25: '25',
@@ -228,18 +213,6 @@ export const RangeWithMarks: Story = {
   },
 };
 
-export const NotIncluded: Story = {
-  render: () => {
-    const [value, setValue] = useState(30);
-    return (
-      <div style={{ maxWidth: '600px', padding: '2rem' }}>
-        <Slider value={value} onChange={setValue} included={false} marks={{ 0: '0', 50: '50', 100: '100' }} />
-        <p style={{ marginTop: '1rem', fontSize: '14px' }}>Value: {value} (track not included)</p>
-      </div>
-    );
-  },
-};
-
 export const AllFeatures: Story = {
   render: () => {
     const [value, setValue] = useState<[number, number]>([20, 80]);
@@ -248,7 +221,7 @@ export const AllFeatures: Story = {
         <Slider
           range
           value={value}
-          onChange={setValue}
+          onChange={(v) => setValue(v as [number, number])}
           min={0}
           max={100}
           step={5}

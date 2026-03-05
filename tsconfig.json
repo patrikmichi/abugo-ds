@@ -58,6 +58,7 @@
   "exclude": [
     "node_modules",
     ".next",
-    "storybook-static"
+    "storybook-static",
+    "figma-designer-plugin"
   ]
 }

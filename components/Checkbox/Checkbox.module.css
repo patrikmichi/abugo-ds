@@ -29,7 +29,7 @@
   width: var(--token-component-icon-checkbox, 20px);
   height: var(--token-component-icon-checkbox, 20px);
   border: 2px solid var(--token-component-checkbox-border-unchecked-default, #5690f5);
-  border-radius: calc(var(--token-component-radius-checkbox, 4) * 1px);
+  border-radius: var(--token-component-radius-checkbox, 4px);
   background-color: transparent;
   transition: all var(--token-component-checkbox-transition-duration, 200ms) var(--token-component-checkbox-transition-easing, ease-out);
   cursor: pointer;
@@ -94,11 +94,11 @@
 
 /* Checkbox inner (container for icon) */
 .checkboxInner {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   pointer-events: none;
 }
 
@@ -116,7 +116,6 @@
   flex: 1;
   min-width: 0;
   color: inherit;
-  padding-top: 2px;
 }
 
 /* Disabled state */

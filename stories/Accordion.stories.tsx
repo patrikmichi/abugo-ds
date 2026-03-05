@@ -169,7 +169,7 @@ export const Collapsible: Story = {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
       <div>
         <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>Not Collapsible</p>
-        <Accordion defaultActiveKey="1" collapsible={false}>
+        <Accordion defaultActiveKey="1" collapsible="disabled">
           <Accordion.Panel key="1" header="Cannot Close Panel">
             <p>This panel cannot be closed once opened.</p>
           </Accordion.Panel>

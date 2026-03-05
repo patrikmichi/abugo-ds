@@ -2971,7 +2971,7 @@
             "ALL_SCOPES"
           ],
           "resolvedValue": {
-            "string": "Venn"
+            "string": "Google Sans Flex"
           }
         },
         {
@@ -16187,7 +16187,7 @@
         "ALL_SCOPES"
       ],
       "resolvedValue": {
-        "string": "Venn"
+        "string": "Google Sans Flex"
       }
     },
     "typography-letterSpacing-tight": {

@@ -1,46 +1,112 @@
-/* Stepper component styles using design tokens */
-
+/* Stepper Container */
 .stepper {
   display: flex;
   width: 100%;
   font-family: var(--token-primitive-typography-font-family-sans);
 }
 
-/* Direction variants */
-.stepper.horizontal {
+/* Direction Variants */
+.horizontal {
   flex-direction: row;
 }
 
-.stepper.vertical {
+.vertical {
   flex-direction: column;
 }
 
-/* Size variants */
-.stepper.small .step {
-  font-size: var(--token-component-font-size-stepper-font-size-sm);
+/* Size Variants */
+.small .stepIcon {
+  width: var(--token-component-stepper-icon-size-sm);
+  height: var(--token-component-stepper-icon-size-sm);
 }
 
-/* Step */
+.small .iconInner {
+  font-size: var(--token-component-stepper-icon-font-size-sm);
+}
+
+.small .stepTitle {
+  font-size: var(--token-component-stepper-title-font-size-sm);
+}
+
+.small .stepDescription {
+  font-size: var(--token-component-stepper-description-font-size-sm);
+}
+
+.small .dot {
+  width: var(--token-component-stepper-dot-size-sm);
+  height: var(--token-component-stepper-dot-size-sm);
+}
+
+/* Label Placement */
+.labelVertical .step {
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelVertical .stepContent {
+  text-align: center;
+  margin-top: var(--token-component-stepper-gap-icon);
+  margin-inline-start: 0;
+}
+
+.labelVertical .stepTail {
+  top: 0;
+  inset-inline-start: 50%;
+  width: 100%;
+  margin-inline-start: calc(var(--token-component-stepper-icon-size) / 2 + var(--token-component-stepper-gap-tail));
+  padding-inline-start: 0;
+}
+
+/* Progress Dot Style */
+.progressDot .stepIcon {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+}
+
+.progressDot .stepTail {
+  top: calc(var(--token-component-stepper-dot-size) / 2);
+}
+
+.progressDot.small .stepTail {
+  top: calc(var(--token-component-stepper-dot-size-sm) / 2);
+}
+
+/* Step Item */
 .step {
-  flex: 1;
   position: relative;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  vertical-align: top;
 }
 
-.stepHorizontal {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.horizontal .step {
+  padding-inline-end: var(--token-component-stepper-gap-tail);
 }
 
-.stepVertical {
-  display: flex;
+.horizontal .step:last-child {
+  flex: none;
+  padding-inline-end: 0;
+}
+
+.vertical .step {
   flex-direction: row;
-  align-items: flex-start;
-  padding-bottom: var(--token-component-padding-block-stepper-vertical-step-bottom);
+  padding-bottom: var(--token-component-stepper-gap-tail);
 }
 
+.vertical .step:last-child {
+  padding-bottom: 0;
+}
+
+/* Step States */
 .stepClickable {
   cursor: pointer;
+}
+
+.stepClickable:hover .stepTitle {
+  color: var(--token-component-stepper-title-color-active);
 }
 
 .stepDisabled {
@@ -48,236 +114,222 @@
   opacity: var(--token-component-stepper-disabled-opacity);
 }
 
-/* Step content */
-.stepContent {
-  display: flex;
-  align-items: flex-start;
+.stepLast .stepTail {
+  display: none;
+}
+
+/* Step Tail (Connector) */
+.stepTail {
+  position: absolute;
+  background-color: var(--token-component-stepper-connector-background-default);
+  transition: background-color 0.2s ease;
+}
+
+.horizontal .stepTail {
+  top: calc(var(--token-component-stepper-icon-size) / 2);
+  inset-inline-start: 0;
   width: 100%;
+  height: var(--token-component-stepper-connector-size);
+  margin-inline-start: calc(var(--token-component-stepper-icon-size) + var(--token-component-stepper-gap-tail));
 }
 
-.stepHorizontal .stepContent {
-  flex-direction: column;
+.vertical .stepTail {
+  top: 0;
+  inset-inline-start: calc(var(--token-component-stepper-icon-size) / 2);
+  width: var(--token-component-stepper-connector-size);
+  height: 100%;
+  margin-top: calc(var(--token-component-stepper-icon-size) + var(--token-component-stepper-gap-tail));
 }
 
-.stepVertical .stepContent {
-  flex-direction: row;
+.small .horizontal .stepTail,
+.horizontal.small .stepTail {
+  top: calc(var(--token-component-stepper-icon-size-sm) / 2);
+  margin-inline-start: calc(var(--token-component-stepper-icon-size-sm) + var(--token-component-stepper-gap-tail));
 }
 
-/* Icon wrapper */
-.stepIconWrapper {
+.small .vertical .stepTail,
+.vertical.small .stepTail {
+  inset-inline-start: calc(var(--token-component-stepper-icon-size-sm) / 2);
+  margin-top: calc(var(--token-component-stepper-icon-size-sm) + var(--token-component-stepper-gap-tail));
+}
+
+/* Step Icon */
+.stepIcon {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.stepHorizontal .stepIconWrapper {
-  margin-bottom: var(--token-component-gap-stepper-icon-margin-bottom);
-}
-
-.stepVertical .stepIconWrapper {
-  margin-right: var(--token-component-gap-stepper-icon-margin-right);
-}
-
-/* Icon - Step Indicator Dot */
-.icon {
   width: var(--token-component-stepper-icon-size);
   height: var(--token-component-stepper-icon-size);
+  border-radius: 50%;
+  background-color: var(--token-component-stepper-icon-background-default);
+  border: 1px solid var(--token-component-stepper-icon-border-default);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.iconInner {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: var(--token-component-stepper-icon-background-wait);
-  border: none;
-  color: var(--token-component-stepper-icon-color-wait);
   font-size: var(--token-component-stepper-icon-font-size);
-  font-weight: var(--token-component-font-weight-stepper-icon);
-  transition: all var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
-  z-index: 1;
-  position: relative;
+  font-weight: var(--token-component-stepper-icon-font-weight);
+  color: var(--token-component-stepper-icon-color-default);
+  line-height: 1;
 }
 
-.stepper.small .icon {
-  width: var(--token-component-stepper-icon-size-sm);
-  height: var(--token-component-stepper-icon-size-sm);
-  font-size: var(--token-component-font-size-stepper-icon-sm);
+.iconInner .material-symbols-outlined {
+  font-size: inherit;
 }
 
-/* Dot (progress dot style) */
+.customIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-stepper-icon-color-default);
+}
+
+/* Dot */
 .dot {
   width: var(--token-component-stepper-dot-size);
   height: var(--token-component-stepper-dot-size);
   border-radius: 50%;
-  background-color: var(--token-component-stepper-dot-background-wait);
-  transition: all var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
-  z-index: 1;
+  background-color: var(--token-component-stepper-dot-background-default);
+  transition: all 0.2s ease;
 }
 
-.stepper.small .dot {
-  width: var(--token-component-stepper-dot-size-sm);
-  height: var(--token-component-stepper-dot-size-sm);
-}
-
-/* Tail (connector line) */
-.tail {
-  position: absolute;
-  background-color: var(--token-component-stepper-tail-background);
-  transition: background-color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
-}
-
-.tailHorizontal {
-  top: var(--token-component-stepper-icon-size);
-  left: 50%;
-  width: calc(100% - var(--token-component-stepper-icon-size));
-  height: calc(var(--token-primitive-border-width-1) * 1px);
-  transform: translateY(-50%);
-}
-
-.stepper.small .tailHorizontal {
-  top: var(--token-component-stepper-icon-size-sm);
-  width: calc(100% - var(--token-component-stepper-icon-size-sm));
-}
-
-.tailVertical {
-  top: var(--token-component-stepper-icon-size);
-  left: 50%;
-  width: calc(var(--token-primitive-border-width-1) * 1px);
-  height: calc(100% - var(--token-component-stepper-icon-size));
-  transform: translateX(-50%);
-}
-
-.stepper.small .tailVertical {
-  top: var(--token-component-stepper-icon-size-sm);
-  height: calc(100% - var(--token-component-stepper-icon-size-sm));
-}
-
-.stepLast .tail {
-  display: none;
-}
-
-/* Step text */
-.stepText {
+/* Step Content */
+.stepContent {
   flex: 1;
   min-width: 0;
+  margin-inline-start: var(--token-component-stepper-gap-icon);
 }
 
-.stepHorizontal .stepText {
-  text-align: center;
-  width: 100%;
+.vertical .stepContent {
+  min-height: calc(var(--token-component-stepper-icon-size) + var(--token-component-stepper-gap-tail));
 }
 
-.stepVertical .stepText {
-  flex: 1;
-}
-
-/* Step title */
+/* Step Title */
 .stepTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-stepper-gap-content);
   font-size: var(--token-component-stepper-title-font-size);
   font-weight: var(--token-component-stepper-title-font-weight);
-  color: var(--token-component-stepper-title-color-wait));
-  line-height: var(--token-component-line-height-stepper-title);
-  margin-bottom: var(--token-component-gap-stepper-title-margin-bottom);
-  transition: color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+  line-height: var(--token-component-stepper-title-line-height);
+  color: var(--token-component-stepper-title-color-default);
+  transition: color 0.2s ease;
 }
 
-.stepper.small .stepTitle {
-  font-size: var(--token-component-font-size-stepper-title-sm);
+/* Step Subtitle */
+.stepSubTitle {
+  font-size: var(--token-component-stepper-sub-title-font-size);
+  font-weight: normal;
+  color: var(--token-component-stepper-sub-title-color);
+  margin-inline-start: var(--token-component-stepper-gap-content);
 }
 
-/* Step description */
+/* Step Description */
 .stepDescription {
   font-size: var(--token-component-stepper-description-font-size);
-  color: var(--token-component-stepper-description-color-wait));
-  line-height: var(--token-component-line-height-stepper-description);
-  transition: color var(--token-component-stepper-transition-duration) var(--token-component-stepper-transition-easing);
+  line-height: var(--token-component-stepper-description-line-height);
+  color: var(--token-component-stepper-description-color-default);
+  margin-top: var(--token-component-stepper-gap-content);
+  transition: color 0.2s ease;
 }
 
-.stepper.small .stepDescription {
-  font-size: var(--token-component-font-size-stepper-description-sm);
+/* Status: Wait (default) */
+.stepWait .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-default);
+  border-color: var(--token-component-stepper-icon-border-default);
 }
 
-/* Status: Wait */
-.stepWait .icon {
-  background-color: var(--token-component-stepper-icon-background-wait);
-  border: none;
-  color: transparent;
+.stepWait .iconInner,
+.stepWait .customIcon {
+  color: var(--token-component-stepper-icon-color-default);
 }
 
 .stepWait .dot {
-  background-color: var(--token-component-stepper-dot-background-wait);
+  background-color: var(--token-component-stepper-dot-background-default);
 }
 
 .stepWait .stepTitle {
-  color: var(--token-component-stepper-title-color-wait));
+  color: var(--token-component-stepper-title-color-default);
 }
 
 .stepWait .stepDescription {
-  color: var(--token-component-stepper-description-color-wait));
+  color: var(--token-component-stepper-description-color-default);
 }
 
-/* Status: Process */
-.stepProcess .icon {
-  background-color: var(--token-component-stepper-icon-background-process);
-  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-primitive-color-white);
-  box-shadow: 0 0 0 calc(var(--token-primitive-border-width-1) * 1px) var(--token-component-stepper-icon-background-process);
-  color: transparent;
+/* Status: Process (active) */
+.stepProcess .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-active);
+  border-color: var(--token-component-stepper-icon-border-active);
+}
+
+.stepProcess .iconInner,
+.stepProcess .customIcon {
+  color: var(--token-component-stepper-icon-color-active);
 }
 
 .stepProcess .dot {
-  background-color: var(--token-component-stepper-dot-background-process);
+  background-color: var(--token-component-stepper-dot-background-active);
 }
 
 .stepProcess .stepTitle {
-  color: var(--token-component-stepper-title-color-process));
-  font-weight: var(--token-component-font-weight-stepper-title-process);
+  color: var(--token-component-stepper-title-color-active);
+  font-weight: var(--token-component-stepper-title-font-weight-active);
 }
 
 .stepProcess .stepDescription {
-  color: var(--token-component-stepper-description-color-process));
+  color: var(--token-component-stepper-description-color-active);
 }
 
-.stepProcess .tail {
-  background-color: var(--token-component-stepper-tail-background-process);
+/* Status: Finish (completed) */
+.stepFinish .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-completed);
+  border-color: var(--token-component-stepper-icon-border-completed);
 }
 
-/* Status: Finish */
-.stepFinish .icon {
-  background-color: var(--token-component-stepper-icon-background-finish);
-  border: none;
-  color: var(--token-primitive-color-white);
-}
-
-.stepFinish .icon .material-symbols-outlined {
-  color: var(--token-primitive-color-white);
-  font-size: var(--token-primitive-icon-size-icon-size-1);
+.stepFinish .iconInner,
+.stepFinish .customIcon {
+  color: var(--token-component-stepper-icon-color-completed);
 }
 
 .stepFinish .dot {
-  background-color: var(--token-component-stepper-dot-background-finish);
+  background-color: var(--token-component-stepper-dot-background-completed);
+}
+
+.stepFinish .stepTail {
+  background-color: var(--token-component-stepper-connector-background-completed);
 }
 
 .stepFinish .stepTitle {
-  color: var(--token-component-stepper-title-color-finish));
+  color: var(--token-component-stepper-title-color-completed);
 }
 
 .stepFinish .stepDescription {
-  color: var(--token-component-stepper-description-color-finish));
-}
-
-.stepFinish .tail {
-  background-color: var(--token-component-stepper-tail-background-finish);
+  color: var(--token-component-stepper-description-color-completed);
 }
 
 /* Status: Error */
-.stepError .icon {
+.stepError .stepIcon {
   background-color: var(--token-component-stepper-icon-background-error);
   border-color: var(--token-component-stepper-icon-border-error);
+}
+
+.stepError .iconInner,
+.stepError .customIcon {
   color: var(--token-component-stepper-icon-color-error);
 }
 
 .stepError .dot {
   background-color: var(--token-component-stepper-dot-background-error);
+}
+
+.stepError .stepTail {
+  background-color: var(--token-component-stepper-connector-background-error);
 }
 
 .stepError .stepTitle {
@@ -286,44 +338,4 @@
 
 .stepError .stepDescription {
   color: var(--token-component-stepper-description-color-error);
-}
-
-.stepError .tail {
-  background-color: var(--token-component-stepper-tail-background-error);
-}
-
-/* Progress dot style */
-.stepper.progressDot .stepIconWrapper {
-  width: auto;
-  height: auto;
-}
-
-.stepper.progressDot .stepHorizontal .stepIconWrapper {
-  margin-bottom: 0;
-  margin-right: var(--token-component-gap-stepper-progress-dot-margin-right);
-}
-
-.stepper.progressDot .stepVertical .stepIconWrapper {
-  margin-right: var(--token-component-gap-stepper-progress-dot-margin-right);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .stepper.horizontal {
-    flex-direction: column;
-  }
-
-  .stepHorizontal {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .stepHorizontal .stepIconWrapper {
-    margin-bottom: 0;
-    margin-right: var(--token-component-gap-stepper-icon-margin-right);
-  }
-
-  .stepHorizontal .stepText {
-    text-align: left;
-  }
 }

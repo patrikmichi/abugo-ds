@@ -1,13 +1,15 @@
 /* Segmented component styles using design tokens */
 
 .segmented {
+  --segment-count: 1;
+
   position: relative;
   display: inline-flex;
   align-items: center;
   padding: var(--token-component-segmented-padding, 4px);
   background-color: var(--token-component-segmented-background, #ffffff);
   border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid var(--token-component-segmented-border-color, #e0e0e0);
-  border-radius: calc(var(--token-component-radius-segmented, 999) * 1px);
+  border-radius: var(--token-component-radius-segmented, 999px);
   font-family: var(--token-primitive-typography-font-family-sans);
   box-sizing: border-box;
 }
@@ -17,16 +19,33 @@
   width: 100%;
 }
 
-/* Indicator (animated background) */
+.segmented.block .segment {
+  flex: 1 1 0%;
+  min-width: 0;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+/* Indicator (animated background) - CSS-based positioning */
 .indicator {
+  --selected-index: 0;
+
   position: absolute;
   top: var(--token-component-segmented-padding, 4px);
-  left: 0;
+  left: var(--token-component-segmented-padding, 4px);
+  width: calc((100% - var(--token-component-segmented-padding, 4px) * 2) / var(--segment-count));
+  height: calc(100% - var(--token-component-segmented-padding, 4px) * 2);
   background-color: var(--token-component-segmented-indicator-background, #5690f5);
-  border-radius: calc(var(--token-component-radius-segmented-indicator, 999) * 1px);
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0.3s ease;
+  border-radius: var(--token-component-radius-segmented-indicator, 999px);
+  transform: translateX(calc(var(--selected-index) * 100%));
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0.3s ease;
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+}
+
+.indicator.visible {
+  opacity: 1;
 }
 
 .segmented:has(.segment.selected:hover) .indicator {
@@ -43,7 +62,7 @@
   gap: var(--token-component-segmented-segment-gap, 8px);
   background: transparent;
   border: none;
-  border-radius: calc(var(--token-component-radius-segmented-indicator, 999) * 1px);
+  border-radius: var(--token-component-radius-segmented-indicator, 999px);
   color: var(--token-component-segmented-text-color-default, #464646);
   font-size: var(--token-component-segmented-font-size, 14px);
   line-height: var(--token-component-segmented-line-height, 20px);
@@ -68,7 +87,7 @@
 .segment:focus-visible {
   outline: 2px solid var(--token-component-segmented-focus-outline-color, #538bff);
   outline-offset: 2px;
-  border-radius: calc(var(--token-component-radius-segmented-indicator, 999) * 1px);
+  border-radius: var(--token-component-radius-segmented-indicator, 999px);
 }
 
 .segmentDisabled,
@@ -76,6 +95,11 @@
   color: var(--token-component-segmented-text-color-disabled, #737373) !important;
   cursor: not-allowed;
   opacity: 1;
+}
+
+.segmentDisabled.selected,
+.segment:disabled.selected {
+  color: var(--token-component-segmented-text-color-selected, #ffffff) !important;
 }
 
 /* Icon */
@@ -111,6 +135,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.segmented.block .label {
+  text-align: center;
 }
 
 /* Icon-only segments (circular, 1:1 ratio) */

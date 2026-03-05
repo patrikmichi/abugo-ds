@@ -9,7 +9,7 @@
   gap: var(--token-primitive-spacing-4, 4px);
   padding: var(--token-primitive-spacing-24, 24px);
   border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid;
-  border-radius: calc(var(--token-component-radius-chipcard, 8) * 1px);
+  border-radius: var(--token-component-radius-chipcard, 8px);
   outline: none;
   font-family: var(--token-primitive-typography-font-family-sans);
   transition:

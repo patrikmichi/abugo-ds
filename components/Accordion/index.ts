@@ -1,7 +1,8 @@
-export {
-  Accordion,
-  type AccordionProps,
-  type AccordionPanelProps,
-  type AccordionSize,
-  type AccordionExpandIconPosition,
-} from './Accordion';
+export { default as Accordion } from './Accordion';
+export { default as AccordionPanel } from './AccordionPanel';
+export type {
+  IProps as AccordionProps,
+  AccordionPanelProps,
+  AccordionSize,
+  AccordionExpandIconPosition,
+} from './types';

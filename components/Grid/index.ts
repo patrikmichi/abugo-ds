@@ -1,15 +1,15 @@
-export {
-  Row,
-  Col,
-  type RowProps,
-  type ColProps,
-  type GridGutter,
-  type GridAlign,
-  type GridJustify,
-  type GridSpan,
-  type GridOffset,
-  type GridOrder,
-  type GridPull,
-  type GridPush,
-  type GridFlex,
-} from './Grid';
+export { default as Row } from './Row';
+export { default as Col } from './Col';
+export type {
+  RowProps,
+  ColProps,
+  GridGutter,
+  GridAlign,
+  GridJustify,
+  GridSpan,
+  GridOffset,
+  GridOrder,
+  GridPull,
+  GridPush,
+  GridFlex,
+} from './types';

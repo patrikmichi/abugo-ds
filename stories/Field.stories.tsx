@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Field } from '@/components/Field';
 import { Input } from '@/components/Input';
-import { Select } from '@/components/Select/Select';
+import Select from '@/components/Select';
 import { Textarea } from '@/components/Textarea';
 import { InputNumber } from '@/components/InputNumber';
 
@@ -205,11 +205,13 @@ export const AllFieldTypes: Story = {
         <Input placeholder="Enter text" />
       </Field>
       <Field label="Select" maxWidth="400px">
-        <Select>
-          <option value="">Choose an option...</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-        </Select>
+        <Select
+          placeholder="Choose an option..."
+          options={[
+            { value: '1', label: 'Option 1' },
+            { value: '2', label: 'Option 2' },
+          ]}
+        />
       </Field>
       <Field label="Textarea" maxWidth="400px">
         <Textarea placeholder="Enter message" />
@@ -269,12 +271,14 @@ export const FormExample: Story = {
         <Input type="email" placeholder="john@example.com" />
       </Field>
       <Field label="Country">
-        <Select>
-          <option value="">Select country...</option>
-          <option value="us">United States</option>
-          <option value="uk">United Kingdom</option>
-          <option value="cz">Czech Republic</option>
-        </Select>
+        <Select
+          placeholder="Select country..."
+          options={[
+            { value: 'us', label: 'United States' },
+            { value: 'uk', label: 'United Kingdom' },
+            { value: 'cz', label: 'Czech Republic' },
+          ]}
+        />
       </Field>
       <Field 
         label="Message" 

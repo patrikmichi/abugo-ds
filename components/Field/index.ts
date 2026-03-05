@@ -1,1 +1,2 @@
-export { Field, type FieldProps, type ValidateStatus, type ColProps, type ValidationRule } from './Field';
+export { Field } from './Field';
+export type { FieldProps, ValidateStatus, ColProps, ValidationRule } from './types';

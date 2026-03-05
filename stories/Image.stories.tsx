@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Image } from '@/components/Image';
+import { Image, ImagePreviewGroup } from '@/components/Image';
 
 const meta: Meta<typeof Image> = {
   title: 'Components/Image',
@@ -198,7 +198,7 @@ export const PreviewGroup: Story = {
       <p style={{ fontSize: '14px', color: '#666', marginBottom: '1rem' }}>
         Click any image to open preview. Use toolbar to zoom, rotate, and navigate.
       </p>
-      <Image.PreviewGroup preview>
+      <ImagePreviewGroup preview>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
           <Image
             src={sampleImage}
@@ -222,7 +222,7 @@ export const PreviewGroup: Story = {
             preview
           />
         </div>
-      </Image.PreviewGroup>
+      </ImagePreviewGroup>
     </div>
   ),
 };

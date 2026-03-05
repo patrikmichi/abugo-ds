@@ -1,50 +1,17 @@
 import React from 'react';
-import styles from './Flex.module.css';
+
 import { cn } from '@/lib/utils';
 
-export type FlexDirection = 'row' | 'row-reverse' | 'column' | 'column-reverse';
-export type FlexWrap = 'nowrap' | 'wrap' | 'wrap-reverse';
-export type FlexJustify = 'start' | 'end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
-export type FlexAlign = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
-export type FlexGap = 'small' | 'middle' | 'large' | number | [number, number];
+import styles from './Flex.module.css';
+import type { IProps, FlexWrap } from './types';
 
-export interface FlexProps extends React.HTMLAttributes<HTMLElement> {
-  /** Vertical direction (deprecated, use direction instead) */
-  vertical?: boolean;
-  /** Flex direction */
-  direction?: FlexDirection;
-  /** Whether to wrap */
-  wrap?: FlexWrap | boolean;
-  /** Justify content */
-  justify?: FlexJustify;
-  /** Align items */
-  align?: FlexAlign;
-  /** Gap between items */
-  gap?: FlexGap;
-  /** Custom component type */
-  component?: React.ElementType;
-  /** Children */
-  children?: React.ReactNode;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
+const GAP_MAP: Record<string, string> = {
+  small: 'var(--token-semantic-gap-xs, 8px)',
+  middle: 'var(--token-semantic-gap-sm, 16px)',
+  large: 'var(--token-semantic-gap-md, 24px)',
+};
 
-/**
- * Flex Component
- * 
- * Flexible box layout component. 
- * 
- * @example
- * ```tsx
- * <Flex gap="middle" justify="space-between" align="center">
- *   <div>Item 1</div>
- *   <div>Item 2</div>
- * </Flex>
- * ```
- */
-export function Flex({
+const Flex = ({
   vertical = false,
   direction,
   wrap,
@@ -56,26 +23,17 @@ export function Flex({
   className,
   style,
   ...props
-}: FlexProps) {
+}: IProps) => {
   const Component = component || 'div';
 
-  // Determine direction
   const finalDirection = direction || (vertical ? 'column' : 'row');
+  const finalWrap: FlexWrap =
+    typeof wrap === 'boolean' ? (wrap ? 'wrap' : 'nowrap') : wrap || 'nowrap';
 
-  // Determine wrap
-  const finalWrap: FlexWrap = typeof wrap === 'boolean' ? (wrap ? 'wrap' : 'nowrap') : (wrap || 'nowrap');
-
-  // Calculate gap styles
   const gapStyle: React.CSSProperties = {};
   if (gap) {
     if (typeof gap === 'string') {
-      // Use token-based gap sizes
-      const gapMap: Record<string, string> = {
-        small: 'var(--token-semantic-gap-xs, 8px)',
-        middle: 'var(--token-semantic-gap-sm, 16px)',
-        large: 'var(--token-semantic-gap-md, 24px)',
-      };
-      gapStyle.gap = gapMap[gap] || gap;
+      gapStyle.gap = GAP_MAP[gap] || gap;
     } else if (typeof gap === 'number') {
       gapStyle.gap = `${gap}px`;
     } else if (Array.isArray(gap)) {
@@ -104,4 +62,6 @@ export function Flex({
       {children}
     </Component>
   );
-}
+};
+
+export default Flex;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { TimePicker } from '@/components/Timepicker';
 import { Field } from '@/components/Field';
@@ -105,19 +105,11 @@ export const CustomFormat: Story = {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
         <div>
-          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>HH:mm:ss (24-hour)</p>
-          <TimePicker format="HH:mm:ss" value={value} onChange={setValue} />
-        </div>
-        <div>
-          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>HH:mm (24-hour, no seconds)</p>
+          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>HH:mm (24-hour)</p>
           <TimePicker format="HH:mm" value={value} onChange={setValue} />
         </div>
         <div>
-          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>h:mm:ss a (12-hour)</p>
-          <TimePicker format="h:mm:ss a" use12Hours value={value} onChange={setValue} />
-        </div>
-        <div>
-          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>h:mm a (12-hour, no seconds)</p>
+          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>h:mm a (12-hour)</p>
           <TimePicker format="h:mm a" use12Hours value={value} onChange={setValue} />
         </div>
       </div>
@@ -138,15 +130,10 @@ export const WithSteps: Story = {
           <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>2-hour steps, 30-minute steps</p>
           <TimePicker hourStep={2} minuteStep={30} value={value} onChange={setValue} />
         </div>
-        <div>
-          <p style={{ marginBottom: '0.5rem', fontSize: '14px', color: '#666' }}>10-second steps</p>
-          <TimePicker secondStep={10} value={value} onChange={setValue} />
-        </div>
       </div>
     );
   },
 };
-
 
 export const TwelveHourFormat: Story = {
   render: () => {
@@ -156,7 +143,7 @@ export const TwelveHourFormat: Story = {
         <TimePicker
           value={value}
           onChange={setValue}
-          format="h:mm:ss a"
+          format="h:mm a"
           use12Hours
         />
         <p style={{ marginTop: '1rem', fontSize: '14px', color: '#666' }}>
@@ -244,10 +231,9 @@ export const AllFeatures: Story = {
         <TimePicker
           value={value}
           onChange={setValue}
-          format="HH:mm:ss"
+          format="HH:mm"
           hourStep={1}
           minuteStep={15}
-          secondStep={10}
           placeholder="Select time"
           allowClear
         />

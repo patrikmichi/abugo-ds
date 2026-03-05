@@ -62,7 +62,7 @@ export const Sizes: Story = {
 
 export const WithMinMax: Story = {
   render: () => {
-    const [value, setValue] = useState<number | string | null>(10);
+    const [value, setValue] = useState<number | null>(10);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
         <InputNumber
@@ -80,7 +80,7 @@ export const WithMinMax: Story = {
 
 export const WithStep: Story = {
   render: () => {
-    const [value, setValue] = useState<number | string | null>(0);
+    const [value, setValue] = useState<number | null>(0);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
         <InputNumber
@@ -104,21 +104,21 @@ export const WithStep: Story = {
 
 export const WithFormatter: Story = {
   render: () => {
-    const [value, setValue] = useState<number | string | null>(1000);
+    const [value, setValue] = useState<number | null>(1000);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
         <InputNumber
           value={value}
           onChange={setValue}
           formatter={(val) => `$ ${val}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-          parser={(str) => str.replace(/\$\s?|(,*)/g, '')}
+          parser={(str) => Number(str.replace(/\$\s?|(,*)/g, ''))}
           placeholder="Currency"
         />
         <InputNumber
           value={value}
           onChange={setValue}
           formatter={(val) => `${val}%`}
-          parser={(str) => str.replace('%', '')}
+          parser={(str) => Number(str.replace('%', ''))}
           placeholder="Percentage"
         />
         <p style={{ fontSize: '14px', color: '#666' }}>Value: {value}</p>
@@ -143,14 +143,6 @@ export const WithControls: Story = {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
       <InputNumber controls step={1} placeholder="With controls" />
       <InputNumber controls={false} placeholder="Without controls" />
-      <InputNumber
-        controls={{
-          upIcon: <span style={{ fontSize: '12px' }}>▲</span>,
-          downIcon: <span style={{ fontSize: '12px' }}>▼</span>,
-        }}
-        step={1}
-        placeholder="Custom icons"
-      />
     </div>
   ),
 };
@@ -185,17 +177,16 @@ export const WithPrefixSuffix: Story = {
 
 export const HighPrecision: Story = {
   render: () => {
-    const [value, setValue] = useState<number | string | null>('0.123456789');
+    const [value, setValue] = useState<number | null>(0.123456789);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
         <InputNumber
-          stringMode
           precision={9}
           value={value}
           onChange={setValue}
           placeholder="High precision"
         />
-        <p style={{ fontSize: '14px', color: '#666' }}>Value: {value} (string mode)</p>
+        <p style={{ fontSize: '14px', color: '#666' }}>Value: {value}</p>
       </div>
     );
   },
@@ -203,7 +194,7 @@ export const HighPrecision: Story = {
 
 export const WithField: Story = {
   render: () => {
-    const [value, setValue] = useState<number | string | null>(0);
+    const [value, setValue] = useState<number | null>(0);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
         <Field label="Amount" helperText="Enter amount in dollars">
@@ -214,7 +205,7 @@ export const WithField: Story = {
             value={value}
             onChange={setValue}
             formatter={(val) => `$ ${val}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-            parser={(str) => str.replace(/\$\s?|(,*)/g, '')}
+            parser={(str) => Number(str.replace(/\$\s?|(,*)/g, ''))}
             placeholder="0.00"
           />
         </Field>
@@ -235,11 +226,10 @@ export const WithField: Story = {
 
 export const KeyboardControls: Story = {
   render: () => {
-    const [value, setValue] = useState<number | string | null>(10);
+    const [value, setValue] = useState<number | null>(10);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
         <InputNumber
-          keyboard
           step={1}
           value={value}
           onChange={setValue}
@@ -247,26 +237,6 @@ export const KeyboardControls: Story = {
         />
         <p style={{ fontSize: '14px', color: '#666' }}>
           Value: {value} - Use ↑↓ arrow keys to change value
-        </p>
-      </div>
-    );
-  },
-};
-
-export const WheelControl: Story = {
-  render: () => {
-    const [value, setValue] = useState<number | string | null>(10);
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
-        <InputNumber
-          changeOnWheel
-          step={1}
-          value={value}
-          onChange={setValue}
-          placeholder="Scroll to change"
-        />
-        <p style={{ fontSize: '14px', color: '#666' }}>
-          Value: {value} - Scroll while focused to change value
         </p>
       </div>
     );

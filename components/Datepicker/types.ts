@@ -9,6 +9,11 @@ export interface DatePickerPreset {
   value: Date | (() => Date);
 }
 
+export interface DatePickerRangePreset {
+  label: string;
+  value: DatePickerRangeValue | (() => DatePickerRangeValue);
+}
+
 export interface DatePickerShowTime {
   format?: string;
   defaultValue?: Date;
@@ -71,7 +76,7 @@ export interface DatePickerProps extends Omit<React.InputHTMLAttributes<HTMLInpu
   saveText?: string;
 }
 
-export interface RangePickerProps extends Omit<DatePickerProps, 'value' | 'defaultValue' | 'onChange'> {
+export interface RangePickerProps extends Omit<DatePickerProps, 'value' | 'defaultValue' | 'onChange' | 'presets' | 'onSave'> {
   /** Current value (controlled) */
   value?: DatePickerRangeValue;
   /** Default value (uncontrolled) */
@@ -80,4 +85,8 @@ export interface RangePickerProps extends Omit<DatePickerProps, 'value' | 'defau
   onChange?: (dates: DatePickerRangeValue, dateStrings: [string, string]) => void;
   /** Separator between dates */
   separator?: string;
+  /** Quick-select presets shown in sidebar */
+  presets?: DatePickerRangePreset[];
+  /** Called when Save is clicked (presets mode) */
+  onSave?: (dates: DatePickerRangeValue, dateStrings: [string, string]) => void;
 }

@@ -6,6 +6,9 @@ user-invocable: false
 
 # Icon Token Structure
 
+**Related skills:**
+- **token-structure** — overall three-layer architecture and reference rules
+
 This skill defines the consistent structure for icon tokens across all components.
 
 ## Icon Token Patterns

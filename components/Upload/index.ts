@@ -1,8 +1,9 @@
-export {
-  Upload,
-  UploadDragger,
-  type UploadProps,
-  type UploadFile,
-  type UploadFileStatus,
-  type UploadListType,
-} from './Upload';
+export { default as Upload } from './Upload';
+export type {
+  UploadProps,
+  UploadFile,
+  UploadFileStatus,
+  UploadListType,
+  UploadListConfig,
+  UploadComponent,
+} from './types';

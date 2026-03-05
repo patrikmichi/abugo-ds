@@ -1,82 +1,46 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import domAlign from 'dom-align';
-import styles from './Tooltip.module.css';
+
 import { cn } from '@/lib/utils';
 
-export type TooltipPlacement =
-  | 'top'
-  | 'topLeft'
-  | 'topRight'
-  | 'bottom'
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'left'
-  | 'leftTop'
-  | 'leftBottom'
-  | 'right'
-  | 'rightTop'
-  | 'rightBottom';
+import styles from './Tooltip.module.css';
+import type { IProps, TooltipPlacement, BasePlacement } from './types';
 
-export type TooltipTrigger = 'hover' | 'focus' | 'click' | 'contextMenu';
+const PLACEMENT_POINTS: Record<TooltipPlacement, [string, string]> = {
+  top: ['bc', 'tc'],
+  topLeft: ['bl', 'tl'],
+  topRight: ['br', 'tr'],
+  bottom: ['tc', 'bc'],
+  bottomLeft: ['tl', 'bl'],
+  bottomRight: ['tr', 'br'],
+  left: ['cr', 'cl'],
+  leftTop: ['tr', 'tl'],
+  leftBottom: ['br', 'bl'],
+  right: ['cl', 'cr'],
+  rightTop: ['tl', 'tr'],
+  rightBottom: ['bl', 'br'],
+};
 
-export interface TooltipProps {
-  /** Tooltip content */
-  title?: React.ReactNode;
-  /** Alias for title */
-  content?: React.ReactNode;
-  /** Placement of tooltip */
-  placement?: TooltipPlacement;
-  /** Trigger mode */
-  trigger?: TooltipTrigger | TooltipTrigger[];
-  /** Whether arrow points to center */
-  arrowPointAtCenter?: boolean;
-  /** Auto adjust placement when overflow */
-  autoAdjustOverflow?: boolean;
-  /** Custom class name for tooltip */
-  overlayClassName?: string;
-  /** Custom style for tooltip */
-  overlayStyle?: React.CSSProperties;
-  /** Get container for tooltip */
-  getPopupContainer?: (triggerNode: HTMLElement) => HTMLElement;
-  /** Controlled open state */
-  open?: boolean;
-  /** Default open state */
-  defaultOpen?: boolean;
-  /** Callback when open state changes */
-  onOpenChange?: (open: boolean) => void;
-  /** Mouse enter delay (ms) */
-  mouseEnterDelay?: number;
-  /** Mouse leave delay (ms) */
-  mouseLeaveDelay?: number;
-  /** Children - element to attach tooltip to */
-  children: React.ReactElement;
-}
+const BASE_OFFSETS: Record<BasePlacement, [number, number]> = {
+  top: [0, -8],
+  bottom: [0, 8],
+  left: [-8, 0],
+  right: [8, 0],
+};
 
-/**
- * Tooltip Component
- * 
- * Simple text popup tip. Displays additional information on hover, focus, or click.
- * 
- * @example
- * ```tsx
- * // Basic tooltip
- * <Tooltip title="Tooltip content">
- *   <Button>Hover me</Button>
- * </Tooltip>
- * 
- * // With click trigger
- * <Tooltip title="Click to see" trigger="click">
- *   <Button>Click me</Button>
- * </Tooltip>
- * 
- * // With custom placement
- * <Tooltip title="Content" placement="bottomRight">
- *   <Button>Hover</Button>
- * </Tooltip>
- * ```
- */
-export function Tooltip({
+const getBasePlacement = (placement: TooltipPlacement): BasePlacement =>
+  placement.replace(/Left|Right|Top|Bottom/g, '') as BasePlacement;
+
+const getAlign = (placement: TooltipPlacement): string => {
+  if (placement.includes('Left')) return 'left';
+  if (placement.includes('Right')) return 'right';
+  if (placement.includes('Top')) return 'top';
+  if (placement.includes('Bottom')) return 'bottom';
+  return 'center';
+};
+
+const Tooltip = ({
   title,
   content,
   placement = 'top',
@@ -92,83 +56,49 @@ export function Tooltip({
   mouseEnterDelay = 0.1,
   mouseLeaveDelay = 0.1,
   children,
-}: TooltipProps) {
+}: IProps) => {
   const [internalOpen, setInternalOpen] = useState(defaultOpen);
   const [position, setPosition] = useState<{ top: number; left: number } | null>(null);
   const triggerRef = useRef<HTMLElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
-  const enterTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const leaveTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const enterTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const leaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const isControlled = controlledOpen !== undefined;
   const open = isControlled ? controlledOpen : internalOpen;
-
   const displayTitle = title || content;
   const triggers = Array.isArray(trigger) ? trigger : [trigger];
 
-  // Calculate placement points for dom-align
-  // points: [sourcePoint (tooltip), targetPoint (trigger)]
-  const getPlacementPoints = (placement: TooltipPlacement): [string, string] => {
-    const basePlacement = placement.replace(/Left|Right|Top|Bottom/g, '') as 'top' | 'bottom' | 'left' | 'right';
-
-    if (basePlacement === 'top') {
-      if (placement.includes('Left')) return ['bl', 'tl'];
-      if (placement.includes('Right')) return ['br', 'tr'];
-      return ['bc', 'tc'];
-    }
-    if (basePlacement === 'bottom') {
-      if (placement.includes('Left')) return ['tl', 'bl'];
-      if (placement.includes('Right')) return ['tr', 'br'];
-      return ['tc', 'bc'];
-    }
-    if (basePlacement === 'left') {
-      if (placement.includes('Top')) return ['tr', 'tl'];
-      if (placement.includes('Bottom')) return ['br', 'bl'];
-      return ['cr', 'cl'];
-    }
-    // right
-    if (placement.includes('Top')) return ['tl', 'tr'];
-    if (placement.includes('Bottom')) return ['bl', 'br'];
-    return ['cl', 'cr'];
-  };
+  const clearTimers = useCallback(() => {
+    if (enterTimerRef.current) clearTimeout(enterTimerRef.current);
+    if (leaveTimerRef.current) clearTimeout(leaveTimerRef.current);
+  }, []);
 
   const handleOpen = useCallback(() => {
-    if (leaveTimerRef.current) {
-      clearTimeout(leaveTimerRef.current);
-      leaveTimerRef.current = null;
-    }
-
-    if (enterTimerRef.current) {
-      clearTimeout(enterTimerRef.current);
-    }
-
+    clearTimers();
     enterTimerRef.current = setTimeout(() => {
-      if (!isControlled) {
-        setInternalOpen(true);
-      }
+      if (!isControlled) setInternalOpen(true);
       onOpenChange?.(true);
     }, mouseEnterDelay * 1000);
-  }, [isControlled, onOpenChange, mouseEnterDelay]);
+  }, [isControlled, onOpenChange, mouseEnterDelay, clearTimers]);
 
   const handleClose = useCallback(() => {
-    if (enterTimerRef.current) {
-      clearTimeout(enterTimerRef.current);
-      enterTimerRef.current = null;
-    }
-
-    if (leaveTimerRef.current) {
-      clearTimeout(leaveTimerRef.current);
-    }
-
+    clearTimers();
     leaveTimerRef.current = setTimeout(() => {
-      if (!isControlled) {
-        setInternalOpen(false);
-      }
+      if (!isControlled) setInternalOpen(false);
       onOpenChange?.(false);
     }, mouseLeaveDelay * 1000);
-  }, [isControlled, onOpenChange, mouseLeaveDelay]);
+  }, [isControlled, onOpenChange, mouseLeaveDelay, clearTimers]);
 
-  // Update position when tooltip opens
+  const handleToggle = useCallback(() => {
+    if (open) {
+      handleClose();
+    } else {
+      handleOpen();
+    }
+  }, [open, handleOpen, handleClose]);
+
+  // Position tooltip using dom-align (viewport collision detection requires JS)
   useEffect(() => {
     if (!open || !triggerRef.current || !tooltipRef.current) {
       setPosition(null);
@@ -176,78 +106,73 @@ export function Tooltip({
     }
 
     const updatePosition = () => {
-      const trigger = triggerRef.current;
-      const tooltip = tooltipRef.current;
-      if (!trigger || !tooltip) return;
+      const triggerEl = triggerRef.current;
+      const tooltipEl = tooltipRef.current;
+      if (!triggerEl || !tooltipEl) return;
 
-      // Ensure tooltip is visible for measurement
-      tooltip.style.visibility = 'hidden';
-      tooltip.style.display = 'block';
+      tooltipEl.style.visibility = 'hidden';
+      tooltipEl.style.display = 'block';
+      // Ensure natural width before dom-align measures
+      tooltipEl.style.width = 'auto';
+      tooltipEl.style.height = 'auto';
 
-      const [sourcePoint, targetPoint] = getPlacementPoints(placement);
-      const gap = 8;
-      const basePlc = placement.replace(/Left|Right|Top|Bottom/g, '') as 'top' | 'bottom' | 'left' | 'right';
-      const offset: [number, number] =
-        basePlc === 'top' ? [0, -gap] :
-        basePlc === 'bottom' ? [0, gap] :
-        basePlc === 'left' ? [-gap, 0] :
-        [gap, 0];
+      const [sourcePoint, targetPoint] = PLACEMENT_POINTS[placement];
+      const basePlacement = getBasePlacement(placement);
 
-      const alignConfig = {
+      domAlign(tooltipEl, triggerEl, {
         points: [sourcePoint, targetPoint],
-        offset,
+        offset: BASE_OFFSETS[basePlacement],
         overflow: {
           adjustX: autoAdjustOverflow,
           adjustY: autoAdjustOverflow,
-          alwaysByViewport: true,
+          alwaysByViewport: false,
         },
         useCssTransform: false,
         useCssRight: false,
         useCssBottom: false,
-      };
+      });
 
-      // Perform alignment
-      domAlign(tooltip, trigger, alignConfig);
+      // Force clear any width/height constraints that dom-align might have set
+      tooltipEl.style.width = '';
+      tooltipEl.style.height = '';
+      tooltipEl.style.minWidth = '';
+      tooltipEl.style.maxWidth = '';
 
-      // Get final position
-      const computedStyle = window.getComputedStyle(tooltip);
-      const top = parseFloat(computedStyle.top) || 0;
-      const left = parseFloat(computedStyle.left) || 0;
-
-      setPosition({ top, left });
-      tooltip.style.visibility = 'visible';
+      const computed = window.getComputedStyle(tooltipEl);
+      setPosition({
+        top: parseFloat(computed.top) || 0,
+        left: parseFloat(computed.left) || 0,
+      });
+      tooltipEl.style.visibility = 'visible';
     };
 
-    // Small delay to ensure tooltip is rendered
     const timer = setTimeout(updatePosition, 0);
     window.addEventListener('resize', updatePosition);
     window.addEventListener('scroll', updatePosition, true);
 
-    // Handle hover on tooltip itself when hover trigger is used
-    const tooltipElement = tooltipRef.current;
-    if (tooltipElement && triggers.includes('hover')) {
-      tooltipElement.addEventListener('mouseenter', handleOpen);
-      tooltipElement.addEventListener('mouseleave', handleClose);
+    const tooltipEl = tooltipRef.current;
+    if (tooltipEl && triggers.includes('hover')) {
+      tooltipEl.addEventListener('mouseenter', handleOpen);
+      tooltipEl.addEventListener('mouseleave', handleClose);
     }
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener('resize', updatePosition);
       window.removeEventListener('scroll', updatePosition, true);
-      if (tooltipElement && triggers.includes('hover')) {
-        tooltipElement.removeEventListener('mouseenter', handleOpen);
-        tooltipElement.removeEventListener('mouseleave', handleClose);
+      if (tooltipEl && triggers.includes('hover')) {
+        tooltipEl.removeEventListener('mouseenter', handleOpen);
+        tooltipEl.removeEventListener('mouseleave', handleClose);
       }
     };
   }, [open, placement, autoAdjustOverflow, triggers, handleOpen, handleClose]);
 
-  // Setup event handlers
+  // Setup trigger event handlers
   useEffect(() => {
-    const trigger = triggerRef.current;
-    const tooltip = tooltipRef.current;
-    if (!trigger) return;
+    const triggerEl = triggerRef.current;
+    if (!triggerEl) return;
 
-    const handlers: { [key: string]: (e?: Event) => void } = {};
+    const handlers: Record<string, EventListener> = {};
 
     if (triggers.includes('hover')) {
       handlers.mouseenter = handleOpen;
@@ -259,62 +184,37 @@ export function Tooltip({
     }
     if (triggers.includes('click')) {
       handlers.click = (e) => {
-        e?.stopPropagation();
-        if (open) {
-          handleClose();
-        } else {
-          handleOpen();
-        }
+        e.stopPropagation();
+        handleToggle();
       };
     }
     if (triggers.includes('contextMenu')) {
       handlers.contextmenu = (e) => {
-        e?.preventDefault();
-        e?.stopPropagation();
-        if (open) {
-          handleClose();
-        } else {
-          handleOpen();
-        }
+        e.preventDefault();
+        e.stopPropagation();
+        handleToggle();
       };
     }
 
     Object.entries(handlers).forEach(([event, handler]) => {
-      trigger.addEventListener(event, handler as any);
+      triggerEl.addEventListener(event, handler);
     });
 
     return () => {
       Object.entries(handlers).forEach(([event, handler]) => {
-        trigger.removeEventListener(event, handler as any);
+        triggerEl.removeEventListener(event, handler);
       });
-      if (tooltip && triggers.includes('hover')) {
-        tooltip.removeEventListener('mouseenter', handleOpen);
-        tooltip.removeEventListener('mouseleave', handleClose);
-      }
-      if (enterTimerRef.current) {
-        clearTimeout(enterTimerRef.current);
-      }
-      if (leaveTimerRef.current) {
-        clearTimeout(leaveTimerRef.current);
-      }
+      clearTimers();
     };
-  }, [triggers, handleOpen, handleClose, open]);
+  }, [triggers, handleOpen, handleClose, handleToggle, clearTimers]);
 
-  // Early return check must come AFTER all hooks
   if (!displayTitle) {
     return <>{children}</>;
   }
 
-  const basePlacement = placement.replace(/Left|Right|Top|Bottom/g, '') as 'top' | 'bottom' | 'left' | 'right';
-  const align = placement.includes('Left') 
-    ? 'left' 
-    : placement.includes('Right') 
-    ? 'right' 
-    : placement.includes('Top') 
-    ? 'top' 
-    : placement.includes('Bottom') 
-    ? 'bottom' 
-    : 'center';
+  const basePlacement = getBasePlacement(placement);
+  const align = getAlign(placement);
+  const alignClass = align !== 'center' ? `${basePlacement}${align.charAt(0).toUpperCase()}${align.slice(1)}` : null;
 
   const tooltipContent = (
     <div
@@ -322,11 +222,11 @@ export function Tooltip({
       className={cn(
         styles.tooltip,
         styles[basePlacement],
-        align !== 'center' && styles[`${basePlacement}${align.charAt(0).toUpperCase() + align.slice(1)}`],
+        alignClass && styles[alignClass],
         overlayClassName
       )}
       style={{
-        ...(position ? { position: 'fixed', top: `${position.top}px`, left: `${position.left}px` } : { display: 'none' }),
+        ...(position ? { position: 'fixed', top: position.top, left: position.left } : { display: 'none' }),
         ...overlayStyle,
       }}
       data-hover-enabled={triggers.includes('hover') ? 'true' : 'false'}
@@ -336,32 +236,33 @@ export function Tooltip({
       <div
         className={cn(
           styles.arrow,
-          styles[`arrow${basePlacement.charAt(0).toUpperCase() + basePlacement.slice(1)}`],
+          styles[`arrow${basePlacement.charAt(0).toUpperCase()}${basePlacement.slice(1)}`],
           arrowPointAtCenter && styles.arrowPointAtCenter
         )}
       />
     </div>
   );
 
-  const container = triggerRef.current && getPopupContainer ? getPopupContainer(triggerRef.current) : document.body;
+  const container = triggerRef.current && getPopupContainer
+    ? getPopupContainer(triggerRef.current)
+    : document.body;
 
-  const childProps: any = {
-    ref: (node: HTMLElement | null) => {
-      triggerRef.current = node;
-      // Handle original ref if it exists
-      const originalRef = (children as any).ref;
-      if (typeof originalRef === 'function') {
-        originalRef(node);
-      } else if (originalRef && typeof originalRef === 'object') {
-        originalRef.current = node;
-      }
-    },
+  const childRef = (node: HTMLElement | null) => {
+    triggerRef.current = node;
+    const originalRef = (children as React.ReactElement & { ref?: React.Ref<HTMLElement> }).ref;
+    if (typeof originalRef === 'function') {
+      originalRef(node);
+    } else if (originalRef && typeof originalRef === 'object') {
+      (originalRef as React.MutableRefObject<HTMLElement | null>).current = node;
+    }
   };
 
   return (
     <>
-      {React.cloneElement(children, childProps)}
+      {React.cloneElement(children, { ref: childRef } as React.Attributes)}
       {open && createPortal(tooltipContent, container)}
     </>
   );
-}
+};
+
+export default Tooltip;

@@ -1,8 +1,7 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Badge } from '@/components/Badge';
 import { Button } from '@/components/Button';
-import { Avatar } from '@/components/Avatar';
+import Avatar from '@/components/Avatar';
 
 const meta: Meta<typeof Badge> = {
   title: 'Components/Badge',
@@ -91,7 +90,7 @@ export const WithAvatar: Story = {
         <Avatar>JD</Avatar>
       </Badge>
       <Badge count={1000} overflowCount={999}>
-        <Avatar shape="square">AB</Avatar>
+        <Avatar>AB</Avatar>
       </Badge>
     </div>
   ),
@@ -116,42 +115,20 @@ export const Sizes: Story = {
   ),
 };
 
-export const CustomColor: Story = {
+export const Variants: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
-      <Badge count={5} color="#52c41a">
-        <Button>Green</Button>
+      <Badge count={5} variant="success">
+        <Button>Success</Button>
       </Badge>
-      <Badge count={5} color="#1890ff">
-        <Button>Blue</Button>
+      <Badge count={5} variant="warning">
+        <Button>Warning</Button>
       </Badge>
-      <Badge count={5} color="#faad14">
-        <Button>Orange</Button>
+      <Badge count={5} variant="error">
+        <Button>Error</Button>
       </Badge>
-      <Badge count={5} color="#eb2f96">
-        <Button>Pink</Button>
-      </Badge>
-      <Badge dot color="#52c41a">
-        <Button>Green Dot</Button>
-      </Badge>
-      <Badge dot color="#1890ff">
-        <Button>Blue Dot</Button>
-      </Badge>
-    </div>
-  ),
-};
-
-export const Offset: Story = {
-  render: () => (
-    <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-      <Badge count={5} offset={[10, 10]}>
-        <Button>Offset [10, 10]</Button>
-      </Badge>
-      <Badge count={5} offset={[-10, 10]}>
-        <Button>Offset [-10, 10]</Button>
-      </Badge>
-      <Badge dot offset={[5, 5]}>
-        <Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=1" />
+      <Badge count={5} variant="upgrade">
+        <Button>Upgrade</Button>
       </Badge>
     </div>
   ),
@@ -188,4 +165,3 @@ export const Overflow: Story = {
     </div>
   ),
 };
-

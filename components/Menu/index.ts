@@ -1,8 +1,3 @@
-export {
-  Menu,
-  MenuItem,
-  type MenuProps,
-  type MenuItemProps,
-  type MenuMode,
-  type MenuTheme,
-} from './Menu';
+export { Menu } from './Menu';
+export { MenuItem } from './MenuItem';
+export type { MenuProps, MenuItemProps, MenuMode, MenuTheme, MenuContextValue } from './types';

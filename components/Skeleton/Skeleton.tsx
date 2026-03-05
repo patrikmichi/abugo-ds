@@ -1,158 +1,72 @@
-import React from 'react';
-import styles from './Skeleton.module.css';
 import { cn } from '@/lib/utils';
+import styles from './Skeleton.module.css';
+import type {
+  SkeletonProps,
+  SkeletonAvatarProps,
+  SkeletonTitleProps,
+  SkeletonParagraphProps,
+  SkeletonButtonProps,
+  SkeletonImageProps,
+  SkeletonInputProps,
+  SkeletonComponent,
+} from './types';
 
-export type SkeletonAvatarShape = 'circle' | 'square';
-export type SkeletonAvatarSize = 'large' | 'small' | 'default' | number;
-export type SkeletonButtonShape = 'circle' | 'round' | 'square' | 'default';
-export type SkeletonButtonSize = 'large' | 'small' | 'default';
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
-export interface SkeletonAvatarProps {
-  /** Enable animation effect */
-  active?: boolean;
-  /** Shape of avatar */
-  shape?: SkeletonAvatarShape;
-  /** Size of avatar */
-  size?: SkeletonAvatarSize;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
+const formatWidth = (width: number | string | undefined) => {
+  if (width === undefined) return undefined;
+  return typeof width === 'number' ? `${width}px` : width;
+};
 
-export interface SkeletonTitleProps {
-  /** Width of title */
-  width?: number | string;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
-
-export interface SkeletonParagraphProps {
-  /** Number of rows */
-  rows?: number;
-  /** Width of paragraph. If array, sets width for each row; otherwise sets width of last row */
-  width?: number | string | Array<number | string>;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
-
-export interface SkeletonButtonProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Enable animation effect */
-  active?: boolean;
-  /** Make button fit parent width */
-  block?: boolean;
-  /** Shape of button */
-  shape?: SkeletonButtonShape;
-  /** Size of button */
-  size?: SkeletonButtonSize;
-}
-
-export interface SkeletonImageProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Enable animation effect */
-  active?: boolean;
-}
-
-export interface SkeletonInputProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Enable animation effect */
-  active?: boolean;
-  /** Size of input */
-  size?: 'large' | 'small' | 'default';
-  /** Make input fit parent width */
-  block?: boolean;
-}
-
-export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Enable animation effect */
-  active?: boolean;
-  /** Display avatar placeholder */
-  avatar?: boolean | SkeletonAvatarProps;
-  /** Show skeleton when true */
-  loading?: boolean;
-  /** Display paragraph placeholder */
-  paragraph?: boolean | SkeletonParagraphProps;
-  /** Apply border-radius to paragraph and title */
-  round?: boolean;
-  /** Display title placeholder */
-  title?: boolean | SkeletonTitleProps;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-  /** Children (rendered when loading is false) */
-  children?: React.ReactNode;
-}
-
-/**
- * Skeleton Avatar Component
- */
-function SkeletonAvatar({
+const SkeletonAvatar = ({
   active = false,
   shape = 'circle',
   size = 'default',
   className,
   style,
-}: SkeletonAvatarProps) {
-  const getSizeStyle = (): React.CSSProperties => {
-    if (typeof size === 'number') {
-      return { width: `${size}px`, height: `${size}px` };
-    }
-    return {};
-  };
+}: SkeletonAvatarProps) => {
+  const sizeStyle = typeof size === 'number'
+    ? { width: `${size}px`, height: `${size}px` }
+    : {};
+
+  const sizeClass = typeof size === 'string' && size !== 'default'
+    ? styles[`avatar${capitalize(size)}`]
+    : undefined;
 
   return (
     <span
       className={cn(
         styles.avatar,
-        styles[`avatar${shape.charAt(0).toUpperCase() + shape.slice(1)}`],
-        size !== 'default' && typeof size !== 'number' && styles[`avatar${size.charAt(0).toUpperCase() + size.slice(1)}`],
+        styles[`avatar${capitalize(shape)}`],
+        sizeClass,
         active && styles.active,
         className
       )}
-      style={{ ...getSizeStyle(), ...style }}
+      style={{ ...sizeStyle, ...style }}
     />
   );
-}
+};
 
-/**
- * Skeleton Title Component
- */
-function SkeletonTitle({ width, className, style }: SkeletonTitleProps) {
-  return (
-    <div
-      className={cn(styles.title, className)}
-      style={{ width: width ? (typeof width === 'number' ? `${width}px` : width) : undefined, ...style }}
-    />
-  );
-}
+const SkeletonTitle = ({ width, className, style }: SkeletonTitleProps) => (
+  <div
+    className={cn(styles.title, className)}
+    style={{ width: formatWidth(width), ...style }}
+  />
+);
 
-/**
- * Skeleton Paragraph Component
- */
-function SkeletonParagraph({ rows = 3, width, className, style }: SkeletonParagraphProps) {
+const SkeletonParagraph = ({ rows = 3, width, className, style }: SkeletonParagraphProps) => {
   const widths = Array.isArray(width) ? width : width ? [undefined, undefined, width] : undefined;
 
   return (
     <ul className={cn(styles.paragraph, className)} style={style}>
       {Array.from({ length: rows }).map((_, index) => (
-        <li
-          key={index}
-          style={{
-            width: widths?.[index] ? (typeof widths[index] === 'number' ? `${widths[index]}px` : widths[index]) : undefined,
-          }}
-        />
+        <li key={index} style={{ width: formatWidth(widths?.[index]) }} />
       ))}
     </ul>
   );
-}
+};
 
-/**
- * Skeleton Button Component
- */
-function SkeletonButton({
+const SkeletonButton = ({
   active = false,
   block = false,
   shape = 'default',
@@ -160,76 +74,60 @@ function SkeletonButton({
   className,
   style,
   ...props
-}: SkeletonButtonProps) {
+}: SkeletonButtonProps) => {
+  const shapeClass = shape !== 'default' ? styles[`button${capitalize(shape)}`] : undefined;
+  const sizeClass = size !== 'default' ? styles[`button${capitalize(size)}`] : undefined;
+
   return (
     <div
       className={cn(
         styles.button,
         active && styles.active,
         block && styles.buttonBlock,
-        shape !== 'default' && styles[`button${shape.charAt(0).toUpperCase() + shape.slice(1)}`],
-        size !== 'default' && styles[`button${size.charAt(0).toUpperCase() + size.slice(1)}`],
+        shapeClass,
+        sizeClass,
         className
       )}
       style={style}
       {...props}
     />
   );
-}
+};
 
-/**
- * Skeleton Image Component
- */
-function SkeletonImage({ active = false, className, style, ...props }: SkeletonImageProps) {
-  return (
-    <div
-      className={cn(styles.image, active && styles.active, className)}
-      style={style}
-      {...props}
-    />
-  );
-}
+const SkeletonImage = ({ active = false, className, style, ...props }: SkeletonImageProps) => (
+  <div
+    className={cn(styles.image, active && styles.active, className)}
+    style={style}
+    {...props}
+  />
+);
 
-/**
- * Skeleton Input Component
- */
-function SkeletonInput({
+const SkeletonInput = ({
   active = false,
   size = 'default',
   block = false,
   className,
   style,
   ...props
-}: SkeletonInputProps) {
+}: SkeletonInputProps) => {
+  const sizeClass = size !== 'default' ? styles[`input${capitalize(size)}`] : undefined;
+
   return (
     <div
       className={cn(
         styles.input,
         active && styles.active,
         block && styles.inputBlock,
-        size !== 'default' && styles[`input${size.charAt(0).toUpperCase() + size.slice(1)}`],
+        sizeClass,
         className
       )}
       style={style}
       {...props}
     />
   );
-}
+};
 
-/**
- * Skeleton Component
- * 
- * Placeholder for loading content, matching 
- * 
- * @example
- * ```tsx
- * <Skeleton active avatar paragraph={{ rows: 4 }} />
- * <Skeleton.Button active block />
- * <Skeleton.Image active />
- * <Skeleton.Input active block />
- * ```
- */
-export function Skeleton({
+const Skeleton = ({
   active = false,
   avatar = false,
   loading = true,
@@ -240,7 +138,7 @@ export function Skeleton({
   style,
   children,
   ...props
-}: SkeletonProps) {
+}: SkeletonProps) => {
   if (!loading && children) {
     return <>{children}</>;
   }
@@ -267,10 +165,11 @@ export function Skeleton({
       </div>
     </div>
   );
-}
+};
 
-// Attach sub-components
-(Skeleton as any).Avatar = SkeletonAvatar;
-(Skeleton as any).Button = SkeletonButton;
-(Skeleton as any).Image = SkeletonImage;
-(Skeleton as any).Input = SkeletonInput;
+Skeleton.Avatar = SkeletonAvatar;
+Skeleton.Button = SkeletonButton;
+Skeleton.Image = SkeletonImage;
+Skeleton.Input = SkeletonInput;
+
+export default Skeleton as SkeletonComponent;

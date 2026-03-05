@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { DatePicker, type DatePickerPreset } from '@/components/Datepicker';
+import { DatePicker, RangePicker as DateRangePicker, type DatePickerPreset } from '@/components/Datepicker';
 import { Field } from '@/components/Field';
 import { Button } from '@/components/Button';
 
@@ -205,7 +205,7 @@ export const RangePicker: Story = {
     const [value, setValue] = useState<[Date | null, Date | null] | null>(null);
     return (
       <div style={{ maxWidth: '600px' }}>
-        <DatePicker.RangePicker
+        <DateRangePicker
           value={value}
           onChange={(dates) => {
             setValue(dates);
@@ -230,7 +230,7 @@ export const RangePickerPreSelected: Story = {
     const [value, setValue] = useState<[Date | null, Date | null] | null>([start, end]);
     return (
       <div style={{ maxWidth: '600px' }}>
-        <DatePicker.RangePicker
+        <DateRangePicker
           value={value}
           onChange={(dates) => {
             setValue(dates);

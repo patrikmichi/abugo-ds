@@ -5,7 +5,8 @@
   z-index: var(--token-component-tooltip-z-index, 1060);
   pointer-events: none;
   max-width: var(--token-component-tooltip-max-width, 250px);
-  word-wrap: break-word;
+  width: max-content !important;
+  min-width: max-content !important;
   font-family: var(--token-primitive-typography-font-family-sans);
 }
 
@@ -18,7 +19,7 @@
   background-color: var(--token-component-tooltip-container-background);
   color: var(--token-component-tooltip-container-content);
   padding: var(--token-component-tooltip-padding-y, 4px) var(--token-component-tooltip-padding-x, 8px);
-  border-radius: calc(var(--token-component-tooltip-radius, 4px) * 1px);
+  border-radius: var(--token-component-tooltip-radius, 4px);
   font-size: var(--token-component-tooltip-font-size, 12px);
   line-height: var(--token-component-tooltip-line-height, 1.5);
   font-family: var(--token-primitive-typography-font-family-sans);
@@ -69,15 +70,46 @@
   border-color: transparent var(--token-component-tooltip-arrow-background) transparent transparent;
 }
 
-/* Arrow point at center - adjust position */
+/* Arrow positioning for aligned placements */
+.tooltip.topLeft .arrowTop,
+.tooltip.bottomLeft .arrowBottom {
+  left: 16px;
+  transform: none;
+}
+
+.tooltip.topRight .arrowTop,
+.tooltip.bottomRight .arrowBottom {
+  left: auto;
+  right: 16px;
+  transform: none;
+}
+
+.tooltip.leftTop .arrowLeft,
+.tooltip.rightTop .arrowRight {
+  top: 12px;
+  transform: none;
+}
+
+.tooltip.leftBottom .arrowLeft,
+.tooltip.rightBottom .arrowRight {
+  top: auto;
+  bottom: 12px;
+  transform: none;
+}
+
+/* Arrow point at center - override aligned positioning */
 .arrowPointAtCenter.arrowTop,
 .arrowPointAtCenter.arrowBottom {
-  left: 50%;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
 }
 
 .arrowPointAtCenter.arrowLeft,
 .arrowPointAtCenter.arrowRight {
-  top: 50%;
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
 }
 
 /* Placement classes for positioning (used by JS) */

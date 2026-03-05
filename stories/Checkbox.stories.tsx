@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Checkbox } from '@/components/Checkbox';
+import { Checkbox, CheckboxGroup } from '@/components/Checkbox';
 import { Field } from '@/components/Field';
 
 const meta: Meta<typeof Checkbox> = {
@@ -60,11 +60,11 @@ export const Indeterminate: Story = {
         >
           Check all
         </Checkbox>
-        <Checkbox.Group value={checkedList} onChange={setCheckedList}>
+        <CheckboxGroup value={checkedList} onChange={setCheckedList}>
           <Checkbox value="apple">Apple</Checkbox>
           <Checkbox value="banana">Banana</Checkbox>
           <Checkbox value="orange">Orange</Checkbox>
-        </Checkbox.Group>
+        </CheckboxGroup>
       </div>
     );
   },
@@ -75,11 +75,11 @@ export const GroupVertical: Story = {
     const [value, setValue] = useState<string[]>(['apple']);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <Checkbox.Group value={value} onChange={setValue}>
+        <CheckboxGroup value={value} onChange={setValue}>
           <Checkbox value="apple">Apple</Checkbox>
           <Checkbox value="banana">Banana</Checkbox>
           <Checkbox value="orange">Orange</Checkbox>
-        </Checkbox.Group>
+        </CheckboxGroup>
         <p style={{ fontSize: '14px' }}>Selected: {value.join(', ') || 'None'}</p>
       </div>
     );
@@ -91,11 +91,11 @@ export const GroupHorizontal: Story = {
     const [value, setValue] = useState<string[]>([]);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <Checkbox.Group value={value} onChange={setValue} direction="horizontal">
+        <CheckboxGroup value={value} onChange={setValue} direction="horizontal">
           <Checkbox value="a">Option A</Checkbox>
           <Checkbox value="b">Option B</Checkbox>
           <Checkbox value="c">Option C</Checkbox>
-        </Checkbox.Group>
+        </CheckboxGroup>
         <p style={{ fontSize: '14px' }}>Selected: {value.join(', ') || 'None'}</p>
       </div>
     );
@@ -107,7 +107,7 @@ export const GroupWithOptions: Story = {
     const [value, setValue] = useState<string[]>(['option1']);
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <Checkbox.Group
+        <CheckboxGroup
           value={value}
           onChange={setValue}
           options={[
@@ -125,11 +125,11 @@ export const GroupWithOptions: Story = {
 export const GroupDisabled: Story = {
   render: () => {
     return (
-      <Checkbox.Group disabled defaultValue={['option1']}>
+      <CheckboxGroup disabled defaultValue={['option1']}>
         <Checkbox value="option1">Option 1</Checkbox>
         <Checkbox value="option2">Option 2</Checkbox>
         <Checkbox value="option3">Option 3</Checkbox>
-      </Checkbox.Group>
+      </CheckboxGroup>
     );
   },
 };

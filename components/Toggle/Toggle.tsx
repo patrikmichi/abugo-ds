@@ -1,53 +1,11 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import styles from './Toggle.module.css';
+import { useState, useRef, useEffect, useCallback } from 'react';
+
 import { cn } from '@/lib/utils';
 
-export type ToggleSize = 'default' | 'small';
+import styles from './Toggle.module.css';
+import type { IProps } from './types';
 
-export interface ToggleProps extends Omit<React.HTMLAttributes<HTMLButtonElement>, 'onChange' | 'onClick' | 'size'> {
-  /** Automatically focus the component when it mounts */
-  autoFocus?: boolean;
-  /** Whether the Switch is checked (controlled) */
-  checked?: boolean;
-  /** Content to be shown when checked */
-  checkedChildren?: React.ReactNode;
-  /** Initial checked state (uncontrolled) */
-  defaultChecked?: boolean;
-  /** Disable the Switch */
-  disabled?: boolean;
-  /** Loading state */
-  loading?: boolean;
-  /** The size of the Switch */
-  size?: ToggleSize;
-  /** Content to be shown when unchecked */
-  unCheckedChildren?: React.ReactNode;
-  /** Callback when checked state changes */
-  onChange?: (checked: boolean, event: React.MouseEvent<HTMLButtonElement>) => void;
-  /** Callback when Switch is clicked */
-  onClick?: (checked: boolean, event: React.MouseEvent<HTMLButtonElement>) => void;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
-
-/**
- * Toggle (Switch) Component
- * 
- * Switch component for toggling between two states.
- * 
- * 
- * @example
- * ```tsx
- * <Toggle
- *   checked={checked}
- *   onChange={(checked, e) => setChecked(checked)}
- *   checkedChildren="ON"
- *   unCheckedChildren="OFF"
- * />
- * ```
- */
-export function Toggle({
+const Toggle = ({
   autoFocus = false,
   checked: controlledChecked,
   checkedChildren,
@@ -61,14 +19,13 @@ export function Toggle({
   className,
   style,
   ...props
-}: ToggleProps) {
+}: IProps) => {
   const [internalChecked, setInternalChecked] = useState(defaultChecked);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const isControlled = controlledChecked !== undefined;
   const checked = isControlled ? controlledChecked : internalChecked;
 
-  // Auto focus
   useEffect(() => {
     if (autoFocus && buttonRef.current && !disabled) {
       buttonRef.current.focus();
@@ -103,12 +60,14 @@ export function Toggle({
           setInternalChecked(newChecked);
         }
 
-        onChange?.(newChecked, e as any);
-        onClick?.(newChecked, e as any);
+        onChange?.(newChecked, e as unknown as React.MouseEvent<HTMLButtonElement>);
+        onClick?.(newChecked, e as unknown as React.MouseEvent<HTMLButtonElement>);
       }
     },
     [disabled, loading, checked, isControlled, onChange, onClick]
   );
+
+  const hasChildren = checkedChildren || unCheckedChildren;
 
   return (
     <button
@@ -141,11 +100,13 @@ export function Toggle({
           </span>
         )}
       </span>
-      {(checkedChildren || unCheckedChildren) && (
+      {hasChildren && (
         <span className={styles.inner}>
           {checked ? checkedChildren : unCheckedChildren}
         </span>
       )}
     </button>
   );
-}
+};
+
+export default Toggle;

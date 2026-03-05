@@ -26,10 +26,10 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'danger', 'tertiary', 'upgrade'],
+      options: ['primary', 'secondary', 'danger', 'upgrade'],
       description: 'The visual variant of the button',
       table: {
-        type: { summary: 'primary | secondary | danger | tertiary | upgrade' },
+        type: { summary: 'primary | secondary | danger | upgrade' },
         defaultValue: { summary: 'primary' },
       },
     },
@@ -39,7 +39,7 @@ const meta: Meta<typeof Button> = {
       description: 'The visual appearance of the button (filled, plain, outline)',
       table: {
         type: { summary: 'filled | plain | outline' },
-        defaultValue: { summary: 'filled (primary/danger/upgrade) or outline (secondary/tertiary)' },
+        defaultValue: { summary: 'filled' },
       },
     },
     type: {
@@ -48,7 +48,7 @@ const meta: Meta<typeof Button> = {
       description: '⚠️ Deprecated: Use `appearance` instead. The visual type of the button (filled, plain, outline)',
       table: {
         type: { summary: 'filled | plain | outline (deprecated)' },
-        defaultValue: { summary: 'filled (primary/danger/upgrade) or outline (secondary/tertiary)' },
+        defaultValue: { summary: 'filled' },
       },
     },
     'aria-label': {
@@ -165,12 +165,23 @@ export const PrimaryPlain: Story = {
 };
 
 /**
- * Secondary Outline Button - Most common secondary action
+ * Secondary Filled Button
+ */
+export const SecondaryFilled: Story = {
+  args: {
+    variant: 'secondary',
+    appearance: 'filled',
+    children: 'Secondary Filled',
+  },
+};
+
+/**
+ * Secondary Outline Button
  */
 export const SecondaryOutline: Story = {
   args: {
     variant: 'secondary',
-    type: 'outline',
+    appearance: 'outline',
     children: 'Secondary Outline',
   },
 };
@@ -181,19 +192,8 @@ export const SecondaryOutline: Story = {
 export const SecondaryPlain: Story = {
   args: {
     variant: 'secondary',
-    type: 'plain',
+    appearance: 'plain',
     children: 'Secondary Plain',
-  },
-};
-
-/**
- * Tertiary Outline Button
- */
-export const TertiaryOutline: Story = {
-  args: {
-    variant: 'tertiary',
-    type: 'outline',
-    children: 'Tertiary Outline',
   },
 };
 
@@ -541,26 +541,23 @@ export const AllVariants: Story = {
           <h4 style={{ marginBottom: '1rem' }}>Primary</h4>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Button variant="primary" appearance="filled">Filled</Button>
+            <Button variant="primary" appearance="outline">Outline</Button>
             <Button variant="primary" appearance="plain">Plain</Button>
           </div>
         </div>
         <div>
           <h4 style={{ marginBottom: '1rem' }}>Secondary</h4>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Button variant="secondary" appearance="filled">Filled</Button>
             <Button variant="secondary" appearance="outline">Outline</Button>
             <Button variant="secondary" appearance="plain">Plain</Button>
-          </div>
-        </div>
-        <div>
-          <h4 style={{ marginBottom: '1rem' }}>Tertiary</h4>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <Button variant="tertiary" appearance="outline">Outline</Button>
           </div>
         </div>
         <div>
           <h4 style={{ marginBottom: '1rem' }}>Danger</h4>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <Button variant="danger" appearance="filled">Filled</Button>
+            <Button variant="danger" appearance="outline">Outline</Button>
             <Button variant="danger" appearance="plain">Plain</Button>
           </div>
         </div>

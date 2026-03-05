@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Textarea } from '@/components/Textarea';
 
@@ -13,9 +12,11 @@ const meta: Meta<typeof Textarea> = {
       control: 'select',
       options: ['sm', 'md', 'lg'],
     },
-    status: {
-      control: 'select',
-      options: ['enabled', 'error', 'disabled'],
+    error: {
+      control: 'boolean',
+    },
+    disabled: {
+      control: 'boolean',
     },
   },
 };
@@ -43,9 +44,9 @@ export const Sizes: Story = {
 export const States: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
-      <Textarea placeholder="Enabled" status="enabled" rows={4} />
-      <Textarea placeholder="Error state" status="error" rows={4} />
-      <Textarea placeholder="Disabled" status="disabled" rows={4} />
+      <Textarea placeholder="Enabled" rows={4} />
+      <Textarea placeholder="Error state" error rows={4} />
+      <Textarea placeholder="Disabled" disabled rows={4} />
     </div>
   ),
 };

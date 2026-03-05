@@ -25,14 +25,14 @@
 
 .skeleton.round .title,
 .skeleton.round .paragraph li {
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
 }
 
 /* Avatar */
 .avatar {
   flex-shrink: 0;
   background: var(--token-component-skeleton-background, #f2f2f2);
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
   width: var(--token-component-skeleton-avatar-size-default, 40px);
   height: var(--token-component-skeleton-avatar-size-default, 40px);
 }
@@ -46,7 +46,7 @@
 }
 
 .avatarSquare {
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
 }
 
 .avatarLarge {
@@ -71,7 +71,7 @@
 /* Title */
 .title {
   background: var(--token-component-skeleton-background, #f2f2f2);
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
   height: var(--token-component-skeleton-title-height, 16px);
   width: var(--token-component-skeleton-title-width, 38%);
 }
@@ -92,7 +92,7 @@
 
 .paragraph li {
   background: var(--token-component-skeleton-background, #f2f2f2);
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
   height: var(--token-component-line-height-skeleton-paragraph, 16px);
   width: 100%;
 }
@@ -109,7 +109,7 @@
 .button {
   display: inline-block;
   background: var(--token-component-skeleton-background, #f2f2f2);
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
   height: var(--token-component-skeleton-button-height-default, 32px);
   width: var(--token-component-skeleton-button-width-default, 64px);
 }
@@ -160,7 +160,7 @@
 /* Image */
 .image {
   background: var(--token-component-skeleton-background, #f2f2f2);
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
   width: 100%;
   aspect-ratio: 16 / 9;
   display: flex;
@@ -189,7 +189,7 @@
 .input {
   display: inline-block;
   background: var(--token-component-skeleton-background, #f2f2f2);
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
+  border-radius: var(--token-component-radius-field-md, 4px);
   height: var(--token-component-skeleton-input-height-default, 32px);
   width: var(--token-component-skeleton-input-width-default, 200px);
 }

@@ -23,7 +23,7 @@
   width: 100%;
   padding: var(--token-component-upload-drag-padding, 64px);
   border: calc(var(--token-primitive-border-width-1, 2px) * 1px) dashed var(--token-component-upload-drag-border, #d9d9d9);
-  border-radius: calc(var(--token-component-radius-upload-drag, 8px) * 1px);
+  border-radius: var(--token-component-radius-upload-drag, 8px);
   background-color: var(--token-component-upload-drag-background, #fafafa);
   text-align: center;
   transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -69,7 +69,7 @@
   width: var(--token-component-upload-image-upload-size, 104px);
   height: var(--token-component-upload-image-upload-size, 104px);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) dashed var(--token-component-upload-border, #d9d9d9);
-  border-radius: calc(var(--token-component-radius-upload-default, 8px) * 1px);
+  border-radius: var(--token-component-radius-upload-default, 8px);
   background-color: var(--token-component-upload-background, #fafafa);
   display: flex;
   align-items: center;
@@ -102,29 +102,31 @@
 .fileItem {
   display: flex;
   align-items: center;
-  gap: var(--token-component-gap-upload-file-item, 8px);
-  padding: var(--token-component-padding-block-upload-file-item, 8px);
-  background-color: var(--token-component-upload-file-item-background, #fafafa);
-  border-radius: calc(var(--token-component-radius-upload-file-item, 4px) * 1px);
-  font-size: var(--token-component-font-size-upload-file-item, 14px);
-  line-height: var(--token-component-line-height-upload-file-item, 1.5715);
-  color: var(--token-component-upload-file-item-color, rgba(0, 0, 0, 0.85));
+  gap: var(--token-primitive-spacing-2, 8px);
+  padding: var(--token-primitive-spacing-3, 12px) var(--token-primitive-spacing-4, 16px);
+  background-color: var(--token-semantic-surface-subtle, #f5f5f5);
+  border-radius: var(--token-component-radius-card-md, 12px);
+  font-size: var(--token-primitive-typography-font-size-2, 14px);
+  line-height: 1.5;
+  color: var(--token-semantic-text-primary, #1a1a1a);
 }
 
 .fileItem.error {
-  background-color: var(--token-component-upload-file-item-background-error, #fff2f0);
-  color: var(--token-component-upload-file-item-color-error, #ff4d4f);
+  background-color: var(--token-semantic-surface-error, #fef2f2);
+  color: var(--token-semantic-text-error, #dc2626);
 }
 
 .fileItem.picture,
 .fileItem.imageUpload {
   position: relative;
+  flex: 0 0 auto;
   width: var(--token-component-upload-image-upload-size, 104px);
   height: var(--token-component-upload-image-upload-size, 104px);
   padding: var(--token-component-padding-block-upload-image-upload, 8px);
   border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-upload-image-upload-border, #d9d9d9);
-  border-radius: calc(var(--token-component-radius-upload-image-upload, 8px) * 1px);
+  border-radius: var(--token-component-radius-upload-image-upload, 8px);
   overflow: hidden;
+  background-color: var(--token-component-upload-preview-background, #f5f5f5);
 }
 
 .fileItem.imageUpload {
@@ -137,10 +139,22 @@
 }
 
 .fileItem.uploadTrigger {
-  border-style: dashed;
-  background-color: var(--token-component-upload-background, #fafafa);
   cursor: pointer;
   transition: border-color 0.3s ease;
+}
+
+.fileItem.picture.uploadTrigger {
+  border-style: dashed;
+  background-color: var(--token-component-upload-background, #fafafa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  width: auto;
+  height: auto;
+  min-width: var(--token-component-upload-image-upload-size, 104px);
+  min-height: var(--token-component-upload-image-upload-size, 104px);
+  padding: 0;
 }
 
 .fileItem.uploadTrigger:hover {
@@ -177,14 +191,14 @@
 
 .fileItem.imageUpload .preview {
   background-color: var(--token-component-upload-background-placeholder, #efefef);
-  border-radius: calc(var(--token-component-radius-upload-image-upload, 8px) * 1px);
+  border-radius: var(--token-component-radius-upload-image-upload, 8px);
 }
 
 .preview img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: calc(var(--token-component-radius-upload-image-upload, 8px) * 1px);
+  border-radius: var(--token-component-radius-upload-image-upload, 8px);
 }
 
 /* Progress */
@@ -201,26 +215,28 @@
 /* Actions */
 .actions {
   display: flex;
-  gap: var(--token-component-gap-upload-actions, 4px);
+  gap: var(--token-primitive-spacing-1, 4px);
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .action {
-  background: none;
+  background: transparent;
   border: none;
-  color: var(--token-component-upload-action-color, rgba(0, 0, 0, 0.45));
+  color: var(--token-primitive-grey-700, #464646);
   cursor: pointer;
-  padding: var(--token-component-padding-block-upload-action, 4px);
+  width: 32px;
+  height: 32px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: calc(var(--token-component-radius-upload-action, 2px) * 1px);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: var(--token-component-radius-button-md, 8px);
+  transition: background-color 0.2s ease;
 }
 
 .action:hover {
-  background-color: var(--token-component-upload-action-background-hover, rgba(0, 0, 0, 0.06));
-  color: var(--token-component-upload-action-color-hover, rgba(0, 0, 0, 0.85));
+  background-color: var(--token-primitive-grey-opacity-10, rgba(0, 0, 0, 0.06));
 }
 
 .fileItem.picture .actions,
@@ -232,7 +248,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: calc(var(--token-component-radius-upload-action, 2px) * 1px);
+  border-radius: var(--token-component-radius-upload-action, 2px);
   padding: var(--token-component-padding-block-upload-action, 4px);
 }
 
@@ -254,11 +270,13 @@
 
 /* Icon styles */
 .icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .iconDefault {
-  font-size: var(--token-component-upload-icon-size-default);
+  font-size: var(--token-primitive-icon-size-icon-size-2, 20px);
 }
 
 .iconMedium {

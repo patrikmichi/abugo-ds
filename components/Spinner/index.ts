@@ -1,1 +1,2 @@
-export { Spinner, type SpinnerProps, type SpinnerAppearance, type SpinnerSize } from './Spinner';
+export { default as Spinner } from './Spinner';
+export type { IProps as SpinnerProps, SpinnerAppearance, SpinnerSize } from './types';

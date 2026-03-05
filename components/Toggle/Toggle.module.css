@@ -5,13 +5,15 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
+  width: 44px;
   min-width: 44px;
+  max-width: 44px;
   height: 22px;
   line-height: 22px;
   vertical-align: middle;
   background-color: var(--token-component-toggle-background-off-default);
   border: none;
-  border-radius: calc(var(--token-component-radius-toggle) * 1px);
+  border-radius: var(--token-component-radius-toggle, 999px);
   cursor: pointer;
   transition: all 0.3s ease;
   user-select: none;

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Components/Breadcrumbs',
@@ -76,7 +76,7 @@ export const WithOnClick: Story = {
       <Breadcrumbs>
         <Breadcrumbs.Item
           href="/"
-          onClick={(e) => {
+          onClick={(e: React.MouseEvent<HTMLElement>) => {
             e.preventDefault();
             console.log('Home clicked');
           }}
@@ -85,7 +85,7 @@ export const WithOnClick: Story = {
         </Breadcrumbs.Item>
         <Breadcrumbs.Item
           href="/category"
-          onClick={(e) => {
+          onClick={(e: React.MouseEvent<HTMLElement>) => {
             e.preventDefault();
             console.log('Category clicked');
           }}
@@ -109,7 +109,7 @@ export const WithDropdown: Story = {
             { key: '2', label: 'Option 2' },
             { key: '3', label: 'Option 3' },
           ]}
-          onMenuItemClick={(key) => console.log('Selected:', key)}
+          onMenuItemClick={(key: string) => console.log('Selected:', key)}
         >
           Category
         </Breadcrumbs.Item>
@@ -130,7 +130,7 @@ export const AllFeatures: Story = {
             { key: '2', label: 'Clothing' },
             { key: '3', label: 'Books' },
           ]}
-          onMenuItemClick={(key) => console.log('Selected category:', key)}
+          onMenuItemClick={(key: string) => console.log('Selected category:', key)}
         >
           Products
         </Breadcrumbs.Item>

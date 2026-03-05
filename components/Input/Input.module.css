@@ -41,11 +41,11 @@
   color: var(--token-component-field-content-value);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-top: calc(var(--token-component-padding-y-field-md) + var(--token-semantic-typography-optical-alignment-offset-md, 2px));
-  padding-bottom: calc(var(--token-component-padding-y-field-md) - var(--token-semantic-typography-optical-alignment-offset-md, 2px));
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  font-size: var(--token-component-font-size-field-sm);
-  line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  font-size: var(--token-component-font-size-field-md);
+  line-height: normal;
   font-family: var(--token-primitive-typography-font-family-sans);
   transition:
     border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
@@ -79,55 +79,6 @@
   z-index: 1;
 }
 
-/* Addon wrapper and styles */
-.addonWrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-
-.addonBefore,
-.addonAfter {
-  display: flex;
-  align-items: center;
-  padding: 0 var(--token-component-padding-x-field-md, 11px);
-  background-color: var(--token-component-field-control-background-default, #fafafa);
-  border: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-field-control-border-default, #d9d9d9);
-  color: var(--token-component-field-content-value, rgba(0, 0, 0, 0.85));
-  font-size: var(--token-component-font-size-field-sm, 14px);
-  line-height: 1.5715;
-  white-space: nowrap;
-}
-
-.addonBefore {
-  border-right: none;
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px) 0 0 calc(var(--token-component-radius-field-md, 4px) * 1px);
-}
-
-.addonAfter {
-  border-left: none;
-  border-radius: 0 calc(var(--token-component-radius-field-md, 4px) * 1px) calc(var(--token-component-radius-field-md, 4px) * 1px) 0;
-}
-
-.addonWrapper .inputWrapper {
-  flex: 1;
-}
-
-.addonWrapper .input {
-  border-radius: 0;
-}
-
-.addonWrapper .input:first-child {
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px) 0 0 calc(var(--token-component-radius-field-md, 4px) * 1px);
-}
-
-.addonWrapper .input:last-child {
-  border-radius: 0 calc(var(--token-component-radius-field-md, 4px) * 1px) calc(var(--token-component-radius-field-md, 4px) * 1px) 0;
-}
-
-.addonWrapper .input:only-child {
-  border-radius: calc(var(--token-component-radius-field-md, 4px) * 1px);
-}
 
 /* Adjust input padding when prefix/suffix are present */
 /* Padding-left = icon-left-position + icon-width + gap */
@@ -210,11 +161,11 @@
   max-height: var(--token-component-height-field-sm);
   padding-inline-start: var(--token-component-padding-x-field-sm);
   padding-inline-end: var(--token-component-padding-x-field-sm);
-  padding-top: calc(var(--token-component-padding-y-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm, 2px));
-  padding-bottom: calc(var(--token-component-padding-y-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm, 2px));
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-  font-size: var(--token-component-font-size-field-sm);
-  line-height: calc(var(--token-component-height-field-sm) - var(--token-component-padding-y-field-sm) * 2);
+  padding-top: var(--token-component-padding-y-field-sm);
+  padding-bottom: var(--token-component-padding-y-field-sm);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  font-size: var(--token-component-font-size-field-sm, 14px);
+  line-height: normal;
 }
 
 .inputWrapper.sm.hasPrefix .input {
@@ -239,10 +190,11 @@
   max-height: var(--token-component-height-field-md);
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-top: calc(var(--token-component-padding-y-field-md) + var(--token-semantic-typography-optical-alignment-offset-md, 2px));
-  padding-bottom: calc(var(--token-component-padding-y-field-md) - var(--token-semantic-typography-optical-alignment-offset-md, 2px));
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  font-size: var(--token-component-font-size-field-md);
+  line-height: normal;
 }
 
 .lg {
@@ -251,11 +203,11 @@
   max-height: var(--token-component-height-field-lg);
   padding-inline-start: var(--token-component-padding-x-field-lg);
   padding-inline-end: var(--token-component-padding-x-field-lg);
-  padding-top: calc(var(--token-component-padding-y-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg, 3px));
-  padding-bottom: calc(var(--token-component-padding-y-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg, 3px));
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+  padding-top: var(--token-component-padding-y-field-lg);
+  padding-bottom: var(--token-component-padding-y-field-lg);
+  border-radius: var(--token-component-radius-field-lg, 8px);
   font-size: var(--token-component-font-size-field-lg);
-  line-height: calc(var(--token-component-height-field-lg) - var(--token-component-padding-y-field-lg) * 2);
+  line-height: normal;
 }
 
 .inputWrapper.lg.hasPrefix .input {
@@ -278,16 +230,7 @@
 .addonWrapper {
   display: flex;
   width: 100%;
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
-  overflow: hidden;
-}
-
-.addonWrapper.sm {
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
-}
-
-.addonWrapper.lg {
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+  align-items: stretch;
 }
 
 .addonBefore,
@@ -296,38 +239,40 @@
   align-items: center;
   padding-inline-start: var(--token-component-padding-x-field-md);
   padding-inline-end: var(--token-component-padding-x-field-md);
-  padding-top: var(--token-component-padding-y-field-md);
-  padding-bottom: var(--token-component-padding-y-field-md);
   background-color: var(--token-component-field-control-background-default);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
   color: var(--token-component-field-content-value);
   font-size: var(--token-component-font-size-field-sm);
-  line-height: calc(var(--token-component-height-field-md) - var(--token-component-padding-y-field-md) * 2);
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .addonBefore {
   border-inline-end: none;
-  border-radius: calc(var(--token-component-radius-field-md) * 1px) 0 0 calc(var(--token-component-radius-field-md) * 1px);
+  border-radius: var(--token-component-radius-field-md, 8px) 0 0 var(--token-component-radius-field-md, 8px);
 }
 
 .addonAfter {
   border-inline-start: none;
-  border-radius: 0 calc(var(--token-component-radius-field-md) * 1px) calc(var(--token-component-radius-field-md) * 1px) 0;
+  border-radius: 0 var(--token-component-radius-field-md, 8px) var(--token-component-radius-field-md, 8px) 0;
 }
 
-/* When addons are present, adjust input border radius */
+/* When addons are present, adjust input wrapper and input */
 .addonWrapper .inputWrapper {
   flex: 1;
 }
 
-.addonWrapper .inputWrapper .input {
-  border-radius: 0;
+/* Input border-radius and border based on which addons are present */
+.inputWrapper.hasAddonBefore .input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-inline-start: none;
 }
 
-.addonWrapper .inputWrapper:only-child .input {
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+.inputWrapper.hasAddonAfter .input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-inline-end: none;
 }
 
 /* Size variants for addons */
@@ -335,34 +280,28 @@
 .addonWrapper.sm .addonAfter {
   padding-inline-start: var(--token-component-padding-x-field-sm);
   padding-inline-end: var(--token-component-padding-x-field-sm);
-  padding-top: var(--token-component-padding-y-field-sm);
-  padding-bottom: var(--token-component-padding-y-field-sm);
   font-size: var(--token-component-font-size-field-sm);
-  line-height: calc(var(--token-component-height-field-sm) - var(--token-component-padding-y-field-sm) * 2);
 }
 
 .addonWrapper.sm .addonBefore {
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px) 0 0 calc(var(--token-component-radius-field-sm) * 1px);
+  border-radius: var(--token-component-radius-field-sm, 4px) 0 0 var(--token-component-radius-field-sm, 4px);
 }
 
 .addonWrapper.sm .addonAfter {
-  border-radius: 0 calc(var(--token-component-radius-field-sm) * 1px) calc(var(--token-component-radius-field-sm) * 1px) 0;
+  border-radius: 0 var(--token-component-radius-field-sm, 4px) var(--token-component-radius-field-sm, 4px) 0;
 }
 
 .addonWrapper.lg .addonBefore,
 .addonWrapper.lg .addonAfter {
   padding-inline-start: var(--token-component-padding-x-field-lg);
   padding-inline-end: var(--token-component-padding-x-field-lg);
-  padding-top: var(--token-component-padding-y-field-lg);
-  padding-bottom: var(--token-component-padding-y-field-lg);
   font-size: var(--token-component-font-size-field-lg);
-  line-height: calc(var(--token-component-height-field-lg) - var(--token-component-padding-y-field-lg) * 2);
 }
 
 .addonWrapper.lg .addonBefore {
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px) 0 0 calc(var(--token-component-radius-field-lg) * 1px);
+  border-radius: var(--token-component-radius-field-lg, 8px) 0 0 var(--token-component-radius-field-lg, 8px);
 }
 
 .addonWrapper.lg .addonAfter {
-  border-radius: 0 calc(var(--token-component-radius-field-lg) * 1px) calc(var(--token-component-radius-field-lg) * 1px) 0;
+  border-radius: 0 var(--token-component-radius-field-lg, 8px) var(--token-component-radius-field-lg, 8px) 0;
 }

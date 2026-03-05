@@ -6,8 +6,16 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  eslint: {
-    ignoreDuringBuilds: false,
+  turbopack: {
+    resolveAlias: {
+      '@tokens': path.resolve(__dirname, './tokens'),
+      '@tokens/scripts': path.resolve(__dirname, './tokens/scripts'),
+      '@tokens/docs': path.resolve(__dirname, './tokens/docs'),
+      '@tokens/output': path.resolve(__dirname, './tokens/output'),
+      '@tokens/system': path.resolve(__dirname, './tokens/system'),
+      '@tokens/types': path.resolve(__dirname, './tokens/types'),
+      '@': path.resolve(__dirname, '.'),
+    },
   },
   webpack: (config) => {
     config.resolve.alias = {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Toggle } from '@/components/Toggle';
 
@@ -16,17 +16,17 @@ type Story = StoryObj<typeof Toggle>;
 export const Default: Story = {
   render: () => {
     const [checked, setChecked] = useState(false);
-    return <Toggle label="Toggle" checked={checked} onChange={(e) => setChecked(e.target.checked)} />;
+    return <Toggle checked={checked} onChange={(newChecked) => setChecked(newChecked)} />;
   },
 };
 
 export const States: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <Toggle label="Off" />
-      <Toggle label="On" defaultChecked />
-      <Toggle label="Disabled off" disabled />
-      <Toggle label="Disabled on" checked disabled />
+      <Toggle />
+      <Toggle defaultChecked />
+      <Toggle disabled />
+      <Toggle checked disabled />
     </div>
   ),
 };

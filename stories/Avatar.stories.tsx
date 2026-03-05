@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Avatar, AvatarGroup } from '@/components/Avatar';
+import Avatar, { AvatarGroup } from '@/components/Avatar';
 
 const meta: Meta<typeof Avatar> = {
   title: 'Components/Avatar',
@@ -91,9 +91,11 @@ export const Letter: Story = {
 export const Sizes: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <Avatar size="small">S</Avatar>
-      <Avatar size="default">M</Avatar>
-      <Avatar size="large">L</Avatar>
+      <Avatar size="xs">XS</Avatar>
+      <Avatar size="sm">S</Avatar>
+      <Avatar size="md">M</Avatar>
+      <Avatar size="lg">L</Avatar>
+      <Avatar size="xl">XL</Avatar>
       <Avatar size={64}>64</Avatar>
       <Avatar size={80}>80</Avatar>
     </div>
@@ -267,8 +269,8 @@ export const Group: Story = {
       </div>
       
       <div>
-        <h3 style={{ marginBottom: '1rem' }}>Square Shape</h3>
-        <AvatarGroup shape="square" maxCount={3}>
+        <h3 style={{ marginBottom: '1rem' }}>Rounded Shape</h3>
+        <AvatarGroup shape="rounded" maxCount={3}>
           <Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=1" />
           <Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=2" />
           <Avatar src="https://api.dicebear.com/7.x/avataaars/svg?seed=3" />

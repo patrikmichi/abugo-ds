@@ -1,23 +1,7 @@
 import React from 'react';
 import styles from './Input.module.css';
 import { cn } from '@/lib/utils';
-
-export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix' | 'suffix'> {
-  /** The size of the input box */
-  size?: 'sm' | 'md' | 'lg';
-  /** Set validation status. When used with Field wrapper, Field manages this automatically. */
-  error?: boolean;
-  /** Prefix icon or content inside the input, positioned before the user's input */
-  prefix?: React.ReactNode;
-  /** Suffix icon or content inside the input, positioned after the user's input */
-  suffix?: React.ReactNode;
-  /** Addon element before (to the left of) the input field */
-  addonBefore?: React.ReactNode;
-  /** Addon element after (to the right of) the input field */
-  addonAfter?: React.ReactNode;
-  /** Callback when Enter key is pressed */
-  onPressEnter?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-}
+import type { InputProps } from './types';
 
 export function Input({
   size = 'md',
@@ -33,36 +17,34 @@ export function Input({
   ...props
 }: InputProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && onPressEnter) {
-      onPressEnter(e);
-    }
+    if (e.key === 'Enter') onPressEnter?.(e);
     onKeyDown?.(e);
   };
 
+  const hasPrefix = !!prefix;
+  const hasSuffix = !!suffix;
+  const hasAddonBefore = !!addonBefore;
+  const hasAddonAfter = !!addonAfter;
+  const hasAddons = hasAddonBefore || hasAddonAfter;
+
   const inputElement = (
-    <div 
+    <div
       className={cn(
         styles.inputWrapper,
-        size === 'sm' && styles.sm,
-        size === 'md' && styles.md,
-        size === 'lg' && styles.lg,
-        prefix ? styles.hasPrefix : undefined,
-        suffix ? styles.hasSuffix : undefined,
-        className
+        styles[size],
+        hasPrefix && styles.hasPrefix,
+        hasSuffix && styles.hasSuffix,
+        hasAddonBefore && styles.hasAddonBefore,
+        hasAddonAfter && styles.hasAddonAfter,
+        !hasAddons && className
       )}
     >
-      {prefix && (
-        <div className={styles.prefix}>
-          {prefix}
-        </div>
-      )}
+      {prefix && <div className={styles.prefix}>{prefix}</div>}
       <input
         type="text"
         className={cn(
           styles.input,
-          size === 'sm' && styles.sm,
-          size === 'md' && styles.md,
-          size === 'lg' && styles.lg,
+          styles[size],
           error && styles.error,
           disabled && styles.disabled
         )}
@@ -70,32 +52,17 @@ export function Input({
         onKeyDown={handleKeyDown}
         {...props}
       />
-      {suffix && (
-        <div className={styles.suffix}>
-          {suffix}
-        </div>
-      )}
+      {suffix && <div className={styles.suffix}>{suffix}</div>}
     </div>
   );
 
-  // If addons are present, wrap in addon container
-  if (addonBefore || addonAfter) {
-    return (
-      <div className={cn(styles.addonWrapper, size === 'sm' && styles.sm, size === 'md' && styles.md, size === 'lg' && styles.lg)}>
-        {addonBefore && (
-          <div className={styles.addonBefore}>
-            {addonBefore}
-          </div>
-        )}
-        {inputElement}
-        {addonAfter && (
-          <div className={styles.addonAfter}>
-            {addonAfter}
-          </div>
-        )}
-      </div>
-    );
-  }
+  if (!hasAddons) return inputElement;
 
-  return inputElement;
+  return (
+    <div className={cn(styles.addonWrapper, styles[size], className)}>
+      {addonBefore && <div className={styles.addonBefore}>{addonBefore}</div>}
+      {inputElement}
+      {addonAfter && <div className={styles.addonAfter}>{addonAfter}</div>}
+    </div>
+  );
 }

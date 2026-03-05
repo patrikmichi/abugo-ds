@@ -35,6 +35,21 @@
   cursor: pointer;
 }
 
+.homeIcon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-breadcrumbs-link-icon-color, #464646);
+}
+
+.dropdownIcon {
+  font-size: 20px;
+  margin-left: 4px;
+}
+
 /* Separator */
 .separator {
   color: var(--token-component-breadcrumbs-separator-color, #464646);

@@ -14,16 +14,12 @@
   width: 320px;
   background-color: var(--token-primitive-color-white, #ffffff);
   border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-timepicker-panel-border);
-  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-field-sm, 4px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   font-family: var(--token-primitive-typography-font-family-sans);
   overflow: clip;
 }
 
-.panel.positioned {
-  position: fixed;
-  margin-top: 0;
-}
 
 /* Content area inside panel */
 .content {
@@ -55,7 +51,7 @@
   font-size: var(--token-primitive-typography-font-size-3, 14px);
   line-height: var(--token-primitive-typography-line-height-3, 20px);
   color: var(--token-component-timepicker-cell-content-default, #464646);
-  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-field-sm, 4px);
   cursor: pointer;
   user-select: none;
   transition: background-color 0.15s ease, color 0.15s ease;
@@ -86,7 +82,7 @@
   justify-content: center;
   cursor: pointer;
   color: var(--token-component-timepicker-cell-content-default, #464646);
-  border-radius: calc(var(--token-component-radius-field-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-field-sm, 4px);
   background: none;
   border: none;
   padding: 0;
@@ -102,31 +98,6 @@
   font-size: 24px;
 }
 
-/* Icon styles */
-.clearIcon,
-.suffixIcon {
-  font-size: var(--token-component-icon-field-sm);
-  width: 1em;
-  height: 1em;
-  display: block;
-  line-height: 1;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
-
-.clearIcon {
-  cursor: pointer;
-  color: var(--token-component-timepicker-icon-default);
-  transition: color 0.2s ease;
-}
-
-.clearIcon:hover {
-  color: var(--token-component-timepicker-icon-hover);
-}
-
-.suffixIcon {
-  color: var(--token-component-timepicker-icon-default);
-  pointer-events: none;
-}
 
 /* Responsive */
 @media (max-width: 768px) {

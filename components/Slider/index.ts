@@ -1,7 +1,7 @@
-export {
-  Slider,
-  type SliderProps,
-  type SliderValue,
-  type SliderMarks,
-  type SliderTooltipProps,
-} from './Slider';
+export { default as Slider } from './Slider';
+export type {
+  IProps as SliderProps,
+  SliderValue,
+  SliderMarks,
+  SliderTooltipProps,
+} from './types';

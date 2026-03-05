@@ -13,7 +13,7 @@
   font-size: var(--token-primitive-typography-font-size-3, 14px);
   line-height: var(--token-primitive-typography-line-height-3, 20px);
   /* Full radius (pill shape) - uses radius.full token */
-  border-radius: calc(var(--token-component-radius-chip, 999) * 1px);
+  border-radius: var(--token-component-radius-chip, 999px);
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -145,7 +145,6 @@
   line-height: 1;
   font-weight: var(--token-primitive-typography-font-weight-medium, 500);
   text-transform: uppercase;
-  padding-top: var(--token-component-chip-visual-compensation-offset, 1px);
 }
 
 .chip.sm .avatar,
@@ -232,7 +231,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transform: translateY(var(--token-component-chip-visual-compensation-offset, 1px));
 }
 
 /* Trailing icon (delete or expand) */

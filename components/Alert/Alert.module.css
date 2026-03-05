@@ -17,12 +17,12 @@
 /* Size variants — only padding and radius differ */
 .alert.small {
   padding: var(--token-component-alert-padding-small, 12px);
-  border-radius: calc(var(--token-component-radius-alert-sm, 8) * 1px);
+  border-radius: var(--token-component-radius-alert-sm, 8px);
 }
 
 .alert.large {
   padding: var(--token-component-alert-padding-large, 20px);
-  border-radius: calc(var(--token-component-radius-alert-lg, 8) * 1px);
+  border-radius: var(--token-component-radius-alert-lg, 8px);
 }
 
 /* Type variants — background color */
@@ -154,7 +154,7 @@
   justify-content: center;
   width: var(--token-component-height-button-plain-sm, 32px);
   height: var(--token-component-height-button-plain-sm, 32px);
-  border-radius: calc(var(--token-component-radius-button-sm, 4) * 1px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
   flex-shrink: 0;
 }
 

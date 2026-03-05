@@ -1,7 +1,3 @@
-export {
-  Breadcrumbs,
-  BreadcrumbItem,
-  type BreadcrumbsProps,
-  type BreadcrumbItemProps,
-  type BreadcrumbRoute,
-} from './Breadcrumbs';
+export { default } from './Breadcrumbs';
+export { default as BreadcrumbItem } from './BreadcrumbItem';
+export type { BreadcrumbsProps, BreadcrumbItemProps, BreadcrumbsComponent } from './types';

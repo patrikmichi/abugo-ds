@@ -1,37 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import styles from './Spinner.module.css';
+
 import { cn } from '@/lib/utils';
 
-export type SpinnerAppearance = 'inherit' | 'invert';
-export type SpinnerSize = 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | number;
+import styles from './Spinner.module.css';
+import type { IProps } from './types';
 
-export interface SpinnerProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'size'> {
-  /** Determines the spinner's color scheme */
-  appearance?: SpinnerAppearance;
-  /** Delay in milliseconds before the spinner appears */
-  delay?: number;
-  /** Descriptive label for assistive technologies */
-  label?: string;
-  /** Size of the spinner */
-  size?: SpinnerSize;
-  /** Custom class name */
-  className?: string;
-  /** Custom style */
-  style?: React.CSSProperties;
-}
-
-/**
- * Spinner Component
- * 
- * Spinner component to indicate that content is being loaded.
- * 
- * @example
- * ```tsx
- * <Spinner size="medium" label="Loading" />
- * <Spinner size="large" appearance="invert" delay={300} />
- * ```
- */
-export function Spinner({
+const Spinner = ({
   appearance = 'inherit',
   delay = 0,
   label = 'Loading',
@@ -39,7 +13,7 @@ export function Spinner({
   className,
   style,
   ...props
-}: SpinnerProps) {
+}: IProps) => {
   const [isVisible, setIsVisible] = useState(delay === 0);
 
   useEffect(() => {
@@ -55,11 +29,9 @@ export function Spinner({
     return () => clearTimeout(timer);
   }, [delay]);
 
-  // Map size to CSS class or use custom size
   const sizeClass = typeof size === 'string' ? size : 'custom';
   const customSize = typeof size === 'number' ? size : undefined;
 
-  // Early return check must come AFTER all hooks
   if (!isVisible) {
     return null;
   }
@@ -80,18 +52,11 @@ export function Spinner({
     >
       <div
         className={styles.iconContainer}
-        style={customSize ? {
-          width: `${customSize}px`,
-          height: `${customSize}px`,
-        } : undefined}
+        style={customSize ? { width: customSize, height: customSize } : undefined}
       >
         <span
           className="material-symbols-outlined"
-          style={customSize ? {
-            fontSize: `${customSize}px`,
-            width: `${customSize}px`,
-            height: `${customSize}px`,
-          } : undefined}
+          style={customSize ? { fontSize: customSize, width: customSize, height: customSize } : undefined}
           aria-hidden="true"
         >
           progress_activity
@@ -104,4 +69,6 @@ export function Spinner({
       )}
     </div>
   );
-}
+};
+
+export default Spinner;

@@ -1,10 +1,3 @@
-export {
-  Tabs,
-  TabPane,
-  type TabsProps,
-  type TabPaneProps,
-  type TabsType,
-  type TabsSize,
-  type TabsPosition,
-  type TabsItem,
-} from './Tabs';
+export { default as Tabs } from './Tabs';
+export { default as TabPane } from './TabPane';
+export type { IProps as TabsProps, TabPaneProps, TabItem } from './types';

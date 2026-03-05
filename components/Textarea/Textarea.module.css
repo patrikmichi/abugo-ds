@@ -18,7 +18,7 @@
   /* Equal padding for vertical centering */
   padding-top: var(--token-component-padding-y-field-md);
   padding-bottom: var(--token-component-padding-y-field-md);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  border-radius: var(--token-component-radius-field-md, 8px);
   font-size: var(--token-component-font-size-field-sm);
   /* Textarea doesn't have fixed height, so use normal line-height */
   line-height: var(--token-component-line-height-field-value);
@@ -92,7 +92,7 @@
   /* Equal padding for vertical centering */
   padding-top: var(--token-component-padding-y-field-sm);
   padding-bottom: var(--token-component-padding-y-field-sm);
-  border-radius: calc(var(--token-component-radius-field-sm) * 1px);
+  border-radius: var(--token-component-radius-field-sm, 4px);
   min-height: 80px;
 }
 
@@ -102,7 +102,7 @@
   /* Equal padding for vertical centering */
   padding-top: var(--token-component-padding-y-field-md);
   padding-bottom: var(--token-component-padding-y-field-md);
-  border-radius: calc(var(--token-component-radius-field-md) * 1px);
+  border-radius: var(--token-component-radius-field-md, 8px);
   min-height: 100px;
 }
 
@@ -112,6 +112,6 @@
   /* Equal padding for vertical centering */
   padding-top: var(--token-component-padding-y-field-lg);
   padding-bottom: var(--token-component-padding-y-field-lg);
-  border-radius: calc(var(--token-component-radius-field-lg) * 1px);
+  border-radius: var(--token-component-radius-field-lg, 8px);
   min-height: 120px;
 }

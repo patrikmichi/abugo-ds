@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { loadComponentTokens, flattenTokens, extractAllStates, getTokensForState, getStateDisplayName } from '../lib/tokenUtils';
 import type { ComponentTokenData } from '../lib/types';
 import { Button, ButtonIcon } from '@/components/Button';
-import { Select, type SelectOption } from '@/components/Select/Select';
+import Select, { type SelectOptionType as SelectOption } from '@/components/Select';
 
 interface TokenDisplayProps {
   componentName: string;
