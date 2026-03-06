@@ -526,5 +526,14 @@
         "$collectionName": "semanticTokens"
       }
     }
+  },
+  "tag": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderRadius",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{radius.full}"
   }
 }

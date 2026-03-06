@@ -207,6 +207,38 @@
         }
       }
     },
+    "tag": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Tag small horizontal padding (8px)"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Tag medium horizontal padding (12px)"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Tag large horizontal padding (16px)"
+      }
+    },
     "alert": {
       "sm": {
         "$scopes": [

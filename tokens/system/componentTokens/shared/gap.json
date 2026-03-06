@@ -327,6 +327,38 @@
       "$value": "{gap.xs}"
     }
   },
+  "tag": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xxs}",
+      "$description": "Tag small gap between icon and text"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xxs}",
+      "$description": "Tag medium gap between icon and text"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xs}",
+      "$description": "Tag large gap between icon and text"
+    }
+  },
   "alert": {
     "icon": {
       "$scopes": [

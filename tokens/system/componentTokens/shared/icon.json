@@ -97,6 +97,29 @@
       "$value": "{icon.xs}"
     }
   },
+  "tag": {
+    "sm": {
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xxs}",
+      "$description": "Tag small icon size (16px)"
+    },
+    "md": {
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}",
+      "$description": "Tag medium icon size (20px)"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}",
+      "$description": "Tag large icon size (20px)"
+    }
+  },
   "alert": {
     "$scopes": [
       "ALL_SCOPES"

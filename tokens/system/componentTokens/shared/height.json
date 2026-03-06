@@ -156,5 +156,37 @@
       "$collectionName": "semanticTokens",
       "$value": "{control.height.lg}"
     }
+  },
+  "tag": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xxs}",
+      "$description": "Tag small height (24px)"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xs}",
+      "$description": "Tag medium height (32px)"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.sm}",
+      "$description": "Tag large height (40px)"
+    }
   }
 }

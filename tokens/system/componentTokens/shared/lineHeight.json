@@ -157,6 +157,29 @@
       "$value": "{typography.body-line.md}"
     }
   },
+  "tag": {
+    "sm": {
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.sm}",
+      "$description": "Tag small line height"
+    },
+    "md": {
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Tag medium line height"
+    },
+    "lg": {
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Tag large line height"
+    }
+  },
   "alert": {
     "message": {
       "$scopes": [

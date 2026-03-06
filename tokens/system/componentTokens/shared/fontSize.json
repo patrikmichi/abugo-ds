@@ -166,6 +166,29 @@
       "$value": "{typography.body-size.md}"
     }
   },
+  "tag": {
+    "sm": {
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-size.sm}",
+      "$description": "Tag small font size"
+    },
+    "md": {
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-size.md}",
+      "$description": "Tag medium font size"
+    },
+    "lg": {
+      "$type": "fontSizes",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-size.md}",
+      "$description": "Tag large font size"
+    }
+  },
   "alert": {
     "message": {
       "$scopes": [
