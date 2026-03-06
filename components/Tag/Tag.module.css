@@ -4,7 +4,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: calc(var(--token-semantic-border-width-thin, 1) * 1px) solid;
+  border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid;
   outline: none;
   font-family: var(--token-primitive-typography-font-family-sans);
   font-weight: var(--token-primitive-typography-font-weight-regular);

@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, type CSSProperties } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -30,7 +30,7 @@ const Tag = forwardRef<HTMLSpanElement, IProps>(
           '--tag-bg': `color-mix(in srgb, ${color} 15%, transparent)`,
           '--tag-fg': color,
           '--tag-border': `color-mix(in srgb, ${color} 30%, transparent)`,
-        } as React.CSSProperties
+        } as CSSProperties
       : style;
 
     return (
