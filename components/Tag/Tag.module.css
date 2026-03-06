@@ -1,0 +1,111 @@
+/* Tag component styles using design tokens */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: calc(var(--token-semantic-border-width-thin, 1) * 1px) solid;
+  outline: none;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  border-radius: calc(var(--token-component-radius-tag, 999) * 1px);
+  box-sizing: border-box;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  /* Custom color overrides via CSS custom properties */
+  background-color: var(--tag-bg);
+  color: var(--tag-fg);
+  border-color: var(--tag-border);
+}
+
+/* Sizes */
+.sm {
+  height: var(--token-component-height-tag-sm, 24px);
+  padding-inline: var(--token-component-padding-x-tag-sm, 12px);
+  gap: var(--token-component-gap-tag-sm, 4px);
+  font-size: var(--token-component-font-size-tag-sm, 12px);
+  line-height: var(--token-component-line-height-tag-sm, 16px);
+}
+
+.md {
+  height: var(--token-component-height-tag-md, 32px);
+  padding-inline: var(--token-component-padding-x-tag-md, 16px);
+  gap: var(--token-component-gap-tag-md, 4px);
+  font-size: var(--token-component-font-size-tag-md, 14px);
+  line-height: var(--token-component-line-height-tag-md, 20px);
+}
+
+.lg {
+  height: var(--token-component-height-tag-lg, 40px);
+  padding-inline: var(--token-component-padding-x-tag-lg, 20px);
+  gap: var(--token-component-gap-tag-lg, 8px);
+  font-size: var(--token-component-font-size-tag-lg, 14px);
+  line-height: var(--token-component-line-height-tag-lg, 20px);
+}
+
+/* Variant classes — set CSS custom properties for .tag base */
+.neutral {
+  --tag-bg: var(--token-component-tag-neutral-background, #f7f7f7);
+  --tag-fg: var(--token-component-tag-neutral-foreground, #464646);
+  --tag-border: var(--token-component-tag-neutral-border, #efefef);
+}
+
+.success {
+  --tag-bg: var(--token-component-tag-success-background, #eaf9e8);
+  --tag-fg: var(--token-component-tag-success-foreground, #32c21a);
+  --tag-border: var(--token-component-tag-success-border, #32c21a);
+}
+
+.warning {
+  --tag-bg: var(--token-component-tag-warning-background, #fdf3e5);
+  --tag-fg: var(--token-component-tag-warning-foreground, #ed8400);
+  --tag-border: var(--token-component-tag-warning-border, #ed8400);
+}
+
+.error {
+  --tag-bg: var(--token-component-tag-error-background, #fff0f1);
+  --tag-fg: var(--token-component-tag-error-foreground, #ff434e);
+  --tag-border: var(--token-component-tag-error-border, #ff434e);
+}
+
+.info {
+  --tag-bg: var(--token-component-tag-info-background, #e6eaed);
+  --tag-fg: var(--token-component-tag-info-foreground, #042a47);
+  --tag-border: var(--token-component-tag-info-border, #042a47);
+}
+
+/* Icon wrapper */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.sm .icon {
+  width: var(--token-component-icon-tag-sm, 16px);
+  height: var(--token-component-icon-tag-sm, 16px);
+}
+
+.md .icon {
+  width: var(--token-component-icon-tag-md, 20px);
+  height: var(--token-component-icon-tag-md, 20px);
+}
+
+.lg .icon {
+  width: var(--token-component-icon-tag-lg, 20px);
+  height: var(--token-component-icon-tag-lg, 20px);
+}
+
+/* Material Icons in tag */
+.icon :global(.material-symbols-outlined) {
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+}
