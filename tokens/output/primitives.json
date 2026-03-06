@@ -2294,7 +2294,7 @@
     "$type": "fontWeights",
     "$value": 500
   },
-  "typography-fontWeight-semibold": {
+  "typography-fontWeight-bold": {
     "$scopes": [
       "ALL_SCOPES"
     ],
