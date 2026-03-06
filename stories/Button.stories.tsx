@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, ButtonIcon } from '@/components/Button';
 import type { ButtonProps } from '@/components/Button';
 

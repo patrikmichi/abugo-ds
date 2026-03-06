@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ColorPicker, type ColorPreset } from '@/components/ColorPicker';
 import { Field } from '@/components/Field';
 

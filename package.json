@@ -31,10 +31,9 @@
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^10.1.11",
-    "@storybook/addon-links": "^10.1.11",
-    "@storybook/react": "^10.1.11",
-    "@storybook/react-vite": "^10.1.11",
+    "@storybook/addon-docs": "^10.2.15",
+    "@storybook/addon-links": "^10.2.15",
+    "@storybook/react-vite": "^10.2.15",
     "@types/node": "^22.10.2",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
@@ -48,9 +47,10 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "prettier": "^3.4.2",
     "react-docgen-typescript": "^2.4.0",
-    "storybook": "^10.1.11",
+    "storybook": "^10.2.15",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
-    "vite": "^5.4.21"
+    "vite": "^5.4.21",
+    "eslint-plugin-storybook": "10.2.15"
   }
 }

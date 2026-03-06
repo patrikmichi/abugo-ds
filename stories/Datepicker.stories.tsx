@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { DatePicker, RangePicker as DateRangePicker, type DatePickerPreset } from '@/components/Datepicker';
 import { Field } from '@/components/Field';
 import { Button } from '@/components/Button';

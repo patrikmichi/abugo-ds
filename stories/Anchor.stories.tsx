@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Anchor } from '@/components/Anchor';
 
 const meta: Meta<typeof Anchor> = {
