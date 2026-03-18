@@ -1,0 +1,82 @@
+{
+  "animation-duration-instant": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "number",
+    "$value": 0
+  },
+  "animation-duration-fast": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "number",
+    "$value": 100
+  },
+  "animation-duration-base": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "number",
+    "$value": 200
+  },
+  "animation-duration-slow": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "number",
+    "$value": 300
+  },
+  "animation-duration-slower": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "number",
+    "$value": 500
+  },
+  "animation-duration-slowest": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "number",
+    "$value": 700
+  },
+  "animation-easing-linear": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "string",
+    "$value": "linear"
+  },
+  "animation-easing-ease-in": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "string",
+    "$value": "cubic-bezier(0.4, 0, 1, 1)"
+  },
+  "animation-easing-ease-out": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "string",
+    "$value": "cubic-bezier(0, 0, 0.2, 1)"
+  },
+  "animation-easing-ease-in-out": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "string",
+    "$value": "cubic-bezier(0.4, 0, 0.2, 1)"
+  }
+}

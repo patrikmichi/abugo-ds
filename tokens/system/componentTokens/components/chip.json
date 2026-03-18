@@ -1,0 +1,430 @@
+{
+  "$name": "Component Tokens",
+  "visual-compensation-offset": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": "1px"
+  },
+  "background": {
+    "unselected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.neutral.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.neutral.hover}"
+      },
+      "pressed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.neutral.pressed}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.neutral.disabled}"
+      }
+    },
+    "selected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.hover}"
+      },
+      "pressed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.pressed}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.disabled}"
+      }
+    }
+  },
+  "content": {
+    "selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}"
+    },
+    "unselected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.neutral.default}"
+      },
+      "dissabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.neutral.disabled}",
+        "$description": "Alias for disabled to support Figma variable path (dissabled)."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.neutral.hover}"
+      },
+      "pressed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.neutral.pressed}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.neutral.disabled}"
+      }
+    }
+  },
+  "border": {
+    "unselected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.action.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.action.hover}"
+      },
+      "pressed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.action.pressed}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.action.disabled}"
+      }
+    }
+  },
+  "subtle": {
+    "background": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.subtle}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.subtle}"
+      },
+      "pressed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.subtle}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.disabled}"
+      }
+    },
+    "content": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.hover}"
+      },
+      "pressed": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.pressed}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.disabled}"
+      }
+    }
+  },
+  "delete-icon": {
+    "opacity": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": 0.6,
+        "$description": "Default opacity for delete icon (60%)"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": 1,
+        "$description": "Hover opacity for delete icon (100%)"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "",
+        "$value": 0.4,
+        "$description": "Disabled opacity for delete icon (40%)"
+      }
+    },
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.neutral.default}",
+      "$description": "Default delete/expand icon color"
+    },
+    "color-selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}",
+      "$description": "Delete/expand icon color in selected chip"
+    },
+    "color-hover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.neutral.hover}",
+      "$description": "Delete/expand icon color on hover"
+    },
+    "color-hover-selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}",
+      "$description": "Delete/expand icon color on hover in selected chip"
+    },
+    "color-active": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.neutral.pressed}",
+      "$description": "Delete/expand icon color on active/pressed"
+    },
+    "color-active-selected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.on.accent}",
+      "$description": "Delete/expand icon color on active/pressed in selected chip"
+    },
+    "color-disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.active.neutral.disabled}",
+      "$description": "Delete/expand icon color when disabled (matches disabled background for near-invisible effect)"
+    },
+    "background": {
+      "hover": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.hover}",
+          "$description": "Delete icon hover background for default chips (rgba with 8% opacity)"
+        },
+        "colored": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.hover}",
+          "$description": "Delete icon hover background for colored chips (rgba with 20% opacity)"
+        }
+      },
+      "active": {
+        "default": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.pressed}",
+          "$description": "Delete icon active background for default chips (rgba with 12% opacity)"
+        },
+        "colored": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.neutral.subtle.pressed}",
+          "$description": "Delete icon active background for colored chips (rgba with 30% opacity)"
+        }
+      }
+    }
+  },
+  "focus": {
+    "outline": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}"
+      }
+    }
+  }
+}

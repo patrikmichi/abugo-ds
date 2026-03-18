@@ -1,0 +1,271 @@
+{
+  "$name": "Component Tokens",
+  "size": {
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.md}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.lg}"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xl}"
+    }
+  },
+  "fontSize": {
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "8px",
+      "$description": "Font size for xs avatar text (20px * 0.4)"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "10px",
+      "$description": "Font size for sm avatar text (24px * 0.42)"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "14px",
+      "$description": "Font size for md avatar text (32px * 0.44)"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "16px",
+      "$description": "Font size for lg avatar text (40px * 0.4)"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "20px",
+      "$description": "Font size for xl avatar text (48px * 0.42)"
+    }
+  },
+  "borderWidth": {
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.width.thin}"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.width.thin}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.width.thin}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.width.thicker}"
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.width.thicker}"
+    }
+  },
+  "background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{background.passive.neutral.default}"
+  },
+  "content": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{content.passive.neutral.default}"
+  },
+  "border": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.active.neutral.control.field.default}"
+  },
+  "default": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{background.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    },
+    "content": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "excess": {
+    "background": {
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "content": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "group": {
+    "border": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{border.active.neutral.control.field.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "icon": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{background.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "text": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{background.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    },
+    "content": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "ring": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.active.accent.default}"
+    }
+  }
+}

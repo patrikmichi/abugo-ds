@@ -1,0 +1,33 @@
+{
+  "$name": "Component Tokens",
+  "font-size": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontSizes",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body.size.sm}",
+    "$description": "Font size for action menu items (14px)"
+  },
+  "line-height": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.lineHeight.20}",
+    "$description": "Line height for action menu items (20px)"
+  },
+  "font-weight": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontWeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.fontWeight.regular}",
+    "$description": "Font weight for action menu items (400)"
+  }
+}

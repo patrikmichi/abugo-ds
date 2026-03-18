@@ -1,0 +1,74 @@
+{
+  "$name": "Component Tokens",
+  "link": {
+    "color": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}"
+      },
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}"
+      }
+    }
+  },
+  "indicator": {
+    "width": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-width-2}"
+    },
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.active.accent.default}"
+    }
+  },
+  "transition": {
+    "duration": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "duration",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation.duration.fast}"
+    },
+    "easing": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "cubicBezier",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{animation.easing.standard}"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/* Rating component styles using design tokens */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+/* Size variants */
+.sm {
+  gap: var(--token-component-rating-gap-content-sm, 8px);
+  font-size: var(--token-component-rating-size-sm, 20px);
+}
+
+.lg {
+  gap: var(--token-component-rating-gap-content-lg, 12px);
+  font-size: var(--token-component-rating-size-lg, 24px);
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sm .stars {
+  gap: var(--token-component-rating-gap-star-sm, 2px);
+}
+
+.lg .stars {
+  gap: var(--token-component-rating-gap-star-lg, 4px);
+}
+
+.star {
+  display: inline-flex;
+  align-items: center;
+  color: var(--token-component-rating-star-color-empty, #a2a2a2);
+  line-height: 1;
+}
+
+.star.filled {
+  color: var(--token-component-rating-star-color-filled, #f2c219);
+}
+
+.star.half {
+  color: var(--token-component-rating-star-color-filled, #f2c219);
+}
+
+.star.empty {
+  color: var(--token-component-rating-star-color-empty, #a2a2a2);
+}
+
+.text {
+  font-size: var(--token-component-font-size-rating-text, 14px);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  line-height: var(--token-component-line-height-rating-text, 1.5);
+  color: var(--token-component-rating-text-color, #464646);
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+.count {
+  color: var(--token-component-rating-count-color, #737373);
+}

@@ -1,0 +1,305 @@
+{
+  "$name": "Component Tokens",
+  "button": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "20px",
+      "$description": "Icon size for small buttons - 20x20px"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    }
+  },
+  "field": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    }
+  },
+  "checkbox": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{icon.xs}"
+  },
+  "chip": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xxs}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}"
+    }
+  },
+  "tag": {
+    "sm": {
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xxs}",
+      "$description": "Tag small icon size (16px)"
+    },
+    "md": {
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}",
+      "$description": "Tag medium icon size (20px)"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}",
+      "$description": "Tag large icon size (20px)"
+    }
+  },
+  "alert": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{icon.sm}",
+    "$description": "Alert icon size (24x24px)"
+  },
+  "toast": {
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.xs}",
+      "$description": "Toast icon size for small size (20x20px)"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}",
+      "$description": "Toast icon size for large size (24x24px)"
+    }
+  },
+  "container": {
+    "size": {
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xxs}"
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xs}"
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.sm}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.md}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.lg}"
+      },
+      "xl": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xl}"
+      },
+      "xxl": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.xxl}"
+      },
+      "huge": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{icon.huge}"
+      }
+    },
+    "radius": {
+      "none": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.none}"
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.xs}"
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.sm}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.md}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.lg}"
+      },
+      "xl": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.xl}"
+      },
+      "xxl": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.xxl}"
+      },
+      "full": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderRadius",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{radius.full}"
+      }
+    }
+  }
+}

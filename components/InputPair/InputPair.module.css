@@ -1,0 +1,127 @@
+/* InputPair component styles using design tokens */
+
+.inputPair {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  background-color: var(--token-component-field-control-background-default);
+  overflow: hidden;
+  transition: 
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-sizing: border-box;
+}
+
+/* Input sections - override wrapper and input styles for nested usage */
+.firstInput,
+.secondInput {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Override Input component's wrapper and input element */
+.firstInput > *,
+.secondInput > * {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+}
+
+.firstInput input,
+.secondInput input {
+  flex: 1;
+  min-width: 0;
+  
+  /* Font descender spacing fix - trim font metrics (modern browsers) */
+  text-box-trim: both;
+  text-box-edge: cap alphabetic;
+  
+  /* Optical alignment handled by parent container padding adjustments */
+}
+
+.firstInput input:focus,
+.secondInput input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Separator */
+.separator {
+  width: calc(var(--token-component-field-separator-width) * 1px);
+  background-color: var(--token-component-field-separator-color-default);
+  flex-shrink: 0;
+  transition: background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+/* Size variants */
+.inputPair.sm {
+  border-radius: var(--token-component-radius-field-sm, 4px);
+}
+
+.inputPair.lg {
+  border-radius: var(--token-component-radius-field-lg, 8px);
+}
+
+/* Enabled state (default) - hover and focus */
+.inputPair:not(.error):not(.disabled):hover {
+  border-color: var(--token-component-field-control-border-hover);
+  background-color: var(--token-component-field-control-background-hover);
+}
+
+.inputPair:not(.error):not(.disabled):hover .separator {
+  background-color: var(--token-component-field-separator-color-hover);
+}
+
+.inputPair:not(.error):not(.disabled).focused {
+  border-color: var(--token-component-field-control-border-focused);
+  background-color: var(--token-component-field-control-background-focused);
+  /* Show focus ring on focus */
+  /* Show soft glowing focus ring on focus */
+  outline: none;
+  box-shadow: 
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+}
+
+.inputPair:not(.error):not(.disabled).focused .separator {
+  background-color: var(--token-component-field-separator-color-focus);
+}
+
+.inputPair:not(.error):not(.disabled):active {
+  border-color: var(--token-component-field-control-border-active);
+}
+
+/* Error state - use status.error tokens */
+.inputPair.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+.inputPair.error .separator {
+  background-color: var(--token-component-field-separator-color-error);
+}
+
+.inputPair.error:hover:not(.disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+.inputPair.error.focused:not(.disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+}
+
+/* Disabled state - use status.disabled tokens */
+.inputPair.disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 1; /* Don't use opacity, use actual disabled colors */
+}

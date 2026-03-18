@@ -1,0 +1,569 @@
+{
+  "$name": "Semantic Tokens",
+  "typography": {
+    "fontWeight": {
+      "regular": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-regular}",
+        "$description": "Regular font weight (400). Standard weight for body text."
+      },
+      "medium": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-medium}",
+        "$description": "Medium font weight (500). Moderate emphasis."
+      },
+      "semibold": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-semibold}",
+        "$description": "Semibold font weight (600). Strong emphasis."
+      },
+      "bold": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontWeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontWeight-bold}",
+        "$description": "Bold font weight (700). Maximum emphasis."
+      }
+    },
+    "fontSize": {
+      "1": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-1}",
+        "$description": "Font size 1 (12px). Extra small text."
+      },
+      "2": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-2}",
+        "$description": "Font size 2 (14px). Small text."
+      },
+      "3": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-3}",
+        "$description": "Font size 3 (16px). Base text."
+      },
+      "4": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-4}",
+        "$description": "Font size 4 (18px). Large text."
+      },
+      "5": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-5}",
+        "$description": "Font size 5 (20px). Extra large text."
+      },
+      "6": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-6}",
+        "$description": "Font size 6 (24px). Display text."
+      },
+      "7": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-7}",
+        "$description": "Font size 7 (28px). Large display text."
+      },
+      "8": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-8}",
+        "$description": "Font size 8 (32px). Extra large display text."
+      },
+      "9": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-fontSize-9}",
+        "$description": "Font size 9 (36px). Huge display text."
+      }
+    },
+    "lineHeight": {
+      "12": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-12}",
+        "$description": "Line height 12px. Tight spacing."
+      },
+      "14": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-14}",
+        "$description": "Line height 14px. Compact spacing."
+      },
+      "16": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-16}",
+        "$description": "Line height 16px. Comfortable spacing."
+      },
+      "18": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-18}",
+        "$description": "Line height 18px."
+      },
+      "20": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-20}",
+        "$description": "Line height 20px. Standard spacing."
+      },
+      "24": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-24}",
+        "$description": "Line height 24px. Relaxed spacing."
+      },
+      "28": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-28}",
+        "$description": "Line height 28px. Loose spacing."
+      },
+      "32": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-32}",
+        "$description": "Line height 32px."
+      },
+      "3": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{typography-lineHeight-3}",
+        "$description": "Line height 3 (20px). For size 3 typography."
+      }
+    },
+    "headline.size": {
+      "h1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.9}",
+        "$description": "Font size for H1 headline. Use for page titles and major headings."
+      },
+      "h2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.8}",
+        "$description": "Font size for H2 headline. Use for page titles and major headings."
+      },
+      "h3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.7}",
+        "$description": "Font size for H3 headline. Use for page titles and major headings."
+      },
+      "h4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.6}",
+        "$description": "Font size for H4 headline. Use for page titles and major headings."
+      },
+      "h5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.5}",
+        "$description": "Font size for H5 headline. Use for page titles and major headings."
+      },
+      "h6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.4}",
+        "$description": "Font size for H6 headline. Use for page titles and major headings."
+      }
+    },
+    "headline.line": {
+      "h1": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for H1 headline. Ensures proper vertical rhythm."
+      },
+      "h2": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for H2 headline. Ensures proper vertical rhythm."
+      },
+      "h3": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for H3 headline. Ensures proper vertical rhythm."
+      },
+      "h4": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for H4 headline. Ensures proper vertical rhythm."
+      },
+      "h5": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for H5 headline. Ensures proper vertical rhythm."
+      },
+      "h6": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for H6 headline. Ensures proper vertical rhythm."
+      }
+    },
+    "body.size": {
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.4}",
+        "$description": "Large body text size. Use for prominent body content and lead paragraphs."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.3}",
+        "$description": "Medium body text size. Use for standard body content and paragraphs."
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.2}",
+        "$description": "Small body text size. Use for secondary text and captions."
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "fontSizes",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontSize.1}",
+        "$description": "Extra small body text size. Use for fine print and disclaimers."
+      }
+    },
+    "body.line": {
+      "compact": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.3}",
+        "$description": "Compact line height for labels and helper text. Use for field labels, errors, helpers."
+      },
+      "tight": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.12}",
+        "$description": "Tight line height for compact UI (e.g. buttons)."
+      },
+      "relaxed": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.14}",
+        "$description": "Relaxed line height for descriptions and longer text."
+      },
+      "loose": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.16}",
+        "$description": "Loose line height for body and modal/drawer content."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for body text lg variant. Ensures readable line spacing."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for body text md variant. Ensures readable line spacing."
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for body text sm variant. Ensures readable line spacing."
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.base}",
+        "$description": "Line height for body text xs variant. Ensures readable line spacing."
+      }
+    },
+    "body.weight": {
+      "light": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontWeight.regular}",
+        "$description": "Light font weight. Use for subtle emphasis."
+      },
+      "normal": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontWeight.regular}",
+        "$description": "Normal font weight. Use for standard body text."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontWeight.medium}",
+        "$description": "Medium font weight. Use for moderate emphasis."
+      },
+      "semibold": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontWeight.bold}",
+        "$description": "Semibold font weight. Use for strong emphasis in body text."
+      },
+      "bold": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "number",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.fontWeight.bold}",
+        "$description": "Bold font weight. Use for maximum emphasis."
+      }
+    },
+    "visual": {
+      "compensation": {
+        "offset-1": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "1px",
+          "$description": "Level 1 visual compensation (1px shift). Use for fine-tuning vertical centering of text in containers."
+        },
+        "offset-2": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "2px",
+          "$description": "Level 2 visual compensation (2px shift). Use for fine-tuning vertical centering of text in containers."
+        },
+        "offset-3": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "3px",
+          "$description": "Level 3 visual compensation (3px shift). Use for fine-tuning vertical centering of text in containers."
+        }
+      }
+    }
+  },
+  "color": {
+    "headline": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.strong}",
+      "$description": "Color for headline text. Use for all heading levels (h1-h6)."
+    },
+    "body": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Default color for body text. Use for standard paragraphs and body content."
+      },
+      "subtle": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.subtle}",
+        "$description": "Subtle color for secondary body text. Use for less prominent content, captions, or helper text."
+      }
+    },
+    "link": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}",
+        "$description": "Default color for link text. Use for standard links and interactive text."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.hover}",
+        "$description": "Hover color for link text. Use for link hover states."
+      }
+    }
+  }
+}

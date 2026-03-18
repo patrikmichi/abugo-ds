@@ -1,0 +1,146 @@
+/* ActionMenu component styles using design tokens */
+
+.actionMenu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Panel */
+.panel {
+  position: absolute;
+  z-index: var(--token-component-actionmenu-z-index, 1050);
+  min-width: var(--token-component-actionmenu-min-width, 120px);
+  max-width: var(--token-component-actionmenu-max-width, 280px);
+  background-color: var(--token-component-actionmenu-background, #ffffff);
+  border: var(--token-component-actionmenu-border-width, 1px) solid var(--token-component-actionmenu-border-color, #efefef);
+  border-radius: var(--token-component-actionmenu-border-radius, 4px);
+  box-shadow: var(--token-component-actionmenu-shadow, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1));
+  font-family: var(--token-primitive-typography-font-family-sans);
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+/* Placement variants — CSS-only positioning */
+.bottomLeft {
+  top: calc(100% + 4px);
+  left: 0;
+}
+
+.bottomCenter {
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottomRight {
+  top: calc(100% + 4px);
+  right: 0;
+}
+
+.topLeft {
+  bottom: calc(100% + 4px);
+  left: 0;
+}
+
+.topCenter {
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topRight {
+  bottom: calc(100% + 4px);
+  right: 0;
+}
+
+/* Panel content (scrollable area) */
+.panelContent {
+  max-height: var(--token-component-actionmenu-max-height, 248px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--token-component-actionmenu-padding-y, 4px) 0;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Menu item */
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-actionmenu-item-gap, 8px);
+  min-height: var(--token-component-actionmenu-item-height, 40px);
+  padding: var(--token-component-actionmenu-item-padding-y, 4px) var(--token-component-actionmenu-item-padding-x, 16px);
+  font-size: var(--token-component-actionmenu-font-size, 14px);
+  font-weight: var(--token-component-actionmenu-font-weight, 400);
+  line-height: var(--token-component-actionmenu-line-height, 1.75rem);
+  color: var(--token-component-actionmenu-item-color, #464646);
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.item:hover:not(.itemDisabled) {
+  background-color: var(--token-component-actionmenu-item-background-hover, #f7f7f7);
+}
+
+.item:active:not(.itemDisabled) {
+  background-color: var(--token-component-actionmenu-item-background-active, #efefef);
+}
+
+.item.itemDisabled {
+  color: var(--token-component-actionmenu-item-color-disabled, #a2a2a2);
+  cursor: not-allowed;
+}
+
+/* Danger item */
+.item.danger {
+  color: var(--token-component-actionmenu-item-color-danger, #ff434e);
+}
+
+.item.danger:hover:not(.itemDisabled) {
+  background-color: var(--token-component-actionmenu-item-background-danger-hover, #fff5f5);
+}
+
+/* Item icon */
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--token-component-actionmenu-icon-size, 20px);
+  height: var(--token-component-actionmenu-icon-size, 20px);
+}
+
+.itemIcon .material-symbols-outlined {
+  font-size: var(--token-component-actionmenu-icon-size, 20px);
+  width: var(--token-component-actionmenu-icon-size, 20px);
+  height: var(--token-component-actionmenu-icon-size, 20px);
+}
+
+/* Item label */
+.itemLabel {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  margin: var(--token-component-actionmenu-divider-margin, 4px) 0;
+  background-color: var(--token-component-actionmenu-divider-color, #efefef);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .panel {
+    max-width: calc(100vw - 16px);
+  }
+}

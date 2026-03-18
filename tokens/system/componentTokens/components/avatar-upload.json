@@ -1,0 +1,56 @@
+{
+  "$name": "Component Tokens",
+  "button": {
+    "background": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.subtle}"
+      }
+    },
+    "border": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.accent.default}"
+      }
+    },
+    "content": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}"
+      }
+    }
+  }
+}

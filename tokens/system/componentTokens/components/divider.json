@@ -1,0 +1,82 @@
+{
+  "$name": "Component Tokens",
+  "horizontal": {
+    "border": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.passive.neutral.default}"
+    }
+  },
+  "vertical": {
+    "border": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.passive.neutral.default}"
+    }
+  },
+  "border": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{border.active.neutral.control.field.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "plain": {
+    "text": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{content.passive.neutral.default}",
+        "$collectionName": "semanticTokens",
+        "$description": "Plain divider text color (#464646)."
+      },
+      "font-weight": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "fontWeight",
+        "$value": "{typography.fontWeight.regular}",
+        "$collectionName": "semanticTokens",
+        "$description": "Plain divider text font weight (400/regular)."
+      }
+    }
+  },
+  "text": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens",
+      "$description": "Divider text color (#464646)."
+    },
+    "font-weight": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "fontWeight",
+      "$value": "{typography.fontWeight.regular}",
+      "$collectionName": "semanticTokens",
+      "$description": "Divider text font weight (400/regular)."
+    }
+  }
+}

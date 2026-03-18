@@ -1,0 +1,9 @@
+/* AutoComplete component styles using design tokens */
+
+.autocompleteWrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* The dropdown is handled by SelectDropdown component */
+/* Additional styles can be added here if needed for AutoComplete-specific styling */

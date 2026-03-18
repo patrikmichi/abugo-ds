@@ -1,0 +1,1278 @@
+{
+  "$name": "Component Tokens",
+  "x": {
+    "button": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.l}"
+      }
+    },
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      },
+      "selector": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "10px",
+          "$description": "Selector horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "12px",
+          "$description": "Selector horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "14px",
+          "$description": "Selector horizontal padding for large fields (14px)."
+        }
+      },
+      "picker": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "10px",
+          "$description": "Picker horizontal padding for small fields (10px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "12px",
+          "$description": "Picker horizontal padding for medium fields (12px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "14px",
+          "$description": "Picker horizontal padding for large fields (14px)."
+        }
+      }
+    },
+    "chip": {
+      "xxs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}",
+        "$description": "Chip extra-extra-small horizontal padding."
+      },
+      "xs": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Chip extra-small horizontal padding."
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Chip small horizontal padding (8px)"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Chip medium horizontal padding (12px)"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Chip large horizontal padding (16px)"
+      },
+      "withIcon": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xxxs}",
+          "$description": "Chip small padding-inline-start when icon/avatar present (4px)"
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Chip medium padding-inline-start when icon/avatar present (8px)"
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collaryName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Chip large padding-inline-start when icon/avatar present (12px)"
+        }
+      }
+    },
+    "tag": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Tag small horizontal padding (8px)"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Tag medium horizontal padding (12px)"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Tag large horizontal padding (16px)"
+      }
+    },
+    "alert": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      }
+    },
+    "toast": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      }
+    },
+    "card": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.l}"
+      }
+    },
+    "pagination": {
+      "s": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxxs}"
+      },
+      "l": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxxs}"
+      }
+    },
+    "tooltip": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xs}"
+    }
+  },
+  "left": {
+    "button": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      }
+    }
+  },
+  "right": {
+    "button": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}"
+      }
+    },
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      },
+      "select": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "36px",
+          "$description": "Right padding for select component small (accounts for chevron icon: padding-x + chevron-size + gap = 12px + 20px + 4px = 36px)."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "40px",
+          "$description": "Right padding for select component medium (accounts for chevron icon: padding-x + chevron-size + gap = 16px + 20px + 4px = 40px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "44px",
+          "$description": "Right padding for select component large (accounts for chevron icon: padding-x + chevron-size + gap = 20px + 20px + 4px = 44px)."
+        }
+      }
+    }
+  },
+  "y": {
+    "textarea": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      }
+    },
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Base vertical padding for small fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Base vertical padding for medium fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Base vertical padding for large fields. Use with calc() and optical alignment offset for padding-top and padding-bottom adjustments."
+      }
+    }
+  },
+  "top": {
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Base top padding for small fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-sm) - var(--token-semantic-typography-optical-alignment-offset-sm))"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Base top padding for medium fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-md) - var(--token-semantic-typography-optical-alignment-offset-md))"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Base top padding for large fields. Use with calc() to subtract optical offset: calc(var(--token-component-padding-top-field-lg) - var(--token-semantic-typography-optical-alignment-offset-lg))"
+      }
+    }
+  },
+  "bottom": {
+    "field": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs}",
+        "$description": "Base bottom padding for small fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-sm) + var(--token-semantic-typography-optical-alignment-offset-sm))"
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}",
+        "$description": "Base bottom padding for medium fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-md) + var(--token-semantic-typography-optical-alignment-offset-md))"
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.m}",
+        "$description": "Base bottom padding for large fields. Use with calc() to add optical offset: calc(var(--token-component-padding-bottom-field-lg) + var(--token-semantic-typography-optical-alignment-offset-lg))"
+      }
+    }
+  },
+  "optical": {
+    "button": {
+      "icon": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxxs}",
+        "$description": "Optical padding adjustment when icon is present. Reduces padding on the side where icon is displayed for better visual balance."
+      }
+    }
+  },
+  "adornment": {
+    "field": {
+      "leading": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Padding adjustment when leading adornment is present for small fields. This replaces the left padding to accommodate the adornment."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Padding adjustment when leading adornment is present for medium fields. This replaces the left padding to accommodate the adornment."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Padding adjustment when leading adornment is present for large fields. This replaces the left padding to accommodate the adornment."
+        }
+      },
+      "trailing": {
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Padding adjustment when trailing adornment is present for small fields. This replaces the right padding to accommodate the adornment."
+        },
+        "md": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Padding adjustment when trailing adornment is present for medium fields. This replaces the right padding to accommodate the adornment."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Padding adjustment when trailing adornment is present for large fields. This replaces the right padding to accommodate the adornment."
+        }
+      }
+    }
+  },
+  "block": {
+    "accordion": {
+      "header": {
+        "default": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Accordion header default padding (16px)."
+        },
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "mobile": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "content": {
+        "default": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.s}",
+          "$description": "Accordion content default padding (16px)."
+        },
+        "lg": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.m}",
+          "$description": "Accordion content padding large (20px)."
+        },
+        "mobile": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Accordion content padding on mobile (12px)."
+        },
+        "sm": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xs}",
+          "$description": "Accordion content padding small (12px)."
+        }
+      }
+    },
+    "alert": {
+      "x": {
+        "large": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "y": {
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "interactive": {
+          "small": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.xs}",
+            "$collectionName": "semanticTokens",
+            "$description": "Reduced vertical padding for small alerts with interactive elements (buttons). Compensates for button height to maintain consistent alert height."
+          },
+          "large": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.xs}",
+            "$collectionName": "semanticTokens",
+            "$description": "Reduced vertical padding for large alerts with interactive elements (buttons). Compensates for button height to maintain consistent alert height."
+          }
+        }
+      }
+    },
+    "anchor": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xs} 0",
+      "link": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs} 0"
+      }
+    },
+    "autocomplete": {
+      "option": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xs} {padding.sm}"
+      }
+    },
+    "card": {
+      "actions": {
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "body": {
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "grid": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "head": {
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      }
+    },
+    "chip": {
+      "delete-icon": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxxs}"
+      }
+    },
+    "colorpicker": {
+      "trigger": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "panel": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.sm}"
+      },
+      "presets": {
+        "top": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      }
+    },
+    "divider": {
+      "text": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "drawer": {
+      "body": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.l}",
+        "$collectionName": "semanticTokens"
+      },
+      "footer": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "header": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "dropdown": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xxs} 0"
+    },
+    "image": {
+      "preview": {
+        "toolbar": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.md}"
+        }
+      }
+    },
+    "menu": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.xxs} 0",
+      "item": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs} {padding.sm}"
+      }
+    },
+    "modal": {
+      "body": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.l}",
+        "$collectionName": "semanticTokens"
+      },
+      "footer": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "header": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "notification": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{padding.sm} {padding.md}"
+    },
+    "radio": {
+      "button": {
+        "x": {
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.s}",
+            "$collectionName": "semanticTokens"
+          },
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.s}",
+            "$collectionName": "semanticTokens"
+          }
+        },
+        "y": {
+          "lg": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.s}",
+            "$collectionName": "semanticTokens"
+          },
+          "sm": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.s}",
+            "$collectionName": "semanticTokens"
+          }
+        }
+      }
+    },
+    "segmented": {
+      "padding-y": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "padding-x": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.s}"
+      }
+    },
+    "stepper": {
+      "vertical": {
+        "step": {
+          "bottom": {
+            "$scopes": [
+              "ALL_SCOPES"
+            ],
+            "$libraryName": "",
+            "$type": "spacing",
+            "$value": "{padding.s}",
+            "$collectionName": "semanticTokens"
+          }
+        }
+      }
+    },
+    "tabs": {
+      "add": {
+        "button": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "tab": {
+        "lg": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "sm": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      }
+    },
+    "timepicker": {
+      "panel": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxs}"
+      },
+      "column": {
+        "label": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{padding.xxxs}"
+        }
+      },
+      "option": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{padding.xxxs}"
+      }
+    },
+    "toast": {
+      "x": {
+        "large": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "y": {
+        "large": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        },
+        "small": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      }
+    },
+    "upload": {
+      "drag": {
+        "mobile": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "action": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      },
+      "file": {
+        "item": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "image": {
+        "upload": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "spacing",
+          "$value": "{padding.s}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "progress": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "spacing",
+        "$value": "{padding.s}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  }
+}

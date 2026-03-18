@@ -1,0 +1,48 @@
+{
+  "$name": "Component Tokens",
+  "field": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.width.thin}"
+  },
+  "checkbox": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.width.thicker}"
+  },
+  "radio": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.width.thicker}"
+  },
+  "chip": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.width.thin}"
+  },
+  "popover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "borderWidth",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.width.thin}"
+  }
+}

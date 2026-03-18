@@ -1,0 +1,226 @@
+/* Field component styles using design tokens */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-gap-field-label-md);
+  width: 100%;
+}
+
+/* Grid layout for labelCol/wrapperCol */
+.field.hasLabelCol,
+.field.hasWrapperCol {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--token-component-field-gap-md, 16px);
+  align-items: start;
+}
+
+.field.hasLabelCol .label {
+  grid-column: 1;
+  padding-top: calc(var(--token-component-padding-top-field-md) - var(--token-component-field-optical-alignment-md));
+}
+
+.field.hasLabelCol .controlWrapper {
+  grid-column: 2;
+}
+
+/* Size variants */
+.field.sm {
+  gap: var(--token-component-gap-field-label-sm);
+}
+
+.field.sm.hasLabelCol {
+  gap: var(--token-component-field-gap-sm, 12px);
+}
+
+.field.sm.hasLabelCol .label {
+  padding-top: calc(var(--token-component-padding-top-field-sm) - var(--token-component-field-optical-alignment-sm));
+}
+
+.field.md {
+  gap: var(--token-component-gap-field-label-md);
+}
+
+.field.lg {
+  gap: var(--token-component-gap-field-label-lg);
+}
+
+.field.lg.hasLabelCol {
+  gap: var(--token-component-field-gap-lg, 20px);
+}
+
+.field.lg.hasLabelCol .label {
+  padding-top: calc(var(--token-component-padding-top-field-lg) - var(--token-component-field-optical-alignment-lg));
+}
+
+/* Label styles */
+.label {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-label-md);
+  font-weight: var(--token-primitive-typography-font-weight-bold);
+  line-height: var(--token-component-line-height-field-label-md);
+  color: var(--token-component-field-content-label-default);
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-field-gap-xxs, 8px);
+  margin: 0;
+}
+
+.field.sm .label {
+  font-size: var(--token-component-font-size-field-label-sm);
+  line-height: var(--token-component-line-height-field-label-sm);
+}
+
+.field.lg .label {
+  font-size: var(--token-component-font-size-field-label-lg);
+  line-height: var(--token-component-line-height-field-label-lg);
+}
+
+/* Label alignment - always left */
+.label {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.labelContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Required asterisk */
+.requiredAsterisk {
+  color: var(--token-component-field-required-asterisk-color);
+  margin-left: 2px;
+}
+
+/* Colon */
+.colon {
+  margin-left: 2px;
+  margin-right: 8px;
+}
+
+
+/* Tooltip icon */
+.tooltipIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-tooltip-icon-color, #464646);
+  cursor: help;
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.tooltipIcon .material-symbols-outlined {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.tooltipIcon:hover {
+  color: var(--token-component-field-tooltip-icon-color-hover, #464646);
+}
+
+/* Control wrapper */
+.controlWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-field-gap-control, 8px);
+  width: 100%;
+}
+
+.control {
+  width: 100%;
+  /* Ensure dropdowns are not clipped */
+  overflow: visible;
+  position: relative;
+}
+
+/* Feedback icon */
+.feedbackIcon {
+  position: absolute;
+  right: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  font-size: var(--token-component-field-feedback-icon-md);
+}
+
+.field.sm .feedbackIcon {
+  right: var(--token-component-padding-x-field-sm);
+  font-size: var(--token-component-field-feedback-icon-sm);
+}
+
+.field.lg .feedbackIcon {
+  right: var(--token-component-padding-x-field-lg);
+  font-size: var(--token-component-field-feedback-icon-lg);
+}
+
+.feedbackIcon.error {
+  color: var(--token-component-field-content-error);
+}
+
+.feedbackIcon.validating {
+  color: var(--token-component-field-content-value);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Error message */
+.errorMessage {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-primitive-typography-font-size-3, 16px);
+  line-height: var(--token-primitive-typography-line-height-16, 24px);
+  color: var(--token-component-field-content-error);
+  display: block;
+}
+
+/* Helper text */
+.helperText {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-helper);
+  line-height: var(--token-component-line-height-field-helper);
+  color: var(--token-component-field-content-help);
+  display: block;
+}
+
+/* Extra information */
+.extra {
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-field-helper);
+  line-height: var(--token-component-line-height-field-helper);
+  color: var(--token-component-field-content-help);
+  display: block;
+}
+
+/* Validating state */
+.field.validating .label {
+  color: var(--token-component-field-content-label-default);
+}
+
+/* Disabled state */
+.field.disabled .label {
+  color: var(--token-component-field-status-disabled-content);
+  opacity: 0.6;
+}
+
+.field.disabled .errorMessage,
+.field.disabled .helperText,
+.field.disabled .extra {
+  opacity: 0.6;
+}

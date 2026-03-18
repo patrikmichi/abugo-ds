@@ -1,0 +1,112 @@
+/* Radio component styles using design tokens */
+
+.radioWrapper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--token-component-gap-radio, 8px);
+  cursor: pointer;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-radio, 16px);
+  line-height: var(--token-component-line-height-radio, 24px);
+  color: var(--token-component-radio-color-default, #464646);
+  user-select: none;
+}
+
+.radioWrapper.disabled {
+  cursor: not-allowed;
+}
+
+.radioWrapper.checked .label {
+  color: var(--token-component-radio-color-checked, #464646);
+}
+
+.radioWrapper.disabled .label {
+  color: var(--token-component-radio-color-disabled);
+}
+
+/* Radio input */
+.radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Radio inner (visual representation) */
+.radioInner {
+  position: relative;
+  display: inline-block;
+  width: var(--token-component-radio-size, 20px);
+  height: var(--token-component-radio-size, 20px);
+  border: 2px solid var(--token-component-radio-border-unselected-default);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.radioWrapper:hover:not(.disabled) .radioInner {
+  border-color: var(--token-component-radio-border-unselected-hover);
+}
+
+.radioWrapper.checked .radioInner {
+  border-color: var(--token-component-radio-border-selected-default);
+}
+
+.radioWrapper.checked .radioInner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: var(--token-component-radio-background-selected-default);
+  transition: background-color 0.2s ease;
+}
+
+.radioWrapper.checked:hover:not(.disabled) .radioInner {
+  border-color: var(--token-component-radio-border-selected-hover);
+}
+
+.radioWrapper.checked:hover:not(.disabled) .radioInner::after {
+  background-color: var(--token-component-radio-background-selected-hover);
+}
+
+/* Focus state - only show on keyboard navigation, not on click */
+.radioWrapper:has(:focus-visible) .radioInner {
+  outline: 2px solid var(--token-component-radio-focus-outline-color, #93b8f9);
+  outline-offset: 2px;
+}
+
+.radioWrapper.disabled .radioInner {
+  border-color: var(--token-component-radio-border-unselected-disabled);
+  cursor: not-allowed;
+}
+
+.radioWrapper.checked.disabled .radioInner {
+  border-color: var(--token-component-radio-border-selected-disabled);
+}
+
+.radioWrapper.checked.disabled .radioInner::after {
+  background-color: var(--token-component-radio-background-selected-disabled);
+}
+
+/* Label */
+.label {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* Radio Group */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-radio-group-gap, 8px);
+}
+

@@ -1,0 +1,51 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+
+# pnpm
+.pnpm-cache/
+.pnpm-store/
+
+# MCP
+.mcp.json
+figma-console-mcp/
+
+# Claude Code
+.claude/
+.settings-overrides.json
+
+# OS files
+.DS_Store
+
+## Logs
+*.log
+debug-*.log
+
+## Storybook
+storybook-static/
+storybook/.storybook-static/
+storybook/.cache/
+
+## Next.js
+.next/
+out/
+build/
+dist/
+
+## Panda CSS (removed, but keep in gitignore for safety)
+styled-system/
+
+## TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+## Fonts (keep in repo, but ignore any generated files)
+# public/fonts/*.woff
+# public/fonts/*.woff2
+
+# Figma CLI (standalone clone)
+figma-cli/

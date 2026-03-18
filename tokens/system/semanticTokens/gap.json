@@ -1,0 +1,177 @@
+{
+  "$name": "Semantic Tokens",
+  "gap": {
+    "xxxs": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Extra extra extra small gap (4px)."
+    },
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-1}",
+      "$description": "Extra extra small gap (4px). Use for tight spacing between related elements."
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-2}",
+      "$description": "Extra small gap (8px). Use for compact spacing in dense layouts."
+    },
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Small gap (12px). Use for standard spacing between related elements."
+    },
+    "sm": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-3}",
+      "$description": "Small gap alias (12px)."
+    },
+    "m": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Medium gap (16px). Use for comfortable spacing in standard layouts."
+    },
+    "md": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-4}",
+      "$description": "Medium gap alias (16px)."
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-5}",
+      "$description": "Large gap (20px). Use for increased spacing between sections."
+    },
+    "xl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-6}",
+      "$description": "Extra large gap (24px). Use for prominent spacing between major sections."
+    },
+    "xxl": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{spacing-8}",
+      "$description": "Extra extra large gap (32px). Use for maximum spacing between distinct sections."
+    },
+    "field": {
+      "label": {
+        "sm": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1p5}",
+          "$description": "Gap between label and control for small fields (6px)."
+        },
+        "md": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2}",
+          "$description": "Gap between label and control for medium fields (8px)."
+        },
+        "lg": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-2p5}",
+          "$description": "Gap between label and control for large fields (10px)."
+        }
+      },
+      "error": {
+        "message": {
+          "$scopes": ["ALL_SCOPES"],
+          "$type": "spacing",
+          "$libraryName": "",
+          "$collectionName": "primitives",
+          "$value": "{spacing-1}",
+          "$description": "Gap between control and error message (4px)."
+        }
+      },
+      "helper": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between control and helper text (4px)."
+      },
+      "internal": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between compound field parts e.g. input+select (4px)."
+      },
+      "selector": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-2}",
+        "$description": "Gap between flag, code, and chevron in selector (8px)."
+      },
+      "picker": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-2}",
+        "$description": "Gap between inputs and expand button in picker (8px)."
+      },
+      "pickerInput": {
+        "$scopes": ["ALL_SCOPES"],
+        "$type": "spacing",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{spacing-1}",
+        "$description": "Gap between inputs and labels/separators in picker (4px)."
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+/* Segmented component styles using design tokens */
+
+.segmented {
+  --segment-count: 1;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--token-component-segmented-padding, 4px);
+  background-color: var(--token-component-segmented-background, #ffffff);
+  border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid var(--token-component-segmented-border-color, #e0e0e0);
+  border-radius: var(--token-component-radius-segmented, 999px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  box-sizing: border-box;
+}
+
+.segmented.block {
+  display: flex;
+  width: 100%;
+}
+
+.segmented.block .segment {
+  flex: 1 1 0%;
+  min-width: 0;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+/* Indicator (animated background) - CSS-based positioning */
+.indicator {
+  --selected-index: 0;
+
+  position: absolute;
+  top: var(--token-component-segmented-padding, 4px);
+  left: var(--token-component-segmented-padding, 4px);
+  width: calc((100% - var(--token-component-segmented-padding, 4px) * 2) / var(--segment-count));
+  height: calc(100% - var(--token-component-segmented-padding, 4px) * 2);
+  background-color: var(--token-component-segmented-indicator-background, #5690f5);
+  border-radius: var(--token-component-radius-segmented-indicator, 999px);
+  transform: translateX(calc(var(--selected-index) * 100%));
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+}
+
+.indicator.visible {
+  opacity: 1;
+}
+
+.segmented:has(.segment.selected:hover) .indicator {
+  background-color: var(--token-component-segmented-indicator-background-hover, #4573c4);
+}
+
+/* Segment button */
+.segment {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-component-segmented-segment-gap, 8px);
+  background: transparent;
+  border: none;
+  border-radius: var(--token-component-radius-segmented-indicator, 999px);
+  color: var(--token-component-segmented-text-color-default, #464646);
+  font-size: var(--token-component-segmented-font-size, 14px);
+  line-height: var(--token-component-segmented-line-height, 20px);
+  font-weight: var(--token-component-segmented-font-weight, 500);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.segment:hover:not(.segmentDisabled):not(:disabled):not(.selected) {
+  color: var(--token-component-segmented-text-color-hover, #464646);
+}
+
+.segment.selected {
+  color: var(--token-component-segmented-text-color-selected, #ffffff);
+  font-weight: var(--token-component-segmented-font-weight, 500);
+}
+
+.segment:focus-visible {
+  outline: 2px solid var(--token-component-segmented-focus-outline-color, #538bff);
+  outline-offset: 2px;
+  border-radius: var(--token-component-radius-segmented-indicator, 999px);
+}
+
+.segmentDisabled,
+.segment:disabled {
+  color: var(--token-component-segmented-text-color-disabled, #737373) !important;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.segmentDisabled.selected,
+.segment:disabled.selected {
+  color: var(--token-component-segmented-text-color-selected, #ffffff) !important;
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--token-component-segmented-icon-size, 20px);
+  height: var(--token-component-segmented-icon-size, 20px);
+}
+
+.icon .material-symbols-outlined {
+  font-size: var(--token-component-segmented-icon-size, 20px);
+  width: var(--token-component-segmented-icon-size, 20px);
+  height: var(--token-component-segmented-icon-size, 20px);
+}
+
+.segmented.small .icon {
+  width: var(--token-component-segmented-icon-size-sm, 16px);
+  height: var(--token-component-segmented-icon-size-sm, 16px);
+}
+
+.segmented.small .icon .material-symbols-outlined {
+  font-size: var(--token-component-segmented-icon-size-sm, 16px);
+  width: var(--token-component-segmented-icon-size-sm, 16px);
+  height: var(--token-component-segmented-icon-size-sm, 16px);
+}
+
+/* Label */
+.label {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.segmented.block .label {
+  text-align: center;
+}
+
+/* Icon-only segments (circular, 1:1 ratio) */
+.segment.iconOnly {
+  aspect-ratio: 1 / 1;
+  padding-left: 0;
+  padding-right: 0;
+  justify-content: center;
+}
+
+.segment.iconOnly .icon {
+  margin: 0;
+}
+
+/* Size variants */
+
+/* Small */
+.segmented.small .segment {
+  height: var(--token-component-segmented-height-sm, 24px);
+  padding: var(--token-component-segmented-padding-y-sm, 2px) var(--token-component-segmented-padding-x-sm, 12px);
+}
+
+/* Default/Medium */
+.segmented.default .segment {
+  height: var(--token-component-segmented-height-md, 32px);
+  padding: var(--token-component-padding-block-segmented-padding-y, 6px) var(--token-component-padding-block-segmented-padding-x, 16px);
+}
+
+/* Large */
+.segmented.large .segment {
+  height: var(--token-component-segmented-height-lg, 40px);
+  padding: var(--token-component-segmented-padding-y-lg, 12px) var(--token-component-padding-block-segmented-padding-x, 16px);
+}
+
+/* Disabled state */
+.segmented.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.segmented.disabled .segment {
+  cursor: not-allowed;
+}

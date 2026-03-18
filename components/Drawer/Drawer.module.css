@@ -1,0 +1,263 @@
+/* Drawer component styles using design tokens */
+
+
+/* Mask */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--token-component-drawer-mask-background, rgba(0, 0, 0, 0.45));
+  z-index: var(--token-component-drawer-z-index, 1000);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.mask.maskOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Drawer */
+.drawer {
+  position: fixed;
+  z-index: calc(var(--token-component-drawer-z-index, 1000) + 1);
+  background-color: var(--token-component-drawer-background, #fff);
+  color: var(--token-component-drawer-content, rgba(0, 0, 0, 0.85));
+  box-shadow: var(--token-component-drawer-shadow, -6px 0 16px 0 rgba(0, 0, 0, 0.08));
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-drawer, 14px);
+  line-height: var(--token-component-line-height-drawer, 1.5715);
+}
+
+/* Placement: Right (default) */
+.drawer.right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 378px;
+  transform: translateX(100%);
+}
+
+.drawer.right.open {
+  transform: translateX(0);
+}
+
+/* Placement: Left */
+.drawer.left {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 378px;
+  transform: translateX(-100%);
+  box-shadow: var(--token-component-drawer-shadow, 6px 0 16px 0 rgba(0, 0, 0, 0.08));
+}
+
+.drawer.left.open {
+  transform: translateX(0);
+}
+
+/* Placement: Top */
+.drawer.top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 378px;
+  transform: translateY(-100%);
+  box-shadow: var(--token-component-drawer-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08));
+}
+
+.drawer.top.open {
+  transform: translateY(0);
+}
+
+/* Placement: Bottom */
+.drawer.bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 378px;
+  transform: translateY(100%);
+  box-shadow: var(--token-component-drawer-shadow, 0 -6px 16px 0 rgba(0, 0, 0, 0.08));
+}
+
+.drawer.bottom.open {
+  transform: translateY(0);
+}
+
+/* Close button (when in header, acts like plain button) */
+.close {
+  padding: 0;
+  background-color: var(--token-component-button-secondary-plain-background-default, transparent);
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-button-secondary-plain-content-default, rgba(0, 0, 0, 0.85));
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+  flex-shrink: 0;
+}
+
+.close:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-button-secondary-plain-content-hover, rgba(0, 0, 0, 0.85));
+}
+
+.close:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(0, 0, 0, 0.1));
+  color: var(--token-component-button-secondary-plain-content-pressed, rgba(0, 0, 0, 0.85));
+}
+
+.close:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Close button (when no header - absolute positioned, acts like plain button) */
+.closeAbsolute {
+  position: absolute;
+  top: var(--token-component-gap-drawer-close-top, 20px);
+  right: var(--token-component-gap-drawer-close-right, 20px);
+  z-index: 1;
+  padding: 0;
+  background-color: var(--token-component-button-secondary-plain-background-default, transparent);
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-button-secondary-plain-content-default, rgba(0, 0, 0, 0.85));
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+}
+
+.closeAbsolute:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-button-secondary-plain-content-hover, rgba(0, 0, 0, 0.85));
+}
+
+.closeAbsolute:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(0, 0, 0, 0.1));
+  color: var(--token-component-button-secondary-plain-content-pressed, rgba(0, 0, 0, 0.85));
+}
+
+.closeAbsolute:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Spacer (invisible element to balance close button for centered titles) */
+.spacer {
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  flex-shrink: 0;
+}
+
+/* Back button (acts like plain button) */
+.back {
+  padding: 0;
+  background-color: var(--token-component-button-secondary-plain-background-default, transparent);
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-button-secondary-plain-content-default, rgba(0, 0, 0, 0.85));
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+  flex-shrink: 0;
+}
+
+.back:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-button-secondary-plain-content-hover, rgba(0, 0, 0, 0.85));
+}
+
+.back:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(0, 0, 0, 0.1));
+  color: var(--token-component-button-secondary-plain-content-pressed, rgba(0, 0, 0, 0.85));
+}
+
+.back:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Header */
+.header {
+  position: relative;
+  padding: var(--token-component-padding-block-drawer-header, 16px 24px);
+  border-bottom: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-drawer-border, #f0f0f0);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-drawer-header-gap, 24px);
+  height: 64px;
+  box-sizing: border-box;
+}
+
+/* Title wrapper */
+.titleWrap {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+}
+
+.titleCenter .titleWrap {
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--token-component-drawer-title-size, 20px);
+  font-weight: var(--token-primitive-typography-font-weight-bold, 700);
+  line-height: 28px;
+  color: var(--token-component-drawer-title-color, #161616);
+  margin: 0;
+  padding-top: 1px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* Body */
+.body {
+  flex: 1;
+  padding: var(--token-component-padding-block-drawer-body, 24px);
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: var(--token-component-padding-block-drawer-footer, 16px 24px);
+  border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-drawer-border, #f0f0f0);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--token-component-drawer-footer-gap, 16px);
+  height: 64px;
+  box-sizing: border-box;
+}
+
+.footerRight {
+  justify-content: flex-end;
+}

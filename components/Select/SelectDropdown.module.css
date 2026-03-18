@@ -1,0 +1,50 @@
+/* SelectDropdown component styles using design tokens */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--token-component-gap-select-dropdown-offset, 4px));
+  left: 0;
+  right: 0;
+  z-index: var(--token-component-select-dropdown-z-index, 1050);
+  background-color: var(--token-component-popover-background, #fff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-popover-border, #efefef);
+  border-radius: var(--token-component-radius-popover, 8px);
+  box-shadow: var(--token-component-popover-shadow, var(--token-primitive-shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)));
+  font-family: var(--token-primitive-typography-font-family-sans);
+  box-sizing: border-box;
+  /* Ensure pointer events work */
+  pointer-events: auto;
+}
+
+.dropdownContent {
+  /* Max height for 6 options (all sizes use 40px height) - enables scrolling when 6+ options */
+  /* 6 options × 40px = 240px, plus 4px top padding + 4px bottom padding = 248px */
+  height: auto;
+  max-height: var(--token-component-select-dropdown-max-height, 248px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--token-component-select-dropdown-padding-y, 4px) 0;
+  /* Ensure scrolling works */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  /* Make sure it's scrollable */
+  position: relative;
+  /* Ensure pointer events work for scrolling */
+  pointer-events: auto;
+}
+
+.optionsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  /* Ensure list can be taller than container for scrolling */
+  min-height: 0;
+}
+
+.notFound {
+  padding: var(--token-component-select-dropdown-empty-padding-y, 8px) var(--token-component-select-dropdown-empty-padding-x, 12px);
+  text-align: center;
+  color: var(--token-component-select-row-content-disabled, rgba(0, 0, 0, 0.25));
+  font-size: var(--token-component-font-size-field-sm, 14px);
+}

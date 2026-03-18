@@ -1,0 +1,39 @@
+{
+  "$name": "Component Tokens",
+  "background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{background.passive.neutral.elevated}"
+  },
+  "border": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.passive.neutral.default}"
+  },
+  "shadow": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "boxShadow",
+    "$value": "{shadow.md}",
+    "$collectionName": "semanticTokens"
+  },
+  "padding": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.m}"
+  }
+}

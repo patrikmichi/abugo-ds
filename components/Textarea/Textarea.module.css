@@ -1,0 +1,117 @@
+/* Textarea component styles using design tokens */
+/* Unified structure for all field controls */
+
+.textareaWrapper {
+  position: relative;
+  width: 100%;
+  /* Textarea doesn't have fixed height, uses min-height */
+}
+
+.textarea {
+  /* Base styles - use field control tokens */
+  width: 100%;
+  background-color: var(--token-component-field-control-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
+  /* Equal padding for vertical centering */
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  font-size: var(--token-component-font-size-field-sm);
+  /* Textarea doesn't have fixed height, so use normal line-height */
+  line-height: var(--token-component-line-height-field-value);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  resize: vertical;
+  transition: 
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-sizing: border-box;
+}
+
+.textarea::placeholder {
+  color: var(--token-component-field-content-placeholder);
+}
+
+/* Enabled state (default) */
+.textarea:not(.error):not(.disabled):hover:not(:disabled) {
+  background-color: var(--token-component-field-control-background-hover);
+  border-color: var(--token-component-field-control-border-hover);
+}
+
+.textarea:not(.error):not(.disabled):focus:not(:disabled),
+.textarea:not(.error):not(.disabled):focus-visible:not(:disabled) {
+  background-color: var(--token-component-field-control-background-focused);
+  border-color: var(--token-component-field-control-border-focused);
+  /* Show soft glowing focus ring on focus */
+  outline: none;
+  box-shadow: 
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+}
+
+.textarea:not(.error):not(.disabled):active:not(:disabled) {
+  border-color: var(--token-component-field-control-border-active);
+}
+
+/* Error state - use status.error tokens */
+.textarea.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  color: var(--token-component-field-content-value);
+}
+
+.textarea.error:hover:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+}
+
+.textarea.error:focus:not(:disabled),
+.textarea.error:focus-visible:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  /* No focus ring on error state - keep red border */
+  outline: none;
+  box-shadow: none;
+}
+
+/* Disabled state - use status.disabled tokens */
+.textarea.disabled,
+.textarea:disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  color: var(--token-component-field-status-disabled-content);
+  cursor: not-allowed;
+  opacity: 1; /* Don't use opacity, use actual disabled colors */
+}
+
+/* Size variants */
+.sm {
+  padding-inline-start: var(--token-component-padding-x-field-sm);
+  padding-inline-end: var(--token-component-padding-x-field-sm);
+  /* Equal padding for vertical centering */
+  padding-top: var(--token-component-padding-y-field-sm);
+  padding-bottom: var(--token-component-padding-y-field-sm);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  min-height: 80px;
+}
+
+.md {
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
+  /* Equal padding for vertical centering */
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  min-height: 100px;
+}
+
+.lg {
+  padding-inline-start: var(--token-component-padding-x-field-lg);
+  padding-inline-end: var(--token-component-padding-x-field-lg);
+  /* Equal padding for vertical centering */
+  padding-top: var(--token-component-padding-y-field-lg);
+  padding-bottom: var(--token-component-padding-y-field-lg);
+  border-radius: var(--token-component-radius-field-lg, 8px);
+  min-height: 120px;
+}

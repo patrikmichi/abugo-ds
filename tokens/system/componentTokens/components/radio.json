@@ -1,0 +1,331 @@
+{
+  "$name": "Component Tokens",
+  "background": {
+    "unselected": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{universal.transparent}"
+    },
+    "selected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.hover}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.active.accent.disabled}"
+      }
+    }
+  },
+  "border": {
+    "unselected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}",
+        "$description": "Radio border color (#5690F5)"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.hover}",
+        "$description": "Radio border color on hover"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.accent.disabled}",
+        "$description": "Radio border color when disabled"
+      }
+    },
+    "selected": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.default}",
+        "$description": "Radio border color when selected (#5690F5)"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.active.accent.hover}",
+        "$description": "Radio border color when selected on hover"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.accent.disabled}",
+        "$description": "Radio border color when selected and disabled"
+      }
+    }
+  },
+  "button": {
+    "background": {
+      "checked": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "outline": {
+        "checked": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{background.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "solid": {
+        "checked": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{background.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
+        }
+      }
+    },
+    "border": {
+      "checked": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "color": {
+      "checked": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "outline": {
+        "checked": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{background.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
+        }
+      },
+      "solid": {
+        "checked": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$libraryName": "",
+          "$type": "color",
+          "$value": "{background.passive.neutral.default}",
+          "$collectionName": "semanticTokens"
+        }
+      }
+    },
+    "height": {
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "dimension",
+        "$value": 40,
+        "$collectionName": ""
+      },
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "dimension",
+        "$value": 40,
+        "$collectionName": ""
+      }
+    }
+  },
+  "color": {
+    "default": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens",
+      "$description": "Text color for radio label (#464646)"
+    },
+    "checked": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens",
+      "$description": "Text color for checked radio label (#464646)"
+    },
+    "disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.active.neutral.disabled}",
+      "$collectionName": "semanticTokens",
+      "$description": "Text color for disabled radio label"
+    }
+  },
+  "dot": {
+    "color": {
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "size": {
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    }
+  },
+  "focus": {
+    "outline": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}"
+      }
+    }
+  }
+}

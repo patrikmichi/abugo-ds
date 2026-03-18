@@ -1,0 +1,61 @@
+/* IconContainer component styles using design tokens */
+
+.iconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--token-component-iconcontainer-background, #e4edfd);
+  color: var(--token-component-iconcontainer-icon-color, #5690f5);
+  font-size: var(--token-component-iconcontainer-icon-size, 24px);
+  line-height: 1;
+}
+
+/* Sizes */
+.xxsm {
+  width: var(--token-component-iconcontainer-size-xxsm, 40px);
+  height: var(--token-component-iconcontainer-size-xxsm, 40px);
+}
+
+.xsm {
+  width: var(--token-component-iconcontainer-size-xsm, 48px);
+  height: var(--token-component-iconcontainer-size-xsm, 48px);
+}
+
+.sm {
+  width: var(--token-component-iconcontainer-size-sm, 56px);
+  height: var(--token-component-iconcontainer-size-sm, 56px);
+}
+
+.md {
+  width: var(--token-component-iconcontainer-size-md, 64px);
+  height: var(--token-component-iconcontainer-size-md, 64px);
+}
+
+.lg {
+  width: var(--token-component-iconcontainer-size-lg, 72px);
+  height: var(--token-component-iconcontainer-size-lg, 72px);
+}
+
+/* Shapes */
+.circle {
+  border-radius: 50%;
+}
+
+.rounded {
+  border-radius: var(--token-component-iconcontainer-radius-rounded, 12px);
+}
+
+.square {
+  border-radius: 0;
+}
+
+/* Icon wrapper */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-iconcontainer-icon-size, 24px);
+  height: var(--token-component-iconcontainer-icon-size, 24px);
+  overflow: hidden;
+}

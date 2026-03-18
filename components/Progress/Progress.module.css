@@ -1,0 +1,28 @@
+/* Progress component styles using design tokens */
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background-color: var(--token-component-progress-linear-background);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+}
+
+.fill.default {
+  background-color: var(--token-component-progress-linear-fill-default);
+}
+
+.fill.success {
+  background-color: var(--token-component-progress-linear-fill-success);
+}
+
+.fill.error {
+  background-color: var(--token-component-progress-linear-fill-error);
+}

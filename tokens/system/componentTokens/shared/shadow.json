@@ -1,0 +1,75 @@
+{
+  "$name": "Component Tokens",
+  "field": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-sm}"
+  },
+  "alert": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-sm}"
+  },
+  "toast": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-lg}"
+  },
+  "card": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-sm}"
+  },
+  "popover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-md}"
+  },
+  "tooltip": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-md}"
+  },
+  "modal": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-xl}"
+  },
+  "drawer": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "boxShadow",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{shadow-lg}"
+  }
+}

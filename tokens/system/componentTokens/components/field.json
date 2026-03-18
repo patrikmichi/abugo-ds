@@ -1,0 +1,636 @@
+{
+  "$name": "Component Tokens",
+  "width": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxxxl}"
+  },
+  "status": {
+    "enabled": {
+      "border": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.default}"
+      },
+      "background": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.elevated}"
+      },
+      "content": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
+      }
+    },
+    "error": {
+      "border": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.danger.default}"
+      },
+      "background": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.elevated}"
+      },
+      "content": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.danger}"
+      }
+    },
+    "disabled": {
+      "border": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.disabled}"
+      },
+      "background": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.default}"
+      },
+      "content": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.subtle}"
+      }
+    },
+    "warning": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.warning.default}"
+      }
+    },
+    "success": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.success.default}"
+      }
+    }
+  },
+  "content": {
+    "label": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Label text color in default state."
+      },
+      "error": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.danger}",
+        "$description": "Label text color in error state (red)."
+      }
+    },
+    "required": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.danger}"
+    },
+    "placeholder": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
+    },
+    "value": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}"
+    },
+    "error": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.danger}"
+    },
+    "optional": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
+    },
+    "help": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}"
+    },
+    "counter": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.muted}"
+    },
+    "disabled": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.default}",
+      "$collectionName": "semanticTokens"
+    }
+  },
+  "tooltip": {
+    "icon": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Color for tooltip info icon (#464646)"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Color for tooltip info icon on hover (#464646)"
+      }
+    }
+  },
+  "control": {
+    "border": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.hover}"
+      },
+      "focused": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}"
+      },
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.selected}"
+      }
+    },
+    "background": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.elevated}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.elevated}"
+      },
+      "focused": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{background.passive.neutral.elevated}"
+      },
+      "active": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  },
+  "required": {
+    "asterisk": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.danger}",
+        "$description": "Required asterisk color (red)."
+      }
+    }
+  },
+  "separator": {
+    "width": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "borderWidth",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{border-width-1}",
+      "$description": "Separator line width between compound field parts (1px)."
+    },
+    "color": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.default}",
+        "$description": "Separator color in default state."
+      },
+      "focus": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}",
+        "$description": "Separator color in focus state."
+      },
+      "error": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.danger.default}",
+        "$description": "Separator color in error state."
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.hover}",
+        "$description": "Separator color in hover state."
+      }
+    }
+  },
+  "selector": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.neutral.subtle}",
+      "$description": "Country code selector background color (light gray)."
+    },
+    "flag": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "20px",
+        "$description": "Flag emoji size (20px)."
+      }
+    },
+    "chevron": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "12px",
+        "$description": "Chevron icon size (12px)."
+      },
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}",
+        "$description": "Chevron icon color."
+      }
+    }
+  },
+  "picker": {
+    "segment": {
+      "background": {
+        "focus": {
+          "$scopes": [
+            "ALL_SCOPES"
+          ],
+          "$type": "color",
+          "$libraryName": "",
+          "$collectionName": "semanticTokens",
+          "$value": "{background.active.accent.subtle}",
+          "$description": "Focused segment background color (light blue)."
+        }
+      },
+      "radius": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{radius-1}",
+        "$description": "Focused segment border radius (4px)."
+      }
+    },
+    "chevron": {
+      "size": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "12px",
+        "$description": "Chevron icon size (12px)."
+      }
+    }
+  },
+  "focus": {
+    "outline": {
+      "width": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "borderWidth",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": "{border-width-2}",
+        "$description": "Focus ring width (2px)."
+      },
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}",
+        "$description": "Focus ring color (blue)."
+      },
+      "opacity": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "opacity",
+        "$libraryName": "",
+        "$collectionName": "primitives",
+        "$value": 0.3,
+        "$description": "Focus ring opacity for soft glow effect (30%)."
+      }
+    }
+  },
+  "feedback": {
+    "icon": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "{icon.field.sm}",
+        "$description": "Feedback icon size for small fields (matches field icon size)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "{icon.field.md}",
+        "$description": "Feedback icon size for medium fields (matches field icon size)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "dimension",
+        "$libraryName": "",
+        "$collectionName": "componentTokens",
+        "$value": "{icon.field.lg}",
+        "$description": "Feedback icon size for large fields (matches field icon size)."
+      }
+    }
+  },
+  "gap": {
+    "control": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xs}",
+      "$description": "Gap between field control and help/error messages (8px)."
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.m}"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.s}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.l}"
+    },
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xxs}"
+    },
+    "xxxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xxxs}"
+    }
+  },
+  "optical-alignment": {
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.optical.alignment.offset.md}"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.optical.alignment.offset.sm}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.optical.alignment.offset.lg}"
+    }
+  }
+}

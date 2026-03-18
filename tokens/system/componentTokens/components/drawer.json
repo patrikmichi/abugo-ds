@@ -1,0 +1,165 @@
+{
+  "$name": "Component Tokens",
+  "default": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.passive.neutral.elevated}"
+    },
+    "border": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{border.active.neutral.control.field.default}"
+    },
+    "content": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{content.passive.neutral.default}"
+    }
+  },
+  "background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "color",
+    "$value": "{background.passive.neutral.default}",
+    "$collectionName": "semanticTokens"
+  },
+  "border": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "color",
+    "$value": "{border.active.neutral.control.field.default}",
+    "$collectionName": "semanticTokens"
+  },
+  "close": {
+    "background": {
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "color": {
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{background.passive.neutral.default}",
+        "$collectionName": "semanticTokens"
+      }
+    },
+    "size": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 40,
+      "$collectionName": ""
+    }
+  },
+  "content": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "color",
+    "$value": "{content.passive.neutral.default}",
+    "$collectionName": "semanticTokens"
+  },
+  "mask": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.45)",
+      "$collectionName": ""
+    }
+  },
+  "shadow": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "boxShadow",
+    "$value": "{shadow.md}",
+    "$collectionName": "semanticTokens"
+  },
+  "title": {
+    "color": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "color",
+      "$value": "{content.passive.neutral.strong}",
+      "$collectionName": "semanticTokens"
+    },
+    "size": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "dimension",
+      "$value": 20,
+      "$collectionName": ""
+    }
+  },
+  "z-index": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "",
+    "$value": 1000
+  },
+  "header": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "",
+      "$value": "24px",
+      "$description": "Gap between header title and close button (24px)"
+    }
+  },
+  "footer": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.md}",
+      "$description": "Gap between footer buttons (16px)"
+    }
+  }
+}

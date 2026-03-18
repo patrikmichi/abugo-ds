@@ -1,0 +1,90 @@
+/* InputOTP component styles — matches Input field styling */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Size variants — gap between cells */
+.sm {
+  gap: var(--token-component-gap-field-leading-icon-sm, 8px);
+}
+
+.md {
+  gap: var(--token-component-gap-field-leading-icon-md, 12px);
+}
+
+.lg {
+  gap: var(--token-component-gap-field-leading-icon-lg, 16px);
+}
+
+/* Cell — 1:1 square ratio using field height tokens */
+.cell {
+  width: var(--token-component-height-field-sm, 40px);
+  height: var(--token-component-height-field-sm, 40px);
+  border: 1px solid var(--token-component-field-control-border-default, #e0e0e0);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  background: var(--token-component-field-control-background-default, #ffffff);
+  color: var(--token-component-field-content-value, #464646);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+  text-align: center;
+  caret-color: transparent;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sm .cell {
+  width: var(--token-component-height-field-sm, 40px);
+  height: var(--token-component-height-field-sm, 40px);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  font-size: var(--token-component-font-size-field-sm, 14px);
+}
+
+.md .cell {
+  width: var(--token-component-height-field-md, 48px);
+  height: var(--token-component-height-field-md, 48px);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  font-size: var(--token-component-font-size-field-md, 16px);
+}
+
+.lg .cell {
+  width: var(--token-component-height-field-lg, 56px);
+  height: var(--token-component-height-field-lg, 56px);
+  border-radius: var(--token-component-radius-field-lg, 8px);
+  font-size: var(--token-component-font-size-field-lg, 18px);
+}
+
+/* States */
+.cell:hover:not(.disabled):not(.error) {
+  border-color: var(--token-component-field-control-border-hover, #c9c9c9);
+}
+
+.cell:focus:not(.disabled) {
+  border-color: var(--token-component-field-control-border-focused, #93b8f9);
+  box-shadow: 0 0 0 var(--token-component-field-focus-outline-width, 2px) var(--token-component-field-focus-outline-color, #93b8f9);
+}
+
+.cell.error {
+  border-color: var(--token-component-field-status-error-border, #ff434e);
+}
+
+.cell.error:focus {
+  box-shadow: 0 0 0 var(--token-component-field-focus-outline-width, 2px) var(--token-component-field-status-error-border, #ff434e);
+}
+
+.cell.disabled {
+  border-color: var(--token-component-field-status-disabled-border, #c9c9c9);
+  background: var(--token-component-field-status-disabled-background, #efefef);
+  color: var(--token-component-field-content-disabled, #464646);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.cell.filled {
+  border-color: var(--token-component-field-control-border-hover, #c9c9c9);
+}
+
+.cell::placeholder {
+  color: var(--token-component-field-content-placeholder, #a2a2a2);
+}

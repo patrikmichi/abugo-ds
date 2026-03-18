@@ -1,0 +1,439 @@
+/* ColorPicker component styles using design tokens */
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
+
+.colorPicker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+/* ==========================================================================
+   Trigger
+   ========================================================================== */
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--token-component-colorpicker-icon-gap);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--token-component-radius-colorpicker-trigger);
+  border: 1px solid var(--token-component-colorpicker-trigger-border);
+  background: var(--token-component-colorpicker-trigger-background);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trigger:hover {
+  border-color: var(--token-component-colorpicker-trigger-border-hover);
+}
+
+.trigger.active {
+  border-color: var(--token-component-colorpicker-trigger-border-active);
+  box-shadow: 0 0 0 2px var(--token-primitive-blue-opacity-10, rgba(86, 144, 245, 0.1));
+}
+
+.trigger.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Size variants */
+.trigger.sm {
+  padding: 2px;
+}
+
+.trigger.sm .colorBlock {
+  width: 16px;
+  height: 16px;
+}
+
+.trigger.md {
+  padding: 4px;
+}
+
+.trigger.lg {
+  padding: 6px;
+}
+
+.trigger.lg .colorBlock {
+  width: 28px;
+  height: 28px;
+}
+
+/* ==========================================================================
+   Color Block (trigger swatch)
+   ========================================================================== */
+
+.colorBlock {
+  width: var(--token-component-colorpicker-block-width);
+  height: var(--token-component-colorpicker-block-height);
+  border-radius: var(--token-component-colorpicker-block-radius);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* Checkerboard pattern for alpha transparency */
+  background-image:
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0;
+}
+
+.colorBlockInner {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* ==========================================================================
+   Color Text
+   ========================================================================== */
+
+.colorText {
+  font-size: var(--token-component-colorpicker-text-font-size);
+  color: var(--token-component-colorpicker-text-color);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Panel (dropdown)
+   ========================================================================== */
+
+.panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: var(--token-component-colorpicker-panel-z-index);
+  width: var(--token-component-colorpicker-panel-width);
+  background-color: var(--token-component-colorpicker-panel-background);
+  border-radius: var(--token-component-radius-colorpicker-panel);
+  box-shadow: var(--token-primitive-shadow-3-down, 0 8px 16px 0 rgba(0, 0, 0, 0.12));
+  padding: 12px;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+/* ==========================================================================
+   Saturation Panel
+   ========================================================================== */
+
+.saturation {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: calc(var(--token-primitive-radius-1, 4) * 1px);
+  cursor: crosshair;
+  overflow: hidden;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.saturationWhite {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.saturationBlack {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #000000);
+}
+
+.saturationPointer {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 1px 1px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Sliders Section
+   ========================================================================== */
+
+.sliders {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.colorPreview {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  /* Checkerboard for alpha */
+  background-image:
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0;
+}
+
+.colorPreviewInner {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.sliderGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   Hue Slider
+   ========================================================================== */
+
+.hueSlider {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right,
+    #ff0000 0%,
+    #ffff00 17%,
+    #00ff00 33%,
+    #00ffff 50%,
+    #0000ff 67%,
+    #ff00ff 83%,
+    #ff0000 100%
+  );
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Alpha Slider
+   ========================================================================== */
+
+.alphaSlider {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  /* Checkerboard background */
+  background-image:
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0;
+}
+
+.alphaGradient {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* ==========================================================================
+   Slider Handle
+   ========================================================================== */
+
+.sliderHandle {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Color Inputs
+   ========================================================================== */
+
+.inputs {
+  margin-bottom: 12px;
+  overflow: visible;
+  position: relative;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formatSelect {
+  flex-shrink: 0;
+  width: 72px;
+  position: relative;
+}
+
+.nativeSelect {
+  appearance: none;
+  width: 100%;
+  height: var(--token-component-height-field-sm);
+  padding: 0 24px 0 8px;
+  border: 1px solid var(--token-component-field-control-border-default);
+  border-radius: var(--token-component-radius-field-sm);
+  font-size: var(--token-component-font-size-field-sm, 14px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  color: var(--token-component-field-content-value);
+  background: var(--token-component-field-control-background-default);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.nativeSelect:focus {
+  border-color: var(--token-primitive-brand-700);
+}
+
+.selectIcon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--token-primitive-grey-500);
+  pointer-events: none;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.inputWrapper.inputSmall {
+  flex: 0 0 48px;
+  max-width: 48px;
+}
+
+.inputWrapper.inputAlpha {
+  flex: 0 0 72px;
+  min-width: 72px;
+}
+
+.colorInput {
+  width: 100%;
+}
+
+.colorInput input {
+  text-align: center;
+}
+
+/* Reduce suffix padding for compact layout */
+.inputAlpha .colorInput input {
+  padding-inline-end: 24px;
+}
+
+/* ==========================================================================
+   Presets
+   ========================================================================== */
+
+.presets {
+  border-top: 1px solid var(--token-component-colorpicker-presets-border);
+  padding-top: 12px;
+}
+
+.presetGroup {
+  margin-bottom: 8px;
+}
+
+.presetGroup:last-child {
+  margin-bottom: 0;
+}
+
+.presetHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 2px 0;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.presetLabel {
+  font-size: var(--token-primitive-typography-font-size-1);
+  color: var(--token-component-colorpicker-preset-label-color);
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+.presetChevron {
+  font-size: 16px;
+  color: var(--token-component-colorpicker-preset-label-color);
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+}
+
+.presetChevronOpen {
+  transform: rotate(0deg);
+}
+
+.presetColors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--token-component-colorpicker-preset-color-gap);
+}
+
+.presetColor {
+  width: var(--token-component-colorpicker-preset-swatch-size);
+  height: var(--token-component-colorpicker-preset-swatch-size);
+  border-radius: var(--token-component-radius-colorpicker-preset-swatch);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.presetColor:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.presetColorActive {
+  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-selected);
+}
+
+.presetColorActive:hover {
+  box-shadow: 0 0 0 2px var(--token-component-colorpicker-preset-color-border-selected);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .panel {
+    width: calc(100vw - 32px);
+    max-width: 280px;
+  }
+}

@@ -1,0 +1,301 @@
+/* Chip component styles using design tokens */
+/* Based on Figma design - unselected/selected states only, full radius (pill shape) */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: calc(var(--token-primitive-border-width-1, 1) * 1px) solid;
+  outline: none;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-weight: var(--token-primitive-typography-font-weight-regular);
+  /* All chips use same font size and line height */
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  /* Full radius (pill shape) - uses radius.full token */
+  border-radius: var(--token-component-radius-chip, 999px);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  box-sizing: border-box;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Base button reset for button element */
+.chip[type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Sizes - fixed heights: sm = 24px, md = 32px, lg = 40px */
+/* All sizes use same font-size and line-height */
+.chip.sm {
+  height: var(--token-component-height-chip-sm, 24px);
+  padding-inline-start: var(--token-component-padding-x-chip-sm, 8px);
+  padding-inline-end: var(--token-component-padding-x-chip-sm, 8px);
+  gap: var(--token-component-gap-chip-icon-sm, 4px);
+}
+
+/* Adjust padding when leading icon is present (-4px from base) */
+.chip.sm.hasLeadingIcon {
+  padding-inline-start: var(--token-component-padding-x-chip-with-icon-sm, 4px);
+}
+
+.chip.md {
+  height: var(--token-component-height-chip-md, 32px);
+  padding-inline-start: var(--token-component-padding-x-chip-md, 12px);
+  padding-inline-end: var(--token-component-padding-x-chip-md, 12px);
+  gap: var(--token-component-gap-chip-icon-md, 4px);
+}
+
+.chip.md.hasLeadingIcon {
+  padding-inline-start: var(--token-component-padding-x-chip-with-icon-md, 8px);
+}
+
+.chip.lg {
+  height: var(--token-component-height-chip-lg, 40px);
+  padding-inline-start: var(--token-component-padding-x-chip-lg, 16px);
+  padding-inline-end: var(--token-component-padding-x-chip-lg, 16px);
+  gap: var(--token-component-gap-chip-icon-lg, 8px);
+}
+
+.chip.lg.hasLeadingIcon {
+  padding-inline-start: var(--token-component-padding-x-chip-with-icon-lg, 12px);
+}
+
+/* Unselected state (default) */
+.chip {
+  background-color: var(--token-component-chip-background-unselected-default, #ffffff);
+  color: var(--token-component-chip-content-unselected-default, #464646);
+  border-color: var(--token-component-chip-border-unselected-default, #e0e0e0);
+}
+
+.chip:not(.disabled):not(.selected):hover {
+  background-color: var(--token-component-chip-background-unselected-hover, #efefef);
+  color: var(--token-component-chip-content-unselected-hover, #161616);
+  border-color: var(--token-component-chip-border-unselected-hover, #c9c9c9);
+}
+
+.chip:not(.disabled):not(.selected):active {
+  background-color: var(--token-component-chip-background-unselected-pressed, #f7f7f7);
+  color: var(--token-component-chip-content-unselected-pressed, #737373);
+  border-color: var(--token-component-chip-border-unselected-pressed, #e0e0e0);
+}
+
+/* Selected state */
+.chip.selected {
+  background-color: var(--token-component-chip-background-selected-default, #5690f5);
+  color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
+}
+
+.chip.selected:not(.disabled):hover {
+  background-color: var(--token-component-chip-background-selected-hover, #4573c4);
+  color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
+}
+
+.chip.selected:not(.disabled):active {
+  background-color: var(--token-component-chip-background-selected-pressed, #78a6f7);
+  color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
+}
+
+/* Clickable */
+.chip.clickable {
+  cursor: pointer;
+}
+
+.chip.clickable:not(.disabled):focus-visible {
+  outline: 2px solid var(--token-component-chip-focus-outline-color);
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.chip.disabled {
+  cursor: not-allowed;
+  background-color: var(--token-component-chip-background-unselected-disabled, #efefef);
+  color: var(--token-component-chip-content-unselected-disabled, #a2a2a2);
+  border-color: var(--token-component-chip-border-unselected-disabled, #efefef);
+}
+
+.chip.disabled.selected {
+  background-color: var(--token-component-chip-background-selected-disabled, #93b8f9);
+  color: var(--token-component-chip-content-selected, #ffffff);
+  border-color: transparent;
+}
+
+/* Content elements */
+.avatar,
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  line-height: 1;
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+  text-transform: uppercase;
+}
+
+.chip.sm .avatar,
+.chip.sm .icon {
+  width: var(--token-component-icon-chip-sm, 16px);
+  min-width: var(--token-component-icon-chip-sm, 16px);
+  height: var(--token-component-icon-chip-sm, 16px);
+}
+
+.chip.sm .avatar {
+  font-size: calc(var(--token-component-icon-chip-sm, 16px) * 0.6);
+}
+
+.chip.md .avatar,
+.chip.md .icon {
+  width: var(--token-component-icon-chip-md, 20px);
+  min-width: var(--token-component-icon-chip-md, 20px);
+  height: var(--token-component-icon-chip-md, 20px);
+}
+
+.chip.md .avatar {
+  font-size: calc(var(--token-component-icon-chip-md, 20px) * 0.6);
+}
+
+.chip.lg .avatar,
+.chip.lg .icon {
+  width: var(--token-component-icon-chip-lg, 20px);
+  min-width: var(--token-component-icon-chip-lg, 20px);
+  height: var(--token-component-icon-chip-lg, 20px);
+}
+
+.chip.lg .avatar {
+  font-size: calc(var(--token-component-icon-chip-lg, 20px) * 0.6);
+}
+
+/* Material Icons in chip */
+.icon :global(.material-symbols-outlined) {
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.chip.sm .icon :global(.material-symbols-outlined) {
+  font-size: var(--token-component-icon-chip-sm, 16px);
+  width: var(--token-component-icon-chip-sm, 16px);
+  height: var(--token-component-icon-chip-sm, 16px);
+}
+
+.chip.md .icon :global(.material-symbols-outlined) {
+  font-size: var(--token-component-icon-chip-md, 20px);
+  width: var(--token-component-icon-chip-md, 20px);
+  height: var(--token-component-icon-chip-md, 20px);
+}
+
+.chip.lg .icon :global(.material-symbols-outlined) {
+  font-size: var(--token-component-icon-chip-lg, 20px);
+  width: var(--token-component-icon-chip-lg, 20px);
+  height: var(--token-component-icon-chip-lg, 20px);
+}
+
+.chip.sm .trailingIcon {
+  font-size: var(--token-component-icon-chip-sm, 16px);
+}
+
+.chip.md .trailingIcon {
+  font-size: var(--token-component-icon-chip-md, 20px);
+}
+
+.chip.lg .trailingIcon {
+  font-size: var(--token-component-icon-chip-lg, 20px);
+}
+
+.trailingIcon :global(.material-symbols-outlined) {
+  display: block;
+  line-height: 1;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+}
+
+.label {
+  flex: 0 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Trailing icon (delete or expand) */
+.trailingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  margin-inline-end: 0;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--token-component-chip-delete-icon-color, #464646);
+}
+
+.trailingIconSymbol {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+  display: block;
+  line-height: 1;
+}
+
+/* Trailing icon in selected chip */
+.chip.selected .trailingIcon {
+  color: var(--token-component-chip-delete-icon-color-selected, #ffffff);
+}
+
+/* Trailing icon hover */
+.trailingIcon:hover:not(.disabled) {
+  color: var(--token-component-chip-delete-icon-color-hover, #161616);
+}
+
+.chip.selected .trailingIcon:hover:not(.disabled) {
+  color: var(--token-component-chip-delete-icon-color-hover-selected, #ffffff);
+}
+
+.trailingIcon:active:not(.disabled) {
+  color: var(--token-component-chip-delete-icon-color-active, #737373);
+}
+
+.chip.selected .trailingIcon:active:not(.disabled) {
+  color: var(--token-component-chip-delete-icon-color-active-selected, #ffffff);
+}
+
+.chip.disabled .trailingIcon {
+  cursor: not-allowed;
+  color: var(--token-component-chip-delete-icon-color-disabled, #efefef);
+}
+
+/* Adjust padding when trailing icon is present (-4px from base) */
+.chip.sm.hasTrailingIcon {
+  padding-inline-end: var(--token-component-padding-x-chip-with-icon-sm, 4px);
+}
+
+.chip.md.hasTrailingIcon {
+  padding-inline-end: var(--token-component-padding-x-chip-with-icon-md, 8px);
+}
+
+.chip.lg.hasTrailingIcon {
+  padding-inline-end: var(--token-component-padding-x-chip-with-icon-lg, 12px);
+}
+
+/* Focus styles */
+.chip:focus-visible {
+  outline: 2px solid var(--token-component-chip-focus-outline-color);
+  outline-offset: 2px;
+}

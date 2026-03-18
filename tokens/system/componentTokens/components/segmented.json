@@ -1,0 +1,142 @@
+{
+  "$name": "Component Tokens",
+  "padding": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{padding.xxxs}"
+  },
+  "background": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{background.passive.neutral.elevated}"
+  },
+  "border-color": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{border.active.neutral.control.field.default}"
+  },
+  "indicator": {
+    "background": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.active.accent.default}"
+    },
+    "background-hover": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "color",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{background.active.accent.hover}"
+    }
+  },
+  "text": {
+    "color": {
+      "default": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
+      },
+      "hover": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.default}"
+      },
+      "selected": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.on.neutral.strong}"
+      },
+      "disabled": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{content.passive.neutral.subtle}"
+      }
+    }
+  },
+  "font-size": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.fontSize.sm}"
+  },
+  "line-height": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.lineHeight.md}"
+  },
+  "font-weight": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "fontWeight",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.fontWeight.medium}"
+  },
+  "focus": {
+    "outline": {
+      "color": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "color",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{border.active.neutral.control.field.focused}"
+      }
+    }
+  },
+  "segment": {
+    "gap": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xs}",
+      "$description": "Gap between icon and text in segmented control"
+    }
+  }
+}

@@ -1,0 +1,307 @@
+/* Input component styles using design tokens */
+/* Unified structure for all field controls */
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.inputWrapper.sm {
+  height: var(--token-component-height-field-sm);
+  min-height: var(--token-component-height-field-sm);
+  max-height: var(--token-component-height-field-sm);
+  padding: 0;
+}
+
+.inputWrapper.md {
+  height: var(--token-component-height-field-md);
+  min-height: var(--token-component-height-field-md);
+  max-height: var(--token-component-height-field-md);
+  padding: 0;
+}
+
+.inputWrapper.lg {
+  height: var(--token-component-height-field-lg);
+  min-height: var(--token-component-height-field-lg);
+  max-height: var(--token-component-height-field-lg);
+  padding: 0;
+}
+
+.input {
+  /* Base styles - use field control tokens */
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  /* Explicit height set by size variants (.sm, .md, .lg) */
+  background-color: var(--token-component-field-control-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  font-size: var(--token-component-font-size-field-md);
+  line-height: normal;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  transition:
+    border-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing),
+    background-color var(--token-component-animation-field-duration) var(--token-component-animation-field-easing);
+  box-sizing: border-box;
+}
+
+/* Prefix/Suffix styles */
+.prefix {
+  position: absolute;
+  left: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-content-value);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.suffix {
+  position: absolute;
+  right: var(--token-component-padding-x-field-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-field-content-value);
+  z-index: 1;
+}
+
+
+/* Adjust input padding when prefix/suffix are present */
+/* Padding-left = icon-left-position + icon-width + gap */
+.inputWrapper.hasPrefix .input {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-md));
+}
+
+.inputWrapper.hasSuffix .input {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-md) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-md));
+}
+
+.inputWrapper.hasPrefix .prefix {
+  left: var(--token-component-padding-adornment-field-leading-md);
+}
+
+.inputWrapper.hasSuffix .suffix {
+  right: var(--token-component-padding-x-field-md);
+}
+
+.input::placeholder {
+  color: var(--token-component-field-content-placeholder);
+}
+
+/* Enabled state (default) */
+.input:not(.error):not(.disabled):hover:not(:disabled) {
+  background-color: var(--token-component-field-control-background-hover);
+  border-color: var(--token-component-field-control-border-hover);
+}
+
+.input:not(.error):not(.disabled):focus:not(:disabled),
+.input:not(.error):not(.disabled):focus-visible:not(:disabled) {
+  background-color: var(--token-component-field-control-background-focused);
+  border-color: var(--token-component-field-control-border-focused);
+  /* Show soft glowing focus ring on focus */
+  outline: none;
+  box-shadow:
+    0 0 0 var(--token-component-gap-field-focus-outline-offset) transparent,
+    0 0 var(--token-component-gap-field-focus-outline-blur) calc(var(--token-component-gap-field-focus-outline-offset) + calc(var(--token-component-field-focus-outline-width) * 1px)) color-mix(in srgb, var(--token-component-field-focus-outline-color) calc(var(--token-component-field-focus-outline-opacity) * 100%), transparent);
+}
+
+.input:not(.error):not(.disabled):active:not(:disabled) {
+  border-color: var(--token-component-field-control-border-active);
+}
+
+/* Error state - use status.error tokens */
+.input.error {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  color: var(--token-component-field-content-value);
+}
+
+.input.error:hover:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+}
+
+.input.error:focus:not(:disabled),
+.input.error:focus-visible:not(:disabled) {
+  border-color: var(--token-component-field-status-error-border);
+  background-color: var(--token-component-field-status-error-background);
+  /* No focus ring on error state - keep red border */
+  outline: none;
+  box-shadow: none;
+}
+
+/* Disabled state - use status.disabled tokens */
+.input.disabled,
+.input:disabled {
+  border-color: var(--token-component-field-status-disabled-border);
+  background-color: var(--token-component-field-status-disabled-background);
+  color: var(--token-component-field-status-disabled-content);
+  cursor: not-allowed;
+  opacity: 1;
+  /* Don't use opacity, use actual disabled colors */
+}
+
+/* Size variants */
+.sm {
+  height: var(--token-component-height-field-sm);
+  min-height: var(--token-component-height-field-sm);
+  max-height: var(--token-component-height-field-sm);
+  padding-inline-start: var(--token-component-padding-x-field-sm);
+  padding-inline-end: var(--token-component-padding-x-field-sm);
+  padding-top: var(--token-component-padding-y-field-sm);
+  padding-bottom: var(--token-component-padding-y-field-sm);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  font-size: var(--token-component-font-size-field-sm, 14px);
+  line-height: normal;
+}
+
+.inputWrapper.sm.hasPrefix .input {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-sm) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-leading-icon-sm));
+}
+
+.inputWrapper.sm.hasSuffix .input {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-sm) + var(--token-component-icon-field-sm) + var(--token-component-gap-field-trailing-icon-sm));
+}
+
+.inputWrapper.sm .prefix {
+  left: var(--token-component-padding-adornment-field-leading-sm);
+}
+
+.inputWrapper.sm .suffix {
+  right: var(--token-component-padding-x-field-sm);
+}
+
+.md {
+  height: var(--token-component-height-field-md);
+  min-height: var(--token-component-height-field-md);
+  max-height: var(--token-component-height-field-md);
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
+  padding-top: var(--token-component-padding-y-field-md);
+  padding-bottom: var(--token-component-padding-y-field-md);
+  border-radius: var(--token-component-radius-field-md, 8px);
+  font-size: var(--token-component-font-size-field-md);
+  line-height: normal;
+}
+
+.lg {
+  height: var(--token-component-height-field-lg);
+  min-height: var(--token-component-height-field-lg);
+  max-height: var(--token-component-height-field-lg);
+  padding-inline-start: var(--token-component-padding-x-field-lg);
+  padding-inline-end: var(--token-component-padding-x-field-lg);
+  padding-top: var(--token-component-padding-y-field-lg);
+  padding-bottom: var(--token-component-padding-y-field-lg);
+  border-radius: var(--token-component-radius-field-lg, 8px);
+  font-size: var(--token-component-font-size-field-lg);
+  line-height: normal;
+}
+
+.inputWrapper.lg.hasPrefix .input {
+  padding-inline-start: calc(var(--token-component-padding-adornment-field-leading-lg) + var(--token-component-icon-field-lg) + var(--token-component-gap-field-leading-icon-lg));
+}
+
+.inputWrapper.lg.hasSuffix .input {
+  padding-inline-end: calc(var(--token-component-padding-adornment-field-trailing-lg) + var(--token-component-icon-field-lg) + var(--token-component-gap-field-trailing-icon-lg));
+}
+
+.inputWrapper.lg .prefix {
+  left: var(--token-component-padding-adornment-field-leading-lg);
+}
+
+.inputWrapper.lg .suffix {
+  right: var(--token-component-padding-x-field-lg);
+}
+
+/* Addon styles (outside input field) */
+.addonWrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.addonBefore,
+.addonAfter {
+  display: flex;
+  align-items: center;
+  padding-inline-start: var(--token-component-padding-x-field-md);
+  padding-inline-end: var(--token-component-padding-x-field-md);
+  background-color: var(--token-component-field-control-background-default);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-field-control-border-default);
+  color: var(--token-component-field-content-value);
+  font-size: var(--token-component-font-size-field-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.addonBefore {
+  border-inline-end: none;
+  border-radius: var(--token-component-radius-field-md, 8px) 0 0 var(--token-component-radius-field-md, 8px);
+}
+
+.addonAfter {
+  border-inline-start: none;
+  border-radius: 0 var(--token-component-radius-field-md, 8px) var(--token-component-radius-field-md, 8px) 0;
+}
+
+/* When addons are present, adjust input wrapper and input */
+.addonWrapper .inputWrapper {
+  flex: 1;
+}
+
+/* Input border-radius and border based on which addons are present */
+.inputWrapper.hasAddonBefore .input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-inline-start: none;
+}
+
+.inputWrapper.hasAddonAfter .input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-inline-end: none;
+}
+
+/* Size variants for addons */
+.addonWrapper.sm .addonBefore,
+.addonWrapper.sm .addonAfter {
+  padding-inline-start: var(--token-component-padding-x-field-sm);
+  padding-inline-end: var(--token-component-padding-x-field-sm);
+  font-size: var(--token-component-font-size-field-sm);
+}
+
+.addonWrapper.sm .addonBefore {
+  border-radius: var(--token-component-radius-field-sm, 4px) 0 0 var(--token-component-radius-field-sm, 4px);
+}
+
+.addonWrapper.sm .addonAfter {
+  border-radius: 0 var(--token-component-radius-field-sm, 4px) var(--token-component-radius-field-sm, 4px) 0;
+}
+
+.addonWrapper.lg .addonBefore,
+.addonWrapper.lg .addonAfter {
+  padding-inline-start: var(--token-component-padding-x-field-lg);
+  padding-inline-end: var(--token-component-padding-x-field-lg);
+  font-size: var(--token-component-font-size-field-lg);
+}
+
+.addonWrapper.lg .addonBefore {
+  border-radius: var(--token-component-radius-field-lg, 8px) 0 0 var(--token-component-radius-field-lg, 8px);
+}
+
+.addonWrapper.lg .addonAfter {
+  border-radius: 0 var(--token-component-radius-field-lg, 8px) var(--token-component-radius-field-lg, 8px) 0;
+}

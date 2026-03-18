@@ -1,0 +1,180 @@
+/* Alert component styles using design tokens */
+/* Layout: wrapper(flex-col) > header(icon + text) + description + actions */
+/* Close button is absolutely positioned */
+
+.alert {
+  position: relative;
+  display: flex;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.alert.closing {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* Size variants — only padding and radius differ */
+.alert.small {
+  padding: var(--token-component-alert-padding-small, 12px);
+  border-radius: var(--token-component-radius-alert-sm, 8px);
+}
+
+.alert.large {
+  padding: var(--token-component-alert-padding-large, 20px);
+  border-radius: var(--token-component-radius-alert-lg, 8px);
+}
+
+/* Type variants — background color */
+.alert.success {
+  background-color: var(--token-component-alert-success-background, #eaf9e8);
+}
+
+.alert.info {
+  background-color: var(--token-component-alert-info-background, #e6eaed);
+}
+
+.alert.warning {
+  background-color: var(--token-component-alert-warning-background, #fdf3e5);
+}
+
+.alert.error {
+  background-color: var(--token-component-alert-danger-background, #fff0f1);
+}
+
+/* Type icon colors */
+.alert.success .icon {
+  color: var(--token-component-alert-success-icon, #32c21a);
+}
+
+.alert.info .icon {
+  color: var(--token-component-alert-info-icon, #042a47);
+}
+
+.alert.warning .icon {
+  color: var(--token-component-alert-warning-icon, #ed8400);
+}
+
+.alert.error .icon {
+  color: var(--token-component-alert-danger-icon, #ff434e);
+}
+
+/* Wrapper — stacks header and content vertically */
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--token-component-alert-gap, 8px);
+}
+
+/* Header — icon + text in a row */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-alert-header-gap, 12px);
+}
+
+/* Reserve space for close button when closable */
+.alert.closable .header {
+  padding-right: 32px;
+}
+
+/* Icon */
+.icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+}
+
+.icon .material-symbols-outlined {
+  font-size: var(--token-component-alert-icon-size, 24px);
+  line-height: 1;
+}
+
+/* Message — default style (no description): regular weight, description color */
+/* +1px top compensation for optical centering with icon */
+.message {
+  font-size: 16px;
+  font-weight: var(--token-primitive-typography-font-weight-regular, 400);
+  line-height: 1.5;
+  color: var(--token-component-alert-description-color, #464646);
+  margin: 0;
+  padding-top: 1px;
+}
+
+/* When description exists, message becomes bold headline */
+.alert.hasDescription .message {
+  font-weight: var(--token-primitive-typography-font-weight-bold, 700);
+  color: var(--token-component-alert-message-color, #161616);
+}
+
+/* Description — indented to align with text (24px icon + 12px gap) */
+.description {
+  padding-left: 36px;
+  font-size: 16px;
+  font-weight: var(--token-primitive-typography-font-weight-regular, 400);
+  line-height: 1.5;
+  color: var(--token-component-alert-description-color, #464646);
+  margin: 0;
+}
+
+/* When icon is hidden, remove indentation */
+.alert.noIcon .description,
+.alert.noIcon .actions {
+  padding-left: 0;
+}
+
+/* Actions — left-aligned under description, 16px gap between buttons */
+.actions {
+  padding-left: 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Close button — absolute positioned, plain button style */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-alert-close-color-default, #737373);
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+  flex-shrink: 0;
+}
+
+/* When no description, close button is vertically centered */
+.alert:not(.hasDescription) .close {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(70, 70, 70, 0.05));
+  color: var(--token-component-alert-close-color-hover, #464646);
+}
+
+.close:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(70, 70, 70, 0.08));
+  color: var(--token-component-alert-close-color-hover, #464646);
+}
+
+.close:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}

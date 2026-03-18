@@ -1,0 +1,67 @@
+{
+  "$name": "Component Tokens",
+  "size": {
+    "sm": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.sm}"
+    },
+    "md": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.md}"
+    },
+    "lg": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "dimension",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{icon.lg}"
+    }
+  },
+  "gap": {
+    "sm": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xxs}"
+    },
+    "md": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xxs}"
+    },
+    "lg": {
+      "$scopes": ["ALL_SCOPES"],
+      "$type": "spacing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{gap.xs}"
+    }
+  },
+  "star": {
+    "color": {
+      "empty": {
+        "$scopes": ["ALL_SCOPES"],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{content.passive.neutral.muted}",
+        "$collectionName": "semanticTokens"
+      },
+      "filled": {
+        "$scopes": ["ALL_SCOPES"],
+        "$libraryName": "",
+        "$type": "color",
+        "$value": "{rating}",
+        "$collectionName": "semanticTokens"
+      }
+    }
+  }
+}

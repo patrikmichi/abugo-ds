@@ -1,0 +1,192 @@
+{
+  "$name": "Component Tokens",
+  "button": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.sm}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.md}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.lg}"
+    },
+    "plain": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.xs}",
+        "$description": "Small plain button height (32px)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.sm}",
+        "$description": "Medium plain button height (40px)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "sizing",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{control.height.md}",
+        "$description": "Large plain button height (48px)."
+      }
+    }
+  },
+  "field": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.sm}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.md}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.lg}"
+    }
+  },
+  "chip": {
+    "xxs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xxs}"
+    },
+    "xs": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xs}"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xxs}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xs}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.sm}"
+    }
+  },
+  "pagination": {
+    "s": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xs}"
+    },
+    "l": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.lg}"
+    }
+  },
+  "tag": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xxs}",
+      "$description": "Tag small height (24px)"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.xs}",
+      "$description": "Tag medium height (32px)"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "sizing",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{control.height.sm}",
+      "$description": "Tag large height (40px)"
+    }
+  }
+}

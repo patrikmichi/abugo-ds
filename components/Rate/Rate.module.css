@@ -1,0 +1,62 @@
+/* Rate component styles using design tokens */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.rating.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Size variants */
+.sm {
+  gap: var(--token-component-rate-gap-sm, 4px);
+  font-size: var(--token-component-rate-size-sm, 24px);
+}
+
+.md {
+  gap: var(--token-component-rate-gap-md, 4px);
+  font-size: var(--token-component-rate-size-md, 32px);
+}
+
+.lg {
+  gap: var(--token-component-rate-gap-lg, 8px);
+  font-size: var(--token-component-rate-size-lg, 40px);
+}
+
+/* Star */
+.star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-rate-star-color-empty, #a2a2a2);
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+
+.star:hover:not(.disabled) {
+  transform: scale(1.1);
+}
+
+.star.filled {
+  color: var(--token-component-rate-star-color-filled, #f2c219);
+}
+
+.star.focused {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.star.disabled {
+  cursor: not-allowed;
+}
+
+.rating.disabled .star {
+  cursor: not-allowed;
+}

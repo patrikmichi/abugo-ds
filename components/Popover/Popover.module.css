@@ -1,0 +1,275 @@
+/* Popover component styles — CSS-first positioning using design tokens */
+
+/* Wrapper establishes the positioning context */
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Popover panel */
+.popover {
+  position: absolute;
+  z-index: var(--token-component-popover-z-index, 1030);
+  max-width: var(--token-component-popover-max-width, 320px);
+  min-width: var(--token-component-popover-min-width, 180px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-popover-font-size, 14px);
+  line-height: var(--token-component-popover-line-height, 1.5);
+
+  /* Entry/exit animation */
+  opacity: 0;
+  transform: scale(0.92);
+  transition:
+    opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popover.open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---- Placement classes (12 positions) ---- */
+
+/* top placements */
+.top {
+  bottom: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  left: 50%;
+  transform-origin: bottom center;
+  translate: -50% 0;
+}
+
+.top.open {
+  transform: scale(1);
+}
+
+.topLeft {
+  bottom: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  left: 0;
+  transform-origin: bottom left;
+}
+
+.topRight {
+  bottom: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  right: 0;
+  transform-origin: bottom right;
+}
+
+/* bottom placements */
+.bottom {
+  top: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  left: 50%;
+  transform-origin: top center;
+  translate: -50% 0;
+}
+
+.bottom.open {
+  transform: scale(1);
+}
+
+.bottomLeft {
+  top: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  left: 0;
+  transform-origin: top left;
+}
+
+.bottomRight {
+  top: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  right: 0;
+  transform-origin: top right;
+}
+
+/* left placements */
+.left {
+  right: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  top: 50%;
+  transform-origin: right center;
+  translate: 0 -50%;
+}
+
+.left.open {
+  transform: scale(1);
+}
+
+.leftTop {
+  right: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  top: 0;
+  transform-origin: right top;
+}
+
+.leftBottom {
+  right: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  bottom: 0;
+  transform-origin: right bottom;
+}
+
+/* right placements */
+.right {
+  left: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  top: 50%;
+  transform-origin: left center;
+  translate: 0 -50%;
+}
+
+.right.open {
+  transform: scale(1);
+}
+
+.rightTop {
+  left: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  top: 0;
+  transform-origin: left top;
+}
+
+.rightBottom {
+  left: calc(100% + var(--token-component-popover-arrow-size, 8px));
+  bottom: 0;
+  transform-origin: left bottom;
+}
+
+/* ---- Inner container (background, shadow, radius) ---- */
+
+.inner {
+  background-color: var(--token-component-popover-background, #fff);
+  border-radius: var(--token-component-popover-border-radius, 8px);
+  box-shadow: var(--token-component-popover-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08));
+  overflow: hidden;
+}
+
+/* ---- Title ---- */
+
+.title {
+  padding: var(--token-component-popover-title-padding, 12px 16px);
+  font-weight: var(--token-component-popover-title-font-weight, 600);
+  color: var(--token-component-popover-title-color, #1f1f1f);
+  border-bottom: 1px solid var(--token-component-popover-divider-color, #f0f0f0);
+  min-width: var(--token-component-popover-min-width, 180px);
+}
+
+/* Title with no sibling content — remove divider */
+.title:only-child {
+  border-bottom: none;
+}
+
+/* ---- Content ---- */
+
+.content {
+  padding: var(--token-component-popover-content-padding, 12px 16px);
+  color: var(--token-component-popover-content-color, #595959);
+}
+
+/* ---- Arrow (rotated square technique) ---- */
+
+.arrow {
+  position: absolute;
+  width: var(--token-component-popover-arrow-size, 8px);
+  height: var(--token-component-popover-arrow-size, 8px);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--token-component-popover-arrow-background, #fff);
+  box-shadow: var(--token-component-popover-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08));
+  transform: rotate(45deg);
+}
+
+/* Arrow — top placements: arrow at bottom of panel pointing down */
+.arrow_top {
+  bottom: calc(var(--token-component-popover-arrow-size, 8px) / -2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topLeft .arrow_top {
+  left: 16px;
+  transform: none;
+}
+
+.topRight .arrow_top {
+  left: auto;
+  right: 16px;
+  transform: none;
+}
+
+.arrow_top::before {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 2px 0;
+}
+
+/* Arrow — bottom placements: arrow at top of panel pointing up */
+.arrow_bottom {
+  top: calc(var(--token-component-popover-arrow-size, 8px) / -2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottomLeft .arrow_bottom {
+  left: 16px;
+  transform: none;
+}
+
+.bottomRight .arrow_bottom {
+  left: auto;
+  right: 16px;
+  transform: none;
+}
+
+.arrow_bottom::before {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 2px 0 0;
+}
+
+/* Arrow — left placements: arrow at right of panel pointing right */
+.arrow_left {
+  right: calc(var(--token-component-popover-arrow-size, 8px) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.leftTop .arrow_left {
+  top: 16px;
+  transform: none;
+}
+
+.leftBottom .arrow_left {
+  top: auto;
+  bottom: 16px;
+  transform: none;
+}
+
+.arrow_left::before {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 2px;
+}
+
+/* Arrow — right placements: arrow at left of panel pointing left */
+.arrow_right {
+  left: calc(var(--token-component-popover-arrow-size, 8px) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rightTop .arrow_right {
+  top: 16px;
+  transform: none;
+}
+
+.rightBottom .arrow_right {
+  top: auto;
+  bottom: 16px;
+  transform: none;
+}
+
+.arrow_right::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 0 2px 0;
+}

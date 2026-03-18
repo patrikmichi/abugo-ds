@@ -1,0 +1,328 @@
+/* Modal component styles using design tokens */
+
+.wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--token-component-modal-z-index, 1000);
+  pointer-events: none;
+}
+
+.wrapHidden {
+  pointer-events: none;
+}
+
+/* Mask */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--token-component-modal-overlay-background, #0f0f0f);
+  opacity: calc(var(--token-component-modal-opacity, 75) / 100);
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.maskHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Modal */
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--token-component-modal-background, #fff);
+  color: var(--token-component-modal-content, rgba(0, 0, 0, 0.85));
+  border-radius: var(--token-component-radius-modal-default, 8px);
+  box-shadow: var(--token-component-modal-shadow, 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  width: var(--token-component-modal-width-default, 520px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modalHidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  pointer-events: none;
+}
+
+.modal.centered {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.centered.modalHidden {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-modal-header-gap, 24px);
+  padding: var(--token-component-padding-block-modal-header, 16px 24px);
+  border-bottom: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-modal-border-color, rgba(0, 0, 0, 0.06));
+  flex-shrink: 0;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+/* Spacer (invisible element to balance close button for centered titles) */
+.spacer {
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  flex-shrink: 0;
+}
+
+/* Back button (acts like plain button) */
+.back {
+  padding: 0;
+  background-color: var(--token-component-button-secondary-plain-background-default, transparent);
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-button-secondary-plain-content-default, rgba(0, 0, 0, 0.85));
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+  flex-shrink: 0;
+}
+
+.back:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-button-secondary-plain-content-hover, rgba(0, 0, 0, 0.85));
+}
+
+.back:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(0, 0, 0, 0.1));
+  color: var(--token-component-button-secondary-plain-content-pressed, rgba(0, 0, 0, 0.85));
+}
+
+.back:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Title wrapper */
+.titleWrap {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  align-items: center;
+  min-width: 0;
+}
+
+.titleCenter .titleWrap {
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--token-component-font-size-modal-title, 20px);
+  font-weight: var(--token-component-font-weight-modal-title, 700);
+  line-height: 28px;
+  color: var(--token-component-modal-title-color, #161616);
+  padding-top: 1px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* Close button (in header, acts like plain button) */
+.close {
+  padding: 0;
+  background-color: var(--token-component-button-secondary-plain-background-default, transparent);
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-button-secondary-plain-content-default, rgba(0, 0, 0, 0.85));
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+  flex-shrink: 0;
+}
+
+.close:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-button-secondary-plain-content-hover, rgba(0, 0, 0, 0.85));
+}
+
+.close:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(0, 0, 0, 0.1));
+  color: var(--token-component-button-secondary-plain-content-pressed, rgba(0, 0, 0, 0.85));
+}
+
+.close:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Close button (absolute - when no header, acts like plain button) */
+.closeAbsolute {
+  position: absolute;
+  top: var(--token-component-gap-modal-close-top, 20px);
+  right: var(--token-component-gap-modal-close-right, 20px);
+  z-index: 10;
+  padding: 0;
+  background-color: var(--token-component-button-secondary-plain-background-default, transparent);
+  border: none;
+  cursor: pointer;
+  color: var(--token-component-button-secondary-plain-content-default, rgba(0, 0, 0, 0.85));
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--token-component-height-button-plain-sm, 32px);
+  height: var(--token-component-height-button-plain-sm, 32px);
+  border-radius: var(--token-component-radius-button-sm, 4px);
+  flex-shrink: 0;
+}
+
+.closeAbsolute:hover {
+  background-color: var(--token-component-button-plain-neutral-background-hover, rgba(0, 0, 0, 0.06));
+  color: var(--token-component-button-secondary-plain-content-hover, rgba(0, 0, 0, 0.85));
+}
+
+.closeAbsolute:active {
+  background-color: var(--token-component-button-plain-neutral-background-pressed, rgba(0, 0, 0, 0.1));
+  color: var(--token-component-button-secondary-plain-content-pressed, rgba(0, 0, 0, 0.85));
+}
+
+.closeAbsolute:focus {
+  outline: 2px solid var(--token-component-field-focus-outline-color, #538bff);
+  outline-offset: 2px;
+}
+
+/* Body */
+.body {
+  padding: var(--token-component-padding-block-modal-body, 24px);
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  font-size: var(--token-component-font-size-modal-body, 14px);
+  line-height: var(--token-component-line-height-modal-body, 1.5715);
+  color: var(--token-component-modal-body-color, rgba(0, 0, 0, 0.85));
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--token-component-modal-footer-gap, 16px);
+  padding: var(--token-component-padding-block-modal-footer, 16px 24px);
+  border-top: calc(var(--token-primitive-border-width-1, 1px) * 1px) solid var(--token-component-modal-border-color, rgba(0, 0, 0, 0.06));
+  flex-shrink: 0;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+.footerRight {
+  justify-content: flex-end;
+}
+
+/* Action modal layout */
+.dialogBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dialogIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+
+.dialogIcon .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.dialogIconDanger {
+  background-color: var(--token-semantic-background-passive-danger-subtle, #fff0f1);
+  color: var(--token-semantic-content-active-danger-default, #ff434e);
+}
+
+.dialogIconWarning {
+  background-color: var(--token-semantic-background-passive-warning-subtle, #fdf3e5);
+  color: var(--token-semantic-background-passive-warning-default, #ed8400);
+}
+
+.dialogIconInfo {
+  background-color: var(--token-semantic-background-passive-accent-subtle, #e8f0fe);
+  color: var(--token-semantic-content-active-accent-default, #5690f5);
+}
+
+.dialogIconSuccess {
+  background-color: var(--token-semantic-background-passive-success-subtle, #eaf9e8);
+  color: var(--token-semantic-background-passive-success-default, #32c21a);
+}
+
+.dialogIconConfirm {
+  background-color: var(--token-semantic-background-passive-accent-subtle, #e8f0fe);
+  color: var(--token-semantic-content-active-accent-default, #5690f5);
+}
+
+.dialogTitle {
+  font-size: var(--token-component-font-size-modal-title, 20px);
+  font-weight: var(--token-component-font-weight-modal-title, 700);
+  line-height: 28px;
+  color: var(--token-component-modal-title-color, rgba(0, 0, 0, 0.85));
+  margin: 0 0 8px 0;
+}
+
+.dialogDescription {
+  font-size: var(--token-component-font-size-modal-body, 14px);
+  line-height: var(--token-component-line-height-modal-body, 1.5715);
+  color: var(--token-component-modal-body-color, rgba(0, 0, 0, 0.65));
+  margin: 0 0 24px 0;
+}
+
+.dialogButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal {
+    width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
+    margin: 16px;
+  }
+
+  .modal.centered {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

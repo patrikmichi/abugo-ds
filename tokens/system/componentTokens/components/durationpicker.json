@@ -1,0 +1,13 @@
+{
+  "$name": "Component Tokens",
+  "$description": "DurationPicker component tokens. Shares most tokens with timepicker.json and datepicker.json (calendar.json). Only includes duration-specific tokens.",
+  "optical-alignment-offset": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "dimension",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.optical.alignment.offset.sm}"
+  }
+}

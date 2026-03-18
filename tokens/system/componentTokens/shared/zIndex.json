@@ -1,0 +1,48 @@
+{
+  "$name": "Component Tokens",
+  "toast": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z.index.modal}"
+  },
+  "popover": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z.index.popover}"
+  },
+  "tooltip": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z.index.tooltip}"
+  },
+  "modal": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z.index.modal}"
+  },
+  "drawer": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "number",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{z.index.modal}"
+  }
+}

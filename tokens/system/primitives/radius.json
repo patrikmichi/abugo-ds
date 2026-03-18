@@ -1,0 +1,66 @@
+{
+  "radius-0": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 0
+  },
+  "radius-1": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 4
+  },
+  "radius-2": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 8
+  },
+  "radius-3": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 12
+  },
+  "radius-4": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 16
+  },
+  "radius-5": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 20
+  },
+  "radius-6": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 24
+  },
+  "radius-round": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$hiddenFromPublishing": true,
+    "$type": "borderRadius",
+    "$value": 999
+  }
+}

@@ -1,0 +1,108 @@
+/* DurationPicker component styles using design tokens */
+
+.durationPickerWrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Panel - Dropdown */
+.panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: var(--token-component-timepicker-panel-z-index, 1000);
+  width: 320px;
+  background-color: var(--token-primitive-color-white, #ffffff);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-timepicker-panel-border);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  overflow: clip;
+}
+
+
+/* Content area inside panel */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 16px;
+}
+
+/* Row - cells across columns */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Arrow row */
+.arrowRow {
+  display: flex;
+  gap: 16px;
+}
+
+/* Individual cell */
+.cell {
+  flex: 1 0 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--token-primitive-typography-font-size-3, 14px);
+  line-height: var(--token-primitive-typography-line-height-3, 20px);
+  color: var(--token-component-timepicker-cell-content-default, #464646);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cell:hover:not(.cellSelected) {
+  background-color: var(--token-component-timepicker-cell-background-hover, rgba(70, 70, 70, 0.05));
+}
+
+/* Selected cell */
+.cellSelected {
+  background-color: var(--token-component-timepicker-cell-background-selected, #e4edfd);
+  color: var(--token-component-timepicker-cell-content-selected, #5690f5);
+  font-weight: var(--token-primitive-typography-font-weight-medium, 500);
+}
+
+/* Subtle cell (±2 positions from selected) */
+.cellSubtle {
+  color: var(--token-component-timepicker-column-label-color, #737373);
+}
+
+/* Arrow cell (button) */
+.arrowCell {
+  flex: 1 0 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--token-component-timepicker-cell-content-default, #464646);
+  border-radius: var(--token-component-radius-field-sm, 4px);
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.arrowCell:hover {
+  background-color: var(--token-component-timepicker-cell-background-hover, rgba(70, 70, 70, 0.05));
+}
+
+.arrowCell .material-symbols-outlined {
+  font-size: 24px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .panel {
+    width: calc(100vw - 32px);
+    max-width: 320px;
+  }
+}

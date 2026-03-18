@@ -1,0 +1,55 @@
+{
+  "$name": "Semantic Tokens",
+  "background.passive.promo.default": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{purple.700}",
+    "$description": "Default promo background for passive elements. Use for promotional badges, special offers, or premium content indicators.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "promo",
+        "state": "default",
+        "usage": [
+          "badges",
+          "promotional-content",
+          "special-offers"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  },
+  "background.passive.promo.subtle": {
+    "$scopes": [
+      "ALL_FILLS",
+      "STROKE_COLOR"
+    ],
+    "$type": "color",
+    "$libraryName": "",
+    "$collectionName": "primitives",
+    "$value": "{purple.100}",
+    "$description": "Subtle promo background for passive elements. Use for promo message backgrounds or promotional indicators that need less emphasis.",
+    "$extensions": {
+      "design-tokens": {
+        "category": "background",
+        "participation": "passive",
+        "intent": "promo",
+        "state": "subtle",
+        "usage": [
+          "badges",
+          "promotional-content",
+          "special-offers"
+        ],
+        "deprecated": false,
+        "replacedBy": null
+      }
+    }
+  }
+}

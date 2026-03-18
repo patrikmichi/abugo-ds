@@ -1,0 +1,138 @@
+/* Tooltip component styles using design tokens */
+
+.tooltip {
+  position: fixed;
+  z-index: var(--token-component-tooltip-z-index, 1060);
+  pointer-events: none;
+  max-width: var(--token-component-tooltip-max-width, 250px);
+  width: max-content !important;
+  min-width: max-content !important;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+/* Enable pointer events when hover trigger is used */
+.tooltip[data-hover-enabled="true"] {
+  pointer-events: auto;
+}
+
+.content {
+  background-color: var(--token-component-tooltip-container-background);
+  color: var(--token-component-tooltip-container-content);
+  padding: var(--token-component-tooltip-padding-y, 4px) var(--token-component-tooltip-padding-x, 8px);
+  border-radius: var(--token-component-tooltip-radius, 4px);
+  font-size: var(--token-component-tooltip-font-size, 12px);
+  line-height: var(--token-component-tooltip-line-height, 1.5);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  box-shadow: var(--token-component-tooltip-shadow, 0 2px 8px rgba(0, 0, 0, 0.15));
+  position: relative;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Arrow */
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.arrowTop {
+  bottom: calc(var(--token-component-tooltip-width, 6px) * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: var(--token-component-tooltip-width, 6px) var(--token-component-tooltip-width, 6px) 0 var(--token-component-tooltip-width, 6px);
+  border-color: var(--token-component-tooltip-arrow-background) transparent transparent transparent;
+}
+
+.arrowBottom {
+  top: calc(var(--token-component-tooltip-width, 6px) * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 var(--token-component-tooltip-width, 6px) var(--token-component-tooltip-width, 6px) var(--token-component-tooltip-width, 6px);
+  border-color: transparent transparent var(--token-component-tooltip-arrow-background) transparent;
+}
+
+.arrowLeft {
+  right: calc(var(--token-component-tooltip-width, 6px) * -1);
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: var(--token-component-tooltip-width, 6px) 0 var(--token-component-tooltip-width, 6px) var(--token-component-tooltip-width, 6px);
+  border-color: transparent transparent transparent var(--token-component-tooltip-arrow-background);
+}
+
+.arrowRight {
+  left: calc(var(--token-component-tooltip-width, 6px) * -1);
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: var(--token-component-tooltip-width, 6px) var(--token-component-tooltip-width, 6px) var(--token-component-tooltip-width, 6px) 0;
+  border-color: transparent var(--token-component-tooltip-arrow-background) transparent transparent;
+}
+
+/* Arrow positioning for aligned placements */
+.tooltip.topLeft .arrowTop,
+.tooltip.bottomLeft .arrowBottom {
+  left: 16px;
+  transform: none;
+}
+
+.tooltip.topRight .arrowTop,
+.tooltip.bottomRight .arrowBottom {
+  left: auto;
+  right: 16px;
+  transform: none;
+}
+
+.tooltip.leftTop .arrowLeft,
+.tooltip.rightTop .arrowRight {
+  top: 12px;
+  transform: none;
+}
+
+.tooltip.leftBottom .arrowLeft,
+.tooltip.rightBottom .arrowRight {
+  top: auto;
+  bottom: 12px;
+  transform: none;
+}
+
+/* Arrow point at center - override aligned positioning */
+.arrowPointAtCenter.arrowTop,
+.arrowPointAtCenter.arrowBottom {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+.arrowPointAtCenter.arrowLeft,
+.arrowPointAtCenter.arrowRight {
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Placement classes for positioning (used by JS) */
+.tooltip.top,
+.tooltip.topLeft,
+.tooltip.topRight {
+  /* Positioned via inline styles */
+}
+
+.tooltip.bottom,
+.tooltip.bottomLeft,
+.tooltip.bottomRight {
+  /* Positioned via inline styles */
+}
+
+.tooltip.left,
+.tooltip.leftTop,
+.tooltip.leftBottom {
+  /* Positioned via inline styles */
+}
+
+.tooltip.right,
+.tooltip.rightTop,
+.tooltip.rightBottom {
+  /* Positioned via inline styles */
+}

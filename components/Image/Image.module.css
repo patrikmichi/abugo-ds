@@ -1,0 +1,379 @@
+/* Image component styles using design tokens */
+
+/* ==========================================================================
+   Image Wrapper & Base Styles
+   ========================================================================== */
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: var(--token-component-radius-image, 8px);
+  background-color: var(--token-component-image-background, #f5f5f5);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.image.loading {
+  opacity: 0;
+}
+
+.image.error {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   Placeholder
+   ========================================================================== */
+
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--token-component-image-placeholder-background, #f5f5f5);
+  color: var(--token-component-image-placeholder-color, rgba(0, 0, 0, 0.25));
+}
+
+/* ==========================================================================
+   Preview Mask Overlay (shown on hover over image)
+   ========================================================================== */
+
+.previewMaskOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.previewMaskOverlay .material-symbols-outlined {
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.imageWrapper:hover .previewMaskOverlay {
+  opacity: 1;
+}
+
+.previewable {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Fullscreen Preview Overlay (Lightbox)
+   ========================================================================== */
+
+.previewOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark backdrop */
+.previewBackdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--token-component-image-preview-background, rgba(0, 0, 0, 0.88));
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Close Button (Fixed top-right)
+   ========================================================================== */
+
+.previewCloseButton {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.previewCloseButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.previewCloseButton .material-symbols-outlined {
+  font-size: 24px;
+}
+
+/* ==========================================================================
+   Image Container (Centered, fills available space)
+   ========================================================================== */
+
+.previewImageContainer {
+  position: relative;
+  z-index: 1001;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  padding-bottom: 80px; /* Space for toolbar */
+  overflow: hidden;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+  transition: transform 0.15s ease-out;
+  cursor: default;
+}
+
+.previewImage.previewImageZoomed {
+  cursor: grab;
+}
+
+.previewImage.previewImageDragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+/* ==========================================================================
+   Toolbar Container (Fixed bottom center)
+   ========================================================================== */
+
+.previewToolbarContainer {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+}
+
+.previewToolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+/* ==========================================================================
+   Toolbar Controls
+   ========================================================================== */
+
+.previewTool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.previewTool:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.previewTool:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.toolbarIcon {
+  font-size: 20px;
+}
+
+/* Toolbar divider */
+.toolbarDivider {
+  width: 1px;
+  height: 20px;
+  margin: 0 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Zoom percentage indicator */
+.zoomIndicator {
+  min-width: 48px;
+  padding: 0 8px;
+  font-family: var(--token-primitive-typography-font-family-sans, sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Legacy styles (kept for backwards compatibility)
+   ========================================================================== */
+
+.previewMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--token-component-image-preview-background, rgba(0, 0, 0, 0.75));
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.previewMaskHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.previewContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--token-primitive-color-white, #ffffff);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.previewClose:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.previewImageWrapper {
+  position: relative;
+  max-width: 100%;
+  max-height: calc(90vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+/* Icon styles */
+.icon {
+  display: inline-block;
+}
+
+.iconSmall {
+  font-size: var(--token-component-image-preview-toolbar-icon-size, 20px);
+}
+
+.iconMedium {
+  font-size: var(--token-component-image-preview-toolbar-icon-size, 24px);
+}
+
+.iconLarge {
+  font-size: var(--token-component-image-placeholder-icon-size-large, 48px);
+}
+
+.iconWhite {
+  color: var(--token-component-image-preview-toolbar-icon-color-default, #ffffff);
+}
+
+.iconOpacity {
+  opacity: 0.3;
+}
+
+/* Preview image transform */
+.previewImageTransform {
+  transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .previewImageContainer {
+    padding: 24px;
+    padding-bottom: 72px;
+  }
+
+  .previewToolbarContainer {
+    bottom: 16px;
+  }
+
+  .previewToolbar {
+    padding: 6px 8px;
+    gap: 2px;
+  }
+
+  .previewTool {
+    width: 32px;
+    height: 32px;
+  }
+
+  .toolbarIcon {
+    font-size: 18px;
+  }
+
+  .zoomIndicator {
+    min-width: 40px;
+    font-size: 12px;
+  }
+
+  .previewCloseButton {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+}

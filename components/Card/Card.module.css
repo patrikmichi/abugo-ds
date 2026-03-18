@@ -1,0 +1,197 @@
+/* Card component styles using design tokens */
+
+
+.card {
+  background-color: var(--token-component-card-background, #fff);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  border-radius: var(--token-component-radius-card, 8px);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  font-size: var(--token-component-font-size-card, 14px);
+  line-height: var(--token-component-line-height-card, 1.5715);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hoverable effect */
+.card.hoverable {
+  cursor: pointer;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.hoverable:hover {
+  box-shadow: var(--token-component-card-shadow-hover, 0 4px 12px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
+}
+
+/* No border */
+.card.noBorder {
+  border: none;
+}
+
+/* Inner type */
+.card.inner {
+  border-radius: var(--token-component-radius-card, 8px);
+}
+
+/* Size variants */
+.card.small .head {
+  min-height: var(--token-component-card-head-height-small, 36px);
+  padding: var(--token-component-padding-block-card-head-small, 8px 16px);
+  font-size: var(--token-component-font-size-card-head-small, 14px);
+}
+
+.card.small .body {
+  padding: var(--token-component-padding-block-card-body-small, 12px 16px);
+}
+
+.card.small .actions {
+  padding: var(--token-component-padding-block-card-actions-small, 8px 16px);
+}
+
+/* Cover */
+.cover {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: var(--token-component-radius-card, 8px);
+  border-top-right-radius: var(--token-component-radius-card, 8px);
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+.cover:first-child {
+  border-top-left-radius: var(--token-component-radius-card, 8px);
+  border-top-right-radius: var(--token-component-radius-card, 8px);
+}
+
+/* Head (title and extra) */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--token-component-card-head-height, 48px);
+  padding: var(--token-component-card-head-padding, 16px 24px);
+  border-bottom: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  font-size: var(--token-component-card-head-font-size, 16px);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+}
+
+.title {
+  flex: 1;
+  color: var(--token-component-card-head-title-color, #161616);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+}
+
+.extra {
+  color: var(--token-component-card-head-extra-color, rgba(0, 0, 0, 0.45));
+  font-size: var(--token-component-font-size-card-head-extra, 14px);
+  font-weight: var(--token-primitive-typography-font-weight-normal);
+}
+
+/* Body */
+.body {
+  padding: var(--token-component-card-body-padding, 24px);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--token-component-card-loading-gap, 8px);
+  padding: var(--token-component-card-loading-padding, 24px);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.45));
+  font-size: var(--token-component-font-size-card, 14px);
+}
+
+.loading .material-symbols-outlined {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-card-actions-gap, 12px);
+  margin: 0;
+  padding: var(--token-component-card-actions-padding, 12px 24px);
+  list-style: none;
+  border-top: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  background-color: var(--token-component-card-actions-background, #ffffff);
+}
+
+.action {
+  padding: var(--token-component-card-action-padding-y, 4px) 0;
+}
+
+.action > * {
+  color: var(--token-component-card-actions-color, rgba(0, 0, 0, 0.45));
+  transition: color 0.3s ease;
+}
+
+.action:hover > * {
+  color: var(--token-component-card-actions-color-hover, rgba(0, 0, 0, 0.85));
+}
+
+/* Card.Grid */
+.grid {
+  padding: var(--token-component-padding-block-card-grid, 24px);
+  border: calc(var(--token-primitive-border-width-1) * 1px) solid var(--token-component-card-border-default, #f0f0f0);
+  border-radius: var(--token-component-radius-card, 8px);
+  transition: all 0.3s ease;
+}
+
+.gridHoverable {
+  cursor: pointer;
+}
+
+.gridHoverable:hover {
+  box-shadow: var(--token-component-card-shadow-hover, 0 4px 12px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
+}
+
+/* Card.Meta */
+.meta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--token-component-card-meta-gap, 16px);
+}
+
+.metaAvatar {
+  flex-shrink: 0;
+}
+
+.metaContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.metaTitle {
+  font-size: var(--token-component-card-meta-title-size, 16px);
+  font-weight: var(--token-primitive-typography-font-weight-medium);
+  color: var(--token-component-card-content-default, rgba(0, 0, 0, 0.85));
+  margin-bottom: var(--token-component-card-meta-title-margin-bottom, 4px);
+  line-height: 1.5;
+}
+
+.metaDescription {
+  font-size: var(--token-component-card-meta-description-size, 14px);
+  color: var(--token-component-card-content-secondary, rgba(0, 0, 0, 0.45));
+  line-height: 1.5;
+}

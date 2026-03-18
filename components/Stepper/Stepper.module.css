@@ -1,0 +1,353 @@
+/* Stepper Container */
+.stepper {
+  display: flex;
+  width: 100%;
+  font-family: var(--token-primitive-typography-font-family-sans);
+}
+
+/* Direction Variants */
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+/* Size Variants */
+.small .stepIcon {
+  width: var(--token-component-stepper-icon-size-sm);
+  height: var(--token-component-stepper-icon-size-sm);
+}
+
+.small .iconInner {
+  font-size: var(--token-component-stepper-icon-font-size-sm);
+}
+
+.small .stepTitle {
+  font-size: var(--token-component-stepper-title-font-size-sm);
+}
+
+.small .stepDescription {
+  font-size: var(--token-component-stepper-description-font-size-sm);
+}
+
+.small .dot {
+  width: var(--token-component-stepper-dot-size-sm);
+  height: var(--token-component-stepper-dot-size-sm);
+}
+
+.small .stepContent {
+  margin-inline-start: var(--token-component-stepper-gap-icon-sm);
+}
+
+/* Label Placement */
+.labelVertical .step {
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelVertical .stepContent {
+  text-align: center;
+  margin-top: var(--token-component-stepper-gap-icon);
+  margin-inline-start: 0;
+}
+
+.labelVertical .stepTail {
+  top: 0;
+  inset-inline-start: 50%;
+  width: 100%;
+  margin-inline-start: calc(var(--token-component-stepper-icon-size) / 2 + var(--token-component-stepper-gap-tail));
+  padding-inline-start: 0;
+}
+
+/* Progress Dot Style */
+.progressDot .stepIcon {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+}
+
+.progressDot .stepTail {
+  top: calc(var(--token-component-stepper-dot-size) / 2);
+}
+
+.progressDot.small .stepTail {
+  top: calc(var(--token-component-stepper-dot-size-sm) / 2);
+}
+
+/* Progress dot with vertical labels */
+.progressDot.labelVertical .stepContent {
+  margin-top: var(--token-component-stepper-gap-icon);
+}
+
+/* Step Item */
+.step {
+  position: relative;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.horizontal .step {
+  padding-inline-end: var(--token-component-stepper-gap-tail);
+}
+
+.horizontal .step:last-child {
+  flex: none;
+  padding-inline-end: 0;
+}
+
+.vertical .step {
+  flex-direction: row;
+  padding-bottom: var(--token-component-stepper-gap-tail);
+}
+
+.vertical .step:last-child {
+  padding-bottom: 0;
+}
+
+/* Step States */
+.stepClickable {
+  cursor: pointer;
+}
+
+.stepClickable:hover .stepTitle {
+  color: var(--token-component-stepper-title-color-active);
+}
+
+.stepDisabled {
+  cursor: not-allowed;
+  opacity: var(--token-component-stepper-disabled-opacity);
+}
+
+.stepLast .stepTail {
+  display: none;
+}
+
+/* Step Tail (Connector) */
+.stepTail {
+  position: absolute;
+  background-color: var(--token-component-stepper-connector-background-default);
+  transition: background-color 0.2s ease;
+}
+
+.horizontal .stepTail {
+  top: calc(var(--token-component-stepper-icon-size) / 2);
+  inset-inline-start: 0;
+  width: 100%;
+  height: var(--token-component-stepper-connector-size);
+  margin-inline-start: calc(var(--token-component-stepper-icon-size) + var(--token-component-stepper-gap-tail));
+}
+
+.vertical .stepTail {
+  top: 0;
+  inset-inline-start: calc(var(--token-component-stepper-icon-size) / 2);
+  width: var(--token-component-stepper-connector-size);
+  height: 100%;
+  margin-top: calc(var(--token-component-stepper-icon-size) + var(--token-component-stepper-gap-tail));
+}
+
+.small.horizontal .stepTail {
+  top: calc(var(--token-component-stepper-icon-size-sm) / 2);
+  margin-inline-start: calc(var(--token-component-stepper-icon-size-sm) + var(--token-component-stepper-gap-tail));
+}
+
+.small.vertical .stepTail {
+  inset-inline-start: calc(var(--token-component-stepper-icon-size-sm) / 2);
+  margin-top: calc(var(--token-component-stepper-icon-size-sm) + var(--token-component-stepper-gap-tail));
+}
+
+/* Step Icon */
+.stepIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--token-component-stepper-icon-size);
+  height: var(--token-component-stepper-icon-size);
+  border-radius: 50%;
+  background-color: var(--token-component-stepper-icon-background-default);
+  border: var(--token-component-stepper-connector-size) solid var(--token-component-stepper-icon-border-default);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.iconInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--token-component-stepper-icon-font-size);
+  font-weight: var(--token-component-stepper-icon-font-weight);
+  color: var(--token-component-stepper-icon-color-default);
+  line-height: 1;
+}
+
+.iconInner .material-symbols-outlined {
+  font-size: inherit;
+}
+
+.customIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--token-component-stepper-icon-color-default);
+}
+
+/* Dot */
+.dot {
+  width: var(--token-component-stepper-dot-size);
+  height: var(--token-component-stepper-dot-size);
+  border-radius: 50%;
+  background-color: var(--token-component-stepper-dot-background-default);
+  border: var(--token-component-stepper-connector-size) solid var(--token-component-stepper-dot-border-default);
+  transition: all 0.2s ease;
+}
+
+/* Step Content */
+.stepContent {
+  flex: 1;
+  min-width: 0;
+  margin-inline-start: var(--token-component-stepper-gap-icon);
+}
+
+.vertical .stepContent {
+  min-height: calc(var(--token-component-stepper-icon-size) + var(--token-component-stepper-gap-tail));
+}
+
+/* Step Title */
+.stepTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--token-component-stepper-gap-content);
+  font-size: var(--token-component-stepper-title-font-size);
+  font-weight: var(--token-component-stepper-title-font-weight);
+  line-height: var(--token-component-stepper-title-line-height);
+  color: var(--token-component-stepper-title-color-default);
+  transition: color 0.2s ease;
+}
+
+/* Step Subtitle */
+.stepSubTitle {
+  font-size: var(--token-component-stepper-sub-title-font-size);
+  font-weight: normal;
+  color: var(--token-component-stepper-sub-title-color);
+  margin-inline-start: var(--token-component-stepper-gap-content);
+}
+
+/* Step Description */
+.stepDescription {
+  font-size: var(--token-component-stepper-description-font-size);
+  line-height: var(--token-component-stepper-description-line-height);
+  color: var(--token-component-stepper-description-color-default);
+  margin-top: var(--token-component-stepper-gap-content);
+  transition: color 0.2s ease;
+}
+
+/* Status: Wait (default) */
+.stepWait .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-default);
+  border-color: var(--token-component-stepper-icon-border-default);
+}
+
+.stepWait .iconInner,
+.stepWait .customIcon {
+  color: var(--token-component-stepper-icon-color-default);
+}
+
+.stepWait .dot {
+  background-color: var(--token-component-stepper-dot-background-default);
+  border-color: var(--token-component-stepper-dot-border-default);
+}
+
+.stepWait .stepTitle {
+  color: var(--token-component-stepper-title-color-default);
+}
+
+.stepWait .stepDescription {
+  color: var(--token-component-stepper-description-color-default);
+}
+
+/* Status: Process (active) */
+.stepProcess .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-active);
+  border-color: var(--token-component-stepper-icon-border-active);
+}
+
+.stepProcess .iconInner,
+.stepProcess .customIcon {
+  color: var(--token-component-stepper-icon-color-active);
+}
+
+.stepProcess .dot {
+  background-color: var(--token-component-stepper-dot-background-active);
+  border-color: var(--token-component-stepper-dot-border-active);
+}
+
+.stepProcess .stepTitle {
+  color: var(--token-component-stepper-title-color-active);
+  font-weight: var(--token-component-stepper-title-font-weight-active);
+}
+
+.stepProcess .stepDescription {
+  color: var(--token-component-stepper-description-color-active);
+}
+
+/* Status: Finish (completed) */
+.stepFinish .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-completed);
+  border-color: var(--token-component-stepper-icon-border-completed);
+}
+
+.stepFinish .iconInner,
+.stepFinish .customIcon {
+  color: var(--token-component-stepper-icon-color-completed);
+}
+
+.stepFinish .dot {
+  background-color: var(--token-component-stepper-dot-background-completed);
+  border-color: var(--token-component-stepper-dot-border-completed);
+}
+
+.stepFinish .stepTail {
+  background-color: var(--token-component-stepper-connector-background-completed);
+}
+
+.stepFinish .stepTitle {
+  color: var(--token-component-stepper-title-color-completed);
+}
+
+.stepFinish .stepDescription {
+  color: var(--token-component-stepper-description-color-completed);
+}
+
+/* Status: Error */
+.stepError .stepIcon {
+  background-color: var(--token-component-stepper-icon-background-error);
+  border-color: var(--token-component-stepper-icon-border-error);
+}
+
+.stepError .iconInner,
+.stepError .customIcon {
+  color: var(--token-component-stepper-icon-color-error);
+}
+
+.stepError .dot {
+  background-color: var(--token-component-stepper-dot-background-error);
+  border-color: var(--token-component-stepper-dot-border-error);
+}
+
+.stepError .stepTail {
+  background-color: var(--token-component-stepper-connector-background-error);
+}
+
+.stepError .stepTitle {
+  color: var(--token-component-stepper-title-color-error);
+}
+
+.stepError .stepDescription {
+  color: var(--token-component-stepper-description-color-error);
+}

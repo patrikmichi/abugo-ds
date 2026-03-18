@@ -1,0 +1,359 @@
+{
+  "$name": "Component Tokens",
+  "button": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.12}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.12}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.12}"
+    }
+  },
+  "field": {
+    "value": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}"
+    },
+    "label": {
+      "sm": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Label line height for small fields (1.5)."
+      },
+      "md": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Label line height for medium fields (1.5)."
+      },
+      "lg": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$type": "lineHeights",
+        "$libraryName": "",
+        "$collectionName": "semanticTokens",
+        "$value": "{typography.lineHeight.6}",
+        "$description": "Label line height for large fields (1.5)."
+      }
+    },
+    "error": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.lineHeight.6}",
+      "$description": "Error message line height (1.5)."
+    },
+    "helper": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.lineHeight.6}",
+      "$description": "Helper text line height (1.5)."
+    }
+  },
+  "checkbox": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-line.md}"
+  },
+  "radio": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$type": "lineHeights",
+    "$libraryName": "",
+    "$collectionName": "semanticTokens",
+    "$value": "{typography.body-line.md}",
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "chip": {
+    "sm": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.sm}"
+    },
+    "md": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}"
+    },
+    "lg": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}"
+    }
+  },
+  "tag": {
+    "sm": {
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.sm}",
+      "$description": "Tag small line height"
+    },
+    "md": {
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Tag medium line height"
+    },
+    "lg": {
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Tag large line height"
+    }
+  },
+  "alert": {
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "primitives",
+      "$value": "{typography.lineHeight.16}",
+      "$description": "Alert message heading line height (24px)"
+    },
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "toast": {
+    "small": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Toast line height for small size"
+    },
+    "large": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$type": "lineHeights",
+      "$libraryName": "",
+      "$collectionName": "semanticTokens",
+      "$value": "{typography.body-line.md}",
+      "$description": "Toast line height for large size"
+    }
+  },
+  "accordion": {
+    "header": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "card": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "lineHeights",
+    "$value": "{typography.lineHeight.16}",
+    "$collectionName": "primitives"
+  },
+  "drawer": {
+    "$scopes": [
+      "ALL_SCOPES"
+    ],
+    "$libraryName": "",
+    "$type": "lineHeights",
+    "$value": "{typography.lineHeight.16}",
+    "$collectionName": "primitives",
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "modal": {
+    "body": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "notification": {
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "message": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "rating": {
+    "text": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "skeleton": {
+    "paragraph": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "stepper": {
+    "description": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    },
+    "title": {
+      "$scopes": [
+        "ALL_SCOPES"
+      ],
+      "$libraryName": "",
+      "$type": "lineHeights",
+      "$value": "{typography.lineHeight.16}",
+      "$collectionName": "primitives"
+    }
+  },
+  "upload": {
+    "file": {
+      "item": {
+        "$scopes": [
+          "ALL_SCOPES"
+        ],
+        "$libraryName": "",
+        "$type": "lineHeights",
+        "$value": "{typography.lineHeight.16}",
+        "$collectionName": "primitives"
+      }
+    }
+  }
+}

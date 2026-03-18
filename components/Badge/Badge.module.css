@@ -1,0 +1,161 @@
+/* Badge component styles using design tokens */
+
+
+.badgeWrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Badge element (count or dot) */
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--token-component-badge-size-default);
+  height: var(--token-component-badge-size-default);
+  padding: 0 var(--token-component-badge-padding-x);
+  font-size: var(--token-component-badge-font-size-default);
+  font-weight: var(--token-component-badge-font-weight);
+  line-height: 1;
+  color: var(--token-component-badge-default-content);
+  background-color: var(--token-component-badge-default-background);
+  border: var(--token-component-badge-border-width) solid var(--token-component-badge-default-border);
+  border-radius: var(--token-component-radius-badge);
+  transform: translate(50%, -50%);
+  transform-origin: 100% 0%;
+  white-space: nowrap;
+  font-family: var(--token-primitive-typography-font-family-sans);
+  box-sizing: content-box;
+}
+
+/* Single digit - perfect circle */
+.badge.singleDigit {
+  padding: 0;
+  width: var(--token-component-badge-size-default);
+}
+
+/* Color variants */
+.badge.success {
+  background-color: var(--token-component-badge-success-background, #32c21a);
+  color: var(--token-component-badge-success-content, #ffffff);
+}
+
+.badge.warning {
+  background-color: var(--token-component-badge-warning-background, #ed8400);
+  color: var(--token-component-badge-warning-content, #ffffff);
+}
+
+.badge.error {
+  background-color: var(--token-component-badge-error-background, #ff434e);
+  color: var(--token-component-badge-error-content, #ffffff);
+}
+
+.badge.upgrade {
+  background-color: var(--token-component-badge-upgrade-background, #042a47);
+  color: var(--token-component-badge-upgrade-content, #ffffff);
+}
+
+/* Dot badge */
+.badge.dot,
+.badge.dotOnly {
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.badge.dotOnly {
+  transform: translate(50%, -50%);
+}
+
+/* Small size */
+.badge.small {
+  min-width: var(--token-component-badge-size-small);
+  height: var(--token-component-badge-size-small);
+  font-size: var(--token-component-badge-font-size-small);
+  border-radius: var(--token-component-radius-badge);
+  padding: 0 var(--token-component-badge-padding-x-small);
+}
+
+/* Small single digit - perfect circle */
+.badge.small.singleDigit {
+  padding: 0;
+  width: var(--token-component-badge-size-small);
+}
+
+.badge.small.dot,
+.badge.small.dotOnly {
+  min-width: var(--token-component-badge-dot-size-small, 6px);
+  height: var(--token-component-badge-dot-size-small, 6px);
+  padding: 0;
+}
+
+/* Status dot (for status mode) */
+.statusDot {
+  display: inline-block;
+  width: var(--token-component-badge-status-dot-size, 8px);
+  height: var(--token-component-badge-status-dot-size, 8px);
+  border-radius: 50%;
+  margin-right: var(--token-component-badge-status-dot-gap, 8px);
+  vertical-align: middle;
+}
+
+.statusDot.success {
+  background-color: var(--token-component-badge-dot-color-success, #32c21a);
+}
+
+.statusDot.processing {
+  background-color: var(--token-component-badge-dot-color-upgrade, #042a47);
+  position: relative;
+  animation: processing 1.4s ease-in-out infinite;
+}
+
+@keyframes processing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.statusDot.default {
+  background-color: var(--token-component-badge-dot-color-neutral, #464646);
+}
+
+.statusDot.error {
+  background-color: var(--token-component-badge-dot-color-error, #ff434e);
+}
+
+.statusDot.warning {
+  background-color: var(--token-component-badge-dot-color-warning, #ed8400);
+}
+
+/* Status text */
+.statusText {
+  display: inline-block;
+  font-size: var(--token-component-badge-status-text-size, 14px);
+  color: var(--token-component-badge-status-text-color, #464646);
+  font-family: var(--token-primitive-typography-font-family-sans);
+  vertical-align: middle;
+}
+
+/* Focus styles */
+.badge:focus-visible {
+  outline: 2px solid var(--token-component-badge-focus-outline-color, #93b8f9);
+  outline-offset: 2px;
+}
