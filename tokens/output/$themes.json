@@ -1,19 +1,43 @@
 [
   {
     "name": "Reservio",
-    "group": "Brand",
+    "group": "Primitives",
     "selectedTokenSets": {
-      "primitives": "enabled",
-      "semanticTokens": "enabled",
+      "primitives": "enabled"
+    }
+  },
+  {
+    "name": "Survio",
+    "group": "Primitives",
+    "selectedTokenSets": {
+      "primitives": "enabled"
+    }
+  },
+  {
+    "name": "Reservio",
+    "group": "Semantic Tokens",
+    "selectedTokenSets": {
+      "semanticTokens": "enabled"
+    }
+  },
+  {
+    "name": "Survio",
+    "group": "Semantic Tokens",
+    "selectedTokenSets": {
+      "semanticTokens": "enabled"
+    }
+  },
+  {
+    "name": "Reservio",
+    "group": "Component Tokens",
+    "selectedTokenSets": {
       "componentTokens": "enabled"
     }
   },
   {
     "name": "Survio",
-    "group": "Brand",
+    "group": "Component Tokens",
     "selectedTokenSets": {
-      "primitives": "enabled",
-      "semanticTokens": "enabled",
       "componentTokens": "enabled"
     }
   }
