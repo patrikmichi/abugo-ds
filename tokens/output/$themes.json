@@ -1,6 +1,7 @@
 [
   {
     "name": "Reservio",
+    "group": "Brand",
     "selectedTokenSets": {
       "primitives": "enabled",
       "semanticTokens": "enabled",
@@ -9,6 +10,7 @@
   },
   {
     "name": "Survio",
+    "group": "Brand",
     "selectedTokenSets": {
       "primitives": "enabled",
       "semanticTokens": "enabled",
